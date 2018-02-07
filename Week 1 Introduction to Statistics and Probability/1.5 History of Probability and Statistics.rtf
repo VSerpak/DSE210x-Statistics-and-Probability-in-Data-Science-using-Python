@@ -1,0 +1,278 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hi, today I want to tell you a little bit\par
+about the history of probability and statistics,\par
+this is not because this is a course about history,\par
+but simply it would really help you,\par
+before we start working on the details\par
+and the mathematics of doing probability,\par
+it would help you to know what is the general framework\par
+and what are the kind of questions,\par
+that people ask in statistics\par
+and it turns out that it's a very diverse set of questions,\par
+so it's helpful to know from the get go\par
+about these different types of questions.\par
+So in general, you can say that statistics and probability\par
+in its modern forms started around 1650,\par
+but the types of questions, that have been asked\par
+fall into two groups in general\par
+and one is repeated games of chance\par
+and the other is strength of evidence and degrees of belief,\par
+okay, so this is a kind of diagram,\par
+that shows many of the things that happen\par
+during history in these two threads\par
+and we're going to look at this diagram\par
+more in a future video, but now we're going\par
+to just start looking at some of the major components\par
+and to remind you again, there is a red component,\par
+which is games of chance\par
+and there is this blue component,\par
+which is about degrees of belief.\par
+Okay, so games of chance, games of chance have existed\par
+for a very, very long time, much before the 1600s,\par
+probably from before Christ\par
+and the earliest kind of games\par
+were based on what was called Knuckle Bones or Talis,\par
+so those are bones that are taken from goats\par
+and they were used to play games\par
+and the important thing about these games\par
+is that they were played many times, one after the other,\par
+okay, so here are some images\par
+of the people playing with the knuckle bones\par
+and here is a picture of what\par
+the basic knuckle bone game is,\par
+this is the strange shape of the knuckle bone\par
+and depending, you throw it in the air, it falls,\par
+and depending on the side on which it falls,\par
+you get different amounts of points, okay,\par
+so this is the ancient game of knuckle bones,\par
+so of course today, we have many different types\par
+of games of chance, we have dice, we have the roulette,\par
+we have cards, we have coins that we flip\par
+and in general, before any probability was known,\par
+this was kind of seen as a way\par
+to check your luck\par
+or to see what God is trying to tell you\par
+and the simplest assumption, when you play these games\par
+is the equal probability assumption,\par
+so if you have in dice, six sides,\par
+then each side has a probability of one six\par
+or if you have a coin, each side has a probability a half\par
+and so on, so you just assume, because of the design\par
+of the thing, that you are playing with,\par
+that all of the outcomes have the same probability\par
+and that's the simplest setting of probability\par
+and we're going to work with that quite a lot, okay,\par
+but it doesn't always hold,\par
+so it's true for dice and roulette,\par
+but it is actually not true for knuckle bones,\par
+because knuckle bones are asymmetric\par
+and so the probability that they fall\par
+on different sides is not the same.\par
+So then in that case, what is it that we,\par
+what does it mean that we say that the knuckle bone\par
+has different probabilities for different outcomes?\par
+So the probability, as I said of the knuckle bone\par
+to land on a narrow face is smaller,\par
+than to land on a wide face,\par
+so each knuckle bone is different\par
+and so the probabilities are going to be different,\par
+but let's just assume for now\par
+that the probability of the four sides is\par
+as it says here, 0.1, 0.2, 0.3 and 0.4,\par
+okay, so those are the probabilities\par
+of the four possible outcomes,\par
+each one with a number of points that you get.\par
+So what we can do and you can download that notebook\par
+is we can simulate flipping the knuckle bone many times\par
+and seeing what comes out, so let's flip it 1,000 times\par
+and here we have the sequence of 1,000 outcomes\par
+and at the bottom here, we have how many times\par
+we got each one of the outcomes,\par
+so 105, 197, when we normalize it\par
+according to these,\par
+to the number of total coins that we found,\par
+we get 0.1, 0.2, 0.29 and 0.41,\par
+which are really very, very close\par
+to these probabilities we started with,\par
+so that's what we call long term frequencies,\par
+long term frequencies are basically the assumption\par
+that when you throw something many, many, many times,\par
+the frequency, the number of times\par
+that you get each possible outcome,\par
+the fraction of that from the total\par
+converges to some fixed number,\par
+but of course, that depends on how many times\par
+you throw the coin, okay or the knuckle bone in this case,\par
+so if we throw it 100 times, that's much fewer\par
+and now the fractions that we get\par
+are more distant from the true probabilities\par
+and if we throw it just 10 times,\par
+then for instance, the outcome three here,\par
+that has probability 0.3, actually didn't happen at all,\par
+so we got zero, okay, so if you repeat\par
+this kind of game just a small number of times,\par
+you don't get anything related to the probabilities,\par
+but on the long term, you get the long term probabilities.\par
+Okay, so these are the kind of questions\par
+that you can ask about probabilities\par
+and the typical one that was asked in this famous letter\par
+from Pascal to Fermat in 1654 is the following,\par
+suppose that we have a game, that is just pure chance,\par
+basically we...\par
+we have a game of cards,\par
+but there's nothing that is in it that is,\par
+that helps you if you're talented in this game,\par
+it's just pure chance and the game is played\par
+until one of the sides wins, okay\par
+and both sides put in one dollar\par
+and the winner takes the two dollars,\par
+so suppose now that the game is stopped,\par
+before one of the sides wins\par
+and they just have to stop it and go their separate ways,\par
+so how much money should each one of them take?\par
+That's really the question\par
+and so to answer this question,\par
+you wanna say given the cards that player one has,\par
+what is the probability that player one\par
+would win at the end?\par
+Okay, so that was the question\par
+that Pascal solved for some cases\par
+and sent in a letter to Fermat\par
+and that is a classical question, that is about games\par
+of chance, frequencies and probabilities.\par
+So that's the frequentist point of view\par
+and it basically says the only thing\par
+that probability means is that when you repeat\par
+the same game or the same trial many, many times\par
+on many, many people or many, many cases,\par
+then what you get converges to the probabilities,\par
+that's what probabilities mean\par
+and this gives you a foundation on which\par
+most of the mathematics of probability theory can be built\par
+and it makes sense in games and other situations\par
+like polling, but it doesn't always make sense, right,\par
+so sometimes it really does not make sense\par
+to think about probability as something\par
+that is the result of repeating the same game many times,\par
+so here are some examples.\par
+So suppose a meteorologist says that the probability\par
+of rain tomorrow is 10%, what does it mean?\par
+It will either rain tomorrow or not rain tomorrow\par
+and tomorrow is going to happen just one time,\par
+you can't repeat tomorrow more than one time,\par
+so you can't really think about this probability of 10%,\par
+as if you repeated the same day many, many times,\par
+10% of the time, it would rain, no,\par
+because that day just appears, happens one time.\par
+Similarly, suppose a surgeon tells you\par
+that there is a 2% chance of complications\par
+in a particular surgery, that you're considering taking,\par
+so it might mean that 2% of the patients,\par
+that underwent surgery had complications, okay,\par
+so that's a reasonable meaning,\par
+but what does it mean to you, right?\par
+So for instance, maybe most of the complications\par
+were with patients older than 90 and you're 35 years old,\par
+so it's really irrelevant for you, right,\par
+so this 2% just doesn't mean anything for you, okay.\par
+So this leads us to the other type of probability\par
+that has to do with confidence, with measuring evidence\par
+and basically quantifying opinions.\par
+Okay, so if we go back to before 1650,\par
+there was this word probable, people used it,\par
+but its meaning was not quantitative,\par
+but even today, if you say this is probable or probably,\par
+it doesn't have any quantitative meaning,\par
+here is the meaning that you'll find\par
+in the Webster dictionary,\par
+in so far as seems reasonably true or factual\par
+or to be expected or without much doubt, right,\par
+so all of these things, they're just basically\par
+saying probably means very likely,\par
+it is very likely to happen\par
+or I'm pretty sure it will happen, right,\par
+so that's a very common but unrelated to mathematics,\par
+unrelated to games of chance,\par
+so one term that was used before the 1650,\par
+that kind of shows how this word, probable was used\par
+is that there was a term called probable doctor\par
+and what it meant was\par
+that when you say that someone is a probable doctor,\par
+it meant that this doctor was approved by some authority,\par
+okay, so probable just means approved\par
+in some way and approved meant\par
+that at that time in Europe, it means simply the church,\par
+the church said that this is an approved doctor, right,\par
+so that meaning of probably was really very different\par
+than what we intuitively think about today,\par
+today MDs are approved also, they are approved by a board\par
+and after they do the board exam, then they're approved\par
+and they're a good doctor or they're approved doctor\par
+or the board certified doctor,\par
+so we're actually not that different from back then,\par
+even though we use different words.\par
+Okay, so let's think about the kind of problems,\par
+that are faced by a doctor.\par
+So if you want to diagnose a patient,\par
+it requires putting together\par
+many different pieces of information,\par
+okay, so this is a little diagram,\par
+that gives you different types of information,\par
+that goes into the diagnosis, the patient interview,\par
+physical exam, medical history, medical tests\par
+and most of the information is uncertain, right,\par
+you don't really know exactly\par
+what is the blood content of a person,\par
+you know for a particular sample,\par
+it might change from day to day\par
+and also different pieces of information\par
+have different levels of relevance, right,\par
+it might not be very relevant, the results of the blood test\par
+or it might, the x-ray might reveal a lot\par
+or the MRI might reveal very little, okay,\par
+so when you're in this situation,\par
+you have information coming from different places\par
+and with each piece of information,\par
+you somehow want to associate\par
+the confidence that you have,\par
+now the doctor does this by and large intuitively,\par
+but this kind of problems\par
+appear all over and not just in medicine,\par
+so when we talk about combining evidence,\par
+we are talking about things that are central to medicine,\par
+to economics, investment, law, science, technology,\par
+many, many different things,\par
+that rely on basically combining evidence\par
+and if they want to do it quantitatively,\par
+then they use probability and statistics, okay\par
+and typically you don't repeat an experiment many times,\par
+so in some very particular situations you do,\par
+but in most of the important decisions that you're faced,\par
+or a doctor is faced, they have this one patient\par
+that they need to treat, so there's no meaning to saying\par
+really, what's the probability of something, okay,\par
+so the math of this is provided by probability theory,\par
+but much of the discussion around it is not mathematical,\par
+so it is really discussion that has to do with convincing\par
+and with how do you compare this evidence\par
+to another evidence, some of it is math\par
+and much of it is discussion\par
+and that's the type of things that you get in statistics,\par
+you don't get really cut and dry outcomes.\par
+A popular approach to putting all of this\par
+in a very common framework is Bayesian Statistics\par
+so Bayesian Statistics puts as its main thing\par
+how to evaluate evidence and how to combine evidence\par
+and it is not, it doesn't take the same approach\par
+as frequentist, even though fundamentally\par
+they use the same math.\par
+Okay, so that's basically the rough introduction\par
+I started with and there are more details\par
+in this image here and in a future video\par
+I will go with you through this image\par
+and tell you some more of the details, thank you.\par
+End of transcript. Skip to the start.\par
+A poster\par
+}
+ 
