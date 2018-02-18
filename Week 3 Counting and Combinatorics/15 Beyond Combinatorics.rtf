@@ -1,0 +1,504 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Welcome back.\par
+So far, we've been talking about\par
+different applications of combinatorics.\par
+We've talked about permutations, about combinations,\par
+the binomial coefficient,\par
+and counting different things using them.\par
+And today, we're going to talk about the last application\par
+which is going to be a little different.\par
+We're going to show that beyond combinatorics,\par
+we can use what we have learned\par
+to get some results from algebra,\par
+and specifically to write a number as a sum of integers.\par
+We're going to show that we can get a simple derivation\par
+for might otherwise be an unintuitive result.\par
+So we're looking at counting sums.\par
+And specifically, we want to find a number of ways\par
+to write five, for example,\par
+as the sum of three positive integers when order matters.\par
+So let's see what we mean.\par
+We can write five as three plus one plus one,\par
+or as two plus two plus one,\par
+or as two plus one plus two,\par
+or one plus three plus one,\par
+or one plus two plus two, and so on.\par
+And we can see that these are the only ways\par
+to write five as a sum of three positive integers\par
+because if we start with three,\par
+we have to have one plus one.\par
+If we start with two, then we have to have three.\par
+And these are the only way to write three as a sum of two,\par
+positive integers.\par
+And if we start with one,\par
+then we need to get a four with two integers\par
+and these are the only ways to do that.\par
+So we can see that the total number of ways of writing five\par
+as the sum of three positive integers is six.\par
+And we would like to derive this number six combinatorially.\par
+So what we can do is we can show that this number of ways\par
+is the same as number of ways\par
+to partition five items into three groups\par
+when the order matters.\par
+OK, so we'll let our five items be five stars.\par
+And when we write three plus one plus one,\par
+that will correspond to partitioning this five stars\par
+into three and then plus one and then plus one.\par
+And two plus one plus one will correspond partition here\par
+which has two stars plus two stars plus one star\par
+in two plus one plus two.\par
+Similarly, we have two stars plus one star plus two stars\par
+and so on.\par
+OK?\par
+And we would like to use this analogy\par
+to find the number of ways to write five\par
+as a sum of three positive numbers.\par
+So let's maybe reflect a little bit on the analogy.\par
+So let's look here at what are the similarities\par
+between the addition that we have here on the left\par
+and the partition on the right.\par
+So in the addition, we look at things that sum to five.\par
+And similarly for the partition,\par
+we look at five stars or five items.\par
+We're partitioning five items.\par
+Just like here, we're writing things that will sum to five.\par
+For addition, we have three positive terms\par
+and what we have here\par
+is we have three consecutive star intervals.\par
+So here we have an interval three stars,\par
+an interval of one star, an interval of one star.\par
+They have to have at least one star, OK?\par
+And for addition, we have two pluses\par
+because we have three terms, so we have two pluses\par
+that separate the three numbers.\par
+And here we have two bars that separate the intervals.\par
+So these bars play the role of the pluses.\par
+OK?\par
+But there's something that we have in the partition\par
+that we don't quite see in the addition,\par
+and that is for the partition we see that we have four gaps.\par
+So we have five stars.\par
+We have four gaps between them.\par
+One, two, three, four, where we can place the bars, OK?\par
+And this does not quite exist\par
+or we do not quite see it for the addition.\par
+So we have five gaps between the stars.\par
+I'm sorry, four gaps between the stars.\par
+And in those four gaps,\par
+we need to put the two bars that we have.\par
+So we need to choose two of the four gaps\par
+to put the bars in them.\par
+And so the number of partitions,\par
+the number of ways to partition this,\par
+is going to be just a number of ways\par
+to choose two gaps out of the four that we have\par
+and that's going to be just choose two\par
+which as we know is six.\par
+So we see that we could get this number\par
+by just looking at the number of spaces\par
+or gaps that we have which was five minus one, four.\par
+And the number of bars that we have\par
+which was three minus one, or two.\par
+And we have four choose two which is six\par
+which is the number that we got here.\par
+Now this of course generalizes,\par
+and if we want to have K terms that will add to N,\par
+then we would like to find how many ways we can write N\par
+as a sum of K positive integers when order matters.\par
+And so here we have N stars;\par
+and therefore, we have N minus one gaps.\par
+And we have K.\par
+We want to write them as K (mumbling) terms\par
+so we have K minus one bars.\par
+They're correspond to the K minus one pluses, OK?\par
+So what we want to do is we want to place K minus one bars\par
+in N minus one gaps.\par
+And the number to do that I just N minus one\par
+which is K minus one, OK?\par
+So this is the number of ways to write N\par
+as a sum of K positive integers.\par
+It's N minus one plus K minus one.\par
+Alright, so let's do a couple of simple examples\par
+just to make sure we agree with the formula that we had.\par
+And just to remind us, it said that if you want to write N\par
+as a sum of K positive integers when order matters\par
+then we can do it as N minus one\par
+choose K minus one ways.\par
+So let's look at some simple values of K.\par
+We'll look at the sums and this formula.\par
+So if K is one, then we can write N in a single way\par
+as the sum of one term.\par
+Just N is equal to N, so there's only one term.\par
+And sure enough, if we write N minus one\par
+choose K minus one which is one minus one,\par
+we'll get N minus one choose zero, which is one.\par
+If we want to write N is the sum of N different terms,\par
+positive N terms,\par
+we have to write one plus one and so on plus one\par
+so there's just one way of doing it.\par
+And indeed, N minus one choose N minus one.\par
+K here is N, so N minus one choose N minus one\par
+is again one agreeing with this.\par
+If you want to write N is the sum of two terms,\par
+then we can write it as one plus N minus one\par
+or two plus N minus two,\par
+and so on after N minus one plus one.\par
+So we have one, two, N minus one way of doing it.\par
+And if we write N minus one choose two minus one,\par
+it's N minus one choose one which is N minus one.\par
+And last example, if we want to write N\par
+as sum of N minus one terms,\par
+then what we'll have is we'll have N minus one terms.\par
+One of them will be two\par
+and the remaining N minus two will be one,\par
+so the two can appear at the beginning,\par
+the second location, or the last location,\par
+and there N minus one way of doing it, right?\par
+'Cause we have N minus one terms,\par
+so there are N minus one place to place to two.\par
+And if we check N minus one choose N minus one minus one\par
+is N minus one choose N minus two,\par
+which is the same as N minus one choose one\par
+which is N minus one again.\par
+So we get that in all those cases,\par
+this formula gave us what we expected.\par
+And in fact, we can use this formula\par
+even when this summation is not easy to find.\par
+For example, if I ask you how many ways can you write eight\par
+as a sum of four positive integers,\par
+it might take you quite a bit of time\par
+to find all the summations,\par
+but you can use the formula and say it's eight minus one\par
+choose four minus one which is seven choose three,\par
+which is seven times six times five divided by six\par
+which is 35.\par
+OK? Easy.\par
+And let's extend these results slightly.\par
+So suppose you want to write N as any sum.\par
+Namely, we want to find the number of ways we can write N\par
+as a sum of any number of positive integers,\par
+not a specific number K.\par
+Then for example, we can N equal to three.\par
+We can write it as three itself\par
+or one plus two or two plus one,\par
+or one plus one plus one,\par
+and these are the only ways we can write three\par
+as a sum of positive integers.\par
+And we can draw an analogy again with bars and stars,\par
+and we can see that the number is therefore four.\par
+And if we want to look at stars,\par
+then three will correspond to just three stars\par
+not partitioned.\par
+One plus two will correspond to this partition,\par
+one and then two.\par
+And two plus one will correspond\par
+to this partition of the three stars.\par
+And one plus one plus one\par
+will correspond to the partition of the three stars\par
+where each one is on its own, OK?\par
+And we can see that the number of ways of writing these bars\par
+is we have two spaces,\par
+and we can either write no bars in the two spaces,\par
+so we can have a bar in the left one\par
+and no bar in the right one.\par
+Or a bar in the right gap but not in the left gap.\par
+Or bars in both gaps.\par
+And so what we have is just a number of ways\par
+to write any number of bars in those places.\par
+So it's the number of, really, the number of,\par
+if you want sequences of length, too, that we have, right?\par
+This one would correspond maybe to zero zero.\par
+This one would correspond to one zero, zero one,\par
+and one one.\par
+And this number is just two to the two\par
+because we have the option of either putting a bar\par
+in the first gap or not,\par
+or the option of putting a bar in the second gap or not.\par
+OK?\par
+And this obviously generalizes to any N.\par
+So if we have N stars, then in each gap\par
+we can either put a bar or not put a bar.\par
+We have two options for each gap,\par
+so the total number of options that we have\par
+is two to the number of gaps.\par
+And we have N minus one gaps,\par
+so therefore the number is two to the N minus one.\par
+OK?\par
+And you could have gotten this number like we did here\par
+or you could be a little bit more macho if you wanted\par
+and you could say, OK,\par
+this is the number of ways to write N\par
+as a sum of any number of positive integers, so I could add.\par
+I could see how many ways I could write it\par
+as the sum of one integer, two integers, and so on.\par
+So we can write it N is the sum of K integers\par
+where K goes from one up to N.\par
+And we know from the previous slide\par
+that that number to write it as some K integers\par
+N minus one choose K minus one.\par
+So we can say that this number\par
+is going to be a summation of K going from one up to N,\par
+of N minus one choose K minus one.\par
+But now we see that K minus one starts at zero\par
+and goes to N minus one,\par
+so it's a summation of I going from zero to N minus one\par
+of N minus one choose I.\par
+And then by the binomial theorem,\par
+this sum is just two to the N minus one,\par
+agreeing with what we got here.\par
+Now we want to modify the question slightly.\par
+Instead of looking at positive terms,\par
+we want to look at nonnegative terms.\par
+So we want to ask how many ways we can write\par
+N as the sum of K nonnegative integers.\par
+OK, so for example, let's see how many ways we can write two\par
+as the sum of three nonnegatives.\par
+So we can write two as two plus zero plus zero.\par
+That's three nonnegative integers that sum to two.\par
+Or as zero plus two zero, or as zero plus zero plus two.\par
+These are the only ways to write two\par
+as a sum of three nonnegatives\par
+where there's a single positive number.\par
+Or we can write it as one plus one plus zero,\par
+or one plus zero plus one, or zero plus one plus one, OK?\par
+Now we can again use the stars and bars analogy,\par
+and we see that, by the way, this number is going to be six.\par
+OK.\par
+Now using our analogy, we can write this as star star\par
+and then bar bar.\par
+That means that we have two.\par
+Remember that the bar plays the role of a plus.\par
+So we have two and then plus zero and then plus zero.\par
+That's this sum.\par
+And zero plus two plus zero, we can represent like that\par
+so we have again zero plus two plus zero,\par
+or zero plus zero plus two.\par
+We have here zero plus zero plus two.\par
+And here, one plus one plus one, and so on.\par
+So what we see is that it's very similar\par
+to what we had before.\par
+Just like before, the number of stars we have\par
+is the total number that we are trying to add to, is N.\par
+And the number of bars we have is the number of pluses,\par
+which is the number of terms minus one.\par
+It's K minus one.\par
+So we have K minus one bars.\par
+But unlike before, before we put a single bar in each gap,\par
+and here we can put multiple bars in a gap like this.\par
+I can also put bars to the right\par
+or to the left of the stars.\par
+So now, we can have any arrangement of the stars and bars.\par
+If you write any arrangement of two stars and two bars,\par
+you can interpret it as a sum\par
+of three terms that will add to two, right?\par
+Because you'll have the number to the left of the first bar\par
+plus the number in between\par
+plus the number to right,\par
+and that will give you two because you have two stars.\par
+OK.\par
+So therefore, we see that every sum\par
+corresponds in a one to one way.\par
+There's a one to one mapping\par
+between a sum of here on the left\par
+and an arrangement of stars and bars, OK?\par
+Therefore, the number of sums that we have\par
+is going to be the number of arrangement of stars and bars.\par
+And more precisely, the number of arrangement in this case\par
+of two stars and two bars.\par
+OK.\par
+So the number of sum\par
+is the number of arrangements of stars and bars,\par
+and we're interested in the number of ways to order\par
+to write two stars and two bars in this case.\par
+And if we have two stars and two bars,\par
+what we have is a sequence of length four\par
+and we need to choose the location of the two stars.\par
+So there are a number of ways to do it.\par
+There's four choose two which is six.\par
+And more generally, if we want to write N\par
+as a sum of K nonnegative integers.\par
+So if we want to find a number of ways to write N\par
+as a sum of K nonnegative integers when the order matters,\par
+then we have again N stars and we have K bars,\par
+and we rearrange them in any way we want\par
+so we have a sequence with N stars and K minus one bars.\par
+Or in other words, we have a sequence of length\par
+N plus K minus one,\par
+and we need to choose the location of the K minus one bars.\par
+And that number is going to be N plus K minus one,\par
+the length of the sequence, choose K minus one,\par
+the number of bars we want to choose.\par
+And that's the same as saying N plus K minus one choose N\par
+if we want to choose the location of the bars.\par
+That will be the same.\par
+OK?\par
+So let's look at an application of this.\par
+So let's see how many four letter words are there,\par
+but now when the order does not matter.\par
+So if the order matters,\par
+then the number of four letter words is going to be\par
+just we have 26 ways to write the first letter,\par
+and 26 ways to write the second letter, and so on.\par
+We get 26 to the four which is almost half a million.\par
+Now, if we want the number of four letter words\par
+when the order does not matter.\par
+So for example, if you want things like evil\par
+to the same as vile to be the same as live and so on,\par
+and words can also have repetition,\par
+so doom will be the same as mood and so on,\par
+the word or the number of words\par
+is just determined by the composition.\par
+So if I tell you number of As, number of Bs, number of Cs,\par
+up to number of Cs,\par
+that will determine this collection, right?\par
+'Cause we don't care.\par
+Once I tell you the number of times each letter appears,\par
+then because order doesn't matter,\par
+all words are going to be the same.\par
+So what we really want to see\par
+is how many such compositions we have,\par
+how many ways we can have for deciding on number of As,\par
+number of Bs, and so on,\par
+such that together they'll sum to four\par
+because the length of the sequence we want is four.\par
+OK?\par
+So the number of four letter words\par
+when the order does not matter\par
+is the number of ways to select the number of As,\par
+the number of Bs, the number of Cs, and so on,\par
+so that they sum to four.\par
+And what we have here is just 26 nonnegative terms\par
+correspond to the letters.\par
+So K is 26 in our terminology.\par
+And a sum to four, the length.\par
+So N is equal to four.\par
+And that number as we know is N plus K minus one.\par
+So four plus 26 minus one, just K minus one, which is 25.\par
+So it's 29 choose 25 or 29 choose 4,\par
+and that's not so difficult to calculate.\par
+It's exactly 23,751, OK?\par
+And one thing that you may wonder\par
+is whether this makes sense\par
+that this number is going to be that much smaller\par
+than the number of letters words when the order matters.\par
+And you can see that most of the words\par
+will have four different letters.\par
+And if they have four different letters\par
+and if the order doesn't matter,\par
+then we just look at the number of words\par
+and divide it by four factorial.\par
+And so most of this 26 to the four words\par
+will have four different letters,\par
+and then we need to divide them by four factorial\par
+to get the number of when the order does not matter.\par
+And four factorial is 24.\par
+And you can see that if you divide this by 24,\par
+if you divide 456,000 by 24,\par
+you'll get a number which is, I think, around 19,000.\par
+And what we get here is a little more than 19,000,\par
+and that's because we also have words\par
+that contain three letters, and two letters,\par
+and one letter, and so on.\par
+So this makes sense.\par
+OK?\par
+And we can see a couple more applications.\par
+I want to finish with them.\par
+But talk about them a little more briefly.\par
+So first of all,\par
+you'll notice that we derived the number of ways\par
+to write N as a sum of K positive integers.\par
+We said it was N minus one choose K minus one.\par
+And we can derive that number\par
+using the formula that we just had for nonnegative numbers,\par
+and that's because if you have K positive integers\par
+that add to N, the number of such sums\par
+of K positive integers that add to N\par
+is the same as the number of K positive integers\par
+that add to N minus K.\par
+And the reason is that if you have K integers\par
+that add to N, for example, to seven,\par
+we can subtract one from each number here.\par
+So instead of one plus two plus one plus three,\par
+we're going to have zero plus one plus zero plus two.\par
+And when we do that,\par
+we subtracted one from each of the K terms,\par
+the three or four,\par
+so they'll add not to seven, but to seven minus four\par
+which is three.\par
+And you can map every sequence of K positive integers\par
+that add to N by subtracting one from each number.\par
+You'll get a sequence of K nonnegative integers\par
+that will add instead of N, to N minus K.\par
+This correspondence is a one to one correspondence,\par
+so therefore the number of ways\par
+to write K positive integers that add to N\par
+is the same as the number of ways\par
+to write K nonnegative integers that add to N minus K,\par
+and that number is, as we just saw,\par
+is N minus K plus K minus one which is K minus one.\par
+And these Ks will cancel,\par
+will give us N minus one choose K minus one\par
+which will recover the formula that we got initially.\par
+Also, if we can derive the number from nonnegative integers\par
+that add to, instead of N, that add to at most N.\par
+And the reason is because the number of K nonnegative sums\par
+that add to at most N\par
+is equal to the number of K plus one nonnegative sum\par
+that add exactly N.\par
+That's right in here behind my picture.\par
+To exactly N.\par
+And to see that, notice that for example if we have here\par
+a sum of three terms that add to less than equal to seven,\par
+two plus zero plus three.\par
+That adds to five which is less than seven.\par
+Then we can map it to a sum that will add to exactly seven\par
+by adding a number here which is at least zero.\par
+It will be zero if the number added to seven initially.\par
+And again, this mapping is one to one.\par
+I can map every sequence here\par
+to a sequence here in a unique way\par
+by just adding the number that's missing to make it seven.\par
+And in general, if we have K nonnegative integers\par
+that add to at most N, I can map it to K plus one,\par
+nonnegative integers that add to exactly N.\par
+And so the numbers are the same,\par
+and therefore, the number is going to be N plus,\par
+instead of K, we have K plus one terms.\par
+So it's N plus K plus one minus one\par
+which is K plus one minus one.\par
+And that gives us the simple formula of N plus K choose K.\par
+And you can verify it if you'd like\par
+for some simple values.\par
+OK?\par
+So with that, we're done talking about stars and bars\par
+and what I think is a fairly nice application\par
+of binomial coefficients.\par
+And so we discuss our final application,\par
+that shows that beyond combinatorics,\par
+we can apply to other fields like algebra,\par
+and derive a simple derivation\par
+of what otherwise might seem like an unintuitive result.\par
+And with this, we are also done\par
+talking about the combinatorics.\par
+And what we'll do next\par
+is we'll start talking about probability.\par
+See you next time.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+How many different ways can you write 11 as a sum of positive integers?\par
+\par
+\tab\par
+121\par
+\par
+\tab\par
+336\par
+\par
+\tab\par
+1024\par
+\par
+\tab\par
+2048\par
+}
+ 

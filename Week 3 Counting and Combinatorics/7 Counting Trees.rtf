@@ -1,0 +1,318 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Hello and welcome back.\par
+After counting different types of sets,\par
+like unions, Cartesian products and so on,\par
+we wanna talk about a slight generalization,\par
+which is counting trees and we're going to discuss\par
+how Cartesian products can be viewed as trees,\par
+but how trees generalize Cartesian products\par
+and we'll see a systematic way to count trees\par
+and how to count paths in graphs\par
+and then we'll mention briefly,\par
+that it's useful for modeling randomness\par
+and we'll try to be brief,\par
+so that we'll still see the forest, even with all the trees.\par
+Alright, so first, Cartesian products as trees,\par
+so let's take the following,\par
+we'll show that Cartesian products\par
+can be viewed as sequences, well actually, that we know\par
+and then we'll show that we can view sequences as a tree.\par
+So consider the following Cartesian products,\par
+a,b times 1,2,3, we know that the size of this set\par
+is the size of a,b, namely two times the size of 1,2,3,\par
+namely three, so it's two times three, which is six, okay\par
+and we know that we can interpret\par
+this Cartesian product here\par
+as the collection of all sequences\par
+a1, a2, a3, b1, b2, b3\par
+and we can view these sequences as a tree,\par
+namely we can, we see that our six element is here as well\par
+and we can view it as a tree,\par
+namely we start every sequence here on the left\par
+and we go a1, so every sequence will correspond to a path,\par
+that started at the root and goes to a leaf,\par
+so we go a and then one or a and then two,\par
+a and three or b1, b2, b3\par
+and every sequence is a sequence from a root to a leaf,\par
+and so we're actually counting the number of sequences here\par
+is the number of leaves in this tree\par
+and again, we can see that the number of leaves here,\par
+there are two branches here\par
+and each branch are three branches,\par
+so it's two times three, which is six, so we have six,\par
+so we can see that Cartesian products\par
+are sets of sequences\par
+and sets of sequences can be viewed as trees\par
+and so we can use trees to model Cartesian products\par
+and we get the same number here,\par
+but in fact trees are more general in Cartesian products,\par
+because for one thing, note that we only use\par
+the fact that here we have two branches\par
+and here we had each vertex here had three branches,\par
+so we only use the fact that at any level,\par
+all nodes have the same degree,\par
+so here, this one had a degree of three\par
+and this one had a degree of three,\par
+namely three descendants, alright.\par
+So now let's see the trees\par
+of more general Cartesian products,\par
+so imagine that San Diego opens a new university,\par
+it's called University of Data Science, SUDS,\par
+and they have three departments,\par
+Computer Science, EE and Math\par
+and each of them offers two courses,\par
+so CS offers Machine Learning and Python,\par
+EE offers Image Processing and Information Theory\par
+and Math offers Probability and Statistics.\par
+Now, we want to know how many courses\par
+are offered by the university,\par
+so observe that this collection\par
+of departments and courses is not a Cartesian product,\par
+because if it was a Cartesian product,\par
+then every pair of department and course would be possible,\par
+but here that's not the case, because for example,\par
+Computer Science does not offer Probability\par
+and does not offer Statistics,\par
+so this is not a collection of courses\par
+and, I'm sorry, for departments and courses\par
+is not a Cartesian product and yet we can still count\par
+and see how many different courses are offered\par
+or how many each, the same as how many pairs\par
+of departments and courses are offered and that's because...\par
+so it's not a Cartesian product,\par
+because the departments offer different courses, okay,\par
+but still, we see that every department offers two courses\par
+and so we can still count the number of courses,\par
+so we see that at each level, in this case,\par
+there's only this level, that's interesting,\par
+all degrees are equal in this case, all of them are two,\par
+so here we have degree three, there's only one though,\par
+and here we have three nodes and each of them has degree two\par
+and because of that, the number of courses\par
+is going to be three times two, which is six,\par
+so even though we don't have a Cartesian product,\par
+we can count the number of courses\par
+and we'll still call this the product though,\par
+because actually the counting operation is the same,\par
+we're multiplying the number of branches here\par
+by the number of branches, that each one had\par
+and if we continue, then we'd multiply by the degree\par
+of each node here, if they're all the same, okay.\par
+So to see why we are looking at trees,\par
+observe that a tree can represent any set of sequences,\par
+there's an s missing here, not just Cartesian products,\par
+so we saw one example just now,\par
+but if you have any set of sequences,\par
+you can just have a tree, that corresponds\par
+to the first possible element of the sequence\par
+and then subsequent elements and so on\par
+and therefore, and furthermore, trees enable\par
+systematic counting of the number of leaves, so it's useful\par
+and it's useful for modeling random phenomena,\par
+we'll see a little bit of that later on.\par
+So as one example, let's consider a best of n,\par
+so in many sports, you have two teams or two players,\par
+that compete to determine which is stronger\par
+and a single competition is often too random,\par
+because there may be, you know,\par
+some team was not good that day,\par
+so what they do is play a certain number of games,\par
+typically an odd number of games and call it n\par
+and the team that wins\par
+most of those n games wins,\par
+so for example, in NBA Playoffs, n is equal to seven games\par
+and for tennis matches, they actually consist of sets\par
+and they consist of three or five sets,\par
+depending on the competition that you're in, okay,\par
+now it's quite possible that when they started this method,\par
+they played all n games\par
+and then saw who won the majority,\par
+so the goal here is to win the majority of games\par
+and it is possible that in the beginning,\par
+they played all n games and then saw who won most,\par
+but probably they realized pretty soon,\par
+that once some team wins more than half the games,\par
+which can happen before they reach n games,\par
+as soon as one team wins more than half the games,\par
+the audience looks like that, they fall asleep,\par
+because they know who is going to win,\par
+so then what they do now is they stop,\par
+so once a team wins\par
+more than half of n games, then they just stop.\par
+So let's consider Roger Federer\par
+and Serena Williams here\par
+and let's say that they play a three-set match,\par
+so they stop when one of them wins more than half,\par
+more than 1.5, namely when one of them wins two sets,\par
+so how many win sequences are there?\par
+So if Roger wins the first two sets, then they stop,\par
+if Roger wins, then Serena, then Roger wins,\par
+then they stop again, in this case, Roger won two,\par
+but they also played all three games\par
+and likewise if Roger\par
+and then Serena and Serena wins, they stop\par
+and if Serena wins the first two sets,\par
+then they stop, okay,\par
+so we can create a tree, based on this, okay,\par
+so here is where Roger wins the first set\par
+and then he can win the second set and here wins the first,\par
+then the second and loses the second,\par
+but wins the third and so on\par
+and you notice as we said before,\par
+that for any collection of sequences,\par
+you can create a tree like this, okay.\par
+So we want to count how many sequences there are here,\par
+in other words, we want to count\par
+how many leaves are in this tree, okay\par
+and so what we're going to do\par
+is we're going to recursively count\par
+how many leaves are descendants of every node,\par
+so let's say we start with the leaf nodes, like this one,\par
+so the leaf nodes have one leaf descendant,\par
+namely themselves, so there is one here,\par
+now once we counted the, once we have one for each leaf,\par
+we can then go up one level\par
+and we can say that for example,\par
+this node here and this node here\par
+will have one plus one, which is two, two leaf descendants,\par
+okay and now that we have done that,\par
+we can calculate the number of leaf descendants\par
+of this node and of this node,\par
+it's going to be the one descendant here,\par
+plus the two descendants that go from this node,\par
+namely one plus two here, which is three and three here\par
+and now that we have done that,\par
+we've calculated the number of leaf descendants\par
+of each of the descendants of the root,\par
+namely this one and this one\par
+and we can come here and add them up and we get six, alright\par
+and we're going to come back to this a little later\par
+and see a simpler way of counting,\par
+without writing it as a tree, alright.\par
+So we can generalize this a little bit from trees\par
+to directed paths\par
+in acyclic graphs,\par
+so we want to find the number of paths\par
+from our source to the destination\par
+and we do it recursively\par
+by determining the number of paths\par
+from the node to the destination\par
+and you can think about it and you can see\par
+how this simply generalizes what we've done for trees, okay\par
+and we are going to use the additional recursively,\par
+just as we did for trees actually.\par
+Okay, so here for example, is the source\par
+and you can see the paths and you can see the edges,\par
+they have directions, we can go from here to here,\par
+in this tree, we can only go from left to right,\par
+but sometimes we can go down, we can go up\par
+or we can go both up and down,\par
+because this graph is acyclic,\par
+there are no cycles in this graph, okay,\par
+so what we can do is we can start with the destination,\par
+there is one way to get from the destination to itself,\par
+it's this one and then what we can do\par
+is we can look at all the nodes,\par
+that we can only get to the destination\par
+by going from those nodes to the destination area,\par
+for example, this node here, there's only one way\par
+to get from here to the destination,\par
+we cannot go out in any other way,\par
+so this is only one way to do that, okay.\par
+Once we have seen, sorry,\par
+once we have seen that there's one way\par
+to get from destination from here\par
+and one way to get to destination from itself,\par
+if we consider this node here,\par
+we can see that there is one route,\par
+that will go here directly and then there's another route,\par
+that will go here, so another route from here\par
+is going to be one plus one, which is two\par
+and now we can see that from this node,\par
+we can go both either from here or go directly here,\par
+there are two ways that goes through here and one for here,\par
+so the number of ways is two plus one, which is three\par
+and then once we get here, we have to go through this node,\par
+so it's going to be three and then for this node,\par
+it's going to be three plus three, which is six,\par
+which, I'm sorry, three plus three plus one, which is seven\par
+and then this node will have seven plus two, which is nine\par
+and then for the source,\par
+we can have nine ways that start to this path,\par
+seven ways that starts this way and three that starts here\par
+for a total of 19 paths\par
+from the source to the destination.\par
+Now there was nothing magical starting with the destination,\par
+you could have started at the source as well\par
+and we can say that from the source,\par
+we can count how many ways\par
+can we get to individual vertices here,\par
+so first from the source to itself,\par
+we can go in just one way\par
+and then we can see how many nodes,\par
+we can determine the number of ways to go there,\par
+so if we start here, then we can get to this one\par
+only if we go from the source,\par
+because we cannot go back from any other vertex,\par
+so it's just going to be one, okay\par
+and then, now we can calculate,\par
+we calculated how many ways we can get to every vertex,\par
+that leads to this vertex, we calculated the number,\par
+so it's one here and one here, so the number is two\par
+and here we have two plus one, which is three\par
+and then we can calculate this one,\par
+because we know how many paths end up here\par
+and how many paths end up here, it's two and three,\par
+so this number is going to be five\par
+and then this one here is going to be\par
+one plus five, which is six\par
+and this one is six plus two, which is eight\par
+and finally to the destination, we can go through paths,\par
+that end up here or here or here\par
+and we get five plus six plus eight, which is 19,\par
+which agrees with the number,\par
+that we calculated the other way, okay.\par
+So what's the conclusion of this?\par
+That we can count not just Cartesian products,\par
+but also we can view sequences as trees\par
+and we can count them\par
+and in fact, we can also count paths\par
+in acyclic graphs that way, okay.\par
+So in short, what we want to do\par
+is we always try to look for structure,\par
+that will allow us to count things correctly, okay\par
+and we want to do it without losing sight of the forest,\par
+okay, so speaking of the forest,\par
+we saw that Cartesian products can be viewed as trees,\par
+we saw that trees generalize Cartesian products,\par
+we saw a way to systematically count trees\par
+and even paths in graphs\par
+and we'll actually be using, especially the counting trees,\par
+we'll be using that to model randomness,\par
+or to evaluate randomness later on\par
+and hopefully we manage to do it,\par
+without losing sight of the forest\par
+and what are we going to do next time?\par
+We're gonna talk about Combinatorics,\par
+see you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+How many leaves are on a tree representing the Cartesian product of the sets \{white, brown, black\} and \{dog, cat, horse\}?\par
+\par
+\tab\par
+6\par
+\par
+\tab\par
+9\par
+\par
+\tab\par
+12\par
+\par
+\tab\par
+27\par
+\par
+Submit\par
+}
+ 

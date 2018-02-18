@@ -1,0 +1,578 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Welcome again, everyone.\par
+In this sequence of lectures\par
+we're going to talk about combinatorics,\par
+which basically are somewhat\par
+more advanced ways of counting structures.\par
+And we'll start talking by\par
+talking about permutations.\par
+So a permutation is an ordering\par
+of a set of objects.\par
+And we are interested in counting\par
+the number of permutations of n objects.\par
+And the objects can of course be anything,\par
+it won't matter to us what they are.\par
+So they could be for example aardvarks,\par
+or unicorns,\par
+or dinosaurs.\par
+But to make the talk\par
+as exciting as possible,\par
+we'll of course use letters.\par
+So,\par
+we'll first look at some small cases,\par
+we'll look at what happens when we have\par
+a small number of letters.\par
+So here we have a single letter.\par
+Let's just say call it a.\par
+There's only one way to arrange that,\par
+so that's number of permutations is 1.\par
+If we have two letters, for example a and b,\par
+then we can arrange them as ab or ba.\par
+And there are two ways to do that.\par
+If we have three letters,\par
+for example abc, we can arrange them as\par
+abc, acb, bac,\par
+and so on up to cba.\par
+And one can see that these are all the ways\par
+to arrange the three letters so that\par
+our number here is 2, 4, 6.\par
+Okay.\par
+And we're interested in counting this number\par
+as the function of the number of objects that we have.\par
+So let's see what happens we have two objects, a and b.\par
+Then we can start\par
+with a or b.\par
+So we have two ways to start the sequence.\par
+Two choices.\par
+But once we started with a,\par
+then the next object must be b.\par
+And if we start with b,\par
+the next object must be a.\par
+So after each choice that we have,\par
+each of the two choices that we start with,\par
+we have a single choice to continue.\par
+So if we view it as trees,\par
+which as we said we can always do,\par
+we can always view any collection of sequences as trees,\par
+then the first option could be a and b,\par
+and if we have a we can only continue with b.\par
+If we start with b we can only continue with a.\par
+And how many different sequences are there?\par
+It's the total number of paths,\par
+or total number of leaves in this tree.\par
+And we have two branches at the beginning,\par
+and then one branch later on.\par
+So the total number is two times one which is two.\par
+If we look at three objects,\par
+abc for example,\par
+then as we mentioned these are\par
+all possible permutations of abc,\par
+all possible ways to arrange those three letters.\par
+And we can do it using three choices at the beginning,\par
+two choices,\par
+so for the first letter we can choose abc,\par
+which is three choices,\par
+once we choose a letter as the first one,\par
+for example a,\par
+we can follow it with one of\par
+two different letters,\par
+because we have used one out of the three.\par
+And once we've chose two different letters like a and b\par
+there's only one way to continue it,\par
+so there's only one choice for the third letter.\par
+And if we view it as trees,\par
+then we have three options for the first letter, abc.\par
+Once we've chose the first letter we can\par
+branch in two ways, either b or c,\par
+if the first one was a.\par
+And we have one branch,\par
+one possibility for the third letter.\par
+And we can see that the\par
+three branches at the beginning\par
+corresponding to the three possibilities.\par
+And then at the second level we have\par
+two branches for each node,\par
+because we have used one letter\par
+and we can use one of the remaining two to continue.\par
+And once we get to the next level here,\par
+then we have used two letters\par
+and there's only one branch because\par
+we can only continue each of the sequences in one way.\par
+So the total number of sequences,\par
+or the total number of leaves here\par
+is going to be three times two times one,\par
+again by the product rule, is six.\par
+So again, using the product rule again,\par
+and therefore the number of permutations\par
+in general of n objects is going to be\par
+n possibilities for us to write the first symbol,\par
+times n minus one to write the second one,\par
+or n branches here times n minus one and so on.\par
+N minus two after two times one,\par
+and this is denoted by n factorial.\par
+And it's called n factorial.\par
+And to do that, as we said we use the product rule.\par
+So now for n bigger than or equal to one,\par
+as we said n factorial,\par
+which is the number of permutations of n objects\par
+is n times n minus one and so on\par
+times two times one.\par
+But what is zero factorial?\par
+Because we cannot write n times n minus one after one\par
+if we start with zero.\par
+So what is the meaning of zero factorial?\par
+So the question is\par
+how many ways can you permute zero objects?\par
+And I think maybe the difficulty we might have in\par
+visualizing it is because we're trying to\par
+see something that does not exist.\par
+For example if we have two symbols, a and b,\par
+then the possible permutations are ab and ba.\par
+If we have just a, the permutations are just a.\par
+But if we have nothing, no elements,\par
+how many ways can you arrange that?\par
+Can you arrange it in zero ways,\par
+or one way, or more?\par
+And I think that the difficulty is\par
+exactly because we cannot visualize the empty set,\par
+and the reason is because we stripped it out of all\par
+content that we used to have.\par
+So if you remember we're trying to visualize\par
+in some sense, a void.\par
+Which we remember, we said that\par
+sequences were actually an abbreviation for,\par
+for tuples.\par
+So for example for ab,\par
+we had had a tuple a,b,\par
+we omitted the comma,\par
+we omitted the parentheses\par
+and we were just left with ab.\par
+So once we do that,\par
+when we get to the empty set\par
+we have nothing to see.\par
+But if we kept either all the commas,\par
+or even just the parentheses,\par
+then we'll be in better shape.\par
+So here we have ab and ba,\par
+those are the sequences where we're\par
+keeping the parentheses.\par
+But maybe dropping the commas in between or not,\par
+that doesn't matter.\par
+And then if we have a single element,\par
+then we'll have just,\par
+just this parentheses and a,\par
+this is the one tuple\par
+consisting of a,\par
+and these are the two tuples ab and ba.\par
+And we are asking how many tuples can we have,\par
+that have a and b in some order,\par
+how many tuples we can have\par
+that have a.\par
+And if we are looking at the empty set,\par
+then this is the only tuple that we'll have,\par
+it's just the tuple that contains nothing.\par
+And clearly there's exactly one such tuple.\par
+It's just this tuple, just like here it is one tuple.\par
+So therefore, zero factorial,\par
+none of these tuples is exactly one.\par
+And this by the way is the exact same reason why\par
+we define two to the zero to be one.\par
+It's exactly the same here,\par
+we're multiplying decreasing values,\par
+whereas in the other case we're multiplying\par
+the same value, but zero times\par
+so it'd still get one.\par
+So in this day and age people talk a lot about\par
+what is a fact, and what is an alternative fact.\par
+So we are going to discuss\par
+an alternative factorial view.\par
+So, so far we've counted\par
+the number of ways\par
+of arranging things, or in factorial,\par
+we counted it by writing the terms from left to right.\par
+So we wrote them left to write\par
+and we counted how many elements,\par
+how many different objects we can put\par
+in the left-most location,\par
+how many elements we can put in the second location,\par
+and so on.\par
+So we got n for the first one\par
+times n minus one, times n minus two,\par
+which is a little odd because the number's decreased\par
+instead of increasing.\par
+And what we'd like to do now, is look at\par
+an alternative way of counting the number\par
+of ways to arrange objects or\par
+count n factorial,\par
+by instead of looking from left to right\par
+and counting how many different elements we\par
+can put in each location,\par
+we want to write the elements from smallest to largest,\par
+and see in how many locations we can write them in.\par
+So if we do that,\par
+so let's call the elements known, for example\par
+one, two, three, up to n.\par
+So for the first element, we put the first object\par
+there's only one location where we can put it wherever\par
+it is, there's just one location,\par
+let's say if we call it one we put it\par
+in this location.\par
+Now, once we do that, then the second element,\par
+we have two possible locations.\par
+We can put it to the left of the first one,\par
+or to the right of the first one.\par
+So we have two possibilities.\par
+Let's say that we chose to write it to the left.\par
+So now for the third object,\par
+we have three relative locations.\par
+We can put it to the left of the second element,\par
+between the first two elements,\par
+or to the right of the first element.\par
+So we have three locations,\par
+and let's say we put it\par
+to the right of the first element.\par
+So we have these locations now.\par
+For the fourth element, we'll have\par
+four locations to put it, either\par
+here, here, here, or here, and so on.\par
+So until we get to the nth element,\par
+we'll have one possibility for the first location,\par
+times two for the second one,\par
+for the first smallest element,\par
+times two for the next smallest, three,\par
+and so on up to n,\par
+and we'll get n factorial.\par
+So this gives us an alternative way of\par
+understanding how we get n factorial\par
+which is in some sense a little nicer because\par
+instead of going from n down, we're\par
+going from one all the way up to n.\par
+Alright.\par
+Either definition, and maybe even\par
+more closely the second definition,\par
+leads us to a recursive definition of\par
+n factorial,\par
+which is as follows.\par
+So n factorial is n times n minus one and so on\par
+up to two times one,\par
+or if you want you can write it, as we saw\par
+one up to n, up to n.\par
+And either way you do it,\par
+it's going to be n times\par
+the product of the first n minus one element.\par
+So it's n times n minus one factorial.\par
+And this is true for all n which is\par
+bigger than or equal to one.\par
+So, in other words,\par
+it also holds for one, and mainly one,\par
+one factorial is going to be one times zero factorial.\par
+That's because zero factorial was\par
+defined to be one,\par
+and you can actually even extend it beyond one\par
+to negative values.\par
+So we can see this\par
+recursion here,\par
+so for\par
+for zero,\par
+we get that n factorial is\par
+one, and just one here.\par
+If you want to get to one factorial\par
+you multiply one by one.\par
+If you want to get two factorial,\par
+you multiply two,\par
+three factorial, you multiply two factorial by three.\par
+And to get four factorial you take three factorial\par
+which is six, multiply by four,\par
+by five, by six, and so on.\par
+Now,\par
+what we want to do next is go over\par
+several applications of this formula\par
+and count a number of basic permutations\par
+and do several examples of permutations.\par
+So, first of all, suppose\par
+you're planning a trip to three cities,\par
+and you wonder how many ways you can\par
+arrange your trips,\par
+and how many different orders can you\par
+visit those cities.\par
+Let's say Los Angeles, San Diego, and San Francisco.\par
+So you can go Los Angeles, San Diego, and San Francisco,\par
+we can go San Francisco, San Diego, Los Angeles,\par
+and so on.\par
+So how many ways can you arrange your trip?\par
+So clearly there is going to be three factorial\par
+because there are three ways of arranging those objects,\par
+which is three times two times one,\par
+which is six.\par
+Now, another application, basic application,\par
+of permutations is an anagram of a word\par
+is a rearrangement of the letters.\par
+So the question is,\par
+how many anagrams\par
+does a word with five distinct letters have?\par
+So, for example, we take PEARS.\par
+And then it has, SPEAR,\par
+which is a word,\par
+or E-A-R-P-S.\par
+Those are the same letters rearranged,\par
+and we are not insisting that\par
+that will be an actual English word.\par
+So how many anagrams or how many permutations\par
+do those five letters have?\par
+Then again, we're looking at how many permutations\par
+do five objects have.\par
+And that's this five factorial,\par
+maybe five times four times three times two times one,\par
+which is 120.\par
+Now, we can look at constrained anagrams of,\par
+for example, PEARS.\par
+So what if the letters A and R must stay adjacent,\par
+like they are originally,\par
+and, furthermore, in order,\par
+namely A followed by R.\par
+So, for example we're counting words like PARSE,\par
+A followed immediately by R,\par
+or SEPAR, S-E-P-A-R,\par
+which is not a word but a sequence of these\par
+five letters, where\par
+A is followed immediately by R.\par
+So, if you would like to count how many such\par
+anagrams there are,\par
+then one could observe\par
+that what we are looking at are permutations of\par
+P, E, and then AR combined, and S.\par
+So, for example, PARSE is\par
+P, followed by AR, followed by S\par
+and followed by E,\par
+and SEPAR is SE, followed,\par
+S then E then P, and then AR.\par
+So the number of such permutations is\par
+we have four objects, and the number is four factorial,\par
+which is four times three times two times one,\par
+which is 24.\par
+Now, if we would like to count the number of anagrams\par
+where AR are adjacent, but they can appear in any order,\par
+namely AR or RA,\par
+then we're counting things like SPARE,\par
+AR are adjacent,\par
+A comes before R,\par
+or R-A-E-S-P,\par
+where A and R are adjacent but\par
+R comes before A.\par
+And now we notice there are\par
+two ways to order those letters,\par
+AR or RA.\par
+And for each order, as we have seen before,\par
+there are going to be 24 ways.\par
+So the total number by the product rule,\par
+is two times 24, which is 48.\par
+Because these,\par
+these two types of anagrams are distinct.\par
+Those that have AR and those that have RA\par
+are different, so they add up\par
+and by the multiplication rule\par
+we get two times 24, which is 48.\par
+Now, what if we wanted anagrams where\par
+A and R are not adjacent?\par
+Then, for example,\par
+A-E-S-P-R and\par
+S-R-P-A-E.\par
+Then we can note that\par
+what we could do is we could look at\par
+all possible anagrams of pairs,\par
+which in the previous line we calculated to be 120.\par
+And we can look at,\par
+we can consider all anagrams where A and R\par
+are adjacent and in any order,\par
+which here we calculated to be 48.\par
+And we can just look at the compliment of this set\par
+relative to all possible permutations.\par
+And then by the subtraction rule, we get\par
+the total number of permutations or anagrams\par
+where A and R are not adjacent is\par
+five factorial, is the total number of permutations\par
+minus 48, so 120 minus 48,\par
+namely, 72.\par
+Now let's look at more additional constrained permutations.\par
+So how many ways can you\par
+organize three distinct boys\par
+and two distinct girls in a row\par
+or in a line?\par
+So if there are no constraints,\par
+then you have these five kids,\par
+three boys and two girls.\par
+You can organize them any way you want.\par
+So together, we have five kids and\par
+we want to arrange them so they are\par
+three plus two factorial or five factorial,\par
+or 120 ways.\par
+Now, what if you want the boys and girls\par
+to alternate?\par
+Then necessarily you have to have\par
+boy, girl, boy, girl, boy.\par
+So this is the arrangement.\par
+So now we can arrange the boys any way we want,\par
+and we can arrange the girls any way we want.\par
+So the boys we can arrange in three factorial ways\par
+and the girls in two factorial ways,\par
+and then any combination is possible.\par
+So, again, by the product rule,\par
+we'll get three factorial times two factorial\par
+which is six times two which is twelve,\par
+a lot less than this permutation\par
+because we insisted on the arrangement\par
+of boy, girl, boy, girl,\par
+and this is very restrictive.\par
+How about boys together and girls together?\par
+For example here, three boys followed by two girls,\par
+or you could have two girls,\par
+two girls followed by three boys.\par
+So now we have two ways to arrange,\par
+to decide if the boys come first or\par
+the girls come first.\par
+And then we have three factorial ways to arrange the boys,\par
+and two factorial ways to arrange the girls,\par
+and we get the number we got before\par
+times two, namely 24.\par
+And what if the boys and girls are unconstrained again,\par
+as they were here at the beginning,\par
+but the orientation and the left to right\par
+or right to left does not matter?\par
+Namely if we have the same arrangement from,\par
+an arrangement where this boy is here on the left,\par
+and so on, we count it as the same\par
+as the arrangement where they're organized\par
+in the reverse way.\par
+Then the number's going to be 120,\par
+or five factorial divided by two,\par
+which is 60.\par
+Now, you can also arrange objects in a circle,\par
+as we have seen in the\par
+title's picture\par
+for this talk.\par
+And so for example, we ask\par
+how many ways can you arrange five people\par
+at a round table?\par
+Then you need to specify whether\par
+rotation matters or not.\par
+So for example here we have ABCDE,\par
+like five people named, say, ABCDE.\par
+And they're sitting in this arrangement.\par
+And here is another arrangement,\par
+again ABCDE arranged if you go counter-clockwise.\par
+But these two are different in the sense that\par
+we just shifted everyone by two.\par
+So it's the same arrangement where B follows A\par
+and C follows B, both of them but\par
+they're shifted by two here.\par
+This one has just cyclically shifted\par
+to the left twice.\par
+So we need to decide whether these two\par
+you consider to be the same arrangement,\par
+and these two\par
+everyone sits next to the same people\par
+on the left and the right.\par
+But do you consider them different?\par
+If you consider them different,\par
+these two arrangements\par
+then we'll be back to counting things in a line\par
+because you have five possibilities\par
+to put here, times four times three\par
+times two times one.\par
+So again, five factorial or 120.\par
+On the other hand,\par
+if you don't care about rotations,\par
+you only care about the relative\par
+sitting of the people,\par
+then you consider these two arrangements\par
+to be the same,\par
+in that case you can see that every\par
+five permutations that you get here\par
+you'll consider to be identical.\par
+So the total number is going to be\par
+five factorial divided by five,\par
+namely four factorial, or 24.\par
+So, hopefully,\par
+this gives you some idea about different\par
+applications of permutations,\par
+and I want to just end by talking about\par
+n factorial and how it grows.\par
+So here's a table that shows n factorial for n\par
+going from one up to 20,\par
+so one factorial is one,\par
+two factorial is two,\par
+three factorial is six.\par
+And then 24, 120,\par
+and seven and 20.\par
+And as you can see,\par
+these numbers grow quite fast.\par
+And the reason they grow quite fast\par
+is because they actually grow faster\par
+than an exponential.\par
+Because exponential is two times two times two,\par
+and these are two, it grows as\par
+one times two times three.\par
+And you keep increasing.\par
+And luckily, there's a way to approximate this rough,\par
+they call it Stirling's Approximations\par
+or Stirling's Formula.\par
+And it says that\par
+n factorial grows,\par
+while it will grow faster than exponential,\par
+faster than two to the n or e to the n,\par
+but less than n to the n as we can see,\par
+because it's one times two up to n,\par
+all the terms are less than n.\par
+But, more precisely, it grows\par
+the rough is n over e to the n.\par
+And even more precisely,\par
+it grows like n over e to the n\par
+times the square root of two pi n.\par
+And this approximation is quite good,\par
+for example if you look here, if you look at\par
+n equals to ten,\par
+then here is n factorial,\par
+and here is Stirling's Approximation.\par
+And you can see that Stirling's Approximation\par
+is off by 0.0002,\par
+or 0.0003 percent.\par
+So already for n equals to ten it's actually\par
+very, very accurate.\par
+And here is a graph that shows n factorial,\par
+relative to it's Stirling Approximation.\par
+And as you can see here,\par
+the graph already forms maybe even three\par
+if you look at this table, if you look here.\par
+It looks pretty much the same.\par
+So this is a very good approximation.\par
+And in the python notebooks for this class\par
+you can actually calculate, we have\par
+creative functions that calculate\par
+Stirling's Approximation and factorial.\par
+And you can play with them and see how good\par
+the approximation is.\par
+So, so far we have talked about\par
+permutations of objects,\par
+and we talked about n factorial,\par
+and what we would like to do in the next lecture is\par
+talk about partial permutations.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+A student lists the number of permutations for \{1,2\} as (1,1), (1,2), (2,2), (2,1). What is wrong with this student\rquote s answer?\par
+\par
+\tab\par
+In a permutation, each item appears exactly once\par
+\par
+\tab\par
+The permutations should be ordered (1,1), (1,2), (2,1), (2,2)\par
+\par
+\tab\par
+(1,2) is the only permutation\par
+\par
+\tab\par
+1 must be the first element in each of the four permutations\par
+}
+ 

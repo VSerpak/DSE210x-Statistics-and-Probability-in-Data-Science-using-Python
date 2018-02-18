@@ -1,0 +1,503 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Hello and welcome back.\par
+In the previous lecture,\par
+we talked about disjoint unions,\par
+and now we would like to find the size of general units.\par
+I will show that it's actually doing that is a piece of PIE.\par
+And so we'll talk about\par
+how to cover the size of general unions,\par
+we'll discuss the principle of inclusion-exclusion,\par
+we'll talk about how to find the size of multiple sets,\par
+but we want to start with the hairy problem\par
+that we presented in the end of the last lecture, okay?\par
+So just to remind ourselves,\par
+you have a friend who says that she can determine\par
+the size of any set instantly and exactly.\par
+She says that she can therefore also tell\par
+the exact number of hairs that you have on your head.\par
+And we wondered if there are a couple of questions\par
+you can ask her\par
+and be fairly certain that she tells the truth.\par
+And we gave a small hint.\par
+Okay, so we'll provide a very simple solution\par
+that perhaps not surprisingly uses the subtraction rule.\par
+So what you can do is you can ask her two questions.\par
+First you ask her how many hairs you have, okay?\par
+And then after she gives you the answer,\par
+you go someplace where she doesn't see\par
+and you remove a small number of hairs,\par
+let's say eight, from your head,\par
+and then you come back,\par
+and you ask her how many hairs do you have now, okay?\par
+Now, if she's...\par
+By the subtraction rule,\par
+the difference between her first and second answer\par
+should be the number of hairs you removed, right?\par
+Because initially she had the total number of hair\par
+that you had\par
+and then the number of hairs you had after the,\par
+you removed those eight,\par
+and then using the subtraction rule,\par
+the size of A minus B\par
+is just the difference between the size of A\par
+minus the size of B,\par
+which should be eight, okay?\par
+Now, if she gave you the number eight,\par
+if the difference between those two answer is eight,\par
+two answers is eight,\par
+then you're fairly certain that she knows\par
+what she is talking about.\par
+Whereas if she gives you any,\par
+the difference is any number different than eight,\par
+then you know for sure that she made at least one mistake\par
+and probably was wrong both times, okay?\par
+So that was pretty easy.\par
+Now, can you ask her a single question\par
+and be fairly certain that she knows\par
+how many hairs you have,\par
+that she can tell how many hairs you have?\par
+Well, you can,\par
+because you don't need to ask her about\par
+the number of hairs you had at the beginning\par
+and the number of hairs you had at the end.\par
+You can just do,\par
+make her do the math for you,\par
+and you can just ask her how many hairs you removed.\par
+And if her answer is eight,\par
+then you know she is telling the truth, probably,\par
+and if her answer is not eight,\par
+then you know for sure that she is not telling the truth.\par
+And this may look like a silly puzzle,\par
+but in fact it's used\par
+for something called zero-knowledge proofs,\par
+where you want a person to prove their identity\par
+without revealing more information about themselves\par
+or what they know.\par
+So, for example, here,\par
+she only reveals that she knows the difference\par
+between the number of hairs,\par
+but she doesn't give you any information\par
+about how many hairs you had before\par
+or how many hairs you had afterwards.\par
+So you can do this, like, if you want to,\par
+say, if someone knows a password,\par
+you ask them a certain question,\par
+they can show you that they know the password\par
+without telling you what the password is.\par
+All right, so now let's go to the, our main topic,\par
+which is general unions.\par
+So for disjoint sets A and B,\par
+we saw that if the two sets are disjoint,\par
+which we denote like that,\par
+then the size of A union B is the sum of their two sizes,\par
+and like that and something.\par
+And in, but in general,\par
+the size of A union B\par
+is not the size of A plus the size of B.\par
+For example,\par
+take the set a union with itself.\par
+That gives you just the set a again, okay?\par
+And therefore the size of the union of a and a\par
+is the size of just the set a, and, which is one.\par
+But this is not equal to two,\par
+which is the size of a plus the size of a.\par
+So here we see that the size of the union is one,\par
+is different from the size of the,\par
+from the sum of the sizes, which is two.\par
+And that's because a and a are not disjoint.\par
+They intersect, okay?\par
+So the question is can we determine\par
+the size of A union B in general?\par
+And the answer is yes.\par
+Because if we take the set A\par
+and we add to it a set B,\par
+then if we add the numbers,\par
+the numbers, size A plus the size B,\par
+then what happens is we count every element here once,\par
+every element here once,\par
+but every element in the intersection we count twice, okay?\par
+So these are counted twice.\par
+So we want it to count every element in each region once,\par
+here once, here once, and here once.\par
+So what we need to do is subtract the number of elements\par
+that we counted twice.\par
+So the size of A union B is therefore\par
+the size of A plus the size of B\par
+minus the size of the intersection, okay?\par
+And this is called the principle of inclusion-exclusion,\par
+or PIE, okay?\par
+Which we'll denote like that.\par
+So we have two sets here that intersect.\par
+All right, so here is another example.\par
+So here is a Squirtle\par
+and here is Krabby,\par
+and both of them are water Pokemons,\par
+and here is Pidgey,\par
+and he is a flying Pokemon.\par
+And here is Gyrados,\par
+and he is both a water and a flying Pokemon.\par
+Now, suppose we want to know\par
+how many Pokemons we have here altogether.\par
+So, true, we can count,\par
+one, two, three, four,\par
+but, you know, that's maybe too easy,\par
+or maybe it's more than the three\par
+that we would like to count.\par
+So what we can do instead is use\par
+the inclusion-exclusion principle.\par
+And we can say that the size of W,\par
+the set of water Pokemon,\par
+union the set of flying Pokemon,\par
+so that's what we're trying to count,\par
+the size of the union of these two sets\par
+is the size of W plus the size of F\par
+minus the size of W intersection F,\par
+water intersection flying.\par
+Now, the number of water Pokemons,\par
+as we can see here, is three,\par
+and the number of flying Pokemon that we have,\par
+as we can see here, is two,\par
+and the number of both water and flying Pokemons is one,\par
+so therefore the size of the union is going to be\par
+three plus two minus one, which is four,\par
+again, as we found out initially, it worked.\par
+So that works here, as well, right?\par
+Now let's do a slightly more complicated example.\par
+Let's look at divisibility by two numbers.\par
+So we've looked at divisibility by one number.\par
+We want to look at divisibility by two.\par
+So suppose that we let D two union three\par
+be the set of integers between one and 100\par
+that are divisible by two or by three.\par
+So this consists of the elements not one,\par
+because it's not divisible by two or by three.\par
+It consists of two,\par
+because it's divisible by two,\par
+three, it's divisible by three,\par
+four, divisible by two,\par
+six, divisible both of them,\par
+and so on up to 100,\par
+which is divisible by two, okay?\par
+So the question is how many elements are here, okay?\par
+And we can see that we're going to...\par
+It's going to be relatively easy to solve,\par
+answer these question\par
+using the inclusion-exclusion principle.\par
+So we'll let D2 be the set of all integers\par
+between one and 100 that are divisible by two,\par
+and that's the numbers two, four, six, up to 100.\par
+And so here are those showing here in the Venn diagram.\par
+And we'll let D3 be the set of all integers between 100,\par
+one and 100 that are divisible by three.\par
+And these are three, six, nine, and so on, up to 99,\par
+and they are depicted here, okay?\par
+And so we know that D of two union three,\par
+the set of the numbers that are divisible by two or three,\par
+is going to be D2 union D3, right?\par
+Because every element here is divisible\par
+by either two or three or both, okay?\par
+And so this is the whole set\par
+whose size we're trying to determine.\par
+Now, by the inclusion-inclusion principle,\par
+by the PIE principle,\par
+we know that the size of D2 union D3\par
+is the size of D2 plus the size of D3\par
+minus the size of the intersection.\par
+And the size of D2, as we calculated before,\par
+is going to be 50, 100 divided by two.\par
+And the size of D3 is going to be 100 divided by three,\par
+thereof which is 33, okay?\par
+And the size of D2 intersection D3 is the set,\par
+so D2 intersection D3 is the set of all integers\par
+between one and 100\par
+that are divisible both by two and by three,\par
+and that's the set of all integers between one and 100\par
+that are divisible by six,\par
+because if a number is divisible by both two and three,\par
+it must be divisible by six and vice versa, okay?\par
+And the size of the set is therefore 100 divided by six,\par
+therefore of that, which is 16.\par
+So that tells us that the number of integers\par
+divisible by two or three is going to be\par
+the size of D2 plus the size of D3\par
+minus the size of the intersection,\par
+which is 50 plus 33 minus 16,\par
+which is 67.\par
+So moving from two to more sets.\par
+We know that for two sets,\par
+by the principle of inclusion-exclusion,\par
+the size of A union B is the size of A plus the size of B\par
+minus the size of their intersection.\par
+When we get three sets,\par
+the size of A union B union C\par
+is going to be the sum of the individual sets,\par
+as we had before,\par
+minus the sum of their pairwise intersections,\par
+again, as we had before,\par
+but now there are more of them,\par
+plus the size of the threewise intersection here, okay?\par
+Now, to see that,\par
+let's look at a Venn diagram.\par
+So here are the sets A, B, and C,\par
+and we want to calculate the size of the union\par
+and the total number of elements in all three sets.\par
+So when we take the size of A,\par
+we're counting every element in this region once,\par
+every element in this region once,\par
+here once and here once.\par
+When we add the number of elements in B,\par
+what we're doing is we're adding the elements\par
+here once and here once and here once and here once.\par
+And you notice that the elements here were counted twice\par
+and elements here were counted twice again.\par
+And when we add C,\par
+that, then what we do is we add elements\par
+here, here, here, and here once,\par
+and what we see is that elements in this,\par
+in these regions here were counted once,\par
+but elements in the pairwise intersection here and here\par
+were counted twice,\par
+and the element in the threewise intersection\par
+were counted three times.\par
+So what we need to do is we need to\par
+not double count here and here\par
+and not triple count here.\par
+So what we'll do is we'll count,\par
+we'll subtract the number of elements in this intersection,\par
+the number of elements in this intersection, and so on.\par
+So we subtract the number of elements in A intersection B,\par
+and when we do that,\par
+we're going to reduce these numbers by,\par
+these counts by one, okay?\par
+So we reduce one from here and one from here.\par
+And then we subtract the intersection of A and C,\par
+so we subtract now here,\par
+subtract this one and this one,\par
+and then we subtract the intersection of B and C,\par
+so what we do is we subtract these numbers once.\par
+And then what we see is that now we counted this element,\par
+the elements here once and here once and here once,\par
+but the elements here, we added them first three times\par
+for A, B, and C,\par
+and then we're subtracting them three times\par
+for the three pairwise intersection,\par
+so we're actually not counting them at all.\par
+So what we need to do is we need to add them again,\par
+so we add the size of the threewise intersection\par
+A intersection B intersection C,\par
+and when we do that, we get one here,\par
+and so we counted everything once, okay?\par
+So we see that the size of A union B union C\par
+is this formula.\par
+We have the size of the individual sets\par
+minus the size of this pairwise intersection\par
+plus the size of the threewise intersection.\par
+And this formula generalizes to more than three sets.\par
+So if you have n sets,\par
+the size of the union of n sets A1 up to An\par
+is going to be the summation of the sizes\par
+of the individual sets\par
+minus the summation of the sizes\par
+of the pairwise intersections\par
+and then plus the summation of the threewise intersections\par
+and so on.\par
+You'll have an alternating sum until, in the end,\par
+you get plus or minus the size\par
+of the intersection of all sets.\par
+And if n is even,\par
+then this number will be negative,\par
+and if n, just like it was here, is even,\par
+it ends with a negative sign,\par
+and if n is odd,\par
+then this number will be added\par
+and this will be a plus one,\par
+like here, you'll be adding the last intersection.\par
+All right, so to see, like, a small application of this,\par
+consider a class that has eight students,\par
+and each of them speaks C, R, or Python, okay?\par
+And what we mean by that\par
+is that they can speak or program C.\par
+They may be able to program other languages.\par
+But there are eight students programming C\par
+and possibly other languages and so on, okay?\par
+And since we have Python,\par
+clearly we want, we know we're going to use the PIE,\par
+the principle of inclusion-exclusion.\par
+So what we want to,\par
+so we'll let C denote the set of students\par
+that can program in C,\par
+R the set of students that can program in R,\par
+and pi the set of students that can program in Python.\par
+And we're interested in the size\par
+of this union C union R union pi.\par
+And, I'm sorry,\par
+we know that the size of C union R union pi is eight, okay?\par
+And we're also told that each student,\par
+each language is spoken by five students, okay?\par
+So that tells us that the size of C,\par
+the number of students that can program in C\par
+and potentially other languages, as well, is five,\par
+and the same as the size of students\par
+who can program in R and in Python.\par
+And furthermore,\par
+we're told that every language pair\par
+is spoken by three students.\par
+So the size of C intersection R,\par
+all these intersection have size three.\par
+And we ask how many students can speak\par
+or can program in all three languages, okay?\par
+So given this information,\par
+we ask how many students can program in three languages?\par
+So you'll notice that this is\par
+a slightly different application of the inclusion-exclusion.\par
+We're not asking what is the size of the union,\par
+but here we're given the size of the union\par
+and the various intersection,\par
+and we're just asking what is the size of, like,\par
+the three intersection, right?\par
+So that's what we want to know,\par
+and we're going to draw the Venn diagram,\par
+as shown here.\par
+And so what we know is, for example,\par
+is that the number of students\par
+who can program in C is five, okay?\par
+And likewise, the number of students\par
+who can program in R is also gonna be five,\par
+and Python.\par
+And we're told that the number of students\par
+who program in C and R is three,\par
+and the number of students who program in all of them\par
+is what we want to find out, okay?\par
+So what we can do is\par
+we can write the inclusion-exclusion principle\par
+that tells us that the size of C union R union pi\par
+is the sum of the individual sets\par
+minus the sum of the pairwise intersections\par
+plus the sum of the three-way intersection, that, okay?\par
+And we know almost all the numbers here.\par
+We know that the size of the union is eight.\par
+We know these individual sizes are five each,\par
+and we know that the intersections,\par
+pairwise intersections are three each.\par
+And then we are going to add the size of the three-way,\par
+threewise intersection,\par
+which is what we want to find out, okay?\par
+So we can just move things to the other side\par
+and we get the size of the intersection\par
+or the question mark that we have\par
+is going to be equal to eight minus three fives\par
+plus three threes, okay?\par
+And that's going to be eight plus nine, which is 17,\par
+minus 15, which is two, okay?\par
+So going back to the picture here,\par
+we've figured out that this size is two,\par
+and now we can calculate the different sizes.\par
+If you ask, for example,\par
+how many students can program in C and R but not in Python,\par
+that's this region here,\par
+which is going to be three minus two, which is one.\par
+So this is one,\par
+and likewise these numbers are one.\par
+And then if you want to know how many students\par
+can program in C but not in R or Python,\par
+that's this area here,\par
+and that's going to be five minus four,\par
+which is again one, okay?\par
+So we can do that.\par
+All right.\par
+Okay, so let's do a couple of sanity checks.\par
+So we want to compare the principle of inclusion-exclusion\par
+to some expected outcomes.\par
+So if A and B are disjoint,\par
+then the size of a union B.\par
+Well, we know that if they're disjoint,\par
+then the size of A union B is going to be\par
+just the size of A plus the size of B,\par
+and we want to see if the inclusion-exclusion principle\par
+gives it to us.\par
+So by the PIE, by the principle of inclusion-exclusion,\par
+it's the size of A plus the size of B\par
+minus the size of the intersection,\par
+but the size of the intersection is zero\par
+because they're disjoint,\par
+so it's just the size of A plus the size of B,\par
+as we expected.\par
+If you take two equal sets,\par
+take the union,\par
+so if you take A union A and ask what is the size,\par
+we know it should be the size of A,\par
+and we wanna see if inclusion-exclusion gives that to us.\par
+So by inclusion-exclusion,\par
+it's the size of A plus the size of A\par
+minus the size of the intersection,\par
+where the size of the intersection of A and A\par
+is the size of A.\par
+So we get the size of A plus the size of A\par
+minus the size of A,\par
+which is just the size of A again.\par
+So again, it agrees with our intuition.\par
+If we take general unions,\par
+then we can see that the size of the union\par
+is at least the maximum of the size of A and B,\par
+and you can see it from the inclusion-exclusion.\par
+For example, here it's going to be the size of A\par
+plus the size of B minus the size of the intersection.\par
+This difference here is going to be no negative,\par
+so it's bigger than the size of A.\par
+Likewise, it's the size of B plus the size of A\par
+minus the size of the intersection.\par
+The size of A minus the size of the intersection\par
+is no negative.\par
+So it's bigger than the size of B,\par
+so therefore it's bigger than the maximum of the two sizes.\par
+And you also see that it's going to be,\par
+and you get equality if and only if they are nested\par
+and if A is containing B or B is containing A.\par
+You can verify that.\par
+And we see that the size of A union B\par
+is at most the size of A plus the size of B,\par
+and again we get that because it's the size of A\par
+plus the size of B minus some number,\par
+so it's going to be less than or equal\par
+to the size of A plus the size of B.\par
+And we've got equality here if and only if\par
+the size of A intersection B is zero, okay?\par
+So we get equality if and only if they are disjoint, okay?\par
+And maybe the most important sanity check,\par
+so this also agree,\par
+and for the most important sanity check,\par
+let's go back to, you know,\par
+maybe the founding father of philosophy, Aristotle.\par
+He told us that the whole is more than the sum of the parts.\par
+So let's just verify that this is correct.\par
+And is it?\par
+No, because we know that the size of the union,\par
+if we take the whole,\par
+it's the union of parts,\par
+and the size of the union, as we just said,\par
+is less than or equal to the sum of its parts.\par
+So this shows you that Aristotle was a great philosopher,\par
+but maybe he,\par
+maybe he didn't know about\par
+the principle of inclusion-exclusion.\par
+All right, so to summarize,\par
+we talked about a solution to the hairy problem,\par
+we talked about the size of a general union,\par
+and the principle of inclusion-exclusion,\par
+we talked about how to cover the size\par
+of a union of multiple sets,\par
+and next time we're gonna talk about Cartesian products.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+If they are disjoint, A union B equals\par
+\par
+\tab\par
+Size of A + Size of B\par
+\par
+\tab\par
+The Intersection of A and B\par
+}
+ 

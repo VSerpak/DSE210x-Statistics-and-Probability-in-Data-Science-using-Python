@@ -1,0 +1,743 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello again, everyone.\par
+Last time we talked about permutations,\par
+and in this lecture we'll discuss combinations.\par
+So what are they?\par
+So first we're going to look at subsets of a set.\par
+And so a subset of size k is called a k-subset.\par
+And we'll denote all subsets of size k\par
+of the set of elements one up to n by this notation,\par
+which we'll call the set one up to n choose k.\par
+So this is nothing but a collection of all k-subsets,\par
+all subsets of size k,\par
+of the set one up to n.\par
+So let's see a few examples.\par
+So what is the collection of all subsets of one up to three\par
+that have size one?\par
+That is exactly the collection that consists\par
+of the set \{1\}, the set \{2\}, and the set \{3\}.\par
+And how about the collection of all subsets of size two,\par
+in other words, 2-subsets,\par
+of the set one up to three?\par
+That's the collection that consists\par
+of \{1,2\}, \{1,3\}, and \{2,3\}.\par
+And how about the collection of all two-element subsets\par
+of one up to four?\par
+That's a collection that consists\par
+of \{1,2\}, \{1,3\}, \{1,4\}, \{2,3\}, \{2,4\}, and \{3,4\}.\par
+And of course, as you might guess,\par
+what we're interested is\par
+counting the number of such subsets, okay?\par
+So before we do that,\par
+we want to look at an analogous question\par
+about sequences with k ones.\par
+So we define the collection n choose k,\par
+the set n, one up to n choose k,\par
+to be the collection of all k-subsets or k-element subsets\par
+of one up to n, okay?\par
+And what we want to see is that it corresponds,\par
+it's analogous to the collection of all n-bit sequences\par
+with k ones.\par
+To see that,\par
+let's look at a few examples of subsets\par
+and binary sequences.\par
+So for this set,\par
+one up to three choose one,\par
+this set's subsets are\par
+the subset \{1\}, the subset \{2\}, and the subset \{3\},\par
+and these are all size one subsets of one up to three.\par
+And how about binary sequences of length three\par
+with a single one?\par
+These are the sequences 100, 010, and 001.\par
+And we see that there's a one-to-one correspondence\par
+between those subsets and binary sequences.\par
+For example, one,\par
+this represents the location of the single one.\par
+Here it's, we have a single one in the first location.\par
+This would mean that we have a single one\par
+but it's in the second location,\par
+and that's the sequence here.\par
+And this subset corresponds to the sequence which with,\par
+again, single one which appears in the third location.\par
+And how about the collection of all two-element subsets\par
+of one up to three?\par
+And again, this is the collection.\par
+These are all the two-element subsets of one up to three,\par
+\{1,2\}, \{1,3\}, and \{2,3\}.\par
+And that'll correspond to the,\par
+to binary sequences of length three with two ones,\par
+namely these sequences,\par
+110, 101, and 011.\par
+All of them have length three,\par
+all of them have two ones,\par
+and the correspondence goes as follows.\par
+If you look at a sequence,\par
+for example, here \{1,2\},\par
+that means that you are looking\par
+at a binary string with two ones.\par
+The first one,\par
+one of them is at location one,\par
+and the second one is location two.\par
+That's this sequence here.\par
+And this corresponds, this subset corresponds to,\par
+again, to a binary string of length three with two ones,\par
+locations one and three.\par
+That's this substring.\par
+And this one corresponds to 011,\par
+ones in location two and three.\par
+And if we looked at four choose two,\par
+we won't list all of them,\par
+but if we take the subset \{1,2\},\par
+that will correspond now to four-bit strings,\par
+'cuz we have subsets of one up to four,\par
+in location \{1,2\} and then \{1,3\},\par
+locations one and three,\par
+and the last one \{3,4\}\par
+means that we have,\par
+we're looking at strings of length four,\par
+'cuz we're taking subsets of one up to four,\par
+and we have two ones in location three and four.\par
+That's this binary sequence here, okay?\par
+So to summarize what we have seen is\par
+we looked at two interpretations of n choose k,\par
+of this collection taking the set one up to n choose k.\par
+One of them was as subsets of size k of the set one up to n,\par
+and the other one was as n-bit sequences with k ones.\par
+And, for example, again, to remind us,\par
+if we take the set one up to three choose two,\par
+then that will correspond\par
+to the collection \{1,2\}, \{1,3\}, \{2,3\},\par
+and if we consider it as binary sequences,\par
+it will correspond to 110,\par
+that is one and two,\par
+ones in location one and two,\par
+101, and that's one in locations one and three,\par
+and 011, ones in location two and three, okay?\par
+And so we saw that there is one-to-one correspondence,\par
+therefore these two sets,\par
+the set of k-element subsets of one up to n or any n set\par
+and the set of n-bit sequences with k ones\par
+will both have the same number of elements,\par
+and we want to see what this number is.\par
+And we'll mostly count sequences.\par
+We'll always, or mostly do this.\par
+Why?\par
+Because at least for me,\par
+they are easier to see,\par
+because we just look at sequences,\par
+we see what we have,\par
+and as we'll see later on,\par
+they also generalize to more than binary sequences\par
+and more, selecting more than one set,\par
+so it will be easy to generalize.\par
+But because it's the same number,\par
+then the same will apply to subsets.\par
+So whatever we're going to say here\par
+will apply to subsets as well, okay?\par
+So what we're trying to do is, again,\par
+count how many elements are in those sets, okay?\par
+What is the size,\par
+what is the cardinality of the set,\par
+of two-element subsets of one up to three.\par
+Right, so that's we're going to do.\par
+We're going to find the number of n-bit sequences\par
+with k ones, okaY?\par
+So we'll denote the number by n choose k,\par
+and this is going to be the cardinality of the collection\par
+of the elements one up to n choose k.\par
+So just to clarify,\par
+and so this is the number of n-bit sequences with k ones.\par
+And again,\par
+and this is all going to be called\par
+the binomial coefficient, okay?\par
+So this symbol here is the binomial coefficient.\par
+And again, this is the number\par
+and this is the collection of all such elements, okay?\par
+So, for example, three choose two,\par
+when this is a number,\par
+is the number of two-element subsets\par
+in one up to three, okay?\par
+So here it's the size of the set 110, 101, 011,\par
+which is three.\par
+So therefore three choose two,\par
+this binomial coefficient,\par
+is the size of,\par
+or the cardinality of the collection\par
+of all two elements of size three.\par
+There are three elements,\par
+therefore the binomial coefficient three choose two\par
+is equal to three.\par
+And if you want to see where this number comes from,\par
+why it has to be three,\par
+then one way to do it is to specify\par
+the locations of the ones.\par
+So we can do that by specifying\par
+ordered pairs from one up to three.\par
+For example, we can specify that we put one in location one\par
+and then a one in location two.\par
+That will correspond to the sequence 110.\par
+Or that we put a one in location one\par
+and then a one in location three,\par
+and that will correspond to the sequence 101.\par
+Or we put a one location,\par
+the second location,\par
+and then in the first location,\par
+that will correspond to 110.\par
+Locations two and three, that's 011.\par
+Location 31, that's 101.\par
+And location 32,\par
+location three, put a one in location three\par
+and location, one location two,\par
+and that's 011, okay?\par
+So if we did that,\par
+then we specify all possible two sequences of,\par
+binary sequences of length three with two ones, okay?\par
+But as we obviously observed,\par
+this number is actually six,\par
+whereas what we're trying to count is three.\par
+And why is this number six?\par
+Because we specified,\par
+we took numbers from one up to three\par
+and we specified two of them.\par
+So this is the number of permutations,\par
+two permutations of one up to three,\par
+and as we've seen in the last lecture,\par
+this number is going to be\par
+the second falling power of three,\par
+so it's three times two,\par
+because we have three possibilities for the first location,\par
+one, two, or three,\par
+and then once we chose the first location,\par
+we have two possibilities for the second location,\par
+in this case two or three.\par
+So it's three times two,\par
+which is six, okay?\par
+And this is the number of all the locations,\par
+but as we obviously observed,\par
+this will overcount the number of binary sequences,\par
+and that's because if we choose location one first\par
+and then location two,\par
+we get 110,\par
+but if we choose location two\par
+and then location one for the ones,\par
+we'll get the same sequence, 110.\par
+So these two ordered locations\par
+will both correspond to the sequence 110.\par
+Likewise if we chose to put a one location\par
+in the first location\par
+and then a one in the third location,\par
+we'll get the same outcome,\par
+the same sequence 101,\par
+as if we chose to put a one in location three\par
+and then a one in location,\par
+in the first location, location 31,\par
+we'll get again 101.\par
+Both of those will give us 101.\par
+And similarly,\par
+if we first put a one in location two\par
+and then a one in location three,\par
+we get 011.\par
+If we first put a one in location three\par
+and one in location two,\par
+we get again 011,\par
+so that will also correspond to 011, okay?\par
+And when we do that,\par
+we see that three choose two,\par
+the number of sequences of length three with two ones.\par
+That's our definition of three choose two.\par
+It's the size of the cardinality\par
+of the set of all sequences of length three with two ones.\par
+And that cardinality is therefore going to be\par
+three to the two falling power divided by two.\par
+It's this number here,\par
+which is three to the second falling power,\par
+but each sequence we counted twice,\par
+so we divide by two.\par
+That's going to be six over two,\par
+which is three,\par
+which agrees with what we have found\par
+just by writing down all the sequences, okay?\par
+So what we would like to do\par
+is calculate the binomial coefficients\par
+not just for sequences of length three with a single bit,\par
+that is, one,\par
+but for arbitrary sequences of length n with k ones.\par
+So in other words,\par
+we want to determine n choose k,\par
+which is the number of n-bit sequences with k ones.\par
+We wanna see what this number is.\par
+And just to remind ourselves,\par
+this number here,\par
+when we have number n on top,\par
+is a number,\par
+is just a cardinality,\par
+whereas this quantity here is a collection of subsets.\par
+So this here is the collection of all...\par
+is the collection of all...\par
+I'm sorry, it's the collection of all...\par
+I apologize.\par
+Let me start this again.\par
+- [Man] That's okay. - Sorry.\par
+- [Man] No, that's fine. - Okay.\par
+- [Man] (mumbles)\par
+- Yes. Okay.\par
+- [Man] (mumbles)\par
+- So what we would like to do now, of course,\par
+is move from three-bit sequences with a single one\par
+to general binary sequences,\par
+so n-bit sequences with k ones.\par
+So in other words,\par
+we would like to determine\par
+the binomial coefficient n choose k,\par
+which corresponds to the number of n-bit sequences\par
+with k ones.\par
+You wanna see how many subsequences there are.\par
+And just to make sure we understand,\par
+this number here on the left is a number,\par
+is just an integer, is the number,\par
+n choose k is the number of n-bit sequences with k ones,\par
+and this quantity here on the right is a set,\par
+is the collection of all n-bit sequences with k ones.\par
+And we are interested in the cardinality of the set.\par
+Okay? Right.\par
+So what we can do if we want\par
+to calculate the cardinality of the set\par
+and what we could specify the location of the ones,\par
+of the k ones in order\par
+and then write them one by one.\par
+So, for example,\par
+if we said location 123,\par
+and then we write a one in location one,\par
+and then a one in location two\par
+and then a one in location three.\par
+Or if we specify the order 531,\par
+we write a one in location five\par
+and then a one in location three\par
+and a one in location one,\par
+and we want to count all of those.\par
+So, and notice,\par
+so that the number of ones we are writing is k.\par
+In this case it's three.\par
+And that each number here is a location,\par
+and the location,\par
+'cuz we're looking at n-bit strings,\par
+then each number here is a number between one and n\par
+corresponding to the location where to write the one, okay?\par
+So if you want to calculate the number of ordered locations,\par
+we can do that for,\par
+then this number, as we know,\par
+is, as we have seen in the previous lecture,\par
+is n to the falling k,\par
+because what we're specifying here is just a permu-,\par
+is just a k permutation of one up to n,\par
+and in this case we are specifying a three permutation.\par
+We specify one number between one and n,\par
+and then a different number between one and n,\par
+and then a third different number between number one and n,\par
+and in general that'll be n times n minus one\par
+times n minus two\par
+all the way up to n minus k plus one\par
+different ways of specifying\par
+the locations of the ones in order.\par
+And, but notice that every binary sequences with k one\par
+will correspond to k factorial ordered locations,\par
+namely, for every binary sequences of k ones,\par
+we will write it in k factorial different ways\par
+if we specify the order.\par
+For example, if we take the sequence 10101,\par
+then if we specify the order of writing\par
+a one in the first location\par
+and then one in the third location\par
+and one in the fifth location,\par
+we will get this sequence.\par
+But we'll get the same sequence\par
+if we specified the order 1,5,3,\par
+namely, we wrote one location in the first location,\par
+and then one in the fifth location\par
+and then one in the third location,\par
+we'd get again the same sequence.\par
+And likewise if we wrote it in this order,\par
+wrote the ones in this order,\par
+and so on, okay?\par
+And so we got the same binary sequence\par
+by writing the ones in six different orders,\par
+as we see here.\par
+And of course this number six comes\par
+because we have three locations\par
+and we specify their order,\par
+and thus we know,\par
+again from the previous lecture,\par
+there are going to be three factorial ways\par
+of specifying the order.\par
+So in other words,\par
+we have the number of the sequences is n choose k,\par
+but we write it, each one,\par
+we can write each one in k factorial different orders.\par
+And when we multiply those two,\par
+when we take the number of sequences\par
+times the number of ways to write them,\par
+we get the total number of ways of writing\par
+three different elements of one up to n,\par
+and that number is n to the k factorial, okay?\par
+So we get this relation\par
+that the number of k-bit sequences...\par
+I'm sorry, of n-bit sequences with k ones,\par
+the number times,\par
+that's the number of sequences that we have here,\par
+and then each one we can write\par
+in k factorial different ways,\par
+and when we multiply these numbers,\par
+we'll get the number of ways of writing three locations,\par
+three different locations from one up to n,\par
+which is n choose k.\par
+So just rearranging the terms here,\par
+we get n choose k is n to the k falling power\par
+divided by k factorial, okay?\par
+And another way of saying the same thing\par
+is that when we write the number,\par
+the locations of the ones in order,\par
+we have n to the k falling power ways of writing it, okay?\par
+But every k factorial of them\par
+are going to yield the same sequence,\par
+like here,\par
+every way of writing 1,3,5, 1,5,3,\par
+all three factorial,\par
+or in general k factorial way of writing\par
+those locations of the ones in order\par
+will correspond to the same sequence.\par
+So if you want to count the number of sequences,\par
+we'll divide n to the k factorial by k factorial,\par
+and that's n choose k.\par
+Now once we do that,\par
+we can write things a little more symmetrically,\par
+and we remember that n to the k falling power\par
+is just n factorial divided by n minus k factorial,\par
+so this number is going to be n factorial\par
+divided by k factorial n minus k factorial.\par
+And that's because this number is n times n minus one\par
+all the way to n minus k plus one,\par
+which is just n factorial divided by n minus k factorial,\par
+as again we have seen in the last lecture.\par
+So we, in other words,\par
+we found the expression\par
+for the binomial coefficient n choose k\par
+is just n factorial divided by k factorial\par
+and n minus k factorial, okay?\par
+So what we're going to do next\par
+is get a little bit of intuition\par
+for the binomial coefficient\par
+by looking at its value for small n and k\par
+and then for simple n and k, all right?\par
+So that's what we're going to do.\par
+We want to see why the binomial coefficient n choose k,\par
+which is the cardinality of the set\par
+of all n-bit sequences with k one,\par
+why is it n factorial divided by k factorial\par
+n minus k factorial,\par
+and want to do it for small values of n and k, okay?\par
+So let's look at first choosing,\par
+looking at three-bit sequences with a single one.\par
+That's a collection of all three-bit sequences\par
+with a single one.\par
+And we see that the cardinality is three choose one,\par
+which is three factorial\par
+divided by one factorial two factorial,\par
+which is three,\par
+which agrees with this just enumeration here of three.\par
+And the reason we get three\par
+is because we're choosing the location of the one,\par
+and we have here three possible locations.\par
+We need to choose the location of the ones,\par
+and there are three locations\par
+and we can choose one,\par
+so there's just three ways\par
+of choosing one number out of three.\par
+How about the set of all three-bit sequences\par
+with two ones?\par
+Here we enumerate all such sequences,\par
+three bits, two ones.\par
+And what is that number?\par
+According to this formula,\par
+it's going to be equal to...\par
+And we see there are three.\par
+And according to our formula,\par
+it's three factorial\par
+divided by two factorial one factorial.\par
+Three factorial is six, two factorial is one,\par
+so again we get three,\par
+which agrees with the number here.\par
+And one way to see why this is the right number\par
+is to observe that here either we can say\par
+we're choosing two locations of the one,\par
+or alternatively we can say we're just choosing\par
+the location of the zero,\par
+and choosing one location for the zero\par
+is the same as choosing one location for the one.\par
+There are three ways of doing that.\par
+So choose location of the zero,\par
+there are three ways to do that,\par
+and that's why this number should be three,\par
+and it is according to our formula.\par
+How about choosing four-bit sequences with two ones?\par
+So here we enumerated all of them,\par
+0011 up to 1100, okay?\par
+And how many such sequences are there?\par
+Well, according to our binomial formula,\par
+the number should be four choose two,\par
+which is four factorial\par
+divided by two factorial two factorial.\par
+Four factorial is 24,\par
+divided by four gave us a six.\par
+And again you can check that this is correct,\par
+this number is really six.\par
+And why do we get this number?\par
+Because we need to choose the locations of the one.\par
+To choose the first location, we have four possibilities.\par
+The first one can be here in location one and location two\par
+and location three and location four,\par
+and then we,\par
+once we chose the location of the first one,\par
+there are three ways to choose the location\par
+of the second one, okay?\par
+So that gives us four times three, which is 12.\par
+But every pair,\par
+if we choose one location,\par
+say, location two and then location four,\par
+it's the same as choosing location four\par
+and then location two,\par
+so each sequence was chosen twice,\par
+so we need to divide 12 by two,\par
+and that gives us six.\par
+So that's just another way of seeing (mumbles), okay?\par
+So what we did here was we explained\par
+where n choose k comes from for small n and k.\par
+In this case, n is three or four\par
+and k is one or two.\par
+And what we want to do next is look at n choose k\par
+and see, explain it for values that are simple,\par
+not necessarily small.\par
+So we're looking at simple n choose k\par
+where n and k can be very large, one of them,\par
+but maybe there's something that makes it simple, okay?\par
+So for example,\par
+if you look at n choose zero,\par
+according to our formula\par
+it's n factorial divided by zero factorial n factorial,\par
+but remember that zero factorial is one,\par
+so this gives us one.\par
+And why is n choose zero one?\par
+Well, this corresponds to the number of n-bit sequences\par
+with zero ones,\par
+namely, the number of all n-bit sequences\par
+that are all zero.\par
+And there's exactly one such sequence, okay?\par
+How about n choose n?\par
+According to the binomial formula,\par
+it's n factorial divided by n factorial zero factorial,\par
+and again, zero factorial is one,\par
+so this is again one.\par
+And why n choose n should be one?\par
+Because it counts the number of n-bit sequences with n ones.\par
+In other words,\par
+it counts how many all-one sequences are there,\par
+and there's exactly one all-one sequences,\par
+single all-one sequence,\par
+so this number should be one.\par
+How about n choose one?\par
+And again, you see we're doing it,\par
+this number is simple in that,\par
+in the sense that this is one,\par
+but it can be larger,\par
+n can be any number.\par
+So n choose one,\par
+according to the binomial formula,\par
+is n factorial divided by one factorial\par
+and then n minus one factorial.\par
+And this number,\par
+everything will cancel except n,\par
+so this number is n.\par
+And why should n choose one be n?\par
+Because we're counting how many n-bit sequences are there\par
+with a single one,\par
+and this corresponds to choosing the location\par
+of the single one,\par
+and there are n ways of choosing this location.\par
+Choose location of a single one,\par
+there are n ways of doing it.\par
+How about n choose two?\par
+N choose two corresponds to the number of n-bit sequences\par
+with two ones,\par
+and according to the binomial formula,\par
+it's going to be n factorial divided by two factorial\par
+and then n minus two factorial.\par
+And we'll see that a lot of cancellations will happen here,\par
+and the numerator will just have n times n minus one.\par
+The rest will cancel here,\par
+and then divide by two.\par
+So it's n times n minus one over two.\par
+And the reason is because we can choose\par
+the first location of the one in n ways,\par
+and then we can still choose the second location\par
+in n minus one ways,\par
+but each sequence,\par
+each binary sequence we will choose twice,\par
+so we have n times n minus one divided by two,\par
+and that's this number here, okay?\par
+So I would,\par
+because these numbers are so important,\par
+I would like to give another explanation\par
+of why n choose two is n times n minus one over two.\par
+So remember that,\par
+so we just said n choose two is when we have the set here,\par
+n choose two is the collection of all n-bit strings\par
+with two ones.\par
+So this is one up to n, n choose two,\par
+so it's the collection of all n-bit strings with two ones.\par
+And n choose two is the cardinality of this set,\par
+is the number of such elements.\par
+Now we can define Ai to be the collection of n-bit strings\par
+such that the first one is at location i, okay,\par
+where i is some number between one and n minus one.\par
+So here is an example.\par
+We have n-bit strings,\par
+and Ai is the collection of all sequences of n bits\par
+with two ones\par
+where the first one is at location i,\par
+namely the first i minus one gets us zero,\par
+and then we have one here,\par
+and then these can be anything\par
+except that they have to have a single one there.\par
+So we have n minus i locations,\par
+so here,\par
+that have exactly a single one.\par
+So how many such sequences are there,\par
+namely how many sequences are there\par
+where the first one is in location i,\par
+but we have to choose a single one\par
+amongst the n minus i remaining locations.\par
+So the size of A sub i is exactly n minus i,\par
+corresponding to the n minus i possibilities\par
+of choosing the second i, okay?\par
+So first we observe that the size of A sub i,\par
+the number of n-bit strings\par
+where the first i is in location i is n minus i.\par
+For example, if you choose An, A n minus one,\par
+how many sequence, binary sequences are there of length n\par
+where the first location is in location,\par
+the first one is in location n minus one?\par
+You'll get n minus n minus one, which is one.\par
+That's because if the first one is in location n minus one,\par
+there's only one sequence, 00011.\par
+Now observe also that the sets A sub i are disjoint,\par
+because if you have,\par
+if you take Ai,\par
+then we have the first i here is in location i,\par
+and we see this to take another set,\par
+say, A i plus five,\par
+then the first one would be in location i plus five,\par
+so these,\par
+the binary strings in the two sets must be different,\par
+therefore, so the Ais are disjoint.\par
+In other words, n choose i,\par
+the collection of all n-bit strings with two ones,\par
+is the disjoint union of A1, A2,\par
+up to A n minus one.\par
+With this location, as you remember,\par
+it just means regular union.\par
+We're just remind our, reminding ourselves\par
+that these sets are disjoint.\par
+And therefore by the summation rule,\par
+we get that n choose two,\par
+the cardinality of the set\par
+of all n-bit strings with two ones,\par
+is this,\par
+is going to be the summation of the set,\par
+size of the sets A sub i, okay?\par
+Because these sets are disjoint.\par
+So the size of the union is just the sum of the sizes.\par
+And this is going to be n minus one for A1,\par
+the size of A1 plus n minus two\par
+and so on up to one.\par
+And so we know this arithmetic sum\par
+one up to n minus one is n times n minus one over two.\par
+So that gives us another explanation for this set,\par
+for this, the binomial coefficient n choose two.\par
+All right.\par
+So I also want to show you that you can calculate\par
+the binomial coefficients by hand fairly easily\par
+for fairly large numbers.\par
+So we know that n choose k is n to the k falling power\par
+divided by k factorial,\par
+and so we can therefore calculate, for example,\par
+seven choose two is going to be seven times six divided,\par
+so that's seven to the second falling power,\par
+divided by two factorial, which is two times one.\par
+We cancel the two and the six\par
+and we get seven times three, which is 21.\par
+Also notice that n choose k\par
+is the same as n choose n minus k,\par
+and, because,\par
+we'll talk about this a little more later,\par
+but the reason is because n choose k\par
+is n factorial divided by k factorial\par
+and then divided by n minus k factorial,\par
+and this is the same as n factorial\par
+divided by n minus k factorial k factorial.\par
+We'll say that again in the next video.\par
+And so if k is bigger than n over two,\par
+then it might be easier,\par
+instead of calculating n choose k,\par
+to calculate n choose n minus k.\par
+So, for example,\par
+if you want to calculate seven choose five,\par
+we can calculate seven choose two.\par
+Both of them are seven factorial divided by five factorial\par
+divided by two factorial,\par
+this and that.\par
+So we can put seven choose two,\par
+seven choose two, as we calculated here, was 21.\par
+We can also cancel a lot of terms.\par
+So if we have, for example, 12 choose nine,\par
+that's the same as 12 choose three,\par
+which is 12 to the third falling power,\par
+12 times 11 times 10,\par
+divided by three times two times one,\par
+and then you can cancel this six here with the 12,\par
+so we get it's 220.\par
+And using this we can calculate fairly large\par
+binomial coefficients by hand,\par
+as you can see.\par
+But if not,\par
+you can always Google or write a program that does it.\par
+To summarize,\par
+we looked at two equivalent problems.\par
+One is counting how many subsets of size k\par
+does a set of size n have,\par
+and the other problem was how many sequences,\par
+binary sequences of length n have k ones.\par
+We showed that these two problems were the same\par
+and we count,\par
+we call the number of such sequences\par
+over the number of such subsets,\par
+we call that the binomial coefficient n choose k,\par
+and we gave a formula for that,\par
+which is n factorial divided by k factorial\par
+and divide again by n minus k factorial.\par
+And what we want to do next is give some examples\par
+of binomial coefficients.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Given a set of n numbers, are there generally more combinations or permutations for a subset of this set?\par
+\par
+\tab\par
+Combinations\par
+\par
+\tab\par
+Permutations\par
+\par
+Submit\par
+}
+ 

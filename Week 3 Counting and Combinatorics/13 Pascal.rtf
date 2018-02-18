@@ -1,0 +1,481 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hi again.\par
+So, so far we've talked about binomial coefficients,\par
+we gave some examples how to calculate them,\par
+and we also talked about a couple of the properties,\par
+now we want to continue with some more properties,\par
+and talk about the Pascal Triangle and the Binomial Theorem.\par
+Okay, so first let's start with Pascal's identity\par
+that says that n plus one choose k is\par
+n choose k plus n choose k minus one.\par
+And for example, four choose three,\par
+if we take n to be equal to three,\par
+and k to be equal to three,\par
+then four choose three is equal to three choose three\par
+plus three choose k minus one, namely plus three choose two.\par
+Okay, and to see why that is so,\par
+observe that four choose three denotes number of sequences\par
+of length four with three ones.\par
+So here we have all\par
+binary sequences of length four with three ones,\par
+and we can decompose this collection of sequences\par
+into two subsets, into two smaller collection.\par
+One where the last digit is, last bit is one, like this,\par
+and one where the last bit is zero.\par
+So we can write it as the collection of all binary sequences\par
+of length four with three ones, where the last bit is zero,\par
+and the collection of all binary sequences\par
+of length four with three ones where the last bit is one.\par
+So these two together, these two sets are disjoint,\par
+and together they give us everything here,\par
+because every sequence here has\par
+length four with three ones,\par
+and either the last bit is zero or the last bit is one.\par
+So we just partitioned this set into two subsets,\par
+and therefore the sum, this number of,\par
+the number of elements here which is four plus,\par
+which is three, sorry,\par
+plus the number of elements here, which is one,\par
+will give us four, which is the total of elements here.\par
+So the only question is, how many elements we have here,\par
+and how many elements we have here?\par
+So how many elements we have here?\par
+Well the last bit is zero, so that means that we have\par
+three ones in the first three locations,\par
+and the total number of such sequences is three choose three\par
+because we have 3-bit sequences with three one\par
+and there's three choose three,\par
+and we, namely a single one sequence here,\par
+so with three ones.\par
+And how about this set, how many elements are here?\par
+Well we have, we have all the,\par
+all the strings here of flank four with three ones,\par
+but we're using 1-bit here, so here we have,\par
+this set corresponds to the collection\par
+of 3-bit sequences with two ones.\par
+So here we have the collection of 3-bit sequences\par
+with two ones, and we just appended each of them with one.\par
+So we're asking how many 3-bit sequences have two ones,\par
+and that number is three choose two.\par
+So we get that the collection of 4-bit sequences\par
+with three ones, this collection here,\par
+corresponds to the collection\par
+of 3-bit sequences with three ones.\par
+That's this collection here, which is three choose three,\par
+plus the collection of 3-bit sequences with two ones,\par
+namely three choose two, which is the number here.\par
+And this will hold, sorry, this will hold in general,\par
+if we consider binary sequences\par
+of length n plus one with k ones,\par
+then they'll consist of binary sequences\par
+of length n plus one with k ones and zero at the end,\par
+and that number is going to be n\par
+for the first n location, choose k,\par
+because we still have the same k ones,\par
+plus the number of sequences of length n\par
+with k minus one ones, and that's,\par
+those will correspond to the sequences of length n,\par
+with, where the last bit is one,\par
+so we have k minus one ones in the first n locations,\par
+and when you sum those up, you'll get n plus one choose k.\par
+Okay, so this is Pascal's Identity,\par
+and we can use it to create Pascal Triangle,\par
+which is a way to calculate all the binomial coefficients,\par
+again in a different recursive way.\par
+So as we have seen n plus one choose k\par
+is n choose k plus n choose k minus one.\par
+So we can start writing the Pascal Triangle\par
+by first writing, so this is going to be,\par
+the rows will correspond to n,\par
+and the columns will correspond to k.\par
+And we know that n choose zero is one,\par
+and that means that this first column is all ones.\par
+Okay, so this is, for example,\par
+five choose zero, which is one,\par
+four choose zero, which is one.\par
+And the first row will correspond\par
+I'm sorry, the diagonal here will\par
+correspond to n choose n.\par
+So for example, this is zero choose zero,\par
+this is one choose one, this is two choose two, and so on.\par
+So n choose n is one, and therefore,\par
+this corresponds to all ones.\par
+And now when we want to use this identity,\par
+and then for example,\par
+if you want to calculate two choose one,\par
+then according to this identity two choose one\par
+is going to be one choose one plus one choose zero.\par
+Okay, which we can draw here,\par
+two choose one is one choose one plus one choose zero.\par
+Okay, this is one choose one, this is one choose zero,\par
+we have to add them up.\par
+And then if you want to calculate three choose one,\par
+it's going to be two choose one plus two choose zero,\par
+so that's this number here, three choose one\par
+is going to be two choose one plus two choose zero,\par
+so it's two plus one, which is three.\par
+And if you want to calculate three choose two,\par
+by Pascal's Identity, he's going to be\par
+two choose two plus two choose one, that's this number here,\par
+it's three choose two, is two choose two\par
+plus two choose one or one plus two, which is again three.\par
+And if you want to calculate four choose one,\par
+it's going to be three choose one plus three choose zero,\par
+three plus one, which is four.\par
+If we want to calculate four choose two,\par
+it's going to be the sum of these two, which is six.\par
+And this value here is going to be one plus three\par
+which is four, and so on,\par
+you get 5, then 4 plus one, 10,\par
+6 plus 4, 10, 4 plus 6 and 5, one plus 4.\par
+Okay, so this is a Pascal Triangle.\par
+It shows in row n and column k,\par
+it shows n choose k and also we have the recursive,\par
+we have calculating it by having each element\par
+as the sum of the element above it\par
+and the element diagonally to the left of it,\par
+up and to the left of it, okay?\par
+So when you observe the Pascal Triangle,\par
+it has many properties and here's one property\par
+that is quite apparent.\par
+So here is the Pascal Triangle again.\par
+If we take a plus b and raise it to the first power,\par
+a plus b to the one, we just get a plus b, okay?\par
+If we take a plus b square,\par
+we get a square plus two ab plus b square.\par
+A plus b cube is a cube, plus three a square b,\par
+plus three ab square plus b cube, and so on.\par
+A plus b to the four?\par
+A to the four, four a cube b,\par
+six a square b square, and so on.\par
+And when we look at those coefficients,\par
+one one, one two one, one three three one,\par
+one four six four one,\par
+then they're exactly the same as we look at coefficiency.\par
+One one, one two one, one three three one,\par
+one four six four one, and so on.\par
+In other words,\par
+what this suggests is,\par
+so and that the coefficient,\par
+if we take, for example, a plus b to the four,\par
+the coefficient of a to the four\par
+is going to be four choose zero, which is one.\par
+The coefficient of a cube b is going to be four,\par
+which is four choose one.\par
+The coefficients of a square b square\par
+is going to be four choose two, which is six.\par
+The coefficient of ab cube\par
+is going to be four choose three.\par
+The coefficient of b to the four\par
+is going to be four choose four, which is one, okay?\par
+And writing this out, it means\par
+that if you take a plus b to the nth power,\par
+it's going to be the summation of i going from zero up to n,\par
+of n choose i, times a to the n minus i,\par
+times b to the i.\par
+In this case, a plus b to the four\par
+is going to be four choose zero times a to the four,\par
+b to the zero plus four choose one,\par
+a cube times b to the one plus four choose two,\par
+a square, plus a square b square, and so on.\par
+In general, a plus b to the n,\par
+again, summation i going from zero to n,\par
+n choose i, a to the n minus i, times b to the i.\par
+Okay?\par
+So, this is what we get by observation\par
+and we want to explain why this is the case, okay?\par
+So in general, let's first repeat it.\par
+We said that a plus b to the n is summation\par
+of i going from zero to n of n choose i\par
+times a to the n minus i, b to the i,\par
+and that holds for every a and b, and every integer n,\par
+which is bigger and equal to zero.\par
+And this is actually quite important theorem,\par
+what has many applications and for one thing,\par
+it gives the binomial coefficients their name,\par
+because what we have here are polynomials\par
+with two variables, like a plus b to the n.\par
+If you want, you can have a plus x to the n,\par
+or x plus y to the n,\par
+so we get a polynomial with two variables,\par
+and polynomials set with two variables are called binomial.\par
+And that's why this is called the Binomial Theorem,\par
+and that's why these coefficients\par
+are called binomial coefficients.\par
+All right, so let's explain where\par
+the Binomial Theorem comes about.\par
+So let's look again at an example.\par
+Suppose we take a plus b cube,\par
+which is a plus b, times a plus b, times a plus b.\par
+And then, notice that we have three factors,\par
+each of them is the same, a plus b.\par
+Now, when we factor things out,\par
+we'll get a times a times a, or a cube,\par
+plus a square b, plus aba, and so on up to bbb.\par
+In fact, we'll get eight such terms, okay?\par
+And each term we get by selecting\par
+one of the a and b from each of these three factors, okay?\par
+So we get a sum of terms and in fact, we have eight terms,\par
+and each term is a product of a's and b's,\par
+where one is selected from each of the three factors, okay?\par
+So for example, aab we got\par
+by selecting this a, and then this a and this b, okay?\par
+So notice that in all of the terms,\par
+they have, they consist of a's and b's, three in total,\par
+and so the number of a's plus the number of b's is three,\par
+because we have three factors,\par
+and we chose one element from each, okay?\par
+And furthermore, if we're going to group terms together,\par
+so how many times we have a cube?\par
+We have one.\par
+How many times we have a square b?\par
+We have here a square b, plus another a square b here,\par
+plus another a square b here.\par
+Okay, so we have three terms and we have three ab square,\par
+this one, and from this one and that one,\par
+and we have a single b cube.\par
+And these numbers that we are looking at,\par
+the numbers that multiply each term here,\par
+what we want to show are the binomial coefficients, okay?\par
+So how many terms are there with i b's?\par
+That's the number of way of selecting i factors\par
+out of the three factors that we have here.\par
+So for example, here if we have,\par
+if we want to see how many ways we can select,\par
+how many terms that have a single b's.\par
+Now remember, we need to choose either a or b here,\par
+or a or b here, or a or b here.\par
+And the number of ways of selecting a single b\par
+is the number of ways of selecting one,\par
+because we're looking at a single b,\par
+out of the three terms here.\par
+And if we consider the number of ways,\par
+the number of terms that will give you ab square,\par
+that will be the number of ways\par
+of selecting two b's out of these three.\par
+So two factors out of the three,\par
+and that's going to be three choose two.\par
+So the number, again, the number of terms with i b's\par
+is the number of ways of selecting i factors\par
+out of the three, which is three choose i, okay?\par
+So for example, three a square b,\par
+and then it's this one, or this one, or this one, okay?\par
+And it corresponds to selecting either this b,\par
+or this b or this be here, okay?\par
+And this will tell us that this number\par
+is going to be three choose zero.\par
+Number of way of selecting zero b's\par
+times a cube, plus three choose one,\par
+and if we're just selecting a single b,\par
+times a square b plus three choose two a b square,\par
+plus three choose three b cube.\par
+All right, and generally we get that,\par
+so we just saw that a plus b cube is this term here.\par
+And generally, which is summation i going to zero to three,\par
+or three choose i, a to the three minus i, b to the i.\par
+And similarly, if we have a plus b to the n,\par
+it's going to be n choose zero times a to the n,\par
+and that's how many ways we can select,\par
+we have n terms, we need to select zero b's,\par
+and here we have n terms, we need to select a single b,\par
+that's n choose one.\par
+Here we have again n terms,\par
+we need to select n b's, and that's n choose n,\par
+which we can write as summation i going from zero\par
+up to n of n choose i, a to the n minus i, b to the i.\par
+Okay, so this is if you want proof of the Binomial Theorem.\par
+Okay, and now we want to see a couple of applications.\par
+So remember that we said before the summation of n choose i\par
+is two to the n and we proved it combinatorially\par
+by saying this is a total number of sequences of length n,\par
+and this counts the number of sequences\par
+of length n with i ones, okay.\par
+And we give a combinatorial proof\par
+and which is basically what we have just said,\par
+and if we want to give an algebraic proof,\par
+then notice that two to the n, this number two to the n,\par
+is one plus one to the n, and according to a formula,\par
+it's going to be summation of n choose i,\par
+i to the n, one to the n minus i times one to the i.\par
+But one to the n minus i is one, and i to the n,\par
+i to the i, one to the i is again one.\par
+So we get that this is equal to summation of n choose i.\par
+So that's a simple proof that two to the n\par
+is equal to the summation of,\par
+from i going from zero to n of n choose i, okay?\par
+Another application of this theorem\par
+is to find coefficients of polynomials.\par
+So suppose we take one plus x to the n,\par
+then by the Binomial Theorem,\par
+it's going to be equal to summation i going from zero to n,\par
+of n choose i, times x to the i,\par
+and then one to the n minus i,\par
+which is one, so we don't write it.\par
+So it's summation of n to the i, x to the i.\par
+And now we could ask what is, for example,\par
+the coefficient of x square in one plus x to the seven?\par
+So one plus x to the seven\par
+is summation of i going from zero to seven,\par
+or seven choose i, x to the i, that's what we said here.\par
+Okay, and what is the coefficient of x square?\par
+We need to look at the coefficient of x square here,\par
+and that's going to be just seven choose two, okay?\par
+And seven choose two is seven times six divided by two,\par
+which is 21, and one could factor this out\par
+and verify that the coefficient of x square is 21.\par
+Similarly, what is the coefficient of x cube\par
+in three plus two x to the five?\par
+Well, we can write this using the Binomial Theorem,\par
+three plus two x to the five is summation i going\par
+from zero to five of five choose i,\par
+three to the five minus i times two x to the i.\par
+And we're interested in the coefficient of x cube,\par
+so we're interested in what happens\par
+when i is equal to three,\par
+and when i is equal to three,\par
+the coefficient is going to be five choose three\par
+times three to the five minus three,\par
+times three square and then times two cube.\par
+So five choose three is the same as five choose two,\par
+which is five times four divided by two,\par
+which is 10,\par
+and 10 times 9 times 8 is 720.\par
+And one more application\par
+is to show how we can use\par
+the binomial coefficient to get\par
+the Taylor expansion in place of e to the x.\par
+So we know that e to the x is equal to\par
+summation of i going from zero to infinity\par
+of x to the i divided by i factorial,\par
+and we want to derive this expansion,\par
+not using Calculus but just using Combinatorics.\par
+So notice that one definition of e to the x\par
+is one plus x to the n over n.\par
+For example e, one definition is one plus one\par
+over n to the n, when n tends to infinity.\par
+And e to the x, by the same reasoning,\par
+is one plus x over n to the n.\par
+So we can expand this using the Binomial Theorem,\par
+so this is going to be equal to summation of n choose i\par
+times x over n to the i,\par
+and there's another terms one to the n minus i,\par
+which we don't write because it's one.\par
+So one plus x over n to the n,\par
+therefore is equal to summation of n choose i\par
+x over n to the i.\par
+Now we can write, expand this out.\par
+So n choose i is n to the i falling power,\par
+remember that's n times n minus one,\par
+and so on up to n minus i plus one,\par
+or it's n divided by n minus i factorial.\par
+And then when you divide by i factorial,\par
+and times x over n to the i.\par
+And we can just rearrange terms here,\par
+so it's equal to x to the i divided by i factorial\par
+times n to the i falling power, divided by n to the i.\par
+So what we can do next is\par
+see what happens when n goes to infinity, right?\par
+Because we need to take the limit\par
+of this as n goes to infinity.\par
+So when n goes to infinity,\par
+this will turn, as we said,\par
+by definition, we'll take 10 to e to the x.\par
+And how about the right side?\par
+So we have here the summation of i going from zero to n\par
+of x to the i divided by i factorial\par
+times n to the i falling power, divided by n to the i.\par
+But now let's see what happens to this term.\par
+This terms will remain, okay,\par
+but this term, n to the i falling power i,\par
+n to the falling power i divided by n to the i\par
+will just turn to one.\par
+For example, if you take n to the second falling power,\par
+we'll get n times n minus one divided by n factorial,\par
+but the difference between n minus one and n,\par
+I'm sorry, it'll be n times n minus one divided by n square,\par
+but the difference between n minus one and n,\par
+the ratio goes to one.\par
+So this n to the i falling power n times n minus one\par
+will be roughly the same as n square,\par
+when you divide it will give you a one.\par
+And if you, and to the third falling power,\par
+we have n over n times n minus one over n,\par
+n minus one over n will go to one,\par
+times n minus two over n, again that goes to one.\par
+So this will just become summation\par
+of x to the i divided by i factorial.\par
+And you just need to argue that you can\par
+exchange the limit in the summation,\par
+which you can in this case.\par
+Okay, so we get that e to the x is\par
+summation of x to the i, divided by i factorial,\par
+which is the Taylor expansion,\par
+and we got it from the binomial coefficients.\par
+The last application of the Binomial Theorem\par
+that I want to mention is for the Binomial Distribution.\par
+We'll talk about the Binomial Distribution\par
+in a few lectures from now but for now,\par
+I just want to state the identity that we'll explain,\par
+but will happen when we talk about this distribution.\par
+So, so,\par
+let's look at this summation,\par
+summation from i going from zero to n of n choose i,\par
+p to the n minus one times one minus p to the i.\par
+Well, p is any number between zero and one.\par
+Well, we know that by the Binomial Theorem\par
+that this is going to be just\par
+p plus one minus p raised to n, right?\par
+Because this is summation of i going from zero to n\par
+of n choose i, p to the n minus i\par
+times one minus p to the i.\par
+But p plus one minus p is one,\par
+so that just gives us one to the n, which is one.\par
+So we get that this summation is one.\par
+For example, if we take\par
+one cube plus two times 1/3\par
+times 2/3 plus 2/3 square,\par
+So that's an example of this,\par
+where p is equal to 1/3,\par
+1/3 and one minus p is equal to 2/3\par
+and n is equal to two.\par
+So, so we get that this summation\par
+is going to be equal to one, right?\par
+Because it's, in this case,\par
+it's going to be two choose zero times 1/3 square\par
+times one minus p to the zero plus two choose one,\par
+which is two times 1/3 times 2/3\par
+plus two choose two, which is one,\par
+times 1/3 to the zero times 2/3 to the two\par
+and that's going to be equal to one.\par
+And we will use this identity\par
+when we talk about the Binomial Distribution,\par
+which is one of the reasons\par
+why we're mentioning the Binomial Theorem.\par
+So we'll talk about more then.\par
+So with that, we talked about different quantities\par
+of the binomial coefficients.\par
+In other words, we talked about binary sequences\par
+or choosing a set, subset from a set of size k,\par
+and what we want to do next is\par
+talk about larger alphabet sequence,\par
+also for larger alphabets,\par
+And that's what we'll do in the next lecture. See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Given the polynomial, (2+4x)4, what is the coefficient of x2?\par
+\par
+\tab\par
+272\par
+\par
+\tab\par
+384\par
+\par
+\tab\par
+1536\par
+\par
+\tab\par
+3072\par
+}
+ 

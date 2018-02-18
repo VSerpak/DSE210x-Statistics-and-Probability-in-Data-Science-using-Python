@@ -1,0 +1,369 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Hello, and welcome back.\par
+In the last lecture, we talked about Cartesian products\par
+and today we want to talk about Cartesian Powers.\par
+So we have shown an analogy between number operations\par
+and set operations.\par
+For example, we said that number addition corresponds to\par
+union of disjoint sets.\par
+We said that numbers subtraction corresponds to\par
+complement sets;\par
+and that multiplication corresponds to Cartesian product.\par
+And an actual question is, What do exponents correspond to?\par
+And that is what we will discuss in this lecture.\par
+We are going to talk about Cartesian Powers of a Set.\par
+And a Cartesian power of a set with itself, Cartesian\par
+product, I'm sorry, of a set with itself is called\par
+a Cartesian power.\par
+For example, for A square is A times A;\par
+and that's Cartesian square.\par
+And A to the n,\par
+if A is a set,\par
+A to n is a Cartesian product of itself,\par
+and times and that's called n'th Cartesian power of A.\par
+And the size of A to the n is the size of the Cartesian\par
+product A with itself, A times.\par
+As we have said in the previous video, by the product rule\par
+is just the size of A times the size of A times the size of\par
+A which is the size of A to the n'th power.\par
+This simple formula has simple practical and theoretical\par
+applications, we will go over a couple.\par
+Let's talk about license plates in California.\par
+Turns out that until 1904, you did not have to register\par
+your car.\par
+You could just drive it, no problem.\par
+In 1905, registration started being required and they\par
+had various registration formats, different formats\par
+for the license plates.\par
+Interestingly, they had a one-time registration fee of\par
+two dollars which makes sense because registration is\par
+something you only do one-time a year.\par
+In 1913, they started standardizing the license plates and\par
+they looked something like this or like that and\par
+basically they had, at most, six digits.\par
+So assuming that all numbers with one,\par
+one digit,\par
+and so on is possible starting\par
+from zero to the full six digits.\par
+Nine, nine, nine, nine, nine, nine, then the total number of\par
+license plates was going to be 10 to the sixth which\par
+is one million and again this is assuming that all numbers\par
+are possible.\par
+In 1956, they started running out of\par
+license plates, and what they did was\par
+they decided to have, instead of\par
+six digits, they decided to have three letters and\par
+three digits.\par
+Like that or like that.\par
+They changed the looks but they kept the format, at\par
+some point, and that gives us 26 cube possibilities\par
+for the letters times 10 cube for the numbers.\par
+I am using the product rule here, maybe a few times for\par
+26 cube to find how many here and then, 10 cube to find\par
+here and multiply because you can choose any sequence of\par
+letters and digits.\par
+So this gives you up to 17.6 million.\par
+In 1969, they were running out of numbers, again.\par
+So, they added another digit, which looks like that.\par
+And later on, they changed it like that\par
+with the same format.\par
+And that gave them a factor of 10 more so now the number is\par
+roughly 176 million.\par
+This is, again, using the product rule.\par
+You may wonder why they use Sam so much and the\par
+reasonable guess is that, maybe it is because\par
+this guy shown here in the back.\par
+Uncle Sam, maybe.\par
+In fact, this is California and\par
+Uncle Sam is, you know, kinda liked but\par
+you know with some reservations.\par
+The truth is that isn't not because of our Uncle Sam but\par
+because it stands for sample.\par
+This is another way that they demonstrate license plates.\par
+Now as we said Cartesian powers have many applications.\par
+Here is one: Binary Strings.\par
+If we take zero, one to the n, so zero one Cartesian\par
+product with itself n times, it's the set of all length\par
+n binary strings or in other words, n-bit strings.\par
+Here is an example, zero one to the one is\par
+just zero and one.\par
+Zero one square is zero zero, zero one, one zero, one one,\par
+as you can see is zero one square.\par
+Zero one cube is the set of all three n-bit strings,\par
+like that and so one.\par
+Notice that zero one to zero is just an empty string.\par
+This one here and what we see is that\par
+we can view it with this as each of those is,\par
+if you want, in this case\par
+a two tuple or three tuples will just meet\par
+at the parenthesis and the commas as we said when\par
+we talked about Cartesian products.\par
+You can also visual it so this is zero one to the one.\par
+This is zero one square, Cartesian square.\par
+This is the Cartesian cube of zero one, like that, and\par
+the size of zero one to the n is just the size of\par
+zero one raised to the n'th power.\par
+The size of zero one is two raised to the n, so\par
+it's two to the n'th.\par
+The sizes are of zero one to the one is two to the one,\par
+which is two.\par
+Two to the two is four to cube up to two to the n.\par
+Another example of Cartesian products are Subsets.\par
+The power set of S, denoted by this P of S, and\par
+sometimes by 2 to the s, as we will mention, is the\par
+collection of all subsets of set S.\par
+For example, the power set of a,b is the set, the\par
+empty set, the set consisting of a, the set consisting of b,\par
+and the set consisting of a,b.\par
+All those subsets.\par
+If you are interested in the cardinality or the number of\par
+subsets that S may have.\par
+We can see that one to one correspondence between the\par
+powerset of S and zero one to the S, the set of all\par
+strings of length, the binary strings of length the\par
+size of S.\par
+This is all subsets of S and this is the Binary strings\par
+of length of cardinality of S.\par
+To see that, let's see an example.\par
+Let's look at the power set of a,b or subsets of a, b and\par
+zero one square so here all subsets of a,b.\par
+The empty set, the set of just b, the set of just a, and\par
+set a,b.\par
+We can map each of those subsets to a Binary string of\par
+length too.\par
+For example, this set does not contain, does not contain a\par
+and does not contain b so it will be denoted by zero, zero\par
+meaning it does not contain a, does not contain b.\par
+This set b does not contain a and contains b which\par
+denotes zero because it does not contain a, followed by one\par
+because it does contain b.\par
+The set a will denote by one zero because it contains a but\par
+not b.\par
+The set a,b contains a and b so you can see that we have\par
+here one to one correspondence between subsets of a and b\par
+and all Binary strings of length too.\par
+That tells us the cardinality of the power set of S is the\par
+same cardinality of zero one raised to the length of S.\par
+This set here is zero one to the two which is two to the\par
+size of S.\par
+So the size of the power set is the power of the set size.\par
+In fact, its the two power of the set two size raised to the\par
+set size.\par
+Here is another example, functions.\par
+Recall that a function from A to B maps every element of\par
+a and A to an element f of a and B.\par
+To define, remember that to define a function f:\par
+we need to specify f of a for every a and A.\par
+For example, if you look at function f, functions from one\par
+to three to the letters p, u.\par
+Then you need to specify f of one, f of two, and f of three.\par
+For example, can specify if f of one is p, f of two is u,\par
+and f of three is p.\par
+We can see that f , function f, is just a three tuple that\par
+specifies f of one, f of two, f of three.\par
+In this case, it's going to be p ,u, p.\par
+This function is p, u, p and if we had a function that\par
+maps all of them to u that would be just a triple u, u, u.\par
+The set of four functions from one two three to p, u is\par
+the same as the Cartesian product, p,u times p, u times\par
+p,u because we need to specify one element for f of one,\par
+one element for f of two and one element for f of three.\par
+We just have a three tuple and the collection of\par
+all functions is this Cartesian product.\par
+Therefore the number functions from one two three to\par
+p,u is the size of this Cartesian product\par
+which is going to be the size of this set\par
+two times two times two\par
+which is two cube which is eight.\par
+Now, in general, if you're interested in the number of\par
+functions from set A to set B then\par
+it's going to be the size of\par
+Cartesian product b times b times b, a times because\par
+we need to specify f of, for every element of A, we\par
+need to specify its image in B so we have one image in\par
+B here for the first element, f of the second element,\par
+and so on.\par
+So it's this size which is the size of B raised which\par
+is the set is B raised to the size of A.\par
+The number functions to B is the cardinality of this set.\par
+The cardinality of B raised to the size of A which is the\par
+cardinality of B raised to the cardinality of A.\par
+This is another application of the size of Cartesian powers.\par
+Again, we use the product rule.\par
+Both of those give us some examples of Exponential growth\par
+which is shown here.\par
+If we look at a function, an exponential function, in\par
+this case two to the n.\par
+It grows like the blue line here and as you can see it\par
+grows a lot faster than any numeral.\par
+For example, for n square here, this is going just up to\par
+10, going from zero up to 10.\par
+You can see how much faster two to the n grows already in\par
+this range.\par
+N square, we will briefly talk about it where we discuss\par
+the notebooks.\par
+Which leads us to Python for Cartesian powers.\par
+So Cartesian powers and Exponentials, Cartesian power,\par
+just like we talked about Cartesian products.\par
+Implementation of Python before in Cartesian powers can be\par
+implemented similarly using the product function in the\par
+itertools library.\par
+What we do is import itertools and then what we do is we\par
+again use the itertools product function and we take a\par
+set as we did before but instead of multiplying another\par
+set, we just repeat the product some number of times.\par
+Here we repeat it twice, so if we do that we get the set\par
+five, nine, five, five, and so on.\par
+So the Cartesian product of the set itself.\par
+Exponents in Python are expressed using this double star.\par
+For example, three star star two is three square.\par
+If we print it we'll get nine and if you look at the\par
+notebook, you'll actually see a couple of interactive\par
+functions where you can compute exponential and see how\par
+faster they grow then other sets.\par
+I recommend that you play with it and\par
+see how fast exponential growth grows.\par
+I want to finish with a small legend called the\par
+Chess-Rice legend.\par
+Depending on what part of Asia you come from, you may be\par
+familiar with slightly different versions of this legend.\par
+They are all quite similar.\par
+They all said that the game of Chess was invented by\par
+poor yet clever peasant.\par
+The game became very popular, very quickly.\par
+Maybe the Candy Crush of years ago\par
+and eventually got the attention of the king\par
+and he really liked it.\par
+He wanted to compensate the peasant for his invention and\par
+he offered the peasant any reward he wished for.\par
+The peasant, you know, being poor yet clever said\par
+Well I'm a poor and humble farmer.\par
+I don't need very much, just need a little bit of rice so\par
+I can feed my family.\par
+If you don't mind, maybe you can give me a single rice\par
+grain on the first square, like we show here and\par
+maybe then double on each subsequent square.\par
+As you can see here on the bottom right, we have\par
+on the next square give me two grains of rice.\par
+As you can see here.\par
+(laughs)\par
+There are some pictures.\par
+So what should we do?\par
+- [Female] Say as you can see here\par
+- [Speaker] Okay\par
+- [Female] Just get it from two grains of rice.\par
+- [Speaker] Okay so, let me start with, just one second.\par
+Maybe I start here.\par
+- [Female] Yes.\par
+- [Speaker] So if you don't mind, okay I'm so sorry.\par
+So if you don't mind kindly place a single rice grain on\par
+the first square, like that and then\par
+double on the subsequent squares so on the second\par
+square just give me two.\par
+On the next one, four and on the next one eight.\par
+And that's all I'm asking for till you finish the\par
+board here.\par
+The king said oh, such a modest request.\par
+Just a few grains of rice.\par
+Of course, it's granted.\par
+The king went on to grant the peasant his wish.\par
+He placed one and two to the zero grain, one grain of rice\par
+on the first square and two on the second square, which\par
+is two to the one.\par
+Four or two to two square on the third square and\par
+so on and you can see the numbers here.\par
+One, two, four, eight, and quickly the numbers grew.\par
+By the time he got to the 64th square, he put two to\par
+the 63 which is one with 18 zeros behind it.\par
+This number is so large, I don't even know\par
+what it is called, but just to give us a little bit of\par
+an idea.\par
+First and fully, it didn't look like this.\par
+Probably looked like that but probably a lot worse.\par
+And again to give us an idea, the world richest person\par
+maybe Bill Gates, is worth 90 billion dollars so\par
+that's roughly one.\par
+If it was 100 million it would end here.\par
+If we take the whole wealth of all Americans, it is roughly\par
+90 times 10 to the 12th so it's the number that\par
+would end here.\par
+If you take the wealth of the whole, all the people, on\par
+Earth then that would end here.\par
+We have another 12 zeros to go so\par
+clearly, in the end, it was quite a bit.\par
+There are two endings to this story.\par
+One is that the king went bankrupt and the peasant became\par
+the new king.\par
+The other one is that the king was so upset with the\par
+sly peasant that he beheaded him.\par
+So what's the moral of this story?\par
+That be peasant or king, you have to beware of exponentials.\par
+To end, maybe,\par
+let's play a little bit of Jeopardy.\par
+So we talked about counting and we give\par
+several counting questions.\par
+For example, the number of n-bit sequences, number of\par
+subsets of one up to n, the number of functions from one\par
+up to n to zero, one and all of them had the same answer.\par
+It was two to the n.\par
+Let's play a little bit of Jeopardy and I'll ask if the\par
+answer is two to the two'th to the n, what is the question?\par
+In other words, can you find a natural counting question\par
+whose answer is double exponential?\par
+We'll give the answer in the next lecture.\par
+Before we finish, I want to discuss a small analogy.\par
+If mentioned, a few analogies, in fact between number\par
+operations and set operations.\par
+We said that number addition corresponds to disjoint unions.\par
+Numbers of subtraction corresponds to set complements.\par
+Numbers of multiplication corresponds to Cartesian\par
+product of sets and exponents corresponds to Cartesian\par
+powers.\par
+A very natural question to ask is which came first, the\par
+number operations comes first or\par
+the set operations comes first?\par
+I would argue that's what we have actually been\par
+discussing today.\par
+Sets come first and the reason is that like all innovations\par
+are necessity is the mother of math.\par
+It seems quite reasonable that what people first\par
+need to do is look at disjoint unions.\par
+I give you one, you know, three chickens and I give you\par
+another four chickens.\par
+I give you then a set of seven chickens.\par
+Look at these operations first then you find number\par
+operations.\par
+So, what we have studied is quite basic.\par
+To summarize we talked about Cartesian Powers.\par
+A to the n is the product of A times A times A and the\par
+size of A to the n is the size of A\par
+raised to the n'th power.\par
+We talked about some applications.\par
+Binary strings, subsets, functions, and Python.\par
+We talked about how to\par
+compute the K'th power of\par
+the set and we also talked about exponents and\par
+next time we are going to talk about some variations of\par
+the different methods we have learned so far.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+What is the cardinality of the 4th Cartesian power of the set, S = 1, 3, 5?\par
+\par
+\tab\par
+12\par
+\par
+\tab\par
+64\par
+\par
+\tab\par
+81\par
+\par
+\tab\par
+128\par
+\par
+Submit\par
+}
+ 

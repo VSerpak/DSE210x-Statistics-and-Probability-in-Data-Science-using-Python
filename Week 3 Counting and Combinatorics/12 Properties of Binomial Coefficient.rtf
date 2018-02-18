@@ -1,0 +1,284 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hi again, in the last two videos\par
+we talked about the binomial coefficient,\par
+which count the number of n-bits strings with k ones\par
+or the number of k element subsets over a set of size n\par
+and these videos are a little long.\par
+So in this new, in this video now,\par
+we'll talk about properties of binomial coefficients\par
+and we'll keep it very short.\par
+Okay, so first, we want to say, to show as we had mentioned\par
+that n choose k equals n choose n minus k.\par
+Now, for example, if you take 5 choose 3\par
+that's 5 factoral divided by three factoral, two factoral.\par
+And that's the same as 5 factoral\par
+divided by 2 factoral three factoral,\par
+which is 5 choose 2, okay?\par
+So, we can see that this is true for\par
+5 choose 3 and 5 choose 2.\par
+If you want to show it in general, we'll give two proofs.\par
+Both of them are going to be simple.\par
+The first one is Algebraic,\par
+and it just repeats what we wrote here.\par
+And n choose k is n factoral divided by k factoral\par
+and minus k factoral can reorganize the elements here.\par
+That's n minus k factoral and k factoral\par
+and that's going to give us n choose n minus k.\par
+So that's one,\par
+and if you want another proof, which is Combinatorial,\par
+what we're going to do,\par
+is we're going to count the same collection of elements\par
+in two different ways.\par
+So, we're going to show that, in other words,\par
+that there is a one to one correspondence\par
+between the set of all\par
+strings of length and width k1's\par
+and string of length n\par
+with n minus k1's.\par
+And the way to do it is by just complementing\par
+the bits in the sequence\par
+to create a 1 to 1 correspondence\par
+between these two collections.\par
+For example, if we want to consider\par
+this collection of all 4 bit strings with three 1s,\par
+we want to show that it's in 1 to 1 correspondence\par
+with all 4 grid lengths, with a single one,\par
+4 minus 3, 1,\par
+and here is the mapping, so if we take\par
+a sequence, a binary sequence of length 4,\par
+with 3 1s we can just complement the bits,\par
+so instead of 1110, we'll have 0001,\par
+this mapping is 1 to 1, it maps every element here\par
+to a unique element here,\par
+and therefore these two sets have the same cardinality,\par
+what we have here, is,\par
+the collection of all 4 bit strings with 3 1s,\par
+and we mapped it to the collection\par
+of all 4 bit sequences with a single 1,\par
+so therefore these two have the same size,\par
+and therefore we have that 4 choose 3\par
+the size of the set 4 choose 3\par
+is the same as 4 choose 1,\par
+and in general n choose k\par
+is the number of n bit sequences with k1s,\par
+and it's going to be equal to the number\par
+of n bit sequences with n minus k1s,\par
+and that's n choose n minus k.\par
+Okay, another\par
+identity that we would like to show\par
+is that n choose k is n over k\par
+times n minus 1 choose k minus 1.\par
+So this is a recursive way\par
+of defining the binomial coefficients.\par
+You can define the binomial coefficients n choose k\par
+by first defining n minus 1 choose k minus 1,\par
+then multiply by n or k,\par
+which can be useful when calculating\par
+large binomial coefficients\par
+if you need to calculate all of them,\par
+and you don't want to calculate n factoral,\par
+k factoral and so on.\par
+Now, the way we'll do it\par
+is so first let's do an example,\par
+so 5 choose 3 is 5 factoral divided by 3 factoral\par
+2 factoral, which is 10,\par
+and it's going to be equal to 5 over 3 times 6,\par
+that's again 10, which is 5 over 3 times 4 choose 2,\par
+which is 6, so we can see an example of this equality.\par
+And the way we'll do it is by taking advantage\par
+of our interpretation of n choose k\par
+as the number, or as the number of binary strings.\par
+So we can see that we can generalize it\par
+from binary string to strings over\par
+alphabet of size 3,\par
+and get a simple proof of this equality.\par
+So one nice way to prove things like this\par
+is if you want to show that combinatorially,\par
+then it's often convenient not to have\par
+numbers in the denominator,\par
+not to divide things, but multiply things,\par
+so we just count sets,\par
+using the product rule, and we don't need to divide.\par
+So in other words what we want to show\par
+is we want to show that n choose k times k,\par
+this one here, is n times n minus 1 choose k minus 1.\par
+And the way we'll do it is by counting\par
+the number of length and ternary strings,\par
+strings over 0, 1, and 2,\par
+with k minus 1 1's,\par
+and one 2,\par
+and we'll show that this number is equal to both\par
+the left hand side and the right hand side.\par
+So one way to count both the number of length-n\par
+ternary strings with k1 1's and one 2,\par
+is to first specify,\par
+and here is just to give us an example,\par
+this is for n equal to 4, and k equal to 3,\par
+recounting sequences like 0112, 1012, and so on,\par
+all these sequences have length 4,\par
+they have k minus 1, namely they have two 1's\par
+and a single 2.\par
+Length 4, two 1's and a single 2,\par
+length 4, two 1's and a single 2,\par
+we want to count how many sets of sequences there are.\par
+So one way to do it,\par
+which is written on the left hand side,\par
+is to first choose the locations,\par
+so notice that here you have k minus 1 1's,\par
+and a single 2,\par
+then you have a total of k non-zero elements,\par
+so what we can do is we can first choose\par
+the key locations of these non-zeros,\par
+the k minus 1 1's and the single 2,\par
+(speaks softly) of them, we need to choose\par
+the locations of the non-zeros,\par
+you can do it in n choose k different ways.\par
+And then once we chose the location\par
+of the k non-zeros,\par
+we need to specify the location of the single 2,\par
+okay, there's a single 2,\par
+and that, out of the location that we chose,\par
+the k ways of doing it, again by the product rule,\par
+the number of sub-sequences is n choose k,\par
+deciding first on the location of non-zeros,\par
+and then deciding on the location of the 2,\par
+is this product.\par
+So this is one way to count how many\par
+length-n ternary strings are there with k minus 1 1's\par
+and a single 2.\par
+Okay, another way to count this number\par
+is to, and this was choosing the location of the 2,\par
+that was the key.\par
+Another way of calculating this number\par
+is to first choose the location of the 2,\par
+and there are n ways of doing that,\par
+and once we chose the location of the 2,\par
+for example, here we said that the 2 is in\par
+the last location,\par
+we need to specify this sequence,\par
+and we have n minus 1 location left,\par
+and we have k minus 1 1's,\par
+so we have n minus 1 choose k minus 1,\par
+so that's how many ways we have,\par
+from the remaining n minus 1 location,\par
+choose location of the k minus 1 1's, or the single 2.\par
+So that's this.\par
+So we count this number in two different ways,\par
+and we got these two values, therefore,\par
+these two values must be the same.\par
+Here is another identity that is very useful.\par
+What is summation from I going from 0 up to n\par
+of n choose I?\par
+And we're going to show it's 2 to the n,\par
+and again you could, so here is an example.\par
+3 choose 0, plus 3 choose 1, plus 3 choose 2,\par
+plus 3 choose 3, is what?\par
+3 choose 0 is 1, 3 choose 1 is 3,\par
+3 choose 2 is 3, 3 choose 3 is 1,\par
+so we have 1 plus 3 plus 3 plus 1,\par
+which gives us 8, which is 2 cubed.\par
+And this is (speaks softly) summation\par
+of n choose I is 2 to the n,\par
+and the question is why?\par
+And again you could give an Algebraic proof,\par
+and a Combinatorial proof.\par
+We'll give here the Combinatorial proof.\par
+So notice that the sequence of all n bit strings\par
+with, can be written as the union\par
+of all n choose I, of all sequences of length\par
+and binary string with i1's, okay,\par
+and therefore we get that the size of this set,\par
+the number of n bit strings is 2 to the n,\par
+and this union is disjoint,\par
+because sequences with single 1's\par
+are disjoint from sequences with two 1's, and so on.\par
+So this, so 2 to the n, the size,\par
+the number of n bit strings that there are\par
+is going to be by the summation rule,\par
+summation from I going from zero up to n,\par
+of number of n bit strings with i1's,\par
+and that number is n choose I,\par
+so that's going to be summation,\par
+I going from zero to n of n choose I.\par
+And now, so this is a Combinatorial proof,\par
+and there's also an Algebraic proof,\par
+which we'll show in the next video.\par
+So one clear application of this result,\par
+of this identity,\par
+is to count number of sequences with the sum property,\par
+and this is an example of what we called at some point\par
+thinking outside the circle,\par
+so suppose that someone asks you\par
+how many subsets of 1 up to n are there\par
+of size at most n minus 1?\par
+Then, as we know, it's also the same\par
+as asking how many n bit sequences are there\par
+with at most n minus 1 1's?\par
+So for example for n equal to 3,\par
+recounting these sequences\par
+that have at most n minus 1,\par
+and at most two 1's,\par
+so it's 000, or 001, and so on,\par
+and how many sequences are there?\par
+Well there are, there's one sequence with zero 1's,\par
+there's the three sequences with a single 1,\par
+and three sequences with two 1's,\par
+and the total number of sequences with at most two 1's\par
+is therefore 1 plus 3 plus 3 which is 7.\par
+So (speaks softly) there are two ways of counting\par
+this number of n bit sequences with at most\par
+n minus 1 1's.\par
+One is using the same way that we did here,\par
+namely, it's going to be summation\par
+from I going from 0 to n minus 1, of n choose I,\par
+that's what we did here.\par
+This is 3 choose 0, plus 3 choose 1, plus 3 choose 2,\par
+how many sequences have zero 1's,\par
+one 1, put to n minus 1 1's?\par
+So that's this calculation here.\par
+But, we can also use the identity that we proved\par
+in the previous slide,\par
+that summation from I going from zero up to n\par
+of n choose I is 2 to the n.\par
+That just says that when you sum all sequences\par
+with any number of 1's,\par
+it should give you 2 to the n,\par
+that's the total number of sequences of length n,\par
+and that tells us that if you are just interested in\par
+sequences of at most n minus 1 1's,\par
+namely summation of I going to zero up to n minus 1,\par
+of n choose I,\par
+that's going to be the total sum,\par
+so the sum all the way up to n,\par
+minus the last term, minus n choose n,\par
+because what we're interested in,\par
+is just this sum up to n minus 1,\par
+but if we add plus n choose n the last time\par
+we'll get 2 to the n.\par
+So it's 2 to the n minus the last term,\par
+which is minus n choose n,\par
+which is 2 to the n minus 1.\par
+So another way of getting this number 7\par
+would have been just 2 cubed minus 1,\par
+which is 7, okay, so you get that.\par
+Alright, so we are, talked about a couple properties\par
+of the binomial coefficients,\par
+and what we want to do next time\par
+is continue with the Pascal Triangle,\par
+and the binomial theorem,\par
+which (speaks softly) is yet another property\par
+of binomial coefficients.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+True or False: n choose k is equal to n-k choose k.\par
+\par
+\tab\par
+True\par
+\par
+\tab\par
+False\par
+}
+ 

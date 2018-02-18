@@ -1,0 +1,357 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hi again. So until now,\par
+we talked about counting binary sequences.\par
+Specifically, binary sequences of length n with k once.\par
+And now we want to grow up a little bit\par
+and instead of binary sequences, we're going to move\par
+to sequences of a larger alphabets.\par
+For example ternary sequences,\par
+sequences of alphabet of size four or so.\par
+And to do that we're going to use instead of binomials,\par
+we're going to use multinomials, but don't worry\par
+it's actually a very simple extension.\par
+Okay, so going to talk about the multinomial coefficients,\par
+which beyond binary, they apply for\par
+ternary or larger alphabet.\par
+Okay, so for example, if you're going to look at\par
+ternary alphabets, then imagine that we have three numbers\par
+k1 plus k2 plus k3, which together gives us n.\par
+This extends what we had before where we had k1s\par
+and minus k0. So now we have maybe k1s and k2s and k3s\par
+and together, they give us the whole length\par
+of the sequence, which is n.\par
+So we're interested in a number of sequences\par
+of one to threes, sequences with one, two, and three\par
+of length n, with exactly these numbers:\par
+k1 ones, k2 twos, and k3 threes.\par
+And because of that, as we have said, these ki's have to\par
+sum to n because of the sequence\par
+all the n elements are going to be either\par
+ones or two or threes.\par
+And we ask how many such sequences are there?\par
+So the number of such sequences, we can count it,\par
+you can just apply the binomial theorem twice.\par
+So we can say well, we need to choose the locations\par
+of the ones, and we have n locations,\par
+and we have to choose k1 ones.\par
+So the number for us to do this is n choose k1,\par
+that we have seen in the previous lectures.\par
+And after we choose the location of the k1 ones,\par
+we're left with n minus k1 locations, right?\par
+And from those n minus k1 locations that are left,\par
+we need to choose the locations of the k2 twos.\par
+So we need to multiply it, so this k1's locations\par
+of the ones, and then we have n minus k1 locations left\par
+and we need to choose k2.\par
+So this is k2 locations of the twos out of\par
+the n minus k1's locations that are left.\par
+Notice that once we choose those ones and twos,\par
+then the locations of the threes are determined,\par
+because we have k1 ones and k2 twos,\par
+and then we're left with now n minus k1 minus k2 locations\par
+but all of those have to be the k3 threes that are left.\par
+So this is exact number. If you wanted to it multiply it\par
+you could also multiply it by n minus k1 minus k2,\par
+choose k3, but observe that n minus k1 minus k2 is k3.\par
+So what you'd have is k3 choose k3 which is one.\par
+So this is the total number. Again, we chose k1 locations\par
+of the ones, that's n choose K1,\par
+different ways of choosing those locations.\par
+And then we're left with n minus k1 locations\par
+for the twos and the threes, you need to choose\par
+location like k2 twos. You have to do it in n minus k1,\par
+just k2's ways. So when we multiply them\par
+we've get a total number of ways of choosing the ones\par
+and the twos, and that will determine the threes.\par
+So now what we need to do is just write this out\par
+as a product of factorials.\par
+So this is equal to n factorial divided by\par
+k1 factorial, n minus k1 factorial.\par
+And then we need to multiply by this binomial coefficient,\par
+which is n minus k1 factorial, divided by k2 factorial\par
+and n minus k1 minus k2 factorial.\par
+Okay, and we have some cancellations here\par
+because we have here n minus k1 factorial,\par
+it cancels with this. Okay, let's see.\par
+And then we observe that n minus k1 minus k2 is just k3\par
+because the ki's sub to n.\par
+So that means that the total number is n factorial\par
+divided by k1 factorial, k2 factorial, k3 factorial,\par
+and we denote this by the multinomial coefficient\par
+n choose k1, k2, k3.\par
+So again, n choose k1, k2, k3 is the number\par
+of sequences of length n, with k1 ones, k2 twos,\par
+and k3 threes, nth equal to n factorial divided by\par
+k1 factorial, k2 factorial, k3 factorial.\par
+And you'll notice a couple things.\par
+Notice how nicely it generalizes the binomial coefficient,\par
+which was n factorial divided by k1 factorial\par
+and k2 factorial. Okay, so now we just have this product\par
+of the three, and you'll also notice that it's symmetric\par
+with k1, k2, k3, because we would expect because it's just\par
+a number of sequences with k1 ones, k2 twos, and k3 threes.\par
+This is the multinomial coeeficient\par
+and the only one thing I want to mention is that\par
+we're using a slightly different notation\par
+than we use for the binomial coefficients.\par
+The binomial coefficients, we use n choose k,\par
+but if we use the same convention here,\par
+then we would denote it by n choose k and n minus k,\par
+and it'll still be the same.\par
+It would be n factorial divided by k factorial\par
+and you can divide it by n minus k factorial.\par
+So this is a different special case that for\par
+binomial coefficients we just use this instead of\par
+writing both the number of zeros and the number of ones.\par
+As we said, these sum to n, as they would here.\par
+Let's do a simple example, how many sequences are there\par
+of one, two, three, four?\par
+So instead of alphabet of size three,\par
+we are looking alphabets of size four,\par
+where digit one appears once.\par
+The digit two appears twice. I'm sorry, four times.\par
+The digit three appears four times also\par
+and the digit four appears twice.\par
+So the length is one plus four plus four plus two\par
+which is 11.\par
+And one example of such sequence is three, one,\par
+two, two, two, three, three, four, two, four, three.\par
+You can verify that one appears only once,\par
+two appears four times, two, two, two and another two.\par
+Three appeared four times and four appears twice.\par
+Four appears here and here.\par
+So the number of such sequences is 11\par
+choose one, four, four, two,\par
+which is 11 factorial divided by one factorial,\par
+four factorial, four factorial, two factorial.\par
+And to see how you get it,\par
+what you do is 11 choose one,\par
+the location of the single one,\par
+and then, you'll be left with 10, so you'll do times 10,\par
+choose four, to choose the location of the four twos.\par
+And now we've used five, so instead of 11, you'd have seven.\par
+I'm sorry, you'll have six. 11 minus five, six.\par
+So you'll have times six, choose four, and once you do that\par
+you'll determine the sequence\par
+and when you cancel the terms that appear there,\par
+you'll get 11 factorial divided by one factorial,\par
+four factorial, four factorial, two factorial.\par
+And you open up and you get 11 times 10 times\par
+nine times eight and so on, times four factorial\par
+and then divide by four factorial,\par
+four factorial, two factorial.\par
+And there's a lot of cancellations going on.\par
+Four factorial cancels four factorial and then you get the\par
+four and the two cancel with the eight, and so on.\par
+And the six cancels and that gives you this number,\par
+which is 34 thousand and 650.\par
+Let's look at another application.\par
+Let's look at the word Mississippi,\par
+and the question is how many anagrams does Mississippi have?\par
+And an anagram as we know is just a rearrangement\par
+of these letters, and it could make sense\par
+or not make sense.\par
+So what are anagrams of Mississippi?\par
+Those are just sequences over the letters M, I, S, P.\par
+Sequences where the letters are M, I, S, and P\par
+in any order, so what we have is that the letter M\par
+appears once, as we see here.\par
+The letter I appears four times.\par
+The letter S appear four times and P appear twice.\par
+And perhaps not surprisingly, these are exactly\par
+the same numbers as we had in the previous slide,\par
+so therefore the number of\par
+anagrams of Mississippi is the same as number\par
+of ways of writing sequences.\par
+So for one, two, three and four, where one appears once,\par
+two appears four times, and so on.\par
+So it's exactly the same number, and the length is 11.\par
+And one such anagram is this\par
+and it's the same as what we have done before.\par
+And so the number of ways of doing it is going to be\par
+11 choose one number of ways to choose\par
+the location of M, the number of ways to choose\par
+location of the four I's, the four S's, and the two P's,\par
+and that number, I apologize.\par
+That number is going to be as before, 34 thousand and 650.\par
+Let's do another example. Students in a class.\par
+So suppose you have 10 students and they can take\par
+a class that is given in three sections.\par
+They can take it in the morning, in the afternoon,\par
+or in the evening, and every student can take\par
+any one class that they choose.\par
+They can choose morning, afternoon\par
+or evening, but there are no constraints.\par
+So for example, if all of them want,\par
+they can all take it in the evening.\par
+So how many ways can the student take those classes?\par
+Well, clearly, each student can decide whether they want\par
+the morning, afternoon, or evening, and that's true\par
+for the first student, the second student, so on.\par
+So what we have is we have the contingent product.\par
+We have the product of all the possibilities.\par
+And so we said, any number of students in each class.\par
+So the number is going to be three to the ten, right\par
+because this first student can choose\par
+one of the three classes, and the second student can choose\par
+one of the three classes, and the number of possibilities\par
+is going to be three times three and so on,\par
+to get three to the ten.\par
+Now, suppose we are looking at how many students,\par
+we'll be interested in a number of ways\par
+that the students can take the class if we insist\par
+that six has to take the morning class,\par
+three have to take the afternoon class,\par
+and the remaining one student has to take the evening class.\par
+So how many ways can we do that?\par
+Well, now we have 10 students, and we need to\par
+select six of them to take the morning class,\par
+three of them to select the afternoon class,\par
+and three to select the evening class.\par
+So that number is going to be 10 choose six, three, one.\par
+Morning, afternoon students, and that's 10 factorial\par
+divided by six factorial, three factorial, one factorial,\par
+which is\par
+840.\par
+This leads us in a natural way\par
+to the multinomial theorem,\par
+which generalizes the binomial theorem,\par
+as we're going to see very soon.\par
+The multinomial theorem says that if you take\par
+now, instead of two terms, a plus b and raise it to the n,\par
+if you take m terms, a1 plus a2 plus am to the n,\par
+that's going to be equal, I apologize.\par
+That's going to be equal to the summation of terms\par
+of the following: The product of at to the kt\par
+and the coefficient in front is going to be\par
+the multinomial coefficient.\par
+Coefficient n choose k1, k2, up to km.\par
+So, as you remember, the binomial theorem\par
+was pretty much the same. We had a plus b raise to the n,\par
+it was going to be equal to the summation of a to the i,\par
+b to the n minus i, like that.\par
+And then we had the binomial coefficient here,\par
+which was n choose i.\par
+So this is just a generalization, and perhaps it's easier\par
+to see if we look at raising three terms,\par
+the sum of three terms, to the second power.\par
+So a plus b plus c squared is going to be,\par
+according to this theorem,\par
+it's going to be summation of the multinomial coefficient,\par
+two choose i, j, k times a to the i, b to the j, c to the k\par
+over all i, j, k, that sum to two.\par
+So this is going to be two choose\par
+two zero zero times a squared,\par
+plus two choose zero, two, zero times b squared,\par
+plus two choose zero, zero, two, times c squared,\par
+plus and then a, b, so we have to choose\par
+location of the a and the location of the b.\par
+In other words, the term we have a plus b plus c,\par
+multiply three times and we choose which term\par
+we chose the a from, which term we chose the b from.\par
+So that's one, one and then zero for the c's,\par
+and then plus two choose one, zero, one\par
+for choosing the a and the c, and plus two\par
+choose zero and one, choosing the terms\par
+for which we take the b and the c. Okay, so we get that.\par
+And when we open them up, we get that it's going to be\par
+two choose two, zero, zero, is two factorial\par
+divided by two factorial, which is one.\par
+And this is again one, and this is again one,\par
+and that corresponds to if we just choose a.\par
+If we just choose a from both locations,\par
+just we have to choose a from both here and from here.\par
+And likewise, if you have b squared,\par
+then we have to choose it from the first term\par
+and from the second term.\par
+On the other hand, if we look at a, b, then it could come\par
+from choosing b from this location\par
+the b from here and then a from here,\par
+or we can choose a from this term and b from\par
+the second factor.\par
+So we have two ways of choosing a and b.\par
+Okay, so you got that.\par
+So this is the multinomial theorem\par
+for n equals to two and three terms.\par
+The other extension we want to talk about\par
+is sum of multinomials.\par
+So for the binomial coefficients, remember that we had\par
+the two to the n is summation of n choose i,\par
+i going from zero to n,\par
+and for the multinomial coefficients, we'll have that\par
+m to the n, which is one plus one to the n,\par
+is going to be summation of n choose, as we just said,\par
+k1, k2, up to km, that sum to n,\par
+and all the product is going to be one.\par
+So we get that m to the n is just\par
+the summation of the multinomial coefficient.\par
+So for binomial coefficient, you had\par
+the two to the n is the sum of the binomial coefficient,\par
+and for multinomial coefficients, we get that m to the n\par
+is the sum of the multinomial coefficients,\par
+with m choosing m terms here.\par
+So for example, if we take three choose two,\par
+m is three and n is two,\par
+which is nine, that's going to be equal to the sum of all\par
+the multinomial coefficients: two choose two, zero, zero\par
+plus two choose zero, two, zero, and so on.\par
+And you notice that these one and one and one\par
+and these are two and two and two.\par
+So we'll get three plus six, which indeed is nine.\par
+Alright, so with this, we can go back\par
+to the students in the class.\par
+And you'll remember that we had, for simplicity,\par
+let's say we have two students and they take three classes.\par
+Then, the total number of ways they can take it\par
+if there are no restrictions, is going to be\par
+three choose two, which is nine.\par
+If there are no restriction on how many students\par
+take the morning, afternoon and evening class.\par
+But if we break it by class, then how many ways\par
+can they take it so that both students take\par
+the morning class, that's this number here,\par
+which is going to be one.\par
+How many ways can the students take it, such that both\par
+of them take the afternoon class, that's this number here.\par
+Again, it's going to be one.\par
+And in the evening class, or how many ways can they take it\par
+so that the two students take it so that one takes\par
+the morning class and one takes the afternoon class.\par
+This number is going to be two, corresponding with\par
+the first student taking the morning\par
+and the second one taking the afternoon.\par
+There are two ways, or this first one taking\par
+the afternoon and the second student taking the morning.\par
+There are two ways, and likewise\par
+for the morning and evening and the afternoon and evening.\par
+So this is going to be one plus one plus one\par
+plus two plus two plus two, which gives us nine.\par
+So that's another demonstration of the multinomial theorem.\par
+Now we got three to the two is the summation\par
+of all these coefficients.\par
+So this is the same as the last slide.\par
+Okay, so what we did here was we looked at\par
+a simple extension of the binomial coefficients\par
+to multinomial coefficients and the binomial theorem\par
+to the multinomial theorem and what we're going to do next\par
+is look at another application\par
+of binomial and related coefficients.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+How many ways can you get three 4\rquote s and two 1\rquote s in 5 die rolls?\par
+\par
+\tab\par
+5! / (3!2!)\par
+\par
+\tab\par
+6! / (3!2!)\par
+\par
+\tab\par
+5 / (3x2)\par
+\par
+\tab\par
+6 / (3x2)\par
+}
+ 
