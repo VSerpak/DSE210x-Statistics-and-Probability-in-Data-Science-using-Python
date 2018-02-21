@@ -1,0 +1,357 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Hello and welcome back.\par
+So we have talked about different properties of probability\par
+and now we would like to start in some sense afresh\par
+by defining a set of axioms\par
+and showing that we can prove many of the results,\par
+that we have observed before.\par
+So we'll have only three axioms\par
+and we'll show that they imply all the general results\par
+we have seen before and many more\par
+and we'll use them to prove three results\par
+and as you can see here, we'll use the Lego approach,\par
+these are going to be our three axioms\par
+and we'll see how we can use them\par
+to build the results that we want, okay.\par
+So what are the three axioms?\par
+So the first one is called non-negativity,\par
+so here we have the sample space omega and an event here\par
+and it says that the probability of an event\par
+is at least a zero and when I write this,\par
+what I mean is that for every event A,\par
+the probability of A is bigger than or equal to zero,\par
+in other words, I'm abbreviating,\par
+I'm not writing that fully, okay,\par
+and notice that this is very natural, because if you recall\par
+our frequency interpretation of probability,\par
+then the probability of an event\par
+is just a ratio of two numbers,\par
+the number of times the event occurred\par
+divided by the number of samples we took,\par
+so it's always going to be non-negative\par
+and that's what's implied by this axiom\par
+and we'll denote this by the sign\par
+bigger than or equal to zero,\par
+it means that the probability of every event\par
+is bigger than or equal to zero, alright.\par
+The second axiom is called unitarity\par
+and it says the probability of the whole space,\par
+the whole sample space is one, okay,\par
+so if we take the whole sample space,\par
+its probability is one\par
+and we'll denote this axiom by one\par
+and again, this axiom makes a lot of sense,\par
+because if you ask what fraction did the whole space occur,\par
+then that's going to be the number of samples that you have,\par
+because in all of those, the sample space occurred\par
+divided by the number of samples, you get one,\par
+so any distribution you have,\par
+the probability of the sample space is going to be one\par
+and the last axiom is called the addition rule,\par
+it says that if you have two disjoint event,\par
+then, which are depicted here, A and B are disjoint,\par
+they don't have any elements in common,\par
+then that implies that the probability of the union\par
+is the sum of the probabilities, okay\par
+and again, this makes sense,\par
+because when we count how many times A or B occurred,\par
+it's going to be the sum of the times that A occurred\par
+and the times B occurred,\par
+so when you normalize by the number of samples,\par
+you'll get the sum of the probabilities, okay\par
+and this one has a more general form\par
+and we'll denote it by plus naturally,\par
+it has a more general form,\par
+that says if you have a countable number of events,\par
+A1, A2 and so on, then the probability of the union\par
+is going to be the sum of the probability\par
+and this needs to hold only for countable unions,\par
+we'll see later what happens for uncountable unions.\par
+So if you have either finite, like here, number of unions\par
+or a countable number of unions,\par
+then the probability of the union\par
+is just the sum of the probabilities, okay\par
+and as we said, we'll see what happens\par
+for uncountable unions later, alright.\par
+So with that, what we'd like to do\par
+is we'd kind of like to build the results,\par
+that we can get and using Lego blocks, that we have\par
+and we'll construct three simple results,\par
+start with the complement rule,\par
+then make a slight generalization\par
+and we'll show that this needs two Lego blocks,\par
+the addition rule and the unitarity\par
+and then we'll talk about the subtraction rule,\par
+which we'll generalize this and we'll talk about it\par
+for nested sets and for general sets\par
+and we'll show that this only needs the addition rule\par
+and finally we'll talk about inclusion-exclusion\par
+and we'll show that even that is just a two Lego result.\par
+Okay, so let's start with the complement rule,\par
+so hopefully we remember the complement rule for counting,\par
+it said that the size of a complement, if you have a set A,\par
+then the size of its complement is the size\par
+of the whole universe minus the size of A, okay\par
+and we're going to show that the same holds for probability.\par
+So recall that A union A complement\par
+is the whole sample space, always finite A\par
+and so here is a picture,\par
+so this is the whole sample space here,\par
+there's A and A complement,\par
+the union is the whole sample space\par
+and because A union A complement is omega,\par
+the probability of A union A complement\par
+is the probability of omega, okay,\par
+now observe that A and A complement are disjoint,\par
+so A and A complement are disjoint, which we denote\par
+by these two, disjoint MasterCard spheres, okay\par
+and because they are disjoint, we have the additional,\par
+that will tell us that the probability of the union,\par
+this disjoint union is the sum of the probability,\par
+so probability of A plus the probability of A complement,\par
+on the other hand, we have here the probability\par
+of the whole sample space, which unitarity tells us\par
+that this is equal to one, so just moving things around,\par
+we see that the probability of A complement\par
+is going to be one minus the probability of A, okay,\par
+so this is the complement rule, okay, right,\par
+so as we saw, so it says, so this is the equivalent\par
+of the complement rule for counting,\par
+it's the complement of a probability\par
+and we'll denote it by minus, okay\par
+and as we saw, it's...\par
+we just use two Lego pieces,\par
+we use the addition once\par
+and we use the unitarity once, alright.\par
+Next, let's talk about the subtraction rule,\par
+which is going to generalize the complement rule\par
+and we'll start with nested sets,\par
+so the complement rule tells us\par
+that if A is a subset of omega, which it always is,\par
+then the probability of A complement\par
+is one minus the probability of omega\par
+and...\par
+in other words, a complement is omega minus A,\par
+so it says the probability of omega minus A\par
+and one is the probability of omega\par
+is the probability of omega minus the probability of A,\par
+alright, so that's the complement rule, right,\par
+the probability of the complement of the set\par
+is the probability of the whole space\par
+minus the probability of A.\par
+Now, we want to generalize it to a subtraction rule,\par
+we'll say that if A is a subset of B,\par
+if you have two events, A, which is a subset of B,\par
+then that would imply that the probability of B minus A\par
+is the probability of B minus the probability of A, okay,\par
+so to see that, observe that if A is a subset of B,\par
+then we can write B as A union B minus A,\par
+so here we have A is a subset of B\par
+and you can write B\par
+as A union with B minus A, alright\par
+and notice that what we want to prove is also very natural,\par
+we want to prove that the probability of B minus A,\par
+the probability of this set is just the probability\par
+of the whole thing minus the probability of A,\par
+so what we want to prove is quite natural,\par
+we just want to show how to do it from the axioms, okay,\par
+okay, so we have that B is A union B minus A,\par
+as we see here and therefore again,\par
+the probability of B is going to be\par
+the probability of A union B minus A\par
+and just now we need to observe\par
+that A and B minus A are disjoint, okay,\par
+and because they're disjoint, we can use the additional\par
+and we get that the probability of the union\par
+is the sum of the probabilities,\par
+so the probability of B is the probability of A\par
+plus the probability of B minus A, that's what we've got\par
+and therefore we get the probability of A,\par
+I'm sorry, the probability of B minus A\par
+is going to be the probability of B\par
+minus the probability of A, right,\par
+just moving A up here to the left side,\par
+so we get this probability of B minus A\par
+is the probability of B minus the probability of A,\par
+which is what we want to show, alright, okay\par
+and how many blocks did we use here?\par
+So this is the subtraction rule for nested sets,\par
+because A is a subset of B, okay\par
+and we still denote it by the minus sign\par
+and we just used the additional once, okay,\par
+so this is a one-piece result.\par
+Okay, now we want to do\par
+the subtraction rule for general sets,\par
+so when sets are nested, namely when A is a subset of B,\par
+the probability of B minus A, we just saw\par
+is the probability of B minus the probability of A\par
+and what we want to do now\par
+is look at general sets A and B, so any A and B\par
+and we want to show that the probability of B minus A\par
+is the probability of B, so far the same,\par
+but instead of subtracting the probability of A,\par
+we subtract the probability of A intersection B, okay,\par
+and we'll again continue to call it\par
+the subtraction rule and denote it by minus, okay.\par
+So let's look at a picture here,\par
+so we want to show that the probability of B minus A,\par
+this is B minus A here, this is A and B\par
+and this is B minus A,\par
+we want to show the probability of B minus A\par
+is the probability of B\par
+minus the probability of A intersection B, okay,\par
+which of course makes a lot of sense,\par
+we just want to use the axiom to show that, alright.\par
+So first observe that B minus A\par
+is the same as B minus A intersection B,\par
+so here is B minus A, okay,\par
+so this is B and this is B minus A\par
+and this is A intersection B and this B minus A,\par
+so we observe that when you take B\par
+and you subtract the whole red thing, you'll get B minus A\par
+and we take B and you subtract just the intersection\par
+of A and B, you again get B minus A,\par
+so it can express B minus A, this set,\par
+also B minus A intersection B, okay\par
+and this is essentially what I wanted,\par
+because A intersection B is a subset of B,\par
+A intersection B is a subset of B,\par
+so now we can apply\par
+the subtraction rule for our nested set,\par
+because we're looking at B minus intersection B\par
+and A intersection B is a subset of B, okay,\par
+so what do we get?\par
+That the probability of B minus A,\par
+because if this equality\par
+is the probability of B minus A intersection B,\par
+but A intersection B is a subset of B\par
+and therefore we get that it's the probability\par
+of B minus probability of A intersection B,\par
+that's from a nested result, okay\par
+and so this is what we wanted, right,\par
+probability of B minus A is probability of B\par
+minus probability of A intersection B\par
+and again, this is a single Lego block result, okay.\par
+So finally, we want to get to inclusion-exclusion,\par
+it's kind of that's a more interesting result\par
+and let's see how many Lego blocks we need for that.\par
+So the probability of A union B,\par
+the inclusion-exclusion rule says\par
+it's the probability of A union B is the probability of A\par
+plus the probability of B\par
+minus the probability of A intersection B,\par
+so this is what we call\par
+the principle of inclusion-exclusion, okay\par
+and so we want to prove it,\par
+so observe that you can write A union B\par
+as A union with B minus A, as you can see in here again,\par
+so this is A and this is B, the whole thing is A union B,\par
+we can write it just as A union with B minus A\par
+and therefore the probability of A union B\par
+is going to be the probability of this union,\par
+of A union B minus A,\par
+now observe that...\par
+observe that A and B minus A are disjoint,\par
+right there, A and B are disjoint\par
+and so we can apply the addition rule\par
+and we get the probability of this union\par
+is probability of A plus the probability of B minus A, okay\par
+and now we can recall\par
+the subtraction rule for general sets,\par
+which told us that the probability of B minus A\par
+is the probability of B\par
+minus the probability of A intersection B,\par
+okay, so we just write here,\par
+so it's the probability of A plus the probability of B\par
+minus the probability of A intersection B, okay,\par
+so we got the inclusion-exclusion principle,\par
+which we remember we denoted by pie\par
+and one thing to note is that from this derivation,\par
+maybe we don't see quite as clearly why we subtract,\par
+but although we can trace the proof and we can see it,\par
+but also remember that we had the reasoning before,\par
+which is if you just take P of A plus P of B,\par
+you'll be counting this area in the center twice\par
+and so you need to subtract it\par
+and that's how we get it, okay\par
+and this of course, we know is an interesting result,\par
+so how many Lego blocks did we use?\par
+Well, we used one here, the additional\par
+and actually we used one additional, if you remember,\par
+to prove general subtraction,\par
+so that all is just two Lego blocks,\par
+so what we can see is that even getting interesting results,\par
+means that you apply the axiom just once or twice\par
+and you already get some useful results, okay.\par
+So now that we have the principle\par
+of inclusion-exclusion for two sets,\par
+I want to mention what it is for more sets,\par
+we're not going to use the Lego blocks,\par
+but just say what it is,\par
+so for two sets, the probability of A union B\par
+is probability of A plus probability of B\par
+minus probability of the intersection,\par
+if we have three sets,\par
+then the probability of A union B union C\par
+is going to be the sum of the individual probabilities\par
+minus the probability of the pairwise intersections,\par
+plus the probability of the triple intersection\par
+and we went over this when we talked\par
+about the sizes of unions of sets,\par
+but just in case you didn't watch that video,\par
+or you don't remember it,\par
+let's just remind ourselves why this is true,\par
+so here are the sets A, B and C\par
+and we're interested in the probability of all three sets,\par
+the union, okay, so what we can do\par
+is we can start by taking the probability of A,\par
+which will be, so we count the probability here,\par
+here, in each of those four regions\par
+and then add the probability of B,\par
+so we'll add the probability in these four regions\par
+and then add the probability of C,\par
+so we add also these four regions, okay\par
+and what we see that we have done\par
+is we counted each one of these once,\par
+but we counted every element here and here and here twice\par
+and here three times, so what we're going to do\par
+is we're going to subtract the probability\par
+of A intersection B like that, so when we do that,\par
+we'll subtract one count from each of those,\par
+so this will become that, okay,\par
+and then we subtract the probability of A intersection C,\par
+this intersection here, so we subtract one\par
+from each of those two counts, right\par
+and then we subtract the probability of B intersection C,\par
+so we subtract these, okay\par
+and so now we're good in almost all the regions here,\par
+here, we counted each of them once,\par
+but the intersection of all three regions,\par
+we counted three times and then we subtracted three times,\par
+so we just need to add it once and we get what we want,\par
+okay, so this is inclusion-exclusion for three sets\par
+and for general sets, you can write it as\par
+the probability of the union of n sets\par
+is the estimation of the probability of any individual set\par
+minus the probability of the intersection and so on\par
+and you keep getting an alternating sum,\par
+until you get minus one to the n minus one\par
+times the probability of the intersection of all of them.\par
+So to summarize, we talked about probability axioms,\par
+we said that there are three of them\par
+and that they imply essentially all general results\par
+about probability, basic probability at least\par
+and we then used them to show three results,\par
+including inclusion-exclusion\par
+and we also showed that all these results,\par
+we could get them with using just like one or two\par
+of those Lego blocks, so it's quite easy\par
+and what are we going to do next time?\par
+We'll discuss\par
+a pretty hefty question,\par
+see you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+}
+ 

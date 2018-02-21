@@ -1,0 +1,439 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Cambria Math;}}
+{\*\generator Riched20 10.0.16299}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Hello, and welcome back.\par
+So in this lecture\par
+we want to talk about sequential probability,\par
+and we will start with the product rule.\par
+So recall the results for conditional probability.\par
+It says that the probability\par
+of event F occurs given that event E has occurred\par
+is the probability E intersection F\par
+divide by the probability of E,\par
+and pictorial we see it here.\par
+We assume that event E here occurred\par
+and you ask what is the probability of F.\par
+F occurs, so if...\par
+For F to occur\par
+given that E we know has occurred.\par
+So we must be in this intersection.\par
+We are only interested in intersection F,\par
+and we ask, what is the probability\par
+that we are here given that\par
+we know we are in this pinkish circle.\par
+So that's going to be the probability\par
+inside this area divided by total probability\par
+which is probability of intersection F,\par
+divided by the probability of E.\par
+Okay, so we can just re-arrange things\par
+and we write therefore\par
+that the probability of E intersection F\par
+is the probability of E,\par
+times the probability of F given E,\par
+and that simply is the product rule.\par
+Says, if you have two events\par
+what's the probability that both of them happen in F?\par
+So first E has to happen\par
+and then F has to happen given E.\par
+So it's just the product E,\par
+the probability that E happens\par
+an then times the probability\par
+that F happens given that E happened.\par
+Okay, and so this simple rule actually helps us calculate,\par
+use conditional probability to calculate\par
+regular (non conditional) probabilities\par
+as we are to see next.\par
+Okay so,\par
+let's look at this case of sequential selection.\par
+So imagine that you have one blue ball,\par
+and two red balls like that,\par
+and we are going to draw two balls without replacement\par
+and we ask, what is the probability\par
+that both of those two ball are going to be red, okay.\par
+So let Ri be the probability\par
+that ith ball to withdraw is red.\par
+So Ri is the probability that the first ball\par
+to withdraw is red\par
+and R2 is the probability\par
+that the second ball withdrawn is red.\par
+So the probability that both are red\par
+which is what we are interested in\par
+is the probability that R1 and R2 are both red.\par
+So that the probability that R1,\par
+probability of R1 and R2, both of them, alright,\par
+and that we apply the product rule.\par
+We can write it as the probability that R1,\par
+probability first is red.\par
+Times probability the second red\par
+given that the first is red.\par
+Okay, so we just need to calculate\par
+these two probabilities.\par
+So what is the probability the first one is red?\par
+So we have one blue and two red balls.\par
+So the probability that the first one is red\par
+is obviously just 2/3.\par
+Okay, we have two more,\par
+two... twice as many options to pick red than blue.\par
+Okay, and once we pick the red\par
+we are going to see the probability off all,\par
+that the second one is red given\par
+that the first one is red,\par
+but if the first one is red,\par
+then that means that we are left with one blue and one red.\par
+Okay, in that case given the first one\par
+is red we are left with these,\par
+and then the probability the next one is red\par
+is just going to be what?\par
+1/2, okay.\par
+So coming back here,\par
+so the probability that both are red\par
+is the probability the first is red\par
+which we calculated here to be 2/3.\par
+So and after this we will be left with what?\par
+So it's the probability the first\par
+is red is 2/3 times probability the second is red\par
+given the first one is red, which is 1/2.\par
+So it's 2/3 times 1/2 or 1/3.\par
+Okay, so we calculate probability easily using\par
+the sequential equation or product rule, right.\par
+Now this product rule can be generalized.\par
+So let's see what happens for more than just two events.\par
+So if you have three events\par
+you can write that the probability\par
+of E intersection F intersection G,\par
+is the probability of intersection F, intersection G.\par
+Where the probability of intersection F\par
+you can write as,\par
+so you can write as probability of intersection F\par
+times the probability of G given intersection.\par
+Okay, where the probability of E intersection F,\par
+you can write as P of E,\par
+times P of F given E,\par
+and then times the probability of G given intersection.\par
+So it's this product.\par
+So it's, first E has to be happen\par
+and then F has to be happen given E happened\par
+and the G has to happen given that both have happened.\par
+Okay, so this is the product rule for three events\par
+and you can also generalize it to two more events.\par
+Okay, so let's see an example\par
+that will make calculation easy.\par
+So let's consider the case\par
+of a whole bunch of red balls and one odd blue ball.\par
+So specifically we have n-1 red balls and one blue ball,\par
+and we are going to pick n,\par
+we are going to pick all the balls.\par
+So n balls is all together.\par
+Pick all of them without replacement,\par
+and only one after the other without putting back,\par
+and we ask what is the probability\par
+that the last ball we pick is blue?\par
+Okay, so let R subscript i\par
+be the event that ith ball is red.\par
+Okay, so Ri is the event that the first ball is red\par
+and so on,\par
+and let R superscript i\par
+be the event that R1 happened and R2 up to i,\par
+and in there, first i balls are all red.\par
+So that's our superscript i.\par
+Okay, so the probability that the last ball is blue,\par
+which is what we are asking about,\par
+is the probability that all the first n-1 balls are red,\par
+because we have n-1 balls, red balls,\par
+and one blue ball.\par
+So the probability the last one is blue\par
+is probability that R1 is red and R2 is the...\par
+I'm sorry, the first ball is red\par
+and the second ball is red.\par
+All the way up to the n minus first ball is red,\par
+and that by the product rule you can write\par
+as the probability of R1,\par
+that the first one is red,\par
+times the probability that the second one is red,\par
+given that the first one is red.\par
+Times the probability that the third one is red,\par
+given that the first two are red\par
+and so on up to the probability that\par
+the n minus first ball is red,\par
+given that the previous n minus two balls\par
+were all red.\par
+Okay, so this we can calculate,\par
+coz the probability, what is the probability\par
+of R1, the first one is red while we have n balls\par
+and out of them n minus one are red.\par
+So that probability is going to be n minus one over n.\par
+Okay, and then once we,\par
+if the first one is red we take it out.\par
+Then we will be left with n minus two red balls\par
+and one blue ball.\par
+So the probability that the next one is going\par
+to be red is going to be n minus two divide by n minus one,\par
+and then after we take out another red ball,\par
+we will have n minus three red balls\par
+cuz we had n minus one to begin with, we subtracted two,\par
+and the total number of balls is n minus two,\par
+coz we started with n subtracted two.\par
+So the probability the next one is red\par
+is n minus three over n minus two\par
+and so on up to two times three,\par
+and then in the end\par
+for the n minus first ball,\par
+we are left with two balls of which one of them is red,\par
+and that is times 1/2.\par
+Okay, and you can see that you got\par
+some very nice cancellations here,\par
+n minus one cancels here,\par
+n minus two cancels here, n minus three would cancel.\par
+The three would cancel, the two would cancel,\par
+and will be left with is just 1/n.\par
+So we see that the product rule,\par
+allowed us to calculate\par
+the probability that the last ball\par
+is blue, very easily,\par
+but is it really very easily?\par
+Well you could have done it also in a different way.\par
+You can just say, okay I have the balls.\par
+Like imagine are arranged in a row.\par
+Okay, and so what is the probability that\par
+the last one will be blue,\par
+is the probability that the last one to pick is blue\par
+is just a probability that the blue ball ends up\par
+at the very end of the row,\par
+and since it has n different locations to be\par
+and the probability that it's the last one\par
+is this 1/n, which is what we got.\par
+So the product rule was nice\par
+but maybe not as easy as we could have done.\par
+Not the easiest we could have done.\par
+Alright, okay, so I want to look\par
+at another application of the product rule.\par
+Maybe a little more interesting.\par
+Maybe you should say, even more interesting,\par
+and imagine that you have\par
+people at a party,\par
+and you ask, how many people would it take\par
+so that two would likely share a birthday?\par
+So how large should this party be\par
+so that it's likely, maybe more than half probability\par
+that two people in the party have the same birthday?\par
+Okay, so we are going to assume\par
+that every year has 365 days,\par
+no leap years and so on,\par
+and that every one is equally likely\par
+to be born on any given day.\par
+So everyone is equally likely to be born\par
+on the first day of the year, second day and so on,\par
+Alright, so\par
+probabilistically what we are asking about,\par
+we say we choose n random integers.\par
+Each from one to 1/3 (mumbles),\par
+one to 365.\par
+We choose them with replacement\par
+because people could potentially have the same birthday.\par
+We choose n of them,\par
+and we ask, we let B(n) be the probability\par
+that two or more people have...\par
+I'm sorry, two or more of these integers\par
+that we chose are the same.\par
+Okay, and we ask for which n, how many people,\par
+will B(n) be the probability that\par
+we have two that are the same exceeds half.\par
+That would mean for us likely, to be likely.\par
+So it's the probability that two shares\par
+a birthday is at least half.\par
+Okay, so when people are told apparently some\par
+of them think that this number should be roughly 365.\par
+Maybe because they think that there are 365 days,\par
+but you need to have as many to get some coincidence,\par
+but in fact the answer is much smaller.\par
+Okay, so first attempt.\par
+We could consider n people in order,\par
+say alphabetically just taking people in some order,\par
+and then list of birthdays.\par
+So maybe the first one was born\par
+on the second day of the year, or tenth day of the year,\par
+the last day of the year and so on.\par
+Okay, and so this is selection with replacement.\par
+Like you see here 10 we selected twice.\par
+So we can consider the set\par
+of all possible birthday sequences.\par
+Okay, and so we call it,\par
+this is our sample space omega.\par
+So these are the set of all possible birthday sequences.\par
+There are numbers from one up to 365, raised to the n.\par
+The nth (mumbles) power of this.\par
+So this are all possible sequences\par
+and the size of the sample space is, as we know,\par
+is 365 raised to the n.\par
+Okay, now we can assume,\par
+because we assumed that\par
+the individual birthdays are uniform,\par
+then also this implies that the space is uniform.\par
+Every sequence that we get of n values,\par
+for example this sequence,\par
+is equally likely to any other sequence,\par
+because all birthdays are uniform.\par
+A uniform is selected, okay.\par
+So for like Bn, be the set of sequences\par
+that have some repetition in them.\par
+For example this, the 10 happened twice.\par
+Then what we need,\par
+the probability that we get\par
+as an element in Bn.\par
+The probability that we get a repetition\par
+is just this size of Bn.\par
+We need to see how many sequences\par
+of length n over 365 have repetition,\par
+and we need to divide it by omega.\par
+Okay, but calculating this\par
+is not super easy.\par
+So is a little involved.\par
+So what we do is instead of calculating,\par
+I should say calculating directly,\par
+then is a little involved.\par
+So what we do is what we have done many times\par
+and we are going to look, instead of Bn,\par
+we are going to look at the complement of Bn.\par
+That will turn out to be easier.\par
+So again using, we are thinking outside the circle,\par
+and we are looking the complement of Bn.\par
+So Bn is the set of,\par
+where you have n people share a birthday\par
+or have a birthday repetition,\par
+and will be, the compliment of Bn be the set,\par
+the event that we have n people\par
+and no two share a birthday, okay.\par
+So we evaluate the probability.\par
+We use the product rule to evaluate\par
+this probability sequential over the first person,\par
+second person and so on,\par
+and so what we want to see is what is the probability\par
+that second person is, birthday is different\par
+from the first one,\par
+coz we are looking no birthday repetition,\par
+and then the third birthday person has\par
+a different birthday from the previous two and so on.\par
+So that's what we are going to look at,\par
+the probability that each person has\par
+a birthday which is different from all the previous,\par
+all the previous ones.\par
+Okay, so the calculation is as follows.\par
+So we have n people and the probability\par
+that no two share a birthday,\par
+is going to be probability\par
+that the second is different from the first.\par
+That's going to be, the second one\par
+is 364 birthday to be born in,\par
+divide by 365,\par
+and times the probability the third one\par
+will defer from the previous two,\par
+given that previous two have different birthdays.\par
+So if the previous two have different birthdays,\par
+they already take two birthdays\par
+and he needs to be, or she needs to be born\par
+in one of the 365 minus two,\par
+on one of the 363 out of 365 possible birthdays.\par
+So what we do is we will get,\par
+each one will get 364 times 363,\par
+times 362 and so on.\par
+Each one of them is divided by 365,\par
+and the last one that we will have is 365 minus n minus one,\par
+or 365 minus n plus one\par
+when we take parenthesis out,\par
+bacause you have n minus one people before hand,\par
+and the birthday (mumbles)\par
+one which is different from what we had before.\par
+Okay, so we want to calculate this probability\par
+and we can use this small approximation.\par
+So first of all we can write it as the product\par
+of one minus i over 365,\par
+i going from one up to n minus one, okay,\par
+and then we can use an approximation\par
+that one minus x is less than or equal to e to the minus x.\par
+You can kind of visualize it,\par
+one minus x falls and e to the minus x stays above it.\par
+Okay, and so this is less than or equal\par
+to the product of e to the minus i to the 365.\par
+This is one minus x, this is e to the minus x,\par
+and this product is going to give us\par
+the exponent or e to the minus this summation\par
+of 1/365 summation i going\par
+from one up to n minus one,\par
+summation of i, okay,\par
+and as we know this summation\par
+is n times n minus one over two.\par
+So we are summing one plus two up to n minus one.\par
+So we have n minus one times\par
+the average is n over two.\par
+So this gives us e to the minus n,\par
+times n minus one over two,\par
+and again divide by 365.\par
+Okay, which is almost the same as e to the minus n square\par
+over two times 365.\par
+So if you want this probability to be half,\par
+so this is what we are asking\par
+when is this probability going to be...\par
+This is the probability of the compliment.\par
+So we want this probability to be less than half.\par
+So we extend the right direction.\par
+So, here.\par
+So if we want this probability to be less than\par
+or equal to half then,\par
+or in this case we work equal to half.\par
+Then what we must have,\par
+so we must have that minus n square\par
+over two 365\par
+is equal to Ln of 0.5,\par
+and so taking log on natural log on both sides.\par
+So Ln of, then left side here,\par
+is Ln of 0.5.\par
+Which is minus Ln two.\par
+Okay, so we can cancel the minuses,\par
+and we get therefore that n is going to be,\par
+well you can,\par
+it's going to be this value\par
+which you can also write as two times 365\par
+times Ln two, it's the same.\par
+Okay, and when you calculate it is 22.494\par
+and in fact\par
+if you calculate the exact value,\par
+it's going to be the value for which this quantity\par
+is going to cross the half.\par
+It's almost exactly the same\par
+and which means that we are gonna get 23 people.\par
+Then the probability that,\par
+the probability that they will not share a birthday\par
+which is what we calculated here,\par
+will be less than half\par
+and the probability that they will share a birthday,\par
+will therefore be bigger and equal to half,\par
+and you can see it in this graph here.\par
+This is the probability\par
+that you get to birth then you get to 23\par
+this probability crosses the half,\par
+and if you look at the notebooks\par
+that we have for you,\par
+the Jupiter notebooks,\par
+you can see how to calculate these probabilities\par
+for any given number of n.\par
+Alright, so in this (mumbles) lecture\par
+we talked about Sequential Probability\par
+and next we will talk about Total Probability.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+Discussion\par
+Topic: Week 4 / Sequences\par
+Show Discussion\par
+POLL\par
+\par
+The equality P(A\f1\u8745?\f0 B)=P(A)P(B) holds whenever A and B are\par
+\par
+\tab\par
+independent\par
+\par
+\tab\par
+disjoint\par
+\par
+\tab\par
+intersect\lang9\par
+}
+ 

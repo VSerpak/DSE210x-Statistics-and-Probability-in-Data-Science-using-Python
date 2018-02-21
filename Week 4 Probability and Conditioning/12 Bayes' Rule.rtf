@@ -1,0 +1,409 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Hello and welcome back.\par
+We've talked about total probability in the last lecture,\par
+and now we're going to talk about Bayes' rule,\par
+also know as backwards running, so let's start.\par
+Often, there's asymmetry between events.\par
+For example,\par
+in the event that you bought Google when it went public,\par
+that was a very happy event.\par
+You probably are quite wealthy now.\par
+If you bought Google when it went public,\par
+then it's very likely that you're wealthy.\par
+Probability is close to one.\par
+But what about the opposite?\par
+Suppose you are very wealthy.\par
+What is the probability that you bought Google at the IPO?\par
+It's not clear,\par
+because maybe you are wealthy from another reason.\par
+Or if you are alive today,\par
+then most likely you were born after 1800.\par
+But how about the reverse?\par
+How about you were born after 1800?\par
+What's the probability that\par
+well, you are alive today,\par
+but someone who is born after 1800 is alive today?\par
+We don't know,\par
+because that someone could have been born in 1800 or 1801,\par
+or they could have been born last year,\par
+so again, it's not easy to know.\par
+This asymmetry is quite frequent,\par
+and so that's what we want to address now.\par
+We want to be able to move\par
+from forward to backward calculation.\par
+Sometimes, calculating the probability of F given E is easy,\par
+but calculating the probability of E given F is hard,\par
+and we'll give a couple of examples.\par
+Perhaps not surprisingly,\par
+they'll be the same examples\par
+that we gave in the last lecture.\par
+We did that so we can use the results that we got.\par
+Imagine that you have two coins,\par
+and we let Hi be the event that coin i is heads,\par
+so H1 is the event that the first coin turns up heads,\par
+for example,\par
+and we let exists H be the event\par
+that you have at least one heads.\par
+Then, calculating the probability\par
+of exists heads given H1 is easy,\par
+because if the first coin is heads,\par
+then we know that exists heads, so this is easy.\par
+But how about the reverse?\par
+Calculating the probability that the first coin is one,\par
+given that exists heads.\par
+Maybe that's not so easy.\par
+Or let's look at the two dice example\par
+that we considered last time.\par
+Let Di, if you remember,\par
+be the outcome of the roll of die i,\par
+so it's the face for die i.\par
+For example,\par
+D1 is the outcome for the first die,\par
+and we let S be the sum of D1 and D2,\par
+of the two faces that we observe,\par
+so we can see that the probability, for example,\par
+that the sum is five, given that the first die is two,\par
+that's the same as the probability\par
+that the second die was three,\par
+'cause then the sum will be five.\par
+Probability of the second die is three is 1/6.\par
+This one is easy.\par
+But conversely, calculating the probability\par
+that the first die turned up two, given the sum is five,\par
+is a little more difficult,\par
+so this is the calculation we want to do,\par
+and we're going to use Bayes' rule for that.\par
+Again, it's a method for converting P of F given E,\par
+which is easy sometimes,\par
+to P of E given F, which is difficult sometimes.\par
+What is Bayes' rule?\par
+It just is a method such that\par
+given a probability of F given E,\par
+which, as we said, is typically easy,\par
+and a little bit more information,\par
+which we'll describe in a second,\par
+we can determine the probability of E give F,\par
+which might be hard.\par
+Let's see the exact formula.\par
+It says the probability of E given F, what we want,\par
+is equal to the probability of F given E, that we have,\par
+times the probability of E, divided by the probability of F.\par
+In other words,\par
+we see that we need the probability of F given E,\par
+which is what we have, and then we need, also,\par
+the probability of E and the probability of F,\par
+so the little bit more here\par
+is the probability of E and the probability of F,\par
+and given these three things,\par
+probability of F given E,\par
+and then two regular probabilities,\par
+they're not even conditional probabilities,\par
+we can find the reverse probability,\par
+probability of E given F.\par
+Let's give a very simple proof of this,\par
+a micro-proof if you want.\par
+The probability of E given F, as we have seen many times,\par
+is just the probability of the intersection,\par
+divided by the probability of F,\par
+and then we use the product rule,\par
+and we can write this as the probability of F ...\par
+I'm sorry, we can write this\par
+as the probability of E times the probability of F given E,\par
+divided by probability of F,\par
+and this gives us a way\par
+to calculate the probability of E given F\par
+from the probability of F given E.\par
+Again, the probability of E given F\par
+is the probability of the intersection\par
+divided by the probability of F,\par
+but the intersection we can just write\par
+as probability of E times the probability of F given E,\par
+and then we get that.\par
+Because this really is so important,\par
+I'm going to give two more proofs of this,\par
+of this very simple proof,\par
+and clearly, they're all going to be almost the same,\par
+but maybe we'll get\par
+just a little bit more insight from them.\par
+Here are the two views,\par
+and again, they're not drastically different,\par
+but hopefully will give us just slightly more insight.\par
+Here, again, is the formula.\par
+Probability of E given F\par
+is the probability of E times the probability of F given E,\par
+which at this point we have, divided by probability of F.\par
+Another way to prove this is to start with\par
+use the product rule twice,\par
+so we can start with the probability of the intersection,\par
+intersection F, symmetric,\par
+so we can write it in two different ways.\par
+We can write it as\par
+the probability of E times the probability of F given E,\par
+or we can now write it\par
+as the probability of F times the probability of E given F,\par
+and once we have it,\par
+we can just rearrange and say that\par
+the probability of E given F,\par
+that's what we're interested in,\par
+is this product of the two probabilities,\par
+divided by the probability of F.\par
+That's what we have here.\par
+Another way, that's slightly more geometric,\par
+is to write here the event E here is this alpha plus beta,\par
+and the event F, which is beta plus gamma,\par
+it's the sum of those two probabilities.\par
+Then we can see that the probability of F given E,\par
+we want the probability of F given E,\par
+so we know that we are here in this region,\par
+and we ask what is the probability that we are in F,\par
+in beta, so it's going to be beta,\par
+divided by alpha plus beta,\par
+and we can ask what is the probability of E given F,\par
+so now we're looking at the probability that we are here,\par
+given that we are on the right side,\par
+so it's the probability of this intersection,\par
+divided by beta plus gamma,\par
+so it's beta, divided by beta plus gamma.\par
+The assumption we're making\par
+is that we know the probability of F given E,\par
+namely we know beta, divided by alpha plus beta,\par
+this divided by that,\par
+and we want to find beta, divided by beta plus gamma.\par
+It's very clear what we want to do.\par
+We want to take this value,\par
+and we want to multiply it by alpha plus beta,\par
+and then divide by beta plus gamma,\par
+so multiply by alpha plus beta,\par
+is we're going to multiply it by P of E,\par
+that's this one here, and divide by beta plus gamma,\par
+is going to divide by beta plus gamma,\par
+which is P of F, so this is what we do.\par
+Let's just write it down.\par
+So P of E given F, which is what we want,\par
+is we want beta, divided by beta plus gamma,\par
+that's what we want,\par
+but we have beta, divided by alpha plus beta,\par
+so we take beta, divided by alpha plus beta,\par
+multiply it by alpha plus beta, divide by beta plus gamma,\par
+so this quantity here is P of F given E,\par
+and this quantity here is P of E, and this one is P of F.\par
+Hopefully, between these three proofs,\par
+we can see why it's true,\par
+and just as one way to kind of remember what to do,\par
+if you want to calculate probability of E given F,\par
+start with probability of F given E,\par
+and then what you do is multiply by P of E,\par
+safe to cancel, and then divide by P of F\par
+to get the probability of E given F,\par
+because when you multiply those, you get the intersection,\par
+divide by F, you get the probability of E given F.\par
+Just a way to remember as we continue.\par
+I'll look at a couple of examples.\par
+First, two coins.\par
+Remember that Hi is the event that coin i is heads,\par
+and exists heads is the event\par
+that at least one coin is heads,\par
+so we are interested in the probability\par
+that the first coin is heads, given that exists heads,\par
+that's the more difficult direction.\par
+We can write it using Bayes' rule,\par
+so this probability,\par
+you can write it as the probability of exists H given H1,\par
+it's the opposite of this,\par
+and then we need to cancel the H1, and divide by P of H,\par
+P of exists H, so it's that.\par
+Now the probability of exists H given H1 is 1,\par
+'cause if the first coin is one, then exists heads,\par
+and then we need to multiply probability of\par
+Let's just see what it is.\par
+The probability of exists H given H1 is one.\par
+The probability of H1 is 1/2.\par
+What is the probability of exists H?\par
+We have two coins.\par
+The probability that we'll get at least one H is 3/4.\par
+We saw that, actually, in the last video.\par
+Now we just need to plug in the numbers,\par
+so we get it's one times 1/2, divided by 3/4, which is 2/3.\par
+In other words, given that exists H,\par
+the probability that the first one is heads,\par
+Bayes' rule tells us 2/3, hopefully that's what I said,\par
+and the reason is quite simple.\par
+We know that if exists H, heads, then the probabilities are\par
+heads/tails, tails/heads, or heads/heads,\par
+and the probability that the first one is heads\par
+is in two out of those three.\par
+I don't think I worked it here.\par
+Okay, I did write it here,\par
+so the probability that the first one is heads\par
+given exists H, exists heads,\par
+is the probability of the intersection,\par
+divided by probability of exists heads,\par
+and this is the sequence.\par
+We know that exists heads, so we know that\par
+in one of the top three,\par
+and we're asking what is the probability\par
+the first one is heads,\par
+is the probability that we are in one of these two,\par
+and that's going to be 2/3.\par
+Next, let's look at two dice.\par
+Di is the outcome of die i,\par
+and S is the sum of the two dice,\par
+so we're asking: what is the probability\par
+that the first die is two, given that the sum is five?\par
+We can write it using Bayes' rule,\par
+as the probability that the sum is five\par
+given that the first one is two,\par
+namely the opposite of this,\par
+and we need to cancel this,\par
+and multiply by probability of D1 is two,\par
+and then we need to divide by this\par
+so we get the condition right,\par
+so I divide by probability that S is five.\par
+These quantities are easy to calculate.\par
+The probability that S, sum,\par
+is five given the first one is two,\par
+is probability that second one is three,\par
+given the first one is two,\par
+and that's probability the second one is three,\par
+which is 1/6, 'cause the dice are independent.\par
+The probability that the first die is two is 1/6,\par
+and the probability that the sum is five,\par
+we calculated, again, last video, and we saw that it's 1/9.\par
+Therefore we can plug in,\par
+and we can say that this probability is going to be\par
+1/6 times 1/6, divided by 1/9,\par
+and that value is 1/4.\par
+If you want to see why, another reason why,\par
+another way to see that it's 1/4,\par
+the probability that the first die is two\par
+given that the sum is five,\par
+is the sum of all possibility where the\par
+so this is the\par
+the sum of all possibility where the first die is two\par
+and the sum is five,\par
+divided by the total number of possibility\par
+when the sum is five.\par
+These are the possibilities where the sum is five:\par
+one, four; two, three; three, two; and four, one.\par
+So there are four possibilities here.\par
+How many of them is the first die two?\par
+It's just this one,\par
+so there are\par
+four possibilities for when the sum is five,\par
+and in only one of them the first die is going to be two,\par
+namely this one,\par
+so the probability is going to be just one out of four.\par
+Finally, let's look at the iPhone.\par
+Just to remind ourselves, iPhone X is made,\par
+I shouldn't call it Foxconn,\par
+because we're talking about the bad iPhone\par
+maybe the other companies,\par
+and it's a good product.\par
+Just to remind ourself,\par
+we assume that there are three factories\par
+that produce half of the iPhones, 30% of the iPhones,\par
+and 1/5 of the iPhones,\par
+and their defective rates are 4%, 10%, 5%, respectively,\par
+and what we calculated in the previous video\par
+is the probability that an iPhone will be defective\par
+is the sum of 50% times 4%,\par
+which is 2% of the bad iPhones are made here,\par
+plus 30% times 10%, which is 3% made here,\par
+plus 20% times one over twenty, which is 1% made here,\par
+and when you sum those up,\par
+we get that 6% of the iPhones are going to be defective.\par
+What we want to ask now is,\par
+suppose you buy an iPhone and it does have a green line?\par
+What is the probability,\par
+given that it is defective, it has a green line,\par
+what is the probability that it's made by the first factory?\par
+We can use Bayes' rule,\par
+and write it's the probability of defective\par
+given the first factory,\par
+times the probability of the first factory,\par
+that it was made by the first factory,\par
+cancel here, divide by the probability of D.\par
+We need to calculate these probabilities.\par
+The probability of defective given the first factory,\par
+that was 4%, as this was given to us.\par
+The probability of the first factory was 50%.\par
+That was also given to us.\par
+And probability of defective is the 6% that we calculated\par
+in the previous slide, or the previous lecture.\par
+We can just now plug these in,\par
+and we get that it's going to be\par
+point four times point five, divided by point six,\par
+which is the same as point two divided by point six,\par
+which is 1/3.\par
+We can similarly calculate the probability\par
+that it's made by the second factory given it's defective,\par
+and this is going to be the same.\par
+The probability of defective is, again,\par
+is going to be point six,\par
+and then we calculate the probability\par
+of defective given first factory,\par
+which was 1% times 30%,\par
+that are made by the first factory,\par
+and this gives us 0.3 divided by 0.06, which is 1/2.\par
+Then we can do the probability\par
+of the third factory given it's defective.\par
+We need to calculate the probability\par
+of defective given the third factory,\par
+which we were told is 5%,\par
+times the probability of the third factory, which was 20%,\par
+divided by the probability of defective,\par
+which is, again, 6%, the same,\par
+and so when we do that we get 1/6.\par
+A couple of observation is that\par
+these probabilities add to one,\par
+so given that it's defective,\par
+if you look at the probability\par
+that it's made by the first one, the first factory, is 1/3,\par
+second factory is 1/2, and third one is 1/6.\par
+They add to one, so that's one observation.\par
+The other observation is that\par
+even though the first factory makes 50% of the phones,\par
+the second factory makes 30% of the phones,\par
+and the third factory makes 20% of the phones,\par
+so this one makes many more iPhones.\par
+The probability, if the phone is defective,\par
+the probability that it comes from this factory\par
+is actually smaller\par
+than the probability it comes from the second one.\par
+So conditional order is\par
+the order of the conditional probabilities is determined\par
+not just by which factory makes more phones,\par
+but also the probability that the phone is defective.\par
+So here, for example\par
+I think I have a small typo here:\par
+this should have been not .01, but just .1.\par
+It was 10%.\par
+That's an important difference.\par
+So it's 10% probability\par
+that the second factory made a defective phone.\par
+Because this probability is so high,\par
+if the phone is defective,\par
+it's more likely to come from the second factory\par
+than from the first one.\par
+With that, we have used Bayes' rule\par
+to even find the probability\par
+that a defective phone was made in a different\par
+a different iPhone was made in different places.\par
+I think we have exhausted, for now, Bayes' rule,\par
+and next time we're going to talk about random variables.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Monty Hall Problem:\par
+\par
+Suppose you're on a game show, and you're given the choice of three doors. Behind one door is a car and behind the others are goats. You pick a door, say door 1. The host knows what is behind each door. He opens another door, say door 3, which has a goat. He then says to you, "Do you want to pick door 2?" Is it to your advantage to switch your choice?\par
+\par
+\tab\par
+I will keep my choice of door 1.\par
+\par
+\tab\par
+I will switch to door 2.\par
+}
+ 

@@ -1,0 +1,385 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Hello and welcome back.\par
+In the last lecture, we used the probability axioms\par
+to prove some equalities and now we would like to use them\par
+to prove a few inequalities\par
+and maybe along the way, we'll see an interesting question,\par
+so again, we're going to use the three axioms,\par
+we're going to prove some inequalities,\par
+including the union bound and then we'll get to a problem,\par
+whose word is not 64,000 dollars,\par
+but actually 1.4 million dollars,\par
+okay, so let's start.\par
+So remember the three axioms,\par
+they were the non-negativity,\par
+the probability of any event is at least zero,\par
+unitarity, probability of the whole sample space is one\par
+and additional, if you have two disjoint set,\par
+the probability of the union\par
+is the sum of the probabilities, okay\par
+and in the last lecture,\par
+we used them to prove a couple of equalities\par
+and now we want to use them to prove some inequalities,\par
+except that we want to start with zero\par
+and that could be viewed as equality, it is equality,\par
+but after that, we'll move to inequalities, okay.\par
+So let's start with, as I said, essentially zero,\par
+what is the probability of the null event?\par
+So, remember that unitarity says\par
+that the probability of the whole sample space is one,\par
+but what about the probability of the empty set?\par
+Did we just forget to mention it?\par
+No, we're going to show that the probability\par
+of the empty set can be proved to be zero, okay,\par
+so the proof is going to be simple,\par
+so remember that the whole sample space, omega\par
+is the union of, can be written as the union\par
+of the empty space and the whole sample space\par
+and therefore the probability of omega,\par
+the whole sample space\par
+is the probability of the empty set union with omega,\par
+this union is disjoint\par
+and therefore this probability by the additional\par
+is the sum of the two probabilities,\par
+probability of the empty set plus probability of omega,\par
+probability of omega cancels on both sides\par
+and what do we get?\par
+We get that the probability of the empty set is zero,\par
+okay, so that was pretty easy,\par
+again it's a one lego result\par
+and it says that the null event has nil probability,\par
+nil is zero, okay cool.\par
+So next we want to start talking\par
+about a couple of inequalities,\par
+so we once said that the probability of any event\par
+is between zero and one, so the left side,\par
+the probability of any event is at least zero,\par
+we know from an axiom, that's just the non-negativity axiom,\par
+it says the probability of A is at least zero\par
+and the only thing we need to show is the right side,\par
+the probability of any event is less than or equal to one,\par
+this by the way are called universal bounds,\par
+that for any event A,\par
+the probability is at least zero, alright,\par
+so what we want to show is the right side,\par
+the probability of A is less than or equal to one\par
+and we start as usual, A union A complement is omega\par
+and therefore the probability of A union A complement\par
+is the probability of omega\par
+and now we observe that A and A complement are disjoint,\par
+I'm sorry, going that way first,\par
+so the probability of omega by unitarity is one, okay\par
+and then we observe that A and A complement are disjoint\par
+and so the probability of the union by the addition rule\par
+is the sum of the two probabilities,\par
+probability of A plus the probability of A complement\par
+and then we use the non-negativity rule\par
+to set this probability of A complement, this is an event,\par
+so its probability is bigger than or equal to zero\par
+and therefore this is going to be bigger than equal,\par
+than just P of A, right,\par
+because we take P of A and we add something,\par
+which is non-negative to get a result,\par
+which is at least as large, okay and what do we get?\par
+We get the probability of A is less than or equal to one,\par
+okay, so we get the probability of A\par
+is less than or equal to one, right,\par
+so it says the probability is always between zero and one\par
+and as I said, some people call it universal bounds, okay,\par
+now this is actually a fairly important result,\par
+the probability of A is less than or equal to one\par
+and it's particularly important if you come to UCSD,\par
+I have a colleague here, he teaches probability\par
+and he's pretty lenient,\par
+if he asks you about the probability of any event\par
+and you don't quite get it right,\par
+maybe it's probability is .01\par
+and you said it's probability of, is .99,\par
+you'll still, you can still get an A plus from him,\par
+but if you said the probability is bigger than one,\par
+any event, as the probability of any event,\par
+he says the probability is bigger than one, like 1.01,\par
+he says you get an automatic F,\par
+so if you come to UCSD, just keep that in mind, alright.\par
+Next, the next inequality we want to prove\par
+is about probability of subsets,\par
+so if A is a subset of B, then very naturally,\par
+we expect the probability of A to be less than or equal\par
+to the probability of B and here is the proof, simple proof,\par
+A is a subset of B, then here is the picture,\par
+here's A, here's B, we know that the probability of A\par
+should be less than or equal to the probability of B,\par
+we just want to prove it\par
+and we can write B as A union B minus A,\par
+so B as A union B minus A and therefore the probability of B\par
+is the probability of this union,\par
+this union is the disjoint union and therefore\par
+it's going to be the sum of these two probabilities,\par
+the probability of A plus the probability of B minus A,\par
+but the probability of B minus A\par
+is bigger than or equal to zero\par
+and so by the non-negativity, this is going to be\par
+bigger than or equal to the probability of A,\par
+so we've got that the probability of B\par
+is bigger than or equal to the probability of A,\par
+as we wanted, right, so that's what we want to show,\par
+the probability of B is bigger than\par
+or equal to probability of A.\par
+Now, at this point, things start getting a little boring,\par
+I think, just using those axioms, those legos,\par
+again in here, we used two of them, so you might say,\par
+"Oh, this is so obvious, you know,\par
+"like, why are we even bothering doing that?"\par
+and so the only thing I'll say is we shall see\par
+and the last inequality that we'll discuss\par
+is actually a pair of inequalities\par
+and they have to do with unions of sets,\par
+so if you have two sets, A and B and you ask\par
+what can you say about the probability of the union?\par
+So here are the two sets, A and B,\par
+and you're asking what we can say\par
+about the union probability,\par
+so we'll have a lower bound and upper bound,\par
+the lower bound will say that the probability of A union B\par
+is at least the maximum of the probability of A\par
+and the probability of B, very natural here,\par
+the probability of the union\par
+is at least the probability of A\par
+and the probability of B is at least the maximum of them\par
+and the upper bound, also natural\par
+says that the probability of A union B is at most\par
+the probability of A plus the probability of B,\par
+again, very natural, because we have here\par
+the probability of A plus the probability of B,\par
+it will be at least the probability of the union, okay,\par
+so first let's prove the left side,\par
+so we know that A is a subset of A union B\par
+and B is a subset of A union B,\par
+so both A and B are subsets of A union B, okay\par
+and therefore by the subset result, that we just proved,\par
+we see that the probability of A and the probability of B\par
+are both less than or equal to the probability of A union B\par
+and if you have two numbers, that are less than\par
+or equal to what's written on the right side,\par
+then the maximum is also less than or equal\par
+to this right-hand side, okay,\par
+so we get that the maximum of both of them\par
+is also less than or equal to the probability of A union B,\par
+now how about the right-hand side, the upper bound?\par
+So, well, this we can use\par
+the principle of inclusion-exclusion, here is our pie,\par
+it will tell us that the probability of A union B\par
+is the probability of A plus the probability of B\par
+minus the probability of the intersection, okay,\par
+but the probability of the intersection\par
+is a non-negative number,\par
+so we're subtracting a non-negative number,\par
+we'll get a number, which is less than or equal\par
+to the probability of A plus the probability of B,\par
+so we get the probability of A union B is this number here,\par
+which is smaller than or equal to the probability of A\par
+plus the probability of B, alright, okay, so,\par
+and this last result, even though it is simple,\par
+looks simple, then it is simple and is simple,\par
+probability of A union B is less than or equal\par
+to the probability of A plus the probability of B\par
+is equal to union bound and it's actually very useful\par
+and used to prove very interesting results, okay.\par
+So this leads us to the 1.4 million question,\par
+and here it is,\par
+so I figured that now that we're all experts in probability,\par
+we should be able to solve this one very easily\par
+and get this reward.\par
+So here's Linda, she is 31 years old,\par
+she is single, outspoken, very bright,\par
+she majored in philosophy and as a student,\par
+she was deeply concerned with issues\par
+of discrimination and social justice\par
+and also participated in anti-nuclear demonstrations,\par
+okay, so this is Linda right here, okay\par
+and the question we have about her is simple,\par
+which of those is more probable,\par
+which has the higher probability, okay?\par
+Simple probability question,\par
+one, Linda is a bank teller\par
+and two, Linda is a bank teller\par
+and is active in the feminist movement,\par
+as you can see on the right, okay,\par
+so which of those is more likely,\par
+that Linda is a bank teller\par
+or bank teller and active in the feminist movement?\par
+Okay and maybe you can think about it,\par
+pause if you want, the video, think about it\par
+for a little bit and once you have the answer,\par
+hopefully you can see a poll below\par
+and if so, maybe make your selection,\par
+so here you don't see it behind my picture,\par
+but we ask whether she's a bank teller\par
+and active in the feminist movement, alright, okay,\par
+so hopefully you have reached your conclusion\par
+and so let's see the solution,\par
+so this question about Linda\par
+actually was part of a pretty well known paper\par
+by Tversky and Kahneman\par
+and they did this experiment,\par
+they asked 88 University of British Columbia students\par
+and which is more likely, she's a bank teller\par
+or bank teller and activist in the feminist movement\par
+and 85% of them, the vast majority said\par
+she's more likely to be a bank teller and an activist, okay,\par
+now let's see what happens,\par
+let B stand for the event, that Linda is a bank teller\par
+and let A stand for the event,\par
+that she's active in the feminist movement,\par
+then what we're asking is about the probability of B,\par
+the probability that she's a bank teller\par
+versus the probability that, of B intersection A,\par
+that she's a bank teller\par
+and active in the feminist movement,\par
+now clearly the intersection A is a subset of B,\par
+so if you remember the result, that we said was so obvious,\par
+that the probability of a subset is always\par
+less than or equal to the probability of the superset,\par
+then so B contains B intersection A,\par
+so therefore the probability of B\par
+therefore must be bigger than or equal\par
+to the probability of B intersection A,\par
+contrary to what 85% of the students thought, okay.\par
+So Tversky and Kahneman used this to suggest\par
+that maybe the way we think about probability\par
+is a little bit irrational, so that humans\par
+have irrational probability, concept of probabilities\par
+and actually they studied not just this problem,\par
+they studied a whole bunch of problems,\par
+they call this phenomena,\par
+they call it the Conjunction Fallacy\par
+and they showed other examples of conjunction fallacy,\par
+for example,\par
+they looked at Bjorn Borg,\par
+just for those who don't know,\par
+he was the preeminent tennis player in the late '70s,\par
+he won for example, six French Opens,\par
+he won Wimbledon for five consecutive years,\par
+'76 to 1980, all five of them, he won it, so by the end,\par
+he was you know, the best known, you know,\par
+tennis player by far at the time\par
+and so they conducted this research\par
+in 1980, Tversky and Kahneman\par
+and so just after he won the fifth one\par
+and so they asked, suppose that Borg reaches\par
+the 1981, next year's, following year, Wimbledon finals,\par
+suppose that that happens, which one is more likely,\par
+is it more likely that Borg will lose the first set\par
+or that he will lose the first set, but win the match?\par
+So again, you can see here that given, you know,\par
+what, the way he was in 1980,\par
+it's very unlikely, that he'll lose the first set\par
+and it's also very likely that he will win the match,\par
+so perhaps not surprisingly,\par
+72% said that it's more likely that he will lose\par
+the first set, but will win the whole match,\par
+but again, we can see that B is a subset of A,\par
+because B is lose the first set and something else,\par
+so it's a subset of A, so therefore the probability of B\par
+must be less than or equal to the probability of A,\par
+so 72% for this question two\par
+got the answer incorrectly, okay,\par
+now just in case you wonder what happened,\par
+1981 rolled in\par
+and Borg indeed reached the final,\par
+however he won the first set, he did not lose the first set,\par
+he did win it, but he lost the match\par
+and he lost it to John McEnroe,\par
+so it just goes to show that maybe none of these things\par
+was actually as probable as the researchers thought, okay\par
+and then in case you're further curious\par
+what happened after that,\par
+well, 1983, just a year, two years later, less,\par
+he actually retired at the age of 26, alright.\par
+So going back from Bjorn Borg to Tversky and Kahneman,\par
+they actually got the ultimate reward,\par
+so what they did was they looked\par
+at many probability perception studies,\par
+they studied a whole bunch of them, but of all of them,\par
+the Linda problem is the best known\par
+and in 1996\par
+unfortunately Tversky passed away\par
+and then in 2002,\par
+Kahneman won the Economics Nobel Prize\par
+and the citation said, for integrating insights\par
+from psychological research into economic science,\par
+especially regarding human judgment\par
+and decision-making under uncertainty\par
+and here he is getting the Nobel Prize\par
+and just in case you are curious,\par
+no, the award was not 64,000 dollars,\par
+but in fact the Nobel Prize comes with 1.4 million dollars,\par
+although he did share it with another person, okay.\par
+So I should be fair and to say\par
+that there's actually some criticism of the Linda problem\par
+and different types of criticisms,\par
+many of them I don't understand,\par
+but perhaps what seems to me\par
+like the most reasonable criticism is as follows,\par
+that when we ask multiple choice and ranking questions,\par
+then often the options that we give people are disjoint,\par
+for example, we ask people do you want coffee or tea,\par
+coffee and tea are two disjoint options\par
+or do you want your tea hot or cold,\par
+two disjoint options, or do you want to,\par
+even if you want to do ranking, like they asked here,\par
+I would ask you to rank Monday, Tuesday and Wednesday,\par
+for the time for a meeting, these are disjoint options,\par
+that's what people usually give you, disjoint options,\par
+even when the options are not explicitly disjoint,\par
+then we still interpret them as disjoint,\par
+for example, if someone asks if you want your coffee\par
+with milk or with milk and sugar,\par
+typically we'll interpret it to be\par
+with milk only or milk and sugar, right\par
+and if they ask you, do you want to meet Monday,\par
+or Monday and Tuesday,\par
+then most people interpret it to mean,\par
+do you want to meet Monday only or Monday and Tuesday, okay,\par
+so if you do that, then it could be that the students\par
+had similar interpretation for the Linda question,\par
+so when they were asked if Linda is a teller,\par
+or a teller and an activist,\par
+it's quite possible that they interpret it\par
+as is Linda a teller only, namely teller and not activist,\par
+or teller and activist and if they did that,\par
+then the answer could be reasonable,\par
+because that means that they just said\par
+that Linda is more likely to be active in the movement,\par
+than not active in the movement,\par
+so she's more likely to be teller and activist,\par
+than teller and not activist,\par
+so maybe they were asking her this question, okay.\par
+But regardless of whether this question\par
+was correctly phrased or not,\par
+the bottom line is that humans\par
+are only moderately good at estimation probabilities\par
+and there are many things that we don't do well\par
+and so the problem is actually not even,\par
+not just the 64,000 dollar question,\par
+it's not even just a 1.4 million dollar question,\par
+if you look at Madison Avenue or Wall Street,\par
+they make much more out of\par
+being able to evaluate probabilities better than humans do\par
+and being able to see where humans don't get probabilities\par
+exactly right and take advantage of it, okay.\par
+So to summarize, we talked about probability inequalities,\par
+we again started with the three axioms,\par
+we talked about several inequalities,\par
+I should mention the union bound is quite important,\par
+we also said the probability of a set\par
+is bigger than or equal to the probability of its subset,\par
+but as we saw, sometimes we don't quite grasp it that way,\par
+okay, and what are we going to do next time?\par
+We'll discuss conditional probability.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+Discussion\par
+}
+ 

@@ -1,0 +1,327 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello again, everyone.\par
+In the last few videos we talked about probability\par
+and today we want to look at the nuance version\par
+called conditional probability.\par
+So, first let's motivate it.\par
+So, often we have partial information about the world\par
+and we would like to use it\par
+to get better probability estimates\par
+and we would like to know how it modifies\par
+the probability of events.\par
+For example, if the unemployment numbers are down,\par
+then it might affect the stock prices\par
+and we want to see how that would happen\par
+and, similarly, in San Diego, if it's a sunny weekend,\par
+everyone wonders how many people are going\par
+to go to the beach and we might want to see\par
+what are the probabilities under these sunny conditions,\par
+how are they different from not knowing the weather?\par
+And this conditional probability is important in two ways,\par
+first of all, because knowing he information helps us\par
+improve our probability estimates and, therefore,\par
+helps us better address the conditions that are in effect,\par
+and also, they often help us determine\par
+regular probabilities more easily as we're going to see.\par
+So, let's start with an intuitive definition\par
+of what we mean by conditional probability.\par
+So, let E and F be events\par
+and suppose that E happened.\par
+Someone told us that some event, E, happened.\par
+For example, it's sunny.\par
+We would like to know what is the probability of F given E,\par
+the probability that F happens given that E has happened.\par
+And, as we know, we are defining to be the fraction\par
+of times that E happens when we also know that F happens.\par
+So, let me repeat.\par
+We would like to look at all the times that E has happened\par
+and we are interested in the fraction of those times\par
+that F also happened.\par
+For example, if we have a fair die and we ask\par
+what is the probability that we get the number two\par
+given the number is even, namely if someone tells us\par
+that the number is even and we want to know,\par
+in that case, what is the probability\par
+or what is the fraction of times that we'll see a two?\par
+Then, we would look at a very long sequence,\par
+for example, this one.\par
+We'll see all the numbers that we got even values,\par
+like here, two, six, four, two, four, six, and so on,\par
+and then, we're interested in the fraction of those times\par
+that we'll get a two.\par
+So, there's six in the fraction dice and we get two.\par
+In this case, it's two over six, which is one third.\par
+So, we would like to determine what fraction\par
+of the times did we see a six or we see an even number,\par
+the number is two.\par
+Okay.\par
+So, let's do a few examples again with a die.\par
+So, remember that the probability of any number,\par
+including the probability of the number four,\par
+is one sixth and if you want\par
+to calculate the probability of observing a four\par
+given that someone told us that the value\par
+is bigger or equal to three,\par
+then we're looking at a probability of four\par
+given the values three, four, five, and six.\par
+Now, because all of these values are equal likely,\par
+three, four, five, and six,\par
+the fraction of those times that we'll see a four\par
+will be one fourth.\par
+Similarly, if we're looking at a probability of four\par
+given that the value is less than or equal to three\par
+then, we're interested in the fraction of times\par
+that we'll see a four when someone told us\par
+that the values are one, two, or three.\par
+So, clearly, whenever we see one, two, or three,\par
+we'll never see a four, so it's going to be zero\par
+divided by three or zero.\par
+We can also look at the probability of not just\par
+a single value, like four, but a more general event,\par
+which is the probability that the value is\par
+less than or equal to two,\par
+which is just the probability of one, two,\par
+which is one third and now,\par
+let's see what happens when we are told something\par
+about the outcome when we're conditioning.\par
+So, what is the probability the value is less than two\par
+give that someone told us that it's less than\par
+or equal to four?\par
+We're interested in the probability that it's one or two,\par
+conditioned on the value being one, two, three, four,\par
+and, since again, all these values one, two, three, four\par
+equal likely and we're interested in the probability\par
+of just two of them,\par
+the probability is going to be two over four,\par
+which is one half.\par
+And, finally, the probability that the value\par
+is going to be less than or equal to two\par
+give that it's bigger than or equal to two,\par
+that's the probability that we see one or two\par
+given that someone told us the value is two, three,\par
+four, five, or six.\par
+So, clearly we're interested only in the case\par
+that the value that we see is two\par
+because one cannot happen given that the value\par
+we're told is bigger to or equal to two.\par
+So, we're interested in the probability that two happened\par
+given that the values were two up to six,\par
+which is going to be one fifth.\par
+Notice that, in some cases, like in the first case,\par
+probability of less than or equal to two\par
+given less than and including four\par
+the probability of the event has increased.\par
+If we're told that the value is less than or equal to four,\par
+we've reduced the number of possibilities\par
+and kept the original two values,\par
+so the probability went from one third to one half,\par
+whereas, if someone told us that the number\par
+was bigger than or equal to two,\par
+then we now have five possibilities,\par
+but there's only one of them that is possible, namely two,\par
+and the probability went down from one third to one fifth,\par
+so it decreased.\par
+Let's do the more general case,\par
+but still staying with uniform spaces, for now.\par
+So, we're interested in the probability\par
+of a general event, F, given some other event,\par
+E, has happened and, as we know,\par
+that's the probability that our outcome\par
+is going to be an F in the event F\par
+given that the outcome was an E.\par
+So, here is a Venn diagram of E and F\par
+and we're told that the outcome was in E\par
+and we're asking what is the probability that it's in F\par
+given that it's in E,\par
+but if it's in E, we're told,\par
+and we are interested in the event that it's an F,\par
+then it must be both in E, which we were told,\par
+and in F, that we are interested in.\par
+So, we are interested in this area, in E intersection F,\par
+and we're asking what is the probability\par
+of this light area, intersection F,\par
+given that it was in E\par
+because that's the probability that X\par
+is in the intersection of E and F.\par
+That is the case where X is in E and X is in F\par
+given that X is in E\par
+and because we are looking at uniform spaces,\par
+then all the elements in here are equal, likely,\par
+and the number of those elements is the size of E,\par
+the cardinality of E\par
+and out of them, we're interested in the elements\par
+that are in the intersection, F,\par
+and the other cardinality is the cardinality\par
+of intersection, F.\par
+So, the probability is just a ratio of intersection, F\par
+divided by the cardinality of E.\par
+So, let's do an example.\par
+So, if we have a fair die and we are asking\par
+what is the probability of observing a prime\par
+given that we observe an odd number?\par
+So, we are looking at the probability\par
+of observing two, three, or five,\par
+those are the primes between one and six,\par
+given that we observe an odd outcome,\par
+namely one, three, five.\par
+As we just saw, it's just going to be the cardinality\par
+of the intersection, two, three, five intersection\par
+with one, three, five divided by\par
+the cardinality of odd,\par
+which is the cardinality of one, three, five.\par
+So, it's the cardinality of one, three, and five\par
+divided by the cardinality of one, three, five,\par
+which is two thirds.\par
+If we want the probability of observing four\par
+given that we're told a prime has occurred,\par
+we're looking at the probability of four\par
+given that two, three, five has occurred,\par
+we're looking, therefore, at the cardinality\par
+of four intersection with two, three, five,\par
+divided by the cardinality of a prime,\par
+so we're looking at the cardinality of the empty set\par
+divided by the number of elements in two, three, five,\par
+which is just zero, okay?\par
+Now, this was for the case of uniform spaces\par
+where it was just the number of elements\par
+in the intersection divided by the number of elements\par
+in the event we have conditioning on.\par
+In general, we have almost the same result.\par
+So, we want to find the probability of F given E,\par
+which, just like we've seen before,\par
+is just he probability that X is in the intersection\par
+of E and F\par
+given that X is in E,\par
+except that now we cannot look at the cardinality\par
+of those sets because the elements\par
+have different probabilities.\par
+So, this is going to be the number of times\par
+that we'll have an element in the intersection F,\par
+the number of times we'll have an element here.\par
+It's a fraction of the number of times\par
+we'll have an element from E, okay?\par
+So, the number of times we'll have an element from E\par
+is N times P of E when N is very large\par
+and the number of times we'll have and element in E,\par
+intersection F, is N times P of intersection F\par
+and N cancels, so we get the probability of F given E\par
+is a probability of the intersection of E and F\par
+divided by the probability of E.\par
+So, that's the basic formula for conditional probability.\par
+If you want to find the probability of an event F\par
+given another event, E,\par
+we need to look, first of all, in the intersection\par
+of the two events, E and F.\par
+We need to look at that probability.\par
+So, looking at this if you want to think of this probability\par
+or this area, here, divided by the total probability\par
+of the whole thing, here.\par
+So, it's the fraction of times\par
+that we'll see and element from E,\par
+the fraction of time that we'll also see\par
+and element in the intersection.\par
+So, let's look at an example.\par
+Remember our four sided die, it has four sides,\par
+one, two, three, and four\par
+with a probability of point one, point two,\par
+point three, and point four\par
+and if we're interested in the probability\par
+that the outcome is bigger than or equal to two\par
+given that it's less that or equal to three,\par
+then, by what we have just said,\par
+it's the probability that it's both bigger than\par
+or equal to two and less than or equal to three.\par
+This just means that we know that it's less than\par
+or equal to three because we are told that\par
+and we're looking at the cases where it's bigger than\par
+or equal to two, so we're concerned\par
+with the sides that are between two and three\par
+and we divide it by the probability\par
+it's less than or equal to three.\par
+So, this is going to be the probability of two, three, four\par
+intersection with one, two, three,\par
+the intersection of these two events\par
+and divided by the probability of one, two, three.\par
+So, it's the probability of two and three,\par
+that's the intersection divided by the probability\par
+of one, two, and three.\par
+Now, the probability of two and three,\par
+because the probabilities are the same\par
+as the values, just normalized by ten,\par
+so that's going to be point five divided by point six,\par
+which is five sixths.\par
+This conditional probability gives us\par
+and equivalent product rule.\par
+So, the conditional probability says the probability\par
+of F given E is the probability of the intersection\par
+of E and F divided by the probability of E,\par
+and we can rewrite it as the probability\par
+of the intersection is just the probability of E\par
+times the probability of F given E\par
+and this helps us calculate regular non-conditional\par
+probabilities in some cases, as we'll see right now.\par
+So, here we have one blue ball\par
+and two red balls\par
+and we're going to do our two balls\par
+and we're asking what is the probability\par
+that both of them are red?\par
+So, we have seen before how to do it\par
+just using permutations and combinations,\par
+but we'll now see and easier way\par
+using conditional probabilities.\par
+So, let R1 be the event that the first ball is red\par
+and R2 be the event that the second ball is red.\par
+So, the probability that both are red\par
+is the probability of R1 intersection with R2,\par
+when both happen, and that's going to be equal\par
+to the probability of R1 times the probability\par
+of R2 given R1.\par
+Now, what is the probability of R1 is two thirds, right?\par
+Because we have two red balls and one blue,\par
+so if we take one at random,\par
+the probability that it will be red will be two thirds\par
+and once we do that, then, if R1 happened,\par
+then we take out one red ball\par
+and we would be left with one blue ball\par
+and one red ball and then, the probability of R2\par
+happening given R1 happening is one half,\par
+so it's two thirds times one half,\par
+which is one third, okay?\par
+So, this is an example of how conditional probability\par
+helps us calculate regular probability\par
+in a simpler way.\par
+The product rule can be generalized,\par
+so if we have three events, we can write the probability\par
+of E intersection F intersection G\par
+is the probability you can write it as probability\par
+of intersection F and G\par
+and by the standard product rule or basic product rule\par
+it's probability of E F times the probability of G\par
+given that E F happened and then,\par
+we can break probability of E and F happening\par
+and write its probability of E times probability of F\par
+given E times probability of G given E and F,\par
+and similarly, if you have more events.\par
+So, in this video, we talked about conditional probability\par
+and in the next one, we're going to talk about independence.\par
+See you next time.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+If events A and B are disjoint, what is P(A|B)?\par
+\par
+\tab\par
+0\par
+\par
+\tab\par
+1/2\par
+\par
+\tab\par
+1\par
+\par
+\tab\par
+1/4\par
+\par
+}
+ 

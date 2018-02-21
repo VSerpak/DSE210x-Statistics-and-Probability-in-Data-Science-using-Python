@@ -1,0 +1,280 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Hello, and welcome back.\par
+In the last lecture, we talked about sequential probability,\par
+and we would like to talk about total probability.\par
+So sometimes it's easier to split an event\par
+into different parts\par
+and calculate the probability of each part of the event\par
+and then add them up.\par
+So in some sense to perform divide and conquer.\par
+I'm missing an e; I apologize for that.\par
+So this is called the law of total probability\par
+because we're looking at the total probability\par
+of several sub-events,\par
+and to see that, let's start with two events.\par
+So imagine that you have two events, E and F,\par
+and we want to find the probability of one of them,\par
+say probability of F, okay?\par
+We can write it, we can show it like this,\par
+so here is the event E and the event F,\par
+and we can, notice that we write F\par
+as E intersection F\par
+union with E complement intersection F,\par
+and assuming this is a joint union,\par
+you can see it here.\par
+We're interested in the event F.\par
+We can write it as\par
+E intersection F is the region here,\par
+the dark green,\par
+and E complement intersection F,\par
+which is the light green area here.\par
+These two regions together gives you F,\par
+and they're disjoint.\par
+So F we can write as E intersection F\par
+disjoint union with E complement intersection F, right?\par
+Now, therefore by the addition rule,\par
+we get that the probability of F\par
+is the probability of E intersection F plus,\par
+because this union is disjoint,\par
+the probability of E complement intersection F, okay?\par
+And then what we could do is we could use the product rule\par
+and write the probability of E intersection F\par
+is the probability of E times the probability of F given E.\par
+And again by the product rule,\par
+we can write the probability of E complement intersection F\par
+is the probability of E complement\par
+times the probability of F given E complement.\par
+Again, use the product rule twice, both cases, okay?\par
+So what this tells us that we are interested\par
+in the probability of an event F,\par
+but there's some other event E out there,\par
+and we can calculate the probability of F\par
+by writing the probability that E happens\par
+and then F happens given that E happened,\par
+or that E did not happen and F happened, okay?\par
+So we can write like that.\par
+And sometimes it's easy to calculate\par
+these conditional probabilities\par
+so it's easier to get the total sum, okay?\par
+And we're going to see an example of that right now.\par
+So suppose you have two fair coins,\par
+and you let Hi be the event that coin i is heads.\par
+So H1 is the event that the first coin is heads,\par
+H2 is the event that the second coin is heads, okay?\par
+And we let exists H be the event\par
+that at least one coin is heads, okay?\par
+So we ask what is the probability that exists heads?\par
+Now, of course we have done this so many times\par
+we can do it on our sleep.\par
+We can see that the probability that exists head is really,\par
+this is because we have two fair coins,\par
+this is a uniform sample space,\par
+so we just need to look at how many events,\par
+how many outcomes have heads in them\par
+and how many outcomes are altogether.\par
+The total number of outcomes, because we have two coins,\par
+is four, heads-heads, heads-tails, and so on,\par
+and how many of them are heads is three,\par
+okay, so it's three over four.\par
+And we can see it here.\par
+So, and these are the four outcomes,\par
+heads-heads up to tails-tails,\par
+there's four outcomes,\par
+and we're interested in events that have heads.\par
+Those are three.\par
+So the probability is three over four.\par
+Okay, but suppose we didn't know that.\par
+So we would like to calculate the probability.\par
+What we could do is write this,\par
+the probability of exists heads.\par
+This is the only thing we're interested in\par
+that we're going to use the events H1 and H2.\par
+So it's going to be the probability of H1\par
+that is the probability that H1 happens,\par
+namely, the first one is heads,\par
+and there exists a heads,\par
+plus the probability that H1 did not happen,\par
+the first one is not heads,\par
+and exists heads, okay?\par
+Now, each of those we can write as the probability of H1\par
+times the probability of exists heads given H1\par
+plus the probability that H1 did not happen,\par
+the first one is not heads,\par
+times the probability exists heads\par
+given that H1 did not happen,\par
+given the first one is not heads.\par
+Okay, now, this is easy to see the probability of H1,\par
+the first one is heads, is one half, okay?\par
+And the probability that exists heads\par
+given that the first one is heads is one,\par
+because if the first one is heads,\par
+then we already know that exists heads.\par
+Plus the probability that the first one is not heads.\par
+That is probability one half, the first coin is not heads.\par
+And then given that the first coin is not heads,\par
+the probability that exists heads,\par
+that means that the second coin must be heads,\par
+and that happens roughly one half.\par
+So when we sum them,\par
+we get one half times one plus one half times one half,\par
+which is three quarters,\par
+which agrees with the calculation we had before, okay?\par
+Except now we did it using the total probability law.\par
+We partitioned this event for exists heads into two parts.\par
+One is when the first coin was heads\par
+and then the second one was when\par
+the first coin was not heads,\par
+calculate both, all right?\par
+Now, this could be generalized from, to more conditions.\par
+So if you imagine if you have events E1, E2, up to En,\par
+that partition your sample space,\par
+and now you can write F as the union from i going from,\par
+this should be i going from one up to n.\par
+I apologize.\par
+Not i going from n up to k.\par
+Of Ei intersection F.\par
+And this plus indicates that this union is disjoint.\par
+So let me just say,\par
+so you can write F as the union of E1 intersection F\par
+and E2 intersection F and E3 intersection F,\par
+and because the Eis are partition omega,\par
+that means that they are disjoint,\par
+and these,\par
+this union is going to be a union of disjoint events, okay?\par
+So it's written here as F,\par
+and here is E1, E2, E3 that partition this space,\par
+so we can write F as the union of F intersection E1,\par
+union of F intersection E2 and F intersection E3,\par
+and each of those three regions\par
+are mutually disjoint, okay?\par
+So therefore by the addition rule,\par
+we get that the probability of F is going to be\par
+the summation i going from one up to n.\par
+So here i, the limits are written correctly,\par
+i going from one up to n\par
+of the probability of Ei intersection F.\par
+And by the product rule,\par
+we can write these s the probability of Ei\par
+times the probability of F given Ei, okay?\par
+So let's see an example.\par
+Two dice such that Di would be the outcome of die i.\par
+So D1 is the outcome of the first die.\par
+And let S be D1 plus D2,\par
+be the sum of the outcomes of the two dice, okay?\par
+So let's say we're interested in the probability\par
+that the sum is five, okay?\par
+So we can write that the probability that the sum is five\par
+is the summation of the probability\par
+that the first die is i,\par
+is one, two, all the way up to four,\par
+can't get most four,\par
+times the probability that the sum is five\par
+given the first die is i,\par
+namely, the second die is five minus i, right?\par
+And this is the probability that this,\par
+that the second die is five minus i\par
+given the first one is i,\par
+which is the same as the probability that the sum is five\par
+given that the first one is i, okay?\par
+So this we can calculate easily.\par
+The probability that the first...\par
+So this is the probability the first die is i\par
+and the probability the second die is five minus i\par
+given the first die is i\par
+and the dice are independent of each other,\par
+so this is just the probability\par
+that the second die is five minus i.\par
+And so what is the sum is,\par
+it's going to be four,\par
+and for each one we have the probability\par
+that the first die is i\par
+and the second die is five minus i,\par
+each one is probability one over six,\par
+so it's four over 36,\par
+which is one over nine, okay?\par
+All right, and we'll do a last example.\par
+The iPhone X is just out,\par
+and they checked,\par
+and, you know, some of the iPhones come with a green bar\par
+which I didn't try to, I should've shown,\par
+I didn't show here.\par
+And so they checked and they realized that, well,\par
+they make the iPhone X in three factories,\par
+and they produce 50%, 30%, and 20% of the phones, okay?\par
+And they have defective, some of their phones are defective,\par
+and their defective rates are 4% for the first factory\par
+and 10% for the second factory\par
+and 5% for the third factory, okay?\par
+So all this is shown here.\par
+We have one factory making 50%\par
+and 30%, 20%,\par
+this factory has 4% defective rate,\par
+and this one has 10% and this one has 5%.\par
+And the question is what is the overall fraction\par
+of defective iPhones, okay?\par
+So we can write the probability of defective\par
+as the probability of F1 intersection D\par
+plus the probability of F2 intersection D\par
+plus the probability of F3 intersection D.\par
+All we're using here is the fact that F1, F2, F3,\par
+the union is the whole set of iPhones,\par
+and they are disjoint, okay?\par
+And then we can write each of those,\par
+so probability of F1 intersection D\par
+is the probability of F1\par
+times the probability of D given F1,\par
+and so on.\par
+The probability of F2\par
+times the probability of D given F2,\par
+and likewise here.\par
+And then we can just plug in the numbers.\par
+The probability of F1 is 50%,\par
+and times the probability of defective given F1 is 4%.\par
+And then plus 30% times 10%,\par
+plus 20% times 5%.\par
+And when you add them up,\par
+you get 0.02 plus 0.03 plus 0.01.\par
+That gives you 6%, okay?\par
+And what you can do is if you look here at the right\par
+underneath my picture,\par
+then you can see that what happens is\par
+that the first factory makes 50% of the phones\par
+and 4% of them are defective,\par
+so a total of 2% of the phones are made by this factory\par
+and are defective,\par
+and a total of 3%,\par
+30% times 10% of the phones are made by the second factory\par
+and are defective,\par
+that's 3%,\par
+and a total of 20% are made by this factory,\par
+and one of 20th of them are defective,\par
+so 1% are made by this factory and are defective.\par
+So the total number of defective phones\par
+is two plus three plus one,\par
+which is 6%,\par
+which is what we got here, okay?\par
+So, good?\par
+So now that we have seen how to calculate the probability\par
+that the phone is defective,\par
+I think we have discussed total probability,\par
+and next time we'll be ready to discuss base rule.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+There are 3 bags that each contain 100 marbles. Bag 1 has 60 red and 40 blue. Bag 2 has 75 red and 25 blue. Bag 3 has 45 red and 55 blue. If you choose one of the bags at random and then choose a marble at random, what is the probability that the chosen marble is red?\par
+\par
+\tab\par
+0.60\par
+\par
+\tab\par
+0.2025\par
+\par
+\tab\par
+0.33\par
+\par
+\tab\par
+0.50\par
+}
+ 

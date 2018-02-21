@@ -1,0 +1,831 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 Hello and welcome back.\par
+In the last lectures,\par
+we talked about events,\par
+and now we would like to see what happens\par
+when events get more complex.\par
+So we're going to talk about compound experiments,\par
+what happens when you have repetition,\par
+we'll talk about what happens when you have\par
+and don't have replacement,\par
+and when order matters and does not.\par
+So experiments often consist of several parts.\par
+For example,\par
+if a company evaluates a student for an internship,\par
+they might look at the student's major,\par
+what year they're in,\par
+and what's their GPA.\par
+So all these are random quantities\par
+that depend on which student applies.\par
+And if a company wants to place an ad\par
+on a certain web page,\par
+then they might consider what product they're trying\par
+to advertise,\par
+what's the audience for the product,\par
+and what, how much does it cost.\par
+Now, still we can view this,\par
+these triples, in these cases,\par
+as a single experiment, for example,\par
+and it's just that the outcomes are a little more complex.\par
+They consist of three values.\par
+So, for example,\par
+here for the student,\par
+their major may be computer science,\par
+they may be senior,\par
+and their GPA could be 3.8,\par
+and the product may be a book,\par
+it's intended for teenagers,\par
+and it costs, of course, $9.99.\par
+Now, what we'll see here is that the outcome in these cases\par
+is just a three-tuple,\par
+and could of course be an ordered pair\par
+or a four-tuple and so on.\par
+And therefore the sample space,\par
+the collection of all possible outcomes,\par
+is a Cartesian product.\par
+So you can see that these correspond quite well\par
+to things that we have studied which,\par
+not too long ago.\par
+And what we would like to do is we would like\par
+to combine results that we got\par
+for analyzing individual components\par
+to analyze this larger space that we're talking about now,\par
+the Cartesian product, okay?\par
+And of course we'll start simple.\par
+So the, perhaps the simplest composite experiment\par
+consists of repetition.\par
+So that's when all experiments are of the same type.\par
+For example, you might look at the daily stock prices.\par
+So it's not like you have the major and then year and GPA,\par
+they're each different,\par
+but here's a sequence of numbers,\par
+all of them reflect the same value.\par
+There is, all of them reflect the price of the stock.\par
+Or you might look at temperature.\par
+Again, you have, it's a composite experiment,\par
+consists of several outcomes,\par
+but all of them reflect the same random experiment,\par
+the temperature.\par
+Or what we'll promote, most likely deal with,\par
+are coin flips,\par
+a simpler experiment,\par
+so you could flip several coins or roll several dies\par
+or draw several cards, okay?\par
+And to begin with,\par
+we'll assume that the experiments are independent,\par
+namely, the different components are unrelated.\par
+For, so that means, for example,\par
+that if I flip two coins and the first coin turns up heads,\par
+then the second coin still has 50% chance of being heads\par
+and 50% chance of being tails.\par
+So that's what we will deal with.\par
+And rather than the case where\par
+if the first coin turns up heads\par
+then the second coin is more likely to also be heads.\par
+That's not what we're considering now.\par
+Consider the case where the outcome of the first coin\par
+does not affect the probability of the second coin,\par
+and that's what we call independent experiments.\par
+All right, so let's look at the case of two coins,\par
+perhaps the simplest case.\par
+And we have, again, independent experiments.\par
+So here's one and here's another.\par
+And so the outcomes for coin one could be heads and tails,\par
+and for coin two, they could also be heads and tails.\par
+And what are the probabilities?\par
+Well, coin one turns up heads with probability half\par
+and tails with probability half,\par
+and then coin two, regardless of this outcome,\par
+is also heads with probability half\par
+and tails with probability half.\par
+And what that means is the probability that we get,\par
+for example, heads-heads is half of the time,\par
+this one will come up heads,\par
+and then because of independence,\par
+half of that half of the time,\par
+or namely, a quarter of the time,\par
+this one will come up heads.\par
+So this will have probability of a quarter,\par
+and everything else will also have probability of a quarter.\par
+For example, this one's the probability\par
+that the coin's tails-tails\par
+because the first coin will come up tails half the time,\par
+and half of that time, namely, a quarter of the, all time,\par
+the second one will come up tails, as well.\par
+All right, so a little more concisely,\par
+we can say that the sample space omega\par
+is the collection of heads-heads, heads-tails,\par
+tails-heads, and tails-tails,\par
+because we have two coins,\par
+and we can see that it's indeed the Cartesian power,\par
+it's h-tails squared.\par
+And the size of this space is,\par
+the size of omega is four\par
+because there are four outcomes,\par
+which is two squared, okay?\par
+And if we have one coin,\par
+then we're assuming that it's uniform, equal,\par
+everything is equally likely, half-half.\par
+And so what we saw here is that that implies\par
+that when we have two coins,\par
+it's also going to be uniform,\par
+one quarter, one quarter, one quarter, one quarter,\par
+and that's because every element here\par
+is a product of two numbers,\par
+but these two numbers are the same,\par
+because this is a half and half,\par
+and this is half and this is half,\par
+so everything here is a product of two halves.\par
+And so therefore it's all the same and they're uniform.\par
+And that means that the probability of heads-heads\par
+and heads-tails and so on is one over the sample size,\par
+which is one quarter,\par
+which agrees with what we have seen here.\par
+In other words, we can do it,\par
+we can get to one quarter in two ways.\par
+We can just come multiply those numbers\par
+and we see it's a quarter,\par
+or we can just calculate the sample size,\par
+which is four, in this case,\par
+observe that everything is going to be uniform,\par
+and then it's just going to be one over four.\par
+All right, let's move from two to six.\par
+So we're rolling two dice.\par
+And again, independent experiments,\par
+meaning the outcome of the first dice\par
+is not going to affect the outcome of the second.\par
+So die one can have six possible outcomes,\par
+from one up to six,\par
+and die two, also six possible outcomes from one to six.\par
+And therefore the probability of every pair of outcomes\par
+is going to be one sixth times one sixth,\par
+one sixth here times one sixth here,\par
+which is one over 36 for all 36 outcomes.\par
+And again, we can say that the sample space\par
+is the set of all pairs of faces,\par
+one-one, one-two, up to six-six, okay?\par
+And it's the same as one up to six squared,\par
+and therefore the size of the new sample space\par
+is six squared, which is 36,\par
+so there are 36 possible outcomes.\par
+With, if we, a single die is uniform,\par
+and that's by assumption.\par
+And therefore, that means that two dice\par
+are also going to be uniform,\par
+and that's because every value here is the product\par
+of two numbers that are the same.\par
+And therefore, every outcome has probability of one over 36.\par
+Again, that's just a different way\par
+of calculating these values\par
+based on uniformity.\par
+All right, so now just like we had with a single experiment,\par
+we had the outcomes that we just discussed now,\par
+and then we had events that are a collection of outcomes\par
+or sets of outcomes.\par
+We can have events in compound, composite spaces, as well.\par
+So recall that when you have an event E,\par
+it's just a collection of elements or possible outcomes,\par
+and the probability of the event\par
+is the probability that the X,\par
+the random variable will fall inside this set.\par
+And that's going to be,\par
+because all these elements are disjoint,\par
+it's going to be summation of all elements in the event\par
+of the probability.\par
+And now in the case that the space is uniform,\par
+then the probability of the event\par
+is just the size of the event divided by the size of omega,\par
+and that's because every element is probability\par
+one over the size of omega,\par
+and there are so many of them.\par
+And so in our case, two coins, it's uniform,\par
+and the sample space size is two squared, which is four,\par
+heads-heads, tails-tails, and so on,\par
+four possible outcomes.\par
+So, for example, the probability of the event\par
+that the outcomes are different\par
+is the probability that we get heads-tails or tails-heads.\par
+There are two possible outcomes here,\par
+so the probability is two\par
+divided by the size of the sample space, which is four,\par
+so two over four is one half.\par
+And the probability that we'll see at least one heads\par
+is the probability we'll see heads-tails or tails-heads\par
+or heads-heads.\par
+There are three possible outcomes\par
+divided by the sample size,\par
+we get three over four.\par
+And if we have three coins,\par
+then again, it's uniform.\par
+We have sample space eight.\par
+And we can ask what is the probability\par
+that the outcomes are alternating,\par
+for example, heads-tails-heads or tails-heads-tails.\par
+So we've got two over eight, which is one quarter.\par
+And we can also ask what is the probability\par
+that we see an odd number of heads.\par
+That's the probability of this event or this set.\par
+And there are four elements,\par
+each one is probability one eighth,\par
+so the probability is one half.\par
+Probability that odd number of heads is one half, okay?\par
+Now, I want to move on from coins and dice\par
+to slightly more general experiments.\par
+So there are many sources, possible sources of randomness,\par
+and we have seen coin and dice as we were discussing.\par
+And, but often we get,\par
+what we get is we sample,\par
+or in other words, select some physical objects.\par
+For example, we may have a study of several patients,\par
+and every outcome is,\par
+we get a patient and we test the patient,\par
+so we get some physical people coming.\par
+Or the customers who come to a restaurant,\par
+and we sample them.\par
+Or we get products for quality control,\par
+so we want to check several products.\par
+We select a certain number of them\par
+and we check each one,\par
+so each one is a physical object.\par
+And, or we can have visitors to a web page.\par
+Again, those are people who come and visit our web page.\par
+And if you want to do something a little simpler,\par
+then we can set it to select cards from a deck.\par
+So we have a deck of cards.\par
+That's a collection of physical objects,\par
+and we're going to select some of them.\par
+Or we have balls in an urn\par
+and we're going to pick some of them.\par
+Again, it's a collection of physical objects.\par
+And when we talk about physical objects,\par
+there are two ways of sampling them.\par
+One is with and without replacement,\par
+and that's what we're going to discuss next.\par
+So we're talking about\par
+sequentially selecting physical objects,\par
+and you can do it with or without replacing, as we said.\par
+With replacement means that we replace or reuse\par
+every selected item.\par
+So when we select an item,\par
+we put it back in the collection,\par
+and then we might use it again.\par
+And in that case we can see that this leads\par
+to independent experiments,\par
+because once we put the element in, back in the pile,\par
+then we have the original experiment that we had.\par
+And in particular, outcomes can repeat.\par
+And so this is,\par
+even though we're selecting from objects,\par
+this is like coins and dice\par
+that we get experiments that are independent\par
+and the outcome can repeat.\par
+For example, in a coin, we can get heads and heads\par
+twice or more, okay?\par
+The other case is that we select without replacement,\par
+and that's when we do not replace the selected element.\par
+And then the experiments are dependent,\par
+because at any given point,\par
+we have, we select an element, we don't repeat it,\par
+so now we're performing a different experiment.\par
+And in particular,\par
+the same outcome cannot repeat, okay?\par
+Now, we can see that if the sample,\par
+if the sample space omega is very large,\par
+then these two would be the same\par
+because we will never get a repetition.\par
+The fact we took one element out\par
+will not make any difference.\par
+But in general, there could be a difference,\par
+or there is a difference between these two routines.\par
+Okay, so let's...\par
+I want to say a little bit more about replacement,\par
+what happens when you select with and without replacement\par
+and whether you can repeat the same element twice.\par
+So when you sample or select an element\par
+with replacement or without,\par
+then if you do it with replacement,\par
+then you, every time you perform the experiment,\par
+it's, you repeat it as if from scratch,\par
+because you took an element,\par
+you look at it, you see what it is,\par
+you put it back in the pile,\par
+and you sample again.\par
+When you do it without replacement,\par
+you repeat with a smaller set, okay?\par
+And therefore in the case of selecting with replacement,\par
+the same element can appear,\par
+whereas if you select without replacement,\par
+the same element cannot appear twice,\par
+cannot be selected again.\par
+So let's see an example.\par
+So, for example,\par
+we said that if you select with replacement,\par
+it's like choosing, flipping a coin.\par
+So we can get tails and we can get tails again,\par
+that's okay.\par
+Or if we roll a die,\par
+then we can get six and then six again,\par
+and then it's okay.\par
+But if we draw cards,\par
+then if we select a queen,\par
+we will not be able to select a queen again.\par
+Or if we create a committee,\par
+then select a person,\par
+then it might not be advisable or possible\par
+to select that person again.\par
+So that won't happen.\par
+So we're going to show two experiments,\par
+and just like we did before with,\par
+when we had the coins and the dice,\par
+we're going to do an example with two values\par
+and then an example with six values.\par
+So let's look at balls in a jar.\par
+So imagine that you have a jar with two balls\par
+marked one and two, like that, okay?\par
+So these are two billiard balls.\par
+And we pick one of them.\par
+Let's say we pick this ball marked two.\par
+Now what we're going to do is we're not going to replace it.\par
+We're not going to put it back in the jar.\par
+And we're going to pick a second ball,\par
+which necessarily will be ball number one, okay?\par
+So as a result,\par
+we pick ball number two\par
+and then we pick ball number one.\par
+Okay, now, of course we could pick them\par
+in a different order.\par
+Now, notice that the second selection here\par
+was a selection from a subset,\par
+because we selected just from this element.\par
+We didn't select from the whole thing.\par
+And therefore these two experiments are dependent.\par
+In particular, they cannot,\par
+the results cannot be the same, obviously.\par
+Okay, so this is selection without replacement.\par
+And so what are the probabilities?\par
+So for the first ball, we have two options,\par
+and each of them is probability half, okay?\par
+But now for the second ball,\par
+here are the two balls.\par
+Notice that if we pick the first ball,\par
+then we cannot, if we pick ball number one,\par
+we cannot pick ball number one again.\par
+So this will have zero probability\par
+and necessarily we'll actually pick ball number two, okay?\par
+So that means that picking ball number one here\par
+has zero probability,\par
+and thus picking ball number one and ball number two\par
+has probability half.\par
+It's probability half.\par
+Half the time we're picking ball number one\par
+and then we'll always pick ball number two next, okay?\par
+And then for ball number two has probability half,\par
+and then we necessarily pick ball number one.\par
+And so this has probability half,\par
+and picking ball number two twice has probability zero.\par
+So what we see is that we'll always pick\par
+two different balls,\par
+either one followed by two or two followed by one, okay?\par
+And these are equally likely.\par
+Each of them has probability half.\par
+Whereas picking the same ball twice\par
+has probability zero, okay?\par
+And so our sample space consists of\par
+picking ball one and then two\par
+or ball two and then one,\par
+each of them is equally likely,\par
+so the size of the sample set in this case is two.\par
+Each of them is equally likely, they're uniform,\par
+and therefore the probability of picking one-two\par
+is the same as the probability of picking two-one,\par
+which is one half.\par
+So that's another way of observing this just by uniformity.\par
+So next let's see an example with six possible values\par
+of drawing cards, okay?\par
+So imagine you have six cards.\par
+Here they are.\par
+And you draw one card.\par
+Let's say you pick number five.\par
+And now you do not put it back in the pile.\par
+You keep it like, the pile as it is.\par
+And then you draw another one\par
+without replacing the first one.\par
+For example, maybe you took card number three, okay?\par
+So, and you can see\par
+that this is selection without replacement\par
+because we did not put the card number five back, okay?\par
+So what are the possible outcomes?\par
+The possible outcomes for the sample space,\par
+you could get one-two,\par
+pick card one first, card two first,\par
+up to one-six,\par
+and then two-one, you cannot pick two-two,\par
+but two-six and so on,\par
+and if you list them alphabetically,\par
+the last one you could get is six-five,\par
+because you cannot pick six-six again, twice.\par
+And so what is the size of,\par
+what is the set?\par
+This is the set of all two-permutation\par
+of one up to six, right?\par
+This is two-permutation of one up to six,\par
+namely one-two and so on.\par
+Selecting two different elements from one up to six.\par
+And what is the size of this set?\par
+It's six to the second falling power\par
+or six times five,\par
+because we have six options for the first card\par
+and then five options for the second card,\par
+which is 30.\par
+So we've got 30 possible outcomes.\par
+So next let's look at the probability.\par
+So first let's list the cards.\par
+So the cards can go one up to six for the first one\par
+and one up to six for the second one.\par
+And notice that we cannot get one-one or two-two\par
+or three-three,\par
+so this diagonal is going to be zero.\par
+But if i is not equal to j,\par
+then the probability we get i and then j is one sixth\par
+is the probability of getting the first card,\par
+let's say five,\par
+we have the probability one sixth of getting it.\par
+And once we got it,\par
+we have five cards left,\par
+and we had to choose one of those five values\par
+which were different than this number five,\par
+and each of them had probability one fifth,\par
+so it's one sixth times one fifth,\par
+which is one 30th.\par
+So we get that all the,\par
+all possible values,\par
+namely ij, i and j are different,\par
+have probability one over 30, okay?\par
+And again, we could get this also by uniformity.\par
+We can observe that all possible outcomes,\par
+namely, all off diagonal elements here are equally likely,\par
+because each of them has the same probability.\par
+It happens to be one sixth times one fifth,\par
+but we don't care right now.\par
+We just care that each of them has the same probability\par
+because we have equally likely probability\par
+of selecting any of these\par
+and then equally likely probability\par
+of selecting any of those.\par
+And so then we observe that we have a uniform space here\par
+of size 30,\par
+so the probability is one over 30, okay?\par
+So to summarize,\par
+we considered two experiments here,\par
+and we looked at outcomes with replacement,\par
+experiments with replacements where the outcomes can repeat,\par
+and we looked at something without replacement\par
+where the outcomes cannot repeat.\par
+So if the original sample space we call omega one,\par
+then when we select with replacement,\par
+then the possible outcomes of the set x,y\par
+such that x and y are in\par
+this original sample space omega one,\par
+and this is the same as omega one squared,\par
+the Cartesian product of omega one with itself.\par
+Whereas if we looked at selection without replacement,\par
+then of the set of all possible outcomes\par
+for the set of all x,y\par
+that x and y are in omega one original sample space\par
+and they are different,\par
+and that's the same as the collection\par
+of all two-permutations of omega one.\par
+That's this collection of all x,ys\par
+such that x is not equal to y.\par
+Now, if we consider the size of the sample space,\par
+then for the original space, it's omega one.\par
+For example, if we had the cards, it was six.\par
+And if we select with replacement,\par
+then the size is omega one squared, okay?\par
+So, for example, if we have a die,\par
+we can select with replacement,\par
+there are 36 possible outcomes.\par
+Or if we select without replacement,\par
+it's this cardinality of the size of this sample space,\par
+which is the size of omega one\par
+raised to the second falling power,\par
+which is the same as the size of omega one\par
+times the size of omega one minus one, okay?\par
+Now, this is true in general.\par
+Now, if the sample space originally was uniform,\par
+like the ones we have discussed,\par
+then there's further simplification.\par
+So, first of all,\par
+we get that the sample space with replacement is uniform.\par
+For example, when you roll a die, two dice,\par
+then all possible combinations of outcomes\par
+are equally likely.\par
+And likewise the collection,\par
+for the collection of all possible outcomes\par
+without replacement,\par
+these are all possible elements\par
+in this space where x is not equal to y,\par
+they're all uniform,\par
+they're all equally likely,\par
+and therefore the probability of any element,\par
+and when you select with replacement,\par
+is just going to be,\par
+so first I found the original space,\par
+it's one over the size\par
+of whatever the original cardinality was.\par
+In the case of a die, it's one over six.\par
+In the case of selection with replacement,\par
+it's one over this cardinality squared.\par
+For example, for a die,\par
+it's one over six squared or one over 36.\par
+That's the probability of every pair.\par
+And when we select without replacement,\par
+for example, for the cards that we just talked about,\par
+it's going to be, as you can see here on the right,\par
+it's going to be one over the cardinality\par
+of the original space\par
+times that cardinality minus one.\par
+So, for example,\par
+if we look at the cards,\par
+it's going to be one over six times five\par
+or one over 30.\par
+So for the coin, it's one over 36.\par
+For the cards, it's one over six times five,\par
+or one over 30, okay?\par
+Now, so now that we talked about the selection\par
+with and without replacement,\par
+I wanna talk about another possible difference is,\par
+and that is that order may or may not matter.\par
+So sometimes order matters.\par
+For example, if you buy a stock\par
+and the value on one day is 10\par
+and on the other day is 50,\par
+it's very different than if the day,\par
+the value when you bought it was 50\par
+and the next day is 10.\par
+So the order here matters.\par
+In the other case,\par
+some other times the order may not matter.\par
+For example, if you have elections\par
+and the first person votes Democrat,\par
+the second one votes Republican,\par
+it doesn't matter,\par
+because you're just going to see in the end\par
+how many people voted for which party.\par
+So, or if you go and buy some stuff at the grocery store,\par
+then typically it doesn't matter\par
+what order you're going to put,\par
+get the things and put them in\par
+so long as you don't put the strawberries\par
+at the very bottom.\par
+So you can put them in any order you want.\par
+You just care what are the ingredients that you have, okay?\par
+So when order does not matter,\par
+then instead of looking...\par
+So what we have looked at until now is when order matters,\par
+because we looked at the tuples.\par
+Like, we looked the first value and the second value.\par
+When the order does not matter,\par
+the tuple of outcomes that we have looked at until now\par
+becomes just the set of outcomes.\par
+For example, if the outcome of the two dice\par
+were two and five or five-two,\par
+if the order doesn't matter,\par
+both of them will translate into the set \{2,5\},\par
+the set that we got two and five.\par
+And this corresponds to the event that we got\par
+either two-five,\par
+either got two then five or five then two.\par
+So every possible outcome\par
+is now a set of two possible outcomes\par
+and corresponds to an event,\par
+in this case, of two different original outcomes.\par
+And if the original outcome is four-four,\par
+it will correspond to the set \{4,4\},\par
+which you can identify if you want with the set \{4\}.\par
+And then, again,\par
+that's the event that we got just this one element, okay?\par
+So what we want to do is we want to calculate\par
+the probability when the order doesn't matter,\par
+and we're going to do it using example\par
+where we consider what happens when you select\par
+values one up to six twice,\par
+and we'll show it when the order matters\par
+and when it doesn't matter.\par
+Okay, so we'll do it with,\par
+and we'll do it with and without replacement, okay?\par
+So with replacement,\par
+you have two cards,\par
+and, one up to six,\par
+and you select them with replacement.\par
+So that's the same as you have two dice,\par
+because you replace the card back.\par
+It's the same as you have two dice and you roll them.\par
+We've got the first card could be any number\par
+between one up to six,\par
+and then the second card could also be any number\par
+between one up to six,\par
+and as we have seen, the prob-,\par
+there are 36 possible outcomes,\par
+and each of them is probability one over 36, okay?\par
+So then the probability that we have one-two,\par
+the set \{1,2\},\par
+we don't care about the order,\par
+it's the probability that we get either one-two or two-one,\par
+first one then two or first two then one.\par
+And these two are disjoint events,\par
+so one-two is a different sequence than two-one.\par
+So the probability we'll get this one or that one\par
+is the sum of the two probabilities,\par
+which is two over 36, okay?\par
+And what is the probability that we'll get one-one?\par
+The probability we'll get one-one\par
+is just the probability that the set \{1,1\}\par
+is exactly the same as saying that we got one the first time\par
+and one in the second time.\par
+It's the probability of this event,\par
+which is one over 36, okay?\par
+So in other words,\par
+the probability that we get\par
+an outcome of two different values\par
+when we select two cards from one to six with replacement\par
+or we roll two dice\par
+is just going to be two over 36,\par
+and the probability that we'll get one-one, for example,\par
+an outcome where the two values are the same,\par
+is one over 36, okay?\par
+And just as a sanity check,\par
+we want to see that the probabilities sum to one.\par
+So we have six choose two possible outcomes\par
+with two different values,\par
+and each one is probability two over 36,\par
+and then we have plus six of six choose one\par
+possible outcomes where the values are the same,\par
+and each one's probability one over 36.\par
+So the probability that we get two different values\par
+six choose two is six times five over two,\par
+which is,\par
+and the six will cancel here with six\par
+and two will cancel with two,\par
+so we get five over six here.\par
+And here we get six over 36,\par
+which is one over six,\par
+and they sum to one.\par
+So that's okay.\par
+So just remember that when we select with replacement\par
+from six values\par
+and they're equally likely and uniform,\par
+then the probability of getting an outcome\par
+with two different values,\par
+for example, one-two,\par
+to specifically say one-two or two-three,\par
+is two over 36.\par
+The probability of getting a specific outcome\par
+with two values that are the same is just half that,\par
+because you don't have the option of choosing\par
+which one came first and which one came second.\par
+They have, the same outcome has to turn up on both cases.\par
+All right.\par
+And now let's see what happens without replacement.\par
+So imagine that you have two cards,\par
+again, from one to six,\par
+but now we select them without replacement.\par
+So as we saw,\par
+if we looked at the probability of selecting, say,\par
+card two and then card three,\par
+then for every i not equal to j,\par
+the probability we'll select i and then j is one sixth.\par
+The probability of selecting i and then, one fifth,\par
+the probability of selecting j,\par
+because j is not equal to i,\par
+so we have five options,\par
+is, so it's one over 30th,\par
+and that's listed here.\par
+So for the probability of picking\par
+the same number twice is zero,\par
+but the probability of picking two and then one is one 30th.\par
+The probability of picking one and then two\par
+is also one over 30.\par
+And so this is what we,\par
+so therefore the probability that we get the set \{1,2\},\par
+if the order doesn't matter,\par
+the probability we got one and two\par
+is the probability we get one-two or two-one,\par
+which is, 'cuz they are disjoint,\par
+is the probability of one-two\par
+plus the probability of two-one,\par
+which is two over 30, okay?\par
+Now, the probability we get one-one is going to be zero\par
+because we cannot get the same value twice.\par
+So now if you want to check that,\par
+we need to see that these probabilities sum to one,\par
+then observe that we have,\par
+so we can ignore the pairs with the same probability,\par
+but now let's look at pairs with,\par
+pairs with same value.\par
+Let's look at pairs with different values,\par
+for example, one-two.\par
+The number of pairs of values is gonna be six choose two,\par
+and then each one has a probability, as we said,\par
+two over 30th, two over 30.\par
+But six choose two is just six times five over two,\par
+and that would cancel and give us one, okay?\par
+So there's an alternative view\par
+when you select elements without replacement.\par
+So what we have said now is that you select two cards\par
+and we do it sequentially without replacement,\par
+and then the probability that you get one-two,\par
+that you see one-two when the order does not matter\par
+is the probability that you saw one and then two\par
+or two followed by one,\par
+and that was going to be equal to one 30th.\par
+One, two over 30.\par
+But alternatively,\par
+what you could say is that you select both cards\par
+instantaneous, simultaneously.\par
+Because you're selecting two cards,\par
+you don't care about the order,\par
+so you could just imagine that you select both of them\par
+at the same time.\par
+And so now the sample space consists of one,\par
+collection of all sets of size two,\par
+two-element sets.\par
+So it's \{1,2\}, \{1,3\}, up to \{5,6\},\par
+and there are six choose two possible pairs, right?\par
+Choosing two elements out of the set one up to six.\par
+And so the size of the set is six choose two, right?\par
+'Cuz this is the set consisting of all two elements,\par
+two-element subsets of one up to six.\par
+The number is, of such subsets is six choose two,\par
+and six choose two is, as we know, is 30,\par
+six times five over two.\par
+Now, notice that this is uniform\par
+because we picked just two elements, okay?\par
+Two cards.\par
+And so it's uniform,\par
+and therefore the probability that we get\par
+any particular pair of two different values,\par
+say, \{1,2\},\par
+is just one over 15, okay?\par
+So, because the size here is six times five divided by two,\par
+which is 30 divided by two, which is 15,\par
+and the probability of any given value is one over 15,\par
+which agrees with the calculation that we did before.\par
+So this is just maybe a little more direct way of doing it\par
+instead of saying we pick the elements sequentially\par
+and then we multiply by the number of sequences\par
+that would give us the outcome we want.\par
+We said since we don't care about the order,\par
+then we can just look at how many different subsets\par
+of size two there are\par
+and pick just the subset of size two\par
+out of 15 possible subsets.\par
+We picked one,\par
+so the probability is going to be one over 15.\par
+And this we can use when we select more than just two cards.\par
+So, for example, in poker,\par
+a deck consists of 52 cards,\par
+and your hand consists of five cards from the deck,\par
+and the card order does not matter.\par
+So, for example,\par
+so in this case, omega,\par
+the sample space consists of all possible hands\par
+of size five,\par
+and the size of omega,\par
+the number of different hands is 52 choose five,\par
+because we have 52 cards,\par
+and we have 52 choose five different hands.\par
+And this is 52 factorial\par
+divided by five factorial 47 factorial,\par
+which is this number, 52 down to 48\par
+divided by five times one.\par
+There's a lot of cancellations going on.\par
+For example, five and two, times two is 10,\par
+which we can cancel with the 50,\par
+so cancel the five and the 10,\par
+and likewise we can have then four times three times two\par
+which is 24, cancel 48, two.\par
+And we do that, we get roughly 2.6 million, okay?\par
+And that means,\par
+and also notice that this space is uniform.\par
+Every hand is equally likely.\par
+And so the probability of any given hand\par
+is one over 2.6 million, okay?\par
+So, and we'll talk a lot more about it\par
+in the next lecture, okay?\par
+So to summarize,\par
+we talked about compound experiments,\par
+and then we looked at a specific type\par
+of compound experiments\par
+where we repeat the experiment more than once.\par
+We talked about selection with and without replacement,\par
+and we talked about the probabilities when the order matters\par
+and when it did not.\par
+And what we're going to do next time,\par
+we're going to look at some games of chance.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+Discussion\par
+}
+ 
