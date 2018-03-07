@@ -1,0 +1,499 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset161 Calibri;}{\f2\fnil\fcharset1 Cambria Math;}}
+{\*\generator Riched20 10.0.16299}{\*\mmathPr\mmathFont2\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello, and welcome back.\par
+So, we have talked about the expectation\par
+of a random variable\par
+and what's the average of a random variable,\par
+and now we want to talk about what's the difference\par
+in a random variable, call it variance.\par
+So, we're talking in general about distribution properties\par
+and recall that these are deterministic functions\par
+of the distribution, they are not random,\par
+but given distribution, it's going to be some fixed number\par
+and until now, we talked about long-term average,\par
+what happens when you take many samples,\par
+what's going to be the average,\par
+and we call it the expectation,\par
+expected value of X or \f1\lang1032\'ec x.\par
+And for example, for a die,\par
+the expected value of the mean is 3.5.\par
+And what we want to talk now is about consistency\par
+or how the random variable is not what the average,\par
+but how the random variable is going to differ\par
+from the average, or differ from the mean.\par
+So to illustrate what we mean and why it's important,\par
+let's consider a company, or two companies,\par
+each of them has 1000 employees\par
+and both have the same mean salary, which is $100K.\par
+So we have two companies, each of the them\par
+with the same number of employees, 1000,\par
+and each of them with the same average salary.\par
+But, the two companies are different\par
+in the sense that in company one, the first company,\par
+every employee makes exactly $100K.\par
+So this is maybe the image imagined,\par
+the number of coins that each one holds is the same.\par
+It's not exactly, but suppose it is.\par
+So, notice that in this company, we have 1000 employees\par
+and each one gets a salary of $100K\par
+so the total salary, it is $100 million,\par
+100K times another 1000, that's the total salary\par
+that the company pays.\par
+Now, in company two, every employee makes one dollar\par
+but the CEO makes\par
+$99,999,0001,\par
+and when you sum them up,\par
+you'll see that this is exactly 100,000,000\par
+minus 999 that each of the other 999 employee makes.\par
+So the total amount each company pays\par
+for salaries is the same,\par
+and average therefore is also the same,\par
+it's just that the distribution is a little different.\par
+So, maybe this one looks more like this.\par
+You've got one person that makes a lot,\par
+and everyone else makes very little.\par
+So, which of those two companies do you want to join?\par
+Well, maybe it depends on which position\par
+you're going to be hired for.\par
+But whatever the answer is, you observe\par
+that the two companies have the same mean,\par
+the same expected value, but very different distributions\par
+and that'll make a very big difference for you\par
+if you join one, you get $100K, or you get $1.\par
+So there's a big difference.\par
+So the mean is not everything, we also need\par
+to look at the variation from the mean,\par
+and that's what we're doing in this lecture.\par
+So we want to look at the variation\par
+or difference from the mean,\par
+so X is a random variable with mean \'ec,\par
+and we ask how much does X differ from \'ec on average.\par
+There are different ways\par
+in which you could formulate this question.\par
+Here is one candidate.\par
+Let's look at X minus its mean, X is a random variable,\par
+'cause the mean is a constant, X is random,\par
+so X minus \'ec is some random value,\par
+and let's look at X the absolute value of this difference.\par
+And let's look at this expectation.\par
+So this actually has a name,\par
+it's called mean absolute difference.\par
+But, even though it's simple to describe, and it's natural,\par
+it's not commonly used and the reason is\par
+because the absolute value function is hard to analyze.\par
+So, here is X and here is the absolute value of X,\par
+and we're looking at something that has a sharp edge\par
+and you can not take derivatives at this point,\par
+so it's not so easy to analyze.\par
+So instead, what people look at is the expected value\par
+not of the absolute difference between X and \'ec\par
+but X minus \'ec squared,\par
+and now x minus \'ec squared is a function\par
+that looks a lot more smooth and it's easier to analyze.\par
+So that's what we'll be looking at.\par
+So, to see how X differs from the mean,\par
+we look at the average or the expectation\par
+of X minus the mean squared, and at some point\par
+we'll take the square root of that equation.\par
+So it's called a variance.\par
+Again, the variance is the expected squared difference\par
+between X and its mean and here is the definition,\par
+the variance of X, the expected value\par
+of X minus the mean squared.\par
+And so, just write it here.\par
+It's the expected value of X minus \'ec squared,\par
+and notice that we eliminated one bracket\par
+just to make it look a little nicer.\par
+So, this is an average of squares,\par
+so if you want to bring it back to linear scale,\par
+we take the square root of this,\par
+the standard deviation is the squared root of the variance,\par
+and we'll always take the positive root of the variance.\par
+So, notice that both the variance\par
+and the standard deviation are constants,\par
+because this is just an expectation of something,\par
+so it's a constant, it's not random,\par
+it's not something that every time you run the experiment\par
+you'll get a different value.\par
+It's a property of the distribution.\par
+And so is the standard deviation.\par
+They're both properties of the distribution.\par
+So let's look at a couple of examples.\par
+This may be one of the simplest.\par
+So, X takes two values, minus a and a,\par
+each with property half.\par
+So here is X, it's minus a or a,\par
+each with property a half, .5.\par
+So then, what is the mean?\par
+The mean, by symmetry, is zero,\par
+so the mean is right here, at zero.\par
+And now we need to look at X minus a.\par
+So X minus a, when X is minus a,\par
+X minus \'ec when X is minus a,\par
+x minus \'ec, \'ec is zero, is -a.\par
+And when X is a, x minus zero is a.\par
+And in both cases,\par
+we see that x minus \'ec squared is a squared.\par
+And you can see here, if you look, this is the mean zero,\par
+so it doesn't matter if you're at minus a or plus a,\par
+the absolute value of the difference is a,\par
+and so the square of the difference is a squared.\par
+So what is the variance?\par
+The variance is going to be just the expected value\par
+of this quantity, so probably half of this a squared,\par
+probably half of this a squared,\par
+and therefore it's a squared.\par
+And this can be explained easily\par
+because X squared is always a squared,\par
+and therefore when we look at X minus \'ec squared,\par
+and \'ec is zero, so this is the same as X squared,\par
+so it's always a squared, and the average is also a squared.\par
+And therefore, the standard deviation is a.\par
+So, we see that for this example,\par
+the variance is a squared\par
+because when you take x minus the mean and you square it,\par
+it's always going to be a squared,\par
+so the variance is a squared,\par
+and the standard deviation is the square of that, maybe.\par
+And this is the average distance from the mean.\par
+Now, let's look at a fair die.\par
+So here, it takes six values.\par
+Each, a probability one sixth.\par
+We know that the mean is 3.5.\par
+And so the variance is the expected value of X\par
+minus the mean, or X minus 3.5.\par
+So, X takes six values from one to six,\par
+each probability one sixth,\par
+and then when we subtract 3.5,\par
+one minus 3.5 is minus 2.5,\par
+two minus 3.5 is minus 1.5,\par
+and so on, and you'll see that there's a symmetry.\par
+For six, you'll get six minus 3.5 is 2.5.\par
+You can see the symmetry here.\par
+And six minus the mean is going to be the same value\par
+as one minus the mean, but with negative sign.\par
+And so when we square the values,\par
+then we get six here, we get 2.5 squared,\par
+which is 6.25, and we get that also from the value six.\par
+And from two, we get minus 1.5 squared, or 2.25,\par
+we get the same value from five, and so on.\par
+From three and from four, we'll get also the same value.\par
+So, when we calculate\par
+the expected value factor minus two squared,\par
+we get twice, we get 6.25,\par
+and each happens with probability 1/6.\par
+So it gets two times 6.25 divided by six,\par
+and then we get one-sixth times 2.25, that's this one,\par
+one-sixth times 2.25 and that happens twice.\par
+And the same, 0.25 happens twice,\par
+each time multiplied by one-sixth.\par
+And when you add those values,\par
+you see six plus two is eight,\par
+and then you get another .75,\par
+so it's 8.75 divided by three which is roughly 2.92.\par
+And the standard deviation is square root\par
+of 2.92 which is roughly 1.71.\par
+And this makes sense because\par
+if you try to see how much are different from the mean,\par
+then we differ from the mean by either .5 or 1.5 or 3.5.\par
+So the average is this value,\par
+we differ on average by 1.5.\par
+And now we're looking at an expected value\par
+of X square, the different square,\par
+which will tend to give larger values more weight\par
+so it will make the different square a little larger,\par
+and we take the square root,\par
+we'll get number which is slightly bigger than 1.5.\par
+Next, let's look at the variance of the Bernoulli p\par
+that we discussed in the previous lecture.\par
+So, here is the Bernoulli p for p which is 0.75,\par
+so the probability of 1 is 0.75\par
+and the probability of 0 is 0.25.\par
+So, the expectation as we saw is p, which is 0.75.\par
+So this is the expectation, 0.75.\par
+And now we can see that because the expectation is p,\par
+one minus p is going to give us q, one minus p,\par
+and zero minus p is minus p, but the distance is p.\par
+And therefore when we want to calculate the variance,\par
+then we see zero has principal probability q,\par
+or one minus p, and one has probability p.\par
+And X minus \'ec here is zero minus p,\par
+which is negative p, and when X is one,\par
+the difference from \'ec is one minus p, which is q.\par
+And then when we square minus p, we get p square.\par
+And when we square q, we get q square.\par
+So, let's see the variance of Bernoulli p\par
+which we discussed last time.\par
+So, here is the distribution, Bernoulli p is one\par
+with probability p,\par
+and here we're drawing it for p which is at 0.75\par
+and here it is 0 with probability one minus p,\par
+which we call q, which in this case is 0.25.\par
+And as you recall, the mean is p,\par
+so in this case the mean is going to be 0.75\par
+and when we look at the difference,\par
+the difference between one minus a \'ec\par
+is going to be one minus p which is q\par
+and the difference here is going to be just p.\par
+So when we calculate the expected value of X minus \'ec square,\par
+then X is zero of probability q, one of probability p.\par
+And therefore, X minus \'ec is going to be zero minus p\par
+which is minus p, which won't matter\par
+because we're going to take the square in a second.\par
+And here it's going to be p,\par
+so one of probability p,\par
+and then X minus \'ec is one minus p, which is q.\par
+And x minus \'ec squared is q square.\par
+And what is the variance?\par
+The variance is going to be\par
+probability q is going to be p square,\par
+so it's q times p squared\par
+and probability p, it's q squared.\par
+So, plus p times q square,\par
+and we can take pq out\par
+and then we have plus p times p plus q which is pq.\par
+So that's going to be the variance of the Bernoulli p\par
+and the standard deviation is going to be\par
+the square root of that, namely square root of pq.\par
+And if you have three coins\par
+and we look at the number of heads,\par
+then here are the possible outcomes and the probabilities\par
+and here's the graph of p of X\par
+and you recall that the mean is\par
+just the average of those values\par
+which is going to be 1.5, like this.\par
+And so we look at X minus \'ec, so here if X is zero,\par
+X minus \'ec is minus .5, 1.5,\par
+if X is one, X minus \'ec is minus 0.5,\par
+if X is two, two minus 1.5, and so on.\par
+And the squares are 2.25, and so on.\par
+And the variance is going to be,\par
+well, we have each value here put in twice,\par
+so we have one-eighth times 2.25 plus three-eighths\par
+times 0.25, and then we double it\par
+because we need to calculate it for these two as well.\par
+And that's going to be one quarter times 2.25 plus 0.25\par
+which is three quarters,\par
+and the standard deviation is square root of three over two.\par
+And shortly we are going to see\par
+a simpler way to derive this.\par
+And so we want to talk about a different formula\par
+for the variance, so recall that the expected value\par
+for X is \'ec, and the variance of X\par
+is the expected value of X minus \'ec squared,\par
+which we can write as the expected value\par
+of X squared minus two \'ec X plus \'ec squared,\par
+just opening this up.\par
+And then by linearity of expectations,\par
+it's going to be expected value of X squared\par
+minus the expected value of 2 \'ec X,\par
+plus the expected value from \'ec squared.\par
+But now, \'ec remember is a constant\par
+and the expected value of a constant times X\par
+is this constant times the expected value of X\par
+so this is going to be 2 and \'ec factor, both constants.\par
+So this is going to be the expected value of X squared\par
+minus 2 \'ec times the expected value of X\par
+plus the expected value of \'ec squared,\par
+\'ec is a constant, the expected value is just that constant\par
+plus \'ec squared,\par
+and the expected value for X is \'ec,\par
+so this is going to be equal\par
+to the expected value of X square minus 2 \'ec squared,\par
+plus \'ec squared which is the expected value\par
+of X squared minus \'ec squared.\par
+So we see that another formula for the variance\par
+is the expected value of X squared minus \'ec squared.\par
+So, sometimes it's easier to calculate the variance this way\par
+because \'ec is sometimes easy,\par
+and the expected value of X squared is sometimes easy\par
+as we're going to see.\par
+So, we can also write it as the variance effects\par
+is the expected value of X squared minus the expected value\par
+of X, that quantity squared.\par
+So, let's look at Bernoulli p again.\par
+We'll see that in this case,\par
+it's easier to use this formula.\par
+So, X is distributed Bernoulli p,\par
+so remember that the expected value of X is p\par
+and the variance we saw was pq,\par
+and we want to rederive using this formula\par
+that the variance is the expected value of X squared\par
+minus the expected value of X squared.\par
+So, what is the expected value of X squared?\par
+It's with probability one minus p, X is zero,\par
+so it's one minus p times zero squared.\par
+Probability p, X is one, so X squared is one squared.\par
+So it's just going to be p.\par
+And we can see this even without this calculation,\par
+because you notice that with X as Bernoulli,\par
+and X is zero one, and zero squared is zero\par
+and one squared is one,\par
+so in other words, X squared is always X.\par
+And that means that the expected value of X squared\par
+because X squared is X is the same\par
+as the expected value of X\par
+which we calculated before was p,\par
+so that's what we saw here.\par
+So now, what is the variance?\par
+It's the expected value of X squared\par
+minus the expected value of X squared,\par
+expected value of X squared which is calculated to be p,\par
+and we subtract the expected value of X squared,\par
+so minus p squared, so it's p times one minus p\par
+which is pq, as we saw before.\par
+And so, a few observation about the variance.\par
+The variance of X is the expected value\par
+of X minus \'ec squared, that was our definition.\par
+And therefore the variance,\par
+'cause it's an expectation of a square root is non-negative,\par
+and it's always, at most, the maximum possible value\par
+of X minus \'ec squared, and therefore,\par
+because the standard deviation is the square root of that,\par
+then the standard deviation is at least zero\par
+and at most the maximum of X minus \'ec,\par
+the absolute value of X minus \'ec.\par
+And we get the quality here\par
+if X is a constant.\par
+So if X is a constant, then the variance is going to be zero\par
+and the standard deviation is going to be zero,\par
+and we get equality on the right side\par
+if X is a a constant,\par
+in which case both of them are going to be zero,\par
+or X takes two values with equal probability\par
+as the first example we saw.\par
+If it's minus a or plus a, each probability half,\par
+and then the variance is going to be\par
+the square of the distance between X and the mean\par
+and the standard deviation is just going to be\par
+the absolute distance between the X and the mean.\par
+And we also saw that we can express the variance\par
+as the expected value of X squared minus \'ec squared.\par
+And that tells us that the variance\par
+is always less than or equal to\par
+the expected value of X squared.\par
+We want to see some properties of variance.\par
+So, one sees how simple modifications affect\par
+the variance and the standard deviation.\par
+So first, addition or translation,\par
+so if instead of X we look at X plus b,\par
+then the variable X plus b,\par
+or instead of X we look at the scaling, or multiplication,\par
+X times or a times X.\par
+And combine these two, addition and multiplication,\par
+call them affine transformation,\par
+we want to see how the variance changes X a plus b.\par
+So let's start with addition first.\par
+So X is a random variable and here it is.\par
+And now, we add a constant, for example, two.\par
+And then X is going to move from here to here.\par
+Now we see we know that the standard deviation\par
+moved by the same amount.\par
+I'm sorry, the mean would move by the same amount.\par
+So \'ec of X plus b is going to be \'ec of X plus b.\par
+And now we can see that the distances\par
+from the mean stayed the same,\par
+and therefore the distances of this value\par
+from the mean is the same as here,\par
+so the expected value of the distances\par
+from the mean squared would also stay the same\par
+so we anticipate that the variance would not change.\par
+Indeed, the variance of X plus b\par
+is the expected value of X plus b\par
+minus the mean of X plus b, the whole thing squared.\par
+But the mean of X plus b, we can write\par
+just the mean of X plus b, so we subtract.\par
+And these two cancel.\par
+So we get its expected value of X minus its mean squared,\par
+and in other words, it's the same as the variance of X.\par
+So, if we add a constant, the variance does not change\par
+because it's just the expected distance\par
+from the mean squared, and that will stay the same.\par
+So for example, if we look at translated Bernoulli p,\par
+so here is is Bernoulli p, its translation,\par
+and the variance is p times one minus p,\par
+if we take Y to be X plus one, then it's the zero and one,\par
+we just moved everything by one,\par
+so as shown here, one and two have probability p\par
+and one minus p, and the mean is one plus p, which is 1.75\par
+and the differences are going to stay the same.\par
+So the variance is going to be the expected value of Y\par
+minus \'ecy, which is going to be probability of one\par
+minus p, it's going to be one minus one minus p squared\par
+and probability two,\par
+it's going to be two minus one minus p squared,\par
+and that's going to be one minus p times p squared here.\par
+And then plus p times one minus p squared,\par
+which is p times one minus p, right.\par
+You have p times one minus p times p plus one minus p,\par
+which is p times one minus p,\par
+which is the original variance.\par
+And we can see it without all of this,\par
+we could have just seen it here,\par
+because the distances from the mean stay the same\par
+with the same probability,\par
+so the variance was going to stay the same.\par
+Now, how 'bout scaling?\par
+If we have this random variable here\par
+and we multiply it by a constant,\par
+here we multiply it by 1.5,\par
+so we'll look at the variance of aX,\par
+which is the expected value of a X minus \'ec a x,\par
+the whole thing squared.\par
+So, the mean \'ecax is going to be\par
+1.5 times the original mean, as we saw.\par
+So it's going to be a times the \'ec mean of X,\par
+and now what we see is that\par
+all the distances will get scaled by a factor\par
+in this case, by 1.5.\par
+So what we have now is the expected value\par
+of aX minus a \'ec x.\par
+And we see that all the distances are scaled\par
+by a factor of a, and since we square it,\par
+then we have the expected value of a squared\par
+times X minus \'ec X squared,\par
+which is a squared times the expected value\par
+of X minus its mean,\par
+which is a squared times the variance.\par
+So again, all the distances are squared by a factor of a,\par
+and since we're looking at the distances squared\par
+and the variance will increase by a factor of a squared.\par
+So, it's what we said.\par
+The differences from mean grew by a squared.\par
+And so here, instead of distance .5 for example,\par
+the distances were 0.75.\par
+And therefore, the standard deviation of X\par
+is going to be the square root of the variance\par
+which is a times the standard deviation of X.\par
+So the standard deviation will grow by a factor of a.\par
+That's because the average distance\par
+from the mean grew by a factor of a.\par
+And if we have an affine transformation,\par
+what is the variance of aX plus b?\par
+It's because adding a constant does not change the variance,\par
+so it's the variance of aX.\par
+Multiplying by a changes the variance\par
+by a factor of a squared,\par
+so it's a squared times the variance of X.\par
+And the standard deviation of a X plus b\par
+is therefore the absolute value of a\par
+times the standard deviation of X.\par
+Summarizing this lecture, we discussed the variance\par
+of a random variable, and next time,\par
+we're going to talk about two variables.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Which of the following is greater (\f2\u8805?\f0 ) for a random variable X?\par
+\par
+\tab\par
+E(X^2)\par
+\par
+\tab\par
+(EX)^2\par
+\par
+\tab\par
+Depend on X\lang9\par
+}
+ 

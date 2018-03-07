@@ -1,0 +1,307 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset161 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello again everyone.\par
+Today we're going to talk about covariance,\par
+and the reason we're interested in covariance\par
+is because we ended the last presentation asking\par
+whether expectation multiply.\par
+So the expected value of X times Y is the summation\par
+of all possible values of X and Y of the product\par
+times the probability and we wanted to know\par
+whether the expected value of XY is equal\par
+to the expected value of X times the expected value of Y.\par
+So let's look at a simple example.\par
+Let X be Y, so we're looking at two random variables\par
+that are always the same, X and Y,\par
+and to take the value minus one probability,\par
+half, and one with probability half.\par
+So here is the joint distribution table.\par
+X and Y takes the value minus one one\par
+and probability half, both of them are minus one,\par
+probability half, both of them are one,\par
+and if probability is zero they're different,\par
+so they're always the same, okay?\par
+Now, notice that if we drew the marginals\par
+then we would see that the X is distributed uniformly.\par
+It's minus one probability half.\par
+It's plus one probability half,\par
+and therefore its expectation is zero,\par
+and Y is the same as X.\par
+So again, it has the same distribution,\par
+probability half it's minus one,\par
+probability half, which is the sum here, it's plus one.\par
+So again, its expectation is also zero,\par
+and therefore the expected value of X times\par
+the expected value of Y is zero times zero which is zero.\par
+So, this right hand side is zero.\par
+Now let's consider the left hand side.\par
+What is the expected value of X times Y?\par
+So the expected value of X times Y,\par
+because Y equals X, is the same\par
+as the expected value of X square.\par
+But X square, because X is a plus minus one\par
+random variable X square is always one.\par
+So we're looking at the expected value of one which is one.\par
+Okay, so that shows us the expected that for,\par
+at least for this random pair,\par
+the expected value of XY is not equal\par
+to the expected value of X times the expected value of Y.\par
+So in other words expectations don't always multiply,\par
+at least in this case they do not, okay?\par
+So, it's very natural to ask whether they satisfy\par
+some other relation.\par
+They don't multiply, but maybe there's another relation\par
+that they satisfy.\par
+So unfortunately the answer is no.\par
+We're going to see the expected value of the products\par
+could be anything.\par
+So specifically if you give me any alpha, beta, and gamma,\par
+any positive, negative, large, small,\par
+you can find X and Y that have the following expectations.\par
+The expected value of X will be alpha.\par
+The expected value of Y will be beta,\par
+and the expected value of XY is going to be gamma.\par
+To see that let's start with the same random variable\par
+that we considered before, except now we call them\par
+X prime and Y prime because we're going to modify them\par
+to get the X and Y that we want.\par
+So X prime and Y prime are equal\par
+and they're going to be minus one with probability half\par
+and plus one with the probability half,\par
+and that means that the expected value of X prime\par
+is equal to the expected value of Y prime\par
+which by symmetry here is zero,\par
+and the expected value of X prime Y prime\par
+is the same as the expected value of X prime squared,\par
+'cause X prime is equal to Y prime.\par
+But X prime as we said earlier is a plus minus one\par
+random variable, so X prime square is always one.\par
+So we have the expectation of one which is one, okay?\par
+Now let's construct the random\par
+variable X and Y that we want.\par
+So we'll let X be gamma minus alpha beta times X prime\par
+plus alpha, and we let Y be Y prime plus beta.\par
+So what is the expected value of X?\par
+So, the expected value of X is going to be gamma minus\par
+alpha beta times the expected value of X prime,\par
+where the expected value of X prime is zero,\par
+and then plus alpha, so it's just going to be alpha,\par
+and what is the expected value of Y?\par
+The expected value of Y is the expected value of Y prime\par
+plus beta plus the, but the expected\par
+value of Y prime is zero.\par
+So the expected value of Y is beta, okay?\par
+So, we have what we wanted first.\par
+So expected value of X is alpha,\par
+and the expected value of Y is beta.\par
+Now what is the expected value of XY?\par
+The expected value of XY, we can just write what they are\par
+is the expected value of gamma minus alpha beta\par
+times X prime plus alpha times Y plus beta, okay,\par
+and there's a missing parentheses here,\par
+and that's going to be gamma minus, so if we opened up,\par
+so we have gamma minus alpha beta times the expected value\par
+of X prime Y prime, okay, plus alpha times the expected\par
+value of Y prime.\par
+Take this product, and then we multiply by beta.\par
+We get plus gamma minus alpha beta times beta\par
+times the expected value of X prime plus alpha beta, okay?\par
+But the expected value of X prime Y prime is one,\par
+and the expected value of Y prime is zero,\par
+and the expected value of X prime is zero.\par
+So what we get is gamma minus alpha plus beta\par
+plus alpha beta, which is just gamma.\par
+So, the expected value of XY is gamma.\par
+So what we showed is that for any alpha, beta, and gamma\par
+that, that you come up with you can find\par
+two random variables X and Y such that one\par
+has the expected value of alpha.\par
+The other one is the expected value of beta\par
+and the product has the expected value of gamma,\par
+which could be infinitely large essentially, okay?\par
+So, natural question to ask is okay, fine,\par
+we couldn't, we couldn't find some specific relation\par
+between them.\par
+They could be anything.\par
+But can we still say something\par
+about the expected value of XY?\par
+And to do that we need to introduce a covariance.\par
+Now, we want to study the expected value of XY\par
+and it's sufficient, in fact easier,\par
+to first understand zero mean random variables.\par
+So what we're going to do is\par
+we're going to centralize X and Y.\par
+So, we're going to take X and Y, subtract their expectation.\par
+So, and then we consider the product of this and,\par
+I'm sorry, the expectation of the centralized product, okay?\par
+So what do we mean by that?\par
+So, if we have X and Y we can subtract mu X.\par
+So we'll get a new random variable whose mean is zero\par
+and subtract mu Y from Y.\par
+So again, a new random variable, variable,\par
+whose mean is zero again, and we consider this expectation.\par
+So this is called the covariance between X and Y\par
+which is also denoted by sigma XY.\par
+So in other words, the covariance of X and Y\par
+which is denoted by one of these forms,\par
+is the expected value of X minus its mean,\par
+times Y minus its mean, okay?\par
+And we can evaluate this.\par
+It's going to be the expected value of XY\par
+minus the expected value of X times mu Y\par
+minus the expected value of mu XY\par
+plus the expected value of mu X mu Y,\par
+and that is going to be just the expected value of XY\par
+and here mu Y is a constant.\par
+So it's the expect of X times mu Y\par
+minus mu X times the expected value of Y\par
+plus mu X mu Y, and expected value of X is mu X,\par
+expected value of Y is mu Y.\par
+So we get that this is the expected value of X\par
+minus two mu X mu Y plus mu X mu Y.\par
+So it's the expected value of XY minus mu X mu Y, okay?\par
+And if this seems a little complex maybe just think\par
+of, of this case when X and Y have zero mean,\par
+in which case it's just the expected value of XY\par
+which is really the quantity we're trying to study.\par
+So if you understand it with zero mean random variables\par
+you understand it for general random variables\par
+because what we did was we just took the means out, okay?\par
+So, we want to study the covariance because that will\par
+let us understand the expected value of XY better, okay?\par
+And what, what the covariance represents as we'll see\par
+over time is the amount by which X and Y vary together\par
+and you can see it here because it's the expected,\par
+imagine that they have zero mean.\par
+So if X and Y are always the same,\par
+then you get some large value if X, when X is large,\par
+Y is small, you get a smaller value here.\par
+It is quite useful to normalize the covariance\par
+and when we do that we get the correlation coefficient\par
+which is defined as the covariance normalized\par
+by the standard variation of X and the variation of Y.\par
+It has several properties including that the correlation\par
+coefficient with X of X with itself is one,\par
+because the covariance of X with itself is the variance\par
+we divide by the variance, and that gives us one.\par
+The correlation coefficient of X with negative X\par
+is minus one because the covariance of X with negative X\par
+is the negative of the variance of X.\par
+The correlation coefficient of X and Y is the same\par
+as the correlation coefficient of Y and X,\par
+namely it's symmetric in X and Y,\par
+and if you take the correlation coefficient\par
+of A times X plus B with C times Y plus D\par
+it's the sign of A times C times the correlation coefficient\par
+of X and Y where the sign of X is one if X is positive,\par
+minus one if X is negative, and zero if it's zero,\par
+and what that means is that if you take X and Y\par
+and you multiply them both by the same, a number of the same\par
+sign, for example both A and C are positive, or both A and C\par
+are negative, then the correlation coefficient\par
+will not change.\par
+It's just going to be one times\par
+the correlation coefficient of X and Y.\par
+However, if you multiply X by a positive number for example\par
+and Y by a negative number then the correlation coefficient\par
+will change signs.\par
+That's all this means, okay?\par
+And the significance of correlation coefficient is\par
+that if X increases by a standard deviation\par
+then it tells us by how many standard deviations\par
+we expect of Y, we expect Y to increase, okay?\par
+And the last question that we may want to answer\par
+here is if we can bounds on the correlation coefficient\par
+between X and Y, can we, it will be arbitrary or not.\par
+So, for that we use the Cauchy-Schwarz Inequality.\par
+It says that the expected value of XY cannot take\par
+all possible values, namely it's bounded\par
+in absolute value by the square root of the expected value\par
+of X square times the expected value of Y square, okay?\par
+To see that, notice that for any alpha if we calculate\par
+the expected value of alpha X plus Y, this whole thing\par
+square, it's going to be equal to alpha square times\par
+the expected value of X square plus two alpha times\par
+the expected value of XY, right?\par
+Two alpha times the expected value of XY plus the expected\par
+value of Y square, and this quantity is always non negative\par
+because this is the expectation of a square which is\par
+the expectation of a non negative value, and so what we\par
+have here is you notice that the expected value\par
+of X square is a constant.\par
+It's some parameter of the distribution,\par
+and so are the expected value of XY\par
+and the expected value of Y square.\par
+So we have three constants, expected value of X square,\par
+expected value of XY, expected value of Y square,\par
+and then for any alpha that we take\par
+then this quadratic equation alpha, alpha square\par
+times this quantity plus two alpha times\par
+the expected value of XY plus to ask Y squared\par
+is always positive.\par
+When is a quadratic positive for every value\par
+of its parameter, in this case alpha?\par
+When the discriminant is negative.\par
+So this is true for all alpha.\par
+So the discriminant must be negative,\par
+and what is the discriminant here?\par
+It's the square of this constant minus four\par
+times the product of these terms.\par
+So it's four times the expected value of XY square\par
+minus four times the expected value of X square\par
+times the expected value of Y square,\par
+and this has to be negative.\par
+That means that the expected value of X square\par
+has to be at most the expected value of X square\par
+times the expected value of Y square,\par
+and the expected value of XY square has to be at most that,\par
+and if we take the square root then, sorry,\par
+then we get the inequality that we wanted\par
+that the expected value of XY is at most the square root\par
+of the expected value of X square times\par
+the square root of the expected value of Y square, okay?\par
+So this is Cauchy-Schwarz Inequality\par
+and we are now going to apply it to instead\par
+of X and Y we're going to apply it,\par
+it applies for every X and Y.\par
+So we're going to apply it to X minus its mean,\par
+Y times its mean.\par
+So what we'll get is that the expected value of X minus\par
+its mean times Y minus its mean is at most\par
+the square root of the expected value of X minus\par
+its mean squared times the expected value of Y minus\par
+its mean square, and namely that means that\par
+this is the covariance.\par
+So it means that the absolute value\par
+of the covariance of X and Y is at most\par
+the standard deviation of X times\par
+the standard deviation of Y, and if we normalize it\par
+by sigma X sigma Y, 'cause they,\par
+the correlation coefficient of X and Y\par
+is the covariance of X and Y, this term,\par
+divided by sigma X, sigma Y, to tell us\par
+that the absolute value of rho is at most one, okay?\par
+So, this finishes the last property\par
+of the correlation coefficient we wanted to talk about,\par
+and next time we'll see some examples.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+A negative correlation coefficient, \f1\lang1032\'f1X,Y, indicates:\par
+\par
+\tab\par
+\'f3X < 0 or \'f3Y < 0\par
+\par
+\tab\par
+\'ecX\'ecY > E(XY)\par
+\par
+\tab\par
+\'f1X,Y cannot be negative\par
+\par
+\tab\par
+None of the above\par
+\par
+Submit\f0\lang9\par
+}
+ 

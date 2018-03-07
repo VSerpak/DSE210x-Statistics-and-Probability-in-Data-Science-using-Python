@@ -1,0 +1,353 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+In the last video, we defined functions of random variables\par
+and now we would like to determine\par
+the expectations of those functions.\par
+So let's start with a reminder using an example,\par
+so suppose that we have x,\par
+which is distributed uniformly for minus two to two,\par
+so there are five values, each of them occurs\par
+if probability of half, I'm sorry, one fifth,\par
+what is the expected value of X?\par
+It's, the definition is always the summation of x,\par
+of p of x times x, so summation of x times p of x,\par
+which in this case is going to be minus two\par
+times one fifth plus minus one times one fifth and so on,\par
+okay and you notice in this case, it's zero,\par
+because we have symmetry going on,\par
+so we have here minus one times one fifth,\par
+which will cancel with one times one fifth\par
+and then we have minus two times a fifth\par
+plus two times one fifth,\par
+those will also cancel and of course,\par
+this central to them is also zero,\par
+so they will all sum to zero by symmetry, so to speak,\par
+okay, so this is expectation\par
+and now we would like to calculate\par
+expectation of functions of random variables,\par
+so, and what we'd like to do\par
+is calculate the expectation of the square\par
+of the random variables, that we just saw,\par
+so here is the random variable again\par
+and now we define Y to be X square,\par
+so y, as we saw in the previous lecture,\par
+it takes three values, zero, one and four,\par
+zero has the probability one fifth,\par
+because it only comes from x being zero,\par
+one has the probability two fifths,\par
+because one comes from minus one and plus one,\par
+each has probability one fifth\par
+and four has the probability two fifths as well,\par
+because it comes from minus two and plus two, okay,\par
+so now if you want to calculate the expectation of y,\par
+we can just use the same formula,\par
+so we see that first of all here,\par
+just we wrote what we just said,\par
+the probability that Y is zero\par
+is the probability that X square is zero\par
+or the probability, that X is zero, which is one fifth,\par
+the probability that Y is one\par
+is the probability that X is the inverse image of one,\par
+namely minus one and one, which is two fifths\par
+and the probability that Y is four\par
+is the probability that X is an inverse image of four\par
+or minus two, two, which is again, two fifths, okay,\par
+so now the expected value of Y\par
+is therefore one fifth times zero\par
+plus two fifths times one plus two fifths times four\par
+and when you sum those, you get here that's zero\par
+and then you get two plus eight,\par
+which is 10 divided by five, which is two,\par
+so we see that the expected value of Y is two\par
+and we want to see an alternative way\par
+of calculating the expected value,\par
+which will also be useful and it's as follows,\par
+we are going to actually do it with a few calculations here,\par
+so we're going to do it twice,\par
+first of all, we'll write it here\par
+and then we'll do an example\par
+and we'll do it again with an inverse image.\par
+So the expected value of Y, as we just said\par
+is the summation of all the values of y,\par
+of the value y times the probability that Y is y,\par
+now we can write it as summation of all y,\par
+of y times the probability that Y is y,\par
+that's the probability that X belongs\par
+to the inverse image of y, as we have seen, right,\par
+those are the cases, when Y is going to be equal to y\par
+and that's going to be equal to summation of all y,\par
+the probability that x is in the inverse image of y\par
+is sum of all xs in the inverse image\par
+of the probability of x\par
+and that's going to be, again summation of all y,\par
+we can pull the y inside, so now we sum of all xs\par
+in the inverse image of y times p of x\par
+and now if x is the inverse image of y,\par
+then y is g of x, namely g of x is y,\par
+so instead of y, we can write g of x,\par
+so a summation of all y and then summation of all xs\par
+in the inverse image of you, of g of x,\par
+that's another way of writing y, times p of x, okay\par
+and now we can fold these together\par
+and we can say that when we sum of all y\par
+and sum of all x in the inverse image of y,\par
+then that means we're summing of all xs,\par
+g of x times p of x, okay, so I know it's a little long,\par
+so what we're going to do is we're going to show an example,\par
+again for the square function\par
+and then we're going to visualize this sum\par
+and hopefully we'll understand it a little better.\par
+Okay, so first example, so we use the square again,\par
+so here is x and here is y\par
+and before, we calculated the expected value of Y,\par
+by summing y over 0,1,4 of y times the probability of y,\par
+which was one fifth times zero plus two fifths times one\par
+plus two fifths times four,\par
+which is 10 over five, which is two,\par
+now we know that we can write it as summation\par
+of g of x times p of x and g of x is x square,\par
+so we can write expected value of Y\par
+as summation of x square times p of x,\par
+okay and let's see what it is,\par
+so x ranges over five values, minus two to plus two,\par
+so it's going to be minus two square times one fifth\par
+plus minus one square times one fifth\par
+plus zero square times a fifth\par
+plus one square times a fifth\par
+plus two square times a fifth\par
+and that gives us, this is four fifths plus one fifths\par
+plus, again one fifth and then plus again, four fifths\par
+and when you add them, this part will give us one,\par
+this part will give us one, so again, we get two,\par
+so of course, we get the same value as we expected\par
+and one thing to notice here\par
+is that the expected value of X was zero\par
+and we're looking at a function square,\par
+so the expected value of X square,\par
+as we have shown now in two different ways is two,\par
+is not zero square, in other words the expected value\par
+of g of x is not g of the expected value of x,\par
+that's not what we're looking at now,\par
+I just want to point that out, okay.\par
+So now that we have seen this example,\par
+I want to go back to the equation and visualize it,\par
+so here we have x, which takes five values, one up to five\par
+and with probability, p1, p2, p3, p4, p5\par
+and we have y, which is g of x,\par
+it has three values, y1, y2 and y3, okay,\par
+so for example,\par
+g of one equals g of five is one one,\par
+g of two is the same as g of four is y2 and so on,\par
+okay, so the expected value of y,\par
+what we have done first\par
+is summing by y, by y,\par
+namely we wrote the summation over y times p of y,\par
+so let's see what we did, we took y1\par
+and we calculated the probability of y1 and multiplied them,\par
+okay and then we added y2 times its probability\par
+and y3 times its probability, okay,\par
+and now the probability that Y is y\par
+is the probability that X is in the inverse image of y,\par
+okay, so we can write that and we can explain why this is,\par
+we can write what this is, a summation over y,\par
+y times the probability that X is in the inverse image of y,\par
+the summation of all x in the inverse image of y of p of x\par
+and we can visualize it here,\par
+so what is the probability that y gets the value, y1?\par
+It's the probability that x is either one or five\par
+and that has the probability p1 plus p5,\par
+so this is y times p1 plus p5\par
+and then we need to also look at y2, when we sum this\par
+and we need to multiply by the probability\par
+that y is equal to y2\par
+and that happens with probability p2 plus p4,\par
+so and then we add y2 times p2 plus p4,\par
+that's the second term here\par
+and what is the third term?\par
+It's y3 times just this probability, which is p3,\par
+okay, so that's what we have here,\par
+summation of y times\par
+the sum of all xs in the inverse image of y,\par
+okay, now what we can do usually, we can pull y inside,\par
+so we have summation of y and then summation of each y\par
+times its probability and if we do it here,\par
+then we get for this y1,\par
+we get y1p1 plus y1p5\par
+and for y2,\par
+we get y2p2\par
+plus y2p4\par
+and for this one, we'll just get y3p3,\par
+okay, so that's this sum here, okay\par
+and now what we observe is, as we have said,\par
+if x is in the inverse image of y,\par
+then g of x is y,\par
+so we can just replace y by g of x,\par
+so this is summation over y,\par
+summation over x in the inverse image\par
+of g of x times p of x, okay,\par
+so what we can do here is instead of y1,\par
+we can just write g of one,\par
+so this is g1p1\par
+and here instead we have again,\par
+y1 and y1 is g of five,\par
+it's the same, okay, so we write g5p5\par
+and then here we have y2\par
+and y2 is g of two,\par
+so it's g2p2\par
+and y2 is also g of four,\par
+they map both to y2,\par
+so this is g4p4\par
+and then here we have g3p3 for this one,\par
+okay, so when we sum them up,\par
+we just have g1p1 plus g2p2 and so on,\par
+so this will just give us summation of gxpx,\par
+so it's g1p1, g2p2, g3p3\par
+and we can see we're just summing now over x,\par
+so we're summing g1p1 plus g2p2\par
+plus g3p3 and so on,\par
+okay, so we converted the summation over y\par
+to summation over xs, so we started with summation over y,\par
+we ended up in sum over x,\par
+now if you compare this to our methods,\par
+then you'll observe that when you sum over y,\par
+you have fewer multiplications,\par
+because you added all the xs,\par
+that were grouped together,\par
+but when you sum over x, you have a slightly simpler sum,\par
+because each one is just multiple of each x,\par
+p of x by g of x, and so it's a little simpler\par
+and we can use it to prove properties\par
+and to derive general formulas, okay, so let's see.\par
+So first, let's see what happens\par
+when you have constant addition,\par
+so what is the expected value of X plus b?\par
+So let's see an image,\par
+because maybe it will be very clear already,\par
+so here is a random variable X\par
+and here is its distribution\par
+and here is its expected value here,\par
+by symmetry, it's in the middle here\par
+and now if we add X plus two, then as we know,\par
+we shifted everything by two to the right\par
+and so all the values that we observe will increase by two\par
+and therefore also the average\par
+will increase by two as well, okay,\par
+so this is maybe an intuitive explanation,\par
+which is pretty accurate,\par
+but just if you want to get it from the formula,\par
+we see that the expected value of X plus b\par
+is summation of p of x times x plus b,\par
+this is according to the formula, we just had,\par
+it's summation of p of x\par
+times the function we're calculating, which is x plus b\par
+and this is going to be summation of p of x times x\par
+plus summation of p of x times b, okay,\par
+when summation p x times x is the expected value of X,\par
+in here we can take b out, b times summation p of x\par
+and now summation p of x is y,\par
+so we get it's the expected value of X plus b, okay,\par
+in other words, we took every value x\par
+and we just added b to it, so when we take the average,\par
+then we just pulled out the average of the xs\par
+will be the expected value of X\par
+and the average of the plus b will still be b,\par
+so we just, we see that the expected value of X plus b\par
+is the expected value of X plus b,\par
+okay, so the expected value,\par
+if you add the constant to a random variable,\par
+the expectation increases by this constant, okay.\par
+Let's do an example,\par
+so let's do a very simple example,\par
+x has two values, zero and one,\par
+it takes the value one of probability of p\par
+and zero of probability one minus p,\par
+this random variable, it's called Bernoulli p,\par
+random variable, we're going to see it a lot\par
+and so what is its expectation?\par
+Its expectation is one minus p times zero\par
+plus p times one, which gives us just p\par
+and what is, if you add two to it,\par
+what is the expectation of X plus two?\par
+Then probability one minus p,\par
+it's going to be zero plus two, which is two\par
+and probability p is going to be one plus two,\par
+which is three, so it's going to be,\par
+from this we see it's going to be two minus 2p\par
+and then plus 3p, which is just p plus two,\par
+which is the original expectation, plus two,\par
+that we translated X by, okay,\par
+what happens?\par
+So it's the expected value of X plus two, okay.\par
+What happens when we multiply\par
+a random variable by a constant?\par
+What is the expected value of aX,\par
+again let's look at a picture, this is X\par
+and here is its expectation, two and a half,\par
+if we multiply it by 1.5, as we do here,\par
+then we see that every value that we'll observe\par
+over 1.5 times larger than what it was before,\par
+so the average is also going to be 1.5 times larger,\par
+so this is the expected value now\par
+and it's going to be 1.5 times what it was before\par
+and if you want the proof, we can write expected value of X,\par
+the summation of px times ax,\par
+again we're using the fact that you can write\par
+expected value as the sum of the probability of the elements\par
+times what they're becoming, times g of x,\par
+in this case, ax, which is a times summation p of x times x,\par
+which is a times the expected value of X,\par
+so the expected value of a constant\par
+times a random variable is a constant times the expectation,\par
+okay, and again for Bernoulli p, that is written here,\par
+the expected value of X, as we saw before was p\par
+and the expected value of say, 3X\par
+is going to be one minus p times three times zero,\par
+because zero still becomes zero, plus p\par
+instead of one, we now have three, so it's going to be 3p,\par
+which is three times the expected value of X,\par
+okay, so it's what we had before, alright\par
+and if you want to combine these two operations,\par
+addition and multiplication,\par
+what is the expected value of aX plus b,\par
+then by the property,\par
+that when we translate\par
+the sum comes out,\par
+so it's the expected value of aX plus b, okay\par
+and expected value of aX is a times the expected value of X,\par
+so it's a times expected value of X plus b,\par
+in other words, the expectation of aX plus b\par
+is a times the expected value of X plus b,\par
+okay, and again, Bernoulli p, the expectation was p\par
+and what is the expected value of 2X plus three?\par
+It's probability one minus p,\par
+it's going to be two times zero plus three, probability p,\par
+it's going to be two times one plus three, okay\par
+and when we open it up, we get here,\par
+that we have this three, so it's going to be three minus 3p\par
+and then here we have plus 5p,\par
+so we have 2p plus three,\par
+which is twice the expected value of X plus three,\par
+which is what we expected, okay,\par
+so this is called a linearity of expectation,\par
+the expected value of X plus b\par
+is a times the expected value of X plus b, alright.\par
+So in this, we discussed the expectation\par
+of functions of variables\par
+and next, we want to talk about variance.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Which of the following equation(s) is/are always true?\par
+\par
+\tab\par
+E(-X)=E(X)-E(2X)\par
+\par
+\tab\par
+E(X^2)=(EX)^2\par
+\par
+Submit\par
+Discussion\par
+}
+ 

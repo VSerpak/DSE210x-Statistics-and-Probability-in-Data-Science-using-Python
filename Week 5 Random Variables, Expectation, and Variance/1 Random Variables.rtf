@@ -1,0 +1,409 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello, and welcome back.\par
+So, so far we have talked about distributions in general\par
+and today we want to start talking about more specific\par
+distributions, specifically about random variables.\par
+Okay so we'll motivate random variables\par
+we'll give some examples, a few definitions\par
+and then we'll show how to visualize them.\par
+So first let's see what matters.\par
+So, so far we talked about things like coins, rolling dice\par
+playing cards, dominoes, marbles, all these things\par
+that are lots of fun, but often we do things\par
+that are not so fun but still necessary.\par
+For example, if you're an internet company\par
+you may wonder how many subscribers you have or\par
+how many clicks you get or how many viewers\par
+have seen your website.\par
+Or if you are a manufacturing company, you may\par
+wonder about the yield of your product, the weight\par
+of individual items, how many sales you have and so on.\par
+If you're a traveler, you may wonder about how long it will\par
+take you to arrive at your destination or the congestion\par
+along the way or the delay of your ride or of your flight.\par
+And if you are a physician, then you may wonder about\par
+your patient's age, their temperature\par
+their heart rate and so on.\par
+If you are a student, then you care probably about\par
+your GPA, about your tuition, about the cost\par
+of the online course you are taking or\par
+the length of the assignments that you get.\par
+And everyone cares about their income and\par
+about cost of things.\par
+So what do all these things have in common?\par
+They all have to do with numbers.\par
+And so numbers are very important, specifically\par
+random variables whose values or numbers are\par
+important to us, and a random variable is, in fact\par
+a random outcome whose value is a number.\par
+Okay, so what we're going to do now is going\par
+to start studying random variables\par
+those random outcomes whose values are numbers, right?\par
+Okay so let's see how numbers are different to outcomes\par
+like those we have studied so far\par
+like coins and heads and tails and so on.\par
+So first of all, the distribution P X\par
+we have a few more features.\par
+So because it's a number we can view it on a line\par
+for example we can say that the probability of one is .2\par
+the probability of three is .5, probability of seven is .3\par
+and so we can view the values of X on the real line\par
+because there are numbers.\par
+We can also express them as a function\par
+for example the probability of X is one over X squared.\par
+It would have been more difficult if we'd looked\par
+at the probability of heads and the probability of tails\par
+or the probability of different kids of bread and so on.\par
+Cannot write it as a function of what type of bread\par
+or what type of vegetable we're looking at, right?\par
+And we can also consider properties of distributions\par
+for example we can consider decreasing\par
+if the distribution looks like that\par
+or concentrated if it's distributed\par
+over a narrow interval and so on\par
+Also for the random variable itself, X\par
+there are some extra features that we can look at\par
+for example we can perform operations.\par
+We can say if we had X we can look at X plus one\par
+or X squared, something we could not do with heads or tails\par
+not the heads times tails and so on.\par
+We can also combine variables, we can look at\par
+we have random variable X and random variable Y\par
+maybe that's your salary and your spouses salary\par
+we can add them up, add those two random variables.\par
+We can consider seven properties for example\par
+we can look at what is the average value of X and so on.\par
+Again, things that we can not do when the outcomes\par
+were just some arbitrary values not numbers.\par
+All right so we distinguish between\par
+two types of random variables\par
+and based on the size of the sample space omega\par
+so one is when omega is finite for example one, two, three\par
+e or pi, so here we have three values, two values\par
+or countably infinite for example distribution within\par
+actual numbers and distribution of the\par
+integers of positive numbers.\par
+All these random variables are called discrete.\par
+Those that are either finite or countably infinite.\par
+The other type of distributions that are\par
+where the sample space is uncountably infinite\par
+for example the intervals are from zero to two\par
+or -1,3 union 4,5 the union of those intervals\par
+or the real line and so on and those are called continuous\par
+random variables, so we have these two types\par
+of discrete and continuous random variables.\par
+Of course there is also a mixture of the two.\par
+So you can get something which is distributed\par
+over the interval from 0,2 or e or pi.\par
+Okay?\par
+So these are called mixed random variables.\par
+So we have these two types and then some combination.\par
+Discrete random variables are a lot closer\par
+to what we have done before so we're going to\par
+start with them, okay?\par
+So as I said we've seen things like that\par
+for example we've seen several examples\par
+that had number of outcomes for example we roll the die\par
+and the number was one up to six so that was an integer\par
+or we look at number of heads in three coin tosses\par
+so the number of heads was a number between zero and three\par
+an integer between zero and three.\par
+Or we look at the values of a domino tile\par
+was an integer between zero and six and so on.\par
+But we did not use the fact that those outcomes\par
+were numerical, we did not say okay let's look at domino's\par
+and lets add things and multiply things.\par
+We did them very rudimentary so we didn't use them very much\par
+and what we're going to do now\par
+is to start using the fact that those are numbers\par
+quite extensively, okay?\par
+And we will start with some familiar examples\par
+then a couple new examples and then\par
+get to the general formulation.\par
+So first number of heads, as I said we have seen before.\par
+So suppose you toss three fair coins\par
+the sample space, the collection of possible outcomes\par
+when you toss three coins are tails, tails, tails\par
+tails, tails, heads and so on up to heads, heads heads.\par
+And so the sample space omega has size eight\par
+there are eight possible outcomes\par
+and you notice that all of them are equiprobable\par
+each one of those eight outcomes has the same probability\par
+and so the probability of each one is 1/8.\par
+So if we let X, our denote the number of heads\par
+which if you note is a number\par
+it's a random number, then we can write the possible\par
+values of X here, it's going to be\par
+the lowest X could be zero\par
+could get zero heads and that happens\par
+when you have tails, tails tails.\par
+That has probability 1/8\par
+or it could be one and that happens when you have\par
+tails, tails, heads and tails heads tails and so on\par
+and there are three possibilities here\par
+each one is probability 1/8 so\par
+the total probability of observing one head is just 3/8.\par
+The probability of getting two heads is the probability\par
+of getting either tails, heads, heads and so on\par
+it's again 3/8 and the probability of getting three heads\par
+that happens only if all coins are turned up heads\par
+and that's just one possibility\par
+and that has probability of 1/8.\par
+And you observe that when you sum them up you will get one.\par
+So if you want to draw them on a line\par
+you can write here zero, one, two and three\par
+and the probabilities are going to be 1/8, 3/8, 3/8 and 1/8\par
+and we can see we can draw this probability like that\par
+on the real line and our probabilities here.\par
+Right, now if you want to specify the random verbal\par
+we have a few ways to do it.\par
+So we have the ways we have seen before\par
+so for example we can do it explicitly\par
+we can say, as we have done for the tetrahedral die\par
+can say that the probability of one is .1\par
+the probability of two is .2\par
+.3 and .4\par
+so we did it explicitly.\par
+You can write it as a table\par
+so we write here X and P X like that, okay?\par
+But now because we're looking at probabilities of numbers\par
+we have a couple of other ways of doing it.\par
+We can write it as a function, for example\par
+here the probability we can specify this\par
+that the probability of X is X/10 so for example\par
+the probability of two is 2/10 which is .2\par
+the probability of four is 4/10 which is .4\par
+so we can specify them as a function\par
+and we say it's all four X between one and four\par
+and we can also draw it as a graph.\par
+Again, there are a couple of ways to do that\par
+I will show three.\par
+First you can show as a histogram.\par
+So here there is X and P X and this says\par
+the probability of one is at 0.1 which would meet right\par
+probability of two is 0.2\par
+probability of three we'd need to write 0.3\par
+probability of four is 0.4.\par
+So that's one way, or we can draw what's called a stem plot\par
+it looks like this.\par
+Probability of zero is .1, the probability of one is .2\par
+the probability of three is .3\par
+and the probability of four is .4\par
+or we can draw what's called a plot\par
+where we just connect these values, the probabilities.\par
+So it will look like this.\par
+So here we have zero connected to one\par
+connected to two and to three, here it's a straight line.\par
+So we can do all those and we can do them because\par
+we could write the value of an outcome\par
+which was a number on the real line like this.\par
+So these are different ways of specifying\par
+the distribution of a random variable.\par
+Now, as before, we have a probability mass function\par
+which is what we described until now.\par
+So we call it PMF as we recall\par
+and what it is, it's a mapping\par
+P that maps the sample space to the real numbers\par
+in such a way that each value is not negative\par
+and they sum to one, okay?\par
+So to specify the PMF we need to specify omega\par
+the sample space and P.\par
+Now omega for random variables is going to be\par
+a subset of R because a random variable\par
+gets a number value so it's a subset of the real numbers.\par
+If the random variable is discrete as opposed to continuous\par
+then this subset of the omega is going to be\par
+a subset of the real number\par
+and the subset is going to be finite or countably infinite.\par
+And P as we said has to be not negative\par
+P X is not negative, for X in omega\par
+and if you sum omega and the probability\par
+of all elements in the sample space\par
+that should give you one, right?\par
+So again, for a random variable\par
+before we have the probability mass function\par
+pmf for the distribution\par
+except that now it's a subset of the real numbers\par
+and then P X we have before.\par
+So many people work in probability\par
+different people use different notation\par
+and just want to mention a few variations\par
+so for discrete distributions\par
+this omega is going to be a subset of R\par
+and often for discrete distributions\par
+it's going to be the set of integers\par
+or the set of natural numbers\par
+or the set of positive numbers\par
+or a subset of these sets\par
+for example one up to N.\par
+P X the probability of X we sometime write as p sub x\par
+just fewer parenthesis to write\par
+maybe a slightly cleaner notation\par
+and because X is often distributed over the integers\par
+then sometimes instead of p of X we just write p of pi.\par
+So then what we would have is the pi\par
+is big and equal to zero and summation pi is one.\par
+Now, even discrete distributions can be further classified\par
+there are two types, a discrete distribution\par
+could be as we said finite and that's when\par
+the size of the sample space omega is number N in P.\par
+Set of positive numbers, so it's not infinite\par
+it's a finite number.\par
+Or it could be infinite and that's when the size\par
+of the sample space is infinite\par
+and then necessarily it's what we call not\par
+meaning its counter.\par
+So let's look at finite distributions.\par
+So here as we said, the size of the sample space is N\par
+which is a finite number so in order\par
+to specify distribution, we need to specify\par
+just a probability mass function\par
+the distribution itself\par
+so we can just say it's p1, p2 to Pn\par
+if for example it's distribution\par
+it is distributed over one up to N.\par
+Necessarily fall I between one to N\par
+Pi each of those has to mean not negative\par
+and summation Pi for N is equal to one.\par
+We have a couple types of finite distributions\par
+that could be for example uniform\par
+that's when all the pi's are equal\par
+then in that case it's going to be equal to one over N\par
+and this can be shown like that\par
+so we have all the values and each of them\par
+have the same value so the same height.\par
+So the same or it can be increasing\par
+and that's when p1 is less equal to p2 and so on up to Pn\par
+and then to look like that.\par
+So the values are increasing\par
+or it could be decreasing where p1 is bigger and equal to p2\par
+and so on up to Pn and it's going to look like that.\par
+Notice when we see the increasing or decreasing\par
+we allow for things to be the same\par
+so there could actually be a couple values\par
+that are the same but in general\par
+those are down or equal but will never go up\par
+if distribution is decreasing.\par
+All right.\par
+Now for infinite distributions\par
+the size of the sample space is infinity\par
+and you can have one sided infinite distribution\par
+and that's when you have p1, p2, p3 and so on\par
+that goes to infinity and notice that\par
+infinite distribution cannot be uniform.\par
+That's because if p is equal to zero\par
+if it's uniform then all of them are going to be equal\par
+to some value p and if this value p is zero\par
+then the sum is going to be zero\par
+and the sum of the probability has to be one\par
+so that's not going to work.\par
+If p is bigger than zero, if you have a uniform distribution\par
+of infinity in many elements\par
+and if each of them, because it's uniform\par
+all of them have the same value which we're calling p\par
+if this p is now positive then the summation\par
+is going to be infinite because you have\par
+infinite times some positive number\par
+in some ways it's not going to be infinite.\par
+Again, it's not going to be equal to one.\par
+So you cannot have a uniform distribution\par
+over infinite amount of zeros.\par
+Apologize, infinite many values.\par
+You can have a uniform decision of a finite number of values\par
+but not over an infinite number of values.\par
+Also the distribution cannot be increasing\par
+and that's because if for some Pis\par
+going to be positive, lets say p5 is positive\par
+then from that point on, pi plus one, pi plus two\par
+are all going to be positive and in fact\par
+are all going to be bigger than this pi.\par
+And because they're all larger than this pi\par
+then this sum is again going to be infinite.\par
+So again, uniform distribution cannot\par
+sorry infinite distribution cannot be uniform\par
+and it cannot increase.\par
+On the other hand, they can decrease.\par
+For example you can have a distribution such\par
+that p1 is one half, p2 is one quarter, p3 is one eighth\par
+and so on and to see that, observe so\par
+the distribution is shown like this, it's decrease\par
+and starts at one, two, keeps going down\par
+and to see that, notice that if you add those probabilities\par
+for example if you just take one half\par
+that's going to be one minus one half.\par
+If you take the sum of the first two\par
+one half and one quarter, that's three quarters\par
+that's one minus a quarter.\par
+If you take the sum of the first three\par
+one half plus one quarter plus one eighth\par
+that's going to give you half and then three quarters\par
+and then seven eights so that's one minus one eight.\par
+So if you take the sum one up to N, one over to the I\par
+that's going to be equal to one minus one over two to the n\par
+so like we said here, if we take one half\par
+plus one quarter plus one eighth it's seven eight\par
+which is one minus one eighth and that's two to n.\par
+So if you take the sum of all the elements to infinity\par
+that's going to be one and that's why\par
+this probability is sum to one.\par
+So you can have infinite distributions that are decreasing\par
+like that one, okay?\par
+You can also have double sided infinite distributions\par
+and that's distribution where you have p1, p2 and so on\par
+to infinity and p zero, p minus one, p minus two\par
+and going to p minus infinity and that's one example\par
+you can take this distribution, one half\par
+one quarter, one eighth.\par
+You can divide them into two so you get one quarter\par
+one eighth and so on on the right side\par
+and then you can have one quarter, one eighth and so on\par
+on the left side, the right side will go to half\par
+because it's distribution over two.\par
+The left side will go to half, again because it's the same\par
+half of this distribution and together they are sum to one.\par
+If you do it like this, it will stop here\par
+and then go to infinity on the other side, okay?\par
+So just to summarize, you can have infinite distributions\par
+but they cannot be uniform, cannot increase\par
+but they can decrease and they can decrease on one side\par
+or decrease on both sides, all right?\par
+So now just a little formally\par
+if one wanted to have a formal definition of random variable\par
+then people would say that it's a function\par
+it's a mapping from the sample space\par
+to the real numbers, but in this course\par
+we are trying to simplify the terminology\par
+and just focus on the math or in tuition.\par
+So we don't need to worry, we can just pretend\par
+that the sample space is what you start with\par
+which is maybe the real numbers.\par
+So we can just say that for us, a random variable\par
+is going to be a number-valued random experiment\par
+and we don't need to worry about the form of the finish.\par
+So to summarize, we talked about random variables.\par
+We described the motivations which is that often\par
+we are looking at random outcomes whose values are numbers\par
+and they're useful first of all because\par
+they arise in real life and also\par
+we can operate on them which makes them even more useful\par
+we can add random variables and so on.\par
+We gave a couple of examples and then we defined\par
+what the pmf, probability mass function\par
+for random variable is, we saw how to visualize\par
+using histogram, using plot and using stem plot\par
+and next time we're going to talk about\par
+cumulative distribution functions.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+A random variable does not have to be only integer values.\par
+\par
+\tab\par
+True\par
+\par
+\tab\par
+False\par
+}
+ 

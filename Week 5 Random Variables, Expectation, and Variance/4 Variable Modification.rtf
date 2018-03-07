@@ -1,0 +1,245 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+So we're talking about expectations of random variables\par
+and what we're going to discuss first\par
+is what happens when you modify random variables\par
+and then we'll talk about expectations\par
+of these modifications.\par
+We want to discuss modifications\par
+of functions of random varables.\par
+Sometimes we're interested in\par
+not just the random variable itself,\par
+but some function of the random variable.\par
+For example if a person gets a salary,\par
+suppose it's some random number expressing dollars,\par
+which we call X then if they get a $10 raise\par
+then the salary now, instead of X, is X plus 10,\par
+which we might call y.\par
+Or if they get a 10% raise, then instead of salary X,\par
+the new salary is new random variable Y,\par
+which is 1.1 times X.\par
+Or if they become CEO then maybe\par
+the new salary Y is now X square.\par
+In all these cases we see that we had a random variable X\par
+and now we have a new random variable Y,\par
+which is some function of X.\par
+And so Y is some g of x for some function g,\par
+and you notice the g is a deterministic function.\par
+Defined over R, over the real numbers\par
+or whatever the domain of X is.\par
+Whatever the range of X is.\par
+But in all those cases again,\par
+you see that g is just a deterministic function.\par
+Like X plus 10, or 1.1 X, or X squared.\par
+It's a known function.\par
+And all the randomness in Y derives from X.\par
+So the only reason there's randomness\par
+about the new salaries is because there was some randomness\par
+about the original salary.\par
+As you can see, we're taking advantage of the fact\par
+that we're talking about random variables.\par
+We're talking about numbers,\par
+and we can now define functions over these variables.\par
+Okay so were going to see a few examples.\par
+So just to reiterate, X is deterministically modified by g.\par
+So g is deterministic.\par
+And X was random.\par
+And Y is g of X, so it's now random as well.\par
+So let's see a couple of examples.\par
+First is translation.\par
+So suppose we have a random variable X\par
+and we want to add the constant b to X.\par
+For example X two, add two, or something like that.\par
+So this is called translation.\par
+We are translating X, or we're moving X\par
+by this quantity b.\par
+So then Y is going to be X plus b.\par
+And here is an example.\par
+Here is X.\par
+It's distributed between one and four\par
+according to this distribution.\par
+And Y is X plus b.\par
+Maybe Y is X plus two.\par
+Then what happens is we just\par
+move the distribution of X by two.\par
+So, what was the probability of one before\par
+is now the probability of three.\par
+And probability of two becomes the probability of four.\par
+And so on.\par
+Because we just took X, whatever it was,\par
+and we added two to it.\par
+So just to say it a little more formally,\par
+what is the probability that the newer variable Y has,\par
+gets the value y.\par
+It's the probability because Y is X plus b.\par
+It's the probability that X plus b is equal to y.\par
+And that's the probability that X is equal to y minus b.\par
+So we can see here the probability that y is six,\par
+is the probability that X was two.\par
+The probability that y is five\par
+is the probability that X was three.\par
+And so on.\par
+The probability that y is three\par
+is the probability that X was one.\par
+Okay, so we see that we can relate the probabilities\par
+of X, the original X, to the probability of the new y.\par
+Using this function.\par
+Here's another example, scaling.\par
+So suppose we take X and we multiply it by a constant b.\par
+So we call it, we said that we scale X by a factor of b.\par
+Then Y is b times X.\par
+And here is our original X.\par
+And now let's multiply it by 1.5.\par
+Then the values of X originally\par
+were one, two, three, and four.\par
+Now they're going to be one times 1.5,\par
+which is 1.5.\par
+Or two times 1.5, which is three.\par
+On to the three we have 4.5.\par
+Instead of four we have six.\par
+And the probability that y is six\par
+is the probability that X was four, and so on.\par
+So I'll just again, writing it formally.\par
+The probability that Y is y,\par
+is the probability because Y is b times X,\par
+it's the probability that b times X is y.\par
+And that's the probability that X is y over b.\par
+Okay, and that's what we see here.\par
+The probability that y is six\par
+is the probability that X was six divided by 1.5.\par
+Or the probability that X was four.\par
+Now in these two examples,\par
+the function that we use b times X\par
+or X plus b was one to one.\par
+It mapped in different values of X,\par
+the different values of Y.\par
+But sometimes the function is not one to one,\par
+and things get a little more interesting.\par
+So let's look at the square function.\par
+And let's start in the range where the square is one to one.\par
+So let's say that we have a random variable X\par
+which is distribute of a zero one two.\par
+According to this probability,\par
+it's zero probability half.\par
+One with a probability of third.\par
+And two with probability one sixth.\par
+So you see that over the range zero one two,\par
+if we square those values,\par
+the square function is one to one.\par
+And specifically if we let Y equal to be X square,\par
+then y will get the value of zero square, which is zero.\par
+One square which is one.\par
+Or two square which is four.\par
+So these are the values.\par
+And what is the probability y will get those value,\par
+well y would be zero if X was zero\par
+which happens probability half.\par
+Y will be one if X was one.\par
+Which happens probability of one third.\par
+And y will be four if X was two.\par
+Which happens probability of one sixth.\par
+So these are the probabilities.\par
+But now let's look at the range\par
+where the square function is many to one.\par
+In particular let's look at the range\par
+where X varies from minus two to plus two.\par
+So minus two, minus one, all the way up to plus two.\par
+According to a uniform distribution.\par
+So X is gets each of those values probability of one fifth.\par
+Then Y again is X square.\par
+And now Y will have fewer values than X.\par
+Particularly it will have the same values\par
+that it would have before, zero one four.\par
+And let's see, what is the probability that y is zero.\par
+Y is zero if X was zero.\par
+And that happens probability one fifth.\par
+That's what we get here.\par
+Now more interestingly, y is one if X was either\par
+minus one, or plus one.\par
+Because in both cases, X squared is going to be one.\par
+And so X is minus one or one, with probability two fifths.\par
+And therefore the probability that y is one, is two fifths.\par
+And y is four if X was minus two or plus two\par
+because in both cases, X squared is going to be four.\par
+So y is going to be four.\par
+And X is minus two or plus two\par
+with probability one fifth plus one fifth,\par
+which is two fifths.\par
+So we see now that y is ranging over a smaller\par
+set of values.\par
+Three instead of five.\par
+And for each one, or at least for two of them,\par
+the probability of one of y comes from multiple values of X.\par
+All of them mapped to the same way.\par
+So let's see this in a picture.\par
+So here are the values of X.\par
+Zero, minus one, plus one,\par
+minus two, and plus two.\par
+And here is Y which is g of X,\par
+and our g of X, or g is X square.\par
+So Y is zero, one, and four.\par
+And now zero will map to zero.\par
+And minus one and plus one will both map to one\par
+by g or by X square.\par
+And minus two and plus two will both map to four.\par
+So when we look at the inverse mapping of zero of Y,\par
+we get the inverse mapping of zero is zero.\par
+The inverse mapping of one is minus one and plus one.\par
+The inverse mapping, or the inverse image of four\par
+is minus two and two.\par
+And the probability that Y is four,\par
+is the probability that X is in this inverse image of four.\par
+And the probability that Y is one,\par
+is the probability that X is in this inverse image of one.\par
+Which is minus one and one.\par
+So we can say therefore that the probability\par
+that Y is one, is the probability that g of X\par
+is equal to y.\par
+Because that's by definition, y is g of X.\par
+So supposedly g of X is equal to y.\par
+And taking the inverse mapping,\par
+it's the probability that X is in the inverse image of y.\par
+And what is the probability that X\par
+is in the inverse image of y for example here,\par
+minus two and two.\par
+It's just the sum of the probabilities of those Xs.\par
+So it's summation of all X in the inverse image of y\par
+of the probability of X.\par
+So for example, if we take four,\par
+and the probability that Y is four,\par
+is the summation of all Xs in the inverse image of four.\par
+Namely, minus two and two of the probabilities.\par
+So it's one fifth plus one fifth.\par
+Okay so as we see,\par
+when the mapping is many to one,\par
+then to calculate the probability of Y,\par
+we need to sum the probability of X\par
+in the inverse image of Y.\par
+So that's all there is to it.\par
+So we want to just introduce this concept\par
+of variable modifications.\par
+Or functions of random variables\par
+and next time we're going to look at\par
+the expectations of this modifications.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Let\rquote s see if we have any risk takers in the class. Suppose you flip a fair coin. With each flip you must bet a certain amount of money. If the coin lands heads, you get double your money in return. If the coin lands tails, you lose your money. How much money would you be willing to bet during this game?\par
+\par
+\tab\par
+$0\par
+\par
+\tab\par
+$10\par
+\par
+\tab\par
+$100\par
+\par
+\tab\par
+$1000\par
+\par
+Submit\par
+}
+ 

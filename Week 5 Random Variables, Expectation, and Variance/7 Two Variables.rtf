@@ -1,0 +1,508 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello again, everyone.\par
+So far we've talked about single random variables\par
+and it's to time to graduate to two.\par
+So first, well we have a little bit of introduction,\par
+why we're looking at two random variables.\par
+Experiments often have multiple observations,\par
+for example, if we are interested in the weather\par
+on a given day,\par
+then we, probably, would like to know the temperature\par
+and what's the likelyhood of precipitation\par
+and these two things are correlated,\par
+they have some relation between each other.\par
+Or if we would like to know\par
+how the economy will do next month,\par
+then we would like to, maybe,\par
+have a prediction of both the unemployment rate\par
+and inflation rate.\par
+And again, these are two different random variables,\par
+that interact with each other\par
+and we want to learn them.\par
+Or, if we are looking at a data base table,\par
+then, for example, maybe every row corresponds\par
+to an employee\par
+and we have a few columns, for example,\par
+a column corresponds to a number of years of experience\par
+and the salary.\par
+So these two are variables, the experience and salary\par
+are somehow related\par
+and they are related for one things,\par
+because for every row they correspond to the same person.\par
+If you are taking this class,\par
+then as a student,\par
+at UCSD, for example,\par
+then,\par
+one might consider the number of classes\par
+you're taking this quarter,\par
+as well as your GPA, that you'll get\par
+and again, there is some correlation between\par
+these two random variables,\par
+that we want to investigate together.\par
+And, of course, if we take the biggest experiment of all,\par
+the human experiment,\par
+then a person has many features, like the cholesterol level,\par
+the location, their age, their dinner plans,\par
+their profession, their happiness, their salary and so on.\par
+Don't worry, we're not going to start\par
+studying all of this, we'll begin by looking at,\par
+perhaps, the smallest possible periods of random variables,\par
+just two coins, okay.\par
+So, let u and v be two Bernoulli half random variables,\par
+so the coin flips and let's assume,\par
+that they're independent of each other.\par
+There is several ways\par
+in which we can indicate the distributions.\par
+We can first just write it out,\par
+we can say, that the probability, that u gets the value u\par
+and v gets the value small v,\par
+is one quarter\par
+and will denote this by the probability of u v,\par
+that's going to be our\par
+our shorthand for probability,\par
+that the random variable u gets the value u\par
+and random variable v gets v,\par
+so P of u v is a quarter\par
+and this true for all u and v in zero one, okay?\par
+So that's one way to indicate this.\par
+Or we can write a table,\par
+that consists of all the possible values of u and v,\par
+zero zero, zero one, one zero and one one\par
+and then we can just write the probabilities,\par
+u v, when I'm using this notation,\par
+which is one quarter for all of them.\par
+Or, even better,\par
+we can take advantage of the structure of the problem,\par
+where we have u and v,\par
+they are two different random variables,\par
+so we can try them in a table,\par
+where we are write the values of u here vertically\par
+and the values of v horizontally\par
+and in each cell in the table,\par
+we will write the probability of u v.\par
+So here are all possible values of u v,\par
+all two times two or four of them,\par
+have probability one quarter.\par
+So we can use, for example, this u and v\par
+to create several other examples,\par
+to show us what two random variables look like,\par
+so let's say we take the min and the max\par
+and again, u and v are Bernoulli\par
+half independent of each other,\par
+so we can define x to be the minimum of u and v\par
+and y to be the maximum of u and v,\par
+then again, here is the table of the possible values of u v\par
+and the min and the max\par
+and what we can see, is that, the min and max\par
+are going to be zero, when u and v are zero,\par
+happens to probability one quarter\par
+and we can see, that the min and the max\par
+are going to be zero and one, respectively,\par
+if one of u and v's are zero\par
+and the other one is one in both of these two possibilities,\par
+so that happens probability one half\par
+and the min and the max are going to be both one,\par
+if both u and v are one\par
+and that happens probability one quarter.\par
+So, again, we can draw as a table of x and y,\par
+so we can write here x, which is the min of u and v\par
+and y, which is the max of u and v,\par
+they'll take the values zero and one\par
+and the probability,\par
+that the min is zero and the max is zero\par
+is one quarter from here,\par
+it's a probability, that both are zero,\par
+the probability, that min is zero and max is one,\par
+is one half, as we saw here.\par
+The probability, that one them is zero,\par
+one of u and v is zero and the other one is one,\par
+one of these two values\par
+and the probability both of them are one is a quarter,\par
+that's when both x and both u and v are one\par
+and we can see, that the probability, that x is zero,\par
+x is one, I'm sorry\par
+and y is zero, is zero, because the min\par
+has to be larger than the max\par
+and here the min is one and the max is zero,\par
+which cannot happen,\par
+So this gives us another joint distribution\par
+on two random variables x and y.\par
+Here is another example.\par
+Take x to be the product of u v\par
+and y to be the sum of u v,\par
+so now, x takes two values,\par
+because zero times one can the zero or one,\par
+but y is the sum of two binary variables,\par
+so it can be zero, one or two\par
+and we can find the probability,\par
+what is the probability, that x is zero and y is zero,\par
+that happens if both x and y, if both u and v are zero,\par
+because for u plus v to be zero, both would have to be zero,\par
+so that's happens, probably, a quarter.\par
+What is the probability, that x is zero and y is one?\par
+That happens when, because x is zero,\par
+that means, that at least one of u and v is zero\par
+and because y is one, that means,\par
+that one of them is one and the other one is zero,\par
+so this is a sufficient condition.\par
+So and that happens, probably half.\par
+Okay and what is the probability,\par
+that x is one and y is two,\par
+that's a probability, that both of them are one,\par
+both u and v are one, that happens, probably, one quarter.\par
+And we say, that all other values of x and y\par
+will not happen.\par
+And to check, we can just see,\par
+that these probabilities add to one\par
+and that means, that we have exhausted all\par
+possible\par
+pairs,\par
+that can, in fact, happen.\par
+Now let's look at another example, three coins.\par
+So suppose, that u one, u two and u three\par
+are Bernoulli half random variable, again, independent\par
+and we let x be u one plus u two.\par
+That's the same as thinking,\par
+that you rolled three fair coins\par
+and x is the number of heads amongst the first two\par
+and we let y be u two plus u three,\par
+so now we're letting y be the number of heads\par
+amongst the last two coin flips, the second and the third.\par
+So we can create, again,\par
+a table of all possible values of u one and u two\par
+and u three, in fact\par
+and then of x and y.\par
+So if u one, u two, u three all zero,\par
+then x and y are zero,\par
+because this is the sum of the first two,\par
+this is the sum of second two\par
+and we can continue, for example, here,\par
+these first to sum to one\par
+and last two sum to ones,\par
+so x and y are both one and so on, okay?\par
+And if we create a table,\par
+we see, that,\par
+x and y can take the values from zero to two,\par
+because amongst the first two locations,\par
+we can have zero heads, one head or two heads,\par
+so zero one and two and likewise for y.\par
+And all possibilities, probabilities are,\par
+almost all probabilities are 1/8,\par
+meaning, that they correspond to a single\par
+triple u one, u two, u three, except,\par
+if you consider x being one and y being one,\par
+that means, that we have two one, ah,\par
+a single one, the first two locations\par
+and a single one in the second,\par
+in the last two locations,\par
+that could come from two possibilities,\par
+that can come from zero one zero,\par
+so we have a single one in the first two locations\par
+and single one in the last two locations\par
+or it could come from one zero one.\par
+Again, single one, the first two locations\par
+and a single one in the last two locations,\par
+so that's why the probability of one, one is quarter\par
+and we can see, that we cannot have zero and two,\par
+cuz that means, that you have no ones\par
+in the first two locations,\par
+so, we have zero zero here\par
+and then, no matter what,\par
+u three is the value,\par
+for what is going to be the zero one cannot be two, okay?\par
+So this is, again, another,\par
+let's call it a joint distribution on the values of x and y.\par
+So we can also consider, instead of Bernoulli half,\par
+general Bernoulli p, so if u is the Bernoulli p\par
+and v is Bernoulli q, again, independent\par
+and x, like we did before, is the minimum of u v\par
+and y is the maximum of u v,\par
+then these are the probabilities of u and v happening,\par
+for example, u and v are both one, with probability p q,\par
+they are both zero, ah,\par
+p hat q hat\par
+and what is the probability, that the min,\par
+here is the probability, that the min is zero one\par
+and the max is zero one, so, for example,\par
+the min is one and the max is one,\par
+if both of u and v are one,\par
+which happens, probably, p q and so on.\par
+And I, at some point, just say okay,\par
+enough with examples, what is the general form\par
+of joint distribution?\par
+So,\par
+a joint distribution for two random variable x and y\par
+specifies the probability of every possible x y pair.\par
+And, so, we, it's ah,\par
+the probability, that,\par
+x is taking the value x\par
+and y is taking the value for y,\par
+which we'll abbreviate by p(x,y)\par
+has to satisfy two things.\par
+First of all, because it's a probability,\par
+for every x and y it must be positive.\par
+And second, if we sum of all possible values x and y,\par
+of the probability of x and y, it has to be one.\par
+We can see, that all the distributions,\par
+that we have seen before are satisfied.\par
+Now the joint distribution is only part\par
+and the sense, that it tells us everything\par
+we want to know about the distribution of x and y,\par
+it determines all probabilities of interest.\par
+Here is an example of\par
+joint pair x and y with these probabilities\par
+zero point one, zero point two,\par
+zero point three, zero point four for x,\par
+which is either zero one\par
+and y, which is either zero or one\par
+and if we ask, for example, what is the probability,\par
+that x is at most y,\par
+that's a probability, that x is zero and y is zero\par
+or x is zero and y is one,\par
+or x and y is one and y is one,\par
+all these are the exactly the values for,\par
+which x is less or equal to one\par
+and when we want to add those,\par
+we can first try them a little more briefly,\par
+like p of zero zero, p of zero one, p of one one\par
+and when we add them, we add point one,\par
+point two and point four, zero zero, zero one and one one\par
+and that gives zero point seven,\par
+so that's the probability, that x is less and equal to one\par
+and using something very similar to this,\par
+we can calculate any property, that you want of x and y,\par
+because were given the probabilities\par
+of all possible values.\par
+Now there are going to be a few properties,\par
+that will be of interest to us more than others\par
+and we're going to look at some of them now.\par
+So the first of these properties are the marginals.\par
+So the marginal of x is the probability,\par
+that the random variable x takes a given value small x\par
+and by this rule of total probability,\par
+it's the summation of all possible value of y\par
+of the probability, that random variable x takes the value x\par
+and the random variable y gets the value y, okay?\par
+Now, we'll sometimes abbreviate probability,\par
+that x is x by just p x x,\par
+where this x denotes the random variable x,\par
+because we'll also have the probability of y\par
+and when It's clear, that we're talking about x,\par
+then we'll just write p of x.\par
+Similarly, the marginal of y is the probability,\par
+which we write as p of y\par
+or p underscore y of y,\par
+is the probability,\par
+that the random variable y gets the value y\par
+and, again, by the rule of total probability,\par
+that's going to be equal\par
+to the summation of p x y of all x's.\par
+Let's see and example.\par
+So here is our small probability distribution,\par
+that we saw in the previous slide\par
+and if we wanted to know the probability, that x is zero,\par
+so that's going to consist of the probability,\par
+that x is zero and y is zero.\par
+It's this probability here,\par
+plus the probability, that x is zero and y is one.\par
+That's the this probability here.\par
+So if we want to abbreviate,\par
+we can write p of zero zero plus p of zero one\par
+and p of zero zero is point one,\par
+p of zero one is point two,\par
+so this is going to be zero one plus point two,\par
+which is point three, okay?\par
+So that's the probability for this joint distribution,\par
+that x is zero.\par
+If we wanted to know the probability, that y is one,\par
+that was going to be zero point two plus zero point four,\par
+which is zero point six.\par
+And the probability, that y is zero\par
+is zero point one plus zero point three is zero point four.\par
+And you notice, that the probability, that y is zero\par
+is zero point four, the probability y is one\par
+is zero point six, they have to way one\par
+and they ...\par
+Alright.\par
+So this point three, this is point seven and so on.\par
+Now we can also consider conditionals,\par
+so if we ask what is the probability of,\par
+that the random variable x takes the value x,\par
+given the random variable y gets the value y,\par
+that's going to be p of x and y divided p of y,\par
+by the rules, that we have seen before,\par
+for conditional probability\par
+and similarly, the probability of y given x\par
+is the probability of x y divided by the probability of x.\par
+So let's see what it means for our small distribution.\par
+So if we asked, what is the probability,\par
+that y is zero, given, that x is zero?\par
+That's going to be the probability,\par
+that x is zero and y is zero divided\par
+by the probability, that x is zero,\par
+but when we look at this table,\par
+we see, that probability to x is zero is zero point three,\par
+so, therefore, this is going to be\par
+and if we have, if we ask about why,\par
+which we'll see in a second probability,\par
+y is zero, for example, zero point four.\par
+So that means,\par
+that the probability of y being zero given x being zero\par
+is the probability of zero zero, which is zero point one\par
+divided by zero point three, which is one third\par
+and if we ask what's the probability of y given,\par
+is one given, that x is zero,\par
+that's going to be the probability,\par
+that x is zero and y is one,\par
+the intersection of these two events\par
+divided by the probability of x is zero,\par
+which is going to be zero point two,\par
+probability that x zero is one is y\par
+divided by zero point three, which is two thirds.\par
+And,\par
+if we ask what's the probability, that x is zero given,\par
+given that y is zero,\par
+then that's going to be the probability of zero zero\par
+divided by probability, that y is zero,\par
+which as we saw here is zero point four.\par
+So this probability is zero point one\par
+divided by zero point four, which is one quarter\par
+and if we ask what's the probability of x being one given,\par
+that y is zero, we can do the same calculation\par
+as we did here\par
+or we can observe, that, given that y is zero,\par
+x can take two possible values zero and one.\par
+They must have add to one\par
+and, therefore, if the probability,\par
+that x is zero, given, that y is zero is one quarter,\par
+the probability, that x is y, given is one given,\par
+that y is zero must be one minus one quarter,\par
+which is three quarters.\par
+Alright.\par
+Now a third property we want to look at is independence,\par
+so x and y are said to be independent\par
+and we write x independent of y, like that,\par
+if for every x and y, the probability of y, given x\par
+is the same as the probability of y.\par
+That means, that after observing the value of x,\par
+we do not change our estimate of the distribution of y.\par
+So even if they observed any given value of x,\par
+the distribution of y is going to be the same for every y.\par
+And equivalently x and y independent,\par
+if the probability of x, given y, is the probability of x,\par
+name-ly knowing the value of y does not change\par
+the distribution over x\par
+or, just like with event,\par
+we can write it as p of x y is p of x times p of y\par
+and that's a little more robust,\par
+because we don't need to\par
+consider\par
+conditional distributions,\par
+when the probability of y is zero.\par
+So this is often the way we'll look at independence,\par
+the joint probability is the product of the two marginals.\par
+So, for our table,\par
+we can see, that the probability of x,\par
+so if we look at this table, for example,\par
+zero 12, zero 48, zero point zero eight,\par
+zero point 32,\par
+if we look at the marginals p of x, that is point six\par
+and the marginal of y is zero point four, I'm sorry,\par
+the marginal of x for the first row is zero point six\par
+and for the second row is zero point four.\par
+If we look at the marginal of y,\par
+then for the first column is zero point two\par
+and for the second column is zero point eight\par
+and we can verify, that the elements of the pairs\par
+x,y are always the product of the row and the column.\par
+So here it's point six times point two,\par
+which is point 12,\par
+here it's point six times point right,\par
+which is point 48 and so on.\par
+So, therefore, this distribution is\par
+an independent distribution, x and y are independent.\par
+Now if we look at his distribution,\par
+then, again, we can create the marginal.\par
+So, for x, the probability,\par
+that x is at the first row is zero point three,\par
+the probability of x being the second row\par
+is zero point seven, zero point three plus zero point four,\par
+probability of y being in the first column\par
+is zero point four and the second is zero point six\par
+and we can check, that if we multiply\par
+the probability of this x and this y,\par
+it will give us zero point one two,\par
+but it's not equal to the joint probability of x and y,\par
+which is point one.\par
+So, therefore, this distribution\par
+does not reflect independent random variables.\par
+This is not independent.\par
+So, here's a quick way to check if,\par
+if a joint distribution is one\par
+of independent random variables.\par
+So observe, that if the two random variable are independent,\par
+then the rows must be proportional to each other.\par
+Because the probability of y given x\par
+is going to be equal independent of x,\par
+so, therefore, the rows must be proportional to each other\par
+and the columns must be proportional to each other.\par
+So, if for example, x is distributed Bernoulli half\par
+and will let y equals x,\par
+here is the joint distribution of x and y.\par
+So\par
+x and y being zero happens, probably, half,\par
+x and y being one happens, probably, half,\par
+so we see, this is the joint distribution.\par
+The rows are not proportional to each other,\par
+because this is half zero\par
+and this is zero half, so they're not proportional,\par
+so this distribution is not independent.\par
+Similarly, if we let y be one minus x,\par
+we get this joint distribution\par
+and again they're not independent,\par
+because the rows are not,\par
+they're not proportional to each other.\par
+So with this we've introduced pairs of random variables\par
+and in the next presentation,\par
+we're going to start talking about expectation\par
+of different functions of pairs of random variables.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+\par
+How many of the following joint probability distributions belong to INDEPENDENT random variables, X and Y? \par
+\par
+\par
+a) \par
+X \\ Y\tab 0\tab 1\par
+0\tab .63\tab .27\par
+1\tab .07\tab .03\par
+b) \par
+X \\ Y\tab 0\tab 1\par
+0\tab .16\tab .04\par
+1\tab .64\tab .16\par
+c) \par
+X \\ Y\tab 0\tab 1\par
+0\tab .25\tab .25\par
+1\tab .25\tab .25\par
+d) \par
+X \\ Y\tab 0\tab 1\par
+0\tab 0\tab .29\par
+1\tab .71\tab 0\par
+\par
+\par
+\tab\par
+1\par
+\par
+\tab\par
+2\par
+\par
+\tab\par
+3\par
+\par
+\tab\par
+4\par
+}
+ 

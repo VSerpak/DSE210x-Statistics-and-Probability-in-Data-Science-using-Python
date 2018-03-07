@@ -1,0 +1,233 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+In the last video, we started talking about random variables\par
+and now we want to talk about some type of events,\par
+that we might be interested in for random variables\par
+and how we can calculate the probabilities easier\par
+and we'll do that using cumulative distribution functions.\par
+So, when we talk about random variables,\par
+sometimes we're interested in specific value,\par
+like the probability, that we'll get exactly a B plus\par
+in the class or the probability,\par
+that the temperature is going to be 72.3712 degrees,\par
+but more often than not, we're interested\par
+not in one particular value,\par
+but rather in a range of values\par
+or in an interval of values,\par
+so we would like to know the probability of that interval,\par
+for example, we're interested maybe in the probability,\par
+that the temperature will be between 20 and 80 degrees,\par
+maybe some kind of reasonable temperature\par
+or the probability that we'll get a salary of at least 80K\par
+or the probability that someone's GPA\par
+may be less than 3.0, so all these are examples of intervals\par
+and when we talk about random variables,\par
+often this is what we'll be interested in,\par
+seeing what's the probability of a certain interval\par
+and what we're going to see\par
+is that there is a simple function,\par
+that will help us determine the probability of any interval\par
+and that's what we are going to do in this short video.\par
+Okay, so this function\par
+called the cumulative distribution function\par
+and so remember that we have studied\par
+the probability mass function or PMF\par
+or distribution of a random variable is noted by p of x\par
+and the cumulative distribution function or CDF\par
+is defined as, is called F of x\par
+and is defined to be the probability that X gets a value,\par
+which is less than or equal to x, okay,\par
+so it's the probability that the random variable\par
+is less than some specific value, x,\par
+okay and you can see that you can write it\par
+as summation of all u less than or equal to x\par
+of the probability of u,\par
+so in this example, the PMF,\par
+the probability mass function or the distribution\par
+is this simple formula,\par
+it's .2, in fact we can draw it like this,\par
+so x takes three values, minus one, one and two,\par
+minus one, one and two, it's minus one is probability .2,\par
+that's here, it's one with probability of half,\par
+it's one with probability of half\par
+and it's two with probability of .3,\par
+as we can see here, it's two with probability of .3.\par
+Now, when we calculate the CDF,\par
+the cumulative distribution function,\par
+then we know that the CDF, F of x, capital F of x\par
+is just the probability that the random variable x\par
+gets a value less than or equal to some specific value of x,\par
+which as we said is just the summation\par
+of all the probabilities less than or equal to x,\par
+so let's see what it is here,\par
+so here is a graph of the CDF\par
+and we can see that if x is less than minus one,\par
+for example, if x is minus two, the probability\par
+that x is less than or equal to minus two is zero,\par
+because x is always at least minus one,\par
+so all the way up to minus one, F of x is going to be zero,\par
+once we get to minus one, we ask what is the probability\par
+that x is less than or equal to minus one,\par
+that's the probability that x is exactly minus one\par
+and that's 0.2, okay, so then it becomes 0.2\par
+and from that point on, it will stay .2,\par
+for example, if you ask what is the probability\par
+that x is less than or equal to .5,\par
+the probability that x is less than or equal to .5,\par
+if we look here is just the probability that x is minus one,\par
+which is still 0.2, so it's stays 0.2 all the way up to one\par
+and once we get to one, we ask what is the probability\par
+that x is less than or equal to one\par
+and that probability is the probability\par
+that x is either negative one or one,\par
+that happens to be probability of .2, plus .5,\par
+which is .7, okay\par
+and we'll stay the same all the way up to two,\par
+okay, so for example, the probability that x\par
+is less than or equal to 1.5 is also .7,\par
+once we get to two and we ask what is the probability\par
+that x is less than or equal to two,\par
+then it's the probability that x is minus one, one or two\par
+and that probability is one,\par
+because these probabilities are to one,\par
+so it jumps to one and will stay one from there to infinity,\par
+so notice that even though x is discreet,\par
+it only takes three values, minus one, one or two,\par
+we define F of x for every real value,\par
+so it's F of x is defined for every real value of x, okay\par
+and you notice that it will consist of jumps,\par
+so for example here, the jumps are going to be\par
+at the locations where x can take a value,\par
+so for example, x can be minus one\par
+and this jump is going to be the difference\par
+between the probability that x\par
+is less than say, minus 1.01\par
+and the probability that x\par
+is less than or equal to minus one\par
+and this is this probability here, which is .2, okay\par
+and then we have a jump here,\par
+from the probability that x is less than 0.99\par
+to the probability that x is less than or equal to one\par
+and that jump is the probability that x is one, is .5,\par
+so this is this jump here,\par
+that corresponds to the value here\par
+and we have another jump here,\par
+so the difference between the probability\par
+that x is less than or equal to 1.99\par
+and the probability that x is less than or equal to two\par
+and that is the probability that x is two, which is .3,\par
+so this jump here is 0.3, okay.\par
+So let's look at some properties of the CDF,\par
+so here again is this, the CDF that we saw,\par
+but will be similar for other distributions,\par
+so first of all, observe that it's non-increasing,\par
+namely that if x is less than or equal to y,\par
+then F of x is less than F of y and that's very natural,\par
+because F of x is the probability\par
+that x is less than or equal to x\par
+and this is the probability\par
+that x is less than or equal to y\par
+and if y is bigger than x,\par
+then this probability is going to be larger, okay,\par
+so you can see here, it's non-decreasing.\par
+Okay, second property is limits, there are two of them,\par
+if you take the limit of F of x,\par
+as x goes to minus infinity, you go here,\par
+it's going to be equal to zero,\par
+that's because the probability that x\par
+is less than or equal to minus infinity\par
+or some number close to it is going to be zero\par
+and the limit as x goes to infinity, if F of x is one,\par
+that's because as we see here,\par
+as x increases, it goes to one\par
+and that is because, as x increases,\par
+the probability that the real outcome,\par
+the outcome is less than or equal to x\par
+is going to approach one,\par
+because almost all outcomes will be\par
+less than or equal to that x,\par
+as x goes to infinity, okay.\par
+Then a third property is that distribution\par
+is right-continuous, which we can write like this,\par
+the limit as x goes down to F of x is F of a,\par
+so what that means is if you take any point\par
+and you take the limit as you approach,\par
+as you go down to a,\par
+then the probability at the limit\par
+is going to be the limit of the probabilities\par
+and that's because we define the probability\par
+that x is less than or equal to sum value,\par
+so for example here, if you take this point,\par
+then as you approach the limit of the values\par
+will be the value at this limit point,\par
+whereas if you approach,\par
+that's if you approach it from the right,\par
+whereas if you approach it from the left,\par
+then here all the probabilities of zero,\par
+but once you get to that point, there'll be a jump to one,\par
+so it's right-continuous,\par
+but not necessarily left-continuous, right\par
+and why is the CDF, why is F of x useful?\par
+Because it allows us to calculate\par
+the probabilities of intervals easily, okay,\par
+so how do we do that?\par
+So first of all, observe that if we look\par
+at the interval for minus infinity to a,\par
+the probability that X is less than or equal to a,\par
+that's going to be F of a just by our definition,\par
+because that's the definition of F of a,\par
+now if you look at the probability\par
+that X is strictly bigger than a,\par
+then that's going to be one minus the probability\par
+that X is less than or equal to a,\par
+that is by the subtraction rule, okay,\par
+so the probability that X is on the right of a is one\par
+minus the probability that X is on the left of a, okay\par
+and that is one minus F of a, because this is F of a, okay,\par
+so we can calculate the probability of left intervals\par
+into what this go from minus infinity to a point,\par
+we can calculate the probability of the interval,\par
+that start at some point and go all the way to infinity,\par
+like that one minus F of a\par
+and if we have an interval between two finer points,\par
+a and b or any points in fact,\par
+we can write it as the probability of the set X\par
+is less than or equal to b minus X less than or equal to a,\par
+so this set, where X is between a and b,\par
+this event is a set, we can write it\par
+as the event that X is less than or equal to b\par
+minus the event that X is less than or equal to a, okay,\par
+so it's the probability of this difference\par
+between these two sets and because X less than or equal to a\par
+is a subset of X less than or equal to b,\par
+when a is less than or equal to b,\par
+then we can write this again, using the subtraction rule,\par
+as the probability of X less than or equal to b\par
+minus the probability that X is less than or equal to a,\par
+okay, so we can also express the probability\par
+of any finite interval as the difference of this function,\par
+so it's going to be F of b minus F of a,\par
+so if we calculate it once, F of a,\par
+then F of X or X, then we now can calculate\par
+the probability of any interval\par
+just by simple subtraction, right, okay.\par
+So to summarize, we talked about\par
+cumulative distribution functions,\par
+we defined them, we saw some of the properties\par
+and we saw that they are useful\par
+to calculate interval probabilities\par
+and next time, we're going to talk about expectations.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Can the cumulative distribution function of a non-constant discrete random variable be continuous?\par
+\par
+\tab\par
+Yes\par
+\par
+\tab\par
+No\par
+}
+ 

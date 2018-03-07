@@ -1,0 +1,629 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+In the last lecture we talked\par
+about the cumulative distribution function\par
+and now we would like to move on\par
+and calculate expectations.\par
+This picture and images that we'll get to\par
+later on are taken from the Daily Mirror.\par
+So, first of all let's see,\par
+when we have random variables,\par
+let's see what matters, what we care about.\par
+So, what are important properties of random variables?\par
+Of course we talked about probabilities\par
+but we are looking for, maybe if you were looking\par
+at some numbers that characterized\par
+a random variable, what would you like to know?\par
+One important property of the random variable\par
+is the range.\par
+What are the minimum and maximum\par
+values of X that you might see?\par
+For example, if you take temperatures\par
+in different locations, what is\par
+the lowest temperature that you might see,\par
+what is the highest temperature that you'll see.\par
+Or if you look at a particular company,\par
+what is the lowest salary that they offer,\par
+what is the highest salary they offer.\par
+That's an important feature,\par
+an important property of the random salary\par
+that they give to different people.\par
+So, we can define X min to be the minimum\par
+of all elements in the sample space\par
+that have positive probability, for example.\par
+So we can call it X min.\par
+It's the lowest element that has positive probability.\par
+And we can define X max similarly to be\par
+the largest element in the sample space\par
+that has positive probability.\par
+So these are important features.\par
+Or we can look at the average value\par
+of the random variable and again,\par
+you could have different definitions.\par
+So, for example, you could look\par
+at the average temperature in a city\par
+or the average salary.\par
+And you can have different definitions for average.\par
+You can look at the average of the range.\par
+So you can, for example, define it to be\par
+the average of X min and X max.\par
+So you can ask maybe what is the average\par
+of the minimum temperature and the maximum temperature,\par
+sum and divide by two.\par
+Or you can ask what is the arithmetic average\par
+of the elements, the element average.\par
+So, you can say let's look at all elements\par
+in omega, let's add them up,\par
+divide by the number of elements in omega,\par
+and that's going to give us an average\par
+of all the elements.\par
+Or you can do this, probably you might want\par
+to do it only for the elements you care about,\par
+the elements that have positive probability,\par
+so you might want to do it.\par
+Just sum of all elements that have positive probability\par
+and then divide by their number.\par
+So looking just at the average of the elements\par
+with positive probability.\par
+Okay, so these are a couple of, two\par
+or three definitions of what you might mean by average.\par
+Let's see what we are going to mean.\par
+We're going to consider this sample mean.\par
+So to see what we'll care about,\par
+let's look at an example.\par
+Suppose that the sample space consists\par
+of the integers from zero up to 100,\par
+and suppose only three elements\par
+have positive probability.\par
+So zero has probability .8,\par
+so this zero here has probability .8.\par
+90 has probability 10%.\par
+And 100, that's the highest possible value\par
+has probability 10%, and 90 has 10%.\par
+And everything else has zero probability.\par
+And notice that these probabilities sum to one.\par
+So everything else cannot happen.\par
+Now, if we look at the average of the range,\par
+remember this was defined as the average\par
+of the minimum value we might see\par
+and the largest we might see,\par
+that's going to be zero plus 100 over two.\par
+X min plus X max over two,\par
+which is zero plus 100 over two, which is 50.\par
+So if we look at the average of the range, we get 50.\par
+And if we look at the element average,\par
+and I'm going to calculate it here\par
+for the positive probabilities,\par
+because there're only three of them,\par
+so that's going to be equal to, the elements\par
+with positive probabilities are zero, 90 and 100,\par
+so that's going to be zero plus 90 plus 100\par
+divide by three, 190 divide by three is 63.3.\par
+Okay, 333.\par
+So these are the two values that we calculated,\par
+but what we look at is different,\par
+and the reason is as follows.\par
+Suppose you take 10 samples.\par
+Remember that zero has probability 80%,\par
+90 has probability 10%, 100 has probability 10%.\par
+So if you take 10 samples,\par
+it's a typical sample that you'll see.\par
+Maybe you'll get eight out of the 10 will be zeros\par
+because zero has probability 80%,\par
+and then one will be 90, and one will be 100\par
+because 90 and 100 have probability 10%.\par
+So if you do that and you calculate,\par
+you see that the average, or the sample mean,\par
+is going to be eight times zero\par
+plus one times 90 plus one times 100,\par
+all this divided by 10, which is 190\par
+divided by 10, which is 19.\par
+So see that the average is 19,\par
+which is much less than 50\par
+and definitely much less than 63.3.\par
+And this is more representative\par
+of what we'll observe and also more indicative.\par
+Because maybe we don't care that,\par
+like once in a blue moon, the temperature will be high.\par
+If most of the time, if essentially all the time\par
+the temperature is low we want to take an average\par
+that's closest, that reflects that fact,\par
+and we want to give the values that happen\par
+very seldom lower probability.\par
+So what we do is we take the weighted average,\par
+we will weigh things by their probability.\par
+So this is what we are going to try\par
+and quantify, what we will quantify,\par
+it's what we expect the sample mean to be\par
+and we call it therefore the expected value.\par
+So let's do a couple of examples.\par
+Suppose you have a fair die, like this one,\par
+and we roll it n times when the number\par
+of samples n goes to infinity,\par
+so we have like arbitrary large number of samples.\par
+And we want to see what is the average\par
+of the observed values, and we do it\par
+for a large number of values.\par
+Because if we did a fixed number of values,\par
+like for example five, we'll get some random value\par
+that will change, but if we do it\par
+arbitrary large number of values,\par
+we'll get some fixed number.\par
+So here are the probabilities of this,\par
+so we have a uniform distribution from one up to six,\par
+it's not written here, with the probabilities one over six,\par
+and therefore when we roll the sample\par
+and the die n times when n is very large,\par
+each value will appear roughly n over six times.\par
+And so the average is going to be,\par
+n over six times we'll get one\par
+plus n over six times we get two,\par
+and so on up to n over six times we get six.\par
+Altogether we have rolled the die n times\par
+so we need to normalize by n.\par
+When you do it the n's will cancel here and here,\par
+and then we can move six to the denominator,\par
+so what we'll get is jus one plus two up to six\par
+divided by six.\par
+Again the n's canceled and six we moved here.\par
+And one plus two plus three up to six,\par
+this is the arithmetic sum\par
+that we have done many times.\par
+That's going to be, we have six values\par
+and the average is one plus six over two.\par
+So we have this one over six, and then\par
+one plus six times six over two.\par
+The sixes cancel so we get seven over two, which is 3.5.\par
+And that is what we'll expect to see\par
+and that makes a lot of sense\par
+because the values are one up to six\par
+and we see that one in six, everything is symmetric here,\par
+so one and six will average to 3.5,\par
+two and five will average to seven over two again,\par
+and three and four will average to seven over two again.\par
+So everything averaged just to 3.5,\par
+which is the middle point and that's.\par
+On the other hand, if we look at our tetrahedral die,\par
+then the sides are one, two, three and four.\par
+The probability, as we recall, is .1, .2, .3, .4.\par
+They sum to one as they should.\par
+So if we roll a die a large number n times,\par
+and these are the probabilities shown here,\par
+.1 up to .4, roll the die a large number of times n,\par
+then we expect to see 10%, .1n,\par
+or n over 10 times, we expect to see one,\par
+.2n times we expect to see two, and so on.\par
+And these will sum again to n.\par
+And therefore, when we calculate the average\par
+we'll see, .1n times we'll see one,\par
+and .2n times we'll see two, and so on.\par
+We sum them up.\par
+We divide by n's, the n's will cancel\par
+and what we'll get is 0.1 times one\par
+plus 0.2 times two, and so on,\par
+and what does that sum to?\par
+That sums to 0.1 plus 0.4,\par
+that's 0.5 so far,\par
+plus 0.9, that's 1.4.\par
+I'm sorry.\par
+1.4 and then plus 1.6 here,\par
+and that's going to give us three.\par
+And notice that this time if we just calculate\par
+the arithmetic average of these numbers,\par
+we would get, I apologize.\par
+This should be one up to four, not zero up to three.\par
+We'll get one plus two plus three plus four\par
+divided by four, we're just adding these,\par
+one plus two plus three plus four divided by four,\par
+and that's going to be 2.5.\par
+Because these sum to 10, divide by four, 2.5.\par
+So we see that now what we expect to see\par
+is three, which is larger than 2.5,\par
+and that's because this probability\par
+is skewed to the right,\par
+larger elements have higher probabilities.\par
+So we don't expect to see the average,\par
+we expect to see more than the average,\par
+in this case more than 2.5.\par
+We expect to see three.\par
+Again let's see what is expectation.\par
+So if n goes to infinity, if the number of samples\par
+goes to infinity, then we expect x to appear\par
+px times n times.\par
+And therefore we calculate the average.\par
+Then the summing of all elements x,\par
+each one appears, x appears Px times n times.\par
+Like this.\par
+And then for each of those we add the value of x\par
+so multiply it by x, and we normalize by n.\par
+The n's cancel and the average is therefore\par
+going to be summation of P of x times x.\par
+And we denote this value by this E of x,\par
+which we call the expectation.\par
+So this here is what we expect to see\par
+and we call this the expectation of x,\par
+or the mean of x.\par
+So the expectation or mean of x, as I've just shown,\par
+is just summation of P of x times x.\par
+Again, this is a very common feature\par
+or common property of a distribution,\par
+so it has a couple of names.\par
+First of all, people instead of writing E of x,\par
+they sometimes write EX,\par
+and they also call it mu x, or mu.\par
+All of those are synonyms.\par
+And they're all called expectation\par
+or the mean of the random variable x.\par
+And notice that the mean, mu, or mu x,\par
+whatever you call it, is not random.\par
+So even though it's called E of x,\par
+it's not some random number.\par
+Given the distribution is a fixed number,\par
+it's a constant.\par
+It's a property of the distribution\par
+as we're going to see.\par
+So let's go over the example\par
+that we have seen and we'll use this formula\par
+to calculate the expectation and see\par
+that we get the same value that we got\par
+by reasoning over what happens\par
+when you get a large number of samples.\par
+So first the fair die again.\par
+It ranges from one up to six,\par
+each has probability one over six.\par
+So the expected value is going to be\par
+summation from one up to six\par
+of the probability of i times i.\par
+The probability of i is one over six.\par
+So it's summation for i going from one up to six\par
+of one over six times i.\par
+One sixth goes out and we get one plus two up to six,\par
+and that's going to be the same calculation\par
+that we had before, one sixth\par
+times one plus six times six over two.\par
+The sixes cancel and we get seven over two or 3.5,\par
+which agrees with what we had before.\par
+And again it's not surprising because\par
+if we just calculated this to be,\par
+we just normalized the n.\par
+So we removed the n and now we can just\par
+do the calculation just mathematically\par
+from this definition.\par
+We don't need to have multiply by n or divide by n.\par
+If we look at the four-sided die,\par
+then the expected value of X is summation\par
+of Pi times i, which is 0.1 times one and so on.\par
+That's the same calculation, exact same calculation\par
+that we did before and that gives us three\par
+like we got before.\par
+Again, it shows that this calculation\par
+agrees with our intuition\par
+for what the expected value should be.\par
+Alright, and then let's look at three coins.\par
+So we toss a coin three times.\par
+X is the number of heads.\par
+What is the expectation?\par
+So X, as we have said before,\par
+it's zero with probability one eighth,\par
+one with probability three eighths,\par
+two with probability eighths,\par
+and three with probability one eighth.\par
+And here is the distribution.\par
+If we calculate summation of P of x times x,\par
+it's going to give us one eighth times zero,\par
+one eighth times zero, plus three eighths times one,\par
+plus three eighths times two,\par
+plus one eighth times three,\par
+and we calculate it and get 1.5.\par
+So because we get three eighths\par
+plus six eighths plus three eighths,\par
+which should give us 12.\par
+We have six plus six.\par
+So this is 1.5 and again, it's not surprising\par
+because the heads, the number of heads\par
+ranges from zero to three, zero, one, two, three,\par
+and it's symmetric, and so on average we expect\par
+to see this value in the middle, which is 1.5.\par
+The number of times we get zero and three\par
+will average to 1.5, one and two will average\par
+to 1.5, and so we get to see 1.5.\par
+Alright, so this again agrees with our intuition.\par
+Now, I want to say something about the expectation\par
+of some simple types of random variables.\par
+So first uniform variables.\par
+So if X is uniform over omega, for example here,\par
+has the same probability for all values in omega,\par
+then p of x is one over the size of omega,\par
+the size of the sample space, and the expected value\par
+is summation of p of x times x,\par
+and summation of one over the size of omega times x.\par
+One over omega comes out.\par
+So it's one over omega times summation of x.\par
+In other words, the expected value of x\par
+is just the arithmetic average\par
+of all elements in omega.\par
+And if we go back to the die, the expected value\par
+was one plus two up to six divided by six,\par
+which is 3.5, and it's just the arithmetic average\par
+of all the possible outcomes.\par
+That's because the distribution is uniform.\par
+Another property that's helpful in calculating\par
+the expected value is symmetry.\par
+A distribution p is symmetric around point a\par
+if all x positive x, the probability of a plus x\par
+is the same as the probability of a minus x.\par
+And if p is symmetric around point a,\par
+then the expected value of X is a.\par
+So here is an example that we have seen before.\par
+Number of heads in three coins.\par
+Here is the graph.\par
+You can see that this graph is symmetric around 1.5,\par
+namely the probability of 1.5 plus .5\par
+is the same as the probability of 1.5 minus .5.\par
+The probability of 1.5 plus 1.5, namely three,\par
+is the same as the probability of 1.5 minus 1.5,\par
+which is zero.\par
+So it's symmetric around this point.\par
+So when we average zero and three,\par
+they have the same probability,\par
+they'll give us 1.5.\par
+If we average one and two,\par
+they have the same probability.\par
+So on average they again give us 1.5.\par
+So every pair here, zero and three,\par
+and one and two, gives us 1.5,\par
+the average is going to be 1.5,\par
+and that could be shown in general.\par
+And so, it's symmetric around 1.5,\par
+so the average is going to be,\par
+or the expected value is going to be 1.5, as we saw.\par
+Let's see some properties of expectation.\par
+The expected value of x, as we have said,\par
+despite its notation, so it looks like\par
+it's a function of x, it's a function\par
+of a random value, which should be random.\par
+Despite this notation it's not random,\par
+but it's some fixed number,\par
+it's a property of the distribution.\par
+So the expected value of X is just a property\par
+of distribution, it's a fixed number\par
+as I keep emphasizing.\par
+The reason, by the way, we write it\par
+as the expected value of X, not expected value of P,\par
+is because this will allow us to nicely write things,\par
+for example, like the expected value of X plus Y,\par
+the expected value of X times Y.\par
+So it's going to be convenient to write it like that.\par
+So for example, the expected value of X,\par
+if X was the number of heads in three flips, was 1.5.\par
+It's some fixed number, it's not a random value.\par
+Furthermore, the expected value of X\par
+is always between the lowest value\par
+that has positive probability and the largest value\par
+that has positive probability.\par
+So for example here, the values are between zero and three,\par
+so the expected value of X\par
+is going to be somewhere between zero and three.\par
+And when is it going to be equal to either of them?\par
+It's going to be equal if X is a constant, is c.\par
+So it always gets the same value,\par
+so the min and the max are c,\par
+and then the expected value of X\par
+is also going to be this c.\par
+For example here, the expected value of X\par
+is always going to be between zero and three.\par
+Now, as we said, if X is a constant,\par
+namely X is equal to c,\par
+then the expected value of X is c.\par
+So if X is always the value five,\par
+then the expected value of X is five.\par
+And that also implies that the expected value\par
+of the expected value of X is the expected value of X,\par
+and that's because the expected value of X,\par
+this number here, is just a constant,\par
+just E of X, which is a constant.\par
+So the expectation of a constant is this constant.\par
+Another question that people sometimes ask\par
+is whether the expectation is expected.\par
+In other words, let mu, or EX,\par
+be the expected value of X.\par
+Then do we expect to see it?\par
+Do we expect to see this value mu?\par
+In other words, is the probability of mu,\par
+the probability of this expected value, high?\par
+So for example, if someone told you\par
+that the expected value of a random variable is three,\par
+should you expect to see the value three\par
+coming up many times?\par
+And as we'll see, not necessarily.\par
+In fact, we may never see the expected value.\par
+So here is an example.\par
+X is distributed over zero, one,\par
+and let's say the probability of zero\par
+equals the probability of one, which is one half.\par
+So here is the distribution.\par
+This is X, it's either zero or one,\par
+and p of x is one half for both zero and one.\par
+Then what is the expected value of X?\par
+The expected value of X is going to be\par
+zero times p of zero plus one times p one,\par
+which is zero times .5 plus one times .5.\par
+This gives us zero, and so we're left with .5.\par
+So this is the expected value here, it's .5,\par
+and it also makes sense because this distribution,\par
+there're equal values here, so it's symmetric around a half,\par
+and therefore the expected value should be a half.\par
+But half will never happen because we'll always see\par
+either zero or one, so we'll never see half.\par
+So why do we say it's the expectation?\par
+Because if we take many samples\par
+and we take the average,\par
+then the average is going to be half.\par
+So that's our definition of the expected value.\par
+It's not the number that is most likely to be seen.\par
+Rather it's the average of all the values\par
+we will see when we take a very large sample.\par
+So to conclude this slide, the expected value of X\par
+is the average of a large sample,\par
+and it's not necessarily a likely number to see,\par
+and sometimes it may not be observed at all,\par
+like in this case.\par
+I also want to discuss two exceptional cases.\par
+So first the expectation can be infinite.\par
+If you have an infinite distribution,\par
+a distribution with infinitely many values,\par
+then the expectation can be finite or can be infinite.\par
+So here is an example where it's infinite.\par
+Observe that when you sum one over i squared\par
+from one to infinity, that will give you\par
+pi squared over six.\par
+This is actually called the Basel problem\par
+and it's showing that this is the right value,\par
+is one of the things that made Euler famous.\par
+I don't think we want to prove it now,\par
+even though the proof is not that long,\par
+but maybe longer than we want to do.\par
+Let's just take it as a fact.\par
+The summation of one over i squared\par
+is pi squared over six.\par
+So that means that if we take six over pi squared\par
+times one over i squared, that's going to give us one.\par
+And that means that if we let Pi\par
+be six over pi squared times one over i squared\par
+for i going from one to infinity,\par
+then this is a distribution,\par
+the probability distribution\par
+over the positive integers.\par
+And here is what it looks like.\par
+It starts from one to roughly .6\par
+and then goes down like one over i squared.\par
+Like that.\par
+Now, if we calculate the expected,\par
+so this is the value distribution.\par
+But now if we calculate the expected value of X,\par
+then it's going to be summation of i times p of i.\par
+It's always summation of i times Pi.\par
+So it's this sum, which is going to be equal to,\par
+so we get summation of i times six over pi squared\par
+times one over i squared.\par
+But six over pi squared comes outside,\par
+and i divided by i squared is one over i.\par
+So we have six over pi squared from here,\par
+and then we have i times Pi,\par
+which will give us just one over i.\par
+So it's six over pi squared\par
+times summation of one over i.\par
+This sum, as we know as that harmonic sum,\par
+is going to be infinite.\par
+So this gives us an infinite value.\par
+So we see that this is a distribution\par
+with an infinite expectation and that means\par
+if we take many samples, then the average\par
+will actually go to infinity.\par
+And you can also have one of those\par
+with undefined expectations.\par
+For example here, if we take this distribution,\par
+which is the distribution we had in the previous slide,\par
+but we just duplicate it on both sides,\par
+so we just half it on the right\par
+and half it on the left, like that,\par
+then the expected value is going to be\par
+infinity that we get from the right side\par
+and infinity from the left, and you get\par
+infinity minus infinity, which is undefined.\par
+So here's the distribution.\par
+It goes from here and continues actually\par
+to infinity on the right and continues\par
+to infinity to the left, and notice\par
+it's half of what we had before.\par
+So we get infinity if we sum these i times Pi,\par
+we get minus infinity when we sum these i times Pi,\par
+and we subtract, we get infinity minus infinity,\par
+which is undefined.\par
+If we look at the average for a large number of samples,\par
+it will oscillate between plus infinity and minus infinity.\par
+It will go up and down and so on.\par
+Now, since we are talking about expectation\par
+I thought maybe I'll mention something\par
+which is actually called expectation,\par
+which is life expectancy, and that's\par
+what you expect a person to live,\par
+the length of time you expect a person to live.\par
+Again, as we said, expected value is one\par
+of the most important aspects of a distribution,\par
+what is the average that we are going to get.\par
+So people talk not about just like\par
+who is the oldest person in life\par
+but also, maybe more importantly,\par
+what is the average life span of a person.\par
+So here's a graph that shows the life expectancy\par
+since the 1960s, I believe, till 2045,\par
+that's what they predict it's going to be.\par
+And it's shown here for the world in general,\par
+here in blue, and for different continents,\par
+like Africa, Asia, and so on,\par
+more developed nations, and so on.\par
+And you can see actually it's quite interesting.\par
+For example, if we look at Africa,\par
+then if you went not that far long back,\par
+if you went to 1960s, the life span,\par
+the expected value, the average life span\par
+of a person was just 40 years old.\par
+And now in just what, 50 years, or 55 years,\par
+it has gone to almost 70.\par
+So it almost doubled in this life span.\par
+Should we redo this part?\par
+- [Moderator] No, because it was on there\par
+so you can just go back\par
+to what you were saying.\par
+- [Narrator] Okay, so just continue.\par
+- Yes. - Okay.\par
+And even if you look at the developed nations,\par
+you'll see that the life span went\par
+from roughly 65 to now over 80.\par
+So the expected life span increased by a lot.\par
+Here's a graph that shows, or an image that shows\par
+expected values not just of life span\par
+but of different things.\par
+We can see here, this is again\par
+from the Daily Mirror from this year.\par
+This is Mr Average in 1967\par
+and this is Mr Average 50 years later, 2017.\par
+Life expectancy, as we said,\par
+went from 68 years to 81 years.\par
+An increase of 13 years, that's quite significant.\par
+And then it shows you also shoe size\par
+went up by a lot, from seven to nine.\par
+And height.\par
+This is stones and inches.\par
+Again went up you can see by two and a half inches.\par
+Oh this is actually feet and inches, sorry.\par
+Went up by two and a half inches,\par
+which is quite a bit.\par
+And waist size has also gone quite a bit\par
+and you can view this.\par
+So what we have done in this lecture\par
+is we defined what we expect the average value\par
+for random variables, what we expect to see\par
+when we take a large sample.\par
+So we called it the expectation.\par
+We gave the formula for this.\par
+We showed how to calculate it\par
+for different random variables.\par
+And what we are going to do next time\par
+is we're going to look at expectations\par
+of functions of random variables.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Each time you play a die rolling game you must pay $1. If you roll an even number, you win $2. If you roll an odd number, you lose $1. What do you expect to happen in the long run?\par
+\par
+\tab\par
+I will leave a winner!\par
+\par
+\tab\par
+I will leave with less money than I started with.\par
+}
+ 
