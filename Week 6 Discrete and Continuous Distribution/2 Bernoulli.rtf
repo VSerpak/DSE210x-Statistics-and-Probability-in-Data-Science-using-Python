@@ -1,0 +1,386 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+So in this lecture, we're going to start talking\par
+about the first of the families\par
+of distribution that we're going to present,\par
+and we'll talk about the Bernoulli Distributions.\par
+And what we're going to show is we're going\par
+to mention that they are the simplest\par
+non-constant distributions, and they provide the foundation\par
+of many other collections of distributions.\par
+And then we'll talk about the mean, variance,\par
+and standard deviation, and I'll talk about how they can\par
+be repeated to provide more interesting random variables.\par
+And the distributions are obviously named after Bernoulli,\par
+Jacob Bernoulli, lived in the seventeenth century.\par
+He came from a very prosperous family,\par
+and in this family everyone had a destiny,\par
+something that they were supposed to do,\par
+and he was supposed to study theology.\par
+And, indeed, he did that, but he actually liked math,\par
+so he also studied math on the side,\par
+and, in fact, once he finished studying math\par
+he forgot theology and became a mathematician.\par
+He worked on many problems.\par
+In particular, he is known for many contributions\par
+to calculus, and integration, and so on.\par
+And one of the things that he did was actually\par
+to find what's called the Euler number,\par
+which you all know is "e."\par
+He was looking at the growth of interest rate,\par
+if the interest rate is paid yearly,\par
+or monthly, or weekly, and he said, "What if it gets paid\par
+"every 1/n fraction of the year,\par
+"and you get it "n" times."\par
+And he said, "I want to see if that will tend to a limit."\par
+And he showed yes, that it tends to a limit,\par
+which we called "e" after Euler.\par
+But of course, he was the one who first discovered it,\par
+so maybe the "e" should really have been "b."\par
+And he is best known for his work on probability.\par
+He wrote a book called, "Ars Conjectandi."\par
+It's "The Art of Conjecture," in which he combines many\par
+of the theories that were known at the time\par
+about probability and established some new results.\par
+And most importantly, he discovered the first law\par
+of large numbers, and as you can see here\par
+in this Swiss stamp named in his honor,\par
+it mentions the law of large numbers,\par
+that if you take a sum of random variables,\par
+normalize them, it will converge to its expectation,\par
+as you see here, and you can also see it\par
+in the graph that will converge to a number,\par
+which is the expectation, and we'll actually talk\par
+about the law of large numbers in a future lecture.\par
+And one other thing that he did was that he mentored\par
+his younger brother, called Johann.\par
+Notice, he passed away at age fifty, sadly.\par
+Johann was about seventeen years younger than him,\par
+and Jacob Bernoulli mentored him and Johann was destined\par
+to be a physician, but, maybe thanks to Jacob Bernoulli,\par
+actually studied mathematics on the side\par
+and became mathematician as well,\par
+and between the two of them and the third brother,\par
+they actually started one of the largest and best known\par
+mathematical dynasties that we know of.\par
+Okay. So what is the Bernoulli Distribution?\par
+Actually, it's the simplest non-trivial distribution.\par
+So perhaps the simplest random variable distribution\par
+is the one that takes one value, for example: five.\par
+The random variable that's always five.\par
+And this is a constant; every time you try this random\par
+variable, you get the same value five.\par
+So it's always the same, so as far as distributions go,\par
+it's very uninteresting; it's trivial.\par
+So the simplest non-trivial random variable will have\par
+instead of one value, it will have two values.\par
+And you can say, "Which values should it have?"\par
+And the simplest values would be, of course,\par
+if you take like a circle and a line.\par
+In other words, zero and one.\par
+And that's the Bernoulli random variable.\par
+So you can think of it as a coin\par
+with values of zero and one, so if you want,\par
+it's a binary, or a digital, coin.\par
+And so, digital coins have become very popular these days\par
+and have this symbol "B", and according to us,\par
+it's actually named after Bernoulli.\par
+Bernoulli coin because he maybe invented the bit,\par
+or the binary coin.\par
+So what is, again, the Bernoulli Distribution?\par
+I will notate by "B" "p",\par
+and "p" is some number between zero and one.\par
+It's the bias, call it the bias of the coin.\par
+And it takes two values, zero and one.\par
+And zero is called failure\par
+and one is sometimes referred to as success.\par
+And the probability of one is "p", that's the "p" here,\par
+and the probability of zero is one minus "p".\par
+And one minus "p" instead of this thing\par
+that looks a little long; sometimes we'll write\par
+"p" bar, or "Q", so there'll be two ways\par
+of writing one minus "p".\par
+And here is a graph; so here is Bernoulli .7,\par
+and you see that it takes the value one\par
+with probabilities of .7,\par
+and it takes the value zero probability, 0.3.\par
+And if you look at the notebook,\par
+then you'll see that you can create the Bernoulli "p",\par
+or see how it behaves and sits on properties\par
+for different values of "p".\par
+And the question we have, of course, is will it add,\par
+namely do the probabilities sum to one?\par
+And you see that in this, the probability of zero\par
+plus the probability of one is (1-p)+p,\par
+which is one. So yes, it adds.\par
+If "x" is a random variable that's distributed\par
+according to "B" "p", then we denote it like that.\par
+It's called the Bernoulli random variable,\par
+or Bernoulli coin,\par
+or the Bernoulli experiment, or Bernoulli trial.\par
+So all these are synonyms for random variable "x"\par
+which is distributed Bernoulli "p".\par
+So it's called Bernoulli random variable, or Bernoulli coin,\par
+Bernoulli experiment, or Bernoulli trial.\par
+So, of course, you ask, "Who cares about distribution?\par
+"Let's just take two values,\par
+"and maybe two values between zero and one."\par
+There are actually many reasons to look at distributions.\par
+First of all, it's the binary version of complex events.\par
+So, for example, if you have a hundred products\par
+of which 80 are good and 20 defective,\par
+and you pick one of them.\par
+So let's say in the store you have these items,\par
+pick one of them, then, whether it's good or not,\par
+is a Bernoulli .8 random variable.\par
+Or if you want something where you don't pick\par
+from a collection, or just pick something\par
+at random if you have a family\par
+and you ask whether the next child will be a boy,\par
+that's a Bernoulli, roughly, .5 random variable.\par
+The Bernoulli random variable\par
+also generalizes two more complex variables.\par
+We have two values here, but you can clearly think\par
+of generalizing from two more values.\par
+So for example, if a patient has one of three diseases.\par
+Have the probability, let's say, "p", "Q", and "R",\par
+and that's a simple generalization of this distribution\par
+where the probabilities are "p" and "Q".\par
+Also, you can repeat Bernoulli trail,\par
+and then count, for example, the number of successes,\par
+and once you do that, then you get\par
+to many important distributions\par
+that we're all going to discuss.\par
+For example, the binomial, the geometric,\par
+the poisson, and the normal distributions.\par
+And all of them will be based\par
+on this Bernoulli Distributions.\par
+So in some sense, the Bernoulli Distribution is the mother\par
+of all distributions, of many distributions.\par
+So the answer to who cares\par
+about two values is actually everyone.\par
+Alright. So, let's see what the mean\par
+and the standard deviation\par
+of a Bernoulli random variable are.\par
+So first, the mean. So if "x" is distributed Bernoulli "p",\par
+then the probability of zero is one minus "p", as we said,\par
+and the probability of one is "p".\par
+And the expected value of "x" is summation\par
+of "p" of "x" times x,\par
+which is going to be (1-p), that's the probability\par
+of zero times zero, plus the probability of one,\par
+which is "p" times one.\par
+And when you add them, you just get "p".\par
+And so if "x" is distributed Bernoulli 0.8,\par
+then the expected value of "x" is 0.8, as we see.\par
+So the expected value of Bernoulli "p" is just "p".\par
+The expected effects is "B" distributed Bernoulli 0.8.\par
+Its expected value is 0.8.\par
+And notice that for Bernoulli random variable,\par
+the expected value of "x" is just\par
+the probability that they're one.\par
+And this should look familiar\par
+to you because this distribution is so simple\par
+that we have actually, of course, encountered it before,\par
+but now we're just talking\par
+about these things a little more systematically.\par
+This expected value reflects the fraction\par
+of times that we expect to see the value\par
+of one if we flip this Bernoulli coin many times.\par
+Next, let's talk about the variance.\par
+So if "x" is distributed Bernoulli "p",\par
+as we just saw the expected value of "x" is "p".\par
+And what is the variance?\par
+So, as we mentioned before,\par
+there are two ways of doing it.\par
+And we can do the easy way,\par
+so the easy route is to observe that\par
+if "x" is Bernoulli "p",\par
+"x" takes two values, either zero or one.\par
+And now note that zero square is zero,\par
+and one square is one.\par
+And therefore, for Bernoulli random variable,\par
+"x" squared is always "x".\par
+And therefore, the expected value\par
+of "x" squared is the same as the expected value of "x",\par
+because "x" squared is "x" and the expected value\par
+of "x" as we saw in the last slide is "p".\par
+And therefore, the variance of "x"\par
+as we know is the expected value\par
+of "x" square minus the expected value of "x",\par
+the whole thing square.\par
+And the expected value of "x" square,\par
+as we just said, is the expected value of "x",\par
+which is "p", and the expected value\par
+of "x" squared is "p" squared.\par
+So this is "p" minus "p" squared, or p(1-p),\par
+which we can write as "pq". So that's the variance.\par
+And the standard deviation is just the square root of that,\par
+so it's the square root of "pq".\par
+Now let's look at the expectation and variance\par
+of a few Bernoulli "p" random variables\par
+for a few values of "p".\par
+Here we'll have "p", the expected value\par
+of the variance, and the standard deviation.\par
+So if "p" is zero, if he have Bernoulli zero,\par
+then the expected value of zero\par
+because we'll always see the value zero.\par
+The variance is zero, as you can see here\par
+from this formula; it's zero times one.\par
+It's zero, but we always know because we always get zero,\par
+so there's no variance there and the standard deviation\par
+means they'll follow a zero, is also zero.\par
+If "p" is one, that means that we have\par
+a random variable that always turns up one.\par
+The expected value or the mean is going to be one.\par
+There's no variation, therefore, the variance is zero,\par
+which we can also see here because "p" is one,\par
+so it's one times zero.\par
+And the standard deviation is also zero.\par
+And if we have Bernoulli half,\par
+then half the time we get zero, half the time we get one.\par
+The mean is half, which we also get from here.\par
+The expected value of "x" is "p", which is half.\par
+The variance is "p" times "q",\par
+half times half, which is a quarter.\par
+And the standard deviation is square root\par
+of a quarter, which is 1/2.\par
+And if you plot the standard deviation as a function of "p",\par
+then you'll get this graph.\par
+So here we have "p" and here\par
+we have sigma, the standard deviation.\par
+You can see when "p" is zero,\par
+the standard deviation is zero, and when "p" is one,\par
+the standard deviation is also zero.\par
+When "p" is half, the standard deviation is half.\par
+And you can see here that the highest "Bp" varies the most.\par
+The highest variability of a Bernoulli "p" random variable\par
+is when "p" is half, which is not surprising.\par
+So if you have a coin and it's unbiased,\par
+and the probability's half, you get the most randomness\par
+and this is maybe a formal way of saying that.\par
+Alright.\par
+When doing random variables,\par
+we said maybe not so interesting. Here's one.\par
+They get more interesting when you have several\par
+of them, as we have here.\par
+Much of the importance of Bernoulli "p" random variable\par
+comes from when you take multiple trials,\par
+multiple Bernoulli variables.\par
+And the most common type of multiple trials is when\par
+they're independent, which we denote as this symbol\par
+as we have said before.\par
+Now, again so "p" is probability between zero and one.\par
+And we have "x" one, "x" two, and "x" three.\par
+Here are three random variables,\par
+and each of them is Bernoulli "p"\par
+and they are independent of each other.\par
+Okay, then remember that "q" is one minus "p".\par
+So we can ask what is the probability\par
+that we observe one one zero.\par
+Then the probability observe one is "p",\par
+and the next one is also "p" because of that,\par
+and the third one is zero, and these are independent,\par
+so each of those happened with independent probability.\par
+So the probability will see one one zero is "p"\par
+times "p" times "q", or "p" squared "q".\par
+Notice that this is not the only sequence\par
+whose probability is going to be "p" squared "q".\par
+If we have one zero one, or zero one one,\par
+both of them also have probability\par
+which is "p" times "q" times "p", or "p" squared "q".\par
+Okay, so all these sequences will have\par
+the same probability "p" squared "q".\par
+And in general, if we have "n" Bernoulli coins flips,\par
+"x" one up to "xn", each of them is Bernoulli "p",\par
+again independently, then if we let "xn"\par
+be the collection of outcomes,\par
+so it's "x" one, "x" two, up to "xn".\par
+Some sequence of "n", zeroes, and ones.\par
+Then we're going to let "n" zero be the number of zeroes,\par
+and "n" one be the number of ones in this sequence.\par
+Okay, then the probability of observing "x" one\par
+up to "xn" is going to be "p" to the "n" one.\par
+It's "p" to the number of ones times "q"\par
+to the number of zeroes, and zero.\par
+For example, if we ask what is the probability\par
+of one zero one zero one, here "n" is five,\par
+it's going to be "p" to the "n" one\par
+times "q" to the "n" zero.\par
+In this particular case is going to be "pq"\par
+because we see three ones times "q" squared\par
+because we see two zeroes.\par
+So in general, it's going to be "p" raised\par
+to the number of ones, here "pq",\par
+times "q" raised to the number of zeroes,\par
+in this case "q" squared.\par
+And we can look at some typical examples.\par
+So for example if we have seen\par
+the distribution in typical sequences.\par
+So if we have Bernoulli zero,\par
+then typical sequence we'll see is just all zero sequence.\par
+And we can call it constant zero sequence.\par
+And what is the probability of this sequence?\par
+Is one to the ten, which is one\par
+because if you have Bernoulli zero, and you take "n" sample,\par
+you'll always see ten zeroes.\par
+"B" one, you'll always see one one one,\par
+or the constant one sequence.\par
+The probability is one to the tenth, which, again, is one.\par
+A little more interesting, if you have Bernoulli 0.8,\par
+then a typical sequence that you'll see is\par
+something like what you see here that has\par
+eighty percent ones and twenty percent zeroes.\par
+And its probability is going\par
+to be 0.8 to the eight, if that is the sequence.\par
+0.8 to the eight, like in this case of ten trials,\par
+of which eight of them are ones times 0.2 to the two.\par
+So notice that even though this is what you expect to see,\par
+this is not the most probable sequence.\par
+The most probable sequence is one one one one,\par
+that has probability 0.8 to the ten,\par
+which is larger than that.\par
+But in fact you will not likely\par
+to see the most powerful sequence,\par
+you will likely to see one of these sequences.\par
+And we'll talk about it again\par
+in one of the next few lectures.\par
+And then if you have Bernoulli .5,\par
+then you expect to see a sequence\par
+with roughly half zeroes and half ones.\par
+And the probability of such sequence is 1/2 to the ten.\par
+And this is just a fair coin flip.\par
+Okay, so to summarize:\par
+we talked about the Bernoulli Distribution;\par
+we said it's the simplest non-constant distribution.\par
+If "x" is Bernoulli "p", then "p" is\par
+some probability between zero and one,\par
+the values of zero and one,\par
+the probability of one is "p",\par
+the probability of zero is one minus "p"\par
+which we denote by "q" or "p" bar.\par
+We said the expectation of the mean is "p",\par
+the variance is "pq", the standard deviation\par
+is the square of "pq",\par
+and we said that that's the foundation.\par
+It's a very simple distribution but\par
+it's a foundation of many other distributions\par
+that we're going to talk about in the next few lectures.\par
+And speaking about that, in the next lecture,\par
+I'm going to discuss the binomial distribution.\par
+See you again.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Are two uncorrelated Bernoulli random variables independent?\par
+\par
+\tab\par
+Yes\par
+\par
+\tab\par
+Not necessarily\par
+\par
+Submit\par
+}
+ 

@@ -1,0 +1,2052 @@
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<!--[if lte IE 9]><html class="ie ie9 lte9" lang="en"><![endif]-->
+<!--[if !IE]><!--><html lang="en"><!--<![endif]-->
+<head dir="ltr">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"XA4GVl5ACwAEV1JQAA=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1071.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","queueTime":3,"licenseKey":"1beac94c95","agent":"","transactionName":"NQQGYUZWDUNSVUMPWQxOIkBaVBdZXFgYBVkXExdQQ1YRVR1AXgNBEU8NW1BSGwpwWUIURQcWBUdRfg1UVk4ZAVMW","atts":"GUMRFw5MQUNWRxkFQxATAVtAGQdZQEZbB089DwVYURVZEmJDXhwWVENIF0xVPEVAU0U5RRYAEFAaUAZEbFtWCE9MAwhaV1wQb1xDQ0QMW1dIF0xVPEVAU0U5RRYAEFAaUAZEbFtWCE9MAwhaV1wQb0FTRhNTERUBURYNUgMAGhUeVD0UF1BGaBBEUkJSSFEHFTtYVVkaHkBTRhNTDBUNVFgZAVxcVVwVaQ0UEBcOD1AcEVVYE0QRBDtcUBVZElBZQhRFB0wSBA5iIGNSWHMPUwUOPB5wZCYCAgZPTQU2U1QEAxVPEktUaBNFBxM7RkBWF1UdUVISaQ8ACkwaVAxFQUVSSEULGwEXDgZWHBFOVTlDEQQWakdDAkRWGFADQj0MBVtNGQBYUkZDA0RMAwhaV1wQb1xDQ0QMVU1GRlFGTVJfWVQNaQEOEVtARE1GVkRDD1UDDUYPBRtBQ1ZHGQRaDQIPaldYFl5HRRkVUxMUAVtAXgJcEQwGShQRBBUbRFgQWUdfWAgUWFBIF0dSEh5XX0QWWgMYO1tVWgYSCRQBSAdTQSdaWUcRVVtTWRVfDQ9EZEFeGRIfFE8EaRcSAUdrRBdRR1MZAVMWPglUWk5NU1JaWxUUWFNIF0xVPEVAU0U5RRYAEFAaUAZEbFtWCE9MAgxUREMGQh1FXhxTQFtVBAQbQUhRaUIVUxA+F0FVQwYeVFNDOVsDDx0bV1gWQkBTGQRaDQIPRmtYFkQRDAZKFBEEFRtdRDxEWltSOVoLDA1BUVNBClVXWxVTTkMcV2tCEFVBaUQSVxYESlJRQzxdUlhOSEYQDgZZUVpNQ1pMUkQMVFVcGRZPAW9GRVIUaREVBUFRGQRVR2laB1gbTwBARlYXWVxYFVwCUU9TBwwPUQgHBQdXAVdWXBkWRAZBHVRbCVUJPgdaQVkXQx1GRQlUDgQJFw4CTxJAU0ZIWBcMO0BaXhdDEQwGShQRBBUbV0IRQlZYQ0hUDg4HXmteBxIJFFUKWQEKSUMFDTZzYFdZIl8HBgttH3MwdQEHBx4dUTVWBQUASERKRlImQAcTEFxXVg8bUVpYBV0iVlwNAlRRB1UAAgIGVlNXBA0PVAAHUwIHBAEAVFEGBlISHxRYFFFAW0Zgd2QCXndfUgFZOkNIF0dSEh5QQ0UUUwwVSltBWjxZR1NaFRRYV0gXTFU8RUBTRTlFFgAQUBpQBkRsW1YIT0wRFlpWWwZdHVRbCVUJEjtaQUNBCgYaFR5UPRQXUEZoEERSQlJIUQcVO1hVWRoeQF9NAxRYU1QEDBtBQ1ZHGQVDEBMBW0AZAVxcVVw5VQ0UCkFHGRNCXFRbA1tAW1EZFk8Bb0ZFUhRpERUFQVEZBFVHaVoHWBtPF1BFQgZeR19WChgRCB5QFg1SAgcDG0RFBxBKW0FaPFlHU1oVFFhWSBdHUhIeUVpYBV09CAAXDhUBXFxVXEtAU1sxdmdWDXRaU1AJbkklN3AGBlNIGAVjVAZTVk9BTUcGcEBTRhNTDBUNVFgcAVxcVVwmDgEAV1ZQBgYFAwUPUgVTVF1QUlQBVFAGUl5SAABTV1UVTxJAU0ZIVRcTFlBaQ01SX1lUDWkBDhFbQERNRlZEQw9VAw1GDwVKHg==","applicationID":"3343327","errorBeacon":"bam.nr-data.net","applicationTime":1642}</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+  
+<title data-base-title="
+ 6.11 Comprehension Quiz | DSE210x Courseware | edX">
+  
+ Quiz 6 | 6.11 Comprehension Quiz | DSE210x Courseware | edX
+</title>
+
+
+      <script type="text/javascript">
+        /* immediately break out of an iframe if coming from the marketing website */
+        (function(window) {
+          if (window.location !== window.top.location) {
+            window.top.location = window.location;
+          }
+        })(this);
+      </script>
+
+  
+
+  <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/i18n/en/djangojs.b28203373cc1.js"></script>
+
+  <link rel="icon" type="image/x-icon" href="https://prod-edxapp.edx-cdn.org/static/edx.org/images/favicon.9028de6ff678.ico" />
+
+  
+  
+
+    <link href="https://prod-edxapp.edx-cdn.org/static/edx.org/css/lms-style-vendor.4ccaa7f84216.css" rel="stylesheet" type="text/css" />
+
+
+
+    
+  
+
+    <link href="https://prod-edxapp.edx-cdn.org/static/edx.org/css/lms-main-v1.25401a1f3563.css" rel="stylesheet" type="text/css" />
+
+
+
+
+    
+    <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/lms-main_vendor.a04b73033169.js" charset="utf-8"></script>
+
+
+    
+    <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/lms-application.2a87ab710695.js" charset="utf-8"></script>
+
+
+
+  
+    
+    
+    <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/bundles/commons.2b328dd74c0f.js" ></script>
+
+
+
+  <script>
+    window.baseUrl = "https://prod\u002Dedxapp.edx\u002Dcdn.org/static/";
+    (function (require) {
+      require.config({
+          baseUrl: window.baseUrl
+      });
+    }).call(this, require || RequireJS.require);
+  </script>
+  <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/lms/js/require-config.8e00198660b0.js"></script>
+  
+    <script type="text/javascript">
+        (function (require) {
+          require.config({
+              paths: {
+                'js/courseware/courseware_factory': 'js/courseware/courseware_factory.1504fc10caef',
+'draggabilly': 'js/vendor/draggabilly.26caba6f7187',
+'js/courseware/toggle_element_visibility': 'js/courseware/toggle_element_visibility.d5f10bc65ed0',
+'hls': 'common/js/vendor/hls.b10b9ef4015b',
+'js/courseware/link_clicked_events': 'js/courseware/link_clicked_events',
+'moment': 'common/js/vendor/moment-with-locales.084396f4103c',
+'moment-timezone': 'common/js/vendor/moment-timezone-with-data.60142e6c4416',
+'js/student_account/logistration_factory': 'js/student_account/logistration_factory.df82b2d74264',
+'js/groups/views/cohorts_dashboard_factory': 'js/groups/views/cohorts_dashboard_factory.7f46663f97b4',
+'js/dateutil_factory': 'js/dateutil_factory.6fd65856dc17',
+'course_bookmarks/js/views/bookmark_button': 'course_bookmarks/js/views/bookmark_button.d4cfaf3361fa',
+'js/courseware/accordion_events': 'js/courseware/accordion_events.6064c7809de5',
+'js/views/message_banner': 'js/views/message_banner.099aec538f98',
+'js/groups/discussions_management/discussions_dashboard_factory': 'js/discussions_management/views/discussions_dashboard_factory.2e10d9097343',
+'js/courseware/course_info_events': 'js/courseware/course_info_events.2fc35b57627f'
+            }
+          });
+        }).call(this, require || RequireJS.require);
+    </script>
+  
+
+    
+    <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/lms-modules.9d7bceacf0da.js" charset="utf-8"></script>
+
+
+
+  
+
+  
+
+    <link href="https://prod-edxapp.edx-cdn.org/static/edx.org/css/lms-style-course-vendor.60799ae7d9f8.css" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+
+    <link href="https://prod-edxapp.edx-cdn.org/static/edx.org/css/lms-course.364cd6103ece.css" rel="stylesheet" type="text/css" />
+
+
+
+
+<script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/jquery.autocomplete.3bd10d7510d2.js"></script>
+<script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/src/tooltip_manager.da362490e199.js"></script>
+
+<link href="https://prod-edxapp.edx-cdn.org/static/css/vendor/jquery.autocomplete.09a0b34739a2.css" rel="stylesheet" type="text/css">
+  
+
+  
+
+  
+
+<script type="text/plain"
+    id="upgrade_user"
+    data-link="https://ecommerce.edx.org/basket/add/?sku=784A0FF"
+    data-price="$350">
+</script>
+
+  
+
+
+<script type="application/json" id="user-metadata">
+    {"username": "v_serpak", "enrollment_mode": "audit", "upgrade_link": "https://ecommerce.edx.org/basket/add/?sku=784A0FF", "user_id": 10841007, "course_start": "2017-10-26T18:00:00+00:00", "upgrade_deadline": "2018-01-29T18:00:00+00:00", "course_key_fields": {"org": "UCSanDiegoX", "run": "3T2017", "course": "DSE210x"}, "course_end": "2018-02-08T18:00:00+00:00", "pacing_type": "instructor_paced", "upgrade_price": "$350", "course_id": "course-v1:UCSanDiegoX+DSE210x+3T2017", "enrollment_time": "2017-11-01T07:40:44+00:00", "schedule_start": null}
+</script>
+
+  
+
+  
+
+<script src=//cdn.optimizely.com/js/1743970571.js></script>
+
+  
+
+
+<!-- begin Segment -->
+<script type="text/javascript">
+  // Asynchronously load Segment's analytics.js library
+  !function(){var analytics=window.analytics=window.analytics||[];if(!analytics.initialize)if(analytics.invoked)window.console&&console.error&&console.error("Segment snippet included twice.");else{analytics.invoked=!0;analytics.methods=["trackSubmit","trackClick","trackLink","trackForm","pageview","identify","reset","group","track","ready","alias","page","once","off","on"];analytics.factory=function(t){return function(){var e=Array.prototype.slice.call(arguments);e.unshift(t);analytics.push(e);return analytics}};for(var t=0;t<analytics.methods.length;t++){var e=analytics.methods[t];analytics[e]=analytics.factory(e)}analytics.load=function(t){var e=document.createElement("script");e.type="text/javascript";e.async=!0;e.src=("https:"===document.location.protocol?"https://":"http://")+"cdn.segment.com/analytics.js/v1/"+t+"/analytics.min.js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(e,n)};analytics.SNIPPET_VERSION="3.1.0";
+  analytics.load("8fncv13bt5");
+  analytics.page();
+  }}();
+  // Note: user tracking moved to segment-io-footer.html
+</script>
+<!-- end Segment -->
+
+
+  <meta name="path_prefix" content="">
+  <meta name="google-site-verification" content="_mipQ4AtZQDNmbtOkwehQDOgCxUUV2fb_C0b6wbiRHY" />
+
+
+
+
+
+</head>
+
+<body class="ltr view-in-course view-courseware courseware  lang_en">
+
+
+<div id="page-prompt"></div>
+  <div class="window-wrap" dir="ltr">
+    <a class="nav-skip sr-only sr-only-focusable" href="#main">Skip to main content</a>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<header class="global-header slim">
+    <div class="main-header">
+        
+
+
+
+
+
+<h1 class="header-logo">
+  <a href="https://www.edx.org">
+    
+    <img  class="logo" src="https://prod-edxapp.edx-cdn.org/static/edx.org/images/logo.790c9a5340cb.png" alt="edX Home Page"/>
+    
+  </a>
+    <div class="course-header">
+      <span class="provider">UCSanDiegoX:</span>
+      <span class="course-number">DSE210x</span>
+      
+      <span class="course-name">Statistics and Probability in Data Science using Python</span>
+    </div>
+</h1>
+
+        <div class="hamburger-menu" role="button" aria-label=Options Menu aria-expanded="false" aria-controls="mobile-menu" tabindex="0">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+            
+
+
+
+
+
+
+
+
+<div class="nav-links">
+  <div class="main">
+
+  </div>
+  <div class="secondary">
+    <div class="mobile-nav-item hidden-mobile nav-item">
+      <a href="https://edx.readthedocs.io/projects/edx-guide-for-students/en/latest/index.html" target="_blank">Help</a>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+<div class="nav-item hidden-mobile">
+    <a href="/dashboard" class="menu-title">
+        <img class="user-image-frame" src="https://prod-edxapp.edx-cdn.org/static/edx.org/images/profiles/default_50.76570a4d025e.png" alt="">
+        <span class="sr-only">Dashboard for:</span>
+        <span class="username">v_serpak</span>
+    </a>
+</div>
+<div class="nav-item hidden-mobile nav-item-dropdown" tabindex="-1">
+    <div class="toggle-user-dropdown" role="button" aria-label=Options Menu aria-expanded="false" tabindex="0" aria-controls="user-menu">
+        <span class="fa fa-caret-down" aria-hidden="true"></span>
+    </div>
+    <div class="dropdown-user-menu hidden" aria-label=More Options role="menu" id="user-menu" tabindex="-1">
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="/dashboard" role="menuitem">Dashboard</a></div>
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="/account/settings" role="menuitem">Account</a></div>
+        <div class="mobile-nav-item dropdown-item dropdown-nav-item"><a href="/logout" role="menuitem">Sign Out</a></div>
+    </div>
+</div>
+
+  </div>
+</div>
+
+
+
+    </div>
+    <div class="mobile-menu hidden" aria-label=More Options role="menu" id="mobile-menu"></div>
+</header>
+
+<!--[if lte IE 9]>
+<div class="ie-banner" aria-hidden="true"><strong>Warning:</strong> Your browser is not fully supported. We strongly recommend using <a href="https://www.google.com/chrome" target="_blank">Chrome</a> or <a href="http://www.mozilla.org/firefox" target="_blank">Firefox</a>.</div>
+<![endif]-->
+
+
+
+
+
+
+
+<div class="help-tab hidden-mobile">
+  <a href="#help-modal" rel="leanModal" role="button">Support</a>
+</div>
+
+<div id="help-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" tabindex="-1" aria-labelledby="support-platform-name">
+  <div class="inner-wrapper">
+    <button class="btn-link close-modal" tabindex="0">
+      <span class="icon fa fa-remove" aria-hidden="true"></span>
+      <span class="sr">
+        Close
+      </span>
+    </button>
+    <div id="help_wrapper">
+
+        <header>
+          <h2 id="support-platform-name">
+        <span class="edx">edX</span> Support
+          </h2>
+          <hr>
+        </header>
+
+    
+
+        <p>For <strong>questions on course lectures, homework, tools, or materials for this course</strong>, post in the <a href="/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/discussion/forum/" target="_blank">course discussion forum</a>.
+        </p>
+
+        <p>Have <strong>general questions about edX</strong>? You can find lots of helpful information in the edX <a href="https://www.edx.org/student-faq" id="feedback-faq-link" target="_blank">FAQ</a>.
+          </p>
+
+        <p>Have a <strong>question about something specific</strong>? You can contact the edX general support team directly:</p>
+        <hr>
+
+        <div class="help-buttons">
+            <button type="button" class="btn btn-outline-primary" id="feedback_link_problem">Report a problem</button>
+            <button type="button" class="btn btn-outline-primary" id="feedback_link_suggestion">Make a suggestion</button>
+            <button type="button" class="btn btn-outline-primary" id="feedback_link_question">Ask a question</button>
+        </div>
+
+        <p class="note">Please note: The edX support team is English speaking. While we will do our best to address your inquiry in any language, our responses will be in English.</p>
+
+    </div>
+
+    <div id="feedback_form_wrapper">
+
+        <header></header>
+
+        <form id="feedback_form" class="feedback_form" method="post" data-remote="true" action="/submit_feedback">
+          <div class="feedback-form-error" aria-live="polite">
+              <div id="feedback_error" class="modal-form-error" tabindex="-1"></div>
+          </div>
+
+          <div class="js-course-id-anchor">
+                  <input name="course_id" type="hidden" value="course-v1:UCSanDiegoX+DSE210x+3T2017">
+          </div>
+
+          <label data-field="subject" for="feedback_form_subject">Briefly describe your issue*</label>
+          <input name="subject" type="text" id="feedback_form_subject" required>
+
+          <label data-field="details" for="feedback_form_details">Tell us the details*</label>
+          <span class="tip" id="feedback_form_details_tip">Describe what you were doing when you encountered the issue. Include any details that will help us to troubleshoot, including error messages that you saw.</span>
+          <textarea name="details" id="feedback_form_details" required aria-describedby="feedback_form_details_tip"></textarea>
+
+          <input name="issue_type" type="hidden">
+          <div class="submit">
+            <input name="submit" type="submit" value="Submit" id="feedback_submit">
+          </div>
+        </form>
+    </div>
+
+    <div id="feedback_success_wrapper">
+
+        <header>
+          <h2>Thank You!</h2>
+          <hr>
+        </header>
+
+        <p>
+        Thank you for your inquiry or feedback.  We typically respond to a request within one business day, Monday to Friday.  In the meantime, please review our <a href="https://www.edx.org/student-faq" target="_blank" id="success-feedback-faq-link">detailed FAQs</a> where most questions have already been answered.
+        </p>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    var currentCourseId,
+        courseOptions = [],
+        userAuthenticated = false,
+        courseOptionsLoadInProgress = false,
+        finishedLoadingCourseOptions = false,
+        $helpModal = $("#help-modal"),
+        $closeButton = $("#help-modal .close-modal"),
+        $leanOverlay = $("#lean_overlay"),
+        $feedbackForm = $("#feedback_form"),
+        onModalClose = function() {
+            $closeButton.off("click");
+            $leanOverlay.off("click");
+            $helpModal.attr("aria-hidden", "true");
+            $('area,input,select,textarea,button').removeAttr('tabindex');
+            $(".help-tab a").focus();
+            $leanOverlay.removeAttr('tabindex');
+        },
+        showFeedback = function(event, issue_type, title, subject_label, details_label) {
+            event.preventDefault();
+            DialogTabControls.initializeTabKeyValues("#feedback_form_wrapper", $closeButton);
+            $("#feedback_form input[name='issue_type']").val(issue_type);
+            $("#feedback_form_wrapper header").html("<h2>" + title + "</h2><hr>");
+            $("#feedback_form_wrapper label[data-field='subject']").html(subject_label);
+            $("#feedback_form_wrapper label[data-field='details']").html(details_label);
+            if (userAuthenticated && finishedLoadingCourseOptions && courseOptions.length > 1) {
+                $('.js-course-id-anchor').html([
+                    '<label for="feedback_form_course">' + 'Course' + '</label>',
+                    '<select name="course_id" id="feedback_form_course" class="feedback-form-select">',
+                    courseOptions.join(''),
+                    '</select>'
+                ].join(''));
+            }
+            $("#help_wrapper").css("display", "none");
+            $("#feedback_form_wrapper").css("display", "block");
+            $closeButton.focus();
+        },
+        loadCourseOptions = function() {
+            courseOptionsLoadInProgress = true;
+            $.ajax({
+                url: '/api/enrollment/v1/enrollment',
+                success: function(data) {
+                    var i,
+                        courseDetails,
+                        courseName,
+                        courseId,
+                        option,
+                        defaultOptionText = '\u002D Select \u002D',
+                        markedSelectedOption = false;
+
+                    // Make sure courseOptions is empty before we begin pushing options into it.
+                    courseOptions = [];
+
+                    for (i = 0; i < data.length; i++) {
+                        courseDetails = data[i].course_details;
+                        if (!courseDetails) {
+                            continue;
+                        }
+
+                        courseName = courseDetails.course_name;
+                        courseId = courseDetails.course_id;
+                        if (!(courseName && courseId)) {
+                            continue;
+                        }
+
+                        // Build an option for this course and select it if it's the course we're currently viewing.
+                        if (!markedSelectedOption && courseId === currentCourseId) {
+                            option = buildCourseOption(courseName, courseId, true);
+                            markedSelectedOption = true;
+                        } else {
+                            option = buildCourseOption(courseName, courseId, false);
+                        }
+
+                        courseOptions.push(option);
+                    }
+
+                    // Build the default option and select it if we haven't already selected another option.
+                    option = buildCourseOption(defaultOptionText, '', !markedSelectedOption);
+
+                    // Add the default option to the head of the courseOptions Array.
+                    courseOptions.unshift(option);
+
+                    finishedLoadingCourseOptions = true;
+                },
+                complete: function() {
+                    courseOptionsLoadInProgress = false;
+                }
+            });
+        },
+        buildCourseOption = function(courseName, courseId, selected) {
+            var option = '<option value="' + _.escape(courseId) + '"';
+            if (selected) {
+                option += ' selected';
+            }
+            option += '>' + _.escape(courseName) + '</option>';
+            return option;
+        };
+
+        userAuthenticated = true;
+
+        currentCourseId = "course\u002Dv1:UCSanDiegoX+DSE210x+3T2017";
+
+    DialogTabControls.setKeydownListener($helpModal, $closeButton);
+
+    $(".help-tab").click(function() {
+        if (userAuthenticated && !finishedLoadingCourseOptions && !courseOptionsLoadInProgress) {
+            loadCourseOptions();
+        }
+        $helpModal.css("position", "absolute");
+        DialogTabControls.initializeTabKeyValues("#help_wrapper", $closeButton);
+        $(".field-error").removeClass("field-error");
+        $feedbackForm[0].reset();
+        $("#feedback_form input[type='submit']").removeAttr("disabled");
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_error").css("display", "none");
+        $("#feedback_form_details_tip").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "none");
+        $("#help_wrapper").css("display", "block");
+        $helpModal.attr("aria-hidden", "false");
+        $closeButton.click(onModalClose);
+        $leanOverlay.click(onModalClose);
+        $("button.close-modal").attr('tabindex', 0);
+        $closeButton.focus();
+    });
+
+    $("#feedback_link_problem").click(function(event) {
+        $("#feedback_form_details_tip").css({"display": "block", "padding-bottom": "5px"});
+        showFeedback(
+            event,
+            "problem",
+            "Report a Problem",
+            "Brief description of the problem*" ,
+            "Details of the problem you are encountering*"
+        );
+    });
+    $("#feedback_link_suggestion").click(function(event) {
+        showFeedback(
+            event,
+            "suggestion",
+            "Make a Suggestion",
+            "Brief description of your suggestion*",
+            "Details*"
+        );
+    });
+    $("#feedback_link_question").click(function(event) {
+        showFeedback(
+            event,
+            "question",
+            "Ask a Question",
+            "Brief summary of your question*",
+            "Details*"
+        );
+    });
+    $feedbackForm.submit(function() {
+        $("input[type='submit']", this).attr("disabled", "disabled");
+        $closeButton.focus();
+    });
+    $feedbackForm.on("ajax:complete", function() {
+        $("input[type='submit']", this).removeAttr("disabled");
+    });
+    $feedbackForm.on("ajax:success", function(event, data, status, xhr) {
+        $("#feedback_form_wrapper").css("display", "none");
+        $("#feedback_success_wrapper").css("display", "block");
+        DialogTabControls.initializeTabKeyValues("#feedback_success_wrapper", $closeButton);
+        $closeButton.focus();
+    });
+    $feedbackForm.on("ajax:error", function(event, xhr, status, error) {
+        $(".field-error").removeClass("field-error").removeAttr("aria-invalid");
+        var responseData;
+        try {
+            responseData = jQuery.parseJSON(xhr.responseText);
+        } catch(err) {
+        }
+        if (responseData) {
+            $("[data-field='"+responseData.field+"']").addClass("field-error").attr("aria-invalid", "true");
+            $("#feedback_error").html(responseData.error).stop().css("display", "block");
+        } else {
+            // If no data (or malformed data) is returned, a server error occurred
+            htmlStr = "An error has occurred.";
+            htmlStr += " " + "Please \u003Cbutton type\u003D\u0022button\u0022 id\u003D\u0022feedback_email\u0022\u003Esend us e\u002Dmail\u003C/button\u003E.";
+            $("#feedback_error").html(htmlStr).stop().css("display", "block");
+            $("#feedback_email").click(function(e) {
+                mailto = "mailto:" + "bugs@edx.org" +
+                    "?subject=" + $("#feedback_form input[name='subject']").val() +
+                    "&body=" + $("#feedback_form textarea[name='details']").val();
+                window.open(mailto);
+                e.preventDefault();
+            });
+        }
+        // Make change explicit to assistive technology
+        $("#feedback_error").focus();
+    });
+});
+</script>
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+    
+    <div class="marketing-hero"></div>
+
+    <div class="content-wrapper main-container" id="content">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/template" id="image-modal-tpl">
+    <div class="wrapper-modal wrapper-modal-image">
+  <section class="image-link">
+    <%= smallHTML%>
+    <a href="#" class="modal-ui-icon action-fullscreen" role="button">
+      <span class="label">
+        <span class="icon fa fa-arrows-alt fa-large" aria-hidden="true"></span> <%- gettext("Fullscreen") %>
+      </span>
+    </a>
+  </section>
+
+  <section class="image-modal">
+    <section class="image-content">
+      <div class="image-wrapper">
+        <img alt="<%= largeALT %>, <%- gettext('Large') %>" src="<%= largeSRC %>" />
+      </div>
+
+      <a href="#" class="modal-ui-icon action-close" role="button">
+        <span class="label">
+          <span class="icon fa fa-remove fa-large" aria-hidden="true"></span> <%- gettext("Close") %>
+        </span>
+      </a>
+
+      <ul class="image-controls">
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-in" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-plus fa-large" aria-hidden="true"></span> <%- gettext("Zoom In") %>
+            </span>
+          </a>
+        </li>
+
+        <li class="image-control">
+          <a href="#" class="modal-ui-icon action-zoom-out is-disabled" aria-disabled="true" role="button">
+            <span class="label">
+              <span class="icon fa fa fa-search-minus fa-large" aria-hidden="true"></span> <%- gettext("Zoom Out") %>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
+
+</script>
+
+
+
+
+
+
+
+
+<div class="message-banner" aria-live="polite"></div>
+
+  
+
+
+
+
+
+
+
+    
+    <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/lms-proctoring.0e5ee58ac3c2.js" charset="utf-8"></script>
+
+
+        <script type="text/template" id="proctored-exam-status-tpl">
+            <div class="exam-timer">
+    <%
+        function gtLtEscape(str) {
+            return String(str)
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+        }
+    %>
+    <div class='exam-text'>
+        <%= interpolate_text('You are taking "{exam_link}" as a {exam_type} exam. The timer on the right shows the time remaining in the exam.', {exam_link: "<a href='" + exam_url_path + "'>"+gtLtEscape(exam_display_name)+"</a>", exam_type: (!_.isUndefined(arguments[0].exam_type)) ? exam_type : gettext('timed')}) %>
+        <%- gettext('To receive credit for problems, you must select "Submit" for each problem before you select "End My Exam".') %>
+    </div>
+    <div id="turn_in_exam_id" class="pull-right turn_in_exam">
+        <span>
+            <% if(attempt_status !== 'ready_to_submit') {%>
+                <button class="exam-button-turn-in-exam btn btn-pl-primary">
+                    <%- gettext("End My Exam") %>
+                </button>
+            <% } %>
+        </span>
+        <span class="sr timer-announce" aria-live="assertive"></span>
+        <span class="exam-timer-clock">
+            <span id="time_remaining_id">
+                <b>
+                </b>
+            </span>
+            <button role="button" id="toggle_timer" aria-label="<%- gettext("Hide Timer") %>" aria-pressed="false">
+                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+            </button>
+        </span>
+    </div>
+</div>
+
+        </script>
+    <div class="proctored_exam_status"></div>
+
+    
+        <nav class="courseware wrapper-course-material" aria-label="Course Material">
+            <div class="course-material">
+                
+                <ol class="tabs course-tabs">
+                    
+
+
+
+
+
+  
+  <li class="tab">
+  <a href="/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/course/" class="active">
+  Course
+      <span class="sr">, current location</span>
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/ae7fec5fc0e049bcb25742828203038e/" class="">
+  Software Installation
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/discussion/forum/" class="">
+  Discussion
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/course_wiki" class="">
+  Wiki
+  </a>
+  </li>
+  
+  <li class="tab">
+  <a href="/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/progress" class="">
+  Progress
+  </a>
+  </li>
+
+                    
+                </ol>
+            </div>
+        </nav>
+
+
+<div class="container"
+    lang="en"
+  >
+  <div class="course-wrapper" role="presentation">
+
+    <section class="course-content" id="course-content">
+        <header class="page-header has-secondary">
+            <div class="page-header-main">
+                <nav aria-label="Course" class="sr-is-focusable" tabindex="-1">
+                    <div class="has-breadcrumbs">
+                        <div class="breadcrumbs">
+                                <span class="nav-item nav-item-course">
+                                    <a href="/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/course/">Course</a>
+                                </span>
+                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                                <span class="nav-item nav-item-chapter">
+                                    <a href="/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/course/#block-v1:UCSanDiegoX+DSE210x+3T2017+type@chapter+block@2aef3bf02e83479298835e00713e1cef">Week 6: Discrete and Continuous Distribution Families</a>
+                                </span>
+                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                                <span class="nav-item nav-item-section">
+                                    <a href="/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/course/#block-v1:UCSanDiegoX+DSE210x+3T2017+type@sequential+block@8ca3cd1e503843159efcbdc0e8dba7ba">6.11 Comprehension Quiz</a>
+                                </span>
+                                <span class="icon fa fa-angle-right" aria-hidden="true"></span>
+                            <span class="nav-item nav-item-sequence">Quiz 6</span>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <main id="main" tabindex="-1" aria-label="Content">
+
+              <div class="xblock xblock-student_view xblock-student_view-sequential xmodule_display xmodule_SequenceModule" data-runtime-class="LmsRuntime" data-init="XBlockToXModuleShim" data-block-type="sequential" data-request-token="1e94a82eeca011e7b1b212284ecce48c" data-runtime-version="1" data-usage-id="block-v1:UCSanDiegoX+DSE210x+3T2017+type@sequential+block@8ca3cd1e503843159efcbdc0e8dba7ba" data-type="Sequence" data-course-id="course-v1:UCSanDiegoX+DSE210x+3T2017">
+  <script type="json/xblock-args" class="xblock-json-init-args">
+    {"xmodule-type": "Sequence"}
+  </script>
+  
+
+
+<div id="sequence_8ca3cd1e503843159efcbdc0e8dba7ba" class="sequence" data-id="block-v1:UCSanDiegoX+DSE210x+3T2017+type@sequential+block@8ca3cd1e503843159efcbdc0e8dba7ba" data-position="1" data-ajax-url="/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/xblock/block-v1:UCSanDiegoX+DSE210x+3T2017+type@sequential+block@8ca3cd1e503843159efcbdc0e8dba7ba/handler/xmodule_handler" data-next-url="/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/courseware/2aef3bf02e83479298835e00713e1cef/be03adf099774da5940087edc88dd542/?child=first" data-prev-url="/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/courseware/2aef3bf02e83479298835e00713e1cef/3b0ac6563d0648f0811f1df6094ea071/?child=last">
+  <div class="sequence-nav">
+    <button class="sequence-nav-button button-previous">
+      <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
+      <span class="sequence-nav-button-label">Previous</span>
+    </button>
+    <button class="sequence-nav-button button-next">
+      <span class="sequence-nav-button-label">Next</span>
+      <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
+    </button>
+    <nav class="sequence-list-wrapper" aria-label="Sequence">
+      <ol id="sequence-list" role="tablist">
+        <li role="presentation">
+          <button class="seq_problem inactive nav-item tab"
+            role="tab"
+            tabindex="-1"
+            aria-selected="false"
+            aria-expanded="false"
+            aria-controls="seq_content"
+            data-index="0"
+            data-id="block-v1:UCSanDiegoX+DSE210x+3T2017+type@vertical+block@7886c27f65d0423198704e5a2ca0d211"
+            data-element="1"
+            data-page-title="Quiz 6"
+            data-path="Week 6: Discrete and Continuous Distribution Families &gt; 6.11 Comprehension Quiz &gt; Quiz 6"
+            id="tab_0"
+            >
+            <span class="icon fa seq_problem" aria-hidden="true"></span>
+            <span class="fa fa-fw fa-bookmark bookmark-icon is-hidden" aria-hidden="true"></span>
+            <div class="sequence-tooltip sr"><span class="sr">problem&nbsp;</span>Quiz 6<span class="sr bookmark-icon-sr">&nbsp;</span></div>
+          </button>
+        </li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="sr-is-focusable" tabindex="-1"></div>
+
+  <div id="seq_contents_0"
+    aria-labelledby="tab_0"
+    aria-hidden="true"
+    class="seq_contents tex2jax_ignore asciimath2jax_ignore">
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-vertical&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;VerticalStudentView&#34; data-course-id=&#34;course-v1:UCSanDiegoX+DSE210x+3T2017&#34; data-request-token=&#34;1e94a82eeca011e7b1b212284ecce48c&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@vertical+block@7886c27f65d0423198704e5a2ca0d211&#34; data-block-type=&#34;vertical&#34;&gt;
+  
+
+  &lt;h2 class=&#34;hd hd-2 unit-title&#34;&gt;Quiz 6&lt;/h2&gt;
+
+    
+
+
+
+&lt;div class=&#34;bookmark-button-wrapper&#34;&gt;
+  &lt;button class=&#34;btn btn-link bookmark-button &#34;
+    aria-pressed=&#34;false&#34;
+    data-bookmark-id=&#34;v_serpak,block-v1:UCSanDiegoX+DSE210x+3T2017+type@vertical+block@7886c27f65d0423198704e5a2ca0d211&#34;
+    data-bookmarks-api-url=&#34;/api/bookmarks/v1/bookmarks/&#34;&gt;
+     &lt;span class=&#34;bookmark-text&#34;&gt;Bookmark this page&lt;/span&gt;
+    &lt;/button&gt;
+&lt;/div&gt;
+
+
+&lt;div class=&#34;vert-mod&#34;&gt;
+  &lt;div class=&#34;vert vert-0&#34; data-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@11bf3337a1674d249e055010efd0f1e1&#34;       &gt;
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_CapaModule&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;XBlockToXModuleShim&#34; data-block-type=&#34;problem&#34; data-request-token=&#34;1e94a82eeca011e7b1b212284ecce48c&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@11bf3337a1674d249e055010efd0f1e1&#34; data-type=&#34;Problem&#34; data-course-id=&#34;course-v1:UCSanDiegoX+DSE210x+3T2017&#34;&gt;
+  &lt;script type=&#34;json/xblock-args&#34; class=&#34;xblock-json-init-args&#34;&gt;
+    {&#34;xmodule-type&#34;: &#34;Problem&#34;}
+  &lt;/script&gt;
+  &lt;div id=&#34;problem_11bf3337a1674d249e055010efd0f1e1&#34; class=&#34;problems-wrapper&#34; role=&#34;group&#34;
+     aria-labelledby=&#34;11bf3337a1674d249e055010efd0f1e1-problem-title&#34;
+     data-problem-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@11bf3337a1674d249e055010efd0f1e1&#34; data-url=&#34;/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/xblock/block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@11bf3337a1674d249e055010efd0f1e1/handler/xmodule_handler&#34;
+     data-problem-score=&#34;0&#34;
+     data-problem-total-possible=&#34;2&#34;
+     data-attempts-used=&#34;0&#34;
+     data-content=&#34;
+
+
+
+&amp;lt;h3 class=&amp;#34;hd hd-3 problem-header&amp;#34; id=&amp;#34;11bf3337a1674d249e055010efd0f1e1-problem-title&amp;#34; aria-describedby=&amp;#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@11bf3337a1674d249e055010efd0f1e1-problem-progress&amp;#34; tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+  1
+&amp;lt;/h3&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem-progress&amp;#34; id=&amp;#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@11bf3337a1674d249e055010efd0f1e1-problem-progress&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem&amp;#34;&amp;gt;
+  &amp;lt;div&amp;gt;
+&amp;lt;p&amp;gt;If every student independently have \(10\%\) probability to be late, what is the probability that in a class of \(30\) students:&amp;lt;/p&amp;gt;
+
+&amp;lt;div class=&amp;#34;wrapper-problem-response&amp;#34; tabindex=&amp;#34;-1&amp;#34; aria-label=&amp;#34;Question 1&amp;#34; role=&amp;#34;group&amp;#34;&amp;gt;&amp;lt;div class=&amp;#34;choicegroup capa_inputtype&amp;#34; id=&amp;#34;inputtype_11bf3337a1674d249e055010efd0f1e1_2_1&amp;#34;&amp;gt;
+    &amp;lt;fieldset aria-describedby=&amp;#34;status_11bf3337a1674d249e055010efd0f1e1_2_1&amp;#34;&amp;gt;
+        &amp;lt;legend id=&amp;#34;11bf3337a1674d249e055010efd0f1e1_2_1-legend&amp;#34; class=&amp;#34;response-fieldset-legend field-group-hd&amp;#34;&amp;gt;a) Nobody is late?&amp;lt;/legend&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;11bf3337a1674d249e055010efd0f1e1_2_1-choice_0-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_11bf3337a1674d249e055010efd0f1e1_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_2_1&amp;#34; id=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_2_1_choice_0&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_0&amp;#34;/&amp;gt; \(4.2\%\) 
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;11bf3337a1674d249e055010efd0f1e1_2_1-choice_1-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_11bf3337a1674d249e055010efd0f1e1_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_2_1&amp;#34; id=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_2_1_choice_1&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_1&amp;#34;/&amp;gt; \(8.0\%\) 
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;11bf3337a1674d249e055010efd0f1e1_2_1-choice_2-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_11bf3337a1674d249e055010efd0f1e1_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_2_1&amp;#34; id=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_2_1_choice_2&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_2&amp;#34;/&amp;gt; \(17.4\%\) 
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;11bf3337a1674d249e055010efd0f1e1_2_1-choice_3-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_11bf3337a1674d249e055010efd0f1e1_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_2_1&amp;#34; id=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_2_1_choice_3&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_3&amp;#34;/&amp;gt; \(33.3\%\) 
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+        &amp;lt;span id=&amp;#34;answer_11bf3337a1674d249e055010efd0f1e1_2_1&amp;#34;/&amp;gt;
+    &amp;lt;/fieldset&amp;gt;
+    &amp;lt;div class=&amp;#34;indicator-container&amp;#34;&amp;gt;
+            
+
+&amp;lt;span class=&amp;#34;status unanswered&amp;#34; id=&amp;#34;status_11bf3337a1674d249e055010efd0f1e1_2_1&amp;#34; data-tooltip=&amp;#34;Not yet answered.&amp;#34;&amp;gt;
+  &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;unanswered&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;status-icon&amp;#34; aria-hidden=&amp;#34;true&amp;#34;/&amp;gt;
+&amp;lt;/span&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;#34;wrapper-problem-response&amp;#34; tabindex=&amp;#34;-1&amp;#34; aria-label=&amp;#34;Question 2&amp;#34; role=&amp;#34;group&amp;#34;&amp;gt;&amp;lt;div class=&amp;#34;choicegroup capa_inputtype&amp;#34; id=&amp;#34;inputtype_11bf3337a1674d249e055010efd0f1e1_3_1&amp;#34;&amp;gt;
+    &amp;lt;fieldset aria-describedby=&amp;#34;status_11bf3337a1674d249e055010efd0f1e1_3_1&amp;#34;&amp;gt;
+        &amp;lt;legend id=&amp;#34;11bf3337a1674d249e055010efd0f1e1_3_1-legend&amp;#34; class=&amp;#34;response-fieldset-legend field-group-hd&amp;#34;&amp;gt;b) Exactly 1 student is late?&amp;lt;/legend&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;11bf3337a1674d249e055010efd0f1e1_3_1-choice_0-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_11bf3337a1674d249e055010efd0f1e1_3_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_3_1&amp;#34; id=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_3_1_choice_0&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_0&amp;#34;/&amp;gt; \(3.33\%\) 
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;11bf3337a1674d249e055010efd0f1e1_3_1-choice_1-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_11bf3337a1674d249e055010efd0f1e1_3_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_3_1&amp;#34; id=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_3_1_choice_1&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_1&amp;#34;/&amp;gt; \(5.25\%\) 
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;11bf3337a1674d249e055010efd0f1e1_3_1-choice_2-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_11bf3337a1674d249e055010efd0f1e1_3_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_3_1&amp;#34; id=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_3_1_choice_2&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_2&amp;#34;/&amp;gt; \(7.75\%\) 
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;11bf3337a1674d249e055010efd0f1e1_3_1-choice_3-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_11bf3337a1674d249e055010efd0f1e1_3_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_3_1&amp;#34; id=&amp;#34;input_11bf3337a1674d249e055010efd0f1e1_3_1_choice_3&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_3&amp;#34;/&amp;gt; \(14.1\%\) 
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+        &amp;lt;span id=&amp;#34;answer_11bf3337a1674d249e055010efd0f1e1_3_1&amp;#34;/&amp;gt;
+    &amp;lt;/fieldset&amp;gt;
+    &amp;lt;div class=&amp;#34;indicator-container&amp;#34;&amp;gt;
+            
+
+&amp;lt;span class=&amp;#34;status unanswered&amp;#34; id=&amp;#34;status_11bf3337a1674d249e055010efd0f1e1_3_1&amp;#34; data-tooltip=&amp;#34;Not yet answered.&amp;#34;&amp;gt;
+  &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;unanswered&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;status-icon&amp;#34; aria-hidden=&amp;#34;true&amp;#34;/&amp;gt;
+&amp;lt;/span&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+
+
+&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;#34;action&amp;#34;&amp;gt;
+    &amp;lt;input type=&amp;#34;hidden&amp;#34; name=&amp;#34;problem_id&amp;#34; value=&amp;#34;1&amp;#34; /&amp;gt;
+
+    &amp;lt;div class=&amp;#34;submit-attempt-container&amp;#34;&amp;gt;
+      &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;submit btn-brand&amp;#34; data-submitting=&amp;#34;Submitting&amp;#34; data-value=&amp;#34;Submit&amp;#34; data-should-enable-submit-button=&amp;#34;True&amp;#34; aria-describedby=&amp;#34;submission_feedback_11bf3337a1674d249e055010efd0f1e1&amp;#34; &amp;gt;
+          &amp;lt;span class=&amp;#34;submit-label&amp;#34;&amp;gt;Submit&amp;lt;/span&amp;gt;
+      &amp;lt;/button&amp;gt;
+      &amp;lt;div class=&amp;#34;submission-feedback&amp;#34; id=&amp;#34;submission_feedback_11bf3337a1674d249e055010efd0f1e1&amp;#34;&amp;gt;
+        &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.&amp;lt;/span&amp;gt;
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;#34;problem-action-buttons-wrapper&amp;#34;&amp;gt;
+      &amp;lt;span class=&amp;#34;problem-action-button-wrapper&amp;#34;&amp;gt;
+          &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;save problem-action-btn btn-default btn-small&amp;#34; data-value=&amp;#34;Save&amp;#34;&amp;gt;
+              &amp;lt;span class=&amp;#34;icon fa fa-floppy-o&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+              &amp;lt;span aria-hidden=&amp;#34;true&amp;#34;&amp;gt;Save&amp;lt;/span&amp;gt;
+              &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Save your answer&amp;lt;/span&amp;gt;
+          &amp;lt;/button&amp;gt;
+      &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-gentle-alert
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-exclamation-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;11bf3337a1674d249e055010efd0f1e1-problem-title&amp;#34;&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-save
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-save&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;11bf3337a1674d249e055010efd0f1e1-problem-title&amp;#34;&amp;gt;None
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+
+
+&amp;lt;div class=&amp;#34;notification general notification-show-answer
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-info-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;11bf3337a1674d249e055010efd0f1e1-problem-title&amp;#34;&amp;gt;Answers are displayed within the problem
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&#34;
+     data-graded=&#34;True&#34;&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;div class=&#34;vert vert-1&#34; data-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@da05cde9c8cf42e4b5d0e7dfc700bcee&#34;       &gt;
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_CapaModule&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;XBlockToXModuleShim&#34; data-block-type=&#34;problem&#34; data-request-token=&#34;1e94a82eeca011e7b1b212284ecce48c&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@da05cde9c8cf42e4b5d0e7dfc700bcee&#34; data-type=&#34;Problem&#34; data-course-id=&#34;course-v1:UCSanDiegoX+DSE210x+3T2017&#34;&gt;
+  &lt;script type=&#34;json/xblock-args&#34; class=&#34;xblock-json-init-args&#34;&gt;
+    {&#34;xmodule-type&#34;: &#34;Problem&#34;}
+  &lt;/script&gt;
+  &lt;div id=&#34;problem_da05cde9c8cf42e4b5d0e7dfc700bcee&#34; class=&#34;problems-wrapper&#34; role=&#34;group&#34;
+     aria-labelledby=&#34;da05cde9c8cf42e4b5d0e7dfc700bcee-problem-title&#34;
+     data-problem-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@da05cde9c8cf42e4b5d0e7dfc700bcee&#34; data-url=&#34;/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/xblock/block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@da05cde9c8cf42e4b5d0e7dfc700bcee/handler/xmodule_handler&#34;
+     data-problem-score=&#34;0&#34;
+     data-problem-total-possible=&#34;1&#34;
+     data-attempts-used=&#34;0&#34;
+     data-content=&#34;
+
+
+
+&amp;lt;h3 class=&amp;#34;hd hd-3 problem-header&amp;#34; id=&amp;#34;da05cde9c8cf42e4b5d0e7dfc700bcee-problem-title&amp;#34; aria-describedby=&amp;#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@da05cde9c8cf42e4b5d0e7dfc700bcee-problem-progress&amp;#34; tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+  2
+&amp;lt;/h3&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem-progress&amp;#34; id=&amp;#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@da05cde9c8cf42e4b5d0e7dfc700bcee-problem-progress&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem&amp;#34;&amp;gt;
+  &amp;lt;div&amp;gt;
+&amp;lt;div class=&amp;#34;wrapper-problem-response&amp;#34; tabindex=&amp;#34;-1&amp;#34; aria-label=&amp;#34;Question 1&amp;#34; role=&amp;#34;group&amp;#34;&amp;gt;&amp;lt;p&amp;gt;Assume a telemarketer&amp;amp;#8217;s successful sales per hour is a Poisson random variable with \(\lambda = 2\). What is the probability that the telemarketer makes no sales in \(1\) hour?&amp;lt;/p&amp;gt;
+&amp;lt;div class=&amp;#34;choicegroup capa_inputtype&amp;#34; id=&amp;#34;inputtype_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1&amp;#34;&amp;gt;
+    &amp;lt;fieldset aria-describedby=&amp;#34;status_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1&amp;#34;&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;da05cde9c8cf42e4b5d0e7dfc700bcee_2_1-choice_0-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1&amp;#34; id=&amp;#34;input_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1_choice_0&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_0&amp;#34;/&amp;gt; \(13.5\%\) 
+
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;da05cde9c8cf42e4b5d0e7dfc700bcee_2_1-choice_1-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1&amp;#34; id=&amp;#34;input_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1_choice_1&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_1&amp;#34;/&amp;gt; \(22.5\%\) 
+
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;da05cde9c8cf42e4b5d0e7dfc700bcee_2_1-choice_2-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1&amp;#34; id=&amp;#34;input_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1_choice_2&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_2&amp;#34;/&amp;gt; \(27.7\%\) 
+
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;da05cde9c8cf42e4b5d0e7dfc700bcee_2_1-choice_3-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1&amp;#34; id=&amp;#34;input_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1_choice_3&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_3&amp;#34;/&amp;gt; \(31.2\%\) 
+
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+        &amp;lt;span id=&amp;#34;answer_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1&amp;#34;/&amp;gt;
+    &amp;lt;/fieldset&amp;gt;
+    &amp;lt;div class=&amp;#34;indicator-container&amp;#34;&amp;gt;
+            
+
+&amp;lt;span class=&amp;#34;status unanswered&amp;#34; id=&amp;#34;status_da05cde9c8cf42e4b5d0e7dfc700bcee_2_1&amp;#34; data-tooltip=&amp;#34;Not yet answered.&amp;#34;&amp;gt;
+  &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;unanswered&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;status-icon&amp;#34; aria-hidden=&amp;#34;true&amp;#34;/&amp;gt;
+&amp;lt;/span&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;#34;action&amp;#34;&amp;gt;
+    &amp;lt;input type=&amp;#34;hidden&amp;#34; name=&amp;#34;problem_id&amp;#34; value=&amp;#34;2&amp;#34; /&amp;gt;
+
+    &amp;lt;div class=&amp;#34;submit-attempt-container&amp;#34;&amp;gt;
+      &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;submit btn-brand&amp;#34; data-submitting=&amp;#34;Submitting&amp;#34; data-value=&amp;#34;Submit&amp;#34; data-should-enable-submit-button=&amp;#34;True&amp;#34; aria-describedby=&amp;#34;submission_feedback_da05cde9c8cf42e4b5d0e7dfc700bcee&amp;#34; &amp;gt;
+          &amp;lt;span class=&amp;#34;submit-label&amp;#34;&amp;gt;Submit&amp;lt;/span&amp;gt;
+      &amp;lt;/button&amp;gt;
+      &amp;lt;div class=&amp;#34;submission-feedback&amp;#34; id=&amp;#34;submission_feedback_da05cde9c8cf42e4b5d0e7dfc700bcee&amp;#34;&amp;gt;
+        &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.&amp;lt;/span&amp;gt;
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;#34;problem-action-buttons-wrapper&amp;#34;&amp;gt;
+      &amp;lt;span class=&amp;#34;problem-action-button-wrapper&amp;#34;&amp;gt;
+          &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;save problem-action-btn btn-default btn-small&amp;#34; data-value=&amp;#34;Save&amp;#34;&amp;gt;
+              &amp;lt;span class=&amp;#34;icon fa fa-floppy-o&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+              &amp;lt;span aria-hidden=&amp;#34;true&amp;#34;&amp;gt;Save&amp;lt;/span&amp;gt;
+              &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Save your answer&amp;lt;/span&amp;gt;
+          &amp;lt;/button&amp;gt;
+      &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-gentle-alert
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-exclamation-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;da05cde9c8cf42e4b5d0e7dfc700bcee-problem-title&amp;#34;&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-save
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-save&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;da05cde9c8cf42e4b5d0e7dfc700bcee-problem-title&amp;#34;&amp;gt;None
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+
+
+&amp;lt;div class=&amp;#34;notification general notification-show-answer
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-info-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;da05cde9c8cf42e4b5d0e7dfc700bcee-problem-title&amp;#34;&amp;gt;Answers are displayed within the problem
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&#34;
+     data-graded=&#34;True&#34;&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;div class=&#34;vert vert-2&#34; data-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@608d49edc3fd4fb9a87195b4ff61677d&#34;       &gt;
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_CapaModule&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;XBlockToXModuleShim&#34; data-block-type=&#34;problem&#34; data-request-token=&#34;1e94a82eeca011e7b1b212284ecce48c&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@608d49edc3fd4fb9a87195b4ff61677d&#34; data-type=&#34;Problem&#34; data-course-id=&#34;course-v1:UCSanDiegoX+DSE210x+3T2017&#34;&gt;
+  &lt;script type=&#34;json/xblock-args&#34; class=&#34;xblock-json-init-args&#34;&gt;
+    {&#34;xmodule-type&#34;: &#34;Problem&#34;}
+  &lt;/script&gt;
+  &lt;div id=&#34;problem_608d49edc3fd4fb9a87195b4ff61677d&#34; class=&#34;problems-wrapper&#34; role=&#34;group&#34;
+     aria-labelledby=&#34;608d49edc3fd4fb9a87195b4ff61677d-problem-title&#34;
+     data-problem-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@608d49edc3fd4fb9a87195b4ff61677d&#34; data-url=&#34;/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/xblock/block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@608d49edc3fd4fb9a87195b4ff61677d/handler/xmodule_handler&#34;
+     data-problem-score=&#34;0&#34;
+     data-problem-total-possible=&#34;1&#34;
+     data-attempts-used=&#34;0&#34;
+     data-content=&#34;
+
+
+
+&amp;lt;h3 class=&amp;#34;hd hd-3 problem-header&amp;#34; id=&amp;#34;608d49edc3fd4fb9a87195b4ff61677d-problem-title&amp;#34; aria-describedby=&amp;#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@608d49edc3fd4fb9a87195b4ff61677d-problem-progress&amp;#34; tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+  3
+&amp;lt;/h3&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem-progress&amp;#34; id=&amp;#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@608d49edc3fd4fb9a87195b4ff61677d-problem-progress&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem&amp;#34;&amp;gt;
+  &amp;lt;div&amp;gt;
+&amp;lt;div class=&amp;#34;wrapper-problem-response&amp;#34; tabindex=&amp;#34;-1&amp;#34; aria-label=&amp;#34;Question 1&amp;#34; role=&amp;#34;group&amp;#34;&amp;gt;&amp;lt;p&amp;gt;\(F\) is the cumulative distribution function for a continuous random variable. If \(F(b) - F(a) = 0.20\), then&amp;lt;/p&amp;gt;
+&amp;lt;div class=&amp;#34;choicegroup capa_inputtype&amp;#34; id=&amp;#34;inputtype_608d49edc3fd4fb9a87195b4ff61677d_2_1&amp;#34;&amp;gt;
+    &amp;lt;fieldset aria-describedby=&amp;#34;status_608d49edc3fd4fb9a87195b4ff61677d_2_1&amp;#34;&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;608d49edc3fd4fb9a87195b4ff61677d_2_1-choice_0-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_608d49edc3fd4fb9a87195b4ff61677d_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_608d49edc3fd4fb9a87195b4ff61677d_2_1&amp;#34; id=&amp;#34;input_608d49edc3fd4fb9a87195b4ff61677d_2_1_choice_0&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_0&amp;#34;/&amp;gt; \([a,b]\) has length \(0.20\) 
+
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;608d49edc3fd4fb9a87195b4ff61677d_2_1-choice_1-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_608d49edc3fd4fb9a87195b4ff61677d_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_608d49edc3fd4fb9a87195b4ff61677d_2_1&amp;#34; id=&amp;#34;input_608d49edc3fd4fb9a87195b4ff61677d_2_1_choice_1&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_1&amp;#34;/&amp;gt; \(P(X = b) - P(X = a) = 20\%\) 
+
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;608d49edc3fd4fb9a87195b4ff61677d_2_1-choice_2-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_608d49edc3fd4fb9a87195b4ff61677d_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_608d49edc3fd4fb9a87195b4ff61677d_2_1&amp;#34; id=&amp;#34;input_608d49edc3fd4fb9a87195b4ff61677d_2_1_choice_2&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_2&amp;#34;/&amp;gt; \(P(X\in[a,b])=20\%\) 
+
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+        &amp;lt;span id=&amp;#34;answer_608d49edc3fd4fb9a87195b4ff61677d_2_1&amp;#34;/&amp;gt;
+    &amp;lt;/fieldset&amp;gt;
+    &amp;lt;div class=&amp;#34;indicator-container&amp;#34;&amp;gt;
+            
+
+&amp;lt;span class=&amp;#34;status unanswered&amp;#34; id=&amp;#34;status_608d49edc3fd4fb9a87195b4ff61677d_2_1&amp;#34; data-tooltip=&amp;#34;Not yet answered.&amp;#34;&amp;gt;
+  &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;unanswered&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;status-icon&amp;#34; aria-hidden=&amp;#34;true&amp;#34;/&amp;gt;
+&amp;lt;/span&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;#34;action&amp;#34;&amp;gt;
+    &amp;lt;input type=&amp;#34;hidden&amp;#34; name=&amp;#34;problem_id&amp;#34; value=&amp;#34;3&amp;#34; /&amp;gt;
+
+    &amp;lt;div class=&amp;#34;submit-attempt-container&amp;#34;&amp;gt;
+      &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;submit btn-brand&amp;#34; data-submitting=&amp;#34;Submitting&amp;#34; data-value=&amp;#34;Submit&amp;#34; data-should-enable-submit-button=&amp;#34;True&amp;#34; aria-describedby=&amp;#34;submission_feedback_608d49edc3fd4fb9a87195b4ff61677d&amp;#34; &amp;gt;
+          &amp;lt;span class=&amp;#34;submit-label&amp;#34;&amp;gt;Submit&amp;lt;/span&amp;gt;
+      &amp;lt;/button&amp;gt;
+      &amp;lt;div class=&amp;#34;submission-feedback&amp;#34; id=&amp;#34;submission_feedback_608d49edc3fd4fb9a87195b4ff61677d&amp;#34;&amp;gt;
+        &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.&amp;lt;/span&amp;gt;
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;#34;problem-action-buttons-wrapper&amp;#34;&amp;gt;
+      &amp;lt;span class=&amp;#34;problem-action-button-wrapper&amp;#34;&amp;gt;
+          &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;save problem-action-btn btn-default btn-small&amp;#34; data-value=&amp;#34;Save&amp;#34;&amp;gt;
+              &amp;lt;span class=&amp;#34;icon fa fa-floppy-o&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+              &amp;lt;span aria-hidden=&amp;#34;true&amp;#34;&amp;gt;Save&amp;lt;/span&amp;gt;
+              &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Save your answer&amp;lt;/span&amp;gt;
+          &amp;lt;/button&amp;gt;
+      &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-gentle-alert
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-exclamation-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;608d49edc3fd4fb9a87195b4ff61677d-problem-title&amp;#34;&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-save
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-save&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;608d49edc3fd4fb9a87195b4ff61677d-problem-title&amp;#34;&amp;gt;None
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+
+
+&amp;lt;div class=&amp;#34;notification general notification-show-answer
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-info-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;608d49edc3fd4fb9a87195b4ff61677d-problem-title&amp;#34;&amp;gt;Answers are displayed within the problem
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&#34;
+     data-graded=&#34;True&#34;&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;div class=&#34;vert vert-3&#34; data-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@714ac48b9ab64477a6d7b928c6cbae25&#34;       &gt;
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_CapaModule&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;XBlockToXModuleShim&#34; data-block-type=&#34;problem&#34; data-request-token=&#34;1e94a82eeca011e7b1b212284ecce48c&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@714ac48b9ab64477a6d7b928c6cbae25&#34; data-type=&#34;Problem&#34; data-course-id=&#34;course-v1:UCSanDiegoX+DSE210x+3T2017&#34;&gt;
+  &lt;script type=&#34;json/xblock-args&#34; class=&#34;xblock-json-init-args&#34;&gt;
+    {&#34;xmodule-type&#34;: &#34;Problem&#34;}
+  &lt;/script&gt;
+  &lt;div id=&#34;problem_714ac48b9ab64477a6d7b928c6cbae25&#34; class=&#34;problems-wrapper&#34; role=&#34;group&#34;
+     aria-labelledby=&#34;714ac48b9ab64477a6d7b928c6cbae25-problem-title&#34;
+     data-problem-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@714ac48b9ab64477a6d7b928c6cbae25&#34; data-url=&#34;/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/xblock/block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@714ac48b9ab64477a6d7b928c6cbae25/handler/xmodule_handler&#34;
+     data-problem-score=&#34;0&#34;
+     data-problem-total-possible=&#34;1&#34;
+     data-attempts-used=&#34;0&#34;
+     data-content=&#34;
+
+
+
+&amp;lt;h3 class=&amp;#34;hd hd-3 problem-header&amp;#34; id=&amp;#34;714ac48b9ab64477a6d7b928c6cbae25-problem-title&amp;#34; aria-describedby=&amp;#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@714ac48b9ab64477a6d7b928c6cbae25-problem-progress&amp;#34; tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+  4
+&amp;lt;/h3&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem-progress&amp;#34; id=&amp;#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@714ac48b9ab64477a6d7b928c6cbae25-problem-progress&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem&amp;#34;&amp;gt;
+  &amp;lt;div&amp;gt;
+&amp;lt;div class=&amp;#34;wrapper-problem-response&amp;#34; tabindex=&amp;#34;-1&amp;#34; aria-label=&amp;#34;Question 1&amp;#34; role=&amp;#34;group&amp;#34;&amp;gt;&amp;lt;p&amp;gt;The height of the probability density function of a uniformly distributed random variable is inversely proportional to the width of the interval it is distributed over.&amp;lt;/p&amp;gt;
+&amp;lt;div class=&amp;#34;choicegroup capa_inputtype&amp;#34; id=&amp;#34;inputtype_714ac48b9ab64477a6d7b928c6cbae25_2_1&amp;#34;&amp;gt;
+    &amp;lt;fieldset aria-describedby=&amp;#34;status_714ac48b9ab64477a6d7b928c6cbae25_2_1&amp;#34;&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;714ac48b9ab64477a6d7b928c6cbae25_2_1-choice_0-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_714ac48b9ab64477a6d7b928c6cbae25_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_714ac48b9ab64477a6d7b928c6cbae25_2_1&amp;#34; id=&amp;#34;input_714ac48b9ab64477a6d7b928c6cbae25_2_1_choice_0&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_0&amp;#34;/&amp;gt; True 
+
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;714ac48b9ab64477a6d7b928c6cbae25_2_1-choice_1-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_714ac48b9ab64477a6d7b928c6cbae25_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_714ac48b9ab64477a6d7b928c6cbae25_2_1&amp;#34; id=&amp;#34;input_714ac48b9ab64477a6d7b928c6cbae25_2_1_choice_1&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_1&amp;#34;/&amp;gt; False 
+
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+        &amp;lt;span id=&amp;#34;answer_714ac48b9ab64477a6d7b928c6cbae25_2_1&amp;#34;/&amp;gt;
+    &amp;lt;/fieldset&amp;gt;
+    &amp;lt;div class=&amp;#34;indicator-container&amp;#34;&amp;gt;
+            
+
+&amp;lt;span class=&amp;#34;status unanswered&amp;#34; id=&amp;#34;status_714ac48b9ab64477a6d7b928c6cbae25_2_1&amp;#34; data-tooltip=&amp;#34;Not yet answered.&amp;#34;&amp;gt;
+  &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;unanswered&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;status-icon&amp;#34; aria-hidden=&amp;#34;true&amp;#34;/&amp;gt;
+&amp;lt;/span&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;#34;action&amp;#34;&amp;gt;
+    &amp;lt;input type=&amp;#34;hidden&amp;#34; name=&amp;#34;problem_id&amp;#34; value=&amp;#34;4&amp;#34; /&amp;gt;
+
+    &amp;lt;div class=&amp;#34;submit-attempt-container&amp;#34;&amp;gt;
+      &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;submit btn-brand&amp;#34; data-submitting=&amp;#34;Submitting&amp;#34; data-value=&amp;#34;Submit&amp;#34; data-should-enable-submit-button=&amp;#34;True&amp;#34; aria-describedby=&amp;#34;submission_feedback_714ac48b9ab64477a6d7b928c6cbae25&amp;#34; &amp;gt;
+          &amp;lt;span class=&amp;#34;submit-label&amp;#34;&amp;gt;Submit&amp;lt;/span&amp;gt;
+      &amp;lt;/button&amp;gt;
+      &amp;lt;div class=&amp;#34;submission-feedback&amp;#34; id=&amp;#34;submission_feedback_714ac48b9ab64477a6d7b928c6cbae25&amp;#34;&amp;gt;
+        &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.&amp;lt;/span&amp;gt;
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;#34;problem-action-buttons-wrapper&amp;#34;&amp;gt;
+      &amp;lt;span class=&amp;#34;problem-action-button-wrapper&amp;#34;&amp;gt;
+          &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;save problem-action-btn btn-default btn-small&amp;#34; data-value=&amp;#34;Save&amp;#34;&amp;gt;
+              &amp;lt;span class=&amp;#34;icon fa fa-floppy-o&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+              &amp;lt;span aria-hidden=&amp;#34;true&amp;#34;&amp;gt;Save&amp;lt;/span&amp;gt;
+              &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Save your answer&amp;lt;/span&amp;gt;
+          &amp;lt;/button&amp;gt;
+      &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-gentle-alert
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-exclamation-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;714ac48b9ab64477a6d7b928c6cbae25-problem-title&amp;#34;&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-save
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-save&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;714ac48b9ab64477a6d7b928c6cbae25-problem-title&amp;#34;&amp;gt;None
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+
+
+&amp;lt;div class=&amp;#34;notification general notification-show-answer
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-info-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;714ac48b9ab64477a6d7b928c6cbae25-problem-title&amp;#34;&amp;gt;Answers are displayed within the problem
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&#34;
+     data-graded=&#34;True&#34;&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+  &lt;div class=&#34;vert vert-4&#34; data-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@1ed72023d33e4f2893066a7d356b1617&#34;       &gt;
+    &lt;div class=&#34;xblock xblock-student_view xblock-student_view-problem xmodule_display xmodule_CapaModule&#34; data-runtime-class=&#34;LmsRuntime&#34; data-init=&#34;XBlockToXModuleShim&#34; data-block-type=&#34;problem&#34; data-request-token=&#34;1e94a82eeca011e7b1b212284ecce48c&#34; data-runtime-version=&#34;1&#34; data-usage-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@1ed72023d33e4f2893066a7d356b1617&#34; data-type=&#34;Problem&#34; data-course-id=&#34;course-v1:UCSanDiegoX+DSE210x+3T2017&#34;&gt;
+  &lt;script type=&#34;json/xblock-args&#34; class=&#34;xblock-json-init-args&#34;&gt;
+    {&#34;xmodule-type&#34;: &#34;Problem&#34;}
+  &lt;/script&gt;
+  &lt;div id=&#34;problem_1ed72023d33e4f2893066a7d356b1617&#34; class=&#34;problems-wrapper&#34; role=&#34;group&#34;
+     aria-labelledby=&#34;1ed72023d33e4f2893066a7d356b1617-problem-title&#34;
+     data-problem-id=&#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@1ed72023d33e4f2893066a7d356b1617&#34; data-url=&#34;/courses/course-v1:UCSanDiegoX+DSE210x+3T2017/xblock/block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@1ed72023d33e4f2893066a7d356b1617/handler/xmodule_handler&#34;
+     data-problem-score=&#34;0&#34;
+     data-problem-total-possible=&#34;1&#34;
+     data-attempts-used=&#34;0&#34;
+     data-content=&#34;
+
+
+
+&amp;lt;h3 class=&amp;#34;hd hd-3 problem-header&amp;#34; id=&amp;#34;1ed72023d33e4f2893066a7d356b1617-problem-title&amp;#34; aria-describedby=&amp;#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@1ed72023d33e4f2893066a7d356b1617-problem-progress&amp;#34; tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+  5
+&amp;lt;/h3&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem-progress&amp;#34; id=&amp;#34;block-v1:UCSanDiegoX+DSE210x+3T2017+type@problem+block@1ed72023d33e4f2893066a7d356b1617-problem-progress&amp;#34;&amp;gt;&amp;lt;/div&amp;gt;
+
+&amp;lt;div class=&amp;#34;problem&amp;#34;&amp;gt;
+  &amp;lt;div&amp;gt;
+&amp;lt;div class=&amp;#34;wrapper-problem-response&amp;#34; tabindex=&amp;#34;-1&amp;#34; aria-label=&amp;#34;Question 1&amp;#34; role=&amp;#34;group&amp;#34;&amp;gt;&amp;lt;p&amp;gt;The linear transformation of a normal random variable is also a normal random variable.&amp;lt;/p&amp;gt;
+&amp;lt;div class=&amp;#34;choicegroup capa_inputtype&amp;#34; id=&amp;#34;inputtype_1ed72023d33e4f2893066a7d356b1617_2_1&amp;#34;&amp;gt;
+    &amp;lt;fieldset aria-describedby=&amp;#34;status_1ed72023d33e4f2893066a7d356b1617_2_1&amp;#34;&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;1ed72023d33e4f2893066a7d356b1617_2_1-choice_0-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_1ed72023d33e4f2893066a7d356b1617_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_1ed72023d33e4f2893066a7d356b1617_2_1&amp;#34; id=&amp;#34;input_1ed72023d33e4f2893066a7d356b1617_2_1_choice_0&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_0&amp;#34;/&amp;gt; True 
+
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+          &amp;lt;div class=&amp;#34;field&amp;#34;&amp;gt;
+            
+
+            &amp;lt;label id=&amp;#34;1ed72023d33e4f2893066a7d356b1617_2_1-choice_1-label&amp;#34; class=&amp;#34;response-label field-label label-inline&amp;#34; aria-describedby=&amp;#34;status_1ed72023d33e4f2893066a7d356b1617_2_1&amp;#34;&amp;gt;
+                &amp;lt;input type=&amp;#34;radio&amp;#34; name=&amp;#34;input_1ed72023d33e4f2893066a7d356b1617_2_1&amp;#34; id=&amp;#34;input_1ed72023d33e4f2893066a7d356b1617_2_1_choice_1&amp;#34; class=&amp;#34;field-input input-radio&amp;#34; value=&amp;#34;choice_1&amp;#34;/&amp;gt; False 
+
+            &amp;lt;/label&amp;gt;
+          &amp;lt;/div&amp;gt;
+        &amp;lt;span id=&amp;#34;answer_1ed72023d33e4f2893066a7d356b1617_2_1&amp;#34;/&amp;gt;
+    &amp;lt;/fieldset&amp;gt;
+    &amp;lt;div class=&amp;#34;indicator-container&amp;#34;&amp;gt;
+            
+
+&amp;lt;span class=&amp;#34;status unanswered&amp;#34; id=&amp;#34;status_1ed72023d33e4f2893066a7d356b1617_2_1&amp;#34; data-tooltip=&amp;#34;Not yet answered.&amp;#34;&amp;gt;
+  &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;unanswered&amp;lt;/span&amp;gt;&amp;lt;span class=&amp;#34;status-icon&amp;#34; aria-hidden=&amp;#34;true&amp;#34;/&amp;gt;
+&amp;lt;/span&amp;gt;
+
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;#34;action&amp;#34;&amp;gt;
+    &amp;lt;input type=&amp;#34;hidden&amp;#34; name=&amp;#34;problem_id&amp;#34; value=&amp;#34;5&amp;#34; /&amp;gt;
+
+    &amp;lt;div class=&amp;#34;submit-attempt-container&amp;#34;&amp;gt;
+      &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;submit btn-brand&amp;#34; data-submitting=&amp;#34;Submitting&amp;#34; data-value=&amp;#34;Submit&amp;#34; data-should-enable-submit-button=&amp;#34;True&amp;#34; aria-describedby=&amp;#34;submission_feedback_1ed72023d33e4f2893066a7d356b1617&amp;#34; &amp;gt;
+          &amp;lt;span class=&amp;#34;submit-label&amp;#34;&amp;gt;Submit&amp;lt;/span&amp;gt;
+      &amp;lt;/button&amp;gt;
+      &amp;lt;div class=&amp;#34;submission-feedback&amp;#34; id=&amp;#34;submission_feedback_1ed72023d33e4f2893066a7d356b1617&amp;#34;&amp;gt;
+        &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Some problems have options such as save, reset, hints, or show answer. These options follow the Submit button.&amp;lt;/span&amp;gt;
+      &amp;lt;/div&amp;gt;
+    &amp;lt;/div&amp;gt;
+    &amp;lt;div class=&amp;#34;problem-action-buttons-wrapper&amp;#34;&amp;gt;
+      &amp;lt;span class=&amp;#34;problem-action-button-wrapper&amp;#34;&amp;gt;
+          &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;save problem-action-btn btn-default btn-small&amp;#34; data-value=&amp;#34;Save&amp;#34;&amp;gt;
+              &amp;lt;span class=&amp;#34;icon fa fa-floppy-o&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+              &amp;lt;span aria-hidden=&amp;#34;true&amp;#34;&amp;gt;Save&amp;lt;/span&amp;gt;
+              &amp;lt;span class=&amp;#34;sr&amp;#34;&amp;gt;Save your answer&amp;lt;/span&amp;gt;
+          &amp;lt;/button&amp;gt;
+      &amp;lt;/span&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-gentle-alert
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-exclamation-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;1ed72023d33e4f2893066a7d356b1617-problem-title&amp;#34;&amp;gt;
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+
+
+&amp;lt;div class=&amp;#34;notification warning notification-save
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-save&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;1ed72023d33e4f2893066a7d356b1617-problem-title&amp;#34;&amp;gt;None
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+    
+
+
+&amp;lt;div class=&amp;#34;notification general notification-show-answer
+      is-hidden&amp;#34;
+     tabindex=&amp;#34;-1&amp;#34;&amp;gt;
+    &amp;lt;span class=&amp;#34;icon fa fa-info-circle&amp;#34; aria-hidden=&amp;#34;true&amp;#34;&amp;gt;&amp;lt;/span&amp;gt;
+    &amp;lt;span class=&amp;#34;notification-message&amp;#34; aria-describedby=&amp;#34;1ed72023d33e4f2893066a7d356b1617-problem-title&amp;#34;&amp;gt;Answers are displayed within the problem
+    &amp;lt;/span&amp;gt;
+    &amp;lt;div class=&amp;#34;notification-btn-wrapper&amp;#34;&amp;gt;
+        &amp;lt;button type=&amp;#34;button&amp;#34; class=&amp;#34;btn btn-default btn-small notification-btn review-btn sr&amp;#34;&amp;gt;Review&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;
+
+&amp;lt;/div&amp;gt;
+&#34;
+     data-graded=&#34;True&#34;&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;/div&gt;
+
+  </div>
+  <div id="seq_content" role="tabpanel"></div>
+
+  <nav class="sequence-bottom" aria-label="Section">
+    <button class="sequence-nav-button button-previous">
+      <span class="icon fa fa-chevron-prev" aria-hidden="true"></span>
+      <span>Previous</span>
+    </button>
+    <button class="sequence-nav-button button-next">
+      <span>Next</span>
+      <span class="icon fa fa-chevron-next" aria-hidden="true"></span>
+    </button>
+  </nav>
+</div>
+
+</div>
+
+        </main>
+    </section>
+
+    <section class="courseware-results-wrapper">
+      <div id="loading-message" aria-live="polite" aria-relevant="all"></div>
+      <div id="error-message" aria-live="polite"></div>
+      <div class="courseware-results search-results" data-course-id="course-v1:UCSanDiegoX+DSE210x+3T2017" data-lang-code="en"></div>
+    </section>
+
+  </div>
+  
+
+
+
+
+
+
+    <div class="verification-sock"
+    >
+        <button type="button" class="btn btn-primary focusable action-toggle-verification-sock">
+            Learn About Verified Certificates
+        </button>
+        <div class="verification-main-panel">
+            <div class="verification-desc-panel content-main">
+                <h2>edX Verified Certificate</h2>
+                <h4>Why upgrade?</h4>
+                <ul>
+                    <li>Official proof of completion</li>
+                    <li>Easily shareable certificate</li>
+                    <li>Proven motivator to complete the course</li>
+                    <li>Certificate purchases help edX continue to offer free courses</li>
+                </ul>
+                <h4>How it works</h4>
+                <ul>
+                    <li>Pay the Verified Certificate upgrade fee</li>
+                    <li>Verify your identity with a webcam and government-issued ID</li>
+                    <li>Study hard and pass the course</li>
+                    <li>Share your certificate with friends, employers, and others</li>
+                </ul>
+                <h4>edX Learner Stories</h4>
+                <div class="learner-story-container">
+                    <img class="student-image" alt="Student Image" src="https://prod-edxapp.edx-cdn.org/static/course_experience/images/learner-quote.05d56e5ddbc1.png" />
+                    <div class="story-quote">
+                        My certificate has helped me showcase my knowledge on my
+                        resume - I feel like this certificate could really help me land
+                        my dream job!
+                        <span class="author">- Christina Fong, edX Learner</span>
+                    </div>
+                </div>
+                <div class="learner-story-container">
+                    <img class="student-image" alt="Student Image" src="https://prod-edxapp.edx-cdn.org/static/course_experience/images/learner-quote2.39200c5db560.png" />
+                    <div class="story-quote">
+                        I wanted to include a verified certificate on my resume and my profile to
+                        illustrate that I am working towards this goal I have and that I have
+                        achieved something while I was unemployed.<br/>
+                        <span class="author">- Cheryl Troell, edX Learner</span>
+                    </div>
+                </div>
+                <img class="mini-cert" src="https://prod-edxapp.edx-cdn.org/static/course_experience/images/verified-cert.891c55cad756.png"/>
+                <a href="https://ecommerce.edx.org/basket/add/?sku=784A0FF">
+                    <button type="button" class="btn btn-upgrade stuck-top focusable action-upgrade-certificate" data-creative="original_sock" data-position="sock">
+                        Upgrade ($350)
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+
+    
+    
+    <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/bundles/CourseSock.496006562f530593f899.487f5dcea6cd.js" ></script>
+      <script type="text/javascript">
+        
+    new CourseSock({
+        el:'.verification-sock'
+    });
+
+      </script>
+
+
+</div>
+<div class="container-footer">
+    <div class="course-license">
+      
+
+
+    © <span class="license-text">All Rights Reserved</span>
+
+    </div>
+</div>
+
+      
+    </div>
+
+        
+
+
+
+
+
+<footer id="footer-edx-v3" role="contentinfo" aria-label="Page Footer"
+>
+
+
+    <h2 class="sr footer-about-title">About edX</h2>
+    <div class="footer-content-wrapper">
+      <div class="footer-logo">
+          <a href="https://www.edx.org">
+            <img alt="edX Home Page" src="https://prod-edxapp.edx-cdn.org/static/edx.org/images/logo-footer.fde85fe42f6b.png">
+          </a>
+      </div>
+
+      <div class="site-details">
+          <nav class="site-nav" aria-label="About edX">
+            <ul class="about-links">
+                <li class="list-item">
+                  <a href="https://www.edx.org/about-us">About</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.edx.org/enterprise">edX for Business</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.edx.org/blog">Blog</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.edx.org/news-announcements">News</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://support.edx.org">Help Center</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.edx.org/contact">Contact</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.edx.org/careers">Careers</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.edx.org/donate">Donate</a>
+                </li>
+            </ul>
+          </nav>
+          <nav class="legal-notices" aria-label="Legal">
+            <ul class="legal-links">
+                <li class="list-item">
+                  <a href="https://www.edx.org/edx-terms-service">Terms of Service & Honor Code</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.edx.org/edx-privacy-policy">Privacy Policy</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.edx.org/accessibility">Accessibility Policy</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.edx.org/sitemap">Sitemap</a>
+                </li>
+                <li class="list-item">
+                  <a href="https://www.edx.org/media-kit">Media Kit</a>
+                </li>
+            </ul>
+          </nav>
+
+              
+
+
+
+<div class="footer-language-selector">
+    <label for="footer-language-select">
+        <span class="icon fa fa-globe" aria-hidden="true"></span>
+        <span class="sr">Choose Language</span>
+    </label>
+    <select id="footer-language-select" name="language" onchange="footerLanguageSelector.handleSelection(this)">
+            
+                <option value="ar">العربية</option>
+            
+                <option value="en" selected="selected">English</option>
+            
+                <option value="es-419">español</option>
+            
+                <option value="fr">français</option>
+            
+                <option value="zh-cn">中文</option>
+    </select>
+</div>
+
+<script type="text/javascript">
+    window.footerLanguageSelector = {
+        handleSelection: function($select) {
+            this.setLanguageCookie($select.value, this.refreshPage);
+        },
+
+        setLanguageCookie: function(value, callback) {
+            var cookie = 'prod\u002Dedx\u002Dlanguage\u002Dpreference=' + value + ';path=/';
+
+            
+                cookie += ';domain=.edx.org';
+                cookie += ';max-age=1209600';
+
+            document.cookie = cookie;
+
+            callback();
+        },
+
+        refreshPage: function() {
+            window.location.reload();
+        }
+    };
+</script>
+
+
+          <p class="copyright">© 2012–2017 edX Inc.  All rights reserved except where noted.  EdX, Open edX and the edX and Open edX logos are registered trademarks or trademarks of edX Inc.
+           | 粤ICP备17044299号-2
+	  </p>
+
+          <div class="openedx-link">
+            <a href="http://open.edx.org" title="Powered by Open edX">
+              <img alt="Powered by Open edX" src="https://files.edx.org/openedx-logos/edx-openedx-logo-tag.png" width="140">
+            </a>
+          </div>
+      </div>
+
+      <div class="external-links">
+        <ul class="social-media-links">
+            <li class="list-item">
+                <a href="http://www.facebook.com/EdxOnline" class="sm-link external" title="Facebook" rel="noreferrer">
+                    <span class="icon fa fa-facebook-square" aria-hidden="true"></span>
+                    <span class="sr">Like edX on Facebook</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="https://twitter.com/edXOnline" class="sm-link external" title="Twitter" rel="noreferrer">
+                    <span class="icon fa fa-twitter-square" aria-hidden="true"></span>
+                    <span class="sr">Follow edX on Twitter</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="https://www.youtube.com/user/edxonline?sub_confirmation=1" class="sm-link external" title="Youtube" rel="noreferrer">
+                    <span class="icon fa fa-youtube-square" aria-hidden="true"></span>
+                    <span class="sr">Subscribe to the edX YouTube channel</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="http://www.linkedin.com/company/edx" class="sm-link external" title="LinkedIn" rel="noreferrer">
+                    <span class="icon fa fa-linkedin-square" aria-hidden="true"></span>
+                    <span class="sr">Follow edX on LinkedIn</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="https://plus.google.com/+edXOnline" class="sm-link external" title="Google+" rel="noreferrer">
+                    <span class="icon fa fa-google-plus-square" aria-hidden="true"></span>
+                    <span class="sr">Follow edX on Google+</span>
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="http://www.reddit.com/r/edx" class="sm-link external" title="Reddit" rel="noreferrer">
+                    <span class="icon fa fa-reddit-square" aria-hidden="true"></span>
+                    <span class="sr">Subscribe to the edX subreddit</span>
+                </a>
+            </li>
+        </ul>
+
+        <ul class="mobile-app-links">
+            <li class="list-item">
+                <a href="https://itunes.apple.com/us/app/edx/id945480667?mt=8" class="app-link external">
+                    <img alt="Download the edX mobile app from the Apple App Store" src="https://prod-edxapp.edx-cdn.org/static/images/app/app_store_badge_135x40.d0558d910630.svg">
+                </a>
+            </li>
+            <li class="list-item">
+                <a href="https://play.google.com/store/apps/details?id=org.edx.mobile" class="app-link external">
+                    <img alt="Download the edX mobile app from Google Play" src="https://prod-edxapp.edx-cdn.org/static/images/app/google_play_badge_45.144f2dd05129.png">
+                </a>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+
+
+</footer>
+
+
+
+  
+
+    <link href="https://prod-edxapp.edx-cdn.org/static/edx.org/css/lms-footer-edx.70bfcb318894.css" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+  </div>
+
+  
+  
+  <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/common/js/vendor/jquery.scrollTo.525edcc52fe8.js"></script>
+  <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/vendor/flot/jquery.flot.d3d45ff0c6a8.js"></script>
+
+  <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/vendor/codemirror-compressed.dd4b74f7c5fe.js"></script>
+
+  
+    <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/lms-courseware.66b8b455a37d.js" charset="utf-8"></script>
+
+
+  
+
+
+
+<script type="text/javascript">
+    // Fast Preview was introduced in 2.5. However, it
+    // causes undesirable flashing/font size changes when
+    // MathJax is used for interactive preview (equation editor).
+    // Setting processSectionDelay to 0 (see below) fully eliminates
+    // fast preview, but to reduce confusion, we are also setting
+    // the option as displayed in the context menu to false.
+    // When upgrading to 2.6, check if this variable name changed.
+    window.MathJax = {
+      menuSettings: {CHTMLpreview: false}
+    };
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [
+        ["\\(","\\)"],
+        ['[mathjaxinline]','[/mathjaxinline]']
+      ],
+      displayMath: [
+        ["\\[","\\]"],
+        ['[mathjax]','[/mathjax]']
+      ]
+    }
+  });
+</script>
+<script type="text/x-mathjax-config">
+
+  // In order to eliminate all flashing during interactive
+  // preview, it is necessary to set processSectionDelay to 0
+  // (remove delay between input and output phases). This
+  // effectively disables fast preview, regardless of
+  // the fast preview setting as shown in the context menu.
+  MathJax.Hub.processSectionDelay = 0;
+
+  MathJax.Hub.signal.Interest(function(message) {
+    if(message[0] === "End Math") {
+        set_mathjax_display_div_settings();
+    }
+  });
+  function set_mathjax_display_div_settings() {
+    $('.MathJax_Display').each(function( index ) {
+      this.setAttribute('tabindex', '0');
+      this.setAttribute('aria-live', 'off');
+      this.removeAttribute('role');
+      this.removeAttribute('aria-readonly');
+    });
+  }
+</script>
+
+
+<!-- This must appear after all mathjax-config blocks, so it is after the imports from the other templates.
+     It can't be run through static.url because MathJax uses crazy url introspection to do lazy loading of
+     MathJax extension libraries -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_SVG"></script>
+
+
+
+  
+    
+      <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/courseware/courseware_factory.1504fc10caef.js?raw"></script>
+    <script type="text/javascript">
+        (function (require) {
+            require(['js/courseware/courseware_factory'], function (CoursewareFactory) {
+                
+    CoursewareFactory();
+  
+            });
+        }).call(this, require || RequireJS.require);
+    </script>
+
+
+
+  <script type="text/javascript">
+    var $$course_id = "course\u002Dv1:UCSanDiegoX+DSE210x+3T2017";
+  </script>
+
+
+<script src='https://prod-edxapp.edx-cdn.org/static/xblock/resources/xmodule.vertical_block/public/js/vertical_student_view.f215f5686907.js' type='application/javascript'></script>
+
+
+
+  
+
+
+    <!-- begin segment footer -->
+    <script type="text/javascript">
+        $(window).load(function() {
+            analytics.identify(
+                "10841007",
+                {
+                    email: "v.serpak@gmail.com",
+                    username: "v_serpak"
+                },
+                {
+                    integrations: {
+                        // Disable MailChimp because we don't want to update the user's email
+                        // and username in MailChimp on every page load. We only need to capture
+                        // this data on registration/activation.
+                        MailChimp: false
+                    }
+                }
+            );
+        });
+    </script>
+    <!-- end segment footer -->
+
+  <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/vendor/noreferrer.aa62a3e70ffa.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/utils/navigation.08930e16ab3d.js" charset="utf-8"></script>
+  <script type="text/javascript" src="https://prod-edxapp.edx-cdn.org/static/js/header/header.309a1243e175.js"></script>
+  
+</body>
+</html>
+
+
+
+<!-- Performance beacon for onload times -->
+<script>
+  (function () {
+    var sample_rate = 0.05;
+    var roll = Math.floor(Math.random() * 100)/100;
+    var onloadBeaconSent = false;
+
+    if(roll < sample_rate){
+      $(window).load(function() {
+        setTimeout(function(){
+          var t = window.performance.timing;
+
+          var data = {
+            event: "onload",
+            value: t.loadEventEnd - t.navigationStart,
+            page: window.location.href,
+          };
+
+          if (!onloadBeaconSent) {
+            $.ajax({method: "POST", url: "/performance", data: data});
+          }
+          onloadBeaconSent = true;
+        }, 0);
+      });
+    }
+  }());
+</script>

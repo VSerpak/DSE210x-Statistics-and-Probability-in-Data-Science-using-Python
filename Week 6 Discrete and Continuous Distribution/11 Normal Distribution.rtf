@@ -1,0 +1,312 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Cambria Math;}{\f2\fnil\fcharset161 Calibri;}}
+{\*\generator Riched20 10.0.16299}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello, and welcome back.\par
+So next we would like to discuss Gaussian Distributions,\par
+or, commonly known as normal distributions.\par
+You've noticed that some, many of the people\par
+we've talked about are quite famous,\par
+they've appeared on things like statues and stamps,\par
+but Gauss actually appeared on a deutschemark,\par
+so he's really made it.\par
+In fact, the deutschemark, if you look at it,\par
+will show you the Gaussian or normal distribution here,\par
+including the formula and several other features\par
+you can see here.\par
+Well, too bad this note is no longer in circulation.\par
+All right, so first, let's see what definition\par
+of a normal distribution.\par
+So if X is distributed normal mu sigma square,\par
+where mu is the mean and sigma square is the variance,\par
+then F of X is one over square root of two pi sigma square\par
+times E to the minus X minus mu, whole thing squared,\par
+divided by two sigma square.\par
+Okay, and we'll, we're going to talk about some more\par
+so we'll get a little more from it, from this.\par
+All right, so this is also called the Bell Curve,\par
+this shape, it looks like this, and you see\par
+that it's maximized when this, so here there's no X,\par
+the only place where X appears is here,\par
+so it's maximized when X minus mu is zero, namely,\par
+when X is equal to mu, that's the highest value.\par
+It's also symmetric around mu, like this.\par
+And this distribution is one of the most common\par
+distributions and 'cause whenever you add many\par
+independent factors, so for example, if you assume\par
+that someone's height is a function of their maybe,\par
+their genes, and their environment, and their age,\par
+the food they ate when they're one year old\par
+and two year olds, and so on, so it's the sum of many,\par
+many independent factors, or almost independent factors,\par
+it's going to be normally distributed.\par
+Same for weight, same for rainfall,\par
+it's the aggregation of many factors, or salaries, so,\par
+they'll look like a normal distribution.\par
+And perhaps this is why it's called a normal distribution.\par
+As we'll see, it also approximates\par
+the binomial distribution, so that's another reason\par
+why it's useful, and these reasons of course are\par
+very closely related.\par
+A couple of observations.\par
+We said that it's symmetric around mu, and that mu is the,\par
+at mu, the probability is highest, namely,\par
+mu is the most likely value, so maybe we do around mu,\par
+m around mu, and the F of mu at that point is this\par
+one over two pi, square root of two pi sigma squared,\par
+because the E, the part with the E will disappear.\par
+And so this is the value,\par
+one over square root of two pi sigma square.\par
+And also, as sigma grows, the distribution gets more flat,\par
+so here it is for sigma which is 0.2,\par
+and here for sigma which is one,\par
+and here for sigma which is,\par
+I'm sorry, this is sigma which is 0.5,\par
+and this is sigma which is one,\par
+and this is sigma which is five.\par
+So, as sigma becomes larger, the standard deviation\par
+gets larger, the shape gets more spread out\par
+and lower at the peak, and it's always centered\par
+around the mean, mu.\par
+Here mu is zero, and for the green curve,\par
+mu is negative two.\par
+It will be useful to talk about linear transformations\par
+of Gaussian or normal distribution, so we're going\par
+to show the linear transformation of a normal distribution\par
+is also normal.\par
+So if X is distributed normal, with mean mu\par
+and variance sigma square, I apologize, this should be\par
+sigma square, then F X, the PDF of X should be, will be\par
+one over square root of two pi sigma square\par
+E to the minus X minus mu square\par
+divided by two sigma square.\par
+And if Y is AX plus B, then, as for everywhere in\par
+the variable, if we look at the expected value of Y,\par
+mu Y, it's going to be A times mu X plus B,\par
+because Y is A X plus B, so mu Y is A times mu X plus B.\par
+And the standard deviation of Y is just gonna be\par
+A times the standard deviation of X.\par
+Right, so, we're going to show that Y is,\par
+this Y is actually also a normal distribution,\par
+and do it by variable transformation\par
+that we saw in the last lecture.\par
+So F Y of Y by default, as we saw in the very last formula,\par
+is going to be the derivative of A X plus B, that's G of X,\par
+times the F X of X, and have an absolute value here.\par
+So I'm assuming here that A is positive,\par
+but if A is negative, then you just need\par
+to take absolute value.\par
+At the point where Y is equal to G of X,\par
+or Y is A X plus B,\par
+and in other words, where X is Y minus B over A,\par
+and then we can just write it.\par
+So the derivative of this is just A, one over A,\par
+and then we have F X of X, so it's\par
+one over square root two pi sigma square E to the minus,\par
+and we're looking at A at X, which is Y minus B over A,\par
+so it's Y minus B over A, minus mu square\par
+divided by two sigma square.\par
+And then we can just open it up, and we'll get\par
+that if you put the A inside, is we get it's\par
+one over square root of two pi A sigma,\par
+the whole thing square,\par
+and here we have one, the A mu comes out here,\par
+so we have Y minus A mu plus B, like this,\par
+Y minus A mu plus B, squared, divided by two,\par
+the A here comes with the square, two A sigma square.\par
+And what we see here is that A sigma is just sigma Y,\par
+and like what's here this is sigma Y,\par
+and A mu, this is A mu X plus B is mu Y.\par
+So what we have here is just the normal distribution\par
+with mean mu Y and standard deviation sigma Y.\par
+So therefore Y is distributed normal with mean A mu,\par
+which was originally mu X, plus B, A mu plus B,\par
+standard deviation A sigma, as we anticipated.\par
+So that means that we can, without loss of generality\par
+just consider random variables that are distributed normal,\par
+zero one, so we don't need to consider all\par
+normal mu sigma square, but we can consider normal zero one,\par
+and then we can convert them\par
+to arbitrary normal distributions.\par
+For these distribution, the PDF is a little simpler,\par
+because there's no mu and there's no sigma,\par
+so it's just one over square root of two pi, sigma\par
+square is one, times E to the minus X square,\par
+because normally it would be X minus mu square,\par
+but there's no mu so it's X square,\par
+divided by two sigma square, which is just two.\par
+So it's one over square root of two pi\par
+E to the minus X square over two.\par
+When we're going to calculate, going to calculate\par
+show that it's an integral and show that,\par
+calculate the expectation and so on,\par
+so a helpful integral to keep in mind is\par
+the integral of X E to the minus X square over 2 DX is just\par
+the negative value of E to the minus X square over two.\par
+Because if you take the derivative of this,\par
+you get the minus will cancel, and you get,\par
+here you'll get two X divided by two, which gives you X,\par
+E to the minus X square over two.\par
+So let's just remember this.\par
+So first, we need to check whether it will add,\par
+or in this case, integrate.\par
+So whether the integral that we had is going to be one.\par
+So we're going to define a closely related integral,\par
+just forget the one over square root of two pi,\par
+so let I be the integral from minus infinity to infinity\par
+of E to the minus X square over two DX.\par
+If we look at I square, it's the integral from minus\par
+infinity to infinity of this quantity times itself.\par
+So DX and Y to DY,\par
+which is the integral DX DY of E to the minus\par
+and then we have here E to the minus X square\par
+times E to the minus Y square so that's\par
+E to the minus X square plus Y square,\par
+we have that too, in the denominator, DX DY.\par
+And now what's we're going to do is we're going\par
+to change the coordinates from Cartesian coordinates DX DY\par
+to polar coordinates DR and D theta,\par
+in such a way that X is going to be R cosine theta,\par
+and Y is going to be R sine theta.\par
+And if you do that, you can see that DX DY,\par
+which is the area that you displace if you increase\par
+X by delta X and Y by delta Y, is going to be,\par
+when DX and DY are infinitesimally small,\par
+is going to be R DR D theta.\par
+So we have R D theta times DR, so it's this product.\par
+And you need to think about it, but you can convince\par
+yourself if you know calculus, you know this is true.\par
+So this is going to be the integral now R is going to go\par
+from zero to infinity, and theta is going to go from\par
+zero to two pi of X square plus Y square is just\par
+R square so it's E to the minus R square over two, times R,\par
+which comes from this change of variables here.\par
+R D theta DR.\par
+So now, we can just see that we can take, this whole thing,\par
+in fact nothing here depends on theta,\par
+so we can take it outside, so we get\par
+the integral from zero to infinity of R\par
+E to the minus R square over two\par
+times the integral from zero to two pi D theta,\par
+so this is just going to give us two pi,\par
+so this is two pi, and what you have inside is then\par
+the integral from zero to infinity of R\par
+E to the minus R square over two DR.\par
+And then we need to remember the useful integral\par
+that we mentioned before.\par
+The integral of X E to the minus X over two.\par
+So this is just going to, and here's a reminder\par
+that the integral of R E to the minus R square DR\par
+is E to the minus R square over two.\par
+And so this is going to be equal to minus two pi\par
+there's a two pi here, E to the minus R square over two,\par
+between infinity and one.\par
+Infinity and zero, I'm sorry.\par
+Plug in infinity, you get zero, and plug in zero\par
+you get two pi, so this is just two pi, with the minus sign.\par
+So what we see is that I square is equal to two pi.\par
+And therefore, I is square root of that,\par
+I is square root of two pi.\par
+But, what we're interested in is closely related to I,\par
+we're interested in the integral of one over square root\par
+of two pi E to the minus X square over two DX,\par
+which is just I divided by square root of two pi.\par
+So I is just everything except this factor,\par
+so it's I divided by square root of two pi,\par
+which is just one.\par
+So yes, it adds, or it integrates,\par
+the integral of F of X when this is\par
+for the standard normal distribution is one.\par
+So now that we show that it's a distribution,\par
+we want to find its expectation.\par
+So first, by symmetry we see that the expected value of X\par
+is zero, because this is the standard distribution,\par
+mean mu is zero, and sigma is also one, though that doesn't\par
+matter but mu zero, so the expectation\par
+because of symmetry is zero.\par
+If you didn't want to use the expectation,\par
+just do it by equation is just the expected value of X\par
+is one over square root of two pi\par
+times the integral from minus infinity to infinity of X,\par
+'cause we're doing the expectation times the probability,\par
+E to the minus X square over two.\par
+Again, we're using the same formula that this integral\par
+is negative E to the minus X square over two,\par
+between minus infinity to infinity.\par
+This quantity is symmetric,\par
+so we're subtracting the same number, a number from itself,\par
+it's the same value between negative infinity and infinity,\par
+and we subtract, and we get it's to zero.\par
+Now, if we want to do the variance,\par
+then we first calculate the expected value of X square,\par
+which is the one over square root of two pi\par
+times the integral of X square E to the minus X square\par
+over two DX.\par
+And this we need to do just slightly more work,\par
+we need to do integration by part.\par
+So we'll let, we'll call the first X just U\par
+and the remainder, namely,\par
+X E to the minus X square over two we call it DV.\par
+So then DU is going to be DX, and V is the integral of that,\par
+which is what we have said many many times by now,\par
+is negative E to the minus X square over two.\par
+So what we have here is the integral of U DV\par
+which is UV minus integral of V DU.\par
+So UV is just X E to the minus X square over two.\par
+Notice that doing it without\par
+the one over square root of two pi, here I do that.\par
+So if we introduce them, then we have\par
+the one over square root of two pi,\par
+so we get here minus E to the minus X\par
+E to the minus X square over two\par
+times one over square root of two pi, and then minus,\par
+which will give us minus the integral of V DU,\par
+so this is V DU we have minus times plus,\par
+and we get here E to the minus X square DX.\par
+But this thing, so first let's look at this one here.\par
+This is, we need to see what happens.\par
+So first, when X goes to infinity, it's going to be zero\par
+because X E to the minus X square is zero,\par
+and when X is negative infinity, it's again zero.\par
+So this term will be zero.\par
+And what do we have here, we have just\par
+the integral of the standard, of the standard (mumbles) of\par
+one over square root of two pi E to the minus X square DX,\par
+so this is just one.\par
+Zero plus one, which is one.\par
+So we get that the variance\par
+of the standard normal distribution is one.\par
+And so this is one and now,\par
+I'm sorry, I apologize,\par
+we got that the expected value of X square is one,\par
+and the variance of the expected value of X square\par
+minus the expected value of X, squared,\par
+and this is one minus zero, which is still one.\par
+So to summarize, we describe the normal distribution\par
+with mean mu and variance sigma square.\par
+We described the formula for the distribution,\par
+and this distribution ranges\par
+between minus infinity and infinity.\par
+We said that the expected value of X was mu,\par
+the variance of sigma square\par
+and therefore the standard deviation was sigma.\par
+And we mentioned that this is a very common distribution.\par
+Next time, we're going to calculate\par
+some probabilities using the normal distributions.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Why is there a \f1\u8730?\f0 (2\f2\lang1032\'f0) factor in the denominator of the pdf?\par
+\par
+\tab\par
+To standardize the mean\par
+\par
+\tab\par
+So the integral evaluates to 1\par
+\par
+\tab\par
+Because we integrated in polar coordinates\par
+\par
+\tab\par
+I don\rquote t remember\f0\lang9\par
+}
+ 

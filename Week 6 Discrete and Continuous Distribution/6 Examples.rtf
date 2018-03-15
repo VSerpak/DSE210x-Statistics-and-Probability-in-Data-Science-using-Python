@@ -1,0 +1,510 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello, and welcome back.\par
+In the last lecture, we talked about\par
+geometric distributions, and now we would like\par
+to discuss a couple of example related to them.\par
+So let's start with some fake statistics about startups.\par
+Let's assume that a startup succeeds\par
+with probability 20%, and let's further assume\par
+that it's independent of previous attempts;\par
+namely if someone failed 10 times,\par
+the probability that they'll succeed\par
+the 11th time is still the same 20%, okay.\par
+So if we ask what is the expected number of startups\par
+until we get the first success, then we see that the number\par
+of startups is going to be distributed geometrically;\par
+and we're asking about the expectation\par
+of a geometric distribution.\par
+In this particular case, the number of attempts\par
+until the first success is going to be distributed geometric\par
+with parameter 0.2; that's the probability of success.\par
+And, therefore, the expected value of X,\par
+the expected number of trials until the first success,\par
+including the first success, is going to be\par
+one over the parameter, namely one over 0.2, which is five,\par
+which makes sense because if your probability\par
+of succeeding is 20% every time,\par
+you expect to try about five times\par
+until you get the first success.\par
+All right, so now let's imagine\par
+that there's a very fortunate kid,\par
+wants to starts a startup, and is lucky enough\par
+that his or her dad will fund up to three startups.\par
+So they'll just give them the money;\par
+just go play with it, three startups you can try.\par
+And what we would like to do is what is the probability\par
+of success; namely, what's the probability that one\par
+of those three startups will succeed, at least one.\par
+All right, so this is what we're asking:\par
+what's the probability that one\par
+of the first three startups will succeed or,\par
+in other words, we're asking what is the probability that X,\par
+the attempt, the first attempt at which you succeeded,\par
+or they succeeded, is less than or equal to three.\par
+So we know that this probability that X is less than\par
+or equal to three is just the CDF,\par
+the capital F of three, CDF of three.\par
+And as we have seen, it's in general it's one minus Q cubed.\par
+So in this case it's one minus Q;\par
+the probability of failure is 0.8.\par
+So it's one minus 0.8 cubed, which is roughly 49%.\par
+So the probability that they succeed in one of the first\par
+three trials is roughly, let's says slightly less than half.\par
+Now let's assume that the kid,\par
+this kid has an even wealthier uncle.\par
+And if the kid did not succeed in the first three trials,\par
+then the uncle will fund the next three startups;\par
+namely startups number four, five, and six.\par
+Now we can ask a couple of questions now.\par
+We can ask, for example, what is the probability\par
+that they'll succeed with their uncle\par
+if dad helps did not suffice; namely, they failed with dad.\par
+So if you want to formalize this, we could,\par
+I'll write it in what is the probability that X\par
+for success will be attempt four, five, or six\par
+given that X is bigger than both; namely, they did not\par
+succeed in the first three tries, okay.\par
+And this we can write as the probability\par
+that they succeed the time four given that\par
+they didn't succeed in the first three\par
+plus the probability that they'll succeed the first trial\par
+given they didn't succeed in the first three\par
+plus the probability of their succeeding in the sixth trial.\par
+Okay, and this is because these,\par
+of course, events are in disjoint, okay.\par
+So now we can use the memoryless property\par
+of the geometric distribution and observe\par
+that the probability that they'll succeed at time four\par
+given that they didn't succeed\par
+at up to time three is still going to be 20%.\par
+So it's the same as the probability of the success\par
+time one and likewise for the next two.\par
+So this is going to be the same\par
+as the probability that they succeed the first time.\par
+The probability they succeed at time five\par
+given that they didn't succeed up to three is the same\par
+as the probability they fail in four and succeed in five,\par
+which is the same as the probability of two;\par
+and here it's the same as the probability of three.\par
+So we need to add those three probabilities.\par
+And when we do that, we of course get the probability\par
+that X is less than or equal to three,\par
+which is exactly the probability that we calculated\par
+in the previous slide, probability of succeeding\par
+with that, which is 49%.\par
+So what we see is that because of the memoryless property\par
+of the geometric distribution, if they didn't succeed\par
+with dad and uncle will fund the next three startups,\par
+the probability that they'll succeed with the uncle\par
+if the dad not help is exactly the same as probability\par
+of succeeding in the first three trials,\par
+which as we calculated was 49%.\par
+Next let's ask a slightly different question,\par
+which is what is the probability that they'll succeed\par
+with the uncle; and what we mean that\par
+by that is the probability that one to three will fail\par
+and one of four, five, and six will succeed, okay.\par
+So now we're not conditioning; we're not saying that they,\par
+that we know that they failed, but we're asking\par
+what's the probability that they will fail\par
+in the first three trials and succeed\par
+in one of the next three trials, okay.\par
+So we're asking what is the probability\par
+that X is between three and six, okay.\par
+And this we can write as the probability that X is bigger\par
+than three and X is bigger than equal to six.\par
+These two are the same events, right.\par
+If X is between three and six, that's the same\par
+as saying that X is bigger than three and X is less than\par
+or equal to six; and this we can write by the chain rule\par
+as the probability that X is bigger than three\par
+times the probability that X is less than or equal to six\par
+given that X is bigger than three.\par
+And I apologize, this should be, this should be capitalized.\par
+Okay, and now the probability that X is bigger than three;\par
+you remember that we have done this.\par
+This is, in fact, one of the easiest things to do.\par
+Its probability that X1, X2, and X3 failed,\par
+all failed there, that's Q cubed.\par
+So this probability is 0.8 cubed,\par
+and the probability that X is less than or equal to six\par
+given that X is bigger than or equal to three is exactly\par
+this probability that we just calculated, which is 49%.\par
+So we see that the probability that they will succeed\par
+with their uncle is the probability\par
+that they will fail with dad is 0.8 cubed.\par
+That's the probability they succeed with the uncle\par
+given that they failed with dad, which is .49;\par
+and that is roughly 25%.\par
+Now, there is also another way of calculating\par
+this probability which, of course,\par
+if we look at it we can see.\par
+So we're looking here at the probability\par
+of an interval between three and six,\par
+and every interval we know we can write as the difference\par
+between two cumulative distribution values.\par
+So the probability that X is between three and six\par
+we can write as the probability that X is less than\par
+or equal to six minus the probability\par
+that X is less than or equal to three.\par
+So it's F of six minus F of three,\par
+and F of six is one minus 0.8 to the six.\par
+F of three is one minus 0.8 to the three;\par
+and then the ones cancel,\par
+so we get 0.8 cubed minus 0.8 to the six.\par
+And when you calculate it, of course, you'll get\par
+the same answer as we got here, which is roughly 25%.\par
+So I just wanted to show you\par
+that we can do it in two different ways.\par
+One is as a difference between CDFs,\par
+and the other one is using the chain rule.\par
+All right, so now let's think instead of the fortunate kid\par
+that has a wealthy family, let's imagine that there's\par
+an immigrant kid who does not have a rich family\par
+to support him or her, but maybe can convince\par
+a venture capitalist to support them.\par
+So, again, we let X be the time to the first success;\par
+and, again, we're assuming that the probability\par
+of success is 0.2 every given time just like it was before.\par
+But now we assume that because this entrepreneur needs\par
+to raise fund, then what will happen is they'll get to keep\par
+only a fraction of the company.\par
+If they succeed, they don't get all of it,\par
+but they get a fraction R; and this and what they get is,\par
+the fraction they will get will change\par
+with the number of times that they try.\par
+Presumably, if they fail several times\par
+then they'll be less likely to get funding\par
+and they'll have to agree to keep a smaller fraction\par
+of the funding, of the investment.\par
+And we're going to assume that the fraction\par
+that they keep is some number R raised to the number\par
+of times it took them to succeed.\par
+And in this particular example we'll take R to be 0.5,\par
+and what that means is that if they succeed the first time,\par
+they get 50%; they succeed the second time,\par
+they will get 0.5 squared, which is 25%;\par
+if they succeed the third time, they'll get 0.5 cubed\par
+or one-eighth of the company, and so on.\par
+And, once again, we want to see\par
+for this entrepreneur how what's the expected fraction\par
+of the company that they get to keep.\par
+Okay, so we're looking at the expected value of R to the X.\par
+So as we know, it's going to be summation of R to the K\par
+times the probability that X is equal to K\par
+by our standard formulation for expectation\par
+and probability that X is equal to K is just Q to the K\par
+minus one times P and we need to multiply it by R to the K.\par
+And what we can see is that we can take P out\par
+and we can take R out and we'll be left with summation;\par
+so we'll be left with some, so if we take P and R out,\par
+we'll get that and that we'll get, we'll be left\par
+with summation of Q times R to the K minus one.\par
+K going from one to infinity, and we replace QR to the K\par
+minus one from K starts with one with QR\par
+to the I where I starts with zero, okay.\par
+So we get this sum; and this sum,\par
+of course, looks very familiar to us.\par
+It's the geometric sum; and as we know, it's going to be\par
+PR from here divided by one minus QR.\par
+So this is the fraction that they'll,\par
+expected fraction, they'll get to keep.\par
+And this is going to be, if we plug in the numbers\par
+that we have, is 0.2 times 0.5 divided\par
+by one minus 0.8 times 0.5; and that's 0.1 divided\par
+by 0.6, which is one-sixth, okay.\par
+So what we can see is, yeah, even though if you're a kid\par
+that comes from a wealthy family, you only have\par
+a finite number of trials, maybe three or six.\par
+And while if you're, you know, like, very entrepreneurial,\par
+you may have as many trials as you want; but still,\par
+because you get to keep a smaller fraction, what you get\par
+is much less than you would if you got to keep everything.\par
+All right, okay, so next I want to move to a different type\par
+of example, one that's called the coupon collector problem.\par
+And before there was Groupon, there were coupons.\par
+And in a typical use of coupons, there were,\par
+for example, N different coupons;\par
+and every time you bought an item, you got one of those\par
+N count coupon, a random coupon out of the N.\par
+And if you collected all N coupons then you got a prize.\par
+And here is an example of coupons that are based on Monopoly\par
+that are given away by McDonald's every now and then, okay.\par
+And the question is: how many items do you need\par
+to buy to collect all N coupons?\par
+Okay, so the N coupons, every item you buy\par
+will get one random one of them.\par
+You might get the same one again, again, again.\par
+The question is: how many items do you need\par
+to buy to collect all of them?\par
+And this number is clearly random.\par
+So we might look at the expectation.\par
+So, again, X is the number of items you need, is the random\par
+number of items that you need to collect all coupons.\par
+And we'll look for a second, an example\par
+where N is three; there are three coupons.\par
+So let's write here the items that you buy\par
+and the coupons that you get.\par
+So let's say that for the first item you get\par
+coupon number two, the second coupon out of the three;\par
+and when you buy the second item,\par
+you get again the same coupon, coupon number two.\par
+And for the third item you get a new coupon, number three.\par
+That's good for you; you got another coupon.\par
+And then the fourth item got coupon number two\par
+which you had again, doesn't help you.\par
+Then buy item number five, you get coupon number three.\par
+Again, doesn't help you; you already have it.\par
+And then coupon number three again,\par
+but then the seventh times is a charm;\par
+and you get coupon number one.\par
+So now we've gotten coupon number two, three, and one.\par
+And you get all coupons, you get a prize, okay.\par
+So in this particular case, we see that X was seven, okay;\par
+and the question that we have is:\par
+what is the expected value of X?\par
+What is the expected number of items you need to buy\par
+to collect all coupons, and we'll also ask actually\par
+about what's the variance of X.\par
+All right, so let's see what happens.\par
+So let Xi denote the number of items that you need\par
+to get the ith coupon after getting I minus one coupons.\par
+So, for example, X1 is the number of items you need\par
+until you get the first coupon.\par
+So in this particular case, X1 is one\par
+because the first time you got, you got a new coupon.\par
+Of course, X1 is always going to be one because always\par
+when you get the first item, you get a new coupon.\par
+Now X2 is the number of items you need,\par
+you have waited to get the second coupon.\par
+In this case, you had to wait twice, right; three minus one.\par
+So X2 was two, three minus one;\par
+and that's how many trials you had to wait\par
+to get the next coupon, which was coupon three.\par
+And X3 is the number of items you needed to buy\par
+until you got the next coupon.\par
+In this case, it's this one here.\par
+So it's seven minus three, which is four;\par
+you bought four items.\par
+So X3 in this case is is four.\par
+And you observe that X, the number of items\par
+that you had to buy is always the sum of X1 plus X2 plus X3.\par
+For example, here X was seven;\par
+and it's the sum of one plus three plus two.\par
+Sorry, it's the sum of, sorry,\par
+it's the sum of one plus two plus four.\par
+Okay, one plus two plus four.\par
+All right, and so let's look at this random variable Xi;\par
+and let's see how that is distributed.\par
+So X1 is always one, as we have said about the first time\par
+you get, the first item you get is always new.\par
+Now X2 is now random, and X2 what happens is that every time\par
+you get an item, then there are three items there and;\par
+I'm sorry, there are three coupons out there,\par
+and you already have one.\par
+So you're asking if we get a coupon, what is the probability\par
+that it will be one of the two that you miss.\par
+So there are three items, and you're interested\par
+in two coupons; so every time there's a probability\par
+of two-thirds that you get one\par
+of the other coupons that you don't have.\par
+So, therefore, X2 in this case is geometric two-thirds.\par
+And what is X3?\par
+So after you got two coupons,\par
+you have two out of the three coupons.\par
+There are three coupons existing,\par
+in existence, and you have two of them;\par
+and you're looking for the missing one.\par
+So every time you get an item, there's a probability\par
+of one-third that you will get the missing coupon;\par
+so X3 is therefore the distributed geometric one-third.\par
+Every time you'll get this coupon probability one-third\par
+independent of if you'd failed so far,\par
+independent of how many times you failed, okay.\par
+So what we see is that, in this particular case,\par
+X is X1 plus X2 plus X3 where\par
+each Xi is distributed geometric, okay.\par
+This is geometric one, and so we can calculate\par
+the expectation because it's going to be the sum\par
+of these expectations; and we already know how to calculate\par
+the expectation of a geometric distribution, okay.\par
+So let's look at what happens in the general case then.\par
+And also note that these numbers are independent,\par
+although we are going to use it for the variance;\par
+but we don't need it for the expectation.\par
+All right, so for general N, Xi is going to be,\par
+Xi is the number of items you need to get to buy\par
+to get the ith coupon after you got the I,\par
+the first I minus one coupons.\par
+So since you already got I minus one coupons,\par
+the number of coupons that you are\par
+interested in is N minus I minus one out of N.\par
+So that's the probability, every time you buy an item,\par
+that's the probability you'll get a new coupon,\par
+N minus I minus one over N.\par
+So the number, the distribution of the number\par
+of items you need to buy until you get\par
+a new coupon is geometric, this parameter.\par
+Or just we're writing is geometric\par
+with a parameter N minus I plus one divided by N.\par
+Now the expected value of Xi is therefore the reciprocal\par
+of the parameter, and it is, it's of,\par
+which is the probability of success.\par
+So the reciprocal of the success property,\par
+so it's N divided by N minus I plus one, okay;\par
+and X is the sum of the Xi, I going from one up to N.\par
+It's (mumbles) number of items you had to buy\par
+to get the first item plus the number you bought\par
+to get the second item, and so on.\par
+And, therefore, the expected value of X by the linearity\par
+of expectation is summation of the expected value of Xi,\par
+which is the summation of these numbers,\par
+summation of N divided by N minus I plus one.\par
+And when we can just write it down to see what's happening.\par
+So if I is equal to one, we get here N minus one\par
+plus one or N; so it's N over N.\par
+When I is two, it's N minus two plus one,\par
+or N minus one, and so on.\par
+So it's N over N plus N over N minus one and so on\par
+all the way up until the last item,\par
+which will give you N minus one;\par
+it's N minus N plus one, N over one.\par
+So what we can do is we can take N out,\par
+and we'll get N times one over one from here\par
+plus one over two all the way up to one over N;\par
+and this sum, the summation of reciprocals\par
+of the first N integers is called the 1X sum.\par
+So it's going to be N times H of N.\par
+HN is the harmonic sum, and the harmonic sum is defined\par
+as we said, is the sum of the reciprocals\par
+of the first N integers; and likely it is a very good\par
+approximation for the harmonic number or harmonic sum,\par
+and it is lunn N plus 0.577 roughly.\par
+So as N increases to infinity, it approaches lunn N\par
+plus 0.577; it's a very nice property.\par
+It says this, you know, long sum is roughly\par
+the natural logarithm of N plus 0.577; and we're interested\par
+in N times that, which will be N times lunn N plus 0.577 N.\par
+Okay, so this is the expected number\par
+of items you need to buy.\par
+So if N coupons, you need to buy clearly at least N items;\par
+and as it turns out, you need to buy\par
+roughly N lunn N items, okay.\par
+So next we want to call actually what we're going\par
+to do next is show that the harmonic sum\par
+is indeed roughly N times lunn N.\par
+I'm sorry, the harmonic sum if roughly lunn N.\par
+We will not get the, let me just go here,\par
+we're not going to get this constant here;\par
+but we'll show that it's within one from lunn N.\par
+So we'll almost prove that, okay.\par
+So here we have two graphs.\par
+The orange one shows the harmonic sum,\par
+so here is one and here is one-and-a-half.\par
+So if you look at the area here for one and two and three\par
+and four and five, the sum up to here,\par
+up to six, is going to be the sum of the first\par
+five reciprocals of integers, or H5.\par
+So it's one plus one-half all the way up to one-fifth.\par
+It's going from one up to six, okay, here.\par
+And in red we're showing the function Y,\par
+which is one over X; so clearly you'll see\par
+that it intersects the histogram here at one,\par
+and the red line one over X will intersect\par
+the histogram at two and so on.\par
+Two is going to be one-half; three is going to be one-third,\par
+and therefore it's always going to lie below the histogram.\par
+I'm sorry, the, yeah, the function will lie\par
+below the histogram; and that tells us\par
+that HN, the harmonic sum, is bigger\par
+than the integral of the function.\par
+And the integral of function is the integral of one over X;\par
+that's the function, going from one to N plus one.\par
+Like if we looked at fifth, we'd go up to six.\par
+So it's the, it's, HN is bigger than the integral\par
+of one over X from one up to N plus one;\par
+and that's just going to be lunn X evaluated\par
+between one and N plus one, which is lunn N plus one.\par
+So we see that H of N is bigger than lunn N plus one;\par
+and, on the other hand, if we want to get an upper bound HN,\par
+then what we can do is we can ignore the one here.\par
+We'll keep in mind that we need to add one,\par
+and we'll see what happens to the sum\par
+of the next, in this case, four elements.\par
+So to get an upper bound what we can do is,\par
+after we remove this one, we can shift everything by one\par
+to the left; and now we see that the histogram will be\par
+below the function one over X, right,\par
+because this one-half will move here.\par
+This one-third will move here to the left X1.\par
+So what we get is that HN is at most one, this one,\par
+plus the integral now from one up to N,\par
+not one up to N plus one of one over X DX.\par
+And this is one plus lunn X between N\par
+and one and which is one plus lunn N.\par
+So we see that H of N is between lunn N plus one\par
+and lunn N and lunn of N plus one.\par
+So we could get, and this, of course, is bigger than lunn N.\par
+So we can easily show that the harmonic number is\par
+between lunn N and lunn is between lunn N,\par
+which is below this one and lunn N plus one;\par
+and the exact value is what we said before, is 0.577.\par
+It's actually called the (mumbles) constant.\par
+So as we said, the true number goes to lunn N plus 0.577.\par
+Okay, so now let's look at the variance.\par
+So X is the, if X is the stupid geometric P,\par
+then the variance effects is one minus P over P (mumbles),\par
+which is clearly less than one over P square;\par
+and we can use that to estimate the variance effects.\par
+So the variance effects is the variance of the summation\par
+of Xi because X was summation of Xi before;\par
+and then using the independence of the Xi,\par
+we get that the variance of the sum is the sum\par
+of the variances of the individual components.\par
+And each individual Xi had a variance, which was at most\par
+one over P square; and P was,\par
+if you remember, N minus I plus one over N.\par
+So we get it's at most summation of one over these numbers,\par
+which is N, N square comes out; and in the denominator here\par
+we get summation of one over N square plus one over N\par
+minus one square and so on up to one over one square.\par
+And this is the sum of the squares of reciprocals which,\par
+as we know, is equal to pi square over six.\par
+So this is going to be, so if we let this go to infinity,\par
+it's going to be pi square over six.\par
+Therefore, this sum is going to be,\par
+at most, N square times I square over six.\par
+And that's nice because if we take the standard deviation,\par
+then the standard deviation is the square root of this,\par
+which is pi divided by square root\par
+of six over times N or roughly N.\par
+So we see that the standard deviation is close to N,\par
+while the expectation is close to N times lunn N;\par
+and therefore it tells us that the expected number of time,\par
+or the number of times that we'll need\par
+to wait will be roughly N times lunn N\par
+plus some number that goes linear (mumbles) N.\par
+Okay, so this finishes our discussion.\par
+We talked about geometric distribution examples.\par
+We presented the coupon collector problem,\par
+and this also finalizes our discussion\par
+about discrete distribution families.\par
+And we talked about Bernoulli, binomial,\par
+Poisson and geometric distributions;\par
+and next we want to discuss continuous distributions.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Is the random variable we discussed in coupon problem memoryless?\par
+\par
+\tab\par
+Yes\par
+\par
+\tab\par
+No\par
+\par
+Submit\par
+}
+ 

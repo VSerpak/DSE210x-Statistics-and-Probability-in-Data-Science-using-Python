@@ -1,0 +1,415 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Cambria Math;}}
+{\*\generator Riched20 10.0.16299}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello again everyone.\par
+Today we'll start talking about continuous distributions,\par
+and the first distribution that we'll discuss\par
+will be the uniform distribution.\par
+And\par
+to motivate a little bit, to explain it,\par
+it's denoted by U[a,b],\par
+and that's for a which is less than b.\par
+That's the uniform distribution over this interval a to b.\par
+And if x is in this interval,\par
+if x is between a and b,\par
+then the probability of x is the same.\par
+It's equal to all values in this interval.\par
+And for values effects outside the interval\par
+the probability is going to be zero.\par
+It'll never happen.\par
+So, what is the probability density function, the PDF?\par
+It's going to be c inside the interval\par
+and outside the interval it's going to be zero.\par
+And we can see it on the graph here.\par
+Between a and b there's a constant density\par
+of probability,\par
+and outside the interval the probability is zero, okay?\par
+And the question of course is what is this constant, c?\par
+So we know that for this to be a distribution\par
+when we integrate it from minus infinity to infinity\par
+(mumbles) create a density.\par
+In fact, it should be one.\par
+But, this integral is only this integral between a and b,\par
+and it's only this interval.\par
+And in this region the area is c times b minus a.\par
+So, this integral is going to be c times b minus a,\par
+just the area underneath the curve here.\par
+And that tells us because c times b minus a should be one\par
+that this constant c is one over b minus a.\par
+So going back here, what is the PDF?\par
+It's going to be inside the interval.\par
+It's going to be one over b minus a\par
+and outside it's going to be zero.\par
+So\par
+if you want to see how it is just in the program.\par
+Okay, so here is the code\par
+that is available for you to use,\par
+and if you run it then what you'll get\par
+is you'll get that.\par
+And you can see here we have a uniform distribution\par
+between four and six in this case.\par
+And\par
+because the length of the interval is two,\par
+six minus four, the height is about half.\par
+And I can change it.\par
+For example, instead of four to six\par
+I change it to maybe four to eight,\par
+sorry, four to eight.\par
+Then the interval is going to be twice as wide\par
+but it's going to be half as high.\par
+It's always going to be such\par
+that the width times the height is going to be one.\par
+Here the width is four, the height is a quarter.\par
+If we make the width very small,\par
+for example if we make it go from two to 2.1,\par
+then we'll see that it's here.\par
+And we also see that\par
+because we limit the height to one\par
+here now the width is .1 so the height should be 10.\par
+So this not sufficient,\par
+so we need to enlarge the maximum height here.\par
+Can make it instead of one\par
+we can make it maybe 15, something like that.\par
+So we can make it 15,\par
+and then you'll see the interval it goes to one.\par
+So as the interval\par
+becomes narrower,\par
+as the domain a to b becomes narrower\par
+the height is going to go up to increase\par
+and eventually it can go all the way to infinity, alright?\par
+So let's go back to the slides.\par
+So this is the PDF,\par
+and what we want to check\par
+is that this did a distribution.\par
+And\par
+we need to check two things.\par
+One is that it's\par
+not negative,\par
+and it's very clear because it's zero here\par
+and here it's positive.\par
+And that the integral is,\par
+so this okay,\par
+and that the integral equals one,\par
+and that is done actually by our choice of c\par
+we made sure that the integral is going to be one,\par
+so that is okay, as well.\par
+Alright.\par
+When does the uniform distribution happen?\par
+The uniform distribution is so simple\par
+you think it might happen a lot,\par
+but in fact it doesn't happen so often,\par
+although it does happen.\par
+So for example if you are,\par
+if you go to catch a bus or a train, then\par
+assuming that\par
+the departure times are maybe evenly distributed,\par
+then if you look at how many minutes after the hour\par
+that's going to be some random number\par
+that is uniformly distributed\par
+between one and 60.\par
+And if you correspondingly\par
+look for the wait time for your bus,\par
+then maybe you arrive,\par
+you arrive ...\par
+Maybe the buses leave at uniform intervals.\par
+So, you arrive at a random point,\par
+so the amount of time you'll have to wait\par
+before the bus leaves\par
+is again going to be uniformly distributed.\par
+If you look at the location of a defect on a\par
+electrical chip, that's often considered\par
+to be uniformly distributed.\par
+A location of a molecule in space uniformly distributed,\par
+and there are some more, okay?\par
+So, what is the cumulative distribution function\par
+of the uniform?\par
+So we need to look at\par
+at F of x, capital F of x,\par
+which is the integral of f of u\par
+for minus infinity to x,\par
+and we are going to break it by regions.\par
+So here is F of x,\par
+and we're going to look at what happens\par
+when x is less than a,\par
+when x is between a and b,\par
+and when x is larger than b.\par
+So if x is less than or equal to a,\par
+namely it's some place here,\par
+then we have the integral for minus infinity\par
+to x of zero,\par
+because before x f is\par
+zero of 0 du,\par
+and that's going to be zero, okay?\par
+And in particular ...\par
+So if we do F(x) here\par
+then we see that in F right in red\par
+it's going to be zero up to here.\par
+And in particular if we look at this point,\par
+F of a, capital F of a, is going to be zero.\par
+So, the cumulative distribution function\par
+evaluated at point a is zero,\par
+because everything until then the density was zero, okay?\par
+Now, if we look at the range between a and b\par
+then that's going to be a point some place here\par
+and the value is going to be,\par
+the cumulative distribution function is going to be,\par
+F of a, the integral up to a,\par
+plus the integral from a to x\par
+of the density function,\par
+which is in this range of one over b minus a du, okay?\par
+But F of a we saw was zero.\par
+We saw that before.\par
+That was zero.\par
+And this integral here is going to be the shaded region here\par
+underneath the curve, on the curve.\par
+So it's this light blue area here.\par
+And what is its area?\par
+The width is x minus a,\par
+and the height is one over b minus a.\par
+So the area is going to be x minus a\par
+divided by b minus a, okay?\par
+And in particular, so\par
+if you evaluate this at the very last point\par
+of this region at b,\par
+then we get that is going to be\par
+b minus a divided by b minus a, which is one.\par
+So that tells us that F of b,\par
+the cumulative distribution function and b is one,\par
+and the curve is going to be the red line\par
+connecting those two points.\par
+It's going to be that, okay?\par
+And then if we look at\par
+F of x beyond b,\par
+so we look at what happens for x bigger than b,\par
+namely x is here,\par
+then it's going to be F of b\par
+plus the interval from b to x of zero, because\par
+the PDF is again zero here of zero du.\par
+And F of b we said was one,\par
+and this integral is zero,\par
+so it's going to be one,\par
+and therefore this function will continue like that.\par
+So the red line is the CDF of the uniform distribution.\par
+So to see it a little more interactively,\par
+let's go to Python.\par
+Here again is the program that you could use.\par
+If we run it we'll get the following.\par
+So here\par
+is\par
+a uniform distribution,\par
+the PDF, and the cumulative distribution function.\par
+So see here.\par
+So you can see it started zero and goes to one,\par
+a ranges from a to be and then stays at one.\par
+And\par
+if we change the distribution,\par
+for example if we change the range, make it\par
+let's say from zero to,\par
+from zero to 10,\par
+then this is the uniform distribution.\par
+And to arise from zero to one at that point\par
+if we make it much smaller,\par
+for example from zero\par
+to zero, from zero to 0.5,\par
+like that, then the distribution\par
+because the height, the width is half\par
+the height is going to be two, which is not sufficient.\par
+So we're going to enlarge\par
+the range here to make it two, or make it three maybe.\par
+So here is\par
+the PDF density function\par
+and here is the cumulative distribution function.\par
+It goes from zero to one and stays at one, okay?\par
+Okay, now given the CDF\par
+we can calculate interval probabilities fairly easily.\par
+So if,\par
+for example if\par
+alpha and beta are between a and b like that.\par
+So here we have a and then alpha\par
+and beta and b,\par
+then if we consider the interval\par
+between alpha and beta\par
+and we ask what is the probability,\par
+namely what's the probability of this interval here?\par
+And notice that we are looking at\par
+for example the open interval on the left\par
+and closed on the right,\par
+and that's because it really doesn't matter\par
+because as we know\par
+for continuous distribution\par
+individual points make no difference.\par
+So we could've taken the closed interval from here to here\par
+or open interval.\par
+They would all be the same.\par
+All of them the probability is going to be\par
+F of beta minus F of alpha, okay?\par
+And F of beta in this case\par
+is going to be beta minus alpha\par
+divided by b minus alpha.\par
+And F of alpha is going to be alpha minus a ...\par
+I apologize, this was beta minus a divided by b minus a,\par
+and F of alpha is going to be alpha minus a\par
+divided again by b minus a,\par
+and that's going to give us\par
+beta minus alpha divided by b minus a.\par
+And we can also see it in this\par
+picture here,\par
+because the tall area is b minus a\par
+and it's uniform over that,\par
+and we're asking what's the probability\par
+that falls in this region?\par
+So it's going to be the length of this interval\par
+divided by its whole length.\par
+So it's beta minus alpha\par
+divided by b minus a.\par
+Okay here.\par
+And if you you look at the interval from beta to infinity,\par
+so it's the region that goes from here till infinity,\par
+then that probability is going to be\par
+F of infinity minus F of beta,\par
+and F of infinity is one\par
+and F of beta is beta minus alpha divided by b minus a,\par
+sorry, beta minus a divided by b minus a,\par
+and that's going to be just b minus beta\par
+divided by b minus a.\par
+And\par
+again, we can see it from here, because\par
+we're looking at the interval from beta to infinity,\par
+but everything outside is zero probability.\par
+So, we're just asking what's the probability\par
+of this interval here from beta to b?\par
+It's length is b minus beta\par
+out of the whole length, which is b minus a.\par
+So the probability because everything is uniform\par
+the probability is b minus beta\par
+divided by b minus a, okay?\par
+And if we look at the probability of an individual element,\par
+alpha for example, just this point here,\par
+then it's going to be F of alpha\par
+minus F of alpha, which is zero,\par
+because individual elements have zero probability.\par
+Alright.\par
+So next let's look at the mean and the variance\par
+of the uniform distribution.\par
+So first let's consider a slightly simpler case.\par
+Let's look at the uniform distribution\par
+between zero and 1, okay?\par
+So what is the expected value of x\par
+is the interval of x,\par
+and then in this range f of x is just one,\par
+because b minus a is one.\par
+So it's the integral of x dx,\par
+and that's just x square over two\par
+between one and zero, which is half.\par
+It's clearly not surprising\par
+we have a uniform distribution between zero and one\par
+the expected value is just the middle, which is a half.\par
+What is the expected value for x square?\par
+It's the integral of x square between zero and one,\par
+and again, it's because f of x is one.\par
+So it's this integral, which is x cube over three\par
+between one and zero, which is 1/3.\par
+And what is the variance?\par
+It's the expected value of x squared\par
+minus the expected value of x squared,\par
+and that's going to be 1/3 minus 1/4,\par
+which is one over 12.\par
+And what is the standard deviation?\par
+It's the square root of that,\par
+which is one over two squared of three,\par
+which is roughly 0.29.\par
+So\par
+again, this kind of makes sense, because\par
+the mean is half,\par
+and we're looking at\par
+to see how far we're going to be from a half.\par
+We're going to be somewhere\par
+between zero and a half from a half.\par
+The average of zero and 1/2 is 1/4.\par
+But, because we're looking at\par
+the expected value of x square or the difference square,\par
+it's going to tilt it a little bit away from zero.\par
+So instead of 1/4 we get 0.29 on the average, okay?\par
+Alright.\par
+And\par
+finally\par
+we want to see what happens not just for the\par
+uniform distribution between zero and one, but for a general\par
+uniform distribution.\par
+So, let Y be distributed uniformly between a and b.\par
+Then\par
+Y is equal to b minus a times X plus a,\par
+as we have seen before,\par
+and you can observe that when X is equal to zero\par
+Y is going to be, this is going to be zero\par
+and Y is going to be a.\par
+And when X is going to be equal\par
+to one, this is going to be b minus a plus a,\par
+so it's going to be b.\par
+So as X ranges from zero to one uniformly,\par
+this will range from\par
+from a to b uniformly, okay?\par
+Now the expected value for Y\par
+is the expected value therefore for b minus a\par
+times the expectation of X plus a\par
+by the linearity of expectation, okay?\par
+And that's going to be ...\par
+And because the expected value of X is a half\par
+that's going to be b minus a over two plus a,\par
+which is a plus b over two.\par
+Again, what we would've expected\par
+because it's a uniform distribution between a and b there,\par
+which is going to be\par
+just the mean point between them, a plus b over two.\par
+And what is the variance of Y?\par
+So it's the variance of b minus a times X plus a,\par
+which\par
+as we know is going to be ...\par
+Adding a constant as we have seen\par
+does not change the variance,\par
+and when we multiply random variables by some constant\par
+the variance changes by this constant square,\par
+so it's going to be b minus a square\par
+times the variance of X.\par
+And remember that the variance of X was one over 12,\par
+so this is going to be b minus a squared divided by 12.\par
+And the standard deviation\par
+is going to be just the square root of that,\par
+which is 0.29,\par
+times the difference between b and a, okay?\par
+So this is the variance of the uniform distribution.\par
+So to summarize, we discussed the uniform distribution\par
+denoted by U[a,b] for a less than b,\par
+and the PDF was a constant one over b minus a\par
+for x and the interval between a and b\par
+and zero outside that interval.\par
+And this cumulative distribution function was zero up to a\par
+and then went up linearly from zero to one\par
+when x was equal to b\par
+and was stated one beyond b.\par
+And the mean was a plus b over two.\par
+The variance was the difference square divided by 12,\par
+and the standard deviation\par
+was the square root of that, okay?\par
+And what are we going to do next?\par
+We're going to discuss the exponential distribution.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Let X ~ U[0,1]. Which of the following statements is true about the probability density function, f(x)?\par
+\par
+\tab\par
+f(1) = 1\par
+\par
+\tab\par
+f(0) = 0\par
+\par
+\tab\par
+f(x) = 1, \f1\u8704?\f0  x\par
+\par
+\tab\par
+f(0) \f1\u8800?\f0  f(1)\par
+\par
+Submit\lang9\par
+}
+ 

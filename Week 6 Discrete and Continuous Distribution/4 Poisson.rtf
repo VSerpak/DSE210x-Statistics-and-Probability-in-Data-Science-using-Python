@@ -1,0 +1,760 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello, and welcome back.\par
+In the last lecture, we discussed the binomial distribution\par
+which, as you remember, was an extension\par
+of the Bernoulli distribution.\par
+Now we want to discuss an extension\par
+of the binomial distribution\par
+which is called the Poisson distribution.\par
+We'll define the Poisson distribution,\par
+we'll talk about where it appears in applications,\par
+we'll motivate how it comes about,\par
+we'll show how you derive it\par
+from the binomial distributions,\par
+and we'll find the mean and standard deviation,\par
+and we'll give a couple of examples.\par
+Let's start.\par
+The Poisson distribution is defined by a parameter\par
+which is called lambda,\par
+which is bigger than equal to zero.\par
+Some people would say, just will take lambda\par
+strictly bigger than zero.\par
+And its support, the set of values that it can take,\par
+is the natural numbers, the integers from zero onwards.\par
+Its probability mass function is defined by this formula.\par
+This is the Poisson with parameter lambda of value k.\par
+And the value k appears with probability\par
+e to the minus lambda, lamba to the k,\par
+divided by k factorial.\par
+It's going to show, like in a graph like this,\par
+so this is shown for different parameters of lambda.\par
+Lambda equals one here in red\par
+and four and ten.\par
+You can see that it looks a little bit\par
+like a binomial distribution when lambda becomes large.\par
+In general, it will go up, up to the value of roughly lambda\par
+and then start going down here.\par
+You can see a lot of more examples\par
+by playing with the notebook,\par
+were you can actually define the parameter lambda\par
+and you can plot it and see how it behaves\par
+for any lambda in any range.\par
+The Poisson binomial is important\par
+because it approximates the Bernoulli distribution,\par
+Bernoulli p n, when n is large,\par
+the number of sample is large,\par
+and the probability is small\par
+such that their product, p n,\par
+and you remember this was the expected value,\par
+the expected number of successes,\par
+is the value that we call lambda and is moderate.\par
+In other words, if you have a binomial distribution\par
+where p is very small and n is very large,\par
+and so that n time p is similar to the number lambda,\par
+then you'll get the Poisson distribution\par
+with parameter lambda.\par
+What is distributed Poisson?\par
+As we said, P lambda, Poisson lambda,\par
+approximates the binomial distribution\par
+when you have many samples but a small probability.\par
+And this occurs many times in life.\par
+For example, if you count the number of people\par
+clicking an ad,\par
+there are lots of people looking at a website\par
+but very few of them, each person clicks on any given night,\par
+very small probability.\par
+So you get the domain of the Poisson distribution.\par
+Or the number of people respond to spam.\par
+Spam is sent to lots of people but very few respond to it.\par
+So again, the number of people responding\par
+is going to be distributed Poisson.\par
+If you look at infections with rare diseases,\par
+there are, like, billions of people in the world\par
+but each one is infected with a given disease\par
+with very small probability.\par
+So the number is distributed Poisson.\par
+There are many people in a city,\par
+and each one dials 1-1 with very small probability.\par
+Again you get a Poisson distribution.\par
+Number of customers in a store.\par
+So in San Diego, there are over a million people,\par
+but very few of them will visit any specific store\par
+at any given day.\par
+So again the number of people given who'll visit a store\par
+is going to be Poisson.\par
+If you take gallery purchases,\par
+like the one we had in the title page here,\par
+then quite a few people visit a gallery.\par
+But each one is not very likely to purchase a painting.\par
+That's something that I've been curious about.\par
+How do these people make a living?\par
+You know, it looks like it's very erratic, right?\par
+I mean, you'll make one sale, you make a lot of money.\par
+But then there'll be lots of people who will not buy.\par
+And how variable is their income, for example.\par
+If you want an example of this,\par
+you don't need to go very far.\par
+Just last week, a painting that until recently\par
+was considered to be a fake sold for $450 million.\par
+If you look at number of flight no-shows,\par
+again every person is very unlikely to miss a flight\par
+but there are enough people on a plane,\par
+again Poisson distribution.\par
+Number of typos in a page, and the list goes on.\par
+Because the Poisson formula is maybe not so intuitive,\par
+I want to go over it for small values of k\par
+and see what it is.\par
+The general formula, as we saw,\par
+is e to the minus lambda, lambda to the k,\par
+over k factorial.\par
+Then we have, if we have k which is equal zero,\par
+then we get here lambda to the zero, which will be one,\par
+and one factorial, which is one.\par
+So is this going to be one over e to the lambda?\par
+If we have k which is equal to one,\par
+then we'll get e to the minus lambda times lambda,\par
+so it's lambda divided by e to the minus lambda.\par
+If we get k equals to two, then you get lambda square\par
+divided by two factorial, which is two e to the lambda.\par
+And for three, you'll get lambda cubed\par
+divided by three factorial, so lambda cubed\par
+divided by six and then divided again by e to the lambda.\par
+And if we'll continue like that, it'll be lambda to the k\par
+divided by k factorial and divided by e to the lambda.\par
+Now if you want to maybe look at specific values of lambda,\par
+and again let's look at some small values,\par
+if lambda is equal to one,\par
+then what we'll get here is that there's dot terms\par
+that depend on lambda, namely e to the minus lambda\par
+and lambda to the k.\par
+So lambda to the k divided by e to the lambda,\par
+that is going to become just one over e,\par
+'cause lambda is one.\par
+So now this terms will simplify.\par
+And the probability is going to be,\par
+most of lambda to the k divided by e to the lambda\par
+will just get one over e, so it's one over e by k factorial.\par
+So that's going to be when k is zero,\par
+it's going to be one over e.\par
+When k is one, is again one over e\par
+because the factorial one, factorial of one.\par
+And then one over two e and then one over six e and so on.\par
+If lambda is equal to two, then lambda to the k\par
+divided by e to lambda becomes two to the k\par
+divided by e square,\par
+and probabilities are going to be two to the k\par
+divided by e square and by k factorial.\par
+So is this going to be for the probability\par
+that we'll get zero success, k is going to be zero,\par
+is just going to be one divided by e squared.\par
+Probability of one is going to be two,\par
+comes from two to the one, divided by e square,\par
+and so on.\par
+Then, finally, if lambda is zero,\par
+which as I mentioned some people don't even consider that,\par
+but if you do, you'll get something very simple.\par
+Then lambda to the k divided by e to the lambda\par
+would just become e to the lambda becomes one\par
+and lambda to the k, zero to the k.\par
+So it's one only when k is zero and zero otherwise.\par
+That will just give us zero to the k\par
+divided by k factorial, which is one,\par
+namely k equals zero has probability one\par
+and everything else has probability zero.\par
+Right? Okay.\par
+These are the values.\par
+And now we want to just see where they come about\par
+and see the distribution and so on.\par
+First let's see where this comes about.\par
+We'll see that this approximates the binomial.\par
+We're going to show that p lambda approximates\par
+the binomial Bernoulli p n when lambda is p times n\par
+and n is very large and p is very small,\par
+n much bigger than one and p much smaller than one.\par
+Let's recall the formula for the binomial distribution.\par
+(mumbles) p and n, the probability of k successes.\par
+It's going to be n choose k\par
+times p to the k, times q to the n minus k.\par
+Recall that q here is just one minus p.\par
+So we want to approximate it\par
+and want to approximate it in the case\par
+where lambda is p times n.\par
+In other words, p is lambda over n.\par
+So we want to replace p by lambda over n\par
+and q by one minus lambda over n.\par
+What we'll get is n choose k, lambda over n to the k,\par
+and then one minus lambda over n, that's q,\par
+to the n minus k.\par
+This we can write as n choose k is n to the k falling power\par
+divided by k factorial.\par
+And then we have get lambda to the k\par
+divided by n to the k.\par
+And here we can write this\par
+as one minus lambda over n to the n,\par
+divided by one minus lambda over n to the k.\par
+So this is exactly the binomial distribution.\par
+Just when we reparameterized\par
+and instead of p, we wrote lambda over n.\par
+Just for a second remember this formula.\par
+We're going to write it again on the next slide,\par
+slightly more defined.\par
+So this formula.\par
+What we're going to do is, we're going to approximate it\par
+for some value k which is fixed.\par
+We also fix, probably just for the (mumbles),\par
+we fix lambda while we let n become very large\par
+and p become very small.\par
+So we're going to resume with this formula again.\par
+And we'll derive the Poisson.\par
+Remember that the Bernoulli p n k,\par
+we could expressed it as lambda to the k\par
+divided by k factorial,\par
+times n to the k falling power divided by n to the k,\par
+and then times one minus lambda over n to th n\par
+divide by one minus lambda over n to the k.\par
+And here lambda is p times n.\par
+And what we want to show, that if we fix lambda and k\par
+and let n go to infinity, necessarily p goes to zero,\par
+then this will approach the Poisson distribution,\par
+e to the minus lambda, lambda to the k over k factorial.\par
+Now, we have several terms here.\par
+We have n to the k falling power\par
+divide by n to the k, that's one term.\par
+Here, we don't need to worry about this term\par
+because k and lambda are fixed,\par
+and in fact, they appear here as well, as you can see.\par
+That's why we wrote them at the beginning.\par
+So we don't need to worry about them.\par
+We need to show that this whole term here\par
+becomes e to the minus lambda.\par
+So the first term we need to worry about\par
+is n to the k falling power divide by n to the k\par
+and the second term is the numerator here,\par
+which is one minus lambda over n to the k,\par
+is the denominator, all to the k.\par
+And the last term, the third term, is the numerator,\par
+which is one minus lambda over n to the n.\par
+So let's see what happens now.\par
+The first term, we can write it as n,\par
+well, the denominator is just n times n times n, k times.\par
+And the numerator is n times n minus one\par
+times n minus k plus one.\par
+Notice that n goes to infinity while k is fixed.\par
+Therefore this term is going to be one.\par
+This term will approach one as n increases.\par
+And all the terms will approach one, including this term,\par
+because k is fixed and n goes to infinity.\par
+So we have k terms, each of them approximating one.\par
+It's a fixed number of terms, namely k of them,\par
+each of them approximating one.\par
+Therefore the product, it's a product\par
+of a fixed number of terms, each of them approximately one,\par
+and the product will also approach one.\par
+So therefore this term here will approach one.\par
+So we don't need to worry about that one.\par
+Next let's look at the denominator here.\par
+It's one minus lambda over n to the k.\par
+Again, we have each term here is going to approach one\par
+because lambda is fixed and n goes to infinity.\par
+So this term will approach one.\par
+So we have the product of k terms\par
+and each approaching one.\par
+Therefore the product will approach one.\par
+Just imagine if you have a product of two terms,\par
+each approaching one.\par
+That product will approach one.\par
+Similarly, if you have k terms, each approaching one,\par
+the product will approach one.\par
+So this term also approaches one.\par
+We're left with just one last term here,\par
+one minus lambda over n to the n.\par
+What we want to show is\par
+that this will approach e to the minus lambda.\par
+Now, notice here that we have again a product\par
+of terms that approach one,\par
+'cause lambda is fixed and n goes to infinity.\par
+So I have a product of terms, each of them approaches one.\par
+But now we have an increasing number of terms.\par
+So even though each approaches one,\par
+we don't know if the power,\par
+the product of all of those, will also approach one\par
+because we're not multiplying\par
+more and more and more of them.\par
+So what we need to observe is that,\par
+so we have increasing number of terms\par
+and each approaching one and (mumbles) show.\par
+And what we need to observe is that,\par
+if we take one minus one over m raised to the m,\par
+that's e to the minus one.\par
+That's essentially the definition of e.\par
+As you may recall, it's one plus one over m to the m is e,\par
+which it's a, it can just as well take this one,\par
+it's one minus one over m to the m\par
+approaches e to the minus one,\par
+and we want here is this.\par
+You can see what we have here is almost the same.\par
+It's one minus lambda over n to the n.\par
+To make it be essentially the same, we can rewrite this\par
+as one minus lambda over n to the lambda over n,\par
+raised to the lambda.\par
+First of all, observe that these are the same\par
+because here I'm dividing by lambda and multiply by lambda.\par
+And second, observe that the term inside is,\par
+if we take n over lambda to be m,\par
+then we have one minus one over m, raised to the m.\par
+That's one again.\par
+N over lambda it takes to be m,\par
+so get one minus one over m, to the m,\par
+which as we saw here, approaches e to the minus one.\par
+So the term inside will approach e to the minus one.\par
+And we have lambda, which is a fixed number.\par
+So if terms that approaching e to the minus one\par
+raised to the lambda,\par
+so e to the minus one raised to the lambda,\par
+because again, this term approaches e to the minus one,\par
+we have a fixed number here, lambda,\par
+so approach this.\par
+And that's just e to the minus lambda.\par
+Going back here,\par
+this numerator will approach e to the minus lambda\par
+and therefore the whole product, the Bernoulli p n of k\par
+will approach e to the minus lambda,\par
+lambda to the k over k factorial,\par
+which is the Poisson distribution.\par
+So that works.\par
+Then we come to the question as to\par
+whether this is really a distribution.\par
+Remember that the p lambda of k\par
+is e to the minus lambda, lambda to the k over k factorial.\par
+This holds for k bigger or equal to zero.\par
+First you can see that it's all bigger than equal to zero\par
+because this, you have e to some number,\par
+that's not a negative, and all these terms are not negative.\par
+Lambda is at least zero.\par
+So every term here is bigger than equal to zero,\par
+that checks.\par
+And the big question is, as always,\par
+will it sum to one?\par
+So that's what we're going to calculate now.\par
+By the Taylor expansion, e to the lambda\par
+is the summation from k going from zero to infinity\par
+of lambda to the k over k factorial.\par
+So this is e to the lambda.\par
+And what we have here is,\par
+we're looking at the summation of P lambda of k,\par
+summation over k going from zero to infinity.\par
+So we have here the summation of e to the minus lambda,\par
+lambda to the k over k factorial.\par
+We can take e to the minus lambda out.\par
+So it's e to the minus lambda\par
+times the summation of lambda to the k over k factorial,\par
+k going from zero to infinity.\par
+And as we see from here,\par
+this term is exactly e to the lambda.\par
+So it's e to the minus lambda times e to the lambda,\par
+which is one.\par
+And therefore it does add.\par
+So this is a distribution.\par
+Cool.\par
+All right.\par
+Now that we know it's a distribution,\par
+we want to look at a couple of its features,\par
+like what is its mean and the variance?\par
+As we said, Poisson lambda approximates\par
+the binomial p n for lambda, which is n p\par
+when n is much bigger than one and p is much less than one.\par
+So therefore, if we look at the Bernoulli p n,\par
+then the mean is n p and the variance, as we saw,\par
+is n p q.\par
+So now when we look at Poisson lambda,\par
+then since lambda is n p, we would expect\par
+the mean of the Poisson to have,\par
+because Poisson approximates lambda,\par
+I'm sorry, the Poisson approximates\par
+the binomial distribution,\par
+so these, the mean and the variance,\par
+should approach these values.\par
+The mean of the Poisson lambda should be roughly n p\par
+or should be mainly lambda.\par
+So what we expect is this to be lambda.\par
+And we expect the variance of the Poisson to be n p q.\par
+N p is lambda, and then q is one minus p.\par
+So we can write it n p times one minus p,\par
+but one minus p approaches zero.\par
+So one minus p approaches one.\par
+So this will approach n p, which is lambda again.\par
+So we expect both the mean and the variance to be lambda.\par
+But we need to verify this by calculation.\par
+First, let's make an observation\par
+that will make our lives a little easier.\par
+That is, if you take the lambda to the k,\par
+lambda to the kth power,\par
+and you differentiate it with respect to lambda,\par
+then you get k times lambda to the k minus one.\par
+And you can write it as k over lambda times lambda to the k.\par
+If you take the second derivative of lambda to the k\par
+with respect to lambda,\par
+then you're differentiating this\par
+and you'll get k times k minus one,\par
+lambda to the k minus two.\par
+Which again you can write,\par
+you can separate the lambda to this k's here,\par
+so you can write it as k to the second falling power\par
+divided by lambda squared, times lambda to the k.\par
+If you continue and you take the rth derivative\par
+of lambda to the k, then what you'll get here is,\par
+you get k to the rth falling power\par
+times lambda to the k minus r.\par
+K to the rth falling power (mumbles) lambda to k minus r.\par
+You can write it as k to the rth falling power\par
+divided by lambda to the r times lambda to the k.\par
+We can just rewrite it in the way we're going to use it,\par
+which is, we're going to move lambda to the k\par
+to this side and then rearrange them.\par
+So what we'll get is k to the rth falling power\par
+times lambda to the k\par
+is going to be equal to lambda to the r, here,\par
+times the rth derivative of lambda to the k.\par
+So we're just going to rewrite this again in the next slide.\par
+We're going to consider what's called falling moments.\par
+First of all, just to remind ourselves what we said,\par
+that k to the rth falling power times lambda to the k\par
+is lambda to the r\par
+times the rth derivative of lambda to the k.\par
+If x is distributed according to the Poisson lambda,\par
+then the expected value of x to the rth falling power\par
+is called a falling moment of the distribution.\par
+A moment is when you take x and raise it to some power,\par
+and here we have falling power\par
+so we call it a falling power or calculate the expectation.\par
+This is a small trick that will simplify the calculation\par
+of the expectation, both here\par
+and when we get to geometric distribution\par
+in the next lecture.\par
+So what is the expectation?\par
+It's going to be summation of k going from zero to infinity\par
+of k to the rth falling power\par
+times the probability of lambda, probability of k.\par
+So looking at the expected value of x\par
+to the rth falling power,\par
+remember that the expectation is summation of the values,\par
+which is k to the r falling power\par
+times the probability of k.\par
+And we sum this for k going from zero to infinity,\par
+and that's what we want to calculate.\par
+We'll just go and plug in the probability of k.\par
+That's going to be summation over k,\par
+and I'm going to omit this, this range zero to infinity,\par
+of k to the rth falling power,\par
+e to the minus lambda, lambda to the k over k factorial.\par
+Now we're going to use, I'm sorry.\par
+We're going to take e to the minus lambda out\par
+and then we get summation of k to the rth falling power\par
+times lambda to the k divided by k factorial.\par
+And you'll notice that we have k to the rth falling power,\par
+lambda to the k is the same term that we have here.\par
+So this is going to be e to the minus lambda,\par
+the summation over k,\par
+instead of k to the r falling power, lambda to the k,\par
+we're going to write lambda to the r\par
+times the rth derivative.\par
+Then we also divide by k factorial from here.\par
+Now we can see that we can take lambda to the r\par
+because lambda to the r does not depend on k.\par
+So we can take it outside of the equation.\par
+So get e to the minus lambda, lambda to the r.\par
+And then we take the summation inside the derivative.\par
+So we get the rth derivative of summation over k,\par
+k going from zero to infinity,\par
+of lambda to the k over k factorial.\par
+With this summation we have seen before,\par
+was just e to the lambda.\par
+So it's e to the minus lambda, lambda to the r,\par
+times the rth derivative of e to the lambda.\par
+Very nicely the rth derivative of e to the lambda\par
+is still e to the lambda.\par
+So we get that it's e to the minus lambda,\par
+lambda to the r, e to the lambda,\par
+or just lambda to the r.\par
+So what we see is that, when we calculate\par
+the expectation of the falling power,\par
+x to the r falling power, which is called a falling moment,\par
+then we get that for a Poisson distribution,\par
+it has a very nice formula.\par
+Our falling moment is just lambda raised to the rth power.\par
+As a special case, we can see that,\par
+if we take the expected value of x,\par
+that's the same as the expected value\par
+of x to the first moment, first falling power.\par
+So by this formula is just going to be lambda.\par
+And if we take the expected value of x times x minus one,\par
+that's the expected value of x to the second falling power,\par
+which according to this is just going to be\par
+equal to lambda square.\par
+This actually quite nice and quite simple\par
+and already gives us the expectation.\par
+The expectation we get is just lambda.\par
+And I won't calculate the variance.\par
+Now, notice that we almost have the variance,\par
+because if we had the expected value of x square,\par
+then we could take, we know that the variance\par
+was going to be the expected value of x square\par
+minus the expected value of x squared.\par
+But we don't quite have the expected value of x square.\par
+We have the expected value of x squared minus x.\par
+But we can see from here how we're going to get that.\par
+So again, we have the expected value of x times x minus one,\par
+or expected value of x one minus x is lambda square,\par
+and we want to use this to (mumbles).\par
+So let's see.\par
+The mean and the variance.\par
+The expected value of x, as we just saw,\par
+was the expected value of x to the first falling power,\par
+which is lambda.\par
+We also saw that the expected value of x times x minus one\par
+was lambda square.\par
+Now, first let's calculate the expected value of x square.\par
+Expected value of x square is going to be\par
+the expected value of x square minus x plus x,\par
+and this is x square minus x plus x,\par
+so expected value of x square.\par
+So this, we can sum.\par
+It's the expected value of x times x minus one\par
+plus the expected value of x.\par
+And that's lambda square plus lambda.\par
+Now we can calculate a variance of x,\par
+which is the expected value of x square\par
+minus the expectation squared.\par
+And the expected value of x square we calculate here\par
+is lambda square plus lambda.\par
+And expected value of x is lambda.\par
+So this is going to be lambda square plus lambda\par
+minus lambda squared, 'cause we're squaring the expectation.\par
+This gives us just lambda.\par
+Interestingly, we see that for our Poisson distribution,\par
+both the mean and the variance are lambda.\par
+Both of them are lambda\par
+and the standard deviation is square root of lambda.\par
+Which is kind of interesting, I think,\par
+because it shows that the standard deviation,\par
+so we calculated the expectation\par
+and we calculated the variance here,\par
+and it shows that the standard deviation is small\par
+relative to the mean.\par
+So even if we are thinking of galleries\par
+that sell once in a lifetime, they sell,\par
+or they sell a painting.\par
+Or not once in a lifetime, but maybe once a month.\par
+We see that actually the variation is relatively small.\par
+It's just square root of what they expect to make.\par
+So it's roughly concentrated around the mean.\par
+So it's quite a remarkable property.\par
+By the way, I should mention that, in the notebooks,\par
+you can also experiment and see\par
+how the Poisson approximates the binomial\par
+and you can see how close they come to each other.\par
+I encourage you to look at that.\par
+Let's look at an example and see\par
+how close the Poisson distribution\par
+approximates the binomial.\par
+Again, let me remind you that, if you look at the notebook,\par
+you can actually see it visually,\par
+how this approximation works\par
+and how close the Poisson becomes, gets to the binomial.\par
+In this example that we'll look at,\par
+we have a factory that produces 200 items,\par
+and each is defective with probability 1%.\par
+And we want to know, what is the probability\par
+that out of those 200 items, each will be defective?\par
+First of all, notice that we have here many items, 200,\par
+so n is large,\par
+and small probability of being defective, only 1%.\par
+So we can hope that a Poisson approximation\par
+will be fairly tight.\par
+So let's see.\par
+First we can calculate the precise probability\par
+because this is a binomial distribution.\par
+You have 200 items, each is defective probability 1%,\par
+is presumably independently.\par
+So the probability is going to be\par
+just the binomial with probability 0.01 in 200,\par
+this evaluated at three.\par
+This is going to be 200 choose three,\par
+number of ways of choosing the three items.\par
+And then for each selection of three items,\par
+the three of them have to be bad.\par
+That happens probability 1% cubed.\par
+And the remaining 197 have to be good,\par
+and each of them is good probability 99%.\par
+So it's times 0.99 to 197.\par
+If you calculate it, you'll see\par
+that it's roughly 0.181, up to three digits, it's 0.181.\par
+Next, let's look at a Poisson approximation.\par
+First we need to determine lambda.\par
+Lambda is, in this case we have 200 items,\par
+each defective probability 1%.\par
+So the expectation, the expect number of elements\par
+that will be defective is two.\par
+So lambda is two, 'cause as we saw,\par
+for Poisson distribution, lambda is just the mean,\par
+just the expected number of elements that will be faulty.\par
+Here, it's two.\par
+So what is the probability of three?\par
+It's Poisson two evaluated at three.\par
+So it's e to the minus lambda, lambda to the k.\par
+So it's e to the minus lambda, which is e to the minus two,\par
+and then lambda to the k, in this case it's two cube,\par
+divided by k factorial, namely three factorial.\par
+And we can evaluate this, and this is 0.18.\par
+Again, so it's essentially 0.180.\par
+So it's off by just one third digit.\par
+So it's very close.\par
+Now, you can ask,\par
+what is the probability that some are defective?\par
+Namely, at least one.\par
+First, let's calculate the precise probability.\par
+We'll start with calculating the probability\par
+that none are defective.\par
+That's binomial with success probability 1%\par
+and 200 trials.\par
+That's going to be 200 choose zero, which is one,\par
+'cause all of them have to be okay.\par
+And then times 0.99 raised to the 200.\par
+Calculate it, it's 0.134, up to three decimal points.\par
+If we approximate, and therefore the probability\par
+that you have at least one\par
+is going to be one minus that.\par
+And that's 0.1 like this, and that's 0.866.\par
+Now, if you want to approximate with Poisson,\par
+then Poisson two of zero is e to the minus two,\par
+two to the zero divided by zero factorial.\par
+And if you look behind the picture here,\par
+the video picture,\par
+then you'll see that it's very close.\par
+(chuckles)\par
+Anna?\par
+- [Anna] Cut!\par
+- Sorry about that, about that.\par
+I would have continued, but, oh wow.\par
+Yeah, no, no, it's there.\par
+Okay, so yeah, (chuckles) it's there.\par
+- [Anna] And action.\par
+- [Teacher] So how we going to do it?\par
+- [Anna] Sorry, I was.\par
+- So here, my suggestion is,\par
+let's do this.\par
+Let's start,\par
+if you don't mind, let's start here.\par
+- [Anna] Okay, and action.\par
+- Next, let's see what is the probability\par
+that some are defective,\par
+namely that one or more are defective.\par
+As we've seen before, one way to calculate it\par
+is to calculate the probability that none are defective\par
+and then look at one minus that.\par
+So the probability that none are defective,\par
+we first calculate it exactly,\par
+it's binomial with probability 1% and 200 sample,\par
+the probability of none defective of zero.\par
+That's going to be 200 choose zero, namely one,\par
+times 0.99 to the 200,\par
+namely all of them have to be good.\par
+When you calculate that, that's roughly 0.134.\par
+That's the value up to three decimal points.\par
+Therefore the probability that some are defective\par
+is going to be one minus that,\par
+which is going to be 0.866.\par
+Now, if you want to approximate,\par
+then do you look at the Poisson distribution\par
+and with parameter two, because the mean is two here,\par
+as we calculated.\par
+So Poisson distribution of mean two, probability of zero,\par
+is e to the minus lambda, which is e to the minus two,\par
+times lambda to the zero, two to the zero,\par
+divide by zero factorial.\par
+And that's going to be just e to the minus two,\par
+and that is 0.135.\par
+So again, it's almost the same,\par
+it's just off by one, one point\par
+in the third decimal place.\par
+And if you calculate the probability\par
+of bigger than equal to one,\par
+you subtract one minus that and you get 0.865.\par
+So very, very close.\par
+You can see how good the Poisson approximation is\par
+for the binomial.\par
+To summarize, we talked about Poisson distributions.\par
+We said the formula is e to the minus lambda,\par
+lambda to the k divided by k factorial.\par
+The Poisson distribution hold for lambda\par
+which is bigger than zero\par
+and k which is bigger than equal to zero.\par
+And as we said, lambda is the parameter,\par
+is also the mean of the distribution.\par
+So we said this approximates the Bernoulli p n\par
+for lambda, which is n times p,\par
+when n is very large and p is very small.\par
+Again, lambda is n times p.\par
+First, there are many applications of this,\par
+like number of ad clicks, number of rare diseases,\par
+number of production defects, and so on.\par
+We said the mean of the Poisson distribution\par
+is lambda, so it's parameterized by its mean.\par
+The variance is also lambda\par
+and the standard deviation is square root of lambda,\par
+which as we said, is actually fairly small\par
+compared to lambda.\par
+You might think that if you have a mean of 1,000,\par
+then the standard deviation, which is\par
+by how much you expect things to differ from the mean,\par
+is only going to be 30.\par
+To summarize, we talked about Poisson distributions.\par
+They are defined by, called by this formula.\par
+So the Poisson distribution parameter lambda,\par
+and the parameter has to be at least zero.\par
+So is defined as p lambda of k\par
+is e to the minus lambda, lambda to the k over k factorial.\par
+And the values range of all integer is k\par
+which are at least zero.\par
+As we have said, and we'll say in a second again,\par
+lambda here is the expectation of the Poisson distribution.\par
+The Poisson distribution\par
+approximates the Bernoulli distribution\par
+with success probability p and n samples,\par
+when n p is, the expectation is lambda,\par
+and n is very large and p is very small.\par
+And Poisson distributions therefore appear\par
+in many applications, including number of ad clicks,\par
+number of people have a rare disease,\par
+number of defective items, and so on.\par
+And we said the mean of the Poisson distribution is lambda,\par
+as we expect from the fact that it's n time p\par
+for the binomial.\par
+The variance is also lambda\par
+and the standard deviation is square root of lambda.\par
+And we observe that the standard deviation\par
+is very small compared to lambda,\par
+even though we noticed that you have many, many trials\par
+and each one is has a very small probability,\par
+you see that, somewhat remarkably,\par
+the standard deviation is fairly small.\par
+For example, if you expect to have, like, 1,000 successes,\par
+then you'll be typically maybe off\par
+by something relatively close to 33, let's say.\par
+So it's a very small deviation.\par
+Next time, we're going to talk\par
+about geometric distributions.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Is the sum of two independent Poisson random variables also a Poisson random variable?\par
+\par
+\tab\par
+Yes\par
+\par
+\tab\par
+Not necessarily\par
+}
+ 

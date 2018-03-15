@@ -1,0 +1,552 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello again everyone.\par
+Today we're going to talk about continuous distributions.\par
+And when we move from discrete to continuous distribution\par
+we'll observe that when we have discrete distributions\par
+we're considering countable number of values\par
+namely finite or countably infinite.\par
+Where as for continuous distributions\par
+we'll have an uncountable number of values.\par
+Typically things like intervals.\par
+Now why are we looking at continuous distributions?\par
+Because a lot of things in life are.\par
+For example, anything that has to do with physics like time.\par
+For example, the duration of a flight\par
+or duration of an Amazon delivery\par
+or for disease, God forbid,\par
+or life is continuous, the length is continuous.\par
+Or anything that has to do with measuring space.\par
+For example, measuring the height of a person\par
+or the area of a storm, that's a continuous random variable.\par
+If you consider mass, like the weight of a pet as we saw\par
+or the weight of a cookie that a company produces.\par
+Again, those are continuous random variables.\par
+Or temperature, like the air temperature\par
+or the body temperature, and so on.\par
+Now many things that are also nearly continuous\par
+but we'll view them as continuous.\par
+For example, the cost of a stock or of a house\par
+or pork bellies that people like to look at.\par
+Or rates, like interest rates,\par
+or exchange rates or unemployment rates.\par
+These things are not really continuous\par
+because everyone takes discrete values\par
+but because there's so many of them\par
+you can view them as continuous.\par
+Okay.\par
+When we talk about continuous distribution\par
+we'll talk about probability density functions\par
+which replace the discrete probably mass function\par
+that we used to see.\par
+So the probability density function or pdf\par
+is the function f of x, which is non negative.\par
+And it represents the relative likelihood of the value x.\par
+And so you can draw it like this, f of x, always no negative\par
+and this is the relative likelihood\par
+that you will observe a value like x or a number near it.\par
+And test to satisfy that the\par
+integral of f for minus infinity to infinity is 1.\par
+And we call this the area under the curve.\par
+This is this area here.\par
+Now, we can compare it to discrete distribution.\par
+So for discrete distribution, the probability function\par
+was the probability mass function or pmf.\par
+And now we have probability density function, pdf.\par
+And they're both non negative.\par
+P of x is bigger than equal to zero\par
+and f of x is bigger than equal to zero.\par
+And they have to integrate or sum to one.\par
+So for the case of discrete distribution the sum is one\par
+and for continuous distributions, the integral is one.\par
+Now, the probability of an event A, let's say\par
+under discrete distribution\par
+was the summation of all elements x\par
+in the event of the probability.\par
+And likewise, for continuous distributions\par
+it's the integral of all x and A\par
+or of the function f of x, the density.\par
+And typically we're interested in interval probabilities.\par
+Namely the probability that X is\par
+in some range between a and b.\par
+And for that, we'll look at the area under the curve\par
+between the points a and b.\par
+Or in other words, the probability that\par
+x is less than equal to b\par
+minus the probability that x is less than equal to a\par
+and that of course leads us to\par
+cumulative distribution functions, which we'll discuss next.\par
+So the cumulative distribution function\par
+or CDF as we call it, is the probability\par
+that x, the random variable x is\par
+less than equal to the value x.\par
+And it's denoted by f of x.\par
+This was true for discrete distributions\par
+and it's also the same definition here.\par
+Now for discrete distributions\par
+if you want to move from the probability function.\par
+In that case, the PMF to the CDF\par
+then we just summed all the values\par
+that were less than equal to x.\par
+So f of x was equal to the summation of p of u\par
+when u is less than equal to x.\par
+For continuous functions, f of x is going to be\par
+the integral for minus infinity to x of f of u du.\par
+And if you want to go in reverse.\par
+If we have, someone gives us the CDF, capital F of x\par
+and you want to get the PF, the probability function\par
+then for discrete distribution\par
+p of x was F of x minus F of x star\par
+where x star is the element immediately preceding x.\par
+And for continuous functions\par
+f of x, the PDF, probability density function\par
+is going to be the derivative of the CDF of capital F.\par
+We're going to see very soon.\par
+So let's do a few examples.\par
+So the uniform distribution, f of x is defined to be one.\par
+For x between zero and one, and zero otherwise.\par
+And here we can see the function.\par
+We can see the graph.\par
+And what that reflects is that every value of x\par
+is equal like this, if you draw a value on the line\par
+and every value of x is likely\par
+that is equal likely to come up.\par
+So when we won't see whether it will sum or integrate\par
+then the area under the curve is because this is a rectangle\par
+it's just going to be the width, which is one\par
+times the height, which is one.\par
+And that is going to get one.\par
+And we can also do it using integrals if you wanted to.\par
+It's the integral for minus infinity\par
+to infinity of f of x dx.\par
+But below zero and above one, f of x is one.\par
+Is zero, I apologize.\par
+So we're just left with the integral\par
+from zero to one of 1dx.\par
+Which is x between one and zero, which is one.\par
+Now if you want to calculate\par
+the cumulative distribution function\par
+then it's going to be zero\par
+whenever x is less than equal to zero\par
+because it's the integral from minus infinity to x\par
+which is less than zero of zero.\par
+And then for x which is between zero and one\par
+it's the integral from minus infinity\par
+of f to x of f of u du\par
+which ends up being just the integral from zero to one\par
+because up to zero f of u is zero.\par
+Zero to one, for 1du\par
+which is u between x and zero, and that gives us x.\par
+Okay.\par
+So if you want to draw it in a graph\par
+we're looking at the area here from zero to x\par
+and this is going to be the function x,\par
+which as you see here is increasing.\par
+And if we consider the value for x, which is bigger than one\par
+then we're integrating again from that point on zero,\par
+so it stays at one.\par
+So if you want to see a demonstration\par
+we can go to this example here.\par
+And what we have is.\par
+Okay, so here we have f of x, the PDF\par
+and here we have the integral.\par
+So if x is half, then the value is going to be half as well\par
+and if we move x, we make it smaller.\par
+For example here, make it 0.23\par
+then we're integrating this f from zero to 0.23.\par
+We're looking at the area of this rectangle\par
+which is going to be again 0.23.\par
+Okay, and if we make.\par
+If we're looking at x which is larger.\par
+For example, 0.8\par
+then we're looking at the area of this rectangle\par
+which is 0.8 and the CDF is going to be again 0.8.\par
+Okay.\par
+Right.\par
+And going back to the presentation.\par
+So we calculated the CDF\par
+of the uniform distribution, like that.\par
+And now you can observe that if you take\par
+the derivative of the CDF, the derivative of capital F.\par
+So capital F of x in the region between zero and one is x.\par
+If we take the derivative it's going to give us one\par
+which is back to f of x\par
+which is the same as f of x in this region.\par
+And the same would hold in other regions too\par
+because let's say we're looking below zero\par
+then capital F is zero.\par
+Take the derivative, get zero\par
+which is the value of f in that region\par
+and if you take x, which is bigger than one.\par
+Here, then the derivative is zero\par
+corresponding to f being zero again.\par
+Okay.\par
+So let's look at another distribution,\par
+the triangle distribution\par
+where f of x is 2x for x between zero and one\par
+and zero otherwise.\par
+And here is the graph between zero and one\par
+it's f of x is 2x, so f of zero is zero, f of one is two.\par
+And outside this region it's zero.\par
+And we want to check whether this is a distribution.\par
+We need to see whether the integral is one.\par
+And the area under the curve\par
+we can again see it without any integrals.\par
+We can see that it's a triangle\par
+so it's the width, which is one\par
+times the height which is two, divided by two.\par
+And that gives us one.\par
+Or if we want to integrate f of x minus infinity to infinity\par
+it's just going to be the integral from zero to one of 2xdx\par
+and that integral is x squared between zero and one\par
+which gives us one.\par
+Okay.\par
+Now if you look at the cumulative distribution function.\par
+Capital F of x, it's zero for x which is below zero\par
+because up to here f of x, the PDF was zero.\par
+And so integrating zero we get zero.\par
+And if we look at the region between zero and one\par
+the integral from minus infinity to x of f of u du\par
+is the same as just the integral\par
+from zero to 2x of 2udu, which is u squared\par
+between x and zero, which is x squared.\par
+Okay.\par
+And it's this region here.\par
+And if you look at x, which is bigger than one\par
+then the function will continue to be one, so it stays one.\par
+Okay.\par
+And again, if we took the derivative of the CDF\par
+it's a derivative of x squared, gives us 2x\par
+which is f of x, it's back to f of x here.\par
+And again this holds for x between zero and one.\par
+But the same would hold in other regions\par
+because then the CDF is constant\par
+so we take the derivative, we'll get zero.\par
+Alright.\par
+Now, the distributions we've seen so far\par
+is distribution uniform and triangle had support\par
+which was between zero and one.\par
+But you can get larger supports, even infinite.\par
+So let's look at a power law example.\par
+So take f of x, which is one over x squared\par
+for x which is bigger than one.\par
+This is called a Power law\par
+because the f of x, the PDF behaves like a power of x.\par
+In this case, one over x squared.\par
+And the distribution is zero for x which is less than one\par
+and this is shown here in the graph.\par
+Okay.\par
+Now to check if the integral is one\par
+we need to take the integral of f of x\par
+minus infinity to infinity\par
+and that's going to be just the integral\par
+from one to infinity of one over u squared u.\par
+The integral for one over u squared is negative one over u.\par
+So when we differentiate this we get one over u squared\par
+between one and infinity.\par
+Plug in u which is infinity, we get zero.\par
+And subtract minus one we'll get plus one.\par
+Okay.\par
+And for the CDF, f of x is going to be zero\par
+for x which is less than one.\par
+It's the integral from one f to x of one over u squared\par
+which is the PDF du\par
+which is minus one over u between one and x, which is one.\par
+If we plug in this lower limit here\par
+so it's minus minus one, which is one.\par
+And then minus one over x.\par
+Finding x which is bigger than one.\par
+And we can see that as x goes to infinity\par
+f of u is going to be equal to one.\par
+And if we take the derivative\par
+then it's going to be the derivative of one minus one over x\par
+which is again one over x squared.\par
+The same thing as the f itself.\par
+And again this will also hold this for x bigger than one\par
+but the same will hold if x is less than one.\par
+Now what is the probability of an interval?\par
+So for a uniform distribution\par
+if we look at the interval between a and b\par
+where a is less than b\par
+and they're both between zero and one.\par
+Then the probability that x is between a and b\par
+is we can calculate it as the area under the curve\par
+which is going to be b minus a times one\par
+times one, which is the height, which is b minus a.\par
+Or we can look at the integral\par
+from a to b of f of x dx\par
+which is the integral from a to b of 1dx.\par
+And that's going to be x between b and a\par
+which is b minus a.\par
+Or we can just calculate f of b minus f of a\par
+which is b minus a.\par
+So all these methods give us the same thing.\par
+And this is a picture that shows the functions\par
+and we calculated this area here between a and b.\par
+What if we look at the\par
+an interval that starts maybe in this region\par
+between zero and one, and ends to the right of one.\par
+So for example going from 0.6 to 1.3\par
+that's the same as the probability\par
+of x being between .6 and one\par
+because above one there's zero probability.\par
+And that is a calculation that we have done before\par
+is one minus 0.6 which is 0.4.\par
+Or another way to do it\par
+is to see that we can always write\par
+the probability of x being in some interval\par
+as being F of the upper limit minus F of the lower limit\par
+which F of the upper limit in this case is one\par
+minus 0.6 which is 0.4.\par
+And for the Power law, if we have a and b\par
+which are bigger than one\par
+then the probability that x is between a and b\par
+is F of b minus F of a and F of b\par
+is one over a squared a we saw and F of a is.\par
+Sorry, F of b was one minus b squared\par
+and F of a was one minus one over a squared.\par
+And so when you subtract them you get this value.\par
+Okay.\par
+Now we talked about the similarities\par
+between discreet and continuous probabilities.\par
+There are also some differences.\par
+So for discrete distribution, p of x\par
+the probability of any element is always at most one.\par
+And for continuous f of x can be bigger than one.\par
+That is not a contradiction because f is just the density.\par
+But if you look at the area under the curve\par
+for every region, that has to be less than equal to one\par
+but f of x can be bigger than one.\par
+For discrete distribution, generally speaking\par
+the probability of an element can be non zero.\par
+So it can find an element whose probability is non zero.\par
+But for continuous distribution\par
+the density of any x\par
+the probability of x is zero.\par
+It's not f, but the probability of x.\par
+And generally, for discrete distribution\par
+the probability that x is less than equal to a\par
+can be different from the probability that x is less than a.\par
+But for continuous distributions\par
+the probability that x is less than equal to a\par
+is equal to the probability that x is less than a\par
+because the probability that x will be equal to a is zero.\par
+And both of them are equal to F of a.\par
+And similarly the probability that x\par
+is bigger than or equal to a\par
+is the probability that x is bigger than a\par
+which is one minus F of a.\par
+And the probability that x is between a and b\par
+with possible equalities\par
+is the same as the probability\par
+that x is strictly between a and b\par
+and both of them are F of b minus F of a.\par
+So when we write the probability of intervals\par
+sometimes we'll write them as probability of x\par
+strictly between a and b or less than equal to b\par
+and bigger than equal to a.\par
+And both of those forms are going to be the same.\par
+Now, we can also consider the expectation\par
+of random variables, like we did for the discrete case.\par
+For the discrete case the expected value was the\par
+summation of x times px.\par
+And for continuous it's going to be\par
+just the integral of x times f of x dx.\par
+Oh, I'm missing an x here, I apologize.\par
+X times f of x dx.\par
+And as for discrete distributions\par
+it's going to be the average of many samples.\par
+And some properties of the expectations are\par
+that if the support set is between a and b\par
+then the expect value of x is also going to be\par
+a number which is between a and b.\par
+And symmetry is that if for some alpha\par
+f of alpha plus x is f of alpha minus x for all x.\par
+So you can see in this graph here.\par
+So we have alpha, and for every x that you take\par
+f of alpha plus x and f of alpha minus x are equal.\par
+So you see here they have the same height.\par
+Then the expected value of x is going to be alpha\par
+because it's equally likely to be\par
+x below, x above and x below.\par
+And therefore, on average it's going to be alpha.\par
+Okay.\par
+So let's do a couple of examples.\par
+If you take the uniform distribution.\par
+The expected value of x is the integral\par
+for minus infinity to infinity of x times f of x dx\par
+which is the integral from zero to one\par
+because f of x is positive only\par
+between zero and one of x times 1dx.\par
+And that's going to be x squared over two\par
+between zero and one, which is going to be one half.\par
+And that corresponds to the fact that\par
+the uniform distribution is symmetric around half.\par
+And therefore the expected value is one half.\par
+If you take the triangle distribution\par
+the expected value of x is the integral\par
+from zero to one of x dx.\par
+And this should actually be 2x.\par
+And that's going to be 2x cubed divided by three\par
+between zero and one, which is two thirds.\par
+And if you take the Power law\par
+then the expected value of x\par
+is the integral from one to infinity\par
+of x times one over x squared dx.\par
+And that's the integral between one and infinity\par
+of one over x dx.\par
+And that's ln x between one and infinity\par
+and that's going to be infinity.\par
+And that corresponds to the fact that\par
+x has such a long tail\par
+that if you keep taking values,\par
+the expected average actually going to be above\par
+any given number.\par
+And later we'll see Power laws with finite expectations.\par
+Okay.\par
+Now the variance is the expected value\par
+of the variable minus it's mean square.\par
+And that's going to be for discrete distribution\par
+for summation of p of x times x minus mu squared.\par
+And here is going to be, by the definition of expectation\par
+it's going to be the integral of f of x\par
+times x minus mu, the whole thing squared dx.\par
+And for discrete distribution\par
+we saw that the variance,\par
+which is the expected value of x minus mu squared\par
+can also be expressed as the expected value\par
+of x squared minus the expected value of x, squared.\par
+And the same thing holds here.\par
+It's also continuous distribution as well\par
+because as for discrete,\par
+the expected value of x minus mu squared\par
+is the integral of x minus mu squared times f of x dx.\par
+And we can open up with the integral of\par
+x squared minus 2x mu plus mu squared times f of x dx.\par
+Which is the integral of x squared f of x\par
+minus twice the integral of x mu dx.\par
+And we can take 2mu outside.\par
+So we take, so it gives us twice mu\par
+the integral of x times f of x dx plus mu squared.\par
+And that's going to be the expected value\par
+of x squared minus 2mu squared plus mu squared\par
+which is the expected value of x minus mu squared.\par
+Okay.\par
+And if we want to do a couple of examples\par
+for uniform distributions.\par
+Our uniform example that we had\par
+to expect the value of x squared\par
+is the integral from zero to one of x squared dx.\par
+Which is x cubed over three between zero and one\par
+which is one third.\par
+And therefore the variance effects\par
+is the expected value of x squared, which is one third\par
+minus the expected value of x squared\par
+and the expected value of x was one half.\par
+So it's one third minus one quarter, which is 1/12.\par
+And the standard deviation is the square root of that\par
+which is one over two, square root of three\par
+on this rate of 1/12.\par
+For the triangle distribution\par
+the expected value of x squared\par
+is the integral from zero to one\par
+of x squared times 2xdx, which is one half.\par
+And so here we have 2x cubed\par
+and so the integral is going to be\par
+two over four, which is one half x to the four\par
+between zero and one.\par
+And that's going to give us one half.\par
+And therefore the variance is the\par
+expected value of x squared minus\par
+the expected value of x squared,\par
+which is one half minus the expected value of x\par
+we saw was two thirds.\par
+So one half minus two thirds squared\par
+which is one half minus four over nine.\par
+Which is nine over 18 minus 8 over 18, which is one over 18.\par
+Okay and the standard deviation\par
+is square root of one over 18\par
+which is one over three square root of two.\par
+Now let's see, summarize the continuous distribution\par
+and the differences from discrete distributions.\par
+So for discrete distributions\par
+the probability function was the pmf,\par
+probability mass function, which we denoted by p.\par
+And for continuous distributions\par
+we're looking at the density.\par
+The probability of density function which we denote by f.\par
+Both have to be bigger than or equal to zero.\par
+So for discrete distribution p of x is non negative\par
+and for continuous distributions\par
+the density is non negative.\par
+And we note that for discrete distributions\par
+p of x has to be less than equal to one\par
+because their elements have to sum to one.\par
+So every element has to have\par
+probability reaches less than one.\par
+But here f of x can be actually anything\par
+that is non negative.\par
+So long as the integral of f is one.\par
+Both have to sum to one.\par
+So discrete distribution, the values need to sum to one.\par
+For continuous distribution, they need to integrate to one.\par
+The probability of an element for discrete distribution was\par
+the summation of all our elements in the event A\par
+of the probability.\par
+And for continuous distribution\par
+the integral over the event has to be\par
+is the probability of this event.\par
+If you look at this, CDF, F of x.\par
+Then for discrete distribution\par
+it was the summation of all elements u\par
+that are less than x of the probability.\par
+And for continuous distribution is the integral\par
+of f of u between minus infinity and x.\par
+And we notice for continuous distributions\par
+we also have the identity that f of x\par
+that pdf is the derivative of the CDF.\par
+And the expected value of x\par
+for discrete distribution was mentioned of x times p of x,\par
+and for continuous distribution\par
+is the integral of x times f of x dx.\par
+And the variance gives a summation of\par
+x minus mu squared times p of x.\par
+And for continuous distribution\par
+is the integral of x minus m squared times f of x dx.\par
+Okay.\par
+And the last thing here I want to mention is\par
+as we said was that for continuous distributions\par
+the probability that x is between a and b\par
+where we allow x to be equal to a and b\par
+is the same as the probability\par
+that x is strictly between a and b\par
+and both of them are equal to f of b minus f of a.\par
+So we'll sometimes just try probability\par
+that x is strictly bigger than a\par
+or bigger than equal to a and they'll both mean the same.\par
+Okay.\par
+So with that, were done with the introduction\par
+to continuous distributions.\par
+And what we want to do next is talk about\par
+functions of continuous random variables.\par
+Thank you.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Which of the following is true about a continuous random variable on R?\par
+\par
+\tab\par
+Its pdf must be a continuous function\par
+\par
+\tab\par
+Its cdf must be a continuous function\par
+\par
+\tab\par
+It's pdf must integrate to 1 on R\par
+\par
+\tab\par
+It's cdf must integrate to 1 on R\par
+\par
+Submit\par
+}
+ 

@@ -1,0 +1,655 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello, and welcome back.\par
+In the last lecture,\par
+we talked about the Bernoulli distribution,\par
+and we said that it forms the foundation\par
+of many other families of distribution,\par
+and in this lecture we're going to start with the first one,\par
+which is the binomial distribution.\par
+The binomial distribution concerns several Bernoulli trials,\par
+and it counts the number of successes\par
+in n Bernoulli trials.\par
+Here we have, for example, a number of coin flips.\par
+You have 40 coin flips,\par
+of which 21 are heads and 19 are tails.\par
+It's useful in many applications, as we're going to show,\par
+and we'll also find the mean, the variance,\par
+and the standard deviation,\par
+and we'll give a couple of examples.\par
+Let's start with the definition.\par
+Suppose you have n independent Bernoulli experiments.\par
+Each is success with the same probability p,\par
+and failure therefore with probability one minus p,\par
+and as you'll recall,\par
+one minus p we denote by p bar or by q.\par
+So Bernoulli n,p, or Bernoulli p,n,\par
+those are two ways to write this,\par
+the binomial distribution\par
+is the distribution of the number of successes.\par
+I should mention that Bn,p\par
+n is the number of trials, p is the probability of successes\par
+is a little more common than Bp,n\par
+Bn,p is a little more common,\par
+but to me at least, Bp,n seems a little more logical,\par
+because Bp is the Bernoulli p,\par
+and now we extend it to n distribution.\par
+It makes a little more sense to add it at the end,\par
+and also it will be a little more natural\par
+when we talk about Poisson binomial distributions,\par
+which we'll also mention.\par
+I'll be a little more natural to talk about Bp,n\par
+so we'll just denote it by Bp,n.\par
+There's no concern about confusion\par
+because p is a number less than one,\par
+n is a number typically much bigger than one,\par
+so there'll not be any confusion.\par
+What we have is we have n independent coin flips,\par
+and in each one\par
+the probability of heads or the probability of one is p,\par
+and Bp,n is the distribution of the number of heads.\par
+That will be perhaps the simplest example.\par
+You flip a coin, which has probability of heads p,\par
+you flip it n times,\par
+and we ask how many times you have seen heads,\par
+and that will be distributed\par
+a binomial with p and n parameters.\par
+The binomial distribution has many applications.\par
+I'll mention just a few.\par
+First, if you provide a treatment to some disease,\par
+each patient has some probability p\par
+to respond positively,\par
+so the number of people who respond positively\par
+will be a random variable,\par
+which will be distributed binomial.\par
+Or if you produce several components,\par
+or produce cell phones, or anything you produce,\par
+each one has some probability p of being faulty.\par
+Each one is typically independent of the other,\par
+or I should say often independent of the other,\par
+and whenever you have this,\par
+that every element has probability p,\par
+the same probability of being faulty,\par
+and independent of each other,\par
+then you get a binomial distribution.\par
+Similarly, if you fix a month,\par
+then maybe the probability of raining\par
+every day of this fixed month is the same,\par
+and maybe each day is independent of each other.\par
+If it is, then you have a binomial distribution.\par
+If you look at flights,\par
+and you look at how many flights are delayed in a day,\par
+then if they're independent of each other,\par
+then again it's binomial,\par
+but notice that in many of these things,\par
+maybe they are not independent,\par
+and if they're not then you will not get the binomial,\par
+but if they are independent\par
+you'll get binomial distribution.\par
+We'll begin with some small examples,\par
+small number of coin flips.\par
+We have n independent experiments.\par
+Each has success probability p,\par
+and therefore failure probability q,\par
+which is one minus p,\par
+and we're going to assume that all the coin flips\par
+are independent of each other,\par
+and we let bp,n be the probability of k successes,\par
+and I'm writing lowercase b,\par
+just because it's a probability here,\par
+but you can also write capital B,\par
+and so sometimes we might do that.\par
+Notice that bp,n\par
+so we're going to do it for n which is small,\par
+and so for n which is zero, we can have only zero successes,\par
+so k must be zero,\par
+and therefore the probability of zero successes\par
+is going to be one.\par
+Then let's look at n which is one,\par
+meaning we have one coin flip.\par
+Now the number of successes,\par
+the number of one could be either zero or one,\par
+and it's zero with probability q, or one minus p,\par
+it's one with probability p.\par
+If we have two coin flips\par
+You can check that p plus q is one, as it should be.\par
+If we have two coin flips,\par
+then the number of successes\par
+could be either zero, one, or two.\par
+The number of successes is zero if both coins were zero,\par
+so zero/zero, that has a probability of q squared.\par
+It's one, the number of successes is one,\par
+if the outcome is zero/one or one/zero,\par
+and each of those happens with probability pq,\par
+so therefore the probability of observing one is 2pq,\par
+and the probability of two successes,\par
+probability of seeing one/one, which is p squared.\par
+Again, you can check that\par
+q squared, plus 2pq, plus p squared\par
+is p plus q squared\par
+which is one squared, which is one,\par
+so again they add to one.\par
+Maybe the important thing is to look at the middle one here,\par
+because that will help us generalize.\par
+We see that what happens here is that all sequences\par
+with the same number of zeros and ones,\par
+in this case with one zero and one one,\par
+have the same probability pq,\par
+and then there are two of them,\par
+so the total probability is going to be 2pq.\par
+We're going to generalize this in the next slide.\par
+For general n and k,\par
+we have n independent Bernoulli p experiments,\par
+and the number of successes\par
+is therefore some number between zero and n,\par
+could be anywhere from zero to n, any integer,\par
+and bp,n of k is the probability\par
+of observing k successes in this case,\par
+and we notice that every sequence of coin flips\par
+that has k successes\par
+will necessarily have n minus k failures,\par
+and therefore its probability of any given sequence\par
+is going to be p to the k, times q to the n minus k.\par
+The number of sequences\par
+of length n with k successes and n failures\par
+is n choose k,\par
+because we have a sequence of length n\par
+and we have to choose k of them,\par
+and we have seen this number is n choose k,\par
+therefore the total probability\par
+that you will observe k successes is going to be n choose k,\par
+that's the number of sequences,\par
+each one has probability p to the k,\par
+times q to the n minus k,\par
+so this is going to be the probability of observing k,\par
+and this is the binomial,\par
+the probability that the binomial distribution\par
+takes the value of k.\par
+Notice it's a distribution over n plus one values,\par
+namely from zero up to n.\par
+To show that it's actually a distribution,\par
+we need to check that it's non-negative, which is trivial,\par
+and also that they sum to one.\par
+That's what I'm going to do next.\par
+We just need to\par
+it's clearly non-negative,\par
+just need to make sure that they add to one,\par
+so that's the question.\par
+The probability that X is k, as we said,\par
+which we denote by bp,n of k\par
+is n choose k, p to the k, q to the n minus k,\par
+and what we need to do is\par
+we need to calculate the summation of bp,n of k\par
+for k going from zero to n.\par
+The big question is, will it add to one?\par
+We have summation of\par
+bp,n of k is summation of n choose k,\par
+p to the k, q to the n minus k from here.\par
+Now we need to remember the binomial theorem.\par
+It said that a plus b to the n\par
+is summation of n choose k, a to the k, b to the n minus k,\par
+and that's exactly what we have here with a being p,\par
+and b being q,\par
+so this will give us a plus b to the n,\par
+or p plus q to the n.\par
+So this will give us p plus q to the n,\par
+and remember that q is one minus p,\par
+so this will give us one to the n, or one, and it does add.\par
+So yes, this is a distribution.\par
+Now let's look at some sample distributions\par
+and see how they look like.\par
+So let's fix n to be 18, and so we're looking at bp,18 of k,\par
+and we're looking at the distribution\par
+for four different values of p.\par
+First, if p is equal to 0.1, then we have 18 coin flips,\par
+each of them has probability of 10% of being one,\par
+so the number of ones we think we'll see\par
+is going to be roughly two,\par
+and we see here\par
+that one and two have the highest probability,\par
+and then it declines like that.\par
+Now if p is, instead of 0.1, is a quarter,\par
+then we expect to see 18 over 4, roughly 4.5 ones,\par
+and the distribution is going to look like that.\par
+It has the highest value for four and five,\par
+and then it declines if you go below or go up like that.\par
+If p is 0.5, then\par
+we have 18 experiments,\par
+each one is probability half of being one.\par
+The number of successes that we'll see\par
+is going to be roughly nine with some variations,\par
+so nine is here the average,\par
+and the probability declines as we go up and down,\par
+as we expect.\par
+And finally, if p is 3/4,\par
+then we expect to see 18 times 3/4, which is 13.5,\par
+is the probability of what we expect to see,\par
+and we see a distribution centered around 13.5.\par
+If you want to see more examples,\par
+then you can look at the notebook,\par
+and we give you some functions there.\par
+We can experiment\par
+and see the distribution for different values of p and q,\par
+and see what happens when you change p and q.\par
+I encourage you to do that.\par
+Let's do an example.\par
+Suppose we have a multiple-choice exam.\par
+Suppose we have six questions,\par
+each with four possible answers,\par
+and suppose the student is a little lazy,\par
+and for each question\par
+they select one of four answers randomly.\par
+Let X be the number of correct answers,\par
+and so X is distributed Bernoulli 1/4\par
+because that's the probability\par
+that they'll choose the right answer out of four,\par
+and with p is a quarter, and six is the number of trials.\par
+And suppose that to pass the exam,\par
+the student needs to get at least four correct answers,\par
+then we can ask what is the probability\par
+that the student will pass the exam.\par
+So the probability\par
+that the student will get four correct answers\par
+is going to be six choose four.\par
+First we observe that this is a binomial distribution\par
+because for each,\par
+the probability of answering each question correctly is 1/4,\par
+and they're independent of each other,\par
+so it's Bernoulli probability 1/4 and six trials,\par
+so the probability of four is\par
+six choose four, times 1/4 to the four, times 3/4 squared,\par
+four correct and two incorrect,\par
+and this is roughly 3% or 3.29%.\par
+The probability that the student\par
+will get five answers correctly\par
+is going to be six choose five,\par
+times 1/4 to the five, times 3/4 to the one,\par
+and that's this probability here.\par
+It's actually 0.4%.\par
+And the probability they'll get all questions correctly\par
+is going to be six choose six, which notice is 1,\par
+that means that they have to get all questions correctly,\par
+and probability of that is 1/4 to the six.\par
+That's the probability of getting all of them correctly.\par
+It's even smaller,\par
+and therefore the probability they'll pass\par
+is going to be the sum of these.\par
+These are disjoint, so by the addition rule\par
+it's going to be the sum of those probabilities,\par
+which is roughly 3.8%.\par
+Notice that this probability is small,\par
+because you expect them to get 1.5,\par
+1/4 of the six questions correctly.\par
+Here we ask, what is the probability\par
+to get at least four correctly?\par
+So these are small probabilities,\par
+and they keep declining as we go from four to five to six.\par
+Now we want to calculate the mean and the variance,\par
+or standard deviation of binomial distribution,\par
+and you can go about it the hard way,\par
+namely just plug in the formulas.\par
+But we want to do something a little simpler,\par
+and to do that we're going to make an observation\par
+that will make our lives a lot easier, a lot simpler,\par
+and that is we're going to see\par
+that you can interpret a binomial distribution as a sum.\par
+Specifically, you can interpret Bp,n\par
+the binomial distribution with parameter p and n trials\par
+as the sum of n Bernoulli p random variables.\par
+So that's going to be our connection between,\par
+or another connection between Bernoulli random variables\par
+and binomial distributions.\par
+More specifically,\par
+let X1 up to Xn be Bernoulli p, independent,\par
+so we have n random variables\par
+that are distributed Bernoulli p.\par
+Now let's imagine that we're going to define X\par
+to be the sum of those n random variables.\par
+X is the sum of n Bernoulli random variables,\par
+and therefore takes a value which is from zero,\par
+it could be zero up to n,\par
+and let's see what is the probability\par
+that X is going to be k, and again, k is between zero and n.\par
+It's the probability\par
+that exactly k of the X1 up to Xn are one,\par
+because X is the sum,\par
+and it's going to be k\par
+if exactly k of those random variables are one.\par
+And what is that probability?\par
+It's going to be\par
+for every k, the probability is going to be\par
+p to the k, times q to the n minus k,\par
+and there are n choose k such possibilities, so it's\par
+n choose k, times p to the k, times q to the n minus k.\par
+That's the probability\par
+each one is the probability that a specific sequence,\par
+with k ones, and n minus k zeros,\par
+and this is the number of such sequences, so multiply them,\par
+and observe that this is exactly bp,n of k.\par
+So what we see is that if we take the sum\par
+of n Bernoulli p random variables,\par
+we get exactly the binomial distribution, bp,n.\par
+So that means that X, that is the sum here,\par
+is distributed Bernoulli p,n.\par
+This is going to be very helpful\par
+when we calculate the mean and the variance\par
+of the binomial distribution,\par
+because we can now relate it\par
+to the mean and the variance of this sum.\par
+So that's what we're going to do next.\par
+Start with the mean.\par
+X is distributed Bernoulli p,n.\par
+We can view X as a summation of Xi,\par
+where each Xi is a distributed Bernoulli p,\par
+independently of each other,\par
+and therefore the expected value of X,\par
+which is, by this definition,\par
+is the expected value of summation Xi.\par
+Then we can use the linearity of expectation\par
+to see that that's the summation of the expectation of Xi,\par
+and each Xi is Bernoulli p, so its expectation is just p,\par
+so it's summation of p,\par
+and we have n of them, so it's going to be np.\par
+So we get that the expected value\par
+of a Bernoulli p,n random variable\par
+is just np,\par
+and that makes sense because we have n random variables,\par
+each of them has probability p of being one,\par
+so we expect that the sum is going to be p times n.\par
+What is the variance?\par
+Again, by definition,\par
+it's the variance of the summation of Xi.\par
+But now the Xi's are independent.\par
+Therefore, as we've seen, the variances add,\par
+so it's the summation of the variance of Xi,\par
+and each Xi is Bernoulli p.\par
+Therefore the variance is pq.\par
+We have summation of pq, and we have n terms, so we get npq.\par
+So we get that the variance is n times p times q,\par
+and the standard deviation is square root of npq.\par
+So observe that if p, for example, is zero,\par
+then the standard deviation is going to be zero,\par
+because we'll always get zero:\par
+there's no standard deviation.\par
+Likewise, if p is one, the standard deviation is going to be\par
+this is one times zero, it's again zero:\par
+there's no variation.\par
+Whereas if p is 1/2,\par
+then we get square root of n over four,\par
+or square root of n over two,\par
+so we have square root of n over two variability.\par
+Let's go again to the multiple-choice question that we have.\par
+Exam has six multiple-choice questions,\par
+each with four possible answers,\par
+and for each question, the student makes a random decision.\par
+We let X be the number of correct answers,\par
+so then X is, as we said, distributed Bernoulli 1/4\par
+is the probability of a correct answer, and six questions.\par
+The mean is going to be np, which is 1.5.\par
+Six questions, each probability 1/4 of being correct,\par
+expect 1.5 questions, on average,\par
+answers to be correct.\par
+The standard deviation is going to be square root of npq,\par
+square root of six, times 1/4, times 3/4,\par
+which is square root of 18, over 4.\par
+Sorry.\par
+Square root of 18, over 4.\par
+I want to move to another application\par
+of binomial random variables.\par
+Not too long ago, Hillary Clinton wrote a book\par
+called What Happened,\par
+and she pointed that there's no question mark\par
+here at the end like What Happened?,\par
+but rather that she's telling us what happened.\par
+Similarly, we're not going to ask why vote,\par
+but we'll say why we should vote,\par
+even though maybe you'll not be so convinced at the end,\par
+but who knows?\par
+The question is\par
+First of all, for simplicity\par
+let's assume that the number of voters is odd,\par
+namely two n plus one,\par
+in which case, then,\par
+there'll always be a decision: you cannot get a draw.\par
+So assume that it's odd, two n plus one.\par
+Assume that each person votes\par
+equally likely Democrat or Republican,\par
+namely probably half Democrats, probably half Republican.\par
+The question we want to ask is,\par
+what is the probability that a voter makes a difference?\par
+You have two n plus one voters,\par
+and let's say you're one of them,\par
+and you ask, what is the probability\par
+that you'll make a difference?\par
+Namely, what is the probability\par
+that if you vote Democrats, Democrats will win,\par
+and if you vote Republicans, a Republican will win?\par
+When you think about it,\par
+it's clear that that will happen exactly when the other,\par
+the remaining two n people vote equally,\par
+n of them will vote Democrats\par
+and n of them will vote Republican.\par
+That's exactly the time when you will make a difference.\par
+So when we ask what is the probability\par
+that the voter makes a difference,\par
+we're asking what is the probability\par
+that of the two n other people, they're equally split,\par
+namely n of them vote Democrats\par
+and n of them vote Republican?\par
+What we see here is that this distribution is Bernoulli\par
+is Bernoulli with two n trials,\par
+and each with probability 1/2,\par
+so here we're just reminding ourself that for Bernoulli p,n\par
+the probability of k is\par
+n choose k, times p to the k, q n minus k.\par
+Here, what we're asking is\par
+we have two n people, and we ask what is the probability\par
+that exactly n of them will vote, let's say Democrat,\par
+so it's going to be two n choose n, that's this n choose k,\par
+times each, here p, we are told, is 1/2,\par
+so it's one over two to the n, times q, which is again 1/2,\par
+to the n, which is two n minus n here.\par
+So that's the probability that of the remaining two people,\par
+the other two n people,\par
+exactly n of them will vote Democrats\par
+and exactly n of them will vote Republican.\par
+This is probability that n will vote Democrats, specific n.\par
+Specific n Republican we need to multiply\par
+by the number of sequences, which is two n choose n.\par
+This is not so clear what it is, so to clarify what it is,\par
+and maybe you want to stop here\par
+and think what you think it will be.\par
+Is it going to be a probability close to one,\par
+or is it going to be close to one over two to the n,\par
+or one over n?\par
+It might be a good idea for you to just pause\par
+and try to think which one it is, and when you come back,\par
+then you'll see what we're going to do now.\par
+We can write this as\par
+two n factorial, divided by n factorial, n factorial,\par
+and then two to the n, two to the n.\par
+We're going to use the Stirling Approximation here.\par
+Just to remind ourself,\par
+Stirling Approximation says that n factorial is\par
+roughly square root of two pi n, times n over e, to the n,\par
+and this is a very, very good approximation.\par
+It's off by, even for n equals 10,\par
+it's off by a very small fraction, less than 1%.\par
+So when we apply it, we get here, instead of two n factorial\par
+we get two pi, times square root\par
+square root of two pi,\par
+times two n, times two n over e, to the two n.\par
+So here, instead of n, we write two n,\par
+so it's two n over e, to the two n.\par
+Then what we divide here,\par
+notice that we have n factorial square,\par
+and then we have two n, square, or two to the two n.\par
+The two to the two n will come here,\par
+and the n factorial square is going to be\par
+square root of two pi n, times n over e, to the n,\par
+and we square that.\par
+When you do that, you see that what will happen is this:\par
+you have two to the two n here,\par
+which will cancel with two to the two n,\par
+lots of cancellations.\par
+You'll have here,\par
+in the denominator we'll get here one over e,\par
+e to the two n, and here we'll get one over e to the two n.\par
+It's one over e to the n squared,\par
+so it's one over e to the two n,\par
+so this will cancel, e will cancel.\par
+Two to the n will cancel,\par
+and n to the two n will also cancel.\par
+We have n to the two n here,\par
+and also we have n to the n square,\par
+so it's n to the two n here, so all these will cancel.\par
+We're left with just the square root,\par
+and what you'll see is that if you have square root of pi n,\par
+so that will cancel with one of the square root of pi n here\par
+because we have square,\par
+so we'll get one over square root of pi n,\par
+and here we have, for the twos,\par
+we'll have square root of four, which is two,\par
+and here we have square root of two squared,\par
+which is, again, two will cancel,\par
+so we'll get it's one over square root of pi n.\par
+What we see is that the probability\par
+that a voter will make a difference is not one.\par
+It will be a little unlikely that every person\par
+has a probability of one making a difference,\par
+but it's also not too small.\par
+It's not exponentially small.\par
+It's not even one over n.\par
+It's just roughly one over square root of n.\par
+So maybe that's a reason to vote, but maybe not so much.\par
+I want to end with a variation of binomial distribution.\par
+It's not so significant, but it's useful for some questions\par
+that we probably will ask you in the homework,\par
+and that is Poisson binomial.\par
+The Poisson binomial distribution\par
+generalizes the binomial distribution.\par
+If n, the number of trials, is bigger than or equal to one,\par
+as it typically is, then we can talk about\par
+binomial and Poisson binomial distributions.\par
+In binomial distribution, I will choose, denoted by Bp,n\par
+so this is the notation,\par
+and Poisson binomial we denote by PB,\par
+Poisson binomial, p1 up to pn.\par
+For I between one and n,\par
+in the binomial distribution we have\par
+Xi is distributed Bernoulli p,\par
+and for the Poisson binomial\par
+Xi is going to be distributed by Bernoulli pi,\par
+namely in binomial distribution,\par
+the probability of success is fixed to be p,\par
+and the Poisson binomial distribution\par
+the probability of success is pi.\par
+It changes with i,\par
+and we assume that pi is known ahead of time,\par
+someone tells us.\par
+In both cases,\par
+the random variables X1, X2, and so on,\par
+they're independent of each other,\par
+and we let X be the summation of Xi, so that's the same.\par
+In other words,\par
+we have seen what a binomial distribution is:\par
+we have n samples, independent samples,\par
+each of them is Bernoulli p.\par
+And the Poisson binomial distribution,\par
+is essentially the same, except each one,\par
+instead of being Bernoulli p,\par
+is Bernoulli pi, and pi changes,\par
+and X in both of them is the sum.\par
+Let's do an example.\par
+Suppose we're looking at Poisson binomial 1/4 and 2/3.\par
+Then X1 is going to be Bernoulli 1/4,\par
+and X2 is Bernoulli 2/3, and they're independent.\par
+Here are the probabilities.\par
+What's the probability that X1 is one and X2 is zero?\par
+The probability that X1 is going to be,\par
+'cause X1 is Bernoulli 1/4, so it's going to be 3/4,\par
+and the probability that X2 is zero,\par
+X2 is Bernoulli 2/3 so the probability of zero is 1/3,\par
+so the probability is 3/4 times 1/3 is 1/4.\par
+What is the probability that X1 and X2 are zero and one?\par
+It's going to be 3/4, like here, times 2/3,\par
+'cause that's the probability that X2 is one, so 1/2.\par
+What's the probability of one/zero?\par
+It's going to be 1/4 times 1/3, which is 1/12.\par
+And the probability of one/one is the probability\par
+is going to be 1/4 times 2/3, which is 1/6.\par
+Therefore, the probability\par
+that the unknown variable with zero is going to be 1/4,\par
+probability it's going to be one\par
+is going to be the sum of these two, 1/2 plus 1/12,\par
+and the probability that it's going to be two\par
+is going to be 1/6.\par
+So this is written here.\par
+Zero with probability 1/4,\par
+two with probability 1/6,\par
+and 1 with probability 7/12.\par
+Now we want to calculate the expectation and the variance\par
+of a Poisson binomial,\par
+so X is distributed binomial p1, p2, up to pn, and\par
+that means that X is the sum of Xi\par
+where Xi distributed binomial pi.\par
+What is the expectation of X?\par
+It's the expectation of summation of Xi,\par
+which by the linearity of expectation\par
+is the summation of the expectation of Xi,\par
+and since each one is Bernoulli pi,\par
+it's the summation of pi.\par
+What is the variance?\par
+The variance is the variance of summation Xi.\par
+The Xi's are independent,\par
+so it's the summation of the variances,\par
+and each variance, as we know, since Xi is Bernoulli pi,\par
+each variance is pi, times one minus pi,\par
+so the variance is just going to be the sum.\par
+So this is a straightforward generalization\par
+of the binomial distribution.\par
+But while finding the expectation and the variance\par
+is a straightforward generalization\par
+of the binomial distribution,\par
+actually finding the probability of k,\par
+the probability that you get the value k,\par
+does not have a closed form,\par
+so you need to actually do it by calculation.\par
+You do it computationally,\par
+and then in the homework\par
+we're going to ask you to calculate that.\par
+So what have we done?\par
+We've talked about the binomial distribution,\par
+which we denoted by Bp,n\par
+which is the number of successes in n Bernoulli p trials.\par
+We said that the probability of observing k successes\par
+is n choose k, p to the k, p bar, or q to the n minus k.\par
+We said that the expectation of the mean is np.\par
+The variance is npq, or np p bar, npq,\par
+and the standard deviation is square root of np p bar,\par
+or square root of npq,\par
+and we gave an example of why voting,\par
+and we also said that this comes up in many applications,\par
+Next time, we're going to talk about a new distribution,\par
+the Poisson distributions.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+The probability of getting a parking ticket at UCSD is 20% for each hour that you remain parked without a parking permit. If you remain parked without a permit for 8 hours, what is the probability that you receive a ticket?\par
+\par
+\tab\par
+0.350\par
+\par
+\tab\par
+0.504\par
+\par
+\tab\par
+0.650\par
+\par
+\tab\par
+0.832\par
+\par
+Submit\par
+}
+ 

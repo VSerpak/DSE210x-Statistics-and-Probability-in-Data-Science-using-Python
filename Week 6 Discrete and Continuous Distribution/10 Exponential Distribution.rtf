@@ -1,0 +1,463 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello again, everyone.\par
+In this video we're going to talk about\par
+the exponential distribution, and we're going to start.\par
+So, the exponential distribution extends\par
+the geometric distribution to continuous values.\par
+For lambda which is bigger than zero,\par
+the density function is defined to be\par
+lambda times e to the minus lambda x,\par
+for x which is nonnegative.\par
+And zero if x is negative.\par
+And so here is the density function.\par
+Drawn like that, it's lambda e to the minus lambda x.\par
+So when x is equal to zero it's going to be lambda.\par
+In this case it's lambda going to be shown as one.\par
+But if you want to show different values of lambda,\par
+then we can go to Python again.\par
+So here is the code for drawing the exponential function\par
+in Python, which again, you can use whenever you would like.\par
+And, to do that we just run the code.\par
+And here.\par
+You can see that\par
+it falls with x as one would expect.\par
+And here, lambda is 0.5, if I'm going\par
+to change lambda to, from 0.5 to one,\par
+then two things will happen. One is that\par
+the slope will become faster because the exponent grows,\par
+and also, to compensate for that,\par
+the initial value will increase.\par
+So you can get that, it starts from one\par
+instead of from 0.5, if I change it to five,\par
+it will start at five and drop more sharply.\par
+And you can of course, if you change it conversely,\par
+if you change it to, that's a 0.2.\par
+And then it will start at 0.2 but go down more slowly.\par
+And to see more of it you can just increase lambda max.\par
+And you can see it like that, alright, okay?\par
+So going back to the slides.\par
+- [Student] Okay, cool, we'll pick up from the slides now?\par
+- Yep, right. Okay. - Okay.\par
+- So we'll pick up, actually, from here.\par
+So if you want to check the distribution,\par
+we need to check that it's nonnegative, and clearly,\par
+it was defined to be nonnegative. That's good.\par
+And to check that the integral is one,\par
+we need to integrate lambda e to the minus lambda x.\par
+From zero to infinity, the integral\par
+of lambda e to the minus lambda x\par
+is the negative of e to the minus lambda x.\par
+We'll use it a few times in this lecture.\par
+And we need to evaluate it between infinity and zero.\par
+At infinity we get zero, and at zero we get one.\par
+So it's going to be zero minus negative one, which is one.\par
+That shows that the integral is one,\par
+and this is the distribution.\par
+Now, um, many\par
+random things in life are geometric.\par
+And if they happen at low enough resolution\par
+then they become exponential.\par
+So for example, the duration of a phone call.\par
+If you assume that every time,\par
+you're equally likely to stop at any given time,\par
+and that this point becomes smaller and smaller,\par
+then you get an exponential distribution.\par
+So the duration of a phone call\par
+is often modeled as exponential.\par
+Wait time when you call an airline,\par
+the time you call and they put you on hold till they answer.\par
+Again, if you assume that every time the probability\par
+that'll stop the call is going to be the same,\par
+then that's going to be exponential.\par
+The lifetime of your car, often viewed as exponential.\par
+The time between accidents, that you have,\par
+exponential distribution, and so on.\par
+Next let's look at the cumulative distribution function.\par
+So, first, if you want to evaluate the probability\par
+that X is bigger than equal to the value of a,\par
+without loss of generality, we're going to assume that a is positive.\par
+It's going to be the integral from a to infinity,\par
+of the PDF, lambda e to the minus lambda x.\par
+And, as we said before,\par
+we're going to use this integral several times,\par
+it's the integral of lambda e to the minus lambda ex\par
+is negative e to the minus lambda x.\par
+Valued between infinity and a.\par
+At infinity it's zero, at a it's e to the minus lambda a.\par
+So we get that the difference is\par
+going to be just e to the minus lambda a.\par
+Now, the cumulative distribution function\par
+is the opposite of this, it's the probability\par
+that X is less than or equal to a.\par
+It's going to be one minus the probability\par
+of X being bigger than a.\par
+So it's just one minus e to the minus lambda a.\par
+So we see that if we evaluate it zero,\par
+we get one minus one, which is zero,\par
+and if we evaluate it infinity,\par
+you get one minus zero, which is one.\par
+And in between it's going to grow exponentially.\par
+So for example, if you want to calculate\par
+the probability that x is between a and b,\par
+or X is strictly between a and b,\par
+those two are going to be the same.\par
+It's going to be F of b minus F of a,\par
+which is one minus e to the minus lambda b,\par
+minus one minus e to the minus lambda a.\par
+So it's gonna be e to the minus lambda a,\par
+minus e to the minus lambda b.\par
+To see the expectation of the exponential function,\par
+we need to calculate the integral from zero to infinity\par
+of x times lambda e to the minus lambda x.\par
+And we're going to do this by parts, by letting u be x,\par
+and v be lambda e to the minus lambda x,\par
+dv is lambda e to the minus lambda x dx.\par
+So then du is one,\par
+and v is e to the minus lambda x, negative.\par
+And we need to evaluate uv minus\par
+an integral of v du.\par
+Which is going to be,\par
+uv is going to be x times e to the minus lambda x,\par
+between zero and infinity. And v du is,\par
+du is one, and v is the integral lambda e\par
+to the minus lambda x, as we said, using it again.\par
+So it's going to be the integral\par
+of e to the minus lambda x, where the minus changes\par
+to plus because of this negative sign here.\par
+And it's going to be this integral,\par
+e to the minus lambda x, at infinity gives us zero,\par
+and at zero this x gives us zero, so the first part is zero.\par
+And then we have here, evaluated...\par
+When you take this integral,\par
+we get the integral of e to the minus lambda x,\par
+is minus one over lambda, e to the minus lambda x.\par
+And we need to evaluate between zero and infinity.\par
+And this gives us, one end gives us zero.\par
+The other end, zero would give us one over lambda,\par
+so we get one over lambda.\par
+So the expected value, of this distribution,\par
+is one over lambda.\par
+And as lambda\par
+increases, the line falls more sharply,\par
+and therefore the expected value will decrease.\par
+Now, what is the variance?\par
+Again, we're going to calculate first\par
+the expected value for X square.\par
+Then subtract the expected value for x, that quantity squared.\par
+The expected value of X square is the integral\par
+of x square lambda e to the minus lambda x dx.\par
+Again, integration by part,\par
+u is x square,\par
+dv is lambda e to the minus lambda x dx.\par
+And then du is two x dx, and v is, again,\par
+the negative of e to the minus lambda x.\par
+And what we want to calculate therefore is\par
+instead of the integral of u dv which we have,\par
+we want to calculate uv minus the integral of v du.\par
+Now uv is going to be\par
+x square\par
+times negative e to the minus lambda x,\par
+so it's the quantity here,\par
+evaluated between zero and infinity.\par
+And then we need to subtract the integral of v du.\par
+Now, du is two x, and v is e to the minus lambda x\par
+with a negative sign, which turns this into positive.\par
+Now remember that\par
+the expected value for X was the integral\par
+from zero to infinity, of x times the density function,\par
+so x times lambda e to the minus lambda x dx.\par
+And that we saw in the previous slide was one over lambda.\par
+So when we evaluate this, then the first term\par
+will give us zero because at infinity this term is zero,\par
+and at zero this term is zero, so it's going to be zero.\par
+And here, what we have, is instead of\par
+the difference between this and the expectation is\par
+that here we had lambda originally, and now we have two.\par
+So it's two over lambda times the expected value of X.\par
+We divide by lambda to get one,\par
+and multiply by two to get us this term.\par
+And that gives us just two over lambda squared.\par
+And now the variance is going to be\par
+the expected value of X square\par
+minus the expected value of X square,\par
+so this is two over lambda square minus one\par
+over lambda squared, which is one over lambda squared.\par
+And the standard deviation therefore is one over lambda.\par
+So what we see is the standard deviation,\par
+is one over lambda, which is the same as the expectation.\par
+And again, as lambda increases,\par
+and the line falls more sharply,\par
+and the standard deviation decreases.\par
+One very interesting property of exponential distributions\par
+is that they're memoryless.\par
+So if X is distributed exponentially with parameter lambda,\par
+and let a and b be nonnegative values,\par
+then we can be interested in the probability\par
+that X is bigger than a plus b,\par
+given that X is bigger than or equal to a.\par
+For example, suppose that phone call lengths\par
+are distributed exponentially, and I tell her\par
+that the call has lasted at least a seconds,\par
+so after a seconds it is not ended.\par
+And I ask you what is the probability\par
+that it will last more than a plus b seconds,\par
+namely what's the probability that it will last b seconds\par
+beyond the a that it has lasted so far?\par
+So we can evaluate that, we know it's the probability\par
+that X is bigger than a plus b,\par
+and X is bigger than or equal to a,\par
+divided by the probability of, that X\par
+is bigger than or equal to a.\par
+But the probability that X is bigger than a plus b\par
+and it's bigger than a, is just a probability\par
+that it's bigger than a plus b.\par
+So it's the probability that X is bigger than a plus b\par
+divided by the probability that X is bigger than a.\par
+And we can evaluate this. The probability\par
+that it's bigger than a, a plus b,\par
+is e to the minus lambda a plus b, we calculated before,\par
+divided by e to the minus lambda a.\par
+And when we divide we get that it's e to the minus lambda b,\par
+which is exactly that same as the probability\par
+that X is bigger than or equal to b.\par
+So, interestingly, the probability\par
+that this phone call was going to last b seconds,\par
+which we asked you about at the beginning,\par
+is exactly the same as the probability\par
+that it would last b more seconds, if it lasted at least a.\par
+So the fact that we have talked for a seconds so far\par
+does not change the probability that the call will last\par
+more than b more seconds, that doesn't matter.\par
+It doesn't matter if we talked one second, two seconds,\par
+two hours, the probability that we'll talk\par
+for another b seconds stays the same.\par
+And this does not apply just to the probability\par
+that X is going to be bigger than a plus b,\par
+but clearly also to the probability\par
+that X is going to be less than a plus b, given that it's\par
+lasted a seconds, because that's just one minus\par
+the probability of X being bigger than a plus b.\par
+Which is one minus the probability\par
+that X is bigger than or equal to b.\par
+That's going to be the probability that X is less than b.\par
+So the probability that it will last fewer than b seconds,\par
+given that it lasted a, is the same as the probability\par
+that it lasts fewer than b seconds from the beginning.\par
+So the fact that it lasted a seconds\par
+does not change that distribution,\par
+and similarly it's not going to change the density.\par
+So if I ask you, what is the density, what is the\par
+marginal probability that it will end at exactly a plus b,\par
+given it lasted a, is exactly as the density,\par
+that it will end at exactly b seconds.\par
+So the fact that it lasted a seconds\par
+does not change the distribution afterwards,\par
+it's the same as it started from the beginning.\par
+And that's why we call this distribution memoryless.\par
+So here is one somewhat interesting implication\par
+of memoryless distributions.\par
+Here in California people like to drive a lot,\par
+I don't know if they like, but they do.\par
+Somewhat regularly they need to go to the DMV,\par
+the Department of Motor Vehicles.\par
+And imagine that you go there, and there's two clerks,\par
+and each has an exponential service time,\par
+which is exponential parameter lambda.\par
+Service times are typically considered to be exponential.\par
+Maybe because, the fact that you\par
+have been talking to the clerk for a while.\par
+On the one hand you think it might make it more likely\par
+that you'll end soon, but maybe\par
+the problem is more difficult, and it's longer,\par
+and it's not an unusual assumption,\par
+it's actually a common assumption\par
+that the service time is exponential.\par
+Now, imagine that when you arrive,\par
+and this seems to be very typical, you arrive,\par
+one person is already in line, so you're not too happy.\par
+And, furthermore, while you wait,\par
+someone else cuts in the line in front of you,\par
+and that makes you even less happy.\par
+So at this point, there are two people in front of you.\par
+Maybe at some point later, one clerk becomes available,\par
+and then starts serving the first person,\par
+the one that was there beforehand.\par
+And then, before\par
+this first person finishes,\par
+the other clerk, the second, the other clerk\par
+starts serving the second person, the bad person,\par
+who jumped in front of you. So at this point,\par
+the first person is still being served,\par
+and the second person starts getting served, again.\par
+Notice that if these bad events did not happen,\par
+if all of you came in the same time\par
+as maybe it should have been, then,\par
+and each one got served randomly then the probability\par
+that you'd finish last is going to be 1/3 by symmetry,\par
+because there are three of you.\par
+One question that you might be interested in,\par
+is given though those two events happened,\par
+given that there was a person in front of you,\par
+and then another person cuts ahead of you,\par
+what is now the probability that you will finish last?\par
+Is it still 1/3? Clearly it should be at least that.\par
+But how much bigger should it be?\par
+So let's evaluate that.\par
+Let A be the time that the first person,\par
+who was there just before you, finishes.\par
+Let B be the time that the person who cut\par
+in front of you, the bad person, finishes.\par
+And let C be the time that you finish.\par
+Now we can calculate the probability,\par
+for example, that A will finish first,\par
+B will finish second, and you'll finish last.\par
+And that probability will depend\par
+on what we assume about the service.\par
+For example, if the service is fixed in time,\par
+let's say that every person gets out for exactly 10 minutes.\par
+Then because A started first, he will get finished first.\par
+Because B started second, they'll finish second.\par
+And you'll finish last.\par
+So the probability that this will be the order\par
+is going to be one.\par
+But the service time is exponential,\par
+and we want to know what is the probability\par
+of A finishing before B, before the second person,\par
+and the second before you, okay.\par
+So, let's write all the possibilities.\par
+So all possible orders are A B C, A C B,\par
+B A C, all the way out to C B A.\par
+And you notice that\par
+the last two, in the last two you finish first,\par
+and that will never happen because\par
+for you to start even, one of A and B must finish.\par
+So you cannot start before at least one of them finish.\par
+The probability that you finish before both of them finish\par
+is zero.\par
+So these happen with zero probability,\par
+and we're interested in the probability\par
+of the other four orders.\par
+The probability of A less than B less than C,\par
+the probability that you'll finish\par
+in the order that you started, we can write it as\par
+the probability that A finishes before B\par
+times the probability that B finishes before C,\par
+B finishes before you, given that A finished before B.\par
+The probability that A finishes before B,\par
+notice that A started first.\par
+But when B started, A was still being served.\par
+And because the distribution is memoryless,\par
+the fact that A was served for some time does not matter,\par
+and they have equal distribution,\par
+from that point on, to finish.\par
+And therefore the probability that A will finish before B,\par
+by symmetry, is going to be 1/2.\par
+Furthermore, if A finished before B,\par
+and when A finished, B was still being served,\par
+then you'll start getting served at that point.\par
+The fact that B had been served for awhile at that point\par
+makes no difference, and from that point on,\par
+you and person B have the same probability\par
+of finishing at any given time.\par
+So by symmetry, the probability that person B\par
+will finish before you is going to be, again, 1/2.\par
+So therefore the probability that A will finish before B,\par
+and B will finish before C is 1/4.\par
+We can also consider the last probability here\par
+that we don't know, the probability\par
+that the bad person will finish before,\par
+before you, and you will finish before the first person,\par
+even though actually the first person, A,\par
+A is the first person, started first, and you started last.\par
+So this probability, the probability that the\par
+bad person finishes, then you, and then the first person,\par
+is the probability that B finishes before A\par
+times the probability that\par
+you will finish before A, given that B finished before A.\par
+Now the probability that B will finish before A is,\par
+again, 1/2, because even though B started after A,\par
+because when B started getting served,\par
+A was still being served,\par
+by the memoryless nature of this distribution\par
+they'll finish first with equal probability,\par
+so the probability that B will finish first is 1/2.\par
+And now, given that B finished before A,\par
+but you started getting served before A finished.\par
+So now, you and A have equal probability of finishing first,\par
+so that, again, is probability 1/2.\par
+So the probability of this order,\par
+that B will finish, then you, and then A,\par
+is, again, 1/2 times 1/2, which is 1/4.\par
+So we get that this is 1/4, and similarly,\par
+everything else is probability 1/4.\par
+So all these orders have equal probability which is 1/4.\par
+What does that mean?\par
+If all three of you were served randomly, as we said,\par
+then the probability that you finish last\par
+was going to be 1/3, by symmetry.\par
+If there was a fixed service time,\par
+then the probability that you finish last would be one,\par
+and we were interested in seeing\par
+what's the probability to finish last\par
+if the service time is exponential.\par
+So if under exponential, in fact,\par
+any memoryless distribution service time,\par
+what we get is these probabilities of orders.\par
+So notice that you never finish first, right,\par
+because one of them will always finish before you,\par
+so you will never finish first.\par
+But, all other orders where you don't finish first,\par
+are equally likely, all of them have probability 1/4.\par
+So therefore, the probability that you'll finish last\par
+is the probability of these two events,\par
+either A, B, and then C; or B, A, and then C.\par
+And these two probabilities have--\par
+These two events have probability 1/4 plus 1/4 which is 1/2.\par
+So the probability that you finish last in this case is 1/2.\par
+It's only slightly larger than the 1/3,\par
+if you are being served\par
+randomly, even though there was one person who came\par
+before you, and then one person who jumped in line.\par
+So the conclusion of this is then when these things happen,\par
+maybe relax a little bit, don't worry,\par
+it's just a slightly larger probability\par
+that you'll finish last.\par
+Okay? Thanks.\par
+So, to summarize, we talked about exponential distribution,\par
+the PDF was lambda e to the minus lambda x,\par
+for x which is nonnegative and zero for x which is negative.\par
+The cumulative distribution function\par
+was one minus e to the minus lambda x.\par
+The expected value was one over lambda,\par
+and the variance was one over lambda square,\par
+and the standard deviation was one over lambda again.\par
+And we said that this distribution is memoryless,\par
+meaning that is doesn't matter how much you have waited\par
+for something to happen, if X is bigger than a given value,\par
+for example bigger than 10, the distribution\par
+from that point on is the same as the distribution\par
+from starting from zero.\par
+And we saw some consequences of that,\par
+and next time, we're going to talk about\par
+the normal distribution. See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+The exponential distribution is analogous to which discrete random variable distribution?\par
+\par
+\tab\par
+Binomial distribution\par
+\par
+\tab\par
+Poisson distribution\par
+\par
+\tab\par
+Bernoulli distribution\par
+\par
+\tab\par
+Geometric distribution\par
+\par
+Submit\par
+}
+ 

@@ -1,0 +1,339 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+In the last lecture, we talked about Random Variables,\par
+and now we would like to start modifying them.\par
+We'll talk about Functions of Random Variables, okay.\par
+So just like we noticed,\par
+observed for discrete random variables,\par
+it's very useful to talk about\par
+Functions of Random Variables,\par
+for example, if someone's income is a random number X,\par
+then the amount of tax they pay is the random number Y\par
+which is, let's say 0.3 times X, okay,\par
+that's the income tax, that they pay\par
+or if there's a driving speed is X\par
+and they get caught by a policeman,\par
+then maybe the fine that they are going to pay\par
+is a random variable Y, which is two to the X, okay,\par
+that's how much they will need to pay.\par
+So what we have is this random variable X\par
+distributed according to some distribution function fx\par
+and we are going to assume\par
+that fx is some known distribution,\par
+so someone has given it to us\par
+and then we have a function, we have a random variable Y,\par
+which is some function g of X,\par
+where g is a known and deterministic function, okay,\par
+and what we're interested in\par
+is finding the distribution of Y, okay, f of Y,\par
+so we are asking what is the distribution of Y?\par
+Okay, and so I'm going to start with an example,\par
+so let me first describe this example\par
+or make somewhat of a general example,\par
+so assume that a is some constant,\par
+which is bigger than negative one,\par
+then the integral of a plus one times x to the adx\par
+is x to the a plus one, right,\par
+because if you take the derivative of x to the a plus one,\par
+you get a plus one times x to the a\par
+and therefore the integral from zero to one\par
+is x to the a plus one\par
+between, evaluated between zero and one, okay\par
+and that's just going to be one,\par
+'cause it's one minus zero, okay.\par
+Okay, so that's one observation,\par
+the other observation is that what we have here,\par
+what we are integrating over is non-negative, okay,\par
+and what that means is that if we let fx\par
+be this value, a plus one times x to the a\par
+between zero and one, okay and zero otherwise,\par
+okay, then fx is a PDF, right,\par
+because it's non-negative and it integrates to one, right,\par
+so, this is for a bigger than one,\par
+we'll talk about a less than minus one later, okay.\par
+So, now we can look at the cdf of F of x,\par
+which is the integral from zero to x\par
+of a plus one u to the a, du\par
+and we already saw what is the integral of a plus one,\par
+here, x to the a, u to the a is u to the a plus one\par
+and so the integral is just u to the a plus one\par
+evaluated between zero and x,\par
+which is x to the a plus one,\par
+'cause we can subtract zero, okay,\par
+so its x to the a plus one\par
+and we are going to use a specific case of this,\par
+where a is equal to two, so in that case,\par
+we have what we have is here is three times x square,\par
+so, and this f of x,\par
+this value holds between zero and one,\par
+namely below...\par
+I'm sorry, this should be zero,\par
+below zero, it's going to be zero\par
+and above one, it's going to be one, okay,\par
+so as I was saying, we're going to look at a,\par
+which is two, so f of x is going to be 3X square,\par
+okay and capital F of x is going to be just x cube,\par
+alright, and x again is between zero and one,\par
+so above one, it's one and below zero, it's zero,\par
+alright, so let's just repeat what we're using,\par
+this fx, which is three x square\par
+and the CBF is x cube for x between zero and one,\par
+so that's what we have here,\par
+so 3x square, x cube between zero and one, okay\par
+and we're going to look at two functions, g,\par
+one is when g is increasing and then after that,\par
+we look here at g, which is decreasing\par
+so for an increasing g,\par
+let's select g to be x to the 1.5,\par
+so Y is g of X, which is X to the one and a half,\par
+so observe, it's a deterministic function of X,\par
+when someone gives you X, then you know everything for it,\par
+so we're interested in first we'll calculate the cdf of Y,\par
+okay, which is just the probability,\par
+that Y is less than or equal to sum value you, okay\par
+and because X is distributed between zero and one,\par
+then y is also going to be distributed\par
+between zero and one, because Y is X to the 1.5,\par
+so any number between zero and one raise it to the 1.5,\par
+again a number between zero and one,\par
+so we're only interested in ys,\par
+that are between zero and one,\par
+below that, F of Y, zero and above, that F of Y zero,\par
+okay, so the probability that Y is less than or equal to y\par
+and Y is the X to the 1.5 is the probability,\par
+that X to the 1.5 is less than or equal to y\par
+and we can just raise each side to two-thirds,\par
+so it's the probability,\par
+that X is less than or equal to y to two-thirds, okay\par
+and this, the probability\par
+that X is less than or equal to something\par
+is just the cumulative distribution function\par
+of x at that point,\par
+so it's just Fx of y to the two-thirds, okay,\par
+but Fx of anything is that anything cube,\par
+so this is going to be y to the two-thirds cube,\par
+so it's y square,\par
+so we see that we could find\par
+the cdf of y, it's just y square.\par
+Now, we're interested in the distribution of Y, the pdf\par
+and so we need to differentiate the cdf,\par
+so therefore, but before we do that,\par
+just a couple of sanity checks,\par
+so remember that F of Y\par
+is non-zero only between zero and one,\par
+because y is distributed between zero and one is X 1.5,\par
+so if we look at the first point,\par
+where F of Y could be non-negative, it's zero,\par
+F, the cumulative distribution function\par
+at that point should be zero and it is, right,\par
+because we just plug in zero, zero square\par
+and we look at the last value, that Y could get,\par
+which is one, then FY of one is going to be y square,\par
+which is one, which again is the way it should be,\par
+because this is the highest value that Y can get, okay\par
+so both of those make sense, okay.\par
+Now, as we said, we're interested in the pdf, not the cdf,\par
+so we just differentiate and therefore,\par
+the distribution of Y\par
+is the derivative of y square, which is 2y, okay.\par
+Next, let's look at the decreasing function, g,\par
+for example, X to the negative three over one equals X cube,\par
+okay, so that's a decreasing function\par
+and notice that this decreasing function,\par
+because x is between zero and one\par
+and we'll look at one over x cube,\par
+it's going to go between,\par
+it's going to be positive between one and infinity, okay,\par
+so...\par
+so, and which we'll see in a second,\par
+so FY of y, the cumulative distribution function\par
+is the probability that Y is less than or equal to y,\par
+which will be the...\par
+the distribution is positive\par
+only when y is bigger than one,\par
+because we have one over x cube\par
+and x is between zero and one,\par
+so this will be a number bigger than or equal to one,\par
+between one and infinity\par
+and the probability that Y is less than or equal to y\par
+is the probability that,\par
+because Y is X to negative three\par
+is the probability that X to negative three\par
+is less than or equal to y,\par
+which is the probability that X is bigger\par
+than or equal to y to the negative one-third,\par
+so just move the data aside\par
+and take the cube root, okay,\par
+so it's the probability that X is bigger\par
+than y to the one-third\par
+and the probability that X is bigger\par
+than y to the minus one-third\par
+is we want to relate it to the cdf of X,\par
+so we write it as one minus the probability\par
+that X is less than or equal to y to the minus one-third\par
+and that's one minus the cdf\par
+of y to the negative third,\par
+but the cdf of X at any point, as we said before\par
+is just that point cube, so this is going to be\par
+one minus y to the minus one, okay,\par
+so we see that the cdf of Y\par
+is one minus y, minus one over y\par
+for y bigger than or equal to one,\par
+so let's see what it is at the very first point,\par
+where Y can happen, which is one,\par
+we get one minus one, which is zero,\par
+so F of one is zero, y of one is zero\par
+and if we look at the last point where it can happen,\par
+which is infinity, we get one minus one over infinity,\par
+which is one, okay, so again, that makes sense.\par
+So now we would like to find the pdf of Y\par
+and that's going to be the derivative of this,\par
+so it's going to be just derivative of one minus one over y,\par
+the one, when you differentiate is zero\par
+and this gives you the minus is canceled,\par
+gives you y to the minus two, okay,\par
+so we could calculate here,\par
+the pdf of g of X\par
+and in both cases,\par
+when g is increasing and decreasing,\par
+we needed to do here one more step, okay\par
+and what we want to do next\par
+is we want to not look at a specific function,\par
+like X to the three over two, or X to the minus three,\par
+but we want to look at the general function\par
+and we'll first look at increasing function,\par
+but we follow exactly the same steps,\par
+so FY of y is the probability\par
+that Y is less than or equal to y\par
+and Y is sum g of X, so it's the probability\par
+that g of X is less than or equal to y\par
+and that's the probability\par
+that X is less than or equal to g inverse of y\par
+and this is just Fx of g inverse of y\par
+and now we're going to let,\par
+instead of writing g inverse of y,\par
+we're going to write h of y\par
+the simple invert g inverse of y,\par
+so this is Fx of h of y,\par
+okay, so FY of y is just Fx of g inverse of y,\par
+okay, so that's easy, now we want to find the pdf,\par
+so we need to differentiate this,\par
+so fY of y is the derivative\par
+of FY of y, of this function,\par
+so it's the derivative\par
+of Fx of h of y, as we saw here, okay\par
+and when we take the derivative,\par
+we first need to take the outer derivative\par
+and then the inner derivative,\par
+so it's going to be F prime of h of y\par
+multiplied by the internal derivative,\par
+which is h prime of y, okay\par
+and the derivative\par
+of F of h of y\par
+is just the pdf of x of h of y\par
+and then we still have this internal derivative, okay,\par
+so this is what we get here\par
+and then...\par
+let's see how it corresponds to what we have done before,\par
+so let's look at the example that we had,\par
+so we had fx was 3x square,\par
+the cdf of F was x cube, just the integral of that\par
+and the function that we looked at,\par
+increasing function is x to the 1.5, g of x\par
+and the inverse was y to the two-thirds,\par
+just the inverse of this function\par
+and we found that the pdf of f of Y was just 2y,\par
+so let's see what happens here,\par
+when we did it in the general way,\par
+so here we have the probability that g of X is less than y,\par
+so that's the probability that x to the 1.5\par
+is less than or equal to y,\par
+we wrote this as the probability\par
+that X is less than g inverse of y,\par
+that's the probability\par
+that X is less than y to the two-thirds,\par
+okay, and you notice\par
+those are exactly the steps that we had before\par
+and then this is going to be equal to Fx of g inverse of y,\par
+so this is just Fx of y to the two-thirds, okay\par
+and this y to the two-thirds, notice,\par
+notice is here, is h of y, okay, so it's Fx of h of y.\par
+Alright, so now we come back here\par
+and to get the derivative,\par
+we need to take the derivative of this function,\par
+so we get that it's the derivative\par
+of y to the two-thirds cube,\par
+so we can first take the outer derivative\par
+and multiply by the inner derivative,\par
+so it's three times y to the two-thirds square\par
+and then the internal derivative here\par
+is two-thirds times y to the negative one-third, okay\par
+and we can simplify it a little bit\par
+and we get that three will cancel out three here,\par
+we get two and y to the four-thirds minus one-third is y,\par
+so we get 2y, which is the same as what we got before, okay,\par
+so we can see, we can just follow this recipe\par
+for any function F, okay, for function g, I'm sorry\par
+and the same would hold for g that is decreasing\par
+and I'm going to skip it,\par
+but you can look at it here if you want, okay.\par
+So when combined, these two methods,\par
+we get that if g is increasing,\par
+then the pdf of you\par
+is fx, h of y,\par
+which is g inverse of y times the derivative of h of y\par
+and when it's decreasing, fY is again the same thing,\par
+fx of h of y times the derivative of h of y,\par
+h of y, remember is g inverse of x,\par
+but now with the negative sign,\par
+so if you want to write it in a unified way,\par
+you can write it that f of y is fx of h of y\par
+times the absolute value\par
+of the derivative of h of y,\par
+the derivative of g inverse of y\par
+and another way that's, another formulation\par
+that is sometimes more useful actually\par
+to write it as, is that fY of y,\par
+instead of the absolute value of h of y,\par
+remember this is the...\par
+this is the h of y is g inverse of y\par
+and this is the derivative, you can write it as\par
+one over the derivative of g of x,\par
+so the derivative here of g inverse of y,\par
+so it's one over g, g prime of x, okay\par
+times fx of x and what is x?\par
+X is h of y, I'm sorry, x is, I'm sorry...\par
+X is h of y or y at the point of y is g of x,\par
+so if we write it like here,\par
+we kind of ignore the function,\par
+we circumvent the function,\par
+so we're looking at the value y,\par
+where y is g of x or x is h of y, as we had here,\par
+okay, so we're going to use this formulation\par
+actually a few times.\par
+Right, so in short,\par
+we talked about Functions of Random Variables\par
+and next time we're going to talk\par
+about Uniform Distributions.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+If Y=g(X) for a continuous random variable X, which g makes Y a discrete random variable?\par
+\par
+\tab\par
+increasing function\par
+\par
+\tab\par
+decreasing function\par
+\par
+\tab\par
+linear function\par
+\par
+\tab\par
+step function\par
+\par
+Submit\par
+}
+ 

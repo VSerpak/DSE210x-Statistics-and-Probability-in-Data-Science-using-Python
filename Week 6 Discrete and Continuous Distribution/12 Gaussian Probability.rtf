@@ -1,0 +1,595 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+In the last lecture, we introduced the normal distribution,\par
+and now we would like to calculate probabilities\par
+when a random variable is distributed normally.\par
+So let's see how we do that.\par
+So we're going to talk about interval probabilities,\par
+about Z tables and Z scores,\par
+about standard deviation,\par
+and about how you approximate Bernoulli random variables\par
+using normal distributions.\par
+First of all, the cumulative distribution function.\par
+So if X is distributed normal zero one,\par
+then the CDF of X,\par
+which we typically note\par
+by this phi of x, capital phi of x,\par
+is F of x, the CDF,\par
+which is the integral of the distribution of x\par
+from minus infinity to x,\par
+so it's one over square root of two pi,\par
+because it's a standardized normal distribution,\par
+times e to the minus y square over two dy,\par
+from minus infinity to x.\par
+Now unfortunately, there's no known closed-form formula\par
+for this integral,\par
+so instead what we do is\par
+we use either a computer or a table,\par
+and you may ask do we need a table for each mu and sigma?\par
+So this is here zero and one,\par
+but what if you have a different normal distribution\par
+with a different mean or different standard deviation,\par
+and the answer is no,\par
+you don't need one for every mu and every sigma,\par
+it's just a single one for this distribution suffices.\par
+This function, the tables that represent this CDF,\par
+are called standard normal tables, or Z tables,\par
+and they look something like this.\par
+What they do is they give you the area\par
+from minus infinity to a point x, as written here.\par
+And here is one example of the table, it's shown here.\par
+It shows you the value for x which starts at zero and up,\par
+so it's non-negative,\par
+so we can see the values here,\par
+for example, for 0.0, 0.1,\par
+this will be the value here, 0.1, 0.2, and so on,\par
+and if you wanted to get a little more details,\par
+for example, if you want to go to 0.11,\par
+then go 0.1 and come here, that's 0.11,\par
+you take 0.1 and add 0.01,\par
+and if you want to do, for example, 0.42,\par
+then you go here, that's 0.4, plus 0.2, so it's 0.42,\par
+and the value is going to be here, six-six-something.\par
+And you can go all the way up to 3.4,\par
+x which is 3.4.\par
+And we'll talk about the significance,\par
+what x means, in a second.\par
+How do you use the Z table?\par
+Let's again assume that X is distributed normal\par
+with mean zero and standard deviation one,\par
+namely X is a standardized normal random variable.\par
+Then the probability the X is less than or equal to a\par
+is just phi of a, which is the probability of the shaded,\par
+of this region here,\par
+which is the shaded blue region in here,\par
+and that's what the table is going to give you.\par
+If you want to find the probability\par
+that X is bigger than or equal to a,\par
+that's going to be one minus phi of a,\par
+it's one minus the probability of the left,\par
+and this is the probability of the region here,\par
+and because you have the table gives you phi of a,\par
+then you can just subtract that from one.\par
+What if you want to see the probability of an interval,\par
+for example the probability that X is between a and b,\par
+then, as we know,\par
+we need to look at phi of b minus phi of a,\par
+and phi of b and phi of a, we can look up in the table,\par
+and we subtract them, and we find the difference.\par
+If we're given only the table for only positive values of a,\par
+and so let's a, and now a is positive,\par
+but let's say we want to find phi of negative a,\par
+namely we want to find the probability\par
+that X is less than or equal to minus a, as shown here.\par
+The table, let's assume,\par
+only gives us the values for a which is positive,\par
+so how do we find the probability\par
+that x is less than or equal to minus a?\par
+It's quite simple, as you probably have figured out already.\par
+This probability here,\par
+that X is less than or equal to minus a\par
+is the same as the probability\par
+that x is bigger than or equal to a,\par
+and now a is positive,\par
+and so the probability of x being bigger than or equal to a\par
+we found in the previous slide,\par
+and we said that that's going to be\par
+one minus the probability that X is less than or equal to a,\par
+and this value is given to us by phi of a,\par
+so it's one minus phi of a.\par
+In other words, the probability phi of minus a,\par
+the probability\par
+that X is less than or equal to to this negative value,\par
+minus a, is one minus phi of a.\par
+Let's write it here again,\par
+so the probability that X\par
+is less than or equal to minus a is phi of minus a,\par
+which is one minus phi of a,\par
+so we can find it because a is positive.\par
+Now what if you want to find the complement of this area,\par
+the probability that X is bigger than or equal to minus a,\par
+and again remember we're given a table\par
+only for a which is positive,\par
+and here we have a negative value,\par
+so what we can see is that the probability\par
+that X is bigger than or equal to minus a, this,\par
+is one minus the probability of the left,\par
+one minus the phi of minus a,\par
+one minus this region,\par
+but phi of minus a\par
+we already found to be one minus phi of a,\par
+so we have here one minus\par
+one minus phi of a, which is phi of a.\par
+One minus, one minus phi of a, which is phi of a.\par
+Therefore what we see here,\par
+that the probability\par
+of being to the right of minus a is phi of a,\par
+which makes sense because it's the same as this area here,\par
+which is phi of a.\par
+What if we have an interval\par
+that goes from a negative value to a positive value,\par
+for example,\par
+here the probability that X is between minus a and b?\par
+As we know,\par
+this is phi of b minus phi of minus phi of minus a,\par
+and phi of minus a, we found here before,\par
+is one minus phi of a,\par
+so this is phi of b\par
+minus one minus phi of a, here,\par
+and we can just write it as phi of b plus phi of a minus 1.\par
+Phi of b plus phi of a minus one.\par
+So we have therefore seen how just this table\par
+that gives us phi of a for a positive,\par
+we can find all kinds of probabilities:\par
+left of a point, right of a point, between two points,\par
+whether the points are positive or negative.\par
+Now this was for a normal distribution that is standardized,\par
+namely it has mean zero and standard deviation one.\par
+What if we wanted to look at general normal distributions?\par
+So if X is distributed normal\par
+with mean mu and variance sigma square,\par
+then we can just modify X a little bit.\par
+First, X has mean mu and variance sigma square.\par
+We can subtract mu from X\par
+and we'll get a new random variable, X minus mu,\par
+that has a mean zero and variance sigma square, still.\par
+We can normalize this random variable by sigma,\par
+so we can look at X minus mu over sigma,\par
+because we just divide by sigma, the mean will stay zero,\par
+but the variance will go from sigma square to one.\par
+Therefore we see that if we look at X minus mu over sigma,\par
+that's going to be a normal random variable\par
+with mean zero and standard deviation one,\par
+namely, it's a standardized random variable.\par
+We denote such a normal random variable by Z,\par
+so Z which is X minus mu over sigma,\par
+is distributed normal zero one,\par
+and it's a standardized version of X.\par
+Now if we want to find the probability\par
+that X is between a and b,\par
+we cannot directly look it up in the table,\par
+but what we can do is we convert X to a Z,\par
+to a standardized version, and then look it up in the table.\par
+So X is between a and b if and only if\par
+if and only if X minus mu over sigma,\par
+this standardized random variable, X minus mu over sigma,\par
+is between a minus mu over sigma and b minus mu over sigma,\par
+so we're subtracting mu on all sides\par
+and we divide by sigma on all sides.\par
+Therefore, this happens if only Z,\par
+which is defined to be X minus mu over sigma, exactly that,\par
+is between a minus mu over sigma and b minus mu over sigma.\par
+But that means that the probability\par
+that X is between a and b is equal to the probability\par
+that X minus mu over sigma is between these two values,\par
+which equals to the probability\par
+that Z is between these two values,\par
+and these we can calculate using the tables, as we saw.\par
+Let's do an example.\par
+Suppose that X is distributed normal\par
+with mean 15 and variance four.\par
+Mean 15 and variance four or standard deviation two.\par
+Then we can define Z to be X minus mu over sigma,\par
+which is X minus 15 over two.\par
+Then Z is called the Z score,\par
+and it's a standardized normal variable,\par
+and the probability that,\par
+if you look at the case where X is between 11 and 15,\par
+that will happen if and only if\par
+Z is between 11 minus 15 over two\par
+and 17 minus 15 over two,\par
+'cause Z is just X minus 15 over two.\par
+Therefore, the probability that X is in this range\par
+is the same as the probability that Z is in this range,\par
+and that probability is, we just simplify,\par
+is the probability this will give us minus two,\par
+minus four over two,\par
+Z is bigger than or equal to minus two\par
+and less than or equal to two over two, which is one.\par
+And now to find the probability\par
+that Z is between negative two and one,\par
+we saw in the previous slide that this was phi of one\par
+plus phi of two minus one,\par
+so we can look it up in the table.\par
+We can find that phi of two\par
+well, phi of one is 0.84, as phi of two is 0.97, and so on,\par
+so phi of one plus phi of two minus one is this value here,\par
+which is 0.8185,\par
+so it's roughly 0.8185.\par
+So this shows us how we can find the probability that X,\par
+any X, any normal random variable,\par
+will be between any two values.\par
+We just converted to a Z score,\par
+and then we just used the Z table.\par
+Next I want to describe the standard deviation\par
+of a normal random variable,\par
+and the probability\par
+that we will be inside a standard deviation.\par
+What is the probability\par
+that we are within one standard deviation from the mean,\par
+so the probability that X minus mu is at most sigma?\par
+We can consider the standard normal distribution,\par
+f of x is one\par
+over square root of two pi e to the minus x square over two,\par
+which is drawn here,\par
+and here we're asking what is the probability\par
+that we are between the standard deviation here is one,\par
+so what's the probability\par
+that we are between minus one and one,\par
+or in other words we're looking at the area\par
+under the blue curve here,\par
+in here, in between minus one and one.\par
+We can approximate this area\par
+by considering a couple of values.\par
+First, observe that he highest value here is when x is zero,\par
+which is one over square root of two pi,\par
+and so this is the value here.\par
+And also observe that where this curve\par
+hits the minus one and plus one line,\par
+is at the point\par
+one over square root of two pi times e to the minus 1/2,\par
+and the one over square root of two pi\par
+times one over square root of e,\par
+so it's one over square root of two pi e,\par
+so this is the value here.\par
+Now that means that the probability\par
+that X minus mu is less than or equal to sigma,\par
+the probability that X is within sigma,\par
+one standard deviation from the mean,\par
+is going to be, as we said, the area here under this curve,\par
+which we can bound above by the area of\par
+by this large blue area,\par
+and that's going to be one over square root of two pi,\par
+the height, times the width, which is two,\par
+so we get two divided by square root of two pi,\par
+which give us square root of two over pi,\par
+so square root of two over pi is this large rectangle here,\par
+the area of the large rectangle,\par
+and so the area under the blue curve is at most that,\par
+and on the other hand it's at least this value here,\par
+so it's at least one over square root of two pi e,\par
+the height, times two,\par
+which is square root of two divided by pi e.\par
+What we did was\par
+we're trying to get some intuitive explanation,\par
+intuitive understanding of roughly the probability\par
+of being within one standard deviation is,\par
+and we see that using this two rectangles approximation\par
+is one above and one below,\par
+which we can figure it out\par
+to within a factor of one over square root of e.\par
+So this upper bound is when you\par
+or this lower bound, when you calculate, is 0.48,\par
+and the upper bound is 0.8.\par
+What we would like to do next\par
+is come up with a slightly more improved bound,\par
+in fact we'll improve the lower bound,\par
+while still getting an intuitive,\par
+or geometric understanding,\par
+and after we do that, we'll actually figure out it exactly.\par
+One way to improve this bound is to get another shape\par
+that will be underneath the blue curve,\par
+so let's look at this house.\par
+This house has width a and goes up to the height is b,\par
+and here the height is c, and we know that\par
+we can see that the area of this house\par
+is at least the a times b, which is the area here,\par
+and it's at most the area here,\par
+but we can further say,\par
+we can calculate it a little more precisely,\par
+the area of this house is going to be ab,\par
+which is this spot here, plus this area,\par
+which is a times c minus b divided by two,\par
+and when you write it you'll get ab\par
+and then you'll have minus ab over two,\par
+so you'll get ac over two plus ab over two,\par
+which is ab plus ac over two,\par
+and when you look at it, it makes sense,\par
+because this area here is exactly the average\par
+between the small part, rectangle here,\par
+and the large rectangle here,\par
+because we get this,\par
+and then we get this area is half of this one,\par
+so it's exactly in between.\par
+So using this,\par
+we can now get a better approximation below one here,\par
+namely we can say that this area here\par
+we can create this triangle here,\par
+it's bigger than or equal to\par
+the average between this smaller rectangle\par
+and the larger one,\par
+so it's at most\par
+the lower bound plus the upper bound over two,\par
+and when you calculate this, you'll get 0.64.\par
+So we see that the probability\par
+of being within one standard deviation\par
+is somewhere between 0.64 and 0.8,\par
+and this, we calculated it for the standard normal,\par
+but it will be true for any normal random variable.\par
+Now we want to, number one,\par
+calculate this value a little more precisely,\par
+and then see what it is for two standard deviation,\par
+three standard deviations and so on.\par
+So we get to what's known as the 68, 95, 99.7 Rule.\par
+We're looking at the probability\par
+that a normal random variable\par
+will be within alpha times sigma from its mean,\par
+so here is the mean,\par
+and here is mu minus alpha sigma and mu plus alpha sigma,\par
+and so this is the probability\par
+that the standardized random variable\par
+is just going to be bigger than or equal to\par
+minus alpha and plus alpha,\par
+which is the same as saying\par
+it's within alpha standard deviations from its mean,\par
+from zero,\par
+and this, as we saw before,\par
+so we had this thing,\par
+it's going to be phi of alpha plus phi of alpha,\par
+or two phi of alpha minus one, calculate it like that,\par
+and so we can now just plug this in,\par
+and we can see that when alpha is equal to one,\par
+we get that it's two times 0.8413,\par
+this we get from the table, minus one, which is 0.682.\par
+So the probability that a normal random variable\par
+will be within one standard deviation from the mean\par
+is almost exactly 0.682,\par
+and the probability\par
+that it will be within two standard deviation from the mean\par
+is two times phi of two,\par
+and phi of two, if you look it up,\par
+we actually mentioned it before, is 0.977,\par
+so it's two times 0.977 minus one, which is 0.9544,\par
+and for three standard deviation,\par
+the probability that you are\par
+within three standard deviations is going to be,\par
+we're looking at phi of three, which is 0.9987,\par
+so it's two times 0.9987 minus one,\par
+which is 0.9974,\par
+so the probability that we're within\par
+three standard deviations is essentially one.\par
+The probability that we're outside the mean\par
+is actually one third of 1%, roughly.\par
+This is shown here.\par
+We have the probability\par
+that we're within one standard deviation is roughly 68%,\par
+that's the 68% here in the rule,\par
+probability that we're within two standard deviations\par
+is roughly 95%,\par
+that's the 95 here,\par
+and probability\par
+that we're within three standard deviations from the mean\par
+is essentially 100,\par
+or I shouldn't, not exactly, but it's 99.7%.\par
+Now to derive these probabilities\par
+and how fast they go to one,\par
+or how quickly their complement go to zero,\par
+let's explain those in terms of frequencies,\par
+so let's see the probabilities of rare events.\par
+What we're going to do is\par
+we're going to calculate for a given any alpha,\par
+we're going to look at the probability\par
+that X differs from its mean\par
+by at most alpha standard deviations,\par
+the probability that X differs from its mean\par
+by more than alpha standard deviation,\par
+it's the complement of this,\par
+and we're going to see if an event occur every day,\par
+how long will we need to wait\par
+to see an event that is outside of this mean?\par
+First let's look at one standard deviation.\par
+The probability that we'll be within one standard deviation,\par
+and we're assuming normal distribution, is 68%.\par
+The probability that we'll be away\par
+by more than one standard deviation is roughly 32%,\par
+and that means that if we have an event\par
+that occurs once a day,\par
+then we'll need to wait roughly three days\par
+to fall outside of one standard deviation,\par
+because this happens probability 31%, or roughly 1/3.\par
+So if we have an event that occurs every day,\par
+we have to wait roughly three days to see something\par
+that is more than one standard deviation away.\par
+If we look at two standard deviations away,\par
+the probability that we'll be\par
+within two standard deviations away is 95.4,\par
+the probability that we'll be\par
+more than two standard deviations away is roughly 4.6%,\par
+and 4.6% is roughly 1/20, a little less than 1/20,\par
+so we'll need to wait roughly 20 days,\par
+a little more than 20 days,\par
+roughly three weeks to see an event\par
+that's two standard deviations away from the mean.\par
+For events that are three standard deviations\par
+away from the mean, they happen with probability 99.7,\par
+so events will be more than three standard deviations\par
+away with probability 0.3%.\par
+That's roughly 1/300, it's a little less than 1/300,\par
+so this will happen,\par
+for daily events this will happen once a year.\par
+Four standard deviations away,\par
+the probability is going to be roughly 1% of 1%,\par
+we're going to wait 43 years,\par
+five standard deviations away,\par
+we need to wait roughly 5,000 years,\par
+and for six standard deviations away,\par
+we need to wait roughly 1.3 million years.\par
+So this is a very\par
+Seeing something that is six standard deviations away\par
+is really rare,\par
+and there's actually a philosophy\par
+that has to do with management and design\par
+that's called the six sigma philosophy:\par
+we should design things to be robust\par
+to within six standard deviations,\par
+namely they'll fail once every 1.3 million times.\par
+If they happen daily, then 1.3 million years and so on.\par
+But I would take this\par
+this issues with\par
+with a grain of salt,\par
+a large grain of salt,\par
+because what they assume\par
+is that everything is distributed normally,\par
+that life is normal,\par
+whereas we know that in reality life is abnormal.\par
+So whenever someone tells you that things happen\par
+probability two times 10 to the minus nine,\par
+you may want to question whether the model they are assuming\par
+is exactly right and really reflects what happens,\par
+and more often that not, it's not the case.\par
+Next I want to discuss\par
+the normal approximation of the binomial distribution.\par
+If X is distributed binomial with parameters n and p,\par
+then the mean is n times p,\par
+and the standard deviation is square root of npq,\par
+q, remember, is one minus p,\par
+and so we can approximate this random variable\par
+by a normal random variable\par
+with the same mean and standard deviation,\par
+with mean np, and with variance npq,\par
+just like the binomial distribution,\par
+and that's because when you draw\par
+if you draw the binomial distribution,\par
+and you draw the normal distribution\par
+with the same mean and the same variance, as you see here,\par
+they'll roughly overlap, they'll essentially overlap.\par
+This becomes more and more true as n increases,\par
+and it's more and more true when p is closer to half,\par
+or it's not close to zero.\par
+Typically, people say if np is at least 10,\par
+then this is a good approximation,\par
+np and n times one minus p, and nq are both 10,\par
+this is a good approximation.\par
+The probability,\par
+we can look at the probability that X is equal to k,\par
+if x is distributed binomial,\par
+we can approximate it by the probability\par
+that Y is between k minus 1/2 and k plus 1/2,\par
+so we're looking here at the probability, let's say,\par
+that X is k is this value here,\par
+so this is a discrete probability,\par
+and we want to approximate it by the Gaussian distribution,\par
+which is continuous,\par
+then we need to take an integral,\par
+and what we'll do is\par
+we'll take the integral over this region from here to here,\par
+so from k minus 1/2 to k plus 1/2,\par
+so this is this probability,\par
+and so, for example,\par
+if X is distributed binomial with 100 samples,\par
+each happens probability 0.5, so np, the variance is\par
+I'm sorry, the mean is 50, and square root of npq,\par
+the standard deviation, is five,\par
+so we're going to approximate it by the normal distribution\par
+with mean 50 and variance five square or 25,\par
+and we're looking at the probability,\par
+let's say, that X is 60,\par
+so that's the probability that Y is going to be\par
+between 59 and 60.5.\par
+Now Y is going to be distributed normal 50 and 25.\par
+To find the probabilities\par
+we need to convert them to standardized random variable,\par
+so what we're going to do is\par
+we're going to find Z to be Y minus 50,\par
+subtracting the mean, dividing by the standard deviation,\par
+so it's the probability\par
+that Z is between 59.5 minus 50 over five,\par
+and 60.5 minus 50 over five,\par
+so this is 1.9, and 2.1,\par
+for example here you get 20\par
+60 minus 50, which is 10.5 divided by five, which is 2.1,\par
+and this is 1.9,\par
+so now we can just look up in the table,\par
+and we're looking at phi of 2.1 minus phi of 1.9,\par
+and this difference,\par
+which is roughly 0.0108.\par
+So if we want to calculate the probability\par
+that X is 60, exactly,\par
+then recall that we're looking at the binomial distribution\par
+with n is 100 and p is 0.5,\par
+so we have 100 choose 60,\par
+times 0.5 to the 60 times 0.5 to the 40\par
+gives us 0.5 to the 100, and this is roughly 0.0108,\par
+which as you can see\par
+is essentially the same as our approximation.\par
+And if you want to calculate the probability\par
+of an internal then, again, let's use the same example.\par
+X is binomial 100 and 0.5, then np is 50,\par
+the standard deviation is 5,\par
+we approximate it by the Gaussian distribution\par
+with the same mean, 50, and the same variance, 25,\par
+and the probability that X is between\par
+42 and 53, let's say,\par
+is the probability that Y is going to be\par
+between 41.5 and 53.5,\par
+because we're taking the integral,\par
+we need to do what's called the continuity correction again,\par
+so we go half below and half above,\par
+and we're going to use the Z score,\par
+so to get that we need to subtract the mean,\par
+so we get 41.5 minus 50\par
+and divide it by standard deviation, five,\par
+which is minus 1.7,\par
+and Z is also less than 53.5\par
+minus the mean divided by standard deviation,\par
+which is 0.7,\par
+and to calculate this we have seen that we can just\par
+this is going to be,\par
+'cause this is negative it's going to be phi of 0.7\par
+plus phi of 1.7 minus one, and we can evaluate those,\par
+and we see it's 0.7134.\par
+If we did it exactly,\par
+then we'll have the summation from 42 to 53 of 100 choose k\par
+times 1/2 to the 100, and that,\par
+when you calculate it up to three decimal digits,\par
+or four, it's 0.7136,\par
+which again is roughly what we got before.\par
+In short, we talked about\par
+evaluating these probabilities of normal distributions,\par
+we saw how to calculate interval probabilities,\par
+individual probabilities,\par
+how to use the Z table and Z scores,\par
+we saw what's the probability\par
+that you'll be within one standard deviation,\par
+we saw how you can approximate the Bernoulli,\par
+and next time we're going to talk about\par
+inequalities and limits.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Why z table only cover one half of the normal curve?\par
+\par
+\tab\par
+The positive half is most frequently used.\par
+\par
+\tab\par
+The table will be too large to include the negative half.\par
+\par
+\tab\par
+The values of negative half can be deduced from symmetry.\par
+\par
+Submit\par
+}
+ 
