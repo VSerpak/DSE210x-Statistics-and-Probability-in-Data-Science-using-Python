@@ -1,0 +1,393 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+In the previous lectures,\par
+we talked about Markov and Chebyshev's inequality\par
+and now we would like to apply them\par
+to get the Weak Law of Large Numbers, okay.\par
+So first, a little bit of motivation,\par
+so probability theory is based on the fact that\par
+sample averages converge to their expectation.\par
+We've sentence this in the definition of probability\par
+and definition of expectation,\par
+they reflect real expectation,\par
+what we think we'll see as an average,\par
+so more specifically if we flip many fair coins,\par
+then the fraction of heads,\par
+that we'll see will converge to one half\par
+and if we roll many dice, then the average value\par
+will converge to 3.5, but so far,\par
+it was just intuition, we just said,\par
+"Oh, that should be the case,\par
+"if I flip many coins, then I should get roughly half,"\par
+and what we want to do now is\par
+make it more rigorous\par
+and see why that is the case.\par
+So first let's define the sample mean,\par
+so if we observe a sequence, x1 up to xn,\par
+we're going to use the abbreviation, x superscript n\par
+to denote this sequence with just an abbreviation,\par
+we have actually used this in the past as well\par
+and the mean, which we'll denote by x,\par
+this vector, xn bar is just the average\par
+of all the values of x1 up to xn,\par
+so it's the sum x1 plus x2 up to xn\par
+normalized by the number of samples, which is n,\par
+so for example, if n is four and we take four samples\par
+and x4 is three, one, four, two,\par
+then the average of this x4 vector\par
+is going to be the sum three plus one plus four plus two,\par
+which is 10 divided by four, which is 2.5,\par
+so the average of these four samples is just 2.5.\par
+Now, what we're doing is we're taking n samples\par
+from a distribution and therefore what we'll get\par
+is a sequence not of xn of small xn, actual numbers,\par
+but we'll have a sequence of random variables, X1 up to Xn,\par
+which we'll still denote by superscript n like that\par
+and the sample mean is now the average\par
+of this random vector, x1 up to xn,\par
+so it's the sum of x1 plus x2,\par
+all those n random numbers, normalized by n, okay,\par
+and this now note that this xn average is a random variable\par
+and it's the sample mean, that we'll observe.\par
+It's a random mean,\par
+whose value depends on the samples that we get.\par
+Okay, and what we would like to do is\par
+we'd like to say that the average of the sample mean\par
+is very close to what it should be,\par
+namely if all of these have mean mu, then it's close to mu.\par
+Okay, so just to specify this precisely,\par
+let's talk about independent samples.\par
+So if you have independent random variables\par
+with the same distribution, then we call them independent,\par
+identically distributed or iid,\par
+independent identically distributed.\par
+For example, if we have Independent Bernoulli point three\par
+random variables, then we said that we have iid\par
+Bernoulli point three random variables or just we said,\par
+we have iid random variables, because they are identical,\par
+each of them has the same distribution,\par
+Bernoulli point three, and are independent as well.\par
+So, more specifically, suppose that x1, x2, x3,\par
+suppose that we are told that they are iid\par
+Bernoulli point three.\par
+What does that mean?\par
+That means that each of the xi is Bernoulli point three,\par
+and each of them is independent of all the others.\par
+And in particular, what that would mean\par
+is that if that's the case, if x1, x2, x3\par
+are Bernoulli point three, then the probability\par
+that x1 is one, x2 is zero, and x3 is one\par
+is just because, by independence, it's the product\par
+of the probabilities, and because each of them\par
+is Bernoulli point three, it's going to be\par
+point three times point seven, because this one\par
+is zero, times point three, which is 0.063.\par
+So now we can talk about the Weak Law of Large Numbers\par
+and what does it says.\par
+It says that if you have a sequence x1 up to xn,\par
+which as you recall we denote by x superscript n.\par
+So we have a sequence of n iid samples from a distribution\par
+with finite mean mu and finite standard deviation sigma.\par
+Okay, if that's the case, so all of them we have n samples\par
+from the same distribution with mean mu\par
+and standard deviation sigma, then, as the number\par
+of samples goes to infinity, then the average xn\par
+approaches mu.\par
+In the sense that the probability that the sample mean\par
+differs from mean mu by any given amount goes to zero,\par
+xn increases.\par
+So, more specifically what it would mean\par
+so xn average is the sample mean, x is a random variable,\par
+and what it says is the probability that\par
+the sample mean that we'll observe differs from mu,\par
+in absolute value, by more than epsilon.\par
+That probability is at most the variance\par
+of the distribution.\par
+The variance divided by this epsilon square\par
+times one over n so what you can see\par
+is that xn increases.\par
+This will go to zero\par
+so it says that, just want to make sure we understand.\par
+So we have a sample x1 up to xn.\par
+The samples from the same distribution with mean mu\par
+and standard deviation sigma.\par
+Then the probability that the average will differ\par
+from the mean by more than any amount, epsilon,\par
+is at most the variance divided by epsilon square.\par
+This probability will increase this epsilon\par
+so we want the average to be close to mu,\par
+epsilon square times one over n\par
+so we can take n large enough to make sure\par
+that this quantity is as small as we want\par
+so we will say that xn converges in probability,\par
+we'll discuss this more formally to mu\par
+but we don't need to understand this definition\par
+to understand the weak law of large numbers\par
+which again just says that the probability that the average\par
+will differ from the mean by more than any amount\par
+is this quantity here, which as n increases,\par
+goes down to zero.\par
+So what we're going to do is we're going to give an example\par
+of using this law and then we're going to prove it\par
+and then we're going to give yet another example.\par
+So let's start with the example and of course\par
+we haven't yet visited the 2016 presidential elections\par
+so maybe it's time.\par
+So suppose you try to predict the outcome of the election\par
+and more specifically you try to see how many people\par
+or what fraction of the people\par
+are going to vote for Donald Trump.\par
+So you poll 100,000 people and let's assume\par
+that every person votes for Trump independently\par
+of all others with probability p,\par
+so every person that you sample is independent\par
+of others and votes for Trump with the same probability, p.\par
+Then we want to bound the probability\par
+that was are trying to estimate p.\par
+We want to bound the probability that we are off\par
+from p by more than one percent\par
+and that way we get p minus one percent.\par
+So the weak law of large numbers tells us\par
+that the probability that the average that we'll get\par
+for the number of people who are going to vote for Trump\par
+minus mu, and mu here is p, is going to be bigger\par
+than epsilon is less than equal to sigma square\par
+over epsilon square times one over n.\par
+That's the general weak law of large numbers\par
+and we apply it here and here the variance,\par
+when we poll each person, they have the probability p\par
+for voting for Trump and one minus p\par
+for not voting for Trump and as we know\par
+this is a Bernoullian addendum verbal\par
+whose variance is p times one minus p\par
+and p times one minus p as we have said\par
+is at most one quarter, so sigma square\par
+is at most one quarter, so therefore the probability\par
+that the average of 100,000 people,\par
+cause that's how many people we sampled, minus p\par
+is bigger than 0.01, that's the tolerance\par
+that we are wondering about, so we're sampling,\par
+we're checking every person if they voted for Trump or not.\par
+We're adding every person that voted for Trump,\par
+take the average and that's this number here,\par
+the probability that it differs from p by more than 0.01%\par
+is going to be at most sigma square,\par
+which as we saw is at most a quarter\par
+divided by this quantity epsilon square, so 0.01 square\par
+and by n so what we have here is one quarter\par
+and this 0.01 square will give us 10,000\par
+here in the numerator so it's going to be one over 10\par
+divided by four which is one over 40 or 2.5%\par
+so we see that the probability that we'll be off\par
+by more than one percent is at most 2.5%\par
+which may be not so bad.\par
+And notice that if we polled more people\par
+then the probability that we will be off\par
+by more than one percent would decrease like that.\par
+So now that we have seen an example of the weak law\par
+of large numbers, which is written again here.\par
+The probability that the average differs from the mean\par
+by more than epsilon is at most the variance\par
+divided by epsilon square divided by n.\par
+Notice that it behaves in the right way.\par
+If the variance increases then the probability\par
+that we'll be off from the mean by any given number\par
+will increase and also if we want to be more accurate\par
+then epsilon has to decrease and therefor the probability\par
+that we'll be off by more than epsilon will increase\par
+and also as n the sample increases,\par
+the probability decreases.\par
+So now we want to prove this\par
+and then we'll do another example.\par
+So the proof of this equation, the probability that xn\par
+minus mu is bigger than or equal to epsilon\par
+is at most sigma square over n epsilon square\par
+is actually quite simple.\par
+So again recall that x1, x2, and so on,\par
+our iid with finite mu and sigma\par
+and the sample mean is xn\par
+which is one over n times summation of xi\par
+and I'm just abbreviating the sample from my points\par
+to one of 2n by just this.\par
+So what is the expected value of the mean?\par
+So the mean is a random variable\par
+and what is its expectation, the expected value of the mean\par
+is the expected value of the average\par
+which is one over n summation xi\par
+and we can take one over n out\par
+so it's one over n and then we can take the expectation\par
+inside a sum by the linear expectation\par
+so it's one over n summation of the expectation of xi\par
+but each xi we're told has the mean mu,\par
+so it's one over n summation of mu\par
+so this gives us mu so the expectation of the average\par
+is just mu which is not surprising.\par
+We took n and suppose each with mean mu\par
+so the mu mean of the average is also mu\par
+and what is the variance?\par
+The variance of xn is the variance of again, the average,\par
+one over n summation xi but so the one over n\par
+comes out and we have one over n times the variance\par
+of the summation xi.\par
+But now the xi's are independent, see the iid\par
+and the first i stands for independent\par
+so the variance of the summation\par
+is summation of the variances so it's one over n\par
+summation of the variances and each has a variance\par
+of sigma so it's going to be one over n times sigma\par
+or one over n times n sigma square\par
+which is a square over n.\par
+So the next thing is the variances added linearly\par
+so they give us n times sigma square but we normalize\par
+by n square so the variance of the mean\par
+we actually see now decreases with n\par
+so we observe that what we get is the average\par
+will always have the same mean mu\par
+but the variance of the average will decrease\par
+like sigma square over n, and now we can\par
+use Chebyshe'vs inequality with forall epsilon\par
+the probability that xn minus this mean\par
+will be bigger than epsilon.\par
+So this is our inner variable,\par
+it's mean is mu as we calculated\par
+and the probability that it's going to be bigger than\par
+or equal to epsilon by Chebyshev's inequality\par
+is it's most the variance of xn, the average of xn\par
+divided by epsilon square but the average decreases with n\par
+like that so it's at most sigma square over n\par
+divided by epsilon square,\par
+that's just straight Chebyshev's inequality\par
+and you can see that as n increases,\par
+this probability that we will be off\par
+by any given amount will go down.\par
+So as n goes to infinity, this will go down to zero\par
+so this is a simple proof of the weak law of large numbers\par
+which is quite important because we don't need to assume\par
+anything about the random variables,\par
+or anything about their distribution,\par
+just that they're iid and mu and divisions of one.\par
+So we're going to look at sensors and ask the opposite\par
+question rather than saying here's the number\par
+of measurements we have, what is the error that we get?\par
+We'll say if you want a given error,\par
+how many measurements do we need to take?\par
+So suppose we are trying to measure a temperature\par
+and we do it by using n sensors\par
+and each sensor makes some mistakes.\par
+Each of them reads the temperature as t plus zi\par
+and that's the temperature that it reads\par
+where zi is some noise which has zero mean\par
+and variance less than and equal to two\par
+so we'll get the real temperature plus the noise\par
+which has zero mean and some variance.\par
+And the question is how many sensors do we need\par
+in order to estimate the temperature\par
+to within half a degree with probability bigger than 95%?\par
+So again we'll use the weak law of large numbers.\par
+It says that if we take the average\par
+of all these measurements, then the probability\par
+that the average will differ from the mean\par
+by more than epsilon, in our case more than .5\par
+will be at most the variance which is two\par
+divided by this epsilon square, .5 square\par
+and then again divided by the number of supposed eta.\par
+So in our case the probability that the average temperature\par
+will differ from its mean, and notice that the mean\par
+because z is zero mean then the mean of ti is the same as t\par
+so the probability that the average of all the temperatures\par
+will differ from t by more than .5 by the weak law\par
+of large numbers, at most the variance which is two\par
+divided by epsilon square, which is a quarter\par
+cause this is epsilon and divided by n\par
+and what we want to do is we want to make sure\par
+that this is less than five percent so that\par
+the error probability is at most five percent\par
+so that the probability of being correct\par
+will be at least 95%.\par
+So if we want that to happen, we need to make sure\par
+that n is at least two divided by a quarter\par
+divided by 0.05 which is two\par
+times four times 20 which is 160\par
+so if we have 160 sensors, then we can guarantee\par
+that the probability will be at most off\par
+by more than half percent is smaller than five percent\par
+or the probability that it will be within .5%\par
+is at least 95%.\par
+So the probability will be within plus minus\par
+a half of a degree is at least 95%.\par
+Alright and notice that the weak law of large numbers\par
+can be generalized so the same proof works\par
+where instead of each random variable have the same mean\par
+and the same standard deviation, we can have different means\par
+and different standard deviations,\par
+we just let the mean of the whole samples\par
+be the summation of mu divided by just the average\par
+of the mu i's and the mean of the variance\par
+be one over n times summation of the variances,\par
+summation sigma x square and then we can use\par
+the exact same proof to see that even in this\par
+more general case the probability that the average\par
+will differ from mu, this mu that we defined here\par
+by more than epsilon will be this sigma square,\par
+this summation of the sigma i\par
+divided by epsilon square and by n.\par
+So the weak law of large numbers\par
+actually applies a little more broadly.\par
+So I just want to end this presentation\par
+by describing the convergence in probability\par
+which is actually what we have proven\par
+but we didn't give it a name because I just\par
+want to keep it as simple as possible.\par
+So if you have a sequence of x1, x2 of random variables\par
+and then we said that the sequence converges\par
+in probability to another random variable y.\par
+If the probability that xn, this random variable,\par
+differs from y by any fixed amount\par
+decreases to zero with n, or more specifically,\par
+for every delta bigger than zero,\par
+the probability that xn minus y,\par
+this nth random variable will differ from y\par
+by more than delta goes down to zero with n\par
+or even more specifically, for every delta bigger than zero,\par
+that's what's written here, now I'm just\par
+making this part more precise.\par
+For every epsilon bigger than zero there is an n\par
+such that for and bigger than that\par
+the probability that xn minus y is bigger than\par
+a quarter delta, that probability is less than epsilon.\par
+So what we want is that if someone gives you\par
+any epsilon and delta the probability that xn,\par
+for a sufficiently large n, the probability that xn\par
+differs from y by more than delta,\par
+that probability is less that epsilon.\par
+It can make any of them go down as far as you want.\par
+So if that happens we said that the sequence xn\par
+converges to y in probability and what we have shown\par
+with the weak law of large numbers is that we have shown\par
+that the sample average xn converges in probability\par
+to the mu, so that's what we have shown\par
+although we didn't use this too much.\par
+So with that we talked about the weak law of large numbers\par
+and what we want to do next is we want to provide\par
+stronger bounds than what we have shown now\par
+by the Chernoff bound and the moment generating functions.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+You toss two fair coins ten-thousands times. How many times do you expect the pair of coins to not show any tails?\par
+\par
+\tab\par
+0\par
+\par
+\tab\par
+1250\par
+\par
+\tab\par
+2500\par
+\par
+\tab\par
+5000\par
+}
+ 

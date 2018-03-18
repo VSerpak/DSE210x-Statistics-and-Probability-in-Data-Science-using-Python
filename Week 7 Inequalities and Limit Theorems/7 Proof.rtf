@@ -1,0 +1,495 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset1 Cambria Math;}}
+{\*\generator Riched20 10.0.16299}{\*\mmathPr\mmathFont1\mwrapIndent1440 }\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+In the previous presentation we\par
+described the central limit theorem,\par
+and now we would like to prove it.\par
+So the way we'll prove it is by showing\par
+that if you take a sum of random variables,\par
+normalize them, then they converge to the\par
+normal distribution, and more formally\par
+we're going to describe it here.\par
+So we have random variables that are\par
+iid, X1, X2, X3, and they have mean mu, which is zero,\par
+and standard deviation sigma, which we\par
+assume without loss of (muffled) is one,\par
+and what we're going to do is we're\par
+going to define Zn to be X1 plus X2\par
+up to Xn, divided by square root of n.\par
+So this, if you remember, is the normalization\par
+that we have for the central limit theorem.\par
+And what we're going to show is that\par
+as the number of sample increases\par
+the distribution of Zn, of this normalized\par
+sum where again we normalize not by n.\par
+If we normalize by n we'll just\par
+get the mean, which is zero, but we\par
+normalize by square root of n.\par
+Now we get something that has some distribution.\par
+And this will approach normal with\par
+mean zero and standard deviation one,\par
+and equal (muffled) as well.\par
+And the way we'll prove it is we'll\par
+consider this cumulative distribution function,\par
+the CDF of Zn and of the normal distribution.\par
+So the cumulative distribution function\par
+of Zn, of Zn of X is the probability\par
+that Zn is less than or equal to X,\par
+and that's the probability that if you take\par
+the n random variables, X1 up to Xn,\par
+normalized by square root of n is\par
+less than or equal to square root of X.\par
+So that's the cumulative distribution\par
+of the Zn of this normalized cell.\par
+And on the other hand, we want to compare it\par
+to the normal distribution, so if Z\par
+is distributed normal, then the cumulative\par
+distribution of Z is the probability\par
+that Z is less than or equal to X,\par
+and because Z is standard normal it's one over\par
+square root of two pi eight to the minus t square over two,\par
+integrated from t going from minus infinity to X.\par
+So that's normal distribution, and what we\par
+want to show, and this as we said before\par
+is called phi of X, and what we want\par
+to show is that FZn of X, so the cumulative\par
+distribution of Zn, as the number of sample\par
+increases, approaches the cumulative\par
+distribution of Z, and that's true for any X.\par
+And so in other words we converge this\par
+to the CDF of the standard normal distribution.\par
+And this type of convergence is\par
+called convergence in distribution.\par
+We showed that if you take a sequence\par
+of random variables, you look at the CDF\par
+and show that the CDF converges to\par
+some other CDF that we'll say that this is Zn,\par
+will converge to Z in this case in distribution.\par
+And notice that we do it via the\par
+cumulative distribution function\par
+and not the actual probability distribution function,\par
+because especially when talking about\par
+continuous distribution, the PDF can have\par
+like small values like spikes at any\par
+particular point, like say one could have value,\par
+some different value but that will not\par
+affect the probability because it's a point,\par
+it has zero mass, so we don't care.\par
+So we therefore prove things using the CDF,\par
+the cumulative distribution function instead.\par
+The way we'll do it is using the\par
+moment generating functions.\par
+Why?\par
+Because we have a sum.\par
+We're looking at a normalized sum\par
+and whenever we have a sum we know that\par
+the MGF, the moment generating function,\par
+we have in a very nice way so we're going to use that,\par
+and so just remind ourself or ring a small bell\par
+about what we had seen before.\par
+If you have a random variable X\par
+then it's moment generating function\par
+is a function, as the name says\par
+and its value at t is the expected value of e to the tX.\par
+So the moment generating function\par
+of X evaluated at real number t\par
+is the expected value of e to the tX.\par
+And we saw several properties\par
+of moment generating functions.\par
+For example, scaling and independent addition.\par
+So if you have a random variable X\par
+and you multiply it by a, and you wonder\par
+what is the moment generating function\par
+of the MGF of a times X, it's by definition\par
+is the expected value of t times aX,\par
+and you can just rearrange things here,\par
+so it's the expected value of at a-t times X,\par
+and that's just the moment generating\par
+function of X evaluated a-t.\par
+This is the moment generating function of X\par
+evaluated at a-t.\par
+Similarly, if you have X and Y,\par
+and X is Y-independent like I wrote here,\par
+if X and Y is independent, then the\par
+moment generating function of X plus Y\par
+evaluated at t is the expected\par
+value of e to the t times X plus Y,\par
+and this we can write as the exponent of a sum,\par
+which becomes the product of the exponent,\par
+so it's the expected value of e to the tX times e to the tY.\par
+But now X and Y we're assuming are independent,\par
+and so e to the tX and e to the tY\par
+are also independent, and therefore\par
+they aren't correlated and therefore\par
+the expected value of the product\par
+is the product of the expected values.\par
+So it's the expected value of e to the tX\par
+times the expected value of e to the tY.\par
+And this is the moment generating function\par
+of X evaluated at t times the moment\par
+generating function of Y evaluated at t.\par
+And then another property that we saw\par
+was the derivative of the MGF evaluated at zero\par
+are the moment of X.\par
+So in other words if you take the moment\par
+generating function of X and differentiate it n times\par
+and evaluate at zero, then the value\par
+is going to be the expected value\par
+of X to the n, or the nth moment of X.\par
+And so for example, we would say\par
+that if you take the moment generating function\par
+of X, differentiate it once, evaluate at zero,\par
+there will be the expected value of X.\par
+If you differentiate the MGF twice\par
+and evaluate it at zero that will be the\par
+expected value of X squared, and so on.\par
+And in particular, if you take the MGF itself,\par
+Mx of zero, then that's differentiating\par
+the MGF zero times, or that's going to be\par
+the expected value of X to the zero,\par
+but X to the zero is one so this will be one.\par
+And this agrees with our, this equation here\par
+about derivatives and the moments,\par
+but you can of course, this one you could\par
+also see directly because the MGF of X at zero\par
+is nothing but the expected value\par
+of E to the zero times X, which is the\par
+expected value of E to the zero, which is Y.\par
+And finally, just want to remind ourselves\par
+that if you take the standard normal distribution,\par
+if Z is distributed normal zero one,\par
+then its MGF is just e to the t squared over two.\par
+So this is what we'll need to remember\par
+when we prove the central limit theorem.\par
+So we're going to use the following results,\par
+which we're not going to prove but it makes a lot of sense.\par
+It says that CDF is the cumulative distribution function\par
+and MGF is the moment generating function that we used.\par
+So if you have a sequence of random variables,\par
+Z1, Z2, Z3, and let FZn of t denote\par
+their CDF, this is CDF of Zn, and let MZn of t\par
+denote the moment generating function of Zn evaluated at t,\par
+and then if you have another random variable Z\par
+with CDF FZ and MGF MZ, then it says that\par
+you have continuity, which makes sense.\par
+That if the moment generating function\par
+of the Zn's converge to the moment generating function\par
+of Z, if the MGF of Zn converged\par
+to the MGF of Z at any t, so we have\par
+this sequence of random variables,\par
+the moment generating functions converge\par
+to the moment generating function of Z,\par
+then also these random variables, Z1 to Zn,\par
+the cumulative distribution function\par
+will converge to the cumulative distribution function of Z.\par
+So the cumulative function, the distribution function,\par
+CDF of Zn at point t will converge to the CDF\par
+of Z at point t, and that is true\par
+whenever Fz of t is continuous.\par
+If the CDF of Z is not continuous at some point\par
+then we don't have a guarantee, but if\par
+it's continuous then we'll get this convergence.\par
+So we'll just, this is just a property,\par
+continuity property of MGFs and we're just going to use it.\par
+So what is the plan?\par
+So call that Z is normal zero one\par
+and its moment generating function\par
+is e to the t squared over two, as we saw,\par
+and what we are going to show is\par
+that if we find, if we take the Zn's\par
+that we defined before as this normalized Xn,\par
+then we'll show that their moment generating function\par
+will converge to e to the t squared over two,\par
+which is the moment generating function of Z,\par
+and this will imply that the CDFs of the Zn\par
+will converge to the CDF of the normal,\par
+standard normal distribution which we denote by phi of t.\par
+So Zn is one over square root of n times\par
+summation of Xi, the sum normalized by square root of n.\par
+We can write it as the summation\par
+of Xi over square root of n, and therefore we get...\par
+So that's one thing.\par
+And the MGF of Xi over square root\par
+of n of t by scaling is going to be\par
+the moment generating function of each Xi\par
+evaluated in stuffed t at t over square root of n.\par
+That's the other property that we saw.\par
+We multiplied by one over square root of n here.\par
+And we'll just, for simplicity, we'll just\par
+denote it by M, we'll just omit the X sub i,\par
+so it's called by M of t over square root of n.\par
+Then what we get here is that the M,\par
+the moment generating function of Zn,\par
+it's going to be because here we have\par
+a sum of moment generating functions\par
+in each Xi's are independent, so it's going to be\par
+the product of the moment generating function\par
+of Xi over square root of n, which is,\par
+by this it's the product of the moment generating\par
+of Xi evaluated at t over square root of n,\par
+and that's just each Xi has the same\par
+distribution so that's just the\par
+moment generating function of t over\par
+square root of n raised to the nth power.\par
+And what we want to show is that this\par
+moment generating function MZn,\par
+which is just this nth power,\par
+converges to e to the t squared over two.\par
+If we show that then we'll be done because\par
+we will show that the moment generating function\par
+of the Zn's converges to the moment\par
+generating function of the normal,\par
+and therefore the Zn's will converge to the normal.\par
+Okay, so this is what we want to show.\par
+And before we do that, just a quick\par
+reminder about L'Hopital's Rule.\par
+It's named after Guillaume L'Hopital,\par
+but many people think that it's due to\par
+Johann Bernoulli, who was L'Hopital's\par
+math instructor in some respect, and they had\par
+a peculiar agreement where L'Hopital\par
+paid him a set sum of money every year\par
+and Johann Bernoulli had to tell him\par
+about his results before he revealed it\par
+to anyone else, and subsequently L'Hopital\par
+wrote a book in which he used many of those results.\par
+And Johann Bernoulli is the brother of\par
+Jacob Bernoulli, who we had mentioned\par
+from the Bernoulli random variables.\par
+So what we are interested often as,\par
+and we will be here, is in the limit\par
+of f(x) over g(x), and I know many of you know it.\par
+I just want to make sure that we're somewhat\par
+self-contained, so just to remind you of that.\par
+So we're looking at limit of f(x) over g(x)\par
+or x goes to some value a, and a could be anything,\par
+could be finite, could be plus infinity or minus infinity.\par
+So if these f and g have some value,\par
+limits that are non-zero and not infinity.\par
+So for example, lim of f(x) is six\par
+and lim of g(x) is three, then the limit of the ratio\par
+is just going to be the ratio of the limits,\par
+which is six over three, in this case is two.\par
+But if the limit of f and g are both zero\par
+or the limit of f and the limit of g\par
+are plus/minus infinity then what we will\par
+have here is the ratio of zero over zero,\par
+or infinity over infinity, and these are less defined.\par
+And so this limit of f over g is not clear.\par
+And L'Hopital's Rule says that if the\par
+limit of the derivatives of f and g exist,\par
+I mean of f prime over g prime exists,\par
+then the limit of f over g exists and it's also the same.\par
+This is what we'll use.\par
+And L'Hopital's name used to be spelled in,\par
+in fact in L'Hopital's time, the way he\par
+used to spell it was Hospital, but the S\par
+was not pronounced so now, subsequently in French\par
+they omitted the S and they write it like this L'Hopital,\par
+but to commemorate the missing S\par
+we'll denote L'Hopital's Rule by this\par
+O with the caret on top, it's the accent circumflex.\par
+Okay, so what we want to show, as you recall,\par
+is we want to show that if we take\par
+the moment generating function of t over square root of n,\par
+raise it to the nth power, and then as M\par
+goes to infinity it's going to be e to the\par
+t squared over two, and whenever we have power\par
+it's easier to look, take the logarithm\par
+and convert it to showing that the limit\par
+of n times the logarithm of M of t\par
+over square root of n is the logarithm of this,\par
+is ln of e to the t squared over two,\par
+which is just t squared over two.\par
+So this is what we want to show,\par
+that the limit of n times the moment generating function\par
+of t over square root of n is t square root.\par
+So we're going to evaluate it.\par
+So what we have here is the lim of n\par
+times the ln of the moment generating function,\par
+and recall that the moment generating function\par
+when we take the derivative, evaluate at zero,\par
+we get the moment, the ith moment, so in particular here\par
+the moment generating function evaluated at zero\par
+is the expected value of Xi to the\par
+zero as we saw, and this is the\par
+expected value of one so it's one.\par
+So what we have here is that we have\par
+ln of t over square root of n, and t is some constant,\par
+and square root n is going to increase,\par
+so this M of tn is going to go to M of zero.\par
+So it's going to go to one, and we\par
+take it at ln, so we'll go to zero.\par
+So what we have here is we have something\par
+which is infinity times zero and we don't know what it is.\par
+So we want to evaluate it.\par
+And how we're going to do it, of course\par
+we want to apply L'Hopital's Rule,\par
+so what we're going to do is we're\par
+going to define u to be one over square root of n here,\par
+and then this will become the lim of,\par
+instead of n going to infinity you will go to zero,\par
+one over infinity, which is zero,\par
+instead of n we get one over u squared,\par
+and n is one over u squared, and here on top\par
+we have M of t times u.\par
+So when we did that we killed, actually,\par
+three birds in one stone.\par
+First of all, instead of having infinity times zero,\par
+now we have zero over zero.\par
+This converges to zero, ln of one is zero,\par
+and your square is zero, so we have zero over zero.\par
+We can use L'Hopital's Rule, that's one thing.\par
+And the other thing is that we kind of wrote n,\par
+we just inverted it so we can think\par
+a little bit we wrote it as u, so it gives us\par
+the impression we can differentiate maybe,\par
+and in fact we can, because we can\par
+just look, continue this function\par
+and just look at the discontinuous function.\par
+And actually once you invert it and you\par
+look at it, you can look at this and\par
+you can see L'Hopital here kind of like\par
+smirking a little bit, like that,\par
+but we're going to ignore that.\par
+And the third thing that we did is\par
+that we replaced one over square root of n,\par
+which is going to be difficult to differentiate\par
+by u squared, which is a lot easier to differentiate.\par
+So what we can do is we have this limit,\par
+which is zero over zero.\par
+We're going to apply L'Hopital's Rule\par
+and t, recall, is a constant here.\par
+So this is going to give us the limit\par
+as zero goes to zero of the derivative of M of tu,\par
+that's going to be M prime of tu times the\par
+internal derivative, which is t.\par
+And then because we have a line\par
+it's going to be one over M of tu\par
+and then times the M prime.\par
+So we have one over M tu from the line,\par
+and then derivative of u squared which is 2u.\par
+And now this we can, because t, again, is a constant\par
+we can take t over two outside and\par
+you get the limit as zero goes to infinity of,\par
+and also M of tu as we saw here will go,\par
+as u goes to zero will go to M of zero, which is one.\par
+So this is just one.\par
+So we get the limit of M prime of tu\par
+divided by u multiplied by t over two\par
+and now M prime of zero is the expected\par
+value of X to the one, because we have\par
+the first derivative, so X to the one,\par
+first moment, and this is just the mean\par
+of each Xi, which we assume is zero.\par
+So M prime of zero is zero.\par
+So this will also go to zero,\par
+because tu is going to go to zero.\par
+So I have zero over zero, so again\par
+we're going to apply L'Hopital's Rule,\par
+and we get t over two times the derivative here\par
+which is the second derivative tu,\par
+and then multiply by t again, normalize by one,\par
+and now observe that if we take\par
+the second derivative of the MGF\par
+it's the second moment expected value\par
+of X squared, which is sigma squared,\par
+because mu is zero and sigma squared we assume was one,\par
+so this will become one and therefore\par
+this will give us t squared over two.\par
+So what we showed is that the limit\par
+of n times ln of the moment generating function\par
+is t squared over two, which is what we\par
+want to show and therefore the limit\par
+of M of t over square root of n to the n\par
+is e to the t squared over two is what we want to show.\par
+So just to conclude, let's assemble things.\par
+So we said that Xi's are iid, mean zero and variance one,\par
+and we defined X Zn to be the normalized sum,\par
+normalized by square root of n,\par
+and then what we said, that if we calculate\par
+the limit of the MGF of Zn, then that was\par
+equal to the limit of the MGF of each Xi,\par
+which we denoted by M of t over square root of n,\par
+and we showed that no matter what M is,\par
+this will not matter, this will for\par
+any M, namely for any Xi, this went to e to the\par
+t squared over two, which is the\par
+moment generating function of Z\par
+of the standard normal distribution.\par
+Z is the standard normal distribution.\par
+So we showed that the limit of the\par
+moment generating function of the Zn\par
+converges to the moment generating function\par
+of the standard normal distribution,\par
+and therefore the cumulative distribution function,\par
+the CDF of Zn, converges to the CDF of Z,\par
+which is the phi, the CDF of the\par
+standard normal distribution.\par
+So we've shown that the Zn's, this average\par
+is converged to the normal distribution in distribution.\par
+So Zn approaches standard normal distribution\par
+and this converges in distribution.\par
+So this was for random variables that were,\par
+and that had mean zero and standard deviation one,\par
+but if we looked at any mean mu and\par
+any standard deviation sigma squared\par
+then instead of this Z we will just\par
+normalize and we'd subtract N mu\par
+and divide, instead of divide by\par
+square root of n we also divide by sigma\par
+and the same thing would hold.\par
+So by this we have proven the central limit theorem,\par
+which as we said is the cornerstone\par
+of a lot of results in statistics and is why\par
+the normal distribution is so important.\par
+And I just want to say that you can\par
+further generalize the central limit theorem.\par
+So we showed it for iid with any original\par
+distribution of the Xi so long as they had\par
+finite mean mu and standard deviation\par
+and moment generating function.\par
+If the distribution had that then we have proved it.\par
+But you can, and this applies to discrete distributions,\par
+continuous, and mixed distribution,\par
+any distribution you want.\par
+So it's already very general, but you can\par
+generalize it even further.\par
+You can show that under mild conditions\par
+the distributions don't have to be identically distributed.\par
+It suffices that they are independent.\par
+So that would suffice to get a very\par
+similar version of the central limit theorem.\par
+Or even if they have some weakly dependence,\par
+then you can also prove the central limit theorem.\par
+Or if the distribution is not one dimensional\par
+as we have looked at but multidimensional,\par
+then you also get a central limit theorem,\par
+which is very similar to what we showed.\par
+And that explains why the normal distribution\par
+is very prevalent, and with this we have\par
+proven the central limit theorem\par
+and what we're going to do next is we're\par
+going to look at further statistical\par
+properties and how to estimate them.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Suppose that X_1 and X_2 are independent with the same distribution f, and that (X_1+X_2)/\f1\u8730?\f0 2 is distributed f as well. What could the distribution f be?\par
+\par
+\tab\par
+Uniform distribution on [0,1]\par
+\par
+\tab\par
+Exponential distribution with parameter 2\par
+\par
+\tab\par
+Normal distribution with mean 0\par
+\par
+\tab\par
+Normal distribution with mean 1\par
+\par
+Submit\lang9\par
+}
+ 

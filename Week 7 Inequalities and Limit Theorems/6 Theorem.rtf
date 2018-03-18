@@ -1,0 +1,551 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset161 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+Now that we have talked about several bounds on probability,\par
+we're ready to talk about one of the most important results\par
+in probability and statistics, the central limit theorem.\par
+So just a little bit of an overview.\par
+The central limit theorem, which you'll abbreviate\par
+as CLT, is one of the, quote/unquote,\par
+"central results" in statistics.\par
+It says that under very mild conditions, the normalized sum\par
+of random variables is roughly normally distributed;\par
+and this applies to all types of distributions.\par
+They can be discreet, continuous, or mixed distributions;\par
+and this also explains why the bell curve is so popular\par
+and why we observe it in so many applications.\par
+And it also allows, as we're going to see,\par
+for a simple probability estimation of many events\par
+when we don't know the underlying distribution.\par
+And what we're going to do is we're going\par
+to start with some examples now,\par
+and we'll calculate the,\par
+we'll describe the central limit theorem.\par
+We'll calculate some probabilities;\par
+and then, in the next presentation, we'll prove it.\par
+Alright, so first let's assume that we flip coins;\par
+so our random variable is Bernoulli half.\par
+So if we flip a single coin, here N is equal to one,\par
+one coin, then we get two plus a value of zero and one\par
+and each one happens with probability of half.\par
+That clearly does not look like a Gaussian.\par
+Now, if we flip the coin five times\par
+and we see how many ones we got, we'll get something\par
+that looks like this, like the green histogram here;\par
+and you can see that the highest probability\par
+is for getting two or three, and then the smallest\par
+probabilities are for zero and for five,\par
+zero heads and five heads and so on.\par
+And if we flip the coin ten times,\par
+it will look more like a triangle like that.\par
+The number of heads is going to range from zero here\par
+to 10, with five being the most likely.\par
+And if we flip the coin 20 times,\par
+the number of heads will range from zero to 20;\par
+and now this starts looking like a Gaussian.\par
+And this phenomenon will happen not just\par
+for Bernoulli half coin flips;\par
+it will happen for almost any distribution.\par
+So here is another one; say we roll a die, or dice,\par
+so if we roll a single die then we have\par
+a uniform distribution between one and six.\par
+If we roll two dice and we sum the values,\par
+then the sum is going to go the first, the lowest value\par
+it could be is two: one plus one; the highest value is 12.\par
+And we roll just two dice, it looks like that.\par
+And three dice, it will look, it will go from three\par
+to three times six, which is 18,\par
+and will look like this and like that for\par
+if we look four dice and five dice;\par
+and eventually it will look more and more like a Gaussian.\par
+And you see here that already for five dice,\par
+it looks pretty much like a Gaussian.\par
+So it converges to a Gaussian very quickly,\par
+and that's this essence of the central limit theorem.\par
+Okay, and this, these two examples were\par
+for discrete distributions; the same also holds\par
+if you have a continuous distribution.\par
+Here are three examples of continuous distributions.\par
+They're very different.\par
+This is uniform, this looks like this.\par
+It's not unimodal; it has two bumps here.\par
+And this one is very skewed; this one is not skewed at all.\par
+But if you repeat it five times,\par
+then this will look like that; and you sum the values,\par
+then the uniform will look like this for the sum\par
+and for this one, we'll get that, and so on.\par
+If you sum 30 times, then you see that all of them\par
+look essentially Gaussian; and effectively people say\par
+that if you have 30 repetitions,\par
+then you can pretty much assume it's Gaussian.\par
+There's no guarantee, depends on the distribution;\par
+but for most reasonable distributions,\par
+you can see here there are many after 30,\par
+adding 30 independent samples,\par
+you'll get something that is pretty much Gaussian.\par
+All right, so and this holds not just\par
+for discrete or continuous distribution,\par
+also holds for mixed distributions;\par
+and here you can see very mixed distribution.\par
+You have two spikes here at the end\par
+and then continuous distribution in between;\par
+and when you go one sample or two samples,\par
+you'll see you'll get the middle value will be\par
+a little higher because you add this one plus this one.\par
+You got this will come from getting this one first\par
+and this one second or the left one\par
+second and the right one first.\par
+You'll get distribution; and you can see here\par
+that when you go to like 30 or so, then it will start\par
+looking very much like a Gaussian, okay.\par
+All right, so what does the central limit theorem says?\par
+It says that if you have, so first of all,\par
+recall that iid stands for independent\par
+and identically distributed and mu stands for the mean\par
+and sigma stands for the standard deviation.\par
+And it says that if X1, X2, X3 are and so on,\par
+you have a sequence of iid; namely, independent\par
+random variables, all of them have the same, the same\par
+distribution, but we don't care what the distribution is.\par
+We just care that this distribution has a finite mean\par
+and a finite standard deviation, which you denote by sigma.\par
+Then as the number of samples that we take,\par
+N, goes to infinity; if we take the sum and we normalize it,\par
+you will see in a second how, then this normalized sum\par
+will approach a normal distribution\par
+with mean zero and standard deviation one.\par
+And how do you normalize it in a pretty much,\par
+almost the way you would expect it,\par
+it's essentially the way you will expect.\par
+First of all, each of those Xi's has mean mu;\par
+so we want it to have mean zero,\par
+then we subtract mu from each random variable.\par
+We center it, so we subtract N mu from the total;\par
+and then each one has a standard deviation sigma,\par
+so we also normalize by sigma.\par
+We have done these things before, okay.\par
+And the only thing that is maybe slightly un-intuitive,\par
+although as we'll see in a second it makes a lot of sense,\par
+is we don't divide by N; but we divide by square root of N.\par
+And when you divide by square root of N, then it will\par
+approach normal with mean zero and standard deviation one.\par
+And, again, we can already see it.\par
+We'll say it again later, but just to observe it here.\par
+We take the sum, each one has mean mu where\par
+that N variable, so they'll have mean N mu.\par
+So we subtract that, N mu, to get mean zero;\par
+and then if we look at the variance,\par
+each one has a variance sigma square.\par
+So when we add them up they'll, because they're independent,\par
+the variance will be N times sigma square; and, therefore,\par
+we want to normalize, so we normalize by the root of that,\par
+which is sigma times square root of N.\par
+And we're going to say that in a second again.\par
+Okay, so this is what we need to remember:\par
+take all of them, subtract the mean, normalize by sigma\par
+by standard deviation square root of N;\par
+and we get something that is roughly normal zero one,\par
+as we have seen in the examples before, okay.\par
+Now notice, as we said, that subtracting N mu\par
+and also dividing by sigma is just to normalize\par
+for the mean and the standard deviation.\par
+So these are just basic normalization.\par
+So without loss of geometry, we can just assume\par
+that we have random variables with mean zero\par
+and standard deviation one, okay; and that will make\par
+this expression look a little nicer\par
+and so we can talk about a little more easily.\par
+So what we have is that X1, X2, X3 are iid\par
+with mean zero and standard deviation one.\par
+As the number of samples go to infinity,\par
+increases to infinity, the distribution of now X1 up to Xn,\par
+we don't need to subtract the mean because the mean is zero.\par
+Normalize by square root of N because sigma is one,\par
+approaches normal zero one; and as we saw\par
+in the many examples that we showed before,\par
+typically the N that you'll need to get something\par
+which is close to normal is maybe 30.\par
+All right, okay, and this can be viewed\par
+as a significant generalization of the weak law\par
+of large numbers as we're going to discuss next.\par
+So let's remind ourselves\par
+about the weak law of large numbers.\par
+It says that if you take iid random variables, X1, X2, X3\par
+that have the same distribution and they're independent\par
+of each other with mean zero and sigma one, okay,\par
+this, it's more general, but I'm applying it to mean zero\par
+and zero one, and sigma, and standard deviation one,\par
+just so we can compare to the version\par
+we ended up with in the previous slide.\par
+Then as the number of sample increases, if you normalize X1\par
+up to Xn, normalize by N, it will approach zero, okay.\par
+And, so, recall that this means that probability\par
+that approaches one if you take any value,\par
+let's say .1, the sum will be less than .1 with probability\par
+that it will approach, that will be approach one, okay.\par
+So this average approaches zero, and the probability\par
+that you are off by any amount will also go to zero;\par
+and the probability that you'll be as close\par
+to zero as you want will go to N.\par
+All right, so to see why this is so, we proved it;\par
+but, again, this is a reminder.\par
+The expected value here of each Xi is zero,\par
+so the expected value of the sum is also zero, okay.\par
+And how about the variance?\par
+The variance of the sum, because each of them,\par
+because they're independent and each\par
+of them has variance one, the variance of the sum X1\par
+up to Xn is going to be N; and, therefore,\par
+the variance of the normalized sum, when we normalize by N,\par
+is going to be N from this sum, and now we need to divide\par
+by N square because the variance\par
+of A times X is A square times the variance of X.\par
+So we normalize by N square, and the variance\par
+will become one over N, which approaches zero.\par
+So as the number of samples increases\par
+as it increases, it will look more and more like a spike.\par
+You have zero with probability that approaches one.\par
+Okay, now when we look at a central limit theorem,\par
+on the other hand, then we're not considering normalizing\par
+by N, but normalizing by square root of N,\par
+just a different normalization.\par
+And the central limit theorem says that as N goes\par
+to infinity, this random variable will approach normal\par
+with mean zero and a variance one.\par
+And so, first of all, let's look at the variance\par
+of this as we went over this on the first slide.\par
+We just want to do it a little more rigorously.\par
+So the variance of, we're looking at a variance of X1 up\par
+plus Xn divided by square root of N.\par
+The variance of this sum, as we saw here, is N.\par
+Now we divide by square root of N,\par
+so we'll get divided by N, which is square root of N square;\par
+and this will give us one, okay.\par
+So now we have that this random variable will have\par
+a mean zero as it had before and variance one.\par
+So that's okay and that maybe is not so surprising,\par
+and just observe that we normalize here by square root of N.\par
+If we normalize by something which is significantly bigger\par
+than square root of N, for example, N to the three-quarters,\par
+then we'll be dividing here by a number\par
+which is bigger than N, and the variance will go to zero\par
+just like it did here when we normalized by N.\par
+If we normalize by a number that's significantly less\par
+than square root of N, for example, N to the one-quarter,\par
+significantly less than N, then the variance will go\par
+to infinity, right, because we'll have here the variance\par
+of the sum is N and we'll divide\par
+by something smaller than N, go infinity.\par
+But we have a sweet spot, which is when we normalize\par
+by square root of N, the variance is exactly one.\par
+Okay, so that's one very nice thing;\par
+but it's not everything.\par
+The real surprise is that for any Xi,\par
+if you take any distribution on the Xi's,\par
+it doesn't matter which distribution you start with,\par
+no matter how crazy; it can look like this\par
+or like that or like that.\par
+The distribution could be any crazy distribution\par
+to start with, then it will converge to N zero one;\par
+and note that N stands for normal, which is rather boring.\par
+So you can start with any distribution you like,\par
+and you will end up, no matter how exciting it is,\par
+you'll end up with this very boring normal distribution.\par
+And that is the most exciting thing\par
+about the central limit theorem, okay.\par
+So, okay, so what I want to do now\par
+is I want to give you an example.\par
+And now it's the holiday season;\par
+people are buying things and selling things,\par
+so I thought I'll give you an example about store income.\par
+But as you're going to see, this example is very generic.\par
+In fact, we're going to state it in a general form\par
+which shows how powerful the central limit theorem is.\par
+So suppose that you have a store, you own a store.\par
+And you observe that customer, when the customer comes\par
+to the store because you have owned it for some time,\par
+on average, they spend $80 at the store;\par
+and the standard deviation is $40, okay.\par
+So this is true for any, if you take any customer\par
+that comes in and you look what is the probability,\par
+what is the average amount they'll spend,\par
+it's going to be $80; and you look at\par
+the standard deviation, it's going to be $40, okay.\par
+Now suppose you are worried about the probability\par
+that the customer spends less than $72;\par
+namely, 10% less than what is the average, okay.\par
+What can we say about that?\par
+Okay, so this is 10% below; and the answer\par
+is that we don't know the distribution\par
+of the spending of the customer, right.\par
+It can follow any distribution, you know,\par
+so long as its mean is 80 and the standard deviation is 40.\par
+And because we don't know the distribution,\par
+if you want to prove things like this,\par
+then we only, the only things we can use are,\par
+is maybe we could be using the Chernoff bound,\par
+which will not give us a very strong result, okay.\par
+So we really don't know; I'm sorry, Chebyshev's bound,\par
+really don't know how to bound this one, okay.\par
+But mostly likely we don't care\par
+about specific spending of one customer,\par
+what is probably this one customer less than $72.\par
+We care about more about the total revenue at the store.\par
+So imagine that, for example, that on any given day\par
+we have 100 customers; and so we might care\par
+about the probability that our revenue\par
+for the day will fall by 10%, okay.\par
+And that's equivalent to saying that the probability\par
+of the average customer less than, spends less than $72.\par
+Okay, the average of this, among this 100 customers.\par
+Because if the average spends less than $72,\par
+that means that in total they spent\par
+less than $7,200, which is 10% less\par
+than what you're used to, okay, or the average.\par
+Okay, and so this question we can answer; and we can do it\par
+thanks to the central limit theorem as we will see.\par
+Okay, so, I'm sorry, so I guess\par
+I'm so thankful that I wrote it twice.\par
+All right, okay, so let's see how we would generally apply\par
+this central limit theorem; and I phrased it here\par
+in the most general form, and we can then apply it\par
+to the store example or any other example.\par
+So in the, in the general application,\par
+or typical application maybe, one has, you can have sequence\par
+of Xi's and they're independent; and they can follow any\par
+distribution with mean mu and standard deviation sigma.\par
+So you have a sequence of Xi's, follow any distribution,\par
+mean mu, and standard deviation sigma.\par
+And we can define the average of these, of N samples,\par
+to be X1 plus Xn normalized by N.\par
+So this is the average, in our store example,\par
+that's the average amount that a customer spends, okay.\par
+And we're interested in the probability that this average,\par
+among the N samples, is at most alpha, okay.\par
+So what we can do is we can take the central limit approach,\par
+and we can define Zn to be the sum minus N mu\par
+divided by sigma times square root of N.\par
+Remember, this is our general formulation.\par
+The sum minus N mu; you normalize it before the mean,\par
+and then we more normalize by the,\par
+for the standard deviation and divide by square root of N.\par
+And, remember, we know the mean and we know\par
+the standard deviation and we also know what N is, okay.\par
+So we can calculate this, okay.\par
+And so this we can write.\par
+So, so by the, sorry, so by the central limit theorem\par
+it says that for sufficiently large N; and as we said,\par
+typically 30 is enough to get close,\par
+then we can approximate Zn by the normal random variable\par
+and mean one and mean one, I'm sorry,\par
+with the standard normal random variable\par
+which has mean zero and variance one, okay.\par
+So let's just calculate it.\par
+So Zn, you can write it as X1 plus Xn.\par
+You can write it as N times the average\par
+and we subtract N mu and we normalize\par
+by sigma times square root of N.\par
+So we can take the N out, and that's going to be\par
+N times the average minus mu normalized\par
+by sigma times square root of N, okay.\par
+And then N and square root of N, there's a little bit\par
+of cancellation there; and we can write the average minus mu\par
+divided by sigma over square root of N, right,\par
+because we took N here to the denominator.\par
+Okay, so the average minus mu divided by sigma\par
+over square root of N; that's Zn,\par
+and what we can then say is that the probability\par
+that the average is less than A,\par
+that's what we are interested in, or less than alpha.\par
+We can just plug it in; so if X averages less than alpha,\par
+this is the probability, this is the same\par
+as the probability that Zn is less than alpha,\par
+for the average, minus mu divided\par
+by sigma over square root of N.\par
+And now remember that Zn is distributed roughly\par
+normal zero one; and because this is roughly\par
+normal zero one, this behaves like phi, which is the CDF,\par
+the cumulative distribution function, of the normal\par
+random variable evaluated alpha minus mu\par
+divided by sigma over square root of N.\par
+And I'll go over this again in the next slide\par
+just in case you forgot, but let's just believe it for now.\par
+We have talked about it before, okay.\par
+So and what you can observe here is that what happens here\par
+we, to get Z from the average, we just took the average.\par
+We subtracted mu, which makes sense because the average\par
+of the Xn is something that is related to the mean;\par
+and we subtract mu, we get something that has mean zero.\par
+And then we normalize by sigma over square root of N,\par
+as we saw, to get random variable\par
+that distribute at normal zero one.\par
+And this we can just look at the table\par
+or calculate and get the answer for, okay.\par
+So this gives us a general formula\par
+for the average of random variables.\par
+So as you remember from the store, for each Xi,\par
+we couldn't say what is the probability\par
+that it was bigger than something.\par
+The only thing we could do is maybe use\par
+Chebyshev's inequality or something like that,\par
+which will not give us a strong answer.\par
+But now it doesn't matter what the distribution is\par
+if we detect a sum of 30 variables.\par
+Then whatever the original distribution was,\par
+this sum will behave, after small normalization,\par
+we have roughly like normal, and then we can use\par
+the normal approximation to get the probabilities.\par
+So before we go back to the store,\par
+I just want to remind us about the phi.\par
+So we have here the probability that the standard\par
+normal variable is less than some value, and we said\par
+this is phi of this value; so here is just a reminder.\par
+So if X is distributed normal zero one, we define phi of X,\par
+the cumulative distribution function, to be the integral\par
+of minus infinity to X of the probability of X of F of X.\par
+This is normal, so it's one over square root of two pi\par
+E to the minus Y squared DY up to X, okay.\par
+And while there's no normal formula for this,\par
+this we can use either table or computer;\par
+and we call these values when it's normalized by Z,\par
+and this is called, these Z values are listed\par
+in what's known as the Z table, okay.\par
+And the values of phi of X are given by this table here;\par
+and what we're going to use in the next slide is,\par
+looking ahead a little bit, is we're looking at a phi\par
+of 2.0, which is the probability that a normal\par
+random variable will be at most two standard deviation,\par
+will be less than or equal to two\par
+standard deviations below its mean.\par
+So this is the mean; this is two standard deviation\par
+above the mean; and we're looking at the probability\par
+that it's at most two standard deviation\par
+below that value, mean plus two standard deviation.\par
+And that value is, according to this table,\par
+is .9772; so let's just remember that.\par
+Okay, so going back to our store example,\par
+remember that we can look at the customer's spending as Xi;\par
+and we're assuming they're independent of each other.\par
+The mean spending is $80; the standard deviation is $40,\par
+and we assume that there are 100 customers.\par
+And we asked about the probability\par
+that the average spending was less than or equal to $72.\par
+So this was a question that if we asked\par
+for an individual customer we could not solve,\par
+or not solve effectively; but if we look at\par
+the average spending or equivalently the total spending\par
+of the 100 customers, as we're gonna see,\par
+we can answer give a pretty good answer for.\par
+All right, so, and this corresponds to falling 10%\par
+below the average income for that day\par
+for the store, okay, because $72 from $80.\par
+All right, so, what we saw in the previous\par
+or two slides before is that the probability\par
+that the average is less than or equal to alpha\par
+is going to be at most phi, the CDF of the standard\par
+normal distribution evaluated alpha.\par
+This is the value after we subtract the mean mu\par
+and normalize by the standard deviation,\par
+so normalize by sigma divided by square root of N.\par
+Okay, and then we can just plug,\par
+we have all these values here; and we will normally\par
+have it for any problem we are asking for.\par
+So, in our case, N is 100 and alpha is 72, okay;\par
+and then we have mu and sigma, so that's going to be phi\par
+of 72 minus 80, the mean, divided by the original\par
+standard deviation was 40 divided by square root of 100.\par
+And that's phi of minus, this is minus eight;\par
+and this is divide by four, so it's phi of minus two, okay.\par
+And maybe before we evaluate phi\par
+of minus two, I just want to observe.\par
+So this is how much we are away\par
+from the mean; it's 72 minus eight.\par
+So 72 minus 80; so it's minus eight,\par
+and we normalize by sigma of this.\par
+And the sigma we're normalizing is the sigma\par
+of this new random variable, which is the average.\par
+And what it is, it's,\par
+so when you divide that,\par
+so the original standard deviation was 40;\par
+and now what we're doing is we're dividing\par
+by the square root of the number of people\par
+that we have because that effectively, what that does\par
+is it changes the standard deviation from 40\par
+to 40 divided by the square root,\par
+which in this case is 40 divided by 10, which is four.\par
+So the original standard deviation\par
+of an individual customer is 40; and now when we look\par
+at the sum, we see that it's 40 divided\par
+by square root of 100 to get this value, okay.\par
+And so it's four, all right.\par
+Okay, so now we need to evaluate phi of minus two;\par
+and so what we need to evaluate is this blue,\par
+or cyan, here to the left.\par
+And as we had seen before, the probability that X is less\par
+than or equal to minus A is phi of minus A,\par
+that's quite efficient, right.\par
+And phi of minus A, this value here,\par
+the phi of minus A is going to be equal to phi of plus A,\par
+like they're here, which in turns is one minus phi of A.\par
+So this is one minus phi of A.\par
+So, in this case, phi of minus two\par
+is one minus phi of two, right.\par
+The phi of the area here to the left is one minus the area\par
+to the left of this point to here, so one minus phi of two.\par
+And phi of two, as we saw before in the previous slide,\par
+was 0.9772; so this gives us 0.0228,\par
+which is roughly 2.3%.\par
+So that means that if you have 100 customers, okay,\par
+and with this value of standard deviation,\par
+the probability that you'll fall below 10%\par
+is only 2.3%, which is pretty low, I would say,\par
+and so maybe you don't need to worry about,\par
+and all this is thanks to the central limit theorem.\par
+And, of course, this is because the standard\par
+deviation was 40, which is pretty high;\par
+but once you take 100 customers and you look at the average,\par
+you'll be normalizing by square root of 100 to relate it\par
+to the normal distribution, and that will give you\par
+just standard deviation four, okay.\par
+All right, so what we see is that going far beyond\par
+the weak law of large numbers, we could now create\par
+a distribution and see how things behave,\par
+the distribution of the values of the sum are going to be.\par
+And now we can provide pretty strong bounds for that, okay.\par
+So and this we applied it here to the store example;\par
+but you can apply it, of course, to many examples.\par
+You just need to remember this formula\par
+that the probability that the average\par
+of N samples is going to be less than alpha.\par
+You can write it as phi of alpha minus mu divided by sigma\par
+divided by the square root of N, and then you can just\par
+apply this formula to many things so long as you just\par
+have iid distributions, you know the mean,\par
+and you know the standard deviation, you're in good shape.\par
+All right, cool, okay; so with that,\par
+we described the central limit theorem,\par
+and we gave a general way that you could apply it\par
+and also how it applied to specific example\par
+and what we want to do next is prove\par
+the central theorem, central limit theorem.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+Let X be a random variable with \'b5 = 10 and \f1\lang1032\'f3 = 4. A sample of size 100 is taken from this population. What is the approximate probability that the sample mean of these 100 observations is less than 9?\par
+\par
+\tab\par
+0.002\par
+\par
+\tab\par
+0.004\par
+\par
+\tab\par
+0.006\par
+\par
+\tab\par
+0.008\par
+\par
+Submit\f0\lang9\par
+}
+ 

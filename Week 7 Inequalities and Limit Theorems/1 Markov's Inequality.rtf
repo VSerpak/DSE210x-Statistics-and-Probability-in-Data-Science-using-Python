@@ -1,0 +1,426 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello, and welcome back.\par
+In this set of lectures,\par
+we're going to talk about inequalities\par
+that are related to probability distributions.\par
+We'll start with the,\par
+you might want to think of it\par
+as the mother of all such inequalities.\par
+It's named after Andre Markov, shown here,\par
+who was a Russian mathematician\par
+active at the beginning of the 20th century.\par
+We're going to motivate his inequality,\par
+provide a little bit of intuition,\par
+then formulize the inequality, prove it,\par
+show an example, and then discuss possible extensions.\par
+Let's start.\par
+Why do we care about inequalities?\par
+Often, we want to bound probabilities of events.\par
+Typically they'll be bad events.\par
+For example, we want to guarantee or assure\par
+that the probability of excessive rain is small\par
+or the probability of heavy traffic is not that high\par
+or the probability that a company\par
+will incur a large loss is contained\par
+or the probability of disease outbreak is small.\par
+We want to say that these bad events\par
+have small probabilities.\par
+What we're going to do now is,\par
+we're going to describe Markov's inequality,\par
+which, as I just mentioned, is the foundation\par
+of many of the inequalities we may encounter later.\par
+It's, this inequality is not so strong,\par
+and later we'll describe stronger bounds.\par
+But we're going to start with Markov's inequality,\par
+and specifically, we'll give\par
+a little bit of intuition about it.\par
+Let's consider Markov's meerkats that are shown here.\par
+Each of them is a height which, of course,\par
+is a nonnegative number.\par
+Let's assume that the average meerkat height is 10 inches.\par
+So I have a question.\par
+Can half the meerkats have a height\par
+which is at least 40 inches?\par
+Can half of them be at least 40 inches tall?\par
+Clearly the answer is no\par
+because if half the meerkats were more than 40 inches tall,\par
+then just by looking at this half,\par
+just they alone will count for an average\par
+which is at least 20.\par
+Even if all the other meerkats were zero inches tall,\par
+then the average would be at least 20.\par
+And if the other meerkats are more than zero,\par
+then the average will be bigger than 20.\par
+So the answer is no,\par
+because if half the meerkats were more than 40 inches tall,\par
+then the average would be at least half times 40,\par
+which is 20 inches.\par
+And we're told the average is, in fact, only 10 inches.\par
+So this is impossible.\par
+Therefore, we see that, if we want to find\par
+what's the highest fraction of meerkats\par
+that can be bigger than equal to 40 inches tall,\par
+let call it F 40, fraction of meerkats 40 inches or taller,\par
+then we see that if F 40 times 40,\par
+take this fraction, multiply it by 40,\par
+if this number is bigger than 10,\par
+then the average would be bigger than 10 as well,\par
+just like we saw here for half.\par
+And therefore, F 40, again, the fraction of meerkats\par
+that are over 40 inches tall, times 40,\par
+must be less than equal to 10,\par
+or F 40, this fraction, must be at most 10 over 40,\par
+which is one quarter.\par
+If we want, we can solve it for general mean, mu.\par
+Here, the mean was 10.\par
+But for general mean mu, we can say that F of four times mu,\par
+the fraction of meerkats\par
+that are at least four times mu inches tall,\par
+times four mu, that has to be at most mu\par
+because if it's bigger than mu,\par
+then the average will be larger than mu.\par
+So F four mu, the fraction four mu tall,\par
+times four mu, is at most mu.\par
+Then we can move four mu to the other side\par
+and we get that F four mu is at most one quarter,\par
+just like we got here.\par
+So this will be true in general.\par
+And F seven mu, it will be at most 1/7th and so on.\par
+If you understand this meerkat calculation,\par
+then you understand Markov inequality.\par
+In other words, this is Markov's inequality in a nutshell.\par
+Now to describe it a little more formally,\par
+there are two form,\par
+one which is intuitive and more memorable,\par
+it's based on what we have just said now,\par
+and the second one is more direct\par
+and is more easily applicable\par
+and therefore a little more common to see.\par
+The one that we just described now says\par
+that if x is a nonnegative random variable,\par
+can be discrete or continuous, with finite mean mu,\par
+then, first formulation,\par
+for all alpha bigger than one,\par
+the probability that x is bigger than alpha mu\par
+is less than equal to one over alpha.\par
+Like we said before,\par
+the probability that x is bigger than four mu\par
+was less than equal to 1/4th,\par
+the probability that x will be bigger than 10 mu\par
+will be less than equal to 1/10th and so on.\par
+To me, that's the easier one to remember.\par
+It says that the probability\par
+that a nonnegative random variable is\par
+at least alpha times its mean is at most alpha.\par
+Now, the second formulation,\par
+both of them apply to nonnegative random variable\par
+with finite mean mu.\par
+That applies to both of them.\par
+But the second formulation provides for more direct proof,\par
+which we'll do in a second, and is easier to apply.\par
+And therefore it's a little more common.\par
+It says that, here, if we let alpha mu,\par
+this quantity, if we call it a,\par
+then alpha bigger than equal to one means\par
+that, because a is alpha mu\par
+and alpha is bigger than equal to one,\par
+it means that a is bigger than mu.\par
+So for all a bigger than equal to mu,\par
+the probability that x is bigger than a,\par
+bigger than alpha mu,\par
+so that's the same, probability that x is bigger than a\par
+or or alpha mu, should be less than equal to one over alpha.\par
+But from here we see that one over alpha is mu over a.\par
+So is less than equal to mu over a.\par
+So for all a which is bigger than the mean,\par
+the probability that x is bigger than a\par
+is at most mu divided by this a.\par
+For example, if the mean is 10 and a is 20,\par
+the probability that x is bigger than 20\par
+will be bigger than equal to 10 over 20, which is 1/2.\par
+If, again, the mean is 10 and a is 40,\par
+the probability that x is bigger than 40\par
+will be at most 10 divided by 40, which is one quarter.\par
+You can see maybe why this is a little easier to apply,\par
+because typically someone will ask us just,\par
+"What is the probability that x is bigger than some number?"\par
+So it can just plug this in,\par
+and here plug mu and a and get the answer.\par
+Let's see how we would prove it.\par
+We want to show that the probability\par
+that x is bigger than a is at most mu over a.\par
+You notice we are proving the second formulation,\par
+which is equivalent to the first.\par
+And we'll prove it for discrete random variable.\par
+But the same proof works for continuous.\par
+Just replace the summation by an integral.\par
+The mean, as we know, is going to be summation\par
+over all x of x times p x.\par
+So here, if this is x and p of x,\par
+then it's the sum of x times p of x.\par
+Here it's always continuous,\par
+but you can think of it as it's discrete,\par
+it (mumbles) regular.\par
+So it's summation of x times p of x of all varies of x.\par
+This is going to be bigger than equal than the sum,\par
+the same sum, but when we sum only partial value,\par
+remember we had given some value a,\par
+only on x's that are bigger than equal to a.\par
+So if this a, we are only sum from this point onwards\par
+to the right, x times p x.\par
+So instead of summing everything,\par
+we are summing for all x which is bigger than or equal to a,\par
+just summing here.\par
+It's bigger than equal to the whole sum.\par
+Now this, on the other hand,\par
+we can, if we replace here x by a,\par
+so here, in this region, x is bigger than a.\par
+So if we replace x by a,\par
+then the sum will be smaller.\par
+That's what we did here.\par
+Instead of looking at summation x p x,\par
+we are looking at summation of a p x.\par
+Because x is bigger than equal to a,\par
+when we summing from here on,\par
+then when we replace x by a,\par
+we're making this summation smaller.\par
+Now we can take a out.\par
+And here we'll have summation\par
+of all x bigger than equal to a of p x.\par
+And this clearly just the probability\par
+that x is bigger than equal to a.\par
+So this is a times the probability\par
+that x is bigger than equal to a.\par
+What we get is that mu is bigger than equal to a\par
+times the probability that x is bigger than equal to a.\par
+And therefore the probability\par
+that x is bigger than equal to a\par
+is less than equal to mu over a,\par
+which is what's written here.\par
+So this is it, very simple proof of Markov's inequality.\par
+It's deceptively simple because, as we said,\par
+we're going to use it\par
+to prove much stronger results later on.\par
+Let's see an example, citation counts.\par
+A journal paper is cited eight times on average.\par
+This number is actually roughly right.\par
+That's the average number of citation\par
+that a journal paper gets.\par
+But some paper gets significantly more citation than this.\par
+For example, this here is a popular paper\par
+on hypothesis testing that we're going to discuss very soon,\par
+this paper on Controlling the False Discovery Rate.\par
+And this particular paper has over 40,000 citations,\par
+many more than the eight average number of citations.\par
+What we want to do is, we want to bound the probability\par
+that a paper gets cited at least 40,000 times,\par
+like this paper.\par
+Here we'll let x be the number of paper citation,\par
+number of citations that a paper gets.\par
+Notice that x is nonnegative,\par
+so we can apply Markov's inequality.\par
+We're told that the mean, the expectation mu, is eight.\par
+So by Markov's inequality,\par
+we see that the probability that x is bigger than equal to a\par
+is at most mu over a.\par
+Notice that we're using the second formulation\par
+because we just want to see what's the probability\par
+that x is bigger than 40,000.\par
+So it's useful to just have a here.\par
+Then we just need to plug in mu and a.\par
+So this is going to be the probability\par
+that x is bigger than equal to 40,000\par
+is at most mu divided by 40K.\par
+But mu we're told is eight, 'kay, here.\par
+So this is 0.02%.\par
+So Markov's inequality tells us that the probability\par
+that a paper will get cited so many times\par
+is at most 1/50th of 1%.\par
+Even though this looks strong,\par
+as we'll see later if we apply another inequality,\par
+it makes more assumption,\par
+then we can get even better results.\par
+Now, couple of questions\par
+once we see such a simple inequality is,\par
+we wonder whether we can generalize it.\par
+Question is, can Markov inequality be generalized?\par
+And what that means is, can we relax the condition for it\par
+and can it be strengthened?\par
+So generalized, we mean that we want\par
+to relax the conditions.\par
+So we can wonder\par
+whether we can remove the nonnegative assumption.\par
+We're assuming that x is bigger than equal to zero.\par
+Can we remove it and have the equality still hold?\par
+And the answer is, no.\par
+If x can be negative, then the probability\par
+that x is bigger than equal to a\par
+can be close to one for any a.\par
+The reason is simple.\par
+Here, let's say, is zero and here is a, any number.\par
+If x can be negative,\par
+we can have a have probability which is close to one\par
+and yet put a small probability here\par
+at a very, very large negative number,\par
+so, like, minus almost infinity,\par
+and we can make the mean be anything.\par
+That way, we can make the probability\par
+that x is bigger than equal to a\par
+be as close to one as we want.\par
+So here is how you specifically do it.\par
+For x equal to a, we'll let the probability a\par
+be one minus epsilon.\par
+So we put probability one minus epsilon here.\par
+And then, at the point mu minus one minus epsilon a\par
+divided by epsilon,\par
+so notice this probability,\par
+as epsilon becomes close to zero,\par
+this probability of a becomes close to one,\par
+and this could potentially become very negative\par
+because mu minus a could be negative,\par
+and then we divide by epsilon, which is a very large number.\par
+Then we put probability epsilon there.\par
+If we calculate the mean, you can see\par
+that what is the mean will get one from here,\par
+from a will get one minus epsilon times a.\par
+And from the other point, we'll get\par
+epsilon will cancel with epsilon the denominator.\par
+We'll get mu minus one minus epsilon over a.\par
+So the one minus epsilon times a will cancel\par
+and we'll get that the expect value is mu.\par
+And yet, the probability that x is bigger than equal to a\par
+is the probability of a, which, as we said,\par
+is very close to one.\par
+So that shows that we can have a anything we want.\par
+We just need to make this other value\par
+be sufficiently negative.\par
+And then the probability of a will be close to one\par
+and the mean will still be mu.\par
+So we cannot remove the nonnegative.\par
+That won't work.\par
+The other question is, can we strengthen?\par
+Namely, Markov's inequality says\par
+the probability that x is bigger than equal to a\par
+is at most mu over a.\par
+You may ask, maybe we can prove\par
+that the probability that x is bigger than equal to to a\par
+is at most half of that or 1/3rd of that?\par
+Again, the answer is no.\par
+To see that,\par
+we're going to show that this inequality\par
+can hold with equality.\par
+And if it can hold with equality,\par
+we will not be able to prove\par
+that it's less than equal to half that.\par
+If we can prove that you can find in this distribution\par
+such that probability of x bigger than equal to a\par
+is equal to mu over a\par
+will not be able to show\par
+that it's less than equal to mu over a,\par
+over two and so on.\par
+To show that, we are going to take advantage\par
+of the very simple proof that we had,\par
+which is rewritten here.\par
+Notice that we have two inequalities, here and here,\par
+and we can show that these inequalities\par
+can hold with equality.\par
+Let's look at the first inequality here.\par
+Observe that here what we did was,\par
+here we have the sum of all x's\par
+and here we have the sum of all x's\par
+that are bigger than equal to a,\par
+and therefore this quantity here is smaller,\par
+because we're not summing on elements\par
+that are between zero and a.\par
+But if between zero and a, for all x between zero and a,\par
+the probability of x is zero, then we'll get equality here\par
+because these two sums will be the same.\par
+Here we sum all x, and here we sum\par
+of x bigger than equal to a.\par
+But what we omitted, the probability of x was zero\par
+so this sum was zero.\par
+So if all x between zero and a, the probably of x is zero,\par
+we got equality here.\par
+Let's see here, can we get equality in this one?\par
+Now, the difference between this term and this one\par
+is that both of them were summing over x\par
+with bigger than equal to a,\par
+and here we multiply by x and here we multiply by a.\par
+But if for all x which is strictly bigger than a,\par
+p of x was zero,\par
+then we would not be reducing any terms\par
+because any term here for x bigger than a\par
+had p of x which is zero.\par
+So this would hold with equality also.\par
+In other words, if x is nonzero only for zero and for a,\par
+then we get equality.\par
+Here, then, we get equality here and here.\par
+And then we get the probability\par
+that x is bigger than equal to a is equal to mu over a.\par
+And therefore, Markov's inequality can hold with equality\par
+and we cannot strengthen it.\par
+So there are no sweeping improvements.\par
+What we're going to do is, we're going continue looking.\par
+And how will we look?\par
+Well, let's look at the strengths and weaknesses\par
+of Markov's inequality.\par
+Let's start with the strengths.\par
+One good thing about it is,\par
+it applies to all nonnegative random variables.\par
+It doesn't matter what the distribution is.\par
+The inequality applies.\par
+The second, and therefore it means\par
+that it can always be used.\par
+We don't need to worry about\par
+whether this specific property\par
+of the distribution needs to hold.\par
+Third strong thing is that it can be used\par
+to derive other inequalities,\par
+for example Chebyshev and Cheroff inequality,\par
+and we're going talk about them\par
+in the next couple of lectures.\par
+On the other hand, weaknesses.\par
+The first weakness is actually the same as the strength,\par
+that it applies to all nonnegative random variables.\par
+That means that it's limited to inequalities\par
+that hold for all distributions.\par
+So we cannot expect it to be stronger\par
+than the result we get, the weakest result\par
+we can get for all distributions.\par
+So what we're going to do in the future\par
+if we want to strengthen it is,\par
+we need to add assumptions.\par
+Let's assume that the distribution satisfies\par
+certain properties and then we can prove stronger results.\par
+To summarize, we talked about Markov's inequality,\par
+we motivated, give some intuition using Markov's meerkats.\par
+And then we formulated it.\par
+In fact, we gave two formulations.\par
+And we proved it, showed an example,\par
+and we talked about possible extensions,\par
+those we cannot have, as we showed,\par
+and those we might be able to have.\par
+and what we're going to do next time,\par
+we'll talk about Chebyshev's inequality.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+If a mob of 30 meerkats has an average height of 10\rdblquote , at most how many meerkats can be 30\rdblquote  tall?\par
+\par
+\tab\par
+1 meerkat\par
+\par
+\tab\par
+6 meerkats\par
+\par
+\tab\par
+10 meerkats\par
+\par
+\tab\par
+None, this isn\rquote t possible\par
+\par
+Submit\par
+}
+ 

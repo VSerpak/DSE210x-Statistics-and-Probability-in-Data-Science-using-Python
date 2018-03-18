@@ -1,0 +1,729 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+We have so far talked about Markov's\par
+and Chebyshev's inequality and we want to move\par
+to more sophisticated and stronger inequalities.\par
+But before we do that I want to spend this lecture\par
+preparing the background for the stronger inequalities.\par
+So we're going to talk\par
+about the moment generating functions.\par
+First we'll describe what moments are,\par
+we've mentioned it before,\par
+we'll say a little more about them now.\par
+We'll define a single function\par
+that determines all of them,\par
+it's called the moment generating function, or MGF.\par
+We'll define it, we'll give some examples,\par
+and we'll describe some of its properties.\par
+So what are moments?\par
+Moments are expectations of powers of X.\par
+For example, the expectation of X is the first moment,\par
+the expectation of X squared is the second moment,\par
+third moment, and so on.\par
+Sometimes they are called raw moments\par
+to distinguish them from central moments\par
+which are the moments when you subtract the mean.\par
+For example, the expected value of X minus mu\par
+raised to the n-th is the n-th central moment.\par
+And as we can see, the moments generate,\par
+determine the mean, so the expected of X is the mean,\par
+the expected of X squared minus the expected\par
+of X square is going to be the variance.\par
+So they determine the mean, the variance,\par
+and many other distribution properties.\par
+And what we're going to do now is describe\par
+one general method that determines all the moments.\par
+Perhaps not surprisingly\par
+it's called the moment generating function, or MGF,\par
+and what it does is it maps a random variable X\par
+to a real function M, and by real function\par
+I mean a function M from reals to reals.\par
+So more specifically we define\par
+the generating function of X,\par
+which we'll also denote by Mt for short,\par
+is defined to be the expected value of e to the tX.\par
+This applies both to discrete and continuous distribution,\par
+so if it's a discrete distribution\par
+the expected value of tX is summation\par
+of p of x, e to the tx, as we know,\par
+and if the distribution is continuous,\par
+then the expected value of tX, again as we know,\par
+is the integral of f of x, e to the tx-th, dx.\par
+You'll notice that the moment generating function Mx\par
+is actually determined by the distribution,\par
+by p or by f, so we could have called it\par
+M sub-p or M sub-f, but it's standard to call it\par
+by X, denote X, because we can then refer\par
+to M of two X, M of X plus Y, and so on.\par
+We're going to go over this first\par
+for discrete distributions,\par
+and then for continuous distributions.\par
+So let's start with discrete distribution\par
+with very few values and the fewest number\par
+of values possible is one value.\par
+So we have a random variable that's a constant,\par
+so X is just c.\par
+For example, X is five or seven, and so on.\par
+So what is the moment generating function Mc of t?\par
+It's the expected value of e to the tX\par
+which is summation of p of x, e to the tx.\par
+In this case x will take only one value which is c,\par
+so it's going to be, p of c is going to be one,\par
+times e to the tc, so it's e to the tc,\par
+which you can also write as e to the ct.\par
+Notice it's not so surprising because we're looking\par
+at the expected value of e to the tX.\par
+X is a constant, so e to the tX\par
+is just e to the tc, is a constant.\par
+It's expectation is again e to the tc,\par
+or e to the ct, as we'll write.\par
+For example, if we're looking at the constant one\par
+then the moment generating function is going to be\par
+e to the t, which is drawn here,\par
+and if X is a constant minus two,\par
+then the moment generating function M minus two of t\par
+is going to be e to the minus two t;\par
+e to the ct where c is minus two, e to the minus two t.\par
+As you can see, the moment generating function\par
+is always non-negative and at zero it's value is one.\par
+We'll come back to these properties,\par
+I just want to point them out here.\par
+So moving from one value to two values.\par
+If we have two arbitrary values,\par
+c-one and c-two, c-one happens with probability p-one,\par
+and c-two happens with probability p-two,\par
+not c-two, p-two, and p-one plus p-two\par
+have to add to one,\par
+then the moment generating function\par
+which is the expected value of e to the tX\par
+is going to be p-one times e to the c-one t.\par
+Right?\par
+It's p-one times e to the c-one t\par
+plus p-two e to the c-two t.\par
+And here, if the two values are one, minus one,\par
+c-one and c-two are one, minus one,\par
+each happens with probability one half,\par
+then the moment generating function will be\par
+one half e to the minus t plus one half e to the t,\par
+which looks like that.\par
+Again non-negative and at zero it's one.\par
+Of course we have two values of variables\par
+that are our favorites,\par
+those are the Bernoulli random variables.\par
+They have values zero and one.\par
+And so if X is distributed Bernoulli p,\par
+then p-one, the probability of one is p,\par
+and p-zero is one minus p.\par
+Then Mt is going to be one minus p\par
+times e to the t times zero,\par
+that's e to the tX when X is zero,\par
+plus p times e to the t one, here X is one.\par
+And so it's equal to one minus p.\par
+This is one, so it's one minus p,\par
+plus p times e to the t.\par
+One minus p, again, comes because we have\par
+summation of px e to the tX, but here X is zero,\par
+so this becomes a constant.\par
+This just become one minus p,\par
+and then plus p e to the t.\par
+Alright? Good.\par
+Now that we have seen some very simple examples\par
+of moment generating functions,\par
+let's look at some of their properties.\par
+As we said, the positive Mt\par
+is the expected value of e to the tX.\par
+e to any number is bigger than zero\par
+so the expected value of a positive random variable\par
+is also going to be positive,\par
+so it's always going to be bigger than zero.\par
+Furthermore, if we plug in M of zero,\par
+then you get e to the zero X, which is e to the zero,\par
+and the expected value of e to the zero is one.\par
+So these are two simple properties.\par
+We're going to see some more interesting properties now.\par
+So translation and scaling.\par
+First translation.\par
+If we take a random variable X\par
+and you move it to X plus b,\par
+then what is the new moment generating function?\par
+So M X plus b of t is the expected value,\par
+by definition, of e to the tX, but now X is X plus b,\par
+e to the t X plus b, which we can write\par
+as the expected value of e to the tX times e to the tb.\par
+Now e to the tb is a constant.\par
+We can take it outside the expectation.\par
+So it's e to the tb\par
+times the expectation of e to the tX.\par
+But the expectation of e to the tX\par
+is just the moment generating function of X\par
+so it's e to the tb\par
+times the moment generating function of X.\par
+So in other words, if we translate X,\par
+if we add to it b, then the generating function\par
+just gets multiplied by e to the tb.\par
+We'll do an example at the end of this lecture.\par
+If we scale that means we take X\par
+and we multiply it by a constant, let's say a.\par
+Then what is the moment generating function\par
+of the new random variable aX?\par
+Well, by definition, it's the expected value\par
+of e to the t times the new random variable,\par
+which is aX, and we can write it\par
+as the expected value of e to the a times tX,\par
+which we can write as this is\par
+the moment generating function of X at the point at\par
+because the moment generating function of X\par
+is the expected value of e to the tX\par
+and here we evaluate it at a t,\par
+so it's moment generating function of X at a t.\par
+In other words, if we take X\par
+and multiply it by a constant a,\par
+then the new moment generating function\par
+is the same as the old just evaluated\par
+instead of a t at a times t.\par
+Now we can combine these two properties.\par
+So if we have both translation and scaling,\par
+namely X becomes aX plus b,\par
+then what is the new moment generating function\par
+of aX plus b?\par
+Well, we can apply these two operations sequentially.\par
+So first it's going to be,\par
+we can take aX and we add b,\par
+so it's going to be the moment generating function\par
+of aX times e to the bt,\par
+because we just took X and we translated by b,\par
+so we multiplied by e to bt, like that.\par
+And then we need to calculate\par
+the moment generating function of aX,\par
+and that, we saw here, is the moment generating function\par
+of X evaluated at a t.\par
+So it's going to be e to the bt\par
+times the moment generating function of X evaluated at a t.\par
+So that's the general rule,\par
+and let's see an example.\par
+We know that if we have a constant random variable c,\par
+then the moment generating function is e to the ct.\par
+Now let's both translate and scale c.\par
+So instead of c, we're going to look at ac plus b,\par
+just like we did here, aX plus b,\par
+except now X is a constant c.\par
+So what is the moment generating function of ac plus b?\par
+Well, by using this formula it's going to be\par
+e to the b t times the moment generating function of c\par
+evaluated at a t.\par
+Like this.\par
+But the moment generating function of c at a t\par
+is just e to the c times a t.\par
+So it's e to the b t times e to the c a t,\par
+that happens to be an animal,\par
+which we can write as e to the, we can take t out,\par
+so we get ac plus b times t.\par
+And this of course we would have known\par
+because this is a new constant, ac plus b,\par
+and the moment generating function\par
+is just going to be e to this new constant,\par
+ac plus b times t, and we just showed\par
+that you can get it also by translation and scaling.\par
+Alright.\par
+So we now talked about operations\par
+in a single random variable.\par
+Now let's see what happens to two random variables.\par
+So first addition.\par
+I'm going to consider independent variables.\par
+I will show that the moment generating function\par
+of the sum of independent variables\par
+is the product of the moment generating functions.\par
+Specifically, if you take two variables,\par
+X and Y, and they are independent,\par
+then we'll show that the moment generating function\par
+of X plus Y is the product of the moment generating function\par
+of X times the moment generating function of Y.\par
+Okay, so let's just show it, it's very simple.\par
+The moment generating function of X plus Y t\par
+is the expected value of e to the t times X plus Y,\par
+it's the definition of the moment generating function,\par
+which is e to the tX times e to the tY, right here.\par
+But now notice that these X and Y are independent,\par
+therefore their powers are independent\par
+and the expectation of the product of independent variables\par
+is the product of the expectations.\par
+So this is the expectation of e to the tX\par
+and the expectation of e to the tY.\par
+But the expectation of e to the tX\par
+is the moment generating function of X\par
+and this is the moment generating function of Y.\par
+So it's M, it's just like we said\par
+the moment generating function of X\par
+multiplied by the moment generating function of Y.\par
+So we see that we have a very nice property.\par
+If you take two independent random variables,\par
+you add them, the moment generating function\par
+gets multiplied.\par
+It generalizes to n variables, the same proof.\par
+If X-one up to X-n are all independent of each other,\par
+define X to be the sum,\par
+then the moment generating function of the sum\par
+is just going to be the product\par
+of all the moment generating functions\par
+of the individual random variables.\par
+And if you take the average, define X average,\par
+so again X-one up to X-n are independent,\par
+and define X average to be just the arithmetic average,\par
+then the moment generating function\par
+is the moment generating function of this,\par
+but what happens is we then divide by n.\par
+So we just get the product.\par
+We can write it as the moment generating function\par
+of X-one over n plus X-two over n up to X-n over n,\par
+and each one by the property we had before\par
+is just the moment generating function of Xi\par
+evaluated at t over n, and then we just take the product.\par
+Okay, so we see that here.\par
+Alright.\par
+Now the main property of the moment generating function,\par
+as we said, is that it can help us generate\par
+all the moments.\par
+As we said, the expected value of Xn\par
+is the n-th moment of X, or sometimes called\par
+n-th raw moment of X, and as we'll see\par
+the moment generating function determines,\par
+or generates, all moments of X.\par
+So once you have it, then you can find\par
+all the moments.\par
+So you need to maybe work a little bit\par
+to get the moment generating function\par
+but once you do it, everything becomes relatively easy\par
+and sometimes you do need to work hard,\par
+and, in fact, this is the lecture\par
+in which we're going to work hard.\par
+But in the next two lectures\par
+we're going to benefit from this\par
+and we'll be able to derive very strong bounds\par
+on the values of random variables.\par
+So what do I mean by saying\par
+that the moment generating function\par
+determines all moments of X, it means\par
+that the expected value of X, which is the first moment,\par
+is just the derivative of the MGF evaluated at zero.\par
+The expected value of X squared\par
+is the second derivative of the MGF evaluated at zero.\par
+More generally, the expected value of Xn\par
+is the n-th derivative of the MGF of X\par
+evaluated at zero.\par
+To see why, observe that the MGF of X\par
+is just the expected value of tX,\par
+and now remember that e to the y\par
+is one plus y over one factorial\par
+plus y squared over two factorial, and so on,\par
+y cubed over three factorial.\par
+So what we have here is the same\par
+but just y replaced by tX.\par
+So that's going to be the expected value\par
+of one plus tX divided by one factorial\par
+plus tX squared divided by two factorial,\par
+which I'm writing as t squared times X squared\par
+divided by two factorial, plus tX cubed,\par
+which I'm writing as t cubed and X cubed,\par
+divided by three factorial, and so on.\par
+By the linearity of expectation this is going to be\par
+one plus, and the fact that these are constants,\par
+it's going to be one plus t over one factorial\par
+times the expected value of X\par
+plus t squared over two factorial\par
+times the expected value of X squared, and so on.\par
+And when you write it like this you can see\par
+that the MGF actually has all the expectation,\par
+all the moments, the expected value of X,\par
+the expected value of X squared, and so on.\par
+So all we want to do is just recover them,\par
+and the way we'll recover them\par
+is we're going to take derivatives\par
+and then plug in t equal to zero.\par
+So for example, is we don't take any derivative\par
+and plug t equal to zero, all these will disappear\par
+because we have t, t squared, t cubed,\par
+they'll all disappear and we'll be left with one.\par
+Just the expected value of X.\par
+If we take one derivative, one will go away,\par
+this will become one, just E to the X,\par
+and here we'll get two t, we'll get terms\par
+with t in them, such that when we plug t equal to zero\par
+they will all disappear.\par
+And if we take the second, so we'll be left\par
+with the expected value of X.\par
+If we take the second derivative,\par
+this will go away, this will go away,\par
+because we are taking two derivatives of t,\par
+and this will first become two t,\par
+and then we differentiate again,\par
+will cancel with two, and we'll just get\par
+the expected value of X squared.\par
+And all the remaining terms\par
+because we have higher powers of t,\par
+like t cubed and so on, we take the second derivative,\par
+there will be t in them, factors of t,\par
+so when we plug t equals to zero,\par
+they'll become zero, and we'll just have\par
+the expected value of X squared.\par
+So let's just see it in a slightly different way\par
+for the first and second moment\par
+because this is the main feature\par
+of moment generating function,\par
+which is why we are defining it\par
+to how we'll use it in the next lectures.\par
+So, just to make sure that we understand it\par
+a little better, let's do the first two moments\par
+and see what happens.\par
+If we the derivative of the MGF,\par
+just written here, d to dt\par
+of the expected value of e to the tX,\par
+what we can spell it out, it's d to the dt\par
+of the expected value of e to the tx,\par
+summation of px e to the tx.\par
+We can exchange the order of summation and derivatives.\par
+So it's summation of x times the derivative\par
+of px e to the tx.\par
+Which is same as, we can write px, take the px outside.\par
+So it's summation of px times the derivative\par
+of e to the tx, which is just the expected value\par
+of the derivative of e to the tX.\par
+What is that?\par
+We're just differentiating e to the tX\par
+and t is a variable, X is a constant here,\par
+so it's the expected value of X times e to the tX.\par
+Now plugging t equal to zero.\par
+Then we get the expected value of X times e to the zero,\par
+which is just the expected value of X.\par
+And if we take the second derivative,\par
+the first derivative here of the MGF,\par
+which is the derivative of the expected value\par
+of X e to the tX, which again, we can replace\par
+the expectation with the derivative,\par
+as we have done here.\par
+It's the expected of d to the t of X e to the tX,\par
+and this is just going to again,\par
+we're differentiating with the respect to t\par
+so X is a constant for us.\par
+So it's going to be X squared times e to the tX.\par
+And now we're plugging in t equal to zero,\par
+so we get the expected value of X squared\par
+times e to the zero,\par
+which is the expected value of X squared.\par
+So we see that the second derivative of the MGF\par
+evaluated at zero is the second moment.\par
+And generally, for any n which is at least zero,\par
+if we take the n-th derivative of the MGF\par
+it will be the expected value\par
+of x to the n e to the Xt.\par
+Just like here.\par
+And evaluated at zero,\par
+we'll get the expected value of X to the n.\par
+Let's calculate now the MGF of more general\par
+or more complicated distributions\par
+and we'll also evaluate and see\par
+that we'll get the moments.\par
+So let's first look at the binomial distribution,\par
+Bp,n, p is between zero and one\par
+and n is bigger than or equal to zero,\par
+it's an integer, and you recall\par
+that the probability of k is n choose k,\par
+p to the k times one minus p to the n minus k.\par
+And we're going to show that the MGF\par
+of the binomial distribution is one plus p,\par
+e to the t minus one, raised to the n.\par
+So the moment generating function of t\par
+is the expected value of e to the tX,\par
+which is summation of p of k e to the tk,\par
+which is summation of, p of k is just n choose k,\par
+p to the k, one minus p to the n minus k\par
+times e to the tk.\par
+We can just write it as,\par
+we can take here p to the k and e to the tk.\par
+We can combine them to get p times e to the t\par
+raised to the k.\par
+Everything else stays the same.\par
+And what are we going to use now?\par
+We have summation of n choose k, something to the k\par
+and something else to the n minus k.\par
+We're going to use the binomial theorem\par
+that says that a plus b to the n\par
+is summation of n choose k, a to the k, b to the n minus k.\par
+So here this is a and this is b.\par
+So what we'll get is p e t\par
+plus one minus p raised to the n,\par
+which we can write like this, as one plus p,\par
+e to the t minus one raised to the n.\par
+So this is the MGF of the binomial distribution\par
+and just to see, let's just see\par
+that we can recover the first moment,\par
+the expected value of X, so let's just remember\par
+that this is the moment generating function,\par
+one plus p, e to the t minus one, raised to the n.\par
+So if we take the derivative, we get that it's n,\par
+this is what we have,\par
+one minus p plus p e t raised to the n.\par
+We take derivative, we get n, times this value\par
+raised to the n minus one instead of n,\par
+times the internal derivative of p e to the t,\par
+and that's just going to give us p times e to the t.\par
+And so, now we want to evaluate it at zero,\par
+so et equals to zero.\par
+So what we get here is n and then here we get\par
+p times e to the zero plus one minus p,\par
+and this will give us p plus one minus p,\par
+which is just one, one to the n minus one is just one.\par
+And then we get here p times e to the zero,\par
+which is again one, so we get n times one\par
+times p times one, which is np.\par
+So we see that if we take the first derivative\par
+evaluated at zero, we get the expected value of X,\par
+and we could continue and take now the second derivative\par
+and evaluate at zero, and you will get\par
+the expected value of X squared, and so on.\par
+And if you want, it's not that hard to do that.\par
+So next let's look at the Poisson distribution.\par
+The Poisson distribution, P lambda\par
+for lambda bigger than zero is defined\par
+by e to the minus lambda,\par
+lambda to the k over k factorial.\par
+And the moment generating function,\par
+we're going to show it's e to the lambda\par
+times e to the t minus one.\par
+So let's calculate.\par
+The moment generating function of t\par
+is the expected value of e to the tX,\par
+which is summation of p, probability of k,\par
+times e to the tk, which is summation\par
+of e to the minus lambda, lambda to the k\par
+over k factorial, like this, times e to the tk.\par
+We have here lambda to the k and e to the tk,\par
+so we can write here summation\par
+and we now replace this by lambda\par
+e to the t, raised to the k.\par
+So now you see this looks almost\par
+like a Poisson distribution\par
+because we have summation of e to the minus something\par
+times something to the k over k factorial.\par
+The only thing is that this minus something\par
+is not the same as this one.\par
+So what we do is we can write it as,\par
+we can multiply it by e to this value,\par
+e to the lambda, e to the t minus lambda.\par
+And what we'll get here is e to the minus lambda et\par
+because when you multiply this by this,\par
+then e to the lambda et will cancel\par
+and get e to the minus lambda, which you have here.\par
+Now what you have is that, here you have\par
+e to the minus some value, lambda, et\par
+and you get the same value here.\par
+So now this is a Poisson distribution\par
+and we'll sum to one, and what we'll be left with\par
+is e to the lambda et minus one.\par
+Like that.\par
+Now you recall that the binomial distribution\par
+converges to the Poisson so you may ask\par
+whether the MGF of the binomial distribution\par
+will converge to the Poisson, and indeed it does\par
+and we'll show it in a few slides.\par
+Next let's look at the continuous distribution,\par
+the normal distribution.\par
+So if you have the standard normal distribution,\par
+normal zero, one, then the distribution function\par
+is one over square root of two pi,\par
+e to the minus x squared over two, f of x,\par
+and we're going to show that the moment generating function\par
+is e to the t squared over two.\par
+So what is it?\par
+It's the expected value of e to the tX,\par
+which is the integral from minus infinity to infinity\par
+of e to the tx, f of x dx.\par
+And I'm going to, just instead of the integral\par
+minus infinity to infinity, I'm going to omit the limit\par
+and just write the integral.\par
+So it's going to be the integral of e to the tx\par
+times one over square root of two pi,\par
+e to the minus x squared over two,\par
+and now we can combine the exponents\par
+and take the one over square root of two pi out,\par
+so it's one over square root of two pi\par
+times the exponent, and what we have,\par
+minus x squared over two plus tx,\par
+which is what we had here.\par
+And this looks awfully close to a square.\par
+So we're going to complete the square here,\par
+and we do it by subtracting t squared over x.\par
+We have e to the minus x squared minus two tx,\par
+and then we have minus t squared over two,\par
+which becomes plus, so it's e to the minus x\par
+minus t squared over two\par
+because we have minus t squared.\par
+And then we have to add the t squared\par
+plus t squared over two.\par
+So it's one over square root of two pi\par
+times this exponent.\par
+e to the t squared over two does not depend on x\par
+so we take it out, so it's e to the t squared over two\par
+times one over square root of two pi\par
+and the integral of the exponent\par
+of minus x minus t squared over two, dx.\par
+And this of course is the integral\par
+of the standard normal distribution\par
+so this integrates to one.\par
+It gives us e to the t squared over two.\par
+What if the normal distribution\par
+is not standardized, is abnormal so to speak?\par
+So standard normal we just saw.\par
+Z is normal zero, one,\par
+the MGF is e to the t squared over two.\par
+And for general normal distributions\par
+X is normal with mu and variance sigma squared.\par
+We're going to show that the MGF is e to the mu t\par
+plus sigma squared t squared over two.\par
+So X you can write as sigma Z plus mu\par
+because X is the mu and variance sigma squared.\par
+Then the MGF of X is therefore the MGF of aZ plus b\par
+because Z is the standard normal.\par
+And we have a formula for the moment generating function\par
+of translation and scaling and we saw\par
+that the moment generating function of aZ plus b,\par
+a few slides ago, was e to the bt\par
+times the moment generating function\par
+evaluated at a times t.\par
+So we can just do that.\par
+So here b is mu.\par
+Here b is mu, so it's e to the mu t,\par
+and a is sigma, so we have times e\par
+to the sigma squared t squared over two.\par
+Because we have at and a is sigma,\par
+so we just plug in here.\par
+We just plug in here, instead of t we write sigma t.\par
+So sigma squared t squared over two,\par
+which is the same as e to the mu t\par
+plus sigma squared t squared over two,\par
+which is what we wanted to show.\par
+So now we have found the moment generating functions\par
+of essentially all the distributions that we'll need\par
+and you can check that if you wanted.\par
+For example here, you could take the derivative\par
+of this function and evaluate it at t equal to zero\par
+and you'll get the expected value of X which is mu.\par
+And if you took the second derivative\par
+and evaluated at zero, you'll get\par
+the expected value of X squared, and so on.\par
+Then let me just mention a few more general properties\par
+of moment generating functions.\par
+I'll mention them informally.\par
+First is that if X and Y have\par
+the same moment generating function,\par
+then they have the same distribution.\par
+Not only if they have the same distribution\par
+clearly they have the same MGF,\par
+but the converse also holds.\par
+Namely, if they have the same MGF,\par
+then they also have essentially the same distribution.\par
+They could be off by, if they are continuous\par
+they could be off by some countable number of points,\par
+but otherwise this should be the same.\par
+Also you can invert the moment generating function\par
+to obtain X because of this property,\par
+because if X and Y are different,\par
+they have different MGFs,\par
+so you can invert the MGF to get X.\par
+And again this is an informal statement\par
+because you can get X up to a few points\par
+that you may be off.\par
+Finally, if you have a sequence of random variables Xn\par
+and the moment generating function converges\par
+to some moment generating function\par
+of a random variable X, then the distribution f X n\par
+will converge to the distribution f of x.\par
+Just for the last property,\par
+I just want to show an example\par
+of this sequence of random variables\par
+that converge to X and show\par
+that the same holds for both the distribution\par
+and the moment generating function.\par
+So let's look at Poisson and binomial.\par
+Binomial distribution, B p n of k,\par
+this is the probability, it is n choose k,\par
+p to the k, one minus p to the n minus k,\par
+and Poisson distribution is e to the minus lambda\par
+lambda to the k over k factorial.\par
+And we know that, we have actually shown,\par
+that if you take the binomial distribution with P\par
+which is lambda over n and n value\par
+so that p n is lambda, then as n increases,\par
+this will converge to P lambda, to this value here.\par
+Now, if you look at the moment generating function\par
+we saw that the moment generating function\par
+of the binomial with parameter p and n is one plus p,\par
+e to the t minus one, the whole thing raised to the n.\par
+And we also saw that the moment generating function\par
+of the Poisson is e to the lambda, e to the t minus one.\par
+So a very natural question to ask\par
+is if these distributions, the binomial distribution,\par
+converge to the Poisson, is it also true\par
+that the moment generating function,\par
+so the binomials will converge\par
+to the moment generating function of the Poisson,\par
+is it true that the moment generating function\par
+of binomial with parameter lambda over n and n\par
+will converge to the moment generating function\par
+of the Poisson with parameter lambda.\par
+And that is indeed the case.\par
+We'll see it right now.\par
+Recall that the definition of e\par
+is one plus one over n to the n\par
+as n goes to infinity.\par
+And if we have one plus a over n raised to the n\par
+we can write it as one plus a over n to the n over a,\par
+raised to the a, so we divide it and multiply it by a.\par
+Now here the internal part is just what we had here.\par
+It's one plus one over some quantity, n over a,\par
+raised to that quantity, n over a,\par
+so the internal part will converge to e,\par
+and a is just a constant,\par
+so what we'll get here is e to the a.\par
+Using this property we see we can evaluate this,\par
+take the moment generating function\par
+of the binomial, one plus p e to the t minus one,\par
+but just plug in p which is lambda over n.\par
+So one plus lambda over n times e to the t minus one,\par
+raised to the n.\par
+And what we have here is just one\par
+plus some quantity over n raised to the n,\par
+which is what we have here,\par
+one plus a over n raised to the n.\par
+And as we saw here, it will converge to e to the a.\par
+So this will converge to e to this quantity,\par
+which is lambda times e to the t minus one,\par
+and that is exactly the moment generating function\par
+of the Poisson lambda, e to the lambda\par
+times e to the t minus one.\par
+So we see that the moment generating function\par
+of the binomial will converge\par
+to the moment generating function of the Poisson.\par
+So with that we talked about the moment generating function.\par
+We described what moments are.\par
+We said that a single function can determine all of them\par
+and that's the moment generating function, or MGF.\par
+We defined it.\par
+We gave some examples.\par
+We described some of its properties.\par
+And next time, we're gonna talk about the Chernoff Bound.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+If the distribution of X is symmetric about 0, is its moment generating function also symmetric?\par
+\par
+\tab\par
+Yes\par
+\par
+\tab\par
+Not necessarily\par
+\par
+Submit\par
+}
+ 

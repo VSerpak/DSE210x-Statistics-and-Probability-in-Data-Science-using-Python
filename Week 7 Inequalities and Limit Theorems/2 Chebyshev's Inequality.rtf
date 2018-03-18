@@ -1,0 +1,330 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}{\f1\fnil\fcharset161 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+In the last lecture we\par
+talked about Markov's inequality, and as we said then,\par
+it's the basis of many other inequalities\par
+and today we're going to talk about one of these,\par
+which is Chebyshev's inequality.\par
+Chebyshev was actually Markov's advisor,\par
+so how we end up using an inequality\par
+that follows from Markov's inequality,\par
+student's inequality, I'll leave it up to you to look up.\par
+All right, so let's start.\par
+So we're going to discuss a little bit of the motivation\par
+and intuition for that and then we'll formulate it,\par
+provide the proof, give a couple of examples, actually,\par
+and let's start.\par
+So first, how do we move from Markov to Chebyshev?\par
+Or what's the difference between them?\par
+So Markov's inequality tells us that the probability\par
+of a nonnegative random variable is the probability\par
+that a nonnegative random variable is alpha times larger\par
+than its mean is at most one over alpha.\par
+And in other words, it relates the probability that\par
+a nonnegative random variable is larger than its mean,\par
+to how much it's larger.\par
+In Chebyshev's Inequality will apply to any\par
+random variable and we've bound the probability\par
+that is alpha times further from its mean\par
+by one over alpha square.\par
+So one of them says,\par
+what's the probability that x is larger than its mean,\par
+and the other one says what's the probability\par
+that x minus its mean is bigger than some number\par
+times the number of standard deviations.\par
+So, let's see what it says.\par
+So again, just like with Markov's inequality,\par
+here are the two versions.\par
+One which is easier to illustrate\par
+and therefore to understand and remember.\par
+It says that if X is any discrete or continuous\par
+random variable with finite mean \f1\lang1032\'ec and standard deviation \'f3\par
+and then for alpha bigger than 1,\par
+the probability that the difference between x and its mean\par
+in absolute value\par
+is bigger than alpha standard deviations\par
+is at most 1 over alpha squared.\par
+Okay, so let's illustrate it.\par
+So here is the distribution from the variable,\par
+it could be discrete or continuous,\par
+this is x and this is f(x).\par
+And let's say that the mean is here, so this is the mean \'ec.\par
+So we're going to look at \'ec\par
+plus or minus a certain number of standard deviations.\par
+So first let's look at \'ec plus or minus 1 standard deviation.\par
+So what this will say is the probability\par
+that x minus \'ec is bigger than, if alpha here is 1,\par
+then 1 standard deviation is at most 1 over alpha square\par
+or 1 over 1 square or 1.\par
+So it says that the probability that we are here,\par
+that we are away from the mean by more\par
+than 1 standard deviation is at most 1.\par
+Okay, that's not too interesting because\par
+we know that any probability is at most 1.\par
+It's a little more interesting when\par
+we look at 2 standard deviations and more.\par
+So now if we look at 2 standard deviations,\par
+so this probability was at most 1.\par
+Now let's look at the it with 2 standard deviations.\par
+So we're looking at a mean plus 2 standard deviations\par
+and a mean minus 2 standard deviations.\par
+And what Chebyshev's Inequality will do\par
+will tell us the probability that we are either less,\par
+below the mean minus two standard deviations,\par
+or above \'ec plus two standard deviations.\par
+In other words, more than 2 standard deviations away from\par
+this mean,\par
+probably lying within one of those two green areas,\par
+because we're looking at 2 standard deviations\par
+we're looking at x minus \'ec is at most 2 sigma\par
+and that's going to be at most 1 over 2 square,\par
+which is one quarter.\par
+If we look at 3 standard deviations, shown here,\par
+it will say that the probability that we are more than\par
+3 standard deviations away, either here or here,\par
+that the probability is at most 1 over 3 square,\par
+or 1 over 9, okay?\par
+So this is what Chebyshev's Inequality says,\par
+and again, this is the way, at least I remember it.\par
+It says the probability that we're at most\par
+alpha standard deviations away from the mean\par
+is at most 1 over alpha square, okay?\par
+And the other formulation, is going to be,\par
+again applies to the same thing.\par
+So X is any discrete or continuous random variable\par
+with finite mean \'ec and standard deviation \'f3.\par
+Then the first formulation which we just described is this.\par
+And the second formulation which is easier to prove\par
+and thus to apply\par
+sets just like we did before,\par
+call this value alpha sigma, calls it a,\par
+that says that if alpha is bigger than 1,\par
+that means that a is at least \'f3\par
+because a is alpha sigma and is beginning at 1.\par
+So our a is at least sigma.\par
+And the probability that X minus \'ec absolute value\par
+is at least a, which is \'ec\'f3,\par
+is at most 1 over alpha square,\par
+but alpha is a over sigma, so\par
+1 over alpha square is sigma square over a square, right?\par
+Because 1 over alpha is sigma over a,\par
+1 over alpha square is sigma square over a square, okay?\par
+So in both cases you see that if alpha increases,\par
+we expect that this part decreases\par
+and likewise here if we're looking at the probability\par
+of further away from the mean,\par
+then the probability decreases like that, okay?\par
+And again, this is easier to use,\par
+because typically we're reducing just fine\par
+the probability that X differs from its mean\par
+by at least some number,\par
+and we can just plug in the number here, okay?\par
+Right, okay.\par
+So how do we prove this result?\par
+So first let's remind ourselves\par
+of Markov's Inequality.\par
+It says that the probability of that\par
+X is bigger than or equal to a\par
+is at most \'ec over a, okay?\par
+And there Chebyshev's Inequality, here,\par
+tells the probability that X differs from its mean\par
+by more than a is at most sigma square over a square.\par
+So when we look at it, they look very very similar.\par
+And we the probability that something is bigger\par
+or equal to a is at most something divided by a.\par
+So to make it even more similar,\par
+what we can do is say that\par
+the probability that X minus \'ec is bigger than\par
+or equal to a is the same as the probability\par
+that X minus \'ec square, square both sides here,\par
+is bigger than or equal to a square.\par
+This probability is the same as this, exactly, see.\par
+So this is the same, okay?\par
+So the probability that X minus \'ec is\par
+bigger than or equal to a\par
+is the same as the probability that X minus \'ec, square\par
+is bigger than or equal to a square.\par
+Here, let's not forget that we have an absolute value, okay?\par
+So now when we look at the inequality,\par
+it looks even closer to Markov's Inequality\par
+because we have the probabilities that some\par
+random variable, which is nonnegative, okay,\par
+is bigger than some value,\par
+is at most \'f3 square divided by this value,\par
+just look here at the probability that\par
+X is bigger than a, was at most the mean divided by a,\par
+and the probability that something, again nonnegative,\par
+is bigger or equal to a square is most something\par
+divided by a square.\par
+So if we want to make this precise,\par
+what we need to do, is we need to find\par
+our random variable, that is nonnegative\par
+and the mean is sigma square.\par
+And the mean is sigma square then we will have \'ec, okay?\par
+So we're looking again for a random variable,\par
+for X minus \'ec, square, nonnegative\par
+with \'ec which is sigma square\par
+and clearly X minus \'ec, square will mean sigma square.\par
+And that's what we're going to do next, okay?\par
+So again, we're going to prove\par
+that X minus \'ec in absolute value is\par
+bigger or equal to a\par
+at most sigma X square divided by a, okay?\par
+Notice up here that sigma X rather than sigma\par
+because, and also here that \'ec X and that's because\par
+we're going to introduce another variable,\par
+which will be Y so I'm going to make sure\par
+to distinguish between the two.\par
+So X is any random variable, okay,\par
+and its mean is the expected value of X.\par
+And its variance, sigma X square, the variance of X,\par
+is just expected value of X minus \'ec X, square.\par
+There, okay, so let's just remember it back.\par
+So now, let's define Y to be X minus \'ec X, square,\par
+this quantity that we have here, okay?\par
+Then our Y is bigger or equal to zero\par
+because it's a square and also that is\par
+the mean of Y is the expected value of X minus \'ec, square\par
+which by definition is sigma X square.\par
+So we defined, based on X, we defined \'ec and the variable Y,\par
+the difference between X and its mean, squared.\par
+So the this new random variable,\par
+because it's squared, its nonnegative,\par
+and its mean is exactly the variance of X.\par
+So now we can apply Markov's Inequality\par
+because we can say that the probability that\par
+X minus \'ec X is bigger than or equal to zero,\par
+which is what we want to find,\par
+which is the same as the probability X minus \'ec X, square\par
+is bigger than or equal to a square, okay?\par
+And now X minus \'ec X, square is that random variable Y,\par
+so the probability that Y\par
+is bigger than or equal to a square, okay?\par
+And now Y is nonnegative, and its mean is sigma X square.\par
+So if you apply Malkov's Inequality,\par
+that's going to be equal to \'ec Y divided by a square.\par
+But the mean of Y is sigma X square.\par
+So this is sigma X square divided by a square.\par
+So the probability that X minus \'ec X is\par
+bigger than or equal to a is\par
+at most the variance of X divided by a square,\par
+which is really what you want to prove, okay?\par
+So we can see with Malkov's Inequality,\par
+we could have a very simple proof for\par
+Chebychev's Inequality.\par
+All right, so variance says the probability that\par
+X differs from its mean by at least a,\par
+is at most the variance of x divided by a square.\par
+So for our second example, let's look at survey responses.\par
+So imagine that you're collecting a survey,\par
+and based on past experience,\par
+you know that the mean is going to be one million\par
+and the standard deviation is going to be 50,000, okay?\par
+And we want to find the Bound the probability that\par
+the number of responses that you will get will be between\par
+800,000 and 1.2 million,\par
+so we want to know, what is the probability we're going\par
+to get, you know, roughly the expected number of responses.\par
+Notice that in the previous example\par
+we've bounded the probability that your\par
+away from the mean and here we've bound into the\par
+probability that you are close to the mean\par
+and we will be able to use Chebychev's Inequality.\par
+So, notice that this lower limit here is at .8\par
+is the mean minus 4 sigma, 1 million minus\par
+4 times 50,000, so 800,000.\par
+And the upper limit, 1.2 million\par
+is the mean plus 4 sigma.\par
+So if we're looking at is the probability that\par
+X is between \'ec minus 4 sigma and \'ec plus 4 sigma,\par
+this should be straight inequality.\par
+So this is the probability that X minus \'ec is less\par
+than 4 sigma, okay?\par
+Now we want to use Markov's Inequality\par
+and we're going to express it was the probability\par
+that this is bigger than or equal to 4 sigma.\par
+We know that X minus \'ec is bigger than 4 sigma\par
+is the complement of this event\par
+so it is going to be 1 minus the probability\par
+that X minus \'ec is bigger or equal to 4 sigma, okay?\par
+But the probability that X minus \'ec is bigger or\par
+equal to 4 sigma is at most 1 over 4 square,\par
+1 over 16.\par
+So this is at least 1 minus 1 over 16,\par
+so this is bigger or equal to 1 minus 1 over 16.\par
+Again, the probability of this event\par
+that will be more than 4 sigma away is at most 1 over 16,\par
+so we're subtracting from 1 the number that is\par
+at most 1 over 16,\par
+and therefore we're getting a number that is at least\par
+1 minus 1 over 16, which is 15 over 16.\par
+So now we see that Chebychev's Inequality\par
+beforehand told us, give us an upper Bound,\par
+on the probability that we are far from the mean\par
+and it can also therefore give us a lower Bound,\par
+on the probability here that we are close to the mean.\par
+So before we finish, let's go over some of the\par
+differences between Markov's and Chebychev's Inequalities.\par
+So Markov's Inequality says that the probability\par
+that X is bigger or equal to a is at most\par
+the mean divided by a.\par
+And it applies only variables that are nonnegative,\par
+X always bigger than zero.\par
+And the information that we need to get a Bound\par
+is the mean, okay?\par
+And the range for which this inequality is useful\par
+is for a which is at least the mean.\par
+And the reason is because if a is less than the mean\par
+then this will tell us that the probability is less\par
+than some number which is bigger than one\par
+so we need a to be bigger than the mean\par
+so that this number will be 1 or less, okay?\par
+If this says the probability of X bigger than\par
+or equal to a, then the mean clearly needs to be\par
+bigger than a, okay?\par
+And Markov's decreases linearly.\par
+Now Chebychev's Inequality says that the probability that\par
+that X and its mean is bigger than a\par
+is a most a variance of X divided by a square.\par
+It applies to any random variable X.\par
+And the input we need are \'ec and sigma.\par
+We need the mean and we need sigma.\par
+And the range it could apply,\par
+when a is bigger than or equal to sigma,\par
+the standard deviation because if a is less than sigma,\par
+then the probability is less than or equal to a\par
+number which is larger than 1, which again is meaningless.\par
+And on the other hand, this decreases like 1 over a square,\par
+so it decreases quadratically with a,\par
+which is faster, much faster than 1 over a\par
+and that's why we have better results\par
+than the previous example, right?\par
+So to summarize, we talked about Chebychev's Inequality.\par
+We gave some motivation, a little bit of intuition.\par
+We formalized it in two different ways.\par
+We proved it using Markov's Inequality.\par
+We gave a couple of examples,\par
+and next time we're going to talk about another\par
+application of in fact Chebychev's Inequality\par
+and therefore of Markov's Inequality\par
+and that's the Weak Law of Large Numbers.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+A gardener has new tomato plants sprouting up in her garden. The average height of the plants is 8\rdblquote , with a 1\rdblquote  standard deviation. What percentage of the plants are guaranteed to be 6\rdblquote -10\rdblquote  tall?\par
+\par
+\tab\par
+10%\par
+\par
+\tab\par
+25%\par
+\par
+\tab\par
+50%\par
+\par
+\tab\par
+75%\f0\lang9\par
+}
+ 

@@ -1,0 +1,507 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+In previous lectures, we talked about\par
+the Markov inequality and the Chebyshev inequalities,\par
+both of them bound the probability\par
+that an element is far away from its mean\par
+and what we want to do in this lecture\par
+is talk about a significantly stronger bound\par
+called the Chernoff bound, okay,\par
+the bound is named after Herman Chernoff,\par
+who finally, we get to someone who is still with us today,\par
+he was born 1923, he's 94 years old\par
+and he's a statistician,\par
+he worked at Illinois, at Stanford, at MIT and Harvard\par
+and he is well known for taking a broad view of statistics\par
+and for example, he said that\par
+"years ago, a statistician might have claimed,\par
+"that statistics deals with the processing of data,\par
+"but today's statistician will likely say\par
+"that statistics is concerned with decisions\par
+"in the face of uncertainty,"\par
+and has definitely worked on different aspects\par
+of this issue, today, we'll talk about one,\par
+which is the Chernoff bound and interestingly enough,\par
+we have talked about Markov and Chebyshev,\par
+so when the Chernoff bound came around,\par
+people thought it should be spelt Chernov,\par
+like the other two, but by now,\par
+they've spelled it correctly\par
+and another thing that he's well known for\par
+are the Chernoff faces, that we saw in the towel slide\par
+and what he said was that if you want\par
+to display high-dimensional data, say data in you know,\par
+I don't know, maybe seven, eight dimensions,\par
+it's you know, impossible to display,\par
+so one way to do it is, he thought,\par
+is represented as features of a face,\par
+because we are all familiar with faces\par
+and so we might be able to understand\par
+the different dimensions\par
+and so you represent the data as for example,\par
+the height and the width and the angle\par
+of different features, like the eyes or the nose\par
+and the mouth of the face and that way,\par
+you can represent different dimensions,\par
+this for example, representation was done\par
+by a statistician called Steve Wang\par
+and he represented baseball managers,\par
+based on their performance and you can see here\par
+the performance, the features that correspond\par
+to each performance that was measured\par
+and how it's reflected by the height\par
+and the width and the angle and so on\par
+and this is taken from an article\par
+about that in The New York Times, right.\par
+So back to slightly less interesting Chernoff bound,\par
+so again, we have a random variable X,\par
+which is distributed Bernoulli with probability of success p\par
+and we have n samples,\par
+so the mean is going to be p times n, as we know\par
+and we want to bound the probability\par
+that X is bigger than one plus delta times the mean,\par
+so for example, maybe delta is point one,\par
+so we'll want to bound the probability\par
+that X is bigger than 1.1 times the mean.\par
+Now we have seen a couple of bounds to do that,\par
+but they are somewhat weak, for example,\par
+if we look at the Markov inequality,\par
+we'll see that this probability\par
+is at most one over one plus delta,\par
+so if delta is one, it will be at most one over 1.1,\par
+which is maybe .45 or something like that\par
+and so it's going to stay constant, when n increases,\par
+if you look at Chebyshev's inequality,\par
+it will decrease, but it will decrease linearly with n,\par
+but we know that as the number of samples,\par
+if we take, increases the probability\par
+that it'll be bigger than 1.1 times the mean\par
+should actually decrease\par
+fast, quite fairly fast\par
+and what Chernoff bound will show\par
+is that it increases exponentially fast, okay,\par
+so and to prove it, we'll again use Markov's inequality,\par
+we'll just use it in a different way,\par
+so just like Chebyshev's inequality,\par
+use Markov's inequality by squaring things\par
+to get a better bound, we'll actually exponentiate things,\par
+okay, so note that for every a and every t,\par
+which is bigger than or equal to zero,\par
+X is bigger than or equal to a,\par
+if and only if t times X bigger than t times a\par
+and just multiplying both sides by t\par
+and if I exponent both sides, then that's if\par
+and only if e to the tX is bigger than e to the ta,\par
+so here there's no probability involved,\par
+we just say that X is bigger than or equal to a,\par
+if and only if e to the tX is bigger than e to the ta\par
+forall t, which is non-negative, okay,\par
+now...\par
+therefore the probability that X\par
+is bigger than or equal to a\par
+is going to be equal to the probability that e to the tX\par
+is bigger than or equal to e to the ta, okay\par
+and now we can apply Markov's inequality\par
+and we'll see that that's at most expectation\par
+of e to the tX divided by e to the ta, right,\par
+that's the Markov's inequality that we have,\par
+probability that some random variable,\par
+say y is is bigger than or equal to sum value\par
+is at most the expectation of y divided by the value\par
+and here we have the expectation of tX\par
+divided by e to the ta, okay\par
+and so what we see is that the main feature\par
+that we need to evaluate here is just the expectation of tX,\par
+right, because then that will give us the bound that we want\par
+and that's what we're going to do in the next few slides,\par
+we're going to evaluate it,\par
+then we're going to bound its value\par
+and then we're going to incorporate in here\par
+and then we're going to simplify the result,\par
+so we'll have a few slides, like four or five slides\par
+about this, but hopefully at the end, we'll see a proof\par
+and then we'll know how to prove\par
+this fairly strong bound, that we'll get, alright.\par
+So first we need to evaluate\par
+the expectation of e to the tX\par
+and doing that is exactly the same\par
+as the moment generating function, that we saw,\par
+so if you remember what we did then,\par
+we can actually skip this line,\par
+but I want to have this presentation be self-contained,\par
+so we're going to go for this again.\par
+So X is distributed Bernoulli pn\par
+and then we can view X as a summation of Bernoulli,\par
+I'm sorry, X is binomial pn,\par
+can view X as a summation of n Bernoulli random variable Xi,\par
+where each Xi is Bernoulli p and they're independent, okay,\par
+and therefore the expected value of e to the tX\par
+is the expected value of the summation\par
+of t times the summation of Xi, we can put the t inside,\par
+so it's the expected value of e\par
+to the summation of tXi, okay\par
+and now the Xis are, so it's the expected value,\par
+we can write it as the product\par
+of e to the tXi, e to the summation\par
+is the product of e to the tXis\par
+and because the Xis are independent,\par
+e to the tXi is also independent\par
+and therefore the expectation of the product\par
+is the product of the expectation,\par
+so this will give us the product\par
+of the expectation of e to the tXi, okay\par
+and this is what we want to evaluate now,\par
+so the expectation of e to the tXi\par
+as we know is just the probability that Xi is zero\par
+times e to the t0 plus the probability\par
+that Xi is one times e to the t1, okay\par
+and the probability that Xi zero is one minus p\par
+and we multiply by pe to the t\par
+and then we have plus p here\par
+hiding a little bit to the right,\par
+plus p times e to the,\par
+plus pe to the t, I'm sorry, here, okay\par
+and therefore we can just replace this\par
+by one minus p plus pe to the t\par
+raised to the nth power, okay,\par
+so expectation of e to the tXi\par
+is one minus p plus pe to the t, which we have here\par
+and raise it to the nth power, okay,\par
+and therefore we can now get\par
+that the expected value of e to the tX\par
+is equal to one minus p\par
+plus pe to the t, that's the expectation\par
+of each Xi raised to the nth power,\par
+okay, so this is the expectation of e to the tX\par
+and that's exactly what we calculated\par
+for the moment generating function\par
+for the binomial coefficients,\par
+I'm sorry, for the binomial distribution\par
+and now what we would like to do\par
+is we would like to bound this value, okay.\par
+So we just saw that the expectation of e to the tX\par
+is one minus p plus pe to the t raised to the nth power\par
+and we want to bound it, so notice that one minus p\par
+plus pe to the t, we can write as,\par
+we can take the p out, so we get one plus p\par
+times e to the t minus one, okay,\par
+but what we have here is one plus sum value,\par
+which maybe we would call x, okay,\par
+and we know that one plus x\par
+is less than or equal to e to the x,\par
+you can see it by just drawing the function\par
+one plus x here in blue\par
+going e to the x, e to the x is larger\par
+or you can see by writing e to the x\par
+as one plus x plus x over two and so on\par
+and that's going to be bigger than or equal\par
+than just one plus x and therefore one plus x\par
+is less than or equal to the x, okay,\par
+so what we have here is one plus this quantity,\par
+it's going to be less than or equal to this quantity,\par
+to that quantity, which is e to the p\par
+times e to the t minus one, okay\par
+and so now we have this quantity raised to the n,\par
+so it's going to be less than or equal therefore,\par
+e to the p times e to the t minus one\par
+raised to the nth power, okay,\par
+now e to the a raised to the b is e to the ab,\par
+so this is going to be e to the np, get n inside\par
+and p times e to the t minus one and np,\par
+we have a binomial distribution, so np is just mu,\par
+so this is e to the mu times e to the t minus one, okay,\par
+so we get that the expected value of e to the tX,\par
+the moment generating function of the binomial coefficient,\par
+I'm sorry, binomial distribution evaluate to t\par
+is at most e to the mu times e to the t minus one,\par
+okay, so all this is what is right here\par
+and the expectation of e to the tX is at most\par
+e to the mu times e to the t minus one.\par
+Okay, remember that we wanted to bound this,\par
+so we can plug it in in the Markov's inequality, okay,\par
+so this, let's look at this and what we are going to do\par
+is we are going to just optimize over t,\par
+so before that, let's incorporate Markov's inequality\par
+and then we'll optimize.\par
+So X is distributed by binomial pn\par
+and we saw that forall A and forall t,\par
+which is bigger than or equal to zero,\par
+the probability that X is bigger than or equal to a\par
+is the same as the probability of e to the tX\par
+is bigger than or equal to ta,\par
+because X is bigger than a is the same\par
+as e to the tX bigger than e to the ta\par
+and using Markov's inequality,\par
+that's at most the expectation of e to the tX\par
+divided by e to the ta,\par
+that we saw in the first slide of the proof\par
+and now what we have shown is that the expected value\par
+of e to the tX is at most e to the mu\par
+times e to the t minus one, that's what we've just shown\par
+and so we're going to combine this with that\par
+and we get the probability\par
+that X is bigger than or equal to a\par
+is at most this value, e to the mu e to the t\par
+minus one divided by e to the ta, okay\par
+and we can just write it slightly more nicely,\par
+okay first, actually we're going to,\par
+we're going to evaluate this for a,\par
+which is one plus delta times mu,\par
+for example, 1.1 times the mean and so on,\par
+so if we plug it in, we get the probability\par
+and this is for delta,\par
+which is bigger than or equal to zero,\par
+so we get it forall t bigger than\par
+or equal to zero like this,\par
+the probability that X is bigger than one plus delta mu\par
+and remember one plus delta mu is just a\par
+is going to be at most e to the mu\par
+times e to the t minus one divided by,\par
+so this is the same and now instead of a,\par
+we're writing one plus delta mu,\par
+so we have divided by e to the mu times one plus delta t,\par
+right, so one plus delta mu times t over here, okay\par
+and this we can express slightly more nicely\par
+as e to the mu times e to the t minus one\par
+minus t times one plus delta, okay\par
+and now this is true forall t,\par
+so what we can do is we can optimize over t\par
+and get the best value we can by choosing the t,\par
+that will minimize this exponent, can make it the smallest.\par
+Okay, so the sum of one next, so just repeating,\par
+we have seen that forall t bigger than or equal to zero,\par
+the probability that X is bigger than one\par
+plus delta times mu is e to the mu times this quantity,\par
+e to the t minus one minus t times one plus delta,\par
+which we want to optimize over t, so we want to find the t,\par
+that will minimize f of t, which is this quantity here,\par
+e to the t minus one minus t times one plus delta,\par
+okay, and how do we minimize?\par
+We just take the derivative with respect to t,\par
+actually first let's maybe plot this, so it looks like this,\par
+this is for one value of delta,\par
+but we'll look at the same for any delta that you choose,\par
+so this is f of t as a function of t\par
+and we want to find the t\par
+that will minimize this value someplace here, okay, so...\par
+and you can see that why this is right,\par
+get e to the t minus one\par
+minus t times one plus delta like that, okay\par
+and so we take the derivative\par
+and we get that the derivative is going to be e to the t,\par
+from here and then minus one plus delta,\par
+we equate it to zero, so this gives us e to the t,\par
+which is one plus delta, okay\par
+or in other words, we get that t is lan of one plus delta\par
+and if you want to check\par
+that it's the minimum, not the maximum,\par
+you can do a convert from the picture here\par
+or take a second derivative and you see here,\par
+we'll just get e to the t, this will disappear,\par
+which is bigger than or equal to zero,\par
+so this is a local minimum, in fact a global minimum,\par
+'cause there's only one solution, okay,\par
+so now we can just plug it in here\par
+and we get that the probability that X is bigger than one\par
+plus delta mu is e to this quantity,\par
+e to the mu times e to the t minus one\par
+minus t times one plus delta,\par
+but very nicely, e to the t is one plus delta,\par
+so you get your one plus delta minus one,\par
+which is delta, okay, that's right there,\par
+so it's e to there just gives us delta and this gives us t,\par
+which is lan of one plus delta,\par
+so we get minus one plus delta times lan of one plus delta,\par
+okay, so this is the lowest value,\par
+when we optimize of all ts and what we want to do next\par
+is just evaluate this and simplify this quantity, okay,\par
+so this is essentially the bound,\par
+we just want to write it in a slightly nicer way.\par
+So we do the final simplification,\par
+so this is what we wrote,\par
+the probability that X is bigger than one plus delta\par
+times mu is at most e to the mu times delta\par
+minus one plus delta lan of one plus delta, okay,\par
+and now we want to simplify this,\par
+so here we're going to use the following inequality,\par
+that lan of one plus delta is bigger than x\par
+divided by one plus x over two,\par
+forall x, which is non-negative, okay,\par
+so this is we're going to apply it here,\par
+lan of one plus delta, okay\par
+and to show this, you can just take and here you can see,\par
+because this is going to be lan of one plus x\par
+and this is one over, this is x over one plus x over two,\par
+you can see it from here or you can prove it,\par
+so we define f of x to be the left-hand side\par
+minus the right-hand side, okay\par
+and then again we take derivative\par
+and we show that this is bigger than or equal to zero,\par
+forall x bigger than or equal to zero,\par
+so first observe that at zero, it is zero,\par
+'cause f of zero is lan of one\par
+minus zero over one\par
+and lan of one is zero, so this is zero\par
+and we also show that the derivative is non-negative,\par
+so f, the derivative is one over one plus x\par
+minus this derivative, which I wrote here, okay\par
+and when you evaluate it, it gives you,\par
+it's a little bit behind the picture,\par
+but you can see that it's non-negative\par
+and then, okay\par
+and that tells us that f of x is bigger\par
+than or equal forall x, which at least zero\par
+and now when we,\par
+we can just replace therefore,\par
+we can replace lan of what we have is one plus delta,\par
+lan of one,\par
+lan of one plus delta here,\par
+so delta minus one plus delta lan of one plus delta\par
+is going to be less than or equal,\par
+we have delta and then we have one plus delta,\par
+but instead of lan of one plus delta,\par
+write delta over one plus delta over two,\par
+because here we see that it's smaller,\par
+so if we subtract a smaller number,\par
+we'll get a bigger difference, okay\par
+and then when we open this up, we get, we take delta out,\par
+so we get one minus one plus delta\par
+over one plus delta over two, okay\par
+and then multiply everything here by two,\par
+so you get your two plus delta\par
+and here we have one plus one plus delta,\par
+so we have here two plus delta and here we get,\par
+so we have delta outside, then we have two plus delta, okay\par
+and minus two minus two delta\par
+and the two cancels\par
+and we get minus delta square over two plus delta,\par
+so you can just check that this calculation is correct\par
+and when we, we can then go back here and say that this,\par
+therefore we showed that this expression here\par
+is bigger than minus delta square over two plus delta,\par
+so this is going to be bigger than, I'm sorry,\par
+this is going to be less than or equal to\par
+e to the minus delta square over two plus delta times mu,\par
+okay and observe that, a couple of things,\par
+first of all, delta, we can think of,\par
+you know, as being a small number,\par
+so can maybe just ignore this for a second,\par
+so we have like e to the minus delta square over two mu,\par
+mu here, so mu is n times p,\par
+so when delta is for us a constant,\par
+for example, we try and calculate the probability\par
+that we're 1.1 away from the mean delta\par
+is .1, so this is sum constant\par
+and then mu is np, so as n increases,\par
+we're all done exponentially with n, okay.\par
+So what we got therefore is that X, if X is Bernoulli pn\par
+and delta is bigger than or equal to zero,\par
+then the probability that X is bigger than the mean\par
+by one plus delta is e to the minus delta square\par
+over two plus delta mu\par
+and again, mu is np, so this will go down exponentially in n\par
+and you can also prove the other direction,\par
+that the probability that X is less than or equal\par
+to one minus delta times the mean\par
+is at most e to the minus delta square over two times mu\par
+and the proof is essentially the same,\par
+in fact, it's a little simpler\par
+as you just get two, rather than two plus delta.\par
+So let's look at an example of taking a poll\par
+and finding the probability\par
+that the result will be incorrect, okay,\par
+so imagine that you have a population,\par
+where 47% vote D\par
+and you pull 6000 people,\par
+which is not a very large number, as far as polls go\par
+and let X be the number of people, who voted for D\par
+and so X is roughly distributed\par
+binomial with success probability 0.47\par
+and which is 6000,\par
+it will be exactly binomial,\par
+if you can poll the same person multiple times,\par
+if you just pick a person and then pick another person,\par
+could be the same and so on, it will be exactly that,\par
+but in reality, it has more,\par
+because you will not pull the same person twice,\par
+it will not be exactly that, we'll have elements\par
+of the hypergeometric distribution coming in, okay,\par
+so now you'll be wrong if X is bigger,\par
+if you get that, you'll get the result wrong,\par
+if X is going to be bigger than 50%\par
+of the number that you sampled,\par
+because the actual number is 47\par
+and you'll be wrong if the number that you'll get\par
+is more than 50% of the samples, which may happen,\par
+because it's a random sample or if you get more than 3000\par
+and we want to bound this property, okay.\par
+So what we see here is because X is distributed\par
+binomial with probability p and 6000,\par
+then mu, the expected number of people that you sampled,\par
+that will vote D is n times p,\par
+which is 6000 times 0.47,\par
+which is 2820, okay\par
+and now we are trying to find the probability\par
+that X is bigger than the 3000\par
+and so we're trying to find what is delta,\par
+such that 3000 is going to be one plus delta times mu,\par
+'cause we can find the probability\par
+that X is going to be bigger than\par
+or equal than one plus delta times mu,\par
+so if 3000 is one plus delta times mu\par
+and mu is 2820, then one plus delta is 3000 divided by 2820,\par
+which we can calculate, but we can also observe\par
+that we got 3000 by 6000 times .5\par
+and 2820, which is the mean by 6000 times 0.47,\par
+so 6000 will cancel\par
+and we get that this is 50 divided by 47,\par
+which is roughly 1.0638, okay,\par
+so this is the probability, that the ratio that you get\par
+is the number that you get is bigger than the mean\par
+by this ratio, 50 over 47, 'cause 47 is the mean\par
+and 50 is what you're worried about,\par
+so this is the ratio that we're concerned about, 1.06, okay\par
+and this means that delta is roughly 0.0638, okay.\par
+So now notice, by the way\par
+that if you try to use Markov's inequality,\par
+then you get one plus delta is 1.06,\par
+you'll say what is the probability\par
+that X is bigger than its mean by factor of 1.06\par
+is going to be at most, one divided by 1.06,\par
+which is a number like 97%, okay\par
+and so now the probability that you're wrong,\par
+if you use the Chernoff bound is the probability\par
+that X is bigger than or equal to 3000\par
+or in other words, the probability that X\par
+is bigger than or equal to one plus delta times mu,\par
+which as we have seen is at most e to the minus delta square\par
+over two plus delta times mu\par
+and now delta, we calculate it to be roughly 0.0638,\par
+so when you plug it in, you get that this probability\par
+is a fairly low probability,\par
+it's roughly 0.38%, okay,\par
+so you get a result, which is much, much stronger\par
+than the Markov inequality and Chebyshev inequality,\par
+okay, so in other words, we talked about the Chernoff bound,\par
+which is an exponential bound\par
+on exceeding the mean by a constant factor,\par
+we actually proved it and showed how we might use it\par
+and next time we're going to talk about\par
+a very important result in statistics\par
+called the Central Limit Theorem.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+\par
+The specific formula of Chernoff bound is different for random variables with different distribution.\par
+\par
+\tab\par
+True\par
+\par
+\tab\par
+False\par
+\par
+Submit\par
+}
+ 
