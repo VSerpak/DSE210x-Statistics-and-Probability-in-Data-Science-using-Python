@@ -1,0 +1,404 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+Last time we talked about estimating the variance\par
+and today we'll talk about the logical consequence\par
+estimating the standard deviation.\par
+What we'll do is we'll first describe a single estimator\par
+for the standard deviation for sigma.\par
+We'll evaluate its bias.\par
+We will discuss unbiased estimators for sigma\par
+and we'll also talk about the question\par
+that's maybe easy or impossible or both,\par
+just like this cube.\par
+And then we'll end with some good news.\par
+So first estimating the standard deviation.\par
+So we, last lecture we presented a simple estimator\par
+for the variance.\par
+It was called S squared, which was just\par
+the summation of the squares of the differences between\par
+the observations and the average.\par
+And the only interesting thing about it,\par
+was that we normalize by n minus one as we discussed\par
+and once we do that,\par
+then the expected value of S square was sigma squared.\par
+In other words, S squared was an unbiased estimator\par
+for the variance.\par
+And so this is a nice property to have.\par
+And how do we come up with an estimator for sigma.\par
+Well sigma is just the square root of the variance\par
+so the very natural estimator is in fact this\par
+standard standard deviation estimator,\par
+the standard estimator for standard deviation\par
+is just the square root of this variance estimator,\par
+so it's the square root of S squared.\par
+We're taking of course the positive square root.\par
+So it's just the positive square root\par
+of one over n minus one times the summation\par
+of the squares of the differences\par
+between the observations and the mean.\par
+And a very natural question to ask is\par
+how good is this estimator?\par
+Is this estimator biased or not?\par
+But before we do that, let's just do a very simple example.\par
+So we'll take the sample that we discussed\par
+when we considered the variance estimator.\par
+So n was five, there were five observations,\par
+two, one, four, two, six.\par
+And what we saw was that the average was three\par
+and that S squared was one over n minus one\par
+and n is five times the summation\par
+of the squares of the differences\par
+between the elements and the mean.\par
+So it was one because two minus three is minus one,\par
+squared is one.\par
+And then one minus three is minus two, squared is four.\par
+So it's one plus four plus one plus plus one plus nine.\par
+And we divide by four, which is n minus one.\par
+And that we show it was four.\par
+And the only thing we need to do now\par
+is just take the square root of S squared\par
+or the square root of four.\par
+And now estimate for the standard deviation is just two.\par
+And what we would like see is whether\par
+this estimator is unbiased or not.\par
+So, this is our question.\par
+And one thing to note, to recall,\par
+is that the expected value for S squared\par
+is the expected value for ES, the whole thing squared\par
+plus the variance of S.\par
+And you remember that because\par
+alternative definition for the variance\par
+was the expectation of the square\par
+minus the square of the expectation.\par
+And because the variance is not negative,\par
+this is always bigger than or equal to\par
+the expected value for S squared.\par
+And in fact, its almost always going to be strictly bigger\par
+because we get equality if and only if the variance is zero.\par
+And the variance is zero if and only if S is a constant.\par
+So in all other cases, we get that strict inequality here.\par
+And just rearranging we see that the expected value\par
+for S squared is less than or equal to expected value of...\par
+The expected value for S this whole thing squared\par
+is less than or equal to the expected value of S squared.\par
+Okay and again we saw it here,\par
+but another way to think about it\par
+is the expected value of S could for example be zero,\par
+while S squared is non-zero\par
+and therefore this expectation value is positive.\par
+And now we know we have here the expected value of S squared\par
+but we know that S squared is an unbiased variance estimator\par
+and therefore this expectation is just sigma squared\par
+'cause it's an unbiased estimator for sigma squared.\par
+And now we can take the square root on both sides\par
+and we get the expected value of ES is less than\par
+or equal to sigma.\par
+Now and this shows that sigma is an underestimate,\par
+sorry S is an underestimate of sigma and that's because\par
+the only time we'll get equality is if S is a constant,\par
+namely when x is a constant.\par
+In all other cases will get here a strict inequality.\par
+So we get equality only when X is a constant.\par
+In all other cases we see that\par
+S strictly underestimate sigma.\par
+In a sense it's expected value is strictly less than sigma.\par
+So if just maybe this was a little too simple.\par
+So let's look at the specific example\par
+where S strictly underestimates sigma.\par
+So here is an example.\par
+Lets look at Bernoulli P\par
+and again, there'll be many such examples.\par
+In fact anything you can think of where X is not a constant\par
+S will strictly underestimate sigma.\par
+The only interesting part is finding a simple\par
+example that can show it.\par
+All right so take Bernoulli P\par
+and the standard deviation is\par
+square root of p times one minus p,\par
+which recall is square root of pq, q is one minus p.\par
+So let's say we take two observation, n equals two,\par
+a sample of size two\par
+and we'll show that the expected value of S is strictly less\par
+than the standard deviation.\par
+So the possible values are, so x,\par
+so we get two samples, we'll get x1 and x2\par
+and they could take value zero and zero.\par
+That happens, probability of q squared\par
+and then the average of the two samples is zero.\par
+And we are repeating what we have done for the variance.\par
+We're just adding a last column for S.\par
+So therefore S squared we're looking at the differences\par
+between those values and the mean,\par
+so it's the difference between zero and zero which is zero.\par
+So S squared is zero and therefore S is also zero.\par
+When x1 is zero, x2 is one and that happens\par
+probability of q times p.\par
+And then the average of the x's is half.\par
+And S squared is half.\par
+We saw it before but just in case we have\par
+zero minus a half square.\par
+Right so it's a zero minus a half square\par
+plus one minus a half square\par
+and so that gives us one quarter plus one quarter\par
+is a half and we divide not by two, which is n,\par
+but by one, because we're dividing by n minus one.\par
+So this gives us a half.\par
+So S squared is half and we saw it\par
+in the last lecture as well\par
+and therefore S is the square root of that\par
+which one over square root of two.\par
+And the same thing when we look at one, zero.\par
+And when we have one, one we have again that S is zero.\par
+So what is the expected value of S\par
+is just q squared times zero\par
+plus qp times one over square root of two\par
+plus pq times one over square root of two\par
+plus p squared times zero\par
+and that's just going to be twice this value.\par
+So two over square root of two is the square root of two.\par
+So this is just square root of two times pq.\par
+And we want to compare, this is the expected value of S,\par
+we want to compare it to the standard deviation\par
+which is square root of pq.\par
+So here is a graph.\par
+This square root of two times pq.\par
+This is what the expected values S.\par
+And this is the standard deviation.\par
+And we see that this is always less than\par
+the square root of pq, so the expected value of S\par
+is always less than square root of pq which is sigma.\par
+So we can see that S always,\par
+except for when p and q are zero, when X is a constant,\par
+in all other case we see that S underestimates\par
+the standard deviation.\par
+So a very natural question to ask, okay if this doesn't work\par
+so can we find another another estimator for sigma\par
+which will be unbiased?\par
+In other words, is there an unbiased estimator for sigma?\par
+And just a quick observation,\par
+if p, the distribution, is known,\par
+then also the standard deviation is known,\par
+so there's nothing to estimate.\par
+We don't need to come up with an estimator,\par
+we just know sigma.\par
+So the only significance of this question\par
+is we want to find an estimator\par
+that works for all distributions, all p.\par
+So in other words for all,\par
+so if we look for example for the mean,\par
+we saw that if we take the sample, the sample mean,\par
+it's always, for any p, it's an unbiased estimator.\par
+The expected value of the sample mean was mu.\par
+And likewise for the variance,\par
+the expected value of the sample variance\par
+was the variance itself.\par
+Okay so what we want to know,\par
+what we want to ask is,\par
+is there an estimator sigma hat,\par
+such that for all distributions p,\par
+the expected value of this estimate is exactly sigma,\par
+for all distribution p?\par
+And the answer to this, perhaps surprising answer is no.\par
+There is no general unbiased estimator\par
+for the standard deviation.\par
+And so we may ask, how do we know that?\par
+How can we prove the impossible?\par
+And so we can look at different proof techniques that exist\par
+and I found a webpage which lists 36 of them.\par
+Let's go over a couple.\par
+And so here they are.\par
+And I picked up a few.\par
+And so this one here is proof by obviousness.\par
+It says that a proof is so clear that\par
+it does not need to be mentioned.\par
+Here's another one.\par
+It's proof by intimidation.\par
+I don't know if you can read.\par
+I'll read it for you.\par
+It says, don't be stupid, of course it's true.\par
+Actually this one is particularly handy.\par
+I may use it sometime.\par
+This one says, is a proof by lack of sufficient time.\par
+It says because of the time constraints,\par
+I'll leave the proof to you.\par
+Here is proof by plagiarism.\par
+It says, as we see on page 289.\par
+And this one is proof by illegibility,\par
+what we can read.\par
+And I've actually been in this business for long enough\par
+that I know of a couple of other proof techniques.\par
+Here are some.\par
+Proof by hand waving.\par
+So you know, like, as you can see, it's very clear\par
+and so on.\par
+Okay this is one.\par
+And another one is proof by induction.\par
+Well it's true.\par
+This thing holds for one, two, and three\par
+so it must be true for any number.\par
+And which proof technique\par
+do you think we're going to use now?\par
+Actually we'll use a color of this proof by induction.\par
+It's proof by example.\par
+You know show this is true for this trivial example\par
+so it must be true.\par
+And so we'll use this proof technique.\par
+So we want to show that there's\par
+no unbiased estimator for sigma.\par
+And what we'll show is that even for Bernoulli P,\par
+the class of Bernoulli distributions,\par
+okay, you know, the simplest class,\par
+when p is unknown as we assume for this\par
+is a collection of distributions.\par
+We cannot find any unbiased estimator.\par
+Okay, if we show that even for this small class,\par
+there's no unbiased estimator,\par
+then clearly there's no unbiased estimator\par
+for all distributions.\par
+And we'll show it for n equals to two,\par
+for when you take two samples.\par
+But the similar proof works for any n.\par
+So the obvious question is how do we prove the impossible?\par
+How do we prove that there's no unbiased estimator?\par
+And maybe you want to pause the video now\par
+and think about how would you go about it.\par
+And it looks like a very difficult question,\par
+but in fact we'll show that you can do it\par
+reasonably easy.\par
+So let sigma hat be any estimator for Bernoulli P.\par
+So it's an estimator, that given the samples,\par
+two samples will give you an estimate\par
+whose expected value is sigma.\par
+So sigma hat of x1, x2 is the estimate\par
+of our estimate of sigma when observing x1 and x2.\par
+And these are predetermined constant.\par
+If you give me the estimate of sigma hat,\par
+then if I give you x1 and x2 it will give you some values\par
+just like we saw in the example before.\par
+For example if we say x1 is zero and x2 is one,\par
+then the estimate for the standard deviation is\par
+one quarter or something like that.\par
+Now the expected value of the estimate,\par
+of our estimate of sigma is just the summation\par
+of x1 and x2 of the probability times the estimate\par
+when x1 and x2 are observed.\par
+So we can write it out.\par
+It's the probability of zero, zero times our estimate\par
+when we see zero, zero\par
+plus the probability of zero, one times our estimate then\par
+and so on.\par
+And notice the sigma hats are constant.\par
+So once someone specifies the estimator,\par
+they specify this constant.\par
+Okay, all right.\par
+So now probability of zero, zero is one minus p square\par
+and multiplied by this constant.\par
+And then plus the probability of zero, one\par
+is one minus p times p times our estimate zero, one.\par
+And then plus p times one minus p\par
+times the estimate of one, zero\par
+plus p squared times the estimate one, one.\par
+And again these sigma hats are a constant\par
+that someone gave you, like for example a quarter,\par
+or one-third and so on.\par
+So when you look at, you see that what we have here\par
+is just the polynomial in p.\par
+Like we have one minus p squared times a quarter\par
+or plus one minus p times p time one-third,\par
+some number and so on.\par
+Okay, so what we have here is polynomial in p.\par
+On the other hand, sigma as we know is\par
+square root of p times one minus p\par
+and this is not a polynomial.\par
+And therefore, our estimate is a polynomial in p,\par
+whereas the standard deviation is not a polynomial in p.\par
+So therefore for some p our expected value\par
+which is our estimate, sorry,\par
+is not equal to the standard deviation.\par
+So there must be some p for which our estimate,\par
+expected value of our estimate\par
+is not going to be equal to the standard deviation.\par
+So in other words we showed\par
+how do we prove the impossible.\par
+We prove it easily.\par
+We considered estimator for Bernoulli P\par
+which showed that for any estimator\par
+that anyone could come up with\par
+the expected value of the estimate\par
+is a polynomial in p.\par
+And on the other hand, the standard deviation\par
+is square root of p times one minus p,\par
+which is not a polynomial in p\par
+and therefore we get that for some p\par
+our expected value of our estimate\par
+will not be the standard deviation.\par
+So therefore, any estimator that\par
+anyone can come up with is not unbiased,\par
+because for some value of p,\par
+the expected estimate is not going to be\par
+what we want to estimate.\par
+And now, so this was actually fairly easy\par
+as you can see and the only thing maybe\par
+that we didn't discuss is how do we know\par
+that if we have a polynomial in p\par
+and then another thing which is not a polynomial in p\par
+how do we know that we cannot,\par
+that this value cannot be exactly equal to a polynomial p?\par
+How do we know that square root of p times one minus p\par
+cannot be written as a polynomial p?\par
+And how do we show that?\par
+So that's the only thing that we relied\par
+and how do we show that?\par
+Well don't be stupid, of course this is true.\par
+So anyone knows that.\par
+So we see that we cannot find\par
+an unbiased estimator for the standard deviation.\par
+The question is this the end of the world?\par
+Not quite.\par
+There's actually good news\par
+and that is that bias is not so bad\par
+and if you don't believe that,\par
+then just just check the news channels\par
+like Fox News, NBC News, CNN.\par
+There should be ABC News here.\par
+It probably will show up at some point.\par
+So and indeed the best estimator\par
+at least in terms of the mean square error\par
+that we discussed is often biased.\par
+And furthermore, as the number of samples, n, increases,\par
+so there will be a bias,\par
+but as the number of sample n increases,\par
+S our estimator for the standard deviation\par
+will actually converge to the standard deviation itself.\par
+So even though it doesn't have exactly the right expectation\par
+it will converge as the number of samples increases.\par
+Okay, so this is called consistent\par
+that our estimator as n increases\par
+will converge to the right value.\par
+The estimator's called consistent.\par
+Okay, so this is ABC News.\par
+So just to summarize\par
+we discussed an estimator for the standard deviation.\par
+The standard estimator as we said was just the square root\par
+of the variance estimator.\par
+And we showed that this estimator is in fact biased.\par
+It underestimates the standard deviation.\par
+And then we asked whether one can find an unbiased estimator\par
+and we gave a simple proof\par
+that shows that, no, such an estimator cannot exist.\par
+And we ended with the good news\par
+that even though we cannot find an unbiased estimator\par
+we can find a pretty good estimator.\par
+That's the one we have here\par
+and as the number of samples increases,\par
+the estimator will give us sigma as close as we want.\par
+So this all I want to talk about\par
+estimating the standard deviation\par
+and next time we'll go ahead and talk about\par
+confidence intervals.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+}
+ 

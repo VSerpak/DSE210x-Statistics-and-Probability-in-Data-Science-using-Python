@@ -1,0 +1,204 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello, and welcome back.\par
+So far, we talked about probability\par
+where everything was designed by us.\par
+Like, we said, okay, this is a uniform distribution,\par
+it behaves exactly in that way.\par
+Or this is a geometric distribution or binomial.\par
+Everything was very clean and very precise\par
+and behaved exactly the way we wanted it.\par
+And now, we're going to move to the real world\par
+where things are not exactly the way they're planned.\par
+They look a little different, they behave\par
+a little differently, sometimes not what we what we expect\par
+or not even what we want, but still\par
+we need to deal with them.\par
+So, that's what we're going to do\par
+in the statistics part of this course.\par
+So, in some sense, probability and statistics\par
+are somewhat of opposites of each other.\par
+In probability, as we said, we assume some distribution,\par
+we come up with it, and this,\par
+and then we take samples and we say,\par
+here are the properties of the samples that we take.\par
+For example, we have a distribution,\par
+we can define the mean, mu, to be the summation\par
+of X times P of X, and then we say that if we take\par
+many samples, then the average value\par
+is going to be roughly mu.\par
+Or, if we have a distribution over values\par
+that are non-negative, so the random variable\par
+will be non-negative, then as we saw for Markov's\par
+inequality, the probability that we'll get a value\par
+which is bigger than twice the mean,\par
+we calculate it here, is at most half.\par
+And in statistics, it's, as we said,\par
+a little bit the opposite.\par
+We get samples, and from the samples we want\par
+to deduce properties of the distribution,\par
+or maybe what the distribution is.\par
+So we want to deduce some parameters\par
+of the distribution, for example, the mean\par
+or the standard deviation, or we want to say\par
+what type of distribution it is.\par
+Is it Gaussian, is it geometric,\par
+or maybe it's none of those.\par
+The first thing we're going to do\par
+is we're going to look at estimating\par
+distribution parameters.\par
+So, most distribution families that we saw\par
+are determined by parameters.\par
+For example, if we have Bernoulli distribution,\par
+it's determined by the success probability, P.\par
+If we have a binomial distribution,\par
+it's determined by the same P and also the number\par
+of samples that we take.\par
+If we have Poisson distribution,\par
+it's determined by the parameter lambda,\par
+which is the mean, and so on.\par
+If you have a geometric or a uniform\par
+or exponential or normal distribution,\par
+all of them are determined by parameters.\par
+So these are distribution parameters.\par
+But, you can view parameters more generally\par
+to be any deterministic function of the distribution.\par
+And sometimes these are called properties.\par
+So for example you can say that the mean,\par
+if you have a distribution, for example,\par
+binomial PN, then the mean is a parameter\par
+of the distribution, in this case it's P times N.\par
+Or the variance of the distribution here it's going\par
+to be NPQ, that's something that's determined\par
+by the distribution and so it's a parameter\par
+of the distribution.\par
+Or, the standard deviation, or we can take\par
+the min or max values.\par
+For example, for a geometric distribution,\par
+then the smallest value, the min value\par
+is the smallest value that has positive probability,\par
+which will be one, and the maximum value will be infinity.\par
+Or we can look at the mode, which is the value\par
+that has the highest probability.\par
+All of these are determined by the distribution\par
+of interest, and you might want to find\par
+what they are from from samples, okay, or the median.\par
+So the way we do it is by sampling\par
+from the distribution.\par
+So a distribution could be discrete,\par
+in which case we call it P,\par
+it's a probability mass function.\par
+Or distribution can be continuous, in which case\par
+we have a probability density function, F.\par
+And then we're going to take independent samples\par
+from P or from F.\par
+And we denote the samples by X superscript N,\par
+it's short for X one, X two up to X N, which as we said\par
+they're chosen independently from P.\par
+So they're chosen from P and independently of each other.\par
+And from these samples we want to deduce\par
+properties of the distribution.\par
+Or, instead of looking at distribution,\par
+what we often want to do is look at populations.\par
+So, a population is a collection of objects,\par
+typically many of them.\par
+For example we can take all students at UCSD\par
+so that's a population of students.\par
+Or all patients in a hospital, that's a population.\par
+And we want to deduce properties of this population.\par
+So what we do is we sample N objects\par
+from this collection of object.\par
+And typically N is much smaller\par
+than the population size, so we don't want to take\par
+all students at UCSD but we want to take\par
+a small sample, called it number N,\par
+and from that sample we want to deduce\par
+properties of the population as a whole.\par
+So in this case we pick for example N students at random,\par
+and we want to, as we said, to deduce population parameter\par
+from the samples.\par
+For example, maybe you want to deduce the average height\par
+of all students at UCSD by just sampling 100 of them.\par
+And so we can view, so this might look like\par
+it's a different problem, because here\par
+we have a physical population that we're sampling from.\par
+It might look like it's a different problem\par
+from estimating parameters of a distribution.\par
+But in fact we can view it as the same.\par
+So, we can view, for example, if we're looking\par
+at the heights, we can view the collection\par
+of heights as a distribution.\par
+So we have maybe, a person whose height is, you know,\par
+five foot, or five foot one, and another person's height\par
+is five feet, and so on.\par
+So we have all these, and now what we're going to do\par
+is we're going to sample from them.\par
+So we sample from the population is like sampling\par
+from the distribution that has so many,\par
+so many people with given height,\par
+and so many people with another height, and so on.\par
+So we're just sampling from them uniformly\par
+from this collection.\par
+And there's a small difference\par
+between this and this sampling that we had\par
+in the previous slide, in the sense that\par
+before they were IID and here,\par
+if we're sampling from the population,\par
+then we're picking a set of people,\par
+and these people are going to be distinct.\par
+So, it's not exactly IID.\par
+For example, if you have a population of size two,\par
+and you pick two of them, you know that\par
+they are different, and you couldn't pick\par
+the same person twice.\par
+But, in what we're going to look at\par
+N, the number of samples that you pick\par
+is much smaller than the population size.\par
+And in that case, the probability of repeats\par
+if you pick them independently will be\par
+fairly small, so we can view what we have\par
+as roughly independent.\par
+So under this assumption that N the sample size\par
+is much smaller than the population,\par
+then the selection, even though we're selecting\par
+without replacement will be very similar\par
+to selecting with replacement, because the probability\par
+that we'll get repeats is small.\par
+If we get repeats, there will be very few of them.\par
+So, with this assumption we can therefore\par
+assume that we have the same problem of estimating\par
+parameters of population as estimating\par
+parameters of a distribution.\par
+So, when we have this sample, then we're going\par
+to look at the sample and we're going to look\par
+at functions of the data.\par
+For example, the average of all the values\par
+that we get from the data,\par
+or the maximum value that we observe.\par
+And any function of the data\par
+is going to be called a statistic.\par
+What we want to do is we want to use the statistics\par
+to infer properites of the distribution or the population.\par
+So I want to look for example at the average\par
+or maximum value that we observed in our sample,\par
+and from these things we want to deduce\par
+some properties of the distribution or the population.\par
+And for example, we may want to deduce\par
+the parameter, like the mean of the distribution\par
+or the maximum of all elements in the population, and so on.\par
+Or we may want to deduce the type\par
+of distribution that's in effect.\par
+What we're going to do in the rest\par
+of the presentations in this sequence\par
+is see how to do this, and how to do this well.\par
+And so this was just a brief introduction\par
+to what we're going to discuss in the next presentations.\par
+Next, we're going to talk about possibly\par
+the simplest problem, which is estimating\par
+the mean of a distribution.\par
+And so that's what we're going to do next time,\par
+and see you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+}
+ 

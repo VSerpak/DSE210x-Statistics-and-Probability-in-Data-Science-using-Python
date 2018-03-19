@@ -1,0 +1,487 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+Now that we know what we're going to do,\par
+we're going to start by looking\par
+at estimating the first property,\par
+and so then talk about parameter estimation.\par
+We'll also have a mean example.\par
+First, if we want to talk about estimation,\par
+we need to say what estimators are.\par
+As we know, we're taking a sample,\par
+which is a sequence, x one up to x n,\par
+of independent samples from a distribution or a population,\par
+and we denote it by x superscript n,\par
+just this sequence of all n samples.\par
+And from the sequence we want to estimate\par
+a distribution parameter, theta.\par
+For example, theta could be the mean or the maximum value\par
+in the distribution or the population and so on.\par
+So mean or standard deviation\par
+or the largest value that has positive property\par
+or the largest value that appears in the population.\par
+We do it by using an estimator.\par
+An estimator for a parameter theta is just a function,\par
+theta hat, that takes R n samples\par
+and map them to some real number\par
+which is the value of the parameter.\par
+So it just maps x n to the sequence of n values\par
+to a number which is the value of the parameter.\par
+For example, we could take the maximum,\par
+if we took n samples and get x one up to x n,\par
+we can take the maximum value that we observed.\par
+Or we can take the average.\par
+So any of those is an estimator.\par
+It just maps the observations to some value.\par
+And upon observing a sequence x n,\par
+we're going to estimate the value of the parameter\par
+by looking this function of theta, theta hat,\par
+and applying it to x n.\par
+And we're going to call this theta, theta hat,\par
+capital Theta hat, because this we observe\par
+is now a random variable.\par
+So this is a random variable,\par
+which is a deterministic function of x n.\par
+And we are going to do some examples very shortly.\par
+So basically we observe x n\par
+and then we apply this deterministic function,\par
+for example, the maximum of all that,\par
+and we get to random estimate, which we call theta hat.\par
+So theta hat is a random variable\par
+and it is our estimate for the value of theta\par
+for the parameter that we want.\par
+So just couple of things.\par
+Observation, you can see\par
+that we're observing a single value.\par
+Namely, for every sequence x n we get,\par
+we'll just apply this function\par
+so we get a single value, let's say 3.5,\par
+and this kind of estimator is therefore called\par
+a point estimate as opposed to giving an interval,\par
+saying that there is a range of possibilities.\par
+Also note that any function could be an estimator.\par
+We can take the product of the values you observed,\par
+the maximum, the sum, any of them is an estimator.\par
+Now, how well does it do\par
+when trying to estimate a specific parameter differs.\par
+So it can be either good or bad.\par
+Our job is, of course, to try to come up\par
+with good estimators for different parameters\par
+that we want to estimate.\par
+How are we going to do it?\par
+Well, we're going to take a page from Elon Musk.\par
+He has experience in opening many companies,\par
+including for example Tesla or SpaceX,\par
+which launches rockets into space\par
+and often they are successful.\par
+So we're going to do the same.\par
+We're going to have sample x,\par
+which is a very simple technique\par
+that will let us come up with an estimator\par
+for any parameter that we want\par
+and like Elon Musk's SpaceX, often it will work well.\par
+Let's look at this sample x.\par
+We're going to have a property.\par
+Let's call it property x.\par
+And based on that, we'll get sample x,\par
+which is going to be an estimator.\par
+Take for example the minimum.\par
+So let's say we want to find the minimum, x min,\par
+which is just the smallest x that has positive properties.\par
+So for example, if the distribution is normal,\par
+then x min is minus infinity.\par
+But if the distribution is uniform from five to seven,\par
+then x min is five.\par
+Then what we're going to do is,\par
+we're going to apply the same thing to the sample.\par
+So we'll call it the sample min.\par
+We're just going to look at all the values that we observe.\par
+And we say that our estimator\par
+is the smallest of those values.\par
+So if we observed the values five, three and nine,\par
+and then the sample min, the sample is five, three and nine,\par
+then the sample min is going to be three.\par
+Or if we are looking at the maximum\par
+of all possible values of the distribution\par
+or the population, call it x max,\par
+is just the max of x of all elements.\par
+X was probably is positive.\par
+So for example, if we take uniform from seven to nine\par
+and then the highest possible value is nine.\par
+Then we're going to just have sample x,\par
+in this case be the sample max,\par
+which is just the maximum of the values that you observed.\par
+So for example if the distribution was from five to nine\par
+and we got the values,\par
+or seven to nine, and we got the value 7.1, 7.8 and 8.4,\par
+then the sample maximum is going to be 8.4.\par
+Or if we want to estimate the mean of the distribution,\par
+which, as we know, we denote by mu,\par
+that's just summation of x times p x,\par
+then what we're going to do is,\par
+we're going to do the same thing\par
+for the sample that we have.\par
+So we're going to look at the sample mean,\par
+which is just the average of all the values that we observe.\par
+So if the values we observe are, for example,\par
+one, three and five, then one plus three plus five is nine\par
+and the average is three.\par
+So the sample mean in this case is going to be three.\par
+So what we did here is,\par
+we saw a simple way to come up with an estimator\par
+for any property.\par
+If you give us a property, we just look at a same property\par
+but just apply to the sample.\par
+So this is our sample x method.\par
+Sample, it could be sample min, sample max,\par
+sample average and so on.\par
+So we have this method.\par
+And just like SpaceX, it often works well.\par
+So now that we have described different estimators,\par
+the question is, which one are we going to use?\par
+We have a property and can have several estimators.\par
+We described one of them, the sample x method.\par
+But you can come up with other estimators.\par
+So we want to evaluate the quality\par
+of an estimator for a parameter.\par
+We'll describe first two related values, bias and variance,\par
+and then another one that encompasses both of them.\par
+It's called the mean squared error.\par
+So first, what are the bias and the variance?\par
+If theta hat is an estimator for theta,\par
+and you recall that theta is the parameter\par
+we want to estimate, for example the mean,\par
+and theta hat is our estimate\par
+which is based on the sample that we observe,\par
+then the bias of theta hat is\par
+its expected overestimate of theta.\par
+For example, if the mean is four\par
+and the expected value for our estimator is five,\par
+then the bias is going to be five minus four, which is one.\par
+Just reading here, the bias of the estimator theta hat,\par
+which is a random variable, for the parameter theta,\par
+is just the expected value of theta hat minus theta,\par
+which is the same as the expected value of theta hat\par
+or its mean, mu theta hat, minus theta.\par
+If the parameter we're trying to estimate is clear,\par
+for example if we are talking, like,\par
+four or five slides about the mean,\par
+then we're not going to write theta, which is the parameter,\par
+we just write the bias of the estimator that we got.\par
+And if the estimator has zero bias,\par
+then it's called unbiased.\par
+That would mean that mu,\par
+that the mean of our estimator is exactly theta,\par
+right, that this difference is zero,\par
+or that the mean of the estimator is exactly theta.\par
+Now, the variance of an estimator is just,\par
+as the name says, it's just the variance of the estimator,\par
+which is the expected value of the estimator, theta hat,\par
+minus its mean square.\par
+And notice that this variance is defined\par
+just for the estimator.\par
+Has nothing to do with what we're trying to estimate there.\par
+It's unrelated to theta.\par
+And ideally, we would want an estimator\par
+which has zero bias and zero variance.\par
+If we have an estimator that has zero bias,\par
+that means that its mean is just theta.\par
+And if has zero variance, it means that it's a constant.\par
+So that means if we have an estimator\par
+that always give us the value of theta,\par
+it's hard to get an estimator like this.\par
+We can only get that for distributions that are constant.\par
+So typically there'll be some trade-off\par
+between the bias that we get and the variance that we get.\par
+Now, this all good.\par
+The only thing is that, as we see,\par
+we have now two measures.\par
+One is the bias and one is the variance.\par
+And while in life, two is good,\par
+in math, two is not good because you have some trade-off\par
+and you don't know how to choose.\par
+So we want to do some, define like a single estimator\par
+and a single evaluation measure for the estimator.\par
+The one we'll use is the mean squared error,\par
+which is a single measure for the performance\par
+of an estimator, theta hat, for a parameter theta.\par
+It's abbreviated MSE.\par
+And the mean squared error of theta hat is\par
+just its expected squared distance from theta.\par
+So the MSE, we do not like this.\par
+It's the MSE of the estimator for the parameter.\par
+It's just the expected value of the estimator\par
+minus the parameter squared.\par
+If the parameter we're trying to estimate is clear,\par
+then we just denote it by the MSE of theta.\par
+This is common in science and engineering,\par
+for example when people design communication systems\par
+or transportation systems or production facilities,\par
+they often use this parameter.\par
+They want to design something\par
+and they want to minimize the mean squared error.\par
+So they have some target\par
+and they want to minimize this difference squared.\par
+One natural question is whether, if we want to do this,\par
+we'll need to do something,\par
+we're talking about bias and variance,\par
+will we need to do something which is completely new?\par
+And luckily no, because we can relate this\par
+to the bias and the variance of the estimator.\par
+What help us is what you might call,\par
+what help us use the bias and variance\par
+is what you might call the bias-variance bromance,\par
+which is that the mean squared error\par
+is the bias square plus the variance.\par
+To see that, recall that the variance\par
+of a random variable x is the expected value of x square\par
+minus the expected value of x squared.\par
+So the variance of x is e of x square\par
+minus e of x squared, which we can write like this.\par
+The expected value of x square\par
+is the mean squared plus the variance.\par
+If you want, you can think of is\par
+as maybe like the populistic version\par
+of a physical (mumbles).\par
+In physics, we know that the energy is E,\par
+the energy is M C squared.\par
+And here we can think of the expected value of x square\par
+as the energy of x.\par
+So we have that the energy of a random variable\par
+is its mean square, is mu square plus sigma square\par
+instead of M times C square.\par
+So what we want to show is that the MSE is equal\par
+to the bias square plus the variance.\par
+And to do that, let's look at the MSE of theta,\par
+and we did here with theta hat, just (mumbles) of theta,\par
+is the expected value of theta minus the parameter squared.\par
+So we have, if called theta,\par
+theta the estimate minus the parameter, we call it x,\par
+then we have here the expected value of x square.\par
+And this is going to be equal\par
+to the expected value of the difference squared\par
+plus the variance of the difference from here.\par
+But the expected value of the difference is just the bias\par
+and the variance is just the variance,\par
+the variance of what we define to be the variance of theta.\par
+Because what we do here is, we subtract theta,\par
+which is a constant, and we subtract a constant,\par
+we don't change the variance.\par
+When we combine those, we see that what we get here\par
+is just the bias squared plus the variance.\par
+So this gives us a very simple relation\par
+that relates an MSE to the bias and the variance.\par
+So what is our mean example that we're going to give?\par
+Well, it probably not so surprising, is just the mean.\par
+Suppose we have an unknown distribution or population,\par
+call it p, and we want to estimate the mean mu.\par
+So we're going take n samples, x one up to x n\par
+and they're distributed according to p,\par
+and they're independent of each other.\par
+What we're going to use is the sample x method that we said.\par
+In this case, it's the sample mean.\par
+And what is the sample mean?\par
+We take all our samples, n samples, we add them up,\par
+normalize them by n, and we call it our mean.\par
+What we want to do is, we want to evaluate the bias,\par
+the variance, and the mean squared error of this estimator.\par
+If things will look a little familiar,\par
+if you have a sense of deja vu, there is good reason\par
+because we have actually done this before.\par
+When we talked about the weak law of large numbers,\par
+we said that if we take a bunch of samples\par
+and take the average, we saw what the mean was,\par
+we saw what the standard deviation was,\par
+and that's exactly what we're going to do again here,\par
+except we're just looking in the context of a sample.\par
+But the (mumbles) collections are going to be\par
+exactly the same.\par
+So it's the same as what we saw\par
+for the weak law of large numbers.\par
+First, let's evaluate the bias of the sample mean.\par
+Sample mean, as we said,\par
+is just the average of our n samples.\par
+And what is its expected value?\par
+Its expected value is just\par
+the expected value of this average.\par
+And by the linearity of expectation,\par
+we can take one over n outside of the expectation\par
+and also take the summation outside of the expectation.\par
+So it's going to be one over n\par
+times the summation of the expectation of x i.\par
+Now observe that each x i was chosen according to p.\par
+So the expected value of each x i\par
+is the expected value of p, which is mu.\par
+Even though we don't know what mu is,\par
+we're trying to evaluate it.\par
+But the expected value of x i is mu.\par
+So what we have here is n times mu\par
+divided by n, which is just mu.\par
+So what we get is that the expected value\par
+of the sample mean, x hat, is just a mu,\par
+which is the average of the mean of the whole distribution\par
+or the mean of the population.\par
+It's kind of nice.\par
+If we take a sample, calculate the average,\par
+then its expectation is exactly the value\par
+of the parameter that we're seeking.\par
+Therefore the bias of the sample mean\par
+is just the expected value of,\par
+this is the bias,\par
+is just the expected value of our estimate minus mu,\par
+what we are trying to estimate.\par
+But this is just going to be mu minus mu,\par
+which is zero.\par
+In other words, we see that the sample mean\par
+is an unbiased estimator for the distribution mean.\par
+Next, we're going to look\par
+at the variance of the sample mean.\par
+The variance of the sample mean\par
+is the variance of this average.\par
+Now recall that our samples are independent.\par
+Now, if we're sampling from distribution,\par
+they are really independent.\par
+If sampling from population, we assume\par
+that we are taking few samples\par
+so they are effectively independent of each other,\par
+because we don't get repetitions.\par
+So first of all, we know that the variance of a constant\par
+times a random variable\par
+is the constant squared times the variance.\par
+So one over n comes out as one over n square.\par
+And now we're going to use the independence\par
+and get it's one over n square\par
+times the summation of the variance of the x i\par
+because the samples we're assuming are independent.\par
+But the variance of each x i\par
+is a sample from the distribution,\par
+which has standard deviation sigma\par
+or variance sigma square, which is unknown to us.\par
+But it is still the variance.\par
+So we get one over n\par
+times the summation of one up to n of sigma square.\par
+So sigma square will get multiplied by n\par
+and then divided by n square.\par
+So we get that the variance of the sample mean\par
+is sigma square over n,\par
+which is kind of nice.\par
+It says that once we take the sample mean,\par
+then the variance of our mean is going to go down with n.\par
+And the standard deviation therefore is going to be\par
+the square root of this,\par
+which is sigma divided by square root of n.\par
+So we see that both of them increase\par
+with the original standard deviation,\par
+standard deviation of the distribution or population.\par
+They increase when sigma increases.\par
+But they decrease with n.\par
+So if we keep increasing n, then eventually\par
+these values will become smaller and smaller.\par
+So now we calculate both the bias\par
+and the variance of the sample mean.\par
+Can therefore calculate the mean squared error.\par
+But before we do that, I wanna show you\par
+a couple of experiments.\par
+These experiments you can find\par
+in the notebook for this lecture\par
+and you can play with different values\par
+using the sliders.\par
+So here what we have is a underlying Gaussian distribution\par
+with mean zero and standard deviation one.\par
+We're going to select samples from this distribution.\par
+In this case, we're selecting five samples,\par
+sample of size five,\par
+and we're going to calculate the average.\par
+And we see what we get.\par
+Now if we did that once,\par
+then you'll just get a single spike,\par
+but we won't see what happens on average.\par
+So we'll repeat this process, in this case 3,000 times.\par
+What you see is that you see the distribution that you get\par
+for the sample mean.\par
+And you can see that its expected value\par
+is roughly zero, what we expect to get.\par
+You see the variance of the sample mean,\par
+which is pretty wide.\par
+And that's because we only took five samples.\par
+Now, if instead of taking a sample of size five,\par
+if we take a sample of size, in this case, 50,\par
+then you can see that the sample mean\par
+becomes much more narrow.\par
+That's because the standard deviation\par
+or its variance decreases, like sigma square over n,\par
+and we get a better estimate.\par
+But still in both cases,\par
+the expected value is essentially zero,\par
+'cause that's what the expected (mumbles) should be.\par
+Now, this was done with repeating this 3,000 times.\par
+If instead we repeated it only 400 times,\par
+then you'll see that the results are going to be\par
+a little more sketchy.\par
+It's less clear what's happening.\par
+And also, now when we look at the average,\par
+while the expected value is still zero,\par
+because we're taking fewer sample,\par
+there is more statistical variability\par
+and maybe the expected value is not\par
+exactly zero in this case,\par
+or further from zero than it was (mumbles).\par
+And here again we're taking more samples.\par
+Then we see that it behaves more focused.\par
+But again, maybe the mean is not\par
+as close to zero as it is here\par
+because we took fewer repetitions of this experiment.\par
+Finally, the MSE.\par
+So the MSE of the sample mean\par
+is the bias square plus the variance.\par
+And the bias, as we saw, was zero\par
+and the variance we saw was sigma square over n.\par
+So this gives us sigma square over n.\par
+And as we said before,\par
+it increases with the original standard deviation\par
+of the distribution, but decreases\par
+as the number of samples that we take increases.\par
+What couple of nice things about this is\par
+that this estimator that we have,\par
+the sample mean, works for any distribution.\par
+We don't care what the distribution is,\par
+if it's Gaussian, if it's no more,\par
+if it's continuous, if it's discrete.\par
+The sample mean works for all distribution.\par
+That's one thing that's interesting.\par
+The second thing is that the accuracy\par
+that we get here, namely the mean squared error,\par
+depends on the sigma or n,\par
+but does not depend on the population size.\par
+So for example, if we're looking\par
+at trying to estimate the average size\par
+of people in your class or people in your school,\par
+or people in your whole country,\par
+that won't matter.\par
+The only thing that would matter\par
+for your accuracy of the estimator\par
+is just what is the standard deviation,\par
+which presumably is the same no matter what,\par
+whether you're looking at small class\par
+or large collection of people,\par
+and which is the number of samples that you took.\par
+So if you took 100 samples,\par
+you can estimate the average for your class\par
+or for the whole universe equally well.\par
+So with that, we talked about what parameter estimation is,\par
+we described what it means to have an estimator,\par
+how we evaluate an estimator using the bias,\par
+the variance, and the mean squared error.\par
+We described a general technique for creating estimator,\par
+which is looking at the sample x,\par
+for example sample mean and so on,\par
+and we evaluated this sample mean\par
+for estimating the mean mu of a distribution.\par
+So this is what we want to say about the mean.\par
+What we want to do in next time is,\par
+estimate the variance of a distribution.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+}
+ 

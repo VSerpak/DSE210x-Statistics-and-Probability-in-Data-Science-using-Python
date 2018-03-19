@@ -1,0 +1,890 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+Last time we discussed estimating the variance.\par
+Today we're going to talk about unbiased estimation\par
+of the variance.\par
+And we're going to resolve the mystery of the missing man.\par
+So what we're going to do is evaluate the bias\par
+of the estimated raw estimator that we described last time.\par
+And we're going to understand it's behavior a little better.\par
+And then we'll describe and unbiased estimator.\par
+And doing that will resolve the mystery that we have\par
+and we also dispel a half-truth.\par
+So let's start.\par
+So what is the mystery?\par
+So just small repetition.\par
+Remember that the sample mean, which we denote by X bar,\par
+is just the average of the sample values.\par
+One over n times the summation of the Xi samples.\par
+You may also recall that the expected value\par
+of the sample mean is exactly mu.\par
+Which is the distribution of the collection average mean.\par
+And therefore the sample mean is an unbiased estimator\par
+of the distribution.\par
+When we looked at the variance instead of the mean\par
+then we defined the quote unquote raw sample variance.\par
+Which we denoted by S squared quote.\par
+And S square is because we're estimating sigma square\par
+and the code is because it's kind of raw.\par
+We define to be the average of the difference\par
+between the samples and the sample mean square.\par
+So it's summation of the sample values minus the sample mean\par
+squared summed over all samples and then we normalize\par
+by the number of samples.\par
+And then we saw we ran a couple experiments\par
+and we saw that the expected value of this sample variance\par
+was roughly n minus one over n times sigma square\par
+or we saw it for n equals two two.\par
+Was half sigma squared.\par
+And we calculated it for a simple example.\par
+Okay.\par
+Therefore this raw sample variance, it is biased.\par
+It's expectation is not sigma square\par
+but something that is smaller than sigma square.\par
+So that leads to a small mystery.\par
+In the sense that you take ten people,\par
+ten men or ten women.\par
+And if you want to find the mean then what you do\par
+is just add their heights.\par
+So here you add their heights and then you normalize\par
+by the number of people, in this case ten.\par
+You normalize by ten.\par
+But if you want to calculate the variance of the heights\par
+not the mean of the heights, then again you add the heights\par
+like here.\par
+And you normalize again.\par
+But instead of,\par
+in order to get the right value instead of normalizing\par
+by ten you need to normalize by some other number,\par
+by nine, so you get something that will instead\par
+of giving you something which is n minus one over n\par
+will give actually the right value.\par
+And so the question is why that is so, if it's so.\par
+So what we're going to show is first we're going\par
+to show that indeed the expected value of this\par
+estimator of S square is n minus one over n\par
+times sigma square.\par
+So this is correct.\par
+It's not roughly correct or correct\par
+for Bernoulli descriptions it's always true.\par
+Then we'll also try to see why this is so and how to fix it.\par
+So let's start and again we're going to start by giving\par
+a partial explanation of why the raw sample mean\par
+underestimates the sample variance.\par
+So the raw sample mean again is one over n times\par
+the summation of the difference between the values\par
+of the samples and the means squared.\par
+And like we said we're going to show that its expected\par
+value is n minus one over n times sigma square.\par
+So if this sample is of size two then this sample mean,\par
+I'm sorry sample variance, will give you half\par
+of sigma square if you take three samples\par
+it'll give you two thirds of sigma square and so on.\par
+Okay.\par
+And we want to see, so in other words\par
+it underestimates the variance.\par
+And we want to see why.\par
+One partial explanation-\par
+so observe that if you're given n points X one up to Xn\par
+and you're interested in the summation of Xi those points\par
+minus some fixed value a square.\par
+So looking at summation of Xi minus a squared\par
+and you want to sum of-\par
+This quantity is minimized for which a,\par
+it will be minimized for a which is the average\par
+of all the Xi.\par
+So a is the summation of the Xi divided n.\par
+For example, if you take two points, one and minus one\par
+and you want to minimize, in this case one minus a\par
+plus minus one minus a.\par
+Then we can just solve it.\par
+This one will give us one minus two a plus a square.\par
+And this will give us one plus two a plus a square.\par
+So the two a will cancel and we'll be left with\par
+two plus two a square.\par
+If you want to minimize this you'll clearly choose\par
+this point a to be zero.\par
+So the minimized four a which is zero.\par
+And as you can see a equals zero is the average\par
+between one and minus one.\par
+This will always be true if you take the largest two points\par
+but any number of points and you want to minimize\par
+the summation effects I minus some fixed value.\par
+You square it and sum of all the points\par
+and the minimum is going to be when this point\par
+that you subtract is just the average it also makes sense.\par
+So now let's go back to our example and see why\par
+the sample variance underestimates the real variance.\par
+So the real variance s square is just the expected value\par
+of X minus mu.\par
+That's our definition.\par
+You notice that mu is roughly the average of the sample.\par
+So mu is the means or the average of the sample.\par
+If you took lots of samples the average will be exactly mu.\par
+But if you take two samples or three samples\par
+the average will not be exactly mu.\par
+It may be mu plus three and another one may be\par
+mu minus 3.2, something of that.\par
+So the average will be roughly mu but not exactly mu.\par
+On the other hand, when you calculate the sample variance\par
+here, then we're subtracting X average which\par
+is exactly the average of all the samples.\par
+So subtracting s average.\par
+Which is the exact average of all the samples.\par
+So when we do that by what we said here\par
+this will minimize the summation of s squared.\par
+So this will therefore give a lower sum than what\par
+the distribution would give.\par
+So this explains why s squared underestimate sigma squared.\par
+Because the sum is going to be a little smaller than the sum\par
+when you subtract the eXpectation\par
+which is not exact average.\par
+But what it does not eXplain is why we get\par
+n minus one over n, a fact of n minus one over n\par
+and always get a fact of n minus one over n.\par
+And also as we're going to see, it does not\par
+capture the whole reason for why we get this.\par
+It's only half of the reason.\par
+So it's kind of a half truth.\par
+And we'll get to that as well.\par
+So to show that let's go back to Sherlock.\par
+And as he would do let's show that something,\par
+let's show something that is elementary.\par
+So we're trying to calculate the expected value\par
+of the sample variance here.\par
+The sample variance defined again to be the one over n\par
+times the summation of the differences between the samples\par
+and the sample mean.\par
+As you can see then you take the expectation.\par
+You can see that this is a complex example.\par
+If n is ten you to take these differences,\par
+square them, add ten numbers.\par
+It's rather complex.\par
+So we want to simplify it a little bit.\par
+So first of all, notice that one over n is a constant.\par
+By the linearity of expectation we can take it outside\par
+of the expectation and get that this is\par
+one over n times the expected value of what's left.\par
+And then notice again that you have here eXpected value\par
+of the sum, so again by the linear of exceptions\par
+we can take this sum out and we'll get one over n\par
+times the summation of the expected value of Xi minus\par
+the sample average, sample mean squared.\par
+So we just took here, we took one over n out\par
+and here we took the summation out.\par
+But now notice that there's a little bit\par
+of symmetry going on.\par
+Because the Xis each of them is generated according\par
+to the same distributions.\par
+So there's no reason why the expected value of X one minus\par
+the sample mean will differ from the expected value\par
+of X two minus the sample mean.\par
+Or X three.\par
+So all these expectations, the expected value of each Xi\par
+minus the sample mean squared, they're all going\par
+to be the same.\par
+So we can replace all of them by just the expected value\par
+for X one.\par
+So it's just one over n times the summation\par
+of the expected value of X one minus\par
+the sample mean squared.\par
+So that's just by, we observe because all of them\par
+are the same behaviors.\par
+So what we have now is we have the same value.\par
+This expectation value expected squared distance\par
+of X one from the sample mean squared.\par
+This expected value we just added n times itself\par
+and then normalized by n.\par
+So we can just cancel.\par
+And this is just the expected value of X one\par
+minus the sample mean squared.\par
+As we can see we got started something which was a little\par
+complex to something that is a little nicer\par
+and it's also intuitive.\par
+Because here we have just the average of all the distances\par
+squared but each of them behaves the same\par
+so we just taking the first one.\par
+So it's intuitive and it's simple.\par
+Or as Sherlock would say, it's elementary.\par
+And there's another advantage to the simplification\par
+that is that it makes it easier to understand\par
+what's going on because we don't need to think of a sum\par
+we can just think of a single random variable X one.\par
+And therefore easier to explain why we get this factor\par
+of n minus one.\par
+Okay, so that's where were going to next.\par
+But before that let's just see how we can use this\par
+simplification to simplify the example that we did before.\par
+So remember we had in last lecture we saw the example\par
+of Bernoulli random variables.\par
+And we said we have Bernoulli P so the probability\par
+of one was P.\par
+The probability of zero was one minus p\par
+which we denote by q.\par
+And therefore the variance sigma squared was\par
+p times one minus p or p times q.\par
+And we evaluated what happens when you take a sample\par
+of two observations.\par
+If you recall was a little supperific\par
+so it's still a little supperific\par
+so I'm going to just show the whole thing for now on.\par
+This is the calculation and the one thing that I want\par
+to remind you is that this calculation here\par
+when calculated s squared we had to look at the summation,\par
+the long summation.\par
+In this case summation of a two values which was\par
+a little long.\par
+And if we took three samples if would be longer.\par
+And if it was not Bernoulli or anything else\par
+it would be longer still.\par
+It can get quite unwieldy.\par
+But whatever it is we use it to show that the expected\par
+value of the sample variance was half of the distribution\par
+variance, just half.\par
+So we want to do it using this simplified approach.\par
+So this is take two of the same example.\par
+So again we have Bernoulli P\par
+and we do the simplified calculation.\par
+Again n equals two, so we have X one and X two\par
+are the two random variables we observe.\par
+And the expected value of the sample variance s squared\par
+is as we saw by this simplification is just the expected\par
+value of X one minus the sample average squared.\par
+So we just need to look at this and so we need to look\par
+at summation of all X one X two of the probability\par
+of X one X two times the difference of the X one minus\par
+the X average.\par
+And so here is the table.\par
+We have X one X two.\par
+Here is going to be the probability.\par
+Here is the average of X one and X two\par
+and here is X one, the first element,\par
+minus the average squared.\par
+So if X one X two is zero that happens\par
+probability q squared.\par
+So the average of the Xs is zero.\par
+And X one minus the average is zero minus zero\par
+which is zero.\par
+X one X two is zero and one.\par
+It happens probability q times p.\par
+The average of zero an one is a half.\par
+And therefore the difference between X one\par
+which is zero and a half is a half\par
+but we square it, we get one quarter.\par
+Likewise for 1,0 the probability pq the average is a half.\par
+The difference square is one minus a half\par
+which is a half squared which is a quarter.\par
+And 1,1 p squared average one,\par
+squared this difference is zero.\par
+So we can come and calculate the expectation.\par
+Just from here it's going to be two times pq\par
+times one quarter which is pq over two.\par
+Which is sigma over two, which is the same as what\par
+we got before.\par
+We have this last column here, which is a lot simpler\par
+than the really wide column that we had before.\par
+And that's what we're going to use when we're going\par
+to try to understand what's happening.\par
+It's simpler and it's easier to analyze.\par
+So using the simplified formulation let's rephrase\par
+our question.\par
+We want to show that the expected value of the sum\par
+of variance is n minus one over n times sigma squared.\par
+We just showed, and you observe here that this is not\par
+so easy to understand because here we have one quantity\par
+that is expressed as a sum of a long thing\par
+and you are going to have something\par
+that looks completely different.\par
+It'd be a lot nicer if we had something on the left\par
+that looked a lot like what's on the right.\par
+And that's what we can do now.\par
+So we just showed that the expected value\par
+of the sum of variance we showed was\par
+the expected value of this long expression\par
+which we simplified to just the expected value\par
+of X one minus the sum of the average squared.\par
+That's what we had shown.\par
+So that's for the left side.\par
+For the right side, just observe that sigma squared\par
+because X one the same X one is according to\par
+whatever we have only one distribution call it p.\par
+Then sigma square is just the expected value\par
+of X one minus mu squared.\par
+So sigma squared is the variance of this distribution.\par
+It's the expected value for X one minus the mean squared.\par
+So what we, instead of showing this, what we want to show\par
+is equivalent.\par
+We want to show that the expected value of X one minus\par
+the average of X squared, so this becomes that,\par
+is equal to n minus one over n from here\par
+times n instead of sigma squared we expect the value\par
+of X one minus mu squared.\par
+So this is a lot nicer because this is symmetric.\par
+So we have here exactly the same expression, almost exactly.\par
+We have the expected value of X one minus X average\par
+and here we have the value of X one minus mu.\par
+That's the only difference.\par
+And shows the difference between what we want\par
+to prove and we can relate them more easily.\par
+So let's see how to phrase this partial argument.\par
+You can say maybe the simplistic argument\par
+that we had before.\par
+Which you remember we said that this is smaller,\par
+the sample variance was smaller because we subtracted\par
+the exact average.\par
+We can rephrase it here and say that what we have here\par
+is that this expectation is smaller than this expectation\par
+followed by this factor, n minus one over n.\par
+Because X hat here includes X one and therefore\par
+is closer to X one.\par
+So we take this expected of this different square\par
+is going to be smaller.\par
+The simplistic argument says that the only reason\par
+why this is smaller is because X hat.\par
+It's the only reason it gives, I should say,\par
+is that this X hat includes X one and therefore is closer\par
+to X one and therefore this is going to be smaller.\par
+And X one minus mu is mu, is no relation to X one.\par
+It's just the average and it does not need to know\par
+what the X one is.\par
+Okay.\par
+So it says that X hat includes X one, hence is closer\par
+to X one than mu is to X one.\par
+So and again, notice that just like before, it's the same\par
+it doesn't explain why we get n minus one over n\par
+and next we're going to see it's not the whole story.\par
+So we're going to first show this equality for n equals two.\par
+So we want to show that the expected value\par
+when you have two samples, X one and X two,\par
+they expect the value of X one minus the average of the\par
+two sample is going to be here and is two so is going\par
+to be one half one over two.\par
+One half times the expected value of X one minus mu squared.\par
+Notice that this is just a variance.\par
+So we'll first show it four n equal to two\par
+and then we're going to show it for general n.\par
+So again, for n equal to two we want to show\par
+that the expected value for X one minus the sample mean\par
+squared is one half the expected value of X one\par
+minus mu squared.\par
+And this is just sigma squared.\par
+So in order to show this, what we want to do is we want\par
+to relate X one minus X average to X one minus mu.\par
+As we said a difference, one difference is X average\par
+includes X one.\par
+So in order to relate them we want to first decouple X one\par
+from the average of the Xs.\par
+So it's rather easy here.\par
+We can write X one minus the average of the Xs.\par
+So it's X one minus X one plus X two over two.\par
+And then this gives us X one minus X one over two\par
+is going to give us X one minus X two over two.\par
+Because this becomes two X one minus X one is X one\par
+minus X two over two.\par
+So X one minus the average is just X one minus X two\par
+the difference of the two.\par
+So now we can write what we have here on the left.\par
+The expectant value of X one minus the average squared.\par
+We can just plug this in.\par
+X one minus X average.\par
+Expected value of X one minus X two over two X squared.\par
+And now this quantity here is just X one minus X two squared\par
+divided by four.\par
+And by linearity of expectation you can take four out.\par
+So this becomes one quarter times the expected value\par
+of X one minus X two squared.\par
+And now here's one of the variation.\par
+So X two now, the Xis are independent\par
+so X two is independent of X one.\par
+So what we have here the expected value of X one\par
+minus X two.\par
+X two has the same as mu, as does X average.\par
+But X two is not closer to X one than mu.\par
+It's exactly, it's again, random.\par
+So it's not any-\par
+it's random so it's not independent of X one.\par
+So it's not any closer.\par
+So if the argument, if the argument was that the reason\par
+this was smaller what because X one and X hat\par
+would correlate and then the X hat was closer to X one\par
+than mu, than this argument does not work here because X two\par
+is not necessarily closer to X one than mu is.\par
+So if was the only reason then we could replace here\par
+X two by mu because X two is not closer to X one than mu.\par
+So we would have gotten that this is equal to one quarter\par
+of the expected value of X one minus mu squared.\par
+But the expected value of X one minus mu squared\par
+is just sigma squared.\par
+So this would give us sigma squared over four.\par
+So if this argument was the whole thing, the only\par
+reason for this difference what that X hat includes X one,\par
+is closer to X one.\par
+Then if this was the whole story then you would get\par
+that the expected value of X one minus the mean squared\par
+should not be one half, but should in fact be a quarter\par
+of the variance.\par
+And that not the case.\par
+The reason it's not the case is because it's not that whole\par
+story, there's more to it than that.\par
+And the more to it is here we have,\par
+we related the expected value of X one minus the average\par
+to the expected value of X one minus X two.\par
+But X two is random where mu is not random.\par
+And when we look at expectations of X one minus some random\par
+value we'd actually increases this expectation squared.\par
+So the randomness of X two actually reverses\par
+some of the decrease we got,\par
+we've got to decrease by a factor of four\par
+and this will actually increase the variance\par
+by actually a factor of two.\par
+So it will reverse some of it.\par
+So what we're going to show is that the expected\par
+value of X one minus X two squared,\par
+this quantity here is actually twice the expected\par
+value of X one minus the average square.\par
+And once you have the second part then it's easy\par
+to see that the expected value of X one minus X average\par
+this is what you want to evaluate.\par
+Then by what we showed here it's going to be one quarter\par
+the expected value of X one minus X two squared.\par
+This expected value of X one minus X two squared\par
+is twice the expected value of X one minus mu squared.\par
+So here the two will cancel part of the one quarter\par
+so we've got here this is sigma squared,\par
+sigma squared over two.\par
+This is what we're going to show.\par
+And by the way, to show this the only thing that\par
+we need to show, we already showed this part,\par
+we only need to show this part here.\par
+But just before we do that I want to observe\par
+again that what this shows is that we got\par
+one quarter, we gained from the proximity of X hat\par
+to X one.\par
+Because X hat is closer than mu to X one.\par
+We got this one quarter and then we lost\par
+a fact of two.\par
+So we got a fact of four here,\par
+and we lost a fact of two due to the randomness effects too.\par
+So we're to mu.\par
+So we have one quarter then two so altogether\par
+we've gained a fact of two.\par
+So the only thing we need to show is this part here,\par
+the expected value of X one minus X two squared\par
+is twice the expected value of X one minus mu squared.\par
+So that's what we're going to do.\par
+So once you know the expected value of X one minus X two\par
+squared is twice the expected value of X one minus\par
+mu squared.\par
+Here's a simple observation.\par
+If you look at X one minus X two than it's expectation\par
+is just mu minus mu.\par
+Because X one and X both distributed according to P.\par
+So it's mu minus mu which is zero.\par
+So X one minus X two has zero mean.\par
+Likewise if you look at the right side\par
+the expected value of X one minus mu,\par
+it's expectation is also mu minus mu.\par
+Because the expected value of X one is mu\par
+and you have the expectation\par
+so this is also zero.\par
+So we have here X one minus X two and X one minus mu\par
+are two random variables with zero mean.\par
+For any zero mean random variable Z know that the expected\par
+value of Z squared, like we have here, is just the variance\par
+of Z right.\par
+Because the variance of Z I the expected value of Z\par
+minus its mean squared.\par
+But the mean here is zero.\par
+So the variance of Z is the expected value of Z squared.\par
+So what we have here is the variance of X one minus X two.\par
+And what we have here is the variance of X one minus mu.\par
+Okay.\par
+Notice the variance of X one minus mu is the same\par
+as the variance of X one.\par
+And that's because both X one minus X two\par
+and X one minus mu both of them have a zero mean.\par
+In other words, to show that the expected value\par
+of X one minus X two squared is equal to twice\par
+the expected value of X one minus mu squared\par
+to show this can prove the same result for the variances.\par
+And can show that the variance of X one minus X two\par
+is the same as the variance of X one minus mu\par
+but when you subtract mu, which is a constant,\par
+doesn't change the variance so it's twice the variance\par
+of X one.\par
+That's what we want to show.\par
+So that's easy because the variance of X one minus X two\par
+well, X one and X two are independent.\par
+So the variance of the difference or the sum,\par
+by independence is just the sum of the variances.\par
+And now X one and X two are distributed according\par
+to the same distribution P.\par
+So this is going to be just variance of X one\par
+plus variance of X one again.\par
+So it's twice the variance of X one.\par
+So we get that this variance is just twice the variance\par
+of X one.\par
+And we are done.\par
+So even though we're done, it may not quite look that\par
+way because we have shown that we have done over\par
+a few slides.\par
+So I just want to combine everything into a single slide\par
+to see what we did and then we can be convinced\par
+that indeed we're done.\par
+So summary for n equal to two.\par
+We want to calculate the expected value of\par
+the sample variance.\par
+And by definition the expected value of one over n,\par
+summation of Xi minus X hat squared.\par
+So we said this calculation here is too complicated.\par
+So we simplified it and we just used symmetry\par
+to show that this is just exactly the same\par
+as the expected value of X one minus the average square.\par
+So we can just take one of those elements.\par
+We don't need to average all of them.\par
+Now, and these two will work for any n.\par
+Now we do it for an equal to two.\par
+We observed here that X one minus X hat\par
+is just X one minus X two over two.\par
+So just write that here.\par
+So this is the expected value of X one minus X two\par
+over two squared.\par
+And use linearity of expectation to say that this\par
+is one quarter times the expected value of X one\par
+minus X two squared.\par
+Because we have one quarter here and you square it,\par
+it becomes opposite.\par
+Now we notice that X one minus X two has zero mean.\par
+And because it's zero mean then the expectation of X one\par
+minus X two squared is just the variance\par
+of X one minus X two.\par
+Then use the fact that X one and X two are independent.\par
+To say that this is a quarter of the two variances.\par
+And then we said that X one and X two are distributed\par
+according to the same distributions.\par
+So this is just the identically distributed.\par
+This is twice the variance of X one.\par
+So we've got one quarter times twice and the variance\par
+of X one sigma squared.\par
+So you get one quarter times two sigma squared\par
+which is sigma squared over two.\par
+You can see it's actually fairly simple.\par
+We just describe it over a couple of slides\par
+just to motivate each of those steps\par
+and also to show what you gain from the value of X\par
+average is closer to X one than mu\par
+and let's us repeat what that was.\par
+This was we got one part here.\par
+So we got one quarter, fact of four improvement\par
+because X one was closer to mu,\par
+I'm sorry X average was closer to mu.\par
+Was closer to X one than mu.\par
+So X one-\par
+I'm sorry,\par
+X average minus mu was closer than mu.\par
+I'm sorry-\par
+X average minus X one was smaller than mu minus X one.\par
+Because of that X average then we get a fact of four here.\par
+Because X two we can think of just being mu.\par
+And then on the other hand we do this replacement\par
+X two and so is X average is random.\par
+So we lost something.\par
+The variance of the difference.\par
+We added the variance of X two.\par
+So by doing this we lost a fact of two.\par
+Gained a fact of four.\par
+Lost a fact of two.\par
+Gained a fact of two when you combine all them.\par
+So this is the summary for n equal two\par
+and now we want to do the same thing for any n.\par
+And you can see we can just do it in one slide.\par
+It's going to be very simple.\par
+So for general n, we're going to calculate the expected\par
+value of the sample variance.\par
+It's the expected value of the average of the difference\par
+between the samples and the sample mean squared.\par
+And then by symmetry, we can show, in fact we showed\par
+it in general, it's an expected value\par
+of X one minus X average square.\par
+And now we need to do, we're getting one to the couple.\par
+We want to relate this to see how much we gain\par
+by X average being close to X one so then the mu.\par
+So what we want to do is again decouple\par
+X one, get is out of X average.\par
+So if you write X one minus X average\par
+is X one minus the average of X one up to Xn over n.\par
+The denominator is n, you get n X one minus X one.\par
+So it's n minus one X one minus all of these.\par
+And now we can write it n one over n.\par
+We can take that out and then we get X one minus X two\par
+plus Xn divided by n minus one.\par
+You can see this n minus one that can cancel\par
+you get this here.\par
+So we got the X one minus the average\par
+X is n one over n\par
+times X one minus this sum here.\par
+And notice that this sum here does not contain X one,\par
+so it's not closer to X one than mu is, on average.\par
+It just behaves the same as mu\par
+relative to X one.\par
+It's not any closer to X one than mu is.\par
+And so we can just plug this in.\par
+So get that this is the expected value of n one over n\par
+X one minus the average of the remaining Xs.\par
+All this squared.\par
+And then I can used linearity of expectation\par
+to get that this is, we have here is squares,\par
+so n one over n will become n one over n squared.\par
+And to get outside of the expectation.\par
+So we get n one over n squared times the expected value\par
+of X one minus the average of all of the other Xs.\par
+And this is squared.\par
+So what we can see again this now behaves,\par
+this in not closer to X one than mu is, on average.\par
+And what we gained by having X hat which is closer\par
+to X one as we get in the fact of n minus one over two.\par
+So we gain a fact of N minus one over two.\par
+Because X hat is closer to mu than X one is to mu.\par
+And this is, notice the square of what we eventually\par
+are going to get.\par
+And now we observe that this X one, its expectation is mu.\par
+The average of the Xis, their expectation, the expectation\par
+of the average is also mu.\par
+So this random variable has zero mean.\par
+So this is n minus one over n squared times the variance\par
+of this random variable X one minus the average of the rest.\par
+And now we can use the independence of the Xi\par
+this is the variant-\par
+this factor is the same as the variance of X one\par
+plus the variance of the rest.\par
+But now notice that this here we have a variance\par
+of the average of independent random variables.\par
+We know that when you take the average of the sum\par
+of independent random variables the variance\par
+will just go down by linearly.\par
+So if you take the average of five independent\par
+random variables the variance will go down\par
+by a fact of five.\par
+We've shown this before, it's actually very easy.\par
+Just add the variances, so multiplied by the number\par
+of variables.\par
+And then here you divide by the number of variables\par
+so that will come down as squared.\par
+And altogether you'll just know by the number of variables.\par
+So by the independence of the Xis and by the scaling\par
+of the variance, you get that this is sigma squared.\par
+And this is sigma squared divided by n one.\par
+Again we're just normalizing by n one\par
+because we're scaling the variance.\par
+Now we can just write this as n over n minus one\par
+times sigma squared.\par
+Right, we have n minus one in the denominator\par
+then we get one plus n minus one.\par
+And so what we see here is that we lost a foct of n over\par
+n minus one.\par
+Because of the randomness here.\par
+That is random.\par
+So we lost two.\par
+So we gained divide this factor n minus one over n squared.\par
+We lost n over n minus one, cancels one of those factors.\par
+And altogether we get the expected value of the sample\par
+variance is n minus one over n\par
+times the distribution variance.\par
+Okay.\par
+This is the whole proof and we also understand\par
+where it's coming from and why the fact that X hat\par
+is closer is only half of the story.\par
+In fact, that by itself would give us a better improvement\par
+but we are subtracting a random number\par
+so we're losing some of what we gained.\par
+Okay.\par
+So together we get n minus one over n.\par
+So now that we've calculated the expected value\par
+of the raw sample variance we want to-\par
+and we saw that it's biased, we want to correct this bias.\par
+So for the raw sample variance which was the form of that\par
+we showed that the expectation was n minus one\par
+over n times the real variance.\par
+And we want to come up with an estimator that will\par
+be unbiased.\par
+So its expectation will be sigma squared.\par
+And we can see from this that there is something\par
+very simple that we can do.\par
+This is true for any distribution.\par
+It's always n minus one over n, so we can just\par
+multiply whatever we've got here by n over n minus one\par
+and cancel with this term.\par
+And this is called Bessel's Correction.\par
+So we define S squared, we move the quotes.\par
+We define S squared the sample variance\par
+to just n over n minus one times the raw sample variance.\par
+And that n over n minus one will cancel with this.\par
+And this, by the way, if you multiply this by n\par
+and divide by n minus one,\par
+you get one over n minus one times the summation\par
+of X minus X squared.\par
+So we add in terms but instead of dividing by n\par
+we're dividing by n minus one.\par
+And that's our small mystery that we had.\par
+Why we're normalizing not by n but by n minus one.\par
+It's a mystery that any new student learns how to\par
+estimate a variance of zero, most I would say\par
+wonder why this is so.\par
+And now hopefully will understand.\par
+So this is the main thing to notice.\par
+It's a little unintuitive.\par
+But we know where it comes from.\par
+So what is the expectation of S square, not the S quote\par
+is just going to be the original expectation here\par
+but we multiplied by n over n minus one\par
+so this will cancel.\par
+So it's just the variance, okay.\par
+So S squared is therefore an unbiased estimator\par
+for the variance.\par
+Typically when people talk about the sample variance\par
+they'll refer to S square to this\par
+not the raw sample variance.\par
+Raw is the term we're using.\par
+You can correct.\par
+So hopefully this is clear.\par
+We showed that for the raw sample variance\par
+it's expected the value was n minus one over n\par
+times the variance.\par
+And so we just multiplied by n over n minus one\par
+to cancel this effect.\par
+And we got a new estimator.\par
+It's expected value is exactly the variance\par
+and therefore it's unbiased.\par
+And when you want the formula instead of normalizing\par
+by n, you normalize by n minus one because\par
+take one over n, multiply by n,\par
+divide by n minus one.\par
+Alright.\par
+So let's do a third example.\par
+The same sample example.\par
+So let's take\par
+we had five observations so 2, 1, 4, 2, 6.\par
+And what we saw before is that the sample average was three.\par
+And when we calculated the raw variance, sample variance,\par
+it was 3.2.\par
+And now we want to calculate the real sample variance.\par
+So what we need to do is take the same sum.\par
+But normalize instead of my n, we normalize it\par
+by n minus one.\par
+So what do we get?\par
+We get here the average is three, so two minus three\par
+is minus one.\par
+And one squared is one.\par
+And here we have one minus three which is minus two.\par
+Squared is four.\par
+And one again.\par
+I'm sorry, yeah one again.\par
+And then one again.\par
+Four minus three.\par
+Two minus one.\par
+And then six minus three is three so gives us nine.\par
+The calculation of course we have done before\par
+for the raw sample variance.\par
+The only difference is that even though we have five\par
+values that we're adding, because we have five samples.\par
+Before we had normalized by five.\par
+Now we normalize by four.\par
+When we do that we get 16 over four, which is four.\par
+So therefore our new sample variance\par
+is four, no 3.2 n and you can also see you get it by\par
+multiplying this by five over four.\par
+Divide by four, get .8 times five gives you four.\par
+And in general you'll get the unbiased sample variance\par
+by multiplying by n over n minus one.\par
+And this is an unbiased estimate of the variance.\par
+Just like for the raw sample variance,\par
+we had the one-pass calculation.\par
+We can do the same thing here.\par
+The one-pass calculation we had for the raw sample variance\par
+was one over n times summation Xi square.\par
+So it's the average of this square minus this square\par
+of the average.\par
+And now we need to multiply this by n minus one over n.\par
+I'm sorry, we need to multiply this by n over n minus one.\par
+So when we do that we'll get this here\par
+because we can see that when implied this n over n\par
+minus one will give us one over n minus one\par
+times the sum of the squares.\par
+So that's what we have here.\par
+And here we have n and for this spot we'll have\par
+n over n minus one.\par
+Which is the same as what we have here\par
+for n over n minus one.\par
+Okay so this is, if you wanted to do a one-pass calculation\par
+go over the data once each time you add the squares,\par
+each time you add the values and you square this\par
+and subtract.\par
+So let's finish by showing a simulation.\par
+So just to make sure that what we did is in the degrees\par
+with what you observed.\par
+So we take a normal zero one,\par
+on our standard normal distribution.\par
+We take three samples.\par
+And we repeat it 500 times.\par
+So here is the histogram of the sample variance\par
+that we got.\par
+These are the real sample variances,\par
+they're normalized by n minus one.\par
+This is the histogram for of all the variables.\par
+And this line here is sigma squared, which will be one.\par
+And the red line is the average of the samples we've got.\par
+And they should be the same but they're\par
+not exactly the same.\par
+So you wonder oh maybe what we did was incorrect\par
+or maybe it's because\par
+the number of experiments that we had was not large enough\par
+to get the exact expectations.\par
+So what we can do is instead of repeating 500 times,\par
+it's roughly the same but not exactly the same.\par
+So what we can do is instead of 500 times\par
+we can repeat the experiment 3,000 times.\par
+And when you do that you can see that indeed\par
+the average of all the samples is going to be the\par
+same as the variance of the distributions.\par
+The average of all of the sample variances.\par
+Notice that what made this a little different\par
+were two things.\par
+One is we took, we repeated experiments not too many times\par
+and the other when is each sample\par
+is just three observations.\par
+So it's very small so there was a lot of noise in it.\par
+So alternatively we can also increase the number\par
+of observation take an average when we calculate\par
+the sample variance base it on the sample size 30.\par
+And once you do that even if you take 500 samples\par
+already you get something which is fairly close\par
+to the distribution variance.\par
+If you repeat it 3,000 times you get even closer.\par
+And again, this is in the notebook.\par
+You can experiment and see what happens when you change\par
+the sample size and change the number of experiments.\par
+Alright.\par
+So let's summarize.\par
+We talked about unbiased estimation of the variance.\par
+And what we did was we evaluated the variance.\par
+We understood it's behavior and we came up\par
+with an unbiased estimator.\par
+Which used the Bessel Correction\par
+and it was instead of normalizing by n we normalized\par
+by n minus one, summation of Xi minus\par
+the sample average square.\par
+And this helped resolve the mystery of why we're normalizing\par
+by n minus one.\par
+And also dispelled the half-truth.\par
+That the reason why we got the initial bias is because\par
+X hat was closer to X one.\par
+And that counted for half of the reason, but not\par
+the whole reason.\par
+Next time we're going to talk\par
+about estimating the standard deviation.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+}
+ 
