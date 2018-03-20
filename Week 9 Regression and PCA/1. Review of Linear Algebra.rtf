@@ -1,0 +1,325 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hi.\par
+This week, we're going to talk about regression.\par
+For that purpose, we need to use concepts\par
+from linear algebra.\par
+So, hopefully you are familiar\par
+with concepts from linear algebra.\par
+But, in order to make sure, this video\par
+is a short review.\par
+As I said, it's a review, it's not a course.\par
+It takes a whole course to teach linear algebra.\par
+Use it more as something to make sure\par
+that you know the required concepts\par
+so that you can understand regression.\par
+If you really need to learn linear algebra,\par
+there are many courses.\par
+One of my favorites is Gilbert Strang "Course on\par
+Linear Algebra".\par
+Which I am giving you a pointer here.\par
+Okay, so let's start.\par
+So, the main concept in linear algebra is vectors.\par
+Vectors represent many things.\par
+They can represent arrows, they can\par
+represent velocity and direction,\par
+they can represent locations in 3D space,\par
+and, in fact, they can represent many,\par
+many other things, as we shall see a little later.\par
+So, here's a two dimensional vector.\par
+Hopefully, most of you are familiar with that.\par
+It's like an arrow; it has a direction\par
+and a length, and a tail and a head.\par
+So, this is a representation of a two dimensional vector.\par
+Similarly, we can have a three dimensional vector\par
+that lives in three dimensional space.\par
+It similarly has a tail, and a head,\par
+and a length, but it lives in three dimensional,\par
+rather than two dimensional space.\par
+So, we use some standard notation to represent vectors.\par
+Basically, we just write a little arrow above a letter\par
+to indicate that this letter represents a vector.\par
+Vectors are grouped into dimensions.\par
+So you have 2D vectors, 3D vectors,\par
+and we'll see 4D, 5D, and 120D as well.\par
+These vectors are members of a set,\par
+and the set is denoted by R to the D,\par
+The real numbers to the D.\par
+A 2D vector simply corresponds\par
+to a list of two real numbers.\par
+Like here, a is 1 and Pi, or b is -1.56 and 1.2.\par
+A 3D vector corresponds to a vector in 3D space,\par
+and it can be represented by three numbers, as we see here.\par
+And then, in general, a d dimensional vector\par
+is a member of R to the d, and is\par
+represented by d real value numbers.\par
+So, the way that we work with vectors\par
+in Python, is we use arrays.\par
+This is a part of Python called NumPy,\par
+and it is very similar if you are familiar with MATLAB.\par
+Here, I'm defining two vectors.\par
+Vector one is one and two, and\par
+vector two is minus one and one,\par
+and then I can print them, and I see what they are.\par
+Now, when we're talking about vectors,\par
+represented by NumPy arrays,\par
+it's important to distinguish two types of dimension.\par
+The word dimension is used in two different meanings.\par
+The array np.array([1,2,3,4])\par
+defines a vector in R to the four.\par
+So, it's a four dimensional vector.\par
+However, the array itself is a 1D array, right?\par
+It is just a list of numbers.\par
+So, remember that a 1D array can\par
+represent vectors that are high dimensional.\par
+The array ([1,2],[3,4]]) is a 2D array,\par
+so it basically consists of square or rectangle numbers.\par
+A 2D array is also called a Matrix,\par
+we'll talk about those later.\par
+So, I'm defining a two dimensional array,\par
+and when it prints out, you see that NumPy knows\par
+how to print it in a two dimensional way.\par
+So, this is a two dimensional array.\par
+In terms of a vector, you can say that\par
+it's a four dimensional vector,\par
+but really, you would talk about it as a Matrix.\par
+So, now, let's talk about how we can\par
+visualize two dimensional vectors.\par
+I already gave you a little bit of sketch figure,\par
+but you can do it in a systematic way.\par
+So, here are a few examples of that.\par
+Here I have three different vectors,\par
+and each vector is represented by an arrow.\par
+The coordinates of the arrow are\par
+the X coordinate and the Y coordinate.\par
+So, the horizontal coordinate is one here,\par
+and the vertical coordinate is two.\par
+And, here, the horizontal coordinate is zero,\par
+while the vertical coordinate is minus two.\par
+So, these are three vectors, and\par
+I can draw them on the plane, which is\par
+very useful to gain some intuition about how to use vectors.\par
+Let's talk about some operations\par
+that we can take on vectors.\par
+Some of the operations that are very simple are\par
+we can add two vectors, which means that\par
+we add the corresponding components,\par
+or we can multiply a vector by a number,\par
+or we can multiply the vector by a negative number,\par
+which is the same as inverting the vector.\par
+These are the operations, and you\par
+see here what are the results.\par
+Here is a visualization of what\par
+it means to add two vectors.\par
+You have the the black vector, v2, and the red vector, v1,\par
+and, by adding them together, you're basically taking v2,\par
+and putting its origin on the end of v1,\par
+and looking at where it ends up.\par
+So this point here is v1 plus v2,\par
+which is represented by the vector, by the blue arrow.\par
+So that's vector addition as it\par
+is visualized in two dimension.\par
+But, you can do addition in any dimension.\par
+To add to vectors, it's important that the two vectors\par
+would have the same dimension.\par
+Here is a vector that is two dimensional,\par
+and here's a vector that is three dimensional,\par
+and if I try to add them, I get an exception.\par
+The exception is because the two\par
+vectors have different dimensions.\par
+You can't add two vectors that\par
+have two different dimensions.\par
+Here is a visualization of multiplying\par
+a vector by a constant, in this case a negative constant,\par
+so red is the vector v, and minus 0.5\par
+times v is the black vector, here,\par
+that goes in the other direction and is half as long.\par
+The next operation that we're going to\par
+talk about is the inner product.\par
+This is an operation that takes two vectors,\par
+and generates number, just a scalar.\par
+The way that you can compute it,\par
+is basically, you have several\par
+different ways that you can compute it.\par
+One is by simply taking the dot product,\par
+that's the operation in NumPy.\par
+Or, here is the explicit way that you\par
+take the corresponding coordinates,\par
+you multiply them, coordinate zero by coordinate zero,\par
+and coordinate one by coordinate one,\par
+and you sum the result.\par
+Any one of those things will generate the same operation\par
+because one times minus one is minus one,\par
+plus two times one is two, so you get one,\par
+in any way that you calculate it.\par
+So, the dot product of [1 2] and [-1 1] is one.\par
+The next concept is the norm of vector.\par
+So, the norm of vector is essentially\par
+what we talked about before, which is\par
+the magnitude, or the length, of the vector.\par
+The way to calculate it is to simply\par
+take the dot product of the vector with itself,\par
+and then take the square root of the result.\par
+Or, you can think about it as summing\par
+the squares of all of the components,\par
+and then taking the square root,\par
+which is basically Pythagoras theorem.\par
+So that gives you the length of\par
+the vector, or the norm of the vector.\par
+So, here are several ways to calculate the norm of vector,\par
+either take square root of the dot product,\par
+or simply use the function norm in NumPy.\par
+So, of special importance, are\par
+vectors called unit vectors, which\par
+are vectors essentially that have length one.\par
+Any vector that we have can be made\par
+into a unit vector, or normalized, in the following way.\par
+Basically, you take a vector, v1,\par
+whose norm is not one, and then\par
+you divide v1 by its norm, and you get a new vector,\par
+a scaled version of v1, whose norm now is one.\par
+These are unit vectors.\par
+Projections are basically dot products with a unit vector,\par
+and those have a very nice geometric interpretation\par
+that will be useful when we continue.\par
+So, here is two vectors, one of them is a unit vector,\par
+and the other one is not a unit vector,\par
+and we're basically just taking the\par
+dot product of the two vectors, and then\par
+multiplying it by the unit vector.\par
+That's called a projection.\par
+So, what do I mean by that?\par
+Here are our two vectors, u1 is the unit vector,\par
+and v2 is a non-unit vector, and\par
+we're taking taking the dot product of the two.\par
+So, what that corresponds to is, first of all,\par
+just the dot product itself corresponds to\par
+the length of this green arrow.\par
+So, if you think about this as a point,\par
+and this, here, as a line,\par
+the projection of the point on to\par
+the line is the dot product.\par
+Now, if you take the dot product, which is a number,\par
+and you multiply it by the vector u1,\par
+then you actually get the green vector,\par
+which is called the projection.\par
+The projection of the vector, v2, is a new vector,\par
+which is in direction of the unit vector,\par
+and it's length is the length of the projection.\par
+So, basically, this is how we can, in a simple way,\par
+take a point and project it on to a line.\par
+This gives us one component of what we need\par
+in order to represent our space.\par
+The other one is orthogonality.\par
+So, orthogonality is also based on dot product,\par
+and basically two vectors are orthogonal\par
+if the dot product between the two of them is equal to zero.\par
+Here is an example of that; you see the\par
+black vector is [2 2], and the red vector is [-1 1],\par
+and their dot product is zero,\par
+and if we pluck them, we see that indeed\par
+the angle between them is 90 degrees.\par
+So 90 degrees and dot product equals zero are equivalent.\par
+What this gets us to is what we call an orthonormal basis.\par
+Now, basically using these unit vectors,\par
+we can define a representation of the space,\par
+and we can do useful operations like rotations and so on.\par
+We say that a set of vectors, u1, u2, up to ud,\par
+in the space Rd, is an orthonormal basis\par
+if the following things are correct,\par
+first of all, the vectors have to all be unit vectors,\par
+so their dot product with themself has to be one.\par
+And, also, if you take any two vectors,\par
+any two different vectors, their\par
+dot product is zero, so they're orthogonal.\par
+That's why we call it an orthonormal basis,\par
+because the vectors are normal\par
+and they are orthogonal to each other.\par
+One of the bases of this type is\par
+what we call the standard basis.\par
+So, the standard basis, essentially,\par
+is just a way of describing our\par
+standard coordinate system, which we\par
+think about as x and y and z and so on.\par
+So, what it is is simply vector one,\par
+followed by all zeros, and the\par
+second one is the vector zero,\par
+and then one, followed by all zeros, and so on,\par
+until the last vector is simply zeros,\par
+and then the last component is one.\par
+So, if you take the dot product of a vector v,\par
+with one of these standard basis vectors,\par
+then what comes out is simply the coordinate,\par
+the ith coordinate of the vector v.\par
+Here is an example, we have the vector [5,6,3,4],\par
+and we take the dot product with [0,1,0,0],\par
+so obviously we get six, which is the second component.\par
+It's a very simple operation, but\par
+it lets us represent what we call our\par
+standard coordinate system, as a basis.\par
+The next and final thing that we\par
+want to do with the vectors, and use them,\par
+is to do reconstruction using an orthonormal basis.\par
+So, an orthonormal basis, you can think\par
+about it as defining a coordinate system,\par
+and it allows us to move between coordinate systems.\par
+Suppose we have an orthonormal basis, u1 up to ud,\par
+we can use any such orthonormal basis\par
+to represent any vector v.\par
+And, here is how we do it.\par
+First, the simplest part is that we take\par
+each one of the basis vectors,\par
+and use it to project the vector v on to it.\par
+So, we get all of these deep projections,\par
+and these are d numbers, which\par
+basically represent the vector in the\par
+coordinate system based on u1 up to ud.\par
+We can also reconstruct the vector,\par
+basically regenerate the vector\par
+by combining these projections,\par
+by simply taking the dot product, v times u1,\par
+and then multiplying it by the vector u1,\par
+and then so on doing the same thing\par
+for all of the coordinates, and\par
+we'll basically just end up with\par
+the same thing that we started with.\par
+If you represent a vector, vt,\par
+using the standard basis, it just gives you\par
+the standard representation, v1 up to vd.\par
+Representing v using an orthonormal basis\par
+that is different than this one is called a change of basis.\par
+We can visualize this change of basis,\par
+in 2D, in the following way.\par
+Here, what we have, is a vector, v,\par
+the blue vector, and it is originally\par
+represented in the standard coordinate system.\par
+So it's coefficient, it corresponds\par
+to the vector where x is minus one,\par
+and y is minus two, so minus one, minus two,\par
+and, then, we want to re-represent it\par
+in the basis described by these two vectors, u1 and u2.\par
+So, this is an orthonormal basis,\par
+just like the original one, e1, e2,\par
+which is the standard basis, and we want\par
+to represent the vector in this way,\par
+and what we get is that, basically,\par
+we are projecting the vector on to u1,\par
+u1 here, and u2, and these are, basically,\par
+the components of the vector in the new basis.\par
+So, the length of them, if we wanted\par
+to represent it as a number, and\par
+if we take these two vectors and sum them,\par
+we basically recreate the original vector.\par
+So, this operation of change of basis,\par
+is central operation in what we're going to do\par
+this week, which is regression.\par
+So, this was the short review of linear algebra,\par
+and, in the next video, we will describe\par
+a related topic, which is matrix notation,\par
+which allows us to quickly write down a large number\par
+of simple vector equations.\par
+Okay, so I'll see you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+}
+ 

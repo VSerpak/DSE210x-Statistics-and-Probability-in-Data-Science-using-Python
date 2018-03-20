@@ -1,0 +1,173 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Last time, we talked about linear regression,\par
+and we fit a straight line into the data, okay?\par
+This time we're going to look at fitting\par
+more complicated curves into the data,\par
+and we're going to use for that polynomial regression.\par
+Okay, so let's get started with a little review.\par
+When we had our previous video, we looked at this graph\par
+of averages; and we saw that the averages, the red dots,\par
+fall along a straight line most of the time.\par
+At the extremes they fall, they might deviate\par
+because there is so little data.\par
+Okay, but most of the time\par
+they're very close to the straight line.\par
+But we might get data that looks more like this, okay?\par
+So here the averages, the red dots,\par
+are not really along a straight line.\par
+So, it's not going to work very well\par
+if we try to do linear regression.\par
+So there's nothing stopping us from doing linear regression;\par
+we will just get poor results.\par
+So this is what we'll get.\par
+Here is the straight line, and you see that it's\par
+really doesn't capture the shape of the data, okay?\par
+So how do we try to capture the shape\par
+of this non-linear data?\par
+We can try a second degree polynomial, okay?\par
+So I'm not going into what polynomials are.\par
+You can go to the notebook, and they'll give you\par
+some pointers; but this is second degree polynomial.\par
+It's basically similar to the first degree polynomial\par
+in the first two terms, but then it has a second,\par
+a third term that is W2 times X squared, okay?\par
+And now we want to fit all\par
+of these three parameters to the data.\par
+So we do that, again, using a least square;\par
+and the only thing that is really different is that\par
+instead of just having ones and the values\par
+of the Y values, we have also the Y values squared.\par
+Okay, and once we have that, we can just use the same\par
+least square function to find these, the W0, W1, and W2;\par
+and we can plot them, and we see that now\par
+with this second degree polynomial, we got a very nice\par
+and smooth curves that goes through,\par
+again, most of the data, okay?\par
+So we can be happy about that.\par
+Okay, so now here is an interesting question.\par
+You're given some data and you want to fit to it a line\par
+or a curve, but you don't really know what degree polynomial\par
+to fit; you know, do you wanna fit a first degree,\par
+just a linear line or second or third or fourth or fifth?\par
+That's a very good question.\par
+You don't really know what would work best,\par
+so how do you decide?\par
+Okay, so there are two phenomena that appear\par
+when you try to do such a thing.\par
+One is called underfit, and that's what we saw\par
+before with the straight line.\par
+The straight line was not rich enough.\par
+It was not flexible enough in order to fit the data;\par
+so it underfit the data.\par
+And then there is the opposite problem of overfit.\par
+So you use a model and it fits the data too well.\par
+That sounds strange; what do I mean by\par
+it fits the data too well?\par
+Why is this a problem?\par
+It's a problem because we're not really interested always\par
+in just fitting the data that we see,\par
+we want to also fit new data that we haven't see yet\par
+that comes from the same distribution.\par
+So that leads to the concept of\par
+training error and test error.\par
+What we do is we take the data that we have,\par
+and we randomly partition it into two parts, okay?\par
+The two parts are essentially\par
+statistically equivalent, but they are disjoint.\par
+Each example is either in the training set\par
+or in the test set, and we use the training set\par
+to find the best polynomial; and then we use the test set\par
+to test that polynomial that we found on new data.\par
+And now we can express what we actually mean by overfitting.\par
+If we increase the degree of the polynomial,\par
+the training error, the error that we get\par
+on the training data, will always decrease.\par
+It just keeps decreasing because the polynomials are more\par
+and more flexible as you make them higher and higher degree;\par
+but if you look at the test error, you'll see that initially\par
+it behaves like the training error, but at some point,\par
+the training error continues to decrease\par
+and the test error will start to increase\par
+because we're overfitting the training error\par
+and then we're performing badly on the test data.\par
+Okay, so this increase is called overfitting.\par
+That's what we mean when we say overfitting.\par
+So we're going to use a simple data, data set\par
+to analyze this and here is the data set;\par
+and we see that it has a general tendency going up,\par
+and we might think that maybe it has,\par
+maybe a straight line would fit it well\par
+or maybe a polynomial would, sorry, a parabola\par
+would fit it well, a second degree polynomial.\par
+But we don't know, so let's see what we can do.\par
+Okay, so we split the data into training set and test set,\par
+as I said before; and now let's say that we fit\par
+degree three polynomial to the training sector.\par
+Okay, we get this thing; and what you see is that\par
+this second, third degree polynomial fits the blue dots\par
+very well because that's the training data.\par
+But it doesn't really fit the red dots very well.\par
+Okay, so, it doesn't perform well on the test data;\par
+and we can see that in the numbers up here the training\par
+root mean square error is 0.04\par
+and the test root mean square error is 0.5, okay?\par
+So the test root mean square error is significantly bigger\par
+than the train, and it seems like we're overfitting.\par
+But we can only really judge it if we try a bunch\par
+of degrees for the polynomials and see what fits best.\par
+So we're going to do that.\par
+We're going to fit all degrees from zero to five.\par
+So here they are; and what is degrees zero?\par
+Degree zero is basically a constant.\par
+We basically fit the whole data with the constant,\par
+and the constant turns out to be simply the mean.\par
+Okay, so with the mean, we have very poor fit.\par
+It's definitely underfitting, and it's,\par
+and the performance is pretty bad\par
+on both training and testing.\par
+When we go to first degree, we see that there is a nice fit\par
+to the training data, not perfect;\par
+but in the root mean square for the training data is 0.16,\par
+and the root mean square for the test data is 0/22.\par
+So higher than the training error, but not very high.\par
+Once we go to degree two, we see that the training error\par
+decreased somewhat; and the test error increased.\par
+And when we go to degree three, like we saw before,\par
+the training data, the training error decreases even more;\par
+but the test data increases very significantly.\par
+And what happens at this point is that once you have\par
+a degree four polynomial, you can fit the data perfectly.\par
+Right, so you can simply go through all of the points;\par
+and that's great training error,\par
+but the test error is very, very high.\par
+Okay, so from that we basically see\par
+that the best degree polynomial to choose\par
+is the first degree polynomial, the straight line.\par
+That was our intuition too, but it's kind of hard\par
+to depend on intuition when you have data\par
+that is very high dimensional or very large.\par
+So what we saw is that the minimum\par
+of the root mean square occurred of the equal one.\par
+And here is the graph that shows it.\par
+We see that the, that the training error keeps going down.\par
+The horizontal is a degree and this is\par
+the root mean square error; and if we look\par
+at the test error, it goes down to one,\par
+but then it starts to increase and increase.\par
+Okay, so that tells us that the minimum point here,\par
+the best model to use is simply a linear function,\par
+degree one polynomial.\par
+So these concepts that I just introduced,\par
+they're very central to statistics\par
+and to machine learning in general.\par
+So this is just kind of a first dip into them,\par
+and you will Learn much more about them\par
+when you go into the machine learning course.\par
+And in the next video, we'll talk about another\par
+related subject, which is principle component analysis.\par
+Thank you.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

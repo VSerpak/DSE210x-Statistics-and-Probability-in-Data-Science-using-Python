@@ -1,0 +1,237 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - We are reaching the end of the topic of regression.\par
+And the last thing I want to tell you about\par
+is a subject called principal components analysis.\par
+So, the subject of principal component analysis,\par
+to actually fully understand it,\par
+you need a good understanding of eigenvectors,\par
+eigenvalues, matrix decomposition, and so on.\par
+And I'm not going to provide those.\par
+I'm just going to give you a somewhat more superficial\par
+understanding, but that still gives you\par
+some of the intuition about how PCA works.\par
+So let's start with a quick review of linear regression.\par
+Suppose we have nine points in the plane like that.\par
+And here is a plot of these points.\par
+And you see that they are not exactly\par
+on a straight line, but they kind of tend\par
+to go up from the left to the right.\par
+So Y tends to increase as X increases.\par
+So, we would like to find a line\par
+that would represent it.\par
+And what we're going to do is look\par
+for a line with the formula w zero plus w one times x.\par
+And the goal is really to find these two parameters,\par
+w zero and w one.\par
+And this is actually very easy using NumPy.\par
+We just use the least square function\par
+and we get the w's that we wanted.\par
+And when we plot them, we see this line.\par
+And what I added here are the green lines\par
+that basically indicate the amount of error\par
+associated with each point.\par
+And what we're trying to basically do\par
+is minimize the square of the lengths of these segments.\par
+So in the regression problem,\par
+we looked at the function that predicts y from x.\par
+Okay, and we saw that if we try to do the opposite,\par
+we predict x from y, we get actually a different function,\par
+a different line.\par
+So it matters if we go this way or in the reverse.\par
+In general, we call this kind of problem\par
+in machine learning, we call it supervised learning.\par
+Why?\par
+Because the idea is that the output\par
+or the thing that we're trying to predict\par
+is labeled by some supervisor,\par
+somebody that knows what is the correct value of y,\par
+and then we are just trying to predict\par
+that value of y.\par
+Okay?\par
+But we can also fit the line\par
+without deciding on a direction.\par
+So, there is a way to fit a line to this data\par
+that doesn't have anything to do\par
+with whether we choose x or we choose y\par
+or we rotate the whole thing any way we want.\par
+So this is called unsupervised learning\par
+because here we're just basically given data\par
+and nobody identifies a particular component\par
+as something that we're trying to predict.\par
+So if we want to do unsupervised learning\par
+for a linear function by using squared error,\par
+this is called PCA, principal component analysis.\par
+So both principal component analysis\par
+and regression minimize the same loss function,\par
+the root mean squared error.\par
+But the definitions of the error are different\par
+as I'll show you in the next figure.\par
+So let me make this a little larger\par
+so you can see more clearly.\par
+What we see here is the black line\par
+is the regression line.\par
+And the errors to the regression line\par
+are basically the vertical, these green vertical segments.\par
+On the other hand, the red line is the PCA solution,\par
+and the errors for the PCA solution\par
+are not vertical but basically they're orthogonal\par
+to the line itself.\par
+So, basically the error for this point\par
+is this blue line here.\par
+And what we see is that when we try\par
+to minimize this kind of error,\par
+then basically you see that we get a different result.\par
+The red line is not the same as the black line.\par
+And importantly, if we think about rotating\par
+this coordinate system, we will see\par
+that the regression result will change\par
+because we are changing the relationship\par
+between x and y but the PCA result will not change.\par
+It is somehow directly associated with the data\par
+and not with the coordinate system.\par
+So again, errors for the black regression line\par
+correspond to the vertical green segment\par
+and errors for the red PCA line\par
+correspond to the blue segments\par
+that are orthogonal to the red line.\par
+An alternative way to think about PCA\par
+is about maximizing variance.\par
+So suppose that we have a set of vectors\par
+x one to x n, and then we take a unit vector, u,\par
+if you remember from the linear algebra review,\par
+a unit vector that has length one\par
+and we take the dot product of this u\par
+with each one of the vectors,\par
+then we get a number.\par
+And then we can calculate the mean of that number\par
+and the variance of the number.\par
+And we're particularly interested in the variance,\par
+how much spread out is the data along this projection.\par
+So here is one example.\par
+We're projecting on this red line,\par
+and we see that the points fall pretty far\par
+away from the mean.\par
+On the other hand, if we use this direction,\par
+we see that the points fall closer to the mean.\par
+So the points in this direction\par
+are more bunched together and the variance is smaller.\par
+So suppose you consider all possible directions?\par
+In the two-dimension case it's very simple.\par
+It's all directions from zero to 360 degrees.\par
+And for each direction, we compute the standard deviation,\par
+so the square root of the variance.\par
+And we put a point that distance away\par
+from the mean, from the origin point\par
+which is the mean.\par
+So the collection of all of these points\par
+when we draw them out will form an ellipse,\par
+something like this.\par
+So basically, if you go from this point\par
+and you project along this line,\par
+then the standard deviation is big.\par
+And if you go orthogonal to that,\par
+the standard deviation is small.\par
+So this ellipse essentially represents\par
+all the information that exists\par
+in the variance of the projections.\par
+So PCA relates to this picture in the following way.\par
+The larger axis of the ellipse corresponds\par
+to the direction of maximum variance.\par
+And that is what's called the first eigenvector\par
+of the principal component analysis.\par
+So that is the direction that gives you\par
+the maximum variance.\par
+The smaller axis of this ellipse\par
+corresponds to the direction of minimum variance.\par
+So that gives you the second eigenvector\par
+which is orthogonal to the first one.\par
+So the nice thing with this is\par
+that it's not really restricted\par
+just to two dimensions.\par
+You can do it in very high dimensions.\par
+And what you get is that the direction\par
+that gives you the highest variance\par
+is the first eigenvector, and the second direction\par
+is the second eigenvector,\par
+so the second direction in which you get maximum variance\par
+but it is orthogonal to the first direction and so on,\par
+you go down.\par
+And basically, that kind of describes\par
+a big ellipsoid in space that basically represents\par
+somehow the distribution of the data.\par
+So let's see a real-life example of that\par
+right here just in two dimensions.\par
+So we're going back to the data\par
+that has the weight and the height of 25,000 people.\par
+And here is the first component of the PCA analysis.\par
+Okay, so this is the direction\par
+that gives you the highest variance\par
+when you project on it, when you project the data on it.\par
+So it's pretty intuitive.\par
+This is the direction the data is most,\par
+it's most distributed widely across this direction.\par
+Okay, so this way of looking at PCA\par
+provides one of the common ways to normalize data.\par
+Normalizing data is very useful\par
+because it puts some of the variation\par
+into some parameters and then leaves\par
+the rest of the variation to be studied.\par
+So how do we use PCA to normalize data?\par
+First, we subtract the mean.\par
+So by subtracting the mean, we make the new mean zero.\par
+And then we rotate the data so that\par
+the coordinates are the eigenvectors.\par
+So this looks something like this.\par
+If we have the original data here,\par
+the mean is somewhere between 125 and 70.\par
+We subtracted the mean, so now the mean is zero, zero.\par
+And then we rotate it so that the maximum variation\par
+is along the x-axis and the smaller variation\par
+is along the y-axis.\par
+So this is something that is done quite a lot.\par
+Okay, let's see another little application\par
+of PCA in computer vision.\par
+So here is a little picture of maybe a blob\par
+and an image.\par
+So it's a rectangle.\par
+And let's say we want to somehow capture\par
+what is the size and orientation of this rectangle.\par
+So we can basically map it to our PCA problem.\par
+Here are all the pixels, those little blue dots.\par
+And if we do a PCA, we find that the eigenvector\par
+is essentially in this direction.\par
+And it has, the standard deviation is about this,\par
+or this is actually some product,\par
+some constant factor over the standard deviation.\par
+But it tells us the data varies more.\par
+The direction of this blob is mostly in this direction,\par
+and this is about its size.\par
+And that would work for any shape.\par
+It doesn't really matter.\par
+Okay, so to summarize,\par
+we talked about PCA and regression.\par
+And they are both models for,\par
+both ways to model data by minimizing\par
+root mean squared error.\par
+Regression is a supervised method,\par
+so you have to choose what thing\par
+you're trying to predict,\par
+while principal component analysis\par
+is an unsupervised method.\par
+So unsupervised methods tend to be used\par
+before when you just get your raw data\par
+and you are trying to summarize it\par
+or somehow reduce its dimension\par
+so that you can do the supervised part more efficiently.\par
+Both methods are based on linear algebra.\par
+And because of that, they are very, very efficient methods.\par
+They are far more efficient than methods\par
+that depend on gradient descent and so on.\par
+Okay, so this is the end of the regression topic.\par
+I hope you found it interesting.\par
+And we'll continue next week.\par
+End of transcript. Skip to the start.\par
+  Previous\par
+}
+ 

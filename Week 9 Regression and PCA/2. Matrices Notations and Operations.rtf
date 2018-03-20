@@ -1,0 +1,240 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hi.\par
+Today we're going to talk about matrices.\par
+Matrices are one of the most useful type of notation\par
+that we use in statistics and in numerical mathematics\par
+in general.\par
+So, what are matrices?\par
+Matrix is nothing but a square or rectangle of numbers.\par
+Okay so you have rows going horizontally and\par
+columns going vertically and this matrix is called\par
+an n by n matrix if it has n rows and n columns, okay?\par
+So Matlab uses matrix notation heavily and in Python\par
+we can use very similar notation by using the\par
+library called numpy and that's what we'll do today.\par
+So first a very simple operation is transposing a\par
+matrix.\par
+So transposing a matrix, let's say this matrix A\par
+that has two columns and three rows.\par
+The transpose of it has two rows and three columns,\par
+so basically we just reflect over, we exchange rows\par
+for columns and columns for rows and we get a\par
+new matrix that is a two by three matrix and we denote\par
+that by A T, which is transpose.\par
+So here is how this would be done in numpy.\par
+You have this matrix here that is a two by three matrix\par
+and when you take the transpose of it you get a three\par
+by two matrix.\par
+For the code itself download the notebook.\par
+Okay, so what are vectors?\par
+Vectors in matrix notation can come in two flavors.\par
+Either a column vector where all of the elements of the\par
+vector are written one above the other or a row\par
+vector which is the vector all the elements in one row.\par
+Okay, so this is pretty simple and you'll see soon\par
+why we want to have these two different notations.\par
+We can always think about a vector as a matrix.\par
+It's just a very simple or skinny matrix.\par
+A column vector is a d times one matrix and a row vector\par
+is a one times d matrix.\par
+So we can think about matrix as a collection of vectors\par
+and that's really where the power of matrix manipulation\par
+comes from.\par
+So we have this matrix, it's a two by three matrix\par
+and we can think about it as three column vectors.\par
+This column vector, this column vector, and this column\par
+vector.\par
+Okay c1, c2, c3.\par
+Now the matrix is just a row of column vectors.\par
+Similarly, we can think about the matrix as a column\par
+of row vectors so we have two row vectors, a11, a12, a13,\par
+and so on, and when we put them both in a column we\par
+basically describe A again now as two row vectors.\par
+Okay, so here is our matrix again A, and here is the\par
+operation of splitting A into three column vectors.\par
+Okay, so now we got columns which is now\par
+a list of three column vectors.\par
+And we can take these column vectors and put them\par
+together again with concatenate and now we get the\par
+original matrix again and we can check for equality\par
+between the reconstructed matrix and the old matrix\par
+and see that all of the entries are true.\par
+Okay, so let's start with some matrix and scalar operations.\par
+So a scalar is simply a single number and a matrix is\par
+a rectangle of numbers as we said and taking\par
+a matrix and adding to it a scalar just means taking\par
+that same scalar and adding it to each one of the elements\par
+to the matrix.\par
+Similarly, subtracting is subtracting from each one\par
+of the elements in the matrix.\par
+And multiplying by a scalar is multiplying each element\par
+in the matrix.\par
+We can also define division.\par
+We can take A divided by 5 and that's simply A times\par
+the number one fifth.\par
+Okay, so we multiply one fifth by each of the columns\par
+each of the elements of the matrix.\par
+We cannot take 5 divided by A.\par
+That is not defined.\par
+Okay, now let's go on to talking about operations\par
+between matrices.\par
+So first adding and subtracting matrices.\par
+If we have two matrices they have to be of the same\par
+shape so the same number of rows and the same number\par
+of columns and then we can take the difference between\par
+them and that means that we take the difference of\par
+all the corresponding elements, so a11 minus b11,\par
+a12 minus b12 and so on.\par
+Now let's talk about matrix-matrix products.\par
+That's where the real action is.\par
+So let's start with the skinny matrix, the vectors.\par
+So we have a vector, 1,2,3 and another vector 1,1,0\par
+and we know that the dot product of the two is one\par
+times one plus two times one plus zero times three\par
+which is equal to three.\par
+Okay, so how do we write that in matrix notation?\par
+There is a convention.\par
+It kind of seems like a strange convention, but you'll\par
+soon see that this convention lets us do very powerful\par
+things in a very small amount of notation.\par
+Okay so what we have to have is that the first vector\par
+in the dot product is a row vector and the second is\par
+a column vector.\par
+That's the convention, okay?\par
+So a row vector times column vector and the result is\par
+exactly the same as before.\par
+So now let's see how that can generalize to other\par
+non skinny matrices.\par
+So suppose we want to multiply this matrix that is a\par
+two by three matrix by a column vector that has dimension\par
+three.\par
+What we do is we think about the matrix A as a column\par
+of two row vectors.\par
+Okay so we have row vector one and row vector two and\par
+then we can multiply row vector one by c and row\par
+vector two by c and get the result so that's what we do.\par
+A times c is row vector one times c, above row vector\par
+two times c which gives us these numbers, these\par
+sums and at the end we get a two row, one column matrix.\par
+We can even generalize it further and talk about\par
+multiplying a matrix by another matrix.\par
+Okay, so here we have a matrix A with three rows and\par
+two columns and a matrix C with two rows and three columns.\par
+And we're going to want to take the product of A and C.\par
+So what we have to check is that the number of columns\par
+in A is equal to the number of rows in C.\par
+To compute the dot product, we think about A as a column\par
+of row vectors and about C as a row of column vectors.\par
+And now when we want to take the product of the matrix\par
+A times the matrix C we take this column vector times\par
+this row vector.\par
+That means that basically we are taking the first element\par
+here dot product with the first element here.\par
+The first element here dot product with the second element\par
+here and so on.\par
+We get this first row and similarly with a2 we get the\par
+second row.\par
+And if you think about it this is quite a lot of different\par
+operations.\par
+If you expand it completely, you get this big expression,\par
+and so now you start to see why it is convenient to have\par
+matrix notation so we can just call this A times C.\par
+So now that we have described how to multiply matrices\par
+and vectors, we want to redo what we did at the end of the\par
+last video which was creating, using an orthonormal\par
+matrix to change basis.\par
+So remember the definition of orthonormal basis it's a\par
+set of d vectors that all have length one and are\par
+orthogonal to each other.\par
+And here we're going to use a row notation to indicate\par
+each one.\par
+And then we're going to combine all of these rows into\par
+a matrix.\par
+Okay, so here is our matrix, where each row is one of the\par
+orthonormal basis vectors.\par
+And what you see is to check that this is an orthonormal\par
+basis vector it just enough to multiply U by U transpose.\par
+And it require that the result is the unit vector.\par
+We didn't say it, what is the unit vector?\par
+We're going to check on that next time.\par
+Okay.\par
+So once we have this notation, to do a change of\par
+basis for a vector v is simply to multiply v by u from the\par
+left.\par
+And if we want to reconstruct v in this new basis\par
+we just write U times U transpose times v\par
+and as we know U times U transpose times v is the\par
+identity matrix and so we get v again.\par
+Okay, so what is this identity matrix?\par
+Identity matrix is like the number one when we do\par
+regular multiplication.\par
+Remember that if we take the number one and multiply\par
+it by A we get A and if we multiply A times one we\par
+also get A.\par
+So the matrix, the identity matrix has the same function\par
+as the number one but in matrix multiplication.\par
+So if we multiply A times the identity matrix it's\par
+equal to the identity matrix times A, it's equal to A.\par
+And what is this identity matrix?\par
+It's a pretty simple matrix.\par
+It's the matrix that has, first of all it's a square\par
+matrix and secondly, it's a matrix that has all zeros\par
+other than the elements that are along the diagonal\par
+that are all one.\par
+And if you just go back to the definition of multiplication\par
+you can check that indeed, A times I is equal to I times A\par
+is equal to A.\par
+Just simply from the definition of matrix multiplication.\par
+Okay, now we're going to talk about a more complicated\par
+operation that will be useful in the next video.\par
+So that's inverting a matrix.\par
+So remember in multiplication when we say that the inverse\par
+of A is one over A, we can also denote it by A to the\par
+minus one, then the property of A to the minus one, if\par
+you multiply A by A to the minus one, you get one.\par
+Okay, so that's the general property of the inverse,\par
+that if you take the element and you take the inverse\par
+of the element you multiply them you get one.\par
+And recall that not everything has an inverse.\par
+For instance, zero does not have a multiplicative inverse.\par
+You can't multiply zero by anything to give you one.\par
+Okay, so some matrices, some square matrices do have\par
+a multiplicative inverse such that A times A inverse is\par
+equal to A inverse times A is equal to the identity matrix.\par
+And if we want to find the inverse of the matrix this\par
+is called inverting a matrix.\par
+And here I give you the formula for inverting the two\par
+by two matrix.\par
+So this is a sufficiently small matrix that you can write\par
+the inverse explicitly.\par
+And what you see is that you are basically just moving\par
+the elements a22 and a11, you're exchanging them and then\par
+you're taking the minus of the elements a12 and a21.\par
+And then you're dividing by this expression, and so that\par
+expression actually shows you when there would not be\par
+an inverse, basically when a11, a22 minus a12, a21 is\par
+equal to zero there's no inverse for the matrix.\par
+So here is some numpy code to show taking an inverse,\par
+a two by two, an inverse of a two by two matrix that is\par
+a random matrix and you see that here is the matrix C\par
+and here is the inverse of the matrix C.\par
+And if you go to the notebook you can check that the\par
+product, the dot product of C and C inverse is indeed\par
+the identity matrix.\par
+So as I said not all matrices have an inverse.\par
+Those that don't have an inverse are called singular\par
+matrices.\par
+So here is an example of a singular matrix.\par
+If the matrix that has one zero in the first row\par
+and one zero in the second row is singular and if I try\par
+to invert it I get an exception.\par
+Okay, so I cannot invert this matrix.\par
+So just remember that not all matrices can be inverted.\par
+Okay, so next video will show you how to use this matrix\par
+notation to solve a set of linear equations.\par
+See you soon.\par
+End of transcript. Skip to the start.\par
+POLL\par
+}
+ 

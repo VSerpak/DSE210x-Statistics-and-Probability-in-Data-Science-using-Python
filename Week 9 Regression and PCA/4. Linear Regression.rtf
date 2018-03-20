@@ -1,0 +1,188 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hi, last time we talked about\par
+finding a line that passes through two points on the plane.\par
+And we raised the question at the end about\par
+what about having more than two points.\par
+Can we find a line that passes\par
+close to these points?\par
+Okay, so that's basically the idea of regression and\par
+this video is going to introduce you to the\par
+notion of regression and\par
+how we solve it using numpy.\par
+So here's a small example,\par
+we have nine points on the plane,\par
+defined by their x, y positions,\par
+so here are our points, okay?\par
+So these are the points, and clearly there is no single line\par
+that passes through all of these points.\par
+But, also clearly, there is a line that passes very close to\par
+all of them, okay this line that is tending upwards.\par
+So, how can we find that line?\par
+So the line is going to be defined as before,\par
+by a function of the form w zero plus w one times x.\par
+And we want to find w zero and w one.\par
+So previously, we saw how to find that when\par
+there are just two points, and so there is a line\par
+that passes exactly through the points,\par
+and then it was just matrix inversion.\par
+Here, there's more than two points,\par
+and the system is overconstrained, there is no straight line\par
+that passes through all the points.\par
+So, while they don't fall,\par
+there's no line that falls exactly\par
+on all of the points, we can find a line\par
+that will be close to the points,\par
+but we need to define somehow what we mean by close.\par
+So what we are going to use\par
+is this idea of square difference.\par
+Okay, so for every point, xi yi, we're going to calculate\par
+the value of the line at that x,\par
+and then take the difference from that and y,\par
+which is the actual position of the point,\par
+and square that, why do we square it?\par
+Because we always want to be positive,\par
+if we're not exactly at the point.\par
+If we're exactly at the point, we have zero.\par
+So, we want this, this cost,\par
+the square cost to be a function that is bigger and bigger\par
+the further you are from the points,\par
+and our goal is to find a minimum.\par
+So, this method of looking for,\par
+for minimizing the squared difference\par
+is called the least square method,\par
+and we are going to look for the least square solution.\par
+Okay, so we're going to use matrix notation,\par
+and we're going to use numpy linalg,\par
+the library, to find this optimal vector w,\par
+that minimizes the square error.\par
+So, we're going to use the following matrices,\par
+first we're going to define A to be this matrix,\par
+where there is one column that is just all ones,\par
+and the second column is the x values,\par
+and then we're going to have\par
+a column vector that is all the y values,\par
+and then we're going to have a small column vector\par
+with just two values, that is going to be the weight\par
+vector that we're looking for.\par
+So, now we can find, we can define the errors\par
+to be aw, which gives us the,\par
+the y vectors as measured by fx,\par
+as computed by fx, minus y, that's the difference,\par
+and that's, now, it's the difference vector.\par
+And what we're interested is in the sum of the squares\par
+of the differences, and that turns out to be\par
+exactly the square of the norm of d,\par
+remember the norm is the length of d, we're looking for\par
+the w that will make d as short as possible.\par
+Okay, so how do we do this in numpy?\par
+We define the vectors a and y, as I said,\par
+I'm just printing here a transposed and y transposed,\par
+so that they fit nicely in the slide.\par
+And, then we just call the,\par
+the function in numpy called least square,\par
+give it the matrix a, and the vector y,\par
+and we're just interested in the perimeter,\par
+so we're going to take the first component\par
+of the answer from this, and that's the vector w,\par
+and if we print out w we see that it's 19,\par
+and 0.7166 and so on, okay, so this is w zero,\par
+the offset, and this is the slope.\par
+And if we now plot this line\par
+on the previous graph,\par
+we see that it is indeed like the line that we expected,\par
+and the little green segments here\par
+represent the errors, the differences,\par
+so you see that for most of the points\par
+the difference is very small,\par
+for some points the difference is significantly larger.\par
+But, this is the line that would minimize\par
+the total of the square of the lengths\par
+of these green lines.\par
+Okay, so that was a toy example,\par
+just to show you how you do this kind of thing,\par
+in a small number of examples where you can\par
+essentially see everything and,\par
+and it makes sense.\par
+In real life, we usually have not just\par
+nine or 10 or 20 points,\par
+we have a huge number of points, and we want to\par
+find a line that passes through close to the,\par
+to all of these points.\par
+So, here is a real data set,\par
+which has 25,000 people, their height and their weight.\par
+The height in inches, and the weight in pounds.\par
+And, if we solve\par
+the least square for\par
+this data set, what we get is the following,\par
+is, this is, these are our points,\par
+you see it's now a cloud of points,\par
+we have a huge number of points,\par
+and the red line is the best line that passes through\par
+those points, so what this red line tells us,\par
+is, not surprisingly, that as weight,\par
+as the height increases, the weight also tends to increase.\par
+But, this is by no means explaining all of the variation\par
+in the weight, for the same, for the same height\par
+you have a big variation in the,\par
+in the weight of the person.\par
+Okay, but this is the, what we would call\par
+the linear regression line.\par
+So, to get to the slightly\par
+more refined understanding of what this line tells us,\par
+it is useful to draw what is called the graph of averages.\par
+So this is the graph of averages,\par
+and basically what I've done is that I split the\par
+height into many ranges,\par
+of about one inch I think,\par
+and for each of these ranges, I found the,\par
+the mean, the mean value, and that mean value\par
+is the red dot, so that is called the graph of averages,\par
+and what you see from this graph of averages\par
+is that the tendency described by the,\par
+by the, the line that we found,\par
+is actually well-represented,\par
+well-representing the points of the averages,\par
+so the averages are indeed going, increasing linearly.\par
+So remember, this, this black line,\par
+we found it according, by minimizing the square error\par
+for all of the points, but it passes close to\par
+the center for these points.\par
+And only in the edges where we have very few examples,\par
+do we have significant deviation from that,\par
+okay, so if we ignore these very,\par
+very short or very tall people,\par
+that are outliers, we see that the linear graph\par
+is a good representation of the graph of averages.\par
+We'll see that, in some other cases, this is not the case.\par
+The, for every problem that we do in two dimensions,\par
+like here from weight, from height to weight,\par
+or vice versa, we have two regression lines.\par
+One is for, to predict\par
+the weight from the height,\par
+so if I give you the height of the person,\par
+I can find a function that is this straight line\par
+that will predict the weight,\par
+but I can also do it the other way, I can predict the\par
+height from the weight, okay?\par
+So, and the two functions will not coincide,\par
+so, here is the result of doing that,\par
+you see this is our red line,\par
+this red line is what we had, the previous line\par
+for predicting the weight from the height,\par
+the black line is predicting the height from the weight,\par
+so if you give me the, the weight,\par
+I will predict the height that is associated with it,\par
+so you see that these are two different lines,\par
+depending on what it is that we're trying to predict,\par
+and what we're using to predict it.\par
+So, in the next video,\par
+we're going to talk about polynomial regression,\par
+and that is a case in which\par
+linear regression might not be good enough,\par
+and we need to do something a little bit more sophisticated.\par
+So I'll see you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+}
+ 
