@@ -1,0 +1,970 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - [Presenter] Hello and welcome back.\par
+In the last lecture, we introduced hypothesis testing\par
+and now we would like to discuss it a little more formally.\par
+We're going to be a little more systematic\par
+and a little more precise.\par
+We'll discuss the significance level\par
+which limits the amount of error that we can make,\par
+and then we'll talk about two ways\par
+of performing the hypothesis test.\par
+One using critical values, and the other one using P values.\par
+And we'll also introduce one and two-sided alternatives\par
+and analyze them.\par
+So now that we found a problem or an issue\par
+that we really like, then the only thing left to do\par
+is to put a number on it.\par
+And as we'll see, the number of choice is going to be 5%.\par
+So let's remind ourselves of the coin bias question\par
+that we saw in the previous lecture.\par
+So we had a coin.\par
+The null hypothesis said that the coin is unbiased,\par
+namely the probability of heads is exactly 50%.\par
+And alternative said the coin is biased\par
+in the sense that heads are more likely.\par
+So the probability of heads is strictly more than 50%.\par
+And to test which hypothesis is true,\par
+we collected the data which was doing coin flips\par
+and our test statistic was the number of heads\par
+which we call X.\par
+So X is clearly going to be a number between zero and 20.\par
+Now, we'll be mostly concerned with what's called\par
+a type-1 error, which is that the coin is unbiased,\par
+namely the null hypothesis is true.\par
+And yet even though the null hypothesis is hold,\par
+we declare the alternative,\par
+namely we believe that heads are more likely.\par
+So making mistake, it's called type-1 error.\par
+Now under the null hypothesis, the number of heads X\par
+is distributed binomial with probability 50%\par
+because that's the null hypothesis\par
+and N which is 20, that's the number of coin flips.\par
+And if we plot the probability under the null hypothesis\par
+of getting X heads, then it follows this plot here\par
+which is, again, the plot of the binomial distribution\par
+with P 50% and N equals 20,\par
+it's the number between zero and 20 with mean 10\par
+and as you can see, this is also the peak.\par
+Now what we did previously is we eyeball this picture\par
+and we said, oh, maybe if we get 16 or more heads,\par
+then the alternative hypothesis is more likely,\par
+that the probability of heads is bigger than 50% accepted.\par
+And if we get fewer than 14 heads, then maybe we will say\par
+that we're going to keep the null hypothesis.\par
+And what we're going to do today is\par
+do it a little more systematically.\par
+So let's start with some nomenclature.\par
+And, of course, nomenclature is just a complicated word\par
+for terminology, but it's very apropos in this slide\par
+because we're now going to discuss complicated terminology.\par
+And, of course, apropos is just a complicated word\par
+for appropriate.\par
+So when we decide that the alternative hypothesis is true,\par
+then people usually say something like\par
+they will reject the null hypothesis\par
+in favor of the alternative hypothesis\par
+or that we rejected the null hypothesis.\par
+But a US vice president once famely said,\par
+that we have more than our share of nattering nabobs\par
+of negativism, so we're going to use a word\par
+that's a little more positive and little more direct\par
+and we'll just say that we accept\par
+the alternative hypothesis.\par
+And when we want to accept the null hypothesis,\par
+then people usually say,\par
+we do not reject the null hypothesis\par
+or the data is not significant\par
+or that the null hypothesis is possible.\par
+And they don't say we accept the null hypothesis.\par
+Typically, they will not say that.\par
+And so the question is why?\par
+Why all this verbal gymnastics?\par
+So one observation is that the test is asymmetrical.\par
+We are really trying to avoid the case\par
+where the term null hypothesis is true\par
+and we declare the alternative.\par
+So there's a little bit of asymmetry there,\par
+but that doesn't explain why we have this\par
+complete kind of terminologies to say that.\par
+Let's go back to our example where we have 20 coin flips\par
+and we observed 12 hits.\par
+The question is in that case, are we accepting\par
+the null hypothesis even though maybe our results said\par
+that in this case, we opt for the null hypothesis,\par
+but we are accepting it?\par
+And maybe not because what for example\par
+if the probability of heads was 60%?\par
+So we're not in the null hypothesis,\par
+we're in the alternative hypothesis.\par
+But if you have 20 coin flips with 60% of heads,\par
+then you expect to see 12 heads.\par
+So this is actually a very reasonable answer\par
+when the probability of heads is 60%\par
+maybe the alternative is true.\par
+And similarly if the probability of heads was 55%,\par
+then maybe we'll not expect to see 12,\par
+but we'll get to see roughly that number.\par
+So both of these better explain 12 heads\par
+than the null hypothesis.\par
+So we don't say that we accept the null hypothesis.\par
+What happens is that we don't know\par
+that the null hypothesis is true,\par
+in fact, there may be another number\par
+for probability of heads that is better explained.\par
+But what happens is that we just don't have enough data\par
+to reject the null hypothesis.\par
+So what we're going to do in this case\par
+is we're gonna say that we retain the null hypothesis.\par
+We're not saying we accept it,\par
+that's true, but we keep it as a plausible explanation.\par
+So if you want, I can say that we reluctantly retained\par
+the null hypothesis.\par
+So now, as we said, we want to get a little more formal\par
+and more precise.\par
+And remember that we're being very conservative\par
+and we want to reject the null\par
+or the status quo hypothesis, H naught,\par
+only if we have very strong evidence for the alternative HA.\par
+So to make it more precise formulation,\par
+then we are given what's called the significance level\par
+which is called alpha,\par
+which is typically going to be a very small number\par
+like 5% or 1%.\par
+Very tiny.\par
+And what we want to make sure is that\par
+if the null hypothesis HO is true,\par
+then we accept the alternative.\par
+We claim the opposite of that.\par
+We accept the alternative with probability\par
+which is most of this alpha that is giving us\par
+which is typically a very tiny number like 5% or 1%.\par
+In other words, we want to show that\par
+under the null hypothesis,\par
+if the null hypothesis is true,\par
+then the probability of accepting the alternative\par
+is at most alpha.\par
+And, as we said, this is called a type-1 error\par
+when the null hypothesis is true\par
+what we decided from the alternative.\par
+So we wanna make it less than alpha.\par
+And because alpha is very small like 1%,\par
+then all our conservative elephants\par
+are going to be quite happy\par
+'cause we're making sure that we make a type-1 error\par
+with a tiny probability, let's say 1% or 5%.\par
+So now we want to see couple of ways of doing it\par
+in two methods.\par
+And one, we use this critical values,\par
+and the other one, we'll P values.\par
+So first, critical values.\par
+So this is our experiment coin.\par
+Null says it's unbiased\par
+and alternative says that it's biased towards heads.\par
+A 20 samples, X is number of heads.\par
+So here, as we said, is the probability distribution\par
+under the null hypothesis of the number of heads.\par
+We'll always plot it the distribution\par
+under the null hypothesis.\par
+And if the null hypothesis is true,\par
+then as we can see from here, its binomial distribution\par
+with probability half in 20 and equals 20,\par
+so expect the number of heads to be roughly 10.\par
+This mode here which is the expectation.\par
+And one thing to observe is that if we're going to accept\par
+the alternative hypothesis,\par
+for example, when X is equal to 16,\par
+so if we get 16 heads, then maybe we might say that\par
+their probability of heads is bigger than half.\par
+But whatever it is, if we accept,\par
+if when X is 16, we accept the alternative hypothesis,\par
+then we should also accept the alternative hypothesis\par
+with number of heads of 17\par
+and we should also accept it when it's 18\par
+and even larger number of heads.\par
+Or 19 and 20.\par
+In other words, there's going to be some threshold.\par
+Some first number for which we accept\par
+the alternative hypothesis\par
+and we'll call it the critical value and noted by X alpha.\par
+And so here is the critical value for\par
+the null value, let's say 16,\par
+and has the property that any number above that,\par
+if X is bigger than or equal to this critical value,\par
+then we're going to accept as we saw here the alternative.\par
+So we accept.\par
+And if X is less than this critical value X alpha,\par
+then we're going to retain the null hypothesis.\par
+So anything to the left of the critical value we retain,\par
+and from that point, from the critical and above,\par
+we accept the null hypothesis.\par
+And notice that this\par
+critical value X alpha\par
+is clearly a function of the significance level alpha\par
+which is our upper bound on the probability of type-1 error.\par
+So if we make the significance level alpha very small,\par
+that means that we allow very small probability of error\par
+under the null hypothesis\par
+and that means that we're going to accept\par
+only very, very large number like 20 as the alternative\par
+because we want to minimize the probability of accepting\par
+the alternative when the null is true.\par
+So, of course, the $64,000 question is\par
+what is X alpha?\par
+What value does it take as a function of alpha?\par
+So to see that let's\par
+just first remind ourselves what's happening.\par
+So we want to find the critical value X alpha.\par
+It has the property that if X is less than X alpha,\par
+then we retain or we accept if we want the null hypothesis.\par
+And if X is at least X alpha,\par
+then we accept the alternative.\par
+So from that point, null will accept the alternative.\par
+Now in alpha is the significance level\par
+which, as we said, could be 5 or 1% small number.\par
+Now, what we want to make sure is that\par
+under the null hypothesis,\par
+the probability of falsely accepting the alternative\par
+or the type-1 error is less than equal to alpha.\par
+This is the definition of false significance levels.\par
+So we want to assure that the probability\par
+under the null hypothesis of accepting HA,\par
+the alternative, is at most alpha.\par
+But the probability under the null hypothesis\par
+of accepting HA is just the probability\par
+under this distribution of falling here.\par
+So it's just the probability of those mean points.\par
+It's just the sum of these probabilities here.\par
+Here, they are like two, four, six.\par
+So this probability is just the probability\par
+that X is bigger than or equal to the critical value X alpha\par
+in this probability under the null hypothesis.\par
+That's the probability that will declare the alternative\par
+which, in fact, the null is true.\par
+So what we need to make sure is simply that\par
+under the null hypothesis, the probability that X\par
+is bigger than the critical value X alpha is at most alpha.\par
+So in other words, we need to make sure\par
+that from that point on, the 12 probability\par
+sums to at most alpha.\par
+All right, now, we can do that easily by taking X alpha\par
+the critical value to be very large.\par
+For example, making it 20.\par
+So the probability that we'll get 20 or more\par
+is going to be very small\par
+and in particular, will be less than or equal to alpha.\par
+But if we do that, then we'll almost never declare H alpha\par
+because we only declare H alpha if we get 20\par
+and we don't want to do that.\par
+We want to make sure that our type-1 error\par
+is bounded by alpha, but we also want to make sure\par
+that when the alternative is true, we actually declare that.\par
+So what we are going to do therefore\par
+is look for the smallest X\par
+such that under the null hypothesis,\par
+the probability that we'll get at least X heads\par
+is at most alpha.\par
+So we want to find an X such that this probability\par
+is at most alpha as we require,\par
+but we also want to be sure the smallest one namely\par
+one that if we go one below, accurate to 14,\par
+then already the sum of probability\par
+will be bigger than alpha.\par
+So that will make sure because the probability\par
+that we are at least X alpha is,\par
+this probability is less than or equal to alpha.\par
+We make sure that the probability of type error\par
+is less than or equal to alpha.\par
+And by choosing it so that if you go one below,\par
+the probability is bigger in alpha.\par
+We'll make sure that this is the smallest such value,\par
+so we'll have room for selecting the alternative.\par
+All right, so let's do an example\par
+and let's start with significance level of 5%.\par
+And we want to find the critical value\par
+which is denoted by X 5%.\par
+And as you remember, is the smallest X\par
+such that the probability that the number of heads\par
+will be at least that value is it most 5%.\par
+So here we're going to write a table\par
+with number of heads denoted by X.\par
+The probability of getting that many heads\par
+which, remember, is shown by this binomial table here.\par
+We'll calculate this probability in percentage points\par
+because we want to compare it to 5%.\par
+And then we'll also calculate the probability that X,\par
+the number of heads is at least this value of X\par
+which is what we need here.\par
+The probability of the sum of different points here.\par
+Shown here.\par
+All right, now, when number of heads is 20,\par
+what is the probability of getting 20 heads\par
+under this assumption of unbiased coin is going to be\par
+just 20 equals 20 or the number of possible sequences\par
+with 20 heads which is one,\par
+and in sequence is probability one over two to the 20.\par
+In terms of percent, it's 0.0001%\par
+and therefore, so the probability that we'll get\par
+at least 20 is just this value.\par
+Now, what if you look at 19 heads?\par
+The probability of observing 19 heads is, first of all,\par
+we need to consider the number of sequences\par
+with 19 heads which is 19,\par
+and each one is probability one over two to the 20,\par
+so the percentage is 0.0019.\par
+You can almost see that it's roughly right\par
+because this number 20 is to 20 is just one.\par
+So this is one over two to 20.\par
+And here we need to choose 19 or 20 which is one which is 20\par
+as one over two to the 20.\par
+So this number should be 20 times, about 20 times as large\par
+and it is roughly so.\par
+So now the probability that X is bigger than or equal 19\par
+is the sum of these two values\par
+which is going to be 0.002%.\par
+And the probability of getting at least 18 heads,\par
+you can calculate it.\par
+So here's the probability that we're getting exactly\par
+18 heads and then we add this to this\par
+will give us the sum of all previous three which is 0.02%\par
+and then probability of getting 17 or more heads is 0.13%,\par
+so not even 1%.\par
+The probability of getting 16 or more heads is 0.6%,\par
+so almost a percent.\par
+The probability of getting 15 or more heads is already 2%,\par
+and the probability of getting 14 or more heads,\par
+here, 14 or more is roughly 5.8%.\par
+Now, you notice that if we choose 15 as our critical value,\par
+the probability of getting 15 or more is 2%\par
+which is less than or equal to five.\par
+So the probability of getting 15 or more heads is roughly 2%\par
+which is less than or equal to five which is what we want.\par
+And furthermore, 15 is the smallest value\par
+such that the probability of getting that many heads or more\par
+is at most 5%.\par
+If we chose 14, then the probability of getting\par
+14 or more heads is already 5.7%.\par
+So the smallest value, the smallest X,\par
+such that the probability of getting that many heads or more\par
+is less than or equal to 5% is 15.\par
+So that's 5%.\par
+The critical value at 5% significance is 15.\par
+And that means that if we get 15 or more heads,\par
+we're going to accept the null hypothesis.\par
+We say, oh, it's biased towards heads.\par
+And if we get 14 of fewer heads\par
+and then we return the null hypothesis,\par
+we say that we cannot reject the possibility\par
+that the coin is unbiased.\par
+Now, what if instead of 5%, we look at 1%?\par
+So we're looking for the smallest value such that\par
+the probability of the green area to its right\par
+is at most 1%.\par
+Here, it's 5% and we'll redo 1%,\par
+so clearly we move to the right somehow.\par
+And by how much?\par
+We just need to look at this table.\par
+So we're looking for the smallest value such that\par
+the probability of observing at least that many heads\par
+is at most 1%.\par
+And this is the smallest such value.\par
+So clearly, we're going to choose this value 0.59\par
+because the probability of getting 16 or more\par
+heads is 0.59.\par
+It's less than 1%.\par
+And this is the smallest such value\par
+because if you go one below,\par
+then the probability becomes two\par
+which is the given one.\par
+So this is going to be 16.\par
+But now, there's a little bit of room for improvement\par
+and here's why.\par
+So the significance level is alpha, let's say 5%,\par
+and the critical value we find is X alpha,\par
+let's say it's going to be 15.\par
+It's similar to what we had before.\par
+So this is the critical value\par
+and if X number of heads that we observed\par
+is less than the critical value, it's here to the left,\par
+then we're going to retain the null hypothesis\par
+and say it's plausible, it could be in effect.\par
+And if the number of heads that we get\par
+is bigger than the critical value X alpha\par
+and we fold to reach to the right,\par
+and then we're going to accept the null hypothesis.\par
+But practically speaking, we'll observe one value of X.\par
+For example, we'll do the experiment and we get 13 heads.\par
+And the question would be whether we're going to retain\par
+the null hypothesis or accept the alternative?\par
+And you notice that because we only have one value\par
+that we need to deal with, then it's very natural to ask\par
+whether we can get around or get away without finding\par
+the smallest X for which we accept the HA.\par
+So here we've looked at 20, 19.\par
+We found that the smallest X such that\par
+the probability of heads getting as many heads\par
+is less than let's say 5%.\par
+And the question is we're going to observe this one value,\par
+do we really need to find the minimum\par
+or maybe we can find a rule that works just for X itself\par
+and tell us whether we should accept\par
+the alternative hypothesis or retain the null hypothesis.\par
+So that's what we want to see, okay?\par
+And we'll show that the answer is yes.\par
+In fact, you don't need to find the smallest X alpha,\par
+you can directly operate with X itself\par
+and that method is called P values.\par
+So probability values.\par
+So again, remember, that we have a critical value\par
+for example, X of significant level 5%\par
+which was 15 we thought,\par
+and that's the smallest X such that the probability that\par
+the number of heads will be at least X is at most 5%.\par
+That will guarantee that because this probability\par
+is at most 5%, we guarantee that the probability\par
+that we actually accept the alternative hypothesis\par
+is small, it's less than 5%.\par
+And as you remember, what we have is,\par
+so this here is we have the probability\par
+that the number of heads is going to be bigger\par
+than X 5% is at most 5%\par
+and this is the smallest such value.\par
+So then if we go one below,\par
+then what is the probability of getting\par
+in this case, 14 or more heads is bigger than 5%\par
+so it does not qualify as the smallest.\par
+And what we said was that if X the number of heads\par
+is bigger than this, especially if it falls here,\par
+then we accept the alternative hypothesis.\par
+And if it's smaller than the threshold,\par
+maybe it falls here on the left,\par
+then we retain the null hypothesis.\par
+And remember, we're trying to find the rule\par
+where we don't need to find this critical value.\par
+We can just directly operate an observation.\par
+Now, you can observe that X is going to be\par
+bigger than or equal to the critical value.\par
+So if this is the critical value here\par
+and X is bigger than or equal to it, if and only if,\par
+the probability of observing at least as many excess\par
+is at most probably of observing at least as many\par
+excesses as this value here.\par
+So if we look at the value of X which is here\par
+bigger than that,\par
+the probability that we'll get at least as many heads\par
+is going to be less than the probability if we get\par
+at least as many heads as this value here.\par
+And similarly, this probability is at most going to be 5%.\par
+So if X is bigger than this value, the probability we'll get\par
+at least as many heads as this X is going to be less than\par
+the probability here which is less than 5%.\par
+And conversely, if X is less than the critical value,\par
+if X is here, then if and only if,\par
+the probability of observing at least as many heads as X,\par
+let's say X is 10, is going to be bigger than 5%.\par
+Because as we go below this critical value,\par
+the probability of all the elements at the right\par
+will become bigger than 5%.\par
+So what that suggests is that we can define this value here,\par
+the probability that the number of heads\par
+is bigger than or equal to X to be the P value of X.\par
+It's the probability that X of test statistic,\par
+in our case, it's the number of heads is at least X.\par
+That's the P value of X.\par
+And this probability is under the null hypothesis.\par
+And what we see is that if this probability\par
+is less than or equal to 5%,\par
+so if X is such that the probability of being\par
+to the right of X is less than or equal to 5%,\par
+that means that X is going to be to the right of X 5%.\par
+So it means that X is bigger than or equal to\par
+the critical value at 5%.\par
+And that means by our rule before that we are accepting\par
+the alternative hypothesis.\par
+And conversely, if the probability that the number of heads\par
+is bigger than or equal to X is bigger than 5%.\par
+If for example here, the probability is the sum of\par
+all the elements to the right of X is bigger than 5%.\par
+That means that X is less than 5%,\par
+that it's from here to the left.\par
+So X is less than the critical value at 5%.\par
+This value here of 15.\par
+And that means that we're going to reject\par
+the alternative hypothesis or retain the null hypothesis.\par
+So what we see is whether or not we accept\par
+the alternative hypothesis or accept or retain\par
+the null hypothesis just depends on the probability that X\par
+is the number of heads is bigger than or equal to X\par
+which is what we call the P value of X.\par
+And we see that this gives us the same regions\par
+for accepting the alternative hypothesis\par
+and retaining the null hypothesis as before.\par
+And it also makes intuitive sense because\par
+if the P value of X is small,\par
+I mean, the probability of X\par
+under the null hypothesis is small,\par
+that means that X was probably generated\par
+by the alternative hypothesis.\par
+So the alternative hypothesis more likely.\par
+All right, so let's do an example of using P values\par
+to determine whether the null hypothesis\par
+or alternative hypothesis fault.\par
+So we're going to select significance level of 5%.\par
+And as we saw before, in this case,\par
+the critical value is 15 and we want to,\par
+I'm sorry, is 15,\par
+and we want to be able to determine the hypothesis\par
+without using this value.\par
+So we know that here, if X is bigger than 15,\par
+we are going to choose the alternative hypothesis.\par
+If X is less than 15, we are going to choose\par
+the null hypothesis\par
+and we want to get the same classification.\par
+The same (mumbles) test\par
+without using the critical value.\par
+So here, again, we can write the table for 20 heads.\par
+We can write the probability that X is\par
+bigger than or equal to X and so on.\par
+And now, remember these are the P values,\par
+and these values are the same as what we had before,\par
+the probability that X is bigger than or equal to X,\par
+and observe that the P value is less than or equal to 5%.\par
+If this P value of X,\par
+if X is to the right of the critical value,\par
+if X is bigger than or equal to X 5%, if and this is true,\par
+if and only if we're going to accept\par
+the alternative hypothesis.\par
+So in other words, if the P value is at most 5%,\par
+then we accept the alternative hypothesis.\par
+We don't need to calculate the critical value.\par
+And conversely, if the P value is bigger than 5%,\par
+the opposite of that, that means,\par
+remember, the P value is the probability of being\par
+to the right of this one,\par
+that means that X is less than the critical value.\par
+And if X is less than the critical value,\par
+then we want to reject the alternative hypothesis\par
+or retain the null hypothesis.\par
+So again, we see that the P value,\par
+this is the P value, if it's less than or equal to\par
+to the significance, which in our case is 5%,\par
+we accept the alternative hypothesis.\par
+And if the P value is bigger than the significance level,\par
+in our case is 5%, if it's bigger than that,\par
+then we retain the null hypothesis\par
+because we say, oh, under the null hypothesis,\par
+the probability of observing X or more is reasonable.\par
+Is fairly high.\par
+It's bigger than 5%.\par
+So using this tool, now we can see which\par
+hypothesis we're going to choose.\par
+So if the number of heads that we observe is 20,\par
+then the P value is 0.01%, it's a very small.\par
+The probability of obtaining this value or more\par
+using the null hypothesis is always much less than 1%,\par
+so we accept the alternative.\par
+Likewise here, the probability of observing\par
+this value of X to a 19 or more is 0.002%\par
+is very small.\par
+We say, oh, the null hypothesis does not hold,\par
+we accept the alternative in here too and so on and so on.\par
+Finally, here, we also accept the alternative because\par
+the probability of observing\par
+15 heads or more is just 2%.\par
+It's less than five that we are allowing ourselves,\par
+so accept the alternative.\par
+And finally, for 14 heads,\par
+the probability of observing 14 or more heads is 5.7%,\par
+that's bigger than the 5% that we are allowing\par
+so we cannot afford to declare here\par
+the alternative hypothesis because we'll be declaring it\par
+with probability of bigger than 5%.\par
+So here, we retain the, we turn the null hypothesis\par
+and this agrees with the decision that we had before.\par
+And if on the other hand, we chose\par
+our significance level 1%\par
+and then we are looking here and we see\par
+if the P value is less than 1%,\par
+we're going to call for HA alternative.\par
+So all these will call for the alternative.\par
+And if the P value is bigger than 1% as it is here,\par
+then we'll say that\par
+we'll accept the alternative hypothesis.\par
+So here, we're going to accept the,\par
+I'm sorry, so here, the probabilities are bigger than 1%\par
+and because the probability is bigger than 1%,\par
+we'll retain then the null hypothesis\par
+because we say it's likely to have happened\par
+so this will be H0.\par
+So just to remind ourselves, the P value of X\par
+is the probability that X is that the test is at least X.\par
+And if this probability is less than or equal to alpha\par
+significance level, then we're going to accept\par
+the alternative hypothesis because it's less likely\par
+that it's generated by null.\par
+And if this probability is bigger than alpha,\par
+then we're going to retain the null hypothesis.\par
+Now, I want to show you also a couple more examples.\par
+One is where we have the opposite alternative\par
+probably before.\par
+So beforehand, the alternative was that\par
+the probability of heads was bigger than 0.5,\par
+and here we're going to assume it's less than 0.5\par
+and we again do the same 20 coin flips.\par
+Number of heads equal X.\par
+Significant level alpha, again, could be 5% or 1%.\par
+And we want the probability\par
+of falsely accepting null alternative\par
+when the null is true to be at most alpha.\par
+So the critical value X alpha is going to be,\par
+in this case, it's going to be the largest X\par
+such that the probability that X is less than or equal to X\par
+is less than or equal to alpha.\par
+So here is the graph\par
+and we're looking for critical value X alpha.\par
+And remember, the alternative here is\par
+that the probability is less than 5%.\par
+So here, what we are likely to do is\par
+if the number of head is small,\par
+then we'll accept the alternative.\par
+So looking for the largest value X\par
+such that the probability to the left of it\par
+is less than or equal to alpha.\par
+So this probability is less than or equal to alpha.\par
+But if we go one more than this X,\par
+this is the largest one.\par
+So if we go on above it, then the probability\par
+should be bigger than alpha.\par
+And once we find this X, then what we're going to do is\par
+if the number of heads that we'll observe the test statistic\par
+is less than or equal to this critical value,\par
+then we're going to accept the alternative hypothesis\par
+in all this region\par
+and conversely, if the number of heads that we get\par
+which is the test statistic is bigger\par
+than the critical value that it's here,\par
+then we're going to retain the null hypothesis.\par
+So here, we don't have enough evidence to say\par
+that there are alternative hold,\par
+so we just obtain the null hypothesis.\par
+And by choosing\par
+this critical value to be such that\par
+the probability of X less than or equal to X,\par
+the probability to the left is less than or equal to alpha,\par
+we assure that the probability of accepting the alternative,\par
+the probability here to accept the alternative to the left\par
+is exactly less than or equal to alpha\par
+which is what we want.\par
+And by choosing the largest X possible,\par
+and then we also ensure that there are small error,\par
+not only under the null hypothesis,\par
+but also under the alternative hypothesis.\par
+So if we choose alpha which is 5%,\par
+then this is symmetric to what we have done before for the,\par
+when the alternative was the probability of heads\par
+was bigger than five.\par
+And so by symmetry, we get that the critical value is five,\par
+before it was 15.\par
+So by symmetry, it is five.\par
+Now, this was using the critical values.\par
+If we want to use P values,\par
+then, again, significance level of 5%.\par
+We can do the same table as before\par
+and we write here the probability that the X\par
+is less than or equal to,\par
+this number of heads is less than or equal to X\par
+and this is the P value of X.\par
+And so it's this value here.\par
+And if this P value is less than or equal to 5%,\par
+what that means is that we have X\par
+such that the probability that number of heads\par
+is to the left of it is less than 5%.\par
+Less than this value.\par
+This doesn't necessarily mean that this X is to the left\par
+of X critical value.\par
+So it means that the X is less than or equal to X 5%.\par
+And that means by the rule for the critical value,\par
+that means that we accept the alternative hypothesis\par
+for this X.\par
+So we see that if the P value is less than 5%,\par
+then accept the alternative hypothesis which makes sense\par
+because this is the probability that the null hypothesis\par
+will get this under X or less.\par
+This probability is less than null tolerance,\par
+less than the significant value\par
+so we said that, oh, it's not the null hypothesis,\par
+but it's the alternative hypothesis.\par
+And conversely, if the P value,\par
+this probability that X is,\par
+that the number of heads is less than or equal to X\par
+is bigger than 5%, that means that this X\par
+is to the right of this point, X 5% to the five.\par
+At someplace here.\par
+So X is bigger than X 5%.\par
+And in this case, then we should be retaining\par
+the null hypothesis.\par
+So the P value can tell us whether we should accept\par
+the alternative or retain the null.\par
+If the P value is less than alpha, less than 5%,\par
+and we accept the alternative\par
+and the P value is bigger than the critical value 5%,\par
+then we just retain the null hypothesis.\par
+And so we can do what we wanted which is to decide\par
+whether we accept the null hypothesis,\par
+accept the alternative or retain the null\par
+without calculating itself or just looking at the P value\par
+greater to 5%.\par
+All right, and so if we do that, then we see that\par
+for zero heads on the P value is much less than 5%.\par
+So that's unlikely that to get this result\par
+from the null hypothesis from an unbiased point,\par
+so we accept the alternative.\par
+Likewise here, the P value is much less than 5%,\par
+so we accept the alternative and so on.\par
+All these, we accept the alternatives.\par
+The alternative hypothesis up to here, except here.\par
+The P value is bigger than 5%\par
+so we retain the null hypothesis.\par
+And if our significant level was 1%,\par
+then what we would do,\par
+in all these cases, we would reject the null hypothesis\par
+and accept the alternative.\par
+And here beforehand, it was less than 5%\par
+so we still accepted the alternative,\par
+but now because our significant level is 1%,\par
+we're going to retain the null hypothesis.\par
+And the last thing I'm going to talk about\par
+is two-sided alternative.\par
+So here, again, the null hypothesis as before\par
+is that the coin is unbiased, 50%,\par
+but now, the alternative is that the probability of heads\par
+is just not equal to 5%.\par
+It could be bigger or smaller.\par
+So we have a two-sided alternative\par
+and the experiment is the same,\par
+and the statistic is the same.\par
+And one thing to observe is under the null hypothesis,\par
+if the null hypothesis is true and neither coin is unbiased,\par
+and because we flipped 20 of them,\par
+the mean is going to be 10.\par
+So that's the expected number of heads\par
+that we'll get under the null hypothesis.\par
+It's written here.\par
+And so intuitively speaking, under the null hypothesis,\par
+we expect to see X, the number of heads close to 10\par
+because we flipped the coin 20 times\par
+and under the null hypothesis,\par
+the probability of heads is 5%.\par
+So expect to see close to 10 heads.\par
+And under the alternative hypothesis\par
+that the probability of heads is not equal to 5%,\par
+we expect X to be far from 10.\par
+So visually, it should look something like\par
+we're looking at the absolute value between X and 10.\par
+And if this value is small, I mean, the X is close to 10,\par
+then we are going to retain the null hypothesis.\par
+So here in the middle,\par
+we're going to retain the null hypothesis.\par
+And if X minus 10 is large,\par
+then we accept the alternative hypothesis.\par
+And the remaining area here to the left and to the right,\par
+we're going to accept the null hypothesis\par
+because the number of heads we got\par
+is very different from 10.\par
+So here, we accept the alternative hypothesis,\par
+here, we accept the alternative hypothesis.\par
+All right, so now, this was the intuition.\par
+Now we can do it using the critical value.\par
+So again, we have the significance level\par
+and we have the mean under the null hypothesis\par
+which as we said is 10.\par
+And the critical value is going to be the X alpha\par
+which is the closest X to 10.\par
+The X which is closest to 10 such that the probability\par
+that X minus 10 is bigger than or equal to number of heads\par
+minus 10 is bigger than or equal to X minus 10.\par
+This probability is going to be less than or equal to alpha.\par
+So in other words, we're going to look at the probability\par
+if for any given X, we're going to look at the probability\par
+that the distance between the number of heads we get in 10\par
+is bigger than the distance between this X and 10.\par
+So here is the probability.\par
+For example, if this is X of five, X is 15 it's the same.\par
+So looking at the probability that the number of heads\par
+minus 10, the distance from number of heads to 10\par
+is bigger than or equal to X minus 10.\par
+So we're looking at this green area.\par
+And we want the probability to be, of this green area\par
+to be less than or equal to alpha.\par
+And conversely because X is the closest to 10,\par
+it means that if we take an X which is one closer,\par
+then this will no longer hold.\par
+So this probability is going to be bigger than alpha.\par
+The probability that\par
+what we'll observe will be further away from 10 than X is.\par
+Okay, so this is,\par
+if we call this value X alpha,\par
+so X alpha is that this point here\par
+which is this one is to 20 minus X\par
+because the difference between X and 10 is the same.\par
+It's 10 minus X here, and here is also 10.\par
+So what we do is if we observe X heads in our experiment,\par
+if X minus 10 is bigger than this X alpha minus 10,\par
+that means that we accept the alternative.\par
+So in other words, if the number of heads we get\par
+is either less than X alpha or bigger than 20 minus X alpha\par
+in one of this extreme, then we accept the alternative\par
+which says that the probability of heads is really not 50%.\par
+And conversely, when we look at X,\par
+X is the number of heads that we get minus 10,\par
+it's less than X minus 10.\par
+So then we have the number of heads that we get\par
+in the experiment, and then we retain alpha.\par
+Number of heads we get in the experiment is here,\par
+closer to 10 than X alpha.\par
+In that case, we're going to retain the null hypothesis.\par
+And in this case, the probability under the null hypothesis\par
+of type-1 error, namely that we declare the alternative\par
+is exactly the probability\par
+that will fall here outside.\par
+It's the probability that will fall outside of this,\par
+in this range and outside of the X alpha,\par
+in 20 minus X alpha region.\par
+So it's the probability that X minus 10\par
+is bigger than X alpha minus 10.\par
+And it shows X alpha in such a way\par
+that this probability is less than alpha.\par
+So this is going to be less than or equal to alpha.\par
+This will guarantee that the probability of type-1 error\par
+is going to be less than alpha.\par
+And we're choosing X alpha to be the closest to 10\par
+off all those that satisfy this relationship.\par
+And by doing that,\par
+we are making sure that we also declare\par
+the alternative in this significant proportion.\par
+So now we can also do the P values approach.\par
+If we look at the P value of X\par
+is the probability under the null hypothesis\par
+that X is at least as far from 10 as X,\par
+namely the probability that X minus 10\par
+is bigger than or equal,\par
+the number of heads that we get minus 10\par
+is bigger than X minus 10, which we can secure.\par
+Here, 10 is the mean and the P value of X,\par
+if this is X, if this is 20 minus X,\par
+the P value of X is going to be the probability\par
+that the number of heads that we'll get\par
+will be at least as large, at least as far for 10 as X is.\par
+So it's here in the green area.\par
+so it's the total probability of all these points.\par
+And low P value\par
+means that X is far from the mean.\par
+If this probability of the green element is small,\par
+that means that this value X is far from the mean from 10.\par
+And that means also that there is a low probability\par
+under the null hypothesis that the outcome is X\par
+or further towards the alternative.\par
+That the outcome is this point or larger.\par
+And it also means that X is less likely to be generated\par
+under the null hypothesis because this probability is small.\par
+So in all these cases make sense\par
+that we're going to declare that\par
+the alternative hypothesis holds or accept that.\par
+On the other hand, if we have high P value,\par
+that means that X is close to the mean,\par
+I'm sorry, X is close to the mean because the sum\par
+of all these probability from X on is large.\par
+So X is close to the mean\par
+and it also means that there is a high probability\par
+under the null hypothesis of getting X or something\par
+which is further towards the alternative hypothesis.\par
+And it also means that X is,\par
+sorry, the X is likely to be generated\par
+under the null hypothesis.\par
+So in all these cases, we're going to actually\par
+retain the null hypothesis.\par
+And morphonomy,\par
+the P value of X is the probability that X,\par
+the number of heads that we get is at least\par
+as far from 10 as X.\par
+So it's the probability under the null hypothesis.\par
+That X minus 10.\par
+The distance between the number of heads we get in 10,\par
+the difference is at least the difference between the X\par
+of little considering and 10.\par
+So here is a visualization.\par
+So here is 10, which is the mean, and this is X,\par
+and the P value of X is the probability\par
+that we'll get some value here or here.\par
+And we can calculate it for X which is zero or 20.\par
+We are looking at X at this green area,\par
+the probability that the number of heads that we'll get\par
+is going to be farther, at least as far from 10 as X is.\par
+In this case, we just placed to a value.\par
+And the probability of these two values\par
+if we calculate is 0.0002%.\par
+On the other hand, if X is one or 19,\par
+and then we're considering the case\par
+where the number of heads minus 10\par
+is bigger than or equal to in this case to 9,\par
+so it's either zero, one, or 19 or 20 heads\par
+and that's probable to this 0.004%.\par
+And for X which is two or 18,\par
+the P value is the probability that we'll get some,\par
+either zero, one or two or 18, 19 or 20 heads.\par
+And the probability is 0.0402% and so on.\par
+So for five and 15,\par
+we're looking at the probability\par
+that the number of heads is going to be\par
+either between zero and five or between 15 and 20.\par
+Again, if this is X, we're looking at\par
+to the left and to the right of these two points.\par
+And this probability is 4%.\par
+Finally for six and 14,\par
+this probability is going to be 11.3%.\par
+So now, if we're considering a 5% significant level,\par
+and then if the P value is less than 5%,\par
+then we'll accept the means that this probability is small.\par
+So we accept the alternative.\par
+And if this P value is bigger than 5%,\par
+we are going to retain the null hypothesis.\par
+So in our case, almost everything.\par
+We accept the null hypothesis\par
+because almost everything is less than 5%.\par
+So this one, less than 5%,\par
+and this is the last one which is less than 5%.\par
+We accept the alternative.\par
+And finally, the only one we will retain the,\par
+we retain the null hypothesis is when we get six or 14 heads\par
+and then the probability that we'll get some of below six\par
+or at least 14 is we have 11.5% which is bigger than the 5%\par
+significance level that we set out for.\par
+So just to end, for general P values,\par
+the P value for statistics T of T.\par
+So we have a statistic T gets the value of T\par
+is the probability that T, the statistic is either T\par
+or further towards the alternative hypothesis.\par
+And if the significance level is alpha,\par
+so then if the P value is less than or equal to alpha,\par
+we're going to accept the alternative\par
+because it means that the probability that the null\par
+generated eventually is small,\par
+and if the P value is bigger than or equal to alpha,\par
+or bigger than alpha, then that means\par
+that there is a reasonable likelihood\par
+that the null hypothesis generated our data,\par
+and then retain the null hypothesis.\par
+So to end, we discussed hypothesis testing\par
+more systematically and precisely.\par
+We defined the significance level,\par
+which is the probability of making type-1 error\par
+when null hypothesis is true.\par
+And we presented two methods of calculating that test\par
+with critical values method and the P values,\par
+and then we discussed one and two-sided alternatives.\par
+And next time, we'll talk about the lady tasting tea.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+}
+ 

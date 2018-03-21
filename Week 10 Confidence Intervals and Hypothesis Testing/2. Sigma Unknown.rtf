@@ -1,0 +1,635 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - [Instructor] Hello, and welcome back.\par
+In the last video, we talked about confidence intervals,\par
+but we assumed that sigma was known, the standard deviation.\par
+That, of course, is almost never the case,\par
+so, in this lecture, we'll see how we can come up\par
+with a confidence interval when sigma is not known.\par
+Kay, and what we'll do first, of course,\par
+is we'll need to estimate sigma,\par
+but we'll see that it gets slightly more involved\par
+and we will need to replace the normal distribution\par
+by relating distribution called students' t-distribution.\par
+And we'll provide step-by-step instruction\par
+as to how to find out the confidence interval\par
+and we'll end with an example.\par
+Right, so let's start with the simplest case,\par
+that we discussed last time, which is when sigma is known.\par
+So, in that case, we said that we can look\par
+at the standard normal distribution,\par
+normal with mean zero and standard deviation one,\par
+as shown here, and we said that if p is the probablity,\par
+a number between zero and one, we can define zp,\par
+the critical value, to be the point such that the area\par
+between minus zp and zp is p.\par
+Shown here, here is p, is there here,\par
+and the point here is zp such that this area\par
+is going to be p.\par
+So it's sometimes called the critical point\par
+or the critical z.\par
+And if a random variable Z is distributed normal zero, one,\par
+in other words if Z is a standard normal random variable,\par
+then p, this value p, is the probability\par
+that the absolute value of Z will be less than zp,\par
+or, in other words, the probability\par
+that Z is between minus zp and plus zp.\par
+So, we can calculate p, this probability,\par
+by looking at the CDF of Z, and saying it's this value here,\par
+to the left of zp, minus the CDF of minus zp.\par
+So we can write it as phi of zp minus phi of minus zp,\par
+where phi is the CDF of the standard normal distribution,\par
+and as we have done several times,\par
+phi of minus zp, the area here to the left,\par
+is by symmetry the same as the area here to the right,\par
+which is one minus phi of zp.\par
+So we can write it as phi of zp minus one minus phi of zp,\par
+that's this area here, and this is\par
+twice phi of zp minus one.\par
+Okay?\par
+But what we're interested is not the area given zp\par
+but the opposite, we're given p and want to find zp,\par
+the critical z, so we're just going to invert this function,\par
+so first we can write, that phi of zp\par
+is one plus p over two, and then we just invert it\par
+and get zp is phi inverse of one plus p over two.\par
+Okay?\par
+So let's do a very quick example,\par
+so if p is 0.9, and we're looking for z of 0.9,\par
+then it's going to be phi inverse of one plus 0.9 over two,\par
+notice that one plus 0.9 over two\par
+is just the average between one and 0.9,\par
+so it's phi inverse of 0.95, and then we can just\par
+calculate it, and you'll see that it's 1.645,\par
+and what that means is that the probability that z,\par
+if z is standard normal random variable,\par
+then the probability that z is between\par
+minus 1.645 and plus 1.645 is 0.9.\par
+Okay?\par
+So if z is 1.645, the area between these lines is 1.645,\par
+and 1.645, this area is one.\par
+So, the other thing we said was that\par
+when we take a number of samples\par
+and calculate the sample mean,\par
+it behaves roughly normal.\par
+What do we mean by that?\par
+If X1, X2, up to Xn i.i.d, distributed according\par
+to some known distribution sigma, but unknown mu\par
+that we're trying to figure out,\par
+then if we take the sample mean, shown here,\par
+it's the average of the random samples,\par
+then, first of all, we said that the expected value\par
+of the sample mean is mu, is the distribution mean.\par
+To see that, just notice that by linearity of expectation,\par
+the expected value or the mean of the sum\par
+is just going to be n times mu and divide by n,\par
+so it cancels, and we get that this is the mean of X bar,\par
+the mean of the sample mean is mu, in other words,\par
+the sample mean is an unbiased estimator for mu.\par
+And for the variants, we said that if you take the sum\par
+of n variables, the variances will add,\par
+because they're independent, so the variance\par
+is going to be n times the variance of the distribution,\par
+and then we normalize by n, so the variance\par
+will go down by factor of n squared,\par
+so altogether we get the variance of the sample mean\par
+is sigma squared over n.\par
+And, therefore, the standard deviation of the variance\par
+of the sample mean is sigma over square root of n.\par
+Kay?\par
+And this is something that we may want to remember,\par
+because it will come in, and says\par
+that the standard deviation will go down,\par
+if the average will go down,\par
+as the number of sample increases,\par
+but goes down by the smaller the square root of n.\par
+This is sometimes called the standard error.\par
+Kay?\par
+So, now, notice that x, as we said, has mean mu,\par
+and standard deviation which is sigma of X bar,\par
+which is sigma over square root of n,\par
+so if we want to normalize it,\par
+we'd be subtracting mu, so it can take x minus mu,\par
+and this difference now has mean zero, that's the numerator,\par
+and then if we divide it by the standard deviation of X bar,\par
+then we'll get our inner variable\par
+that has standard deviation one.\par
+Okay?\par
+And we can also write it as X bar minus mu,\par
+and then the standard deviation of the sample mean,\par
+X bar is, you just calculate it here,\par
+is sigma over square root of n.\par
+So this random variable now here\par
+has mean zero and standard deviation one,\par
+and, furthermore, as we know by the central limit theorem,\par
+we know that this will behave roughly\par
+like normal zero, one.\par
+Central limit theorem told us, okay?\par
+Alright, so we know that if we take x subtract mu\par
+and divide by sigma over square root of n,\par
+will be roughly normal.\par
+So, combine these two things together,\par
+what do we see?\par
+We get that, if we have the standard normal distribution,\par
+then if we look at areas p,\par
+then if Z is distributed normal zero, one,\par
+then the probability that Z is between\par
+minus zp and plus zp, zp was defined as before,\par
+the probability is p, here, and we get that\par
+X bar minus mu divided sigma over square root of n\par
+is roughly normal zero, one.\par
+Okay?\par
+And therefore, we get that if Z is normal zero, one,\par
+the probability that the absolute value of Z\par
+is less than or equal to zp is p,\par
+now, X minus mu divided by sigma over square root of n,\par
+the normalized sample mean, is roughly normal zero, one.\par
+And so therefore the probability\par
+that its absolute value is less than or equal to zp,\par
+the probability it falls between minus zp and zp,\par
+is therefore roughly p, because it's roughly normal,\par
+as opposed to Z, which is exactly normal.\par
+Alright, and now we can just rearrange,\par
+so just move sigma over square root of n,\par
+multiply by that on both sides, so you see\par
+that the probability that the sample mean\par
+differs from the distribution mean\par
+by at most z times sigma over square root of n,\par
+is roughly p.\par
+And this we can write by saying that,\par
+with probability rough p, x minus mu\par
+in absolute value is at most zp,\par
+the critical value times sigma over square root of n.\par
+Or, in other words, and this is called, the product here,\par
+z times sigma over square root of n,\par
+is called margin of error, or in other words,\par
+mu is going to be between X minus\par
+zp times sigma square of n and\par
+X bar, the sample mean result, plus\par
+the margin of error zp times sigma over square root of n.\par
+So this is just the way we do confidence interval\par
+when sigma is known.\par
+So how do we do it?\par
+Let's give a small recipe here.\par
+So, we're given a confidence level p,\par
+for example 95%, and we're given samples, X1 up to Xn,\par
+and we want to determine the confidence interval,\par
+so what do we do?\par
+First we find the critical value, or the critical z,\par
+which is zp, we call it, it's phi inverse\par
+of one plus p over two, and if you recall,\par
+phi is just norm.ppf, percentile to point function,\par
+so we calculate norm.ppf of one plus p over two,\par
+p what we were given, and this is all at this stage.\par
+Okay?\par
+And then we calculate the sample mean,\par
+which is just the average of all the n samples that we got.\par
+Then, we calculate the margin of error,\par
+which is zp, the value that we found here,\par
+times sigma divided by square root of n,\par
+sigma, we assume here, is known,\par
+and is the number of samples that we have,\par
+and then we construct a confidence interval,\par
+which is just the sample mean,\par
+X bar minus the margin of error and up to\par
+X bar plus the margin of error.\par
+Okay?\par
+And so, this is all we did, it's quite simple,\par
+no issues, but there is a small problem.\par
+What is it?\par
+Issue is, of course, that sigma is almost never known,\par
+so when we calculate it we don't know what sigma is,\par
+don't know how to multiply.\par
+So this assumption that we have here almost never applies.\par
+So what we need to do, see, is what to do\par
+when sigma is not know.\par
+So when sigma is not known, let's first assume\par
+that we have X1 up to Xn and they're independent,\par
+as they were before; now let's assume that they're normal\par
+with mean mu and standard deviation sigma,\par
+but this time neither sigma nor mu is known.\par
+So we don't know mu, as before,\par
+and now we also don't know sigma,\par
+and what we want to do is we want to estimate.\par
+Okay?\par
+So, again, we defined the sample mean to be\par
+the average of the samples, okay?\par
+And, again, the expected value of the sample mean\par
+is just going to be the distribution,\par
+so this is an unbiased estimate of mu.\par
+Okay?\par
+And the standard deviation of X bar,\par
+the standard deviation of the sample mean,\par
+as we saw before, is sigma over square root of n.\par
+Okay?\par
+Now, we can define X minus mu, in fact we did define\par
+X bar minus mu divided by sigma X bar,\par
+which is the same as X bar minus mu\par
+divided by sigma over square root of n,\par
+even though we don't know sigma we can define\par
+like that, and as we saw this is distributed roughly,\par
+so this is distributed with this dot signifying roughly,\par
+normal zero, one.\par
+Okay?\par
+And which is the standard normal distribution.\par
+Now, of course, sigma is not known to us,\par
+so what we can do is we can try to estimate sigma.\par
+So we can define S square to be\par
+one over n minus one, n is the number of samples,\par
+times summation of Xi minus the mean, squared,\par
+and you notice that this is what we call\par
+the sample variance except it's Bessel corrected,\par
+as we said, and because it's Bessel corrected,\par
+meaning we divide by n minus one and not by n,\par
+because it's Bessel corrected, then it's unbiased,\par
+so the expected value of S squared is just sigma square.\par
+Okay?\par
+So it's an unbiased estimate for the variance.\par
+And, now, we don't know sigma, the standard deviation\par
+of X bar, so instead of dividing\par
+by sigma over square root of n,\par
+we'll divide by our estimate for sigma,\par
+which is the square root of S squared, or S,\par
+over square root of n.\par
+So when we do that, so instead of calculating\par
+X minus mu divided by sigma over square root of n,\par
+calculating X bar minus mu divided by S,\par
+our sample variance, over square root of n.\par
+Actually, S is the square root of the sample variance,\par
+divide by square root of n.\par
+When we do that, we get something which is almost standard,\par
+so here we get something which is here,\par
+we could say maybe standard normal,\par
+it's something that is almost standard\par
+because S is not exactly the same as sigma,\par
+so S is roughly sigma but not exactly,\par
+and this is also almost normal,\par
+and that is because S is not constant.\par
+If this were a constant, that would be normal,\par
+or approach normal.\par
+But, in fact in this case we assume that we start\par
+with normal variables, so it would be exactly normal,\par
+so this is roughly standard and roughly normal,\par
+and that's because S is a random variable,\par
+so we're dividing here by random variable,\par
+not by a constant.\par
+Okay?\par
+And, in fact, this will have so it's nearly\par
+a standard normal variable but not exactly,\par
+and this distribution has a name,\par
+it's called the student's t-distribution,\par
+and, in this particular case,\par
+with n minus one degrees of freedom,\par
+where n is the number that we divide by, okay?\par
+So, okay. Or the number of samples.\par
+So let's talk about this distribution.\par
+So the student's t-distribution.\par
+As we saw, we call it T nu, and so we put we had before was,\par
+the sample mean subtracted its mean, which was mu,\par
+and divided by S and normalized by square root of n.\par
+And we're going to call n nu plus one,\par
+so T nu is this divided by square root of nu plus one,\par
+and that's the student's t-distribution,\par
+with nu degrees of freedom.\par
+So the degrees of freedom is always one less\par
+than the number that we divide by here.\par
+Okay?\par
+And one can calculate the probability density function,\par
+the PDF, of the student t-distribution,\par
+and we will call it f nu, that's the number\par
+of degrees of freedom of t, and that's this formula here.\par
+It's the gamma function, so this is the gamma function,\par
+of nu plus one over two, divided by square root\par
+of nu pi times the gamma function of nu over two,\par
+times one plus t squared over nu,\par
+nu is, again, the number of degrees of freedom,\par
+it's a property of the distribution,\par
+one plus t squared over nu, raised\par
+to the minus nu plus one over two, okay?\par
+So, I'm sure that, when you look at it,\par
+your first reaction is, whoa.\par
+What are we going to do here?\par
+Looks very complicated.\par
+And in some sense, it's a little bit is,\par
+but, don't worry, things are fine,\par
+we're going to need very little here,\par
+and we're going to just clarify them slightly.\par
+So the first good thing that you see when you look at it\par
+for more than a second is, so nu's a property\par
+of the distribution, which is a function of t.\par
+You have a distribution parametrized\par
+by the number of degrees of freedom, nu,\par
+where that's a function of t.\par
+t, in this whole, messy expression, t only appears here.\par
+It's just here, so it's actually a fairly simple expression.\par
+You get one plus t squared over nu,\par
+and then raise it to some power, multiply by some constant,\par
+but it's just basically one plus t squared over nu\par
+raised to some power.\par
+Okay?\par
+So that's one observation, that just tapers here,\par
+and second observation is symmetric around zero,\par
+because of that, if you plug in t or minus t,\par
+you'll get the same value.\par
+So this distribution is symmetric for around zero.\par
+And if you want to see a little bit more,\par
+then what we want to do is maybe calculate it and plot it.\par
+So for that, we use Python, so\par
+there is for the student's t-distribution,\par
+there's object called t, it's in the scipy.stats module,\par
+and to calculate the probability density function\par
+of the distribution, we just call t.pdf\par
+over the density function of x and nu, here,\par
+where nu is the number of degrees of freedom.\par
+So, for example, if you want to calculate f three,\par
+this is the PDF of the t-distribution,\par
+with three degrees of freedom at point one,\par
+then, we just first of all, import t,\par
+so from scipy.stats import t, and then call t.pdf,\par
+evaluate it in one and three, three is the number\par
+of degrees of freedom, and one is the point\par
+where we're evaluating it, and it tells us\par
+that this value is 0.206, and so on.\par
+Okay? So that's the value of the PDF.\par
+And with that, we can plot the PDF.\par
+So here we show the PDF of f one,\par
+the student's t-distribution, with one degree of freedom,\par
+okay?\par
+And when you look at it, you see, again, as we said,\par
+it's symmetrical on zero, it's also bell-shaped,\par
+and in fact looks a lot like a Gaussian.\par
+So this we can make a little more precise.\par
+So first, let's look at the dependence\par
+of the distribution on nu.\par
+So, as nu increases, the number of degrees of freedom\par
+increase, then f nu of t, the t-distribution,\par
+will approach the Gaussian distribution.\par
+To see that, here is a graph,\par
+which you have in the notebook,\par
+so this is the value of x, and this is p of x,\par
+and the blue line is the standard normal distribution,\par
+and the red line is the t-distribution,\par
+here with one degree of freedom.\par
+If we increase the number of degrees of freedom,\par
+from one to two, we'll see that the distribution\par
+becomes closer to the blue curve,\par
+closer to the Gaussian curve with two degrees of freedom.\par
+If we go to three degrees of freedom,\par
+again, closer to the normal distribution,\par
+five degrees of freedom, ten degrees of freedom,\par
+and 30 degrees of freedom, it's essentially identical.\par
+So, what we see is that, as the number of degrees of freedom\par
+increases, the distribution becomes closer and closer\par
+to standard normal distribution,\par
+which is kind of logical, because, as you increase\par
+the number of samples n, then S, your estimate of\par
+the standard deviation, is going to become\par
+more and more concentrated, more like a constant,\par
+number one, and two, this constant is going to be sigma,\par
+it's going to be approximately the right value,\par
+and once you do that, you'll observe\par
+that because of that, you'll get S is a constant;\par
+once you divide by constant, X minus mu over S\par
+will become like X minus mu over sigma,\par
+and that's the standard normal distribution,\par
+so you're going to approach that.\par
+And again, you can see examples in the notebook,\par
+you can take this approximation and you can play\par
+with different values of number of degrees of freedom.\par
+Okay?\par
+So, I also want to give you an analytical argument\par
+that shows why the t-distribution converges\par
+to the normal distribution.\par
+So f nu of t, which has this formula here,\par
+and again, as we said, it looks scary but it's not\par
+because it just depends on t here, so we want to see\par
+what happens to this when nu increases.\par
+So first of all, observe that if x is very small,\par
+then one plus x is roughly e to the x,\par
+as you can see in this graph.\par
+This is a graph of x plus one in blue,\par
+and e to the x like this, and of course,\par
+e to the x and one plus x could be very large\par
+when x is very large, but when x is small,\par
+like here, somewhere between zero and 0.2,\par
+they are essentially the same.\par
+And what we have here is we have one plus t squared over v,\par
+and we're going to increase v, nu,\par
+the number of degrees of freedom, so this value\par
+will become very small.\par
+When that happens, so we have one plus t squared over nu,\par
+raised to the minus nu plus one over two,\par
+this value becomes very small, so it will roughly,\par
+e to the t squared over nu,\par
+raised to the minus nu plus one over two,\par
+Okay?\par
+And this is nothing but e to the t squared over nu,\par
+times negative nu plus one over two,\par
+so it's e to the negative t squared over nu\par
+times nu plus one over two, and now nu is very large,\par
+the nu plus one is roughly the same as nu,\par
+so these cancel.\par
+So we get it's e to the minus t squared over two,\par
+which is great, because, this says\par
+that this value here depends on t,\par
+like the standard normal distribution,\par
+e to the minus t squared over two.\par
+Okay?\par
+So this is like the standard normal one.\par
+Furthermore, this is a distribution.\par
+Okay?\par
+And so what we have here, is we have constant times,\par
+when nu is large, we have constant times\par
+e to the minus t squared over two,\par
+and for this constant, must be the same constant\par
+as it is for the standard normal distribuution.\par
+Okay?\par
+So this value here must be the constant\par
+of the standard normal distribution,\par
+which is one over square root of two pi.\par
+So in fact, sorry about that,\par
+so in fact this distribution, when n becomes large,\par
+is just one of square root of two pi,\par
+e to the minus t squared over two,\par
+or just a standard normal distribution.\par
+Okay?\par
+Now, a very natural question is why is this solution\par
+called the student's t-distribution?\par
+And in fact it is named after William Sealy Gosset,\par
+okay?\par
+Lived at the beginning of, or worked\par
+mostly at the beginning of, the 20th century.\par
+And he was a chemist by training, but he was\par
+therefore employed by Guinness Brewery,\par
+which at that time, this is early 1900's,\par
+was the world's largest brewery,\par
+they made a billion pints per year,\par
+that's roughly 1.75 billion bottle per year.\par
+So, while the world's population grew,\par
+it's not clear that the number of beer bottles\par
+that people drank as well.\par
+And Guinness of course was interested about the quality\par
+of the Guinness they made because they made it\par
+in different places, they wanted\par
+to make sure that the quality was good,\par
+and they could measure the quality in a quantitative way,\par
+they also want to make sure that the product\par
+was consistent, that different factories or breweries\par
+produced similar beer, so someone would get\par
+consistent experience.\par
+And for that, they did something which was radical\par
+at the time, and that is they hired a statistician,\par
+employed statisticians, and Gosset became\par
+one of those statisticians, and to do that,\par
+he actually studied quite a bit of statistics,\par
+even went to Berkeley to work with Pearson\par
+to know more statistics.\par
+And at some point he wanted to publish his results,\par
+but Guinness viewed their statisticians' work\par
+as a trade secret, didn't want other breweries to know\par
+what they were doing, and so he could not publish his work.\par
+And instead, he ended up publishing under a pseudonym,\par
+and possibly because one of his first papers\par
+when he was visiting Pearson, the name that he chose\par
+was student, so here's one of those papers,\par
+it's by student, here.\par
+Okay?\par
+And many of his results were published\par
+under the pseudonym student.\par
+Okay, alright, so let's see what you did,\par
+and you'll see it's very similar to what we have done\par
+in the beginning of this lecture.\par
+Okay?\par
+So, T nu is what we call the student's t-distribution,\par
+with nu degrees of freedom, okay?\par
+It's shown here.\par
+This is f nu of t, this is the PDF shot.\par
+What we'll do is roughly the same,\par
+we'll define t p, nu, the critical value\par
+for nu degrees of freedom and value p,\par
+to be this value t p, nu, such that\par
+between minus the critical value and plus the critical value\par
+t p, nu, this area is p, namely the distribution\par
+has probability p inside.\par
+So the probability of T nu of this random variable,\par
+the probability that it's in this region,\par
+its absolute value is less than t p, nu,\par
+its probability is p.\par
+Okay?\par
+And now, just like we did before, we can express p\par
+as this probability, and it's the same as the probability\par
+that this random variable T nu is between\par
+minus t p, nu and plus t p, nu,\par
+and that is, as we had before, is twice F of t p, nu,\par
+this is the CDF of the student's t-distribution,\par
+minus one.\par
+This is just left behind two phi minus one.\par
+Here it's two F of t p and minus one.\par
+Okay?\par
+This is the CDF of T nu.\par
+And we're interested in finding out what T is based on p,\par
+so we can write F is one plus p over two,\par
+like we did before it's the average of one and p,\par
+right?\par
+And F of t p, nu is that, and therefore t p, nu,\par
+the critical value that we're interested in,\par
+this value here, is F inverse of one plus p over two.\par
+Okay?\par
+For the t-distribution with nu degrees of freedom.\par
+Okay, so let's see how to do it with Python.\par
+So first, to a cumulative distribution\par
+of our t-distribution, we can write it as t.cdf,\par
+cumulative distribution function,\par
+of x, and this is for nu degrees of freedom, okay?\par
+So, for example, if you want to calculate\par
+F three of one, the CDF of F three,\par
+the t-distribution with three degrees of freedom,\par
+you'd first need to import t from scipy.stats,\par
+and then you set t.cdf: t-distribution, CDF,\par
+three degrees of freedom, and evaluate it at one,\par
+that will give you 0.8.\par
+And so it's not one, but close enough.\par
+Okay?\par
+And if you want to calculate the inverse of the CDF,\par
+which is what we need, it's, as we said before,\par
+it's called percent point function,\par
+so it's t.ppf of x, nu, and nu, again,\par
+is the number of degrees of freedom.\par
+So to calculate F three inverse of 0.95,\par
+what that means is that we look at the CDF\par
+of the t-distribution with three degrees of freedom,\par
+and we want to find for what value its CDF is equal to 0.95.\par
+And to do that, we write t.ppf, percent point function,\par
+evaluate at 0.95 with three degrees of freedom,\par
+and that gives us 2.533, something like that.\par
+Okay? Right. Okay.\par
+So, now to calculate the confidence interval,\par
+so we have t-distribution with nu degrees of freedom,\par
+and what we show here is, these are the critical values,\par
+t p, nu, then the probability here is going to be p,\par
+and we have said that, if not proven it,\par
+but we have said it, X bar minus mu\par
+divided by S divided by square root n\par
+is distributed according to t-distribution\par
+with n minus one degrees of freedom.\par
+And again, just to remind ourselves,\par
+Xi's themselves are normal random variables.\par
+And this is called the t-statistic,\par
+you take X bar, the sample mean, subtract mu,\par
+and normalize.\par
+Okay?\par
+And then, as we saw, the probability that\par
+X minus mu divided by S over square root of n,\par
+probability that this is less than t,\par
+is equal to p.\par
+And therefore, the probability that X minus mu\par
+is less than or equal t times\par
+multiple of S over square root n,\par
+this probability is still p, it's the same, here.\par
+So we're basically repeating what we did before\par
+for when sigma was known to when sigma is not known.\par
+And, just re-writing this, we say that\par
+the probability p x minus mu are going to be\par
+within the critical value from each other,\par
+t p, n minus one times S over square root n,\par
+in other words this is called margin of error.\par
+And in other words, mu, the mean,\par
+will fall somewhere between X bar, the sample mean,\par
+minus the margin of error and X bar plus\par
+the margin of error.\par
+So, finally, here is our recipe for confidence intervals\par
+when sigma is not known.\par
+We're given a confidence p, like we did before,\par
+and we're given samples X1 up to Xn,\par
+and we want to determine the confidence interval,\par
+so what we do is we first determine\par
+the t score, or I should say the t critical point,\par
+which was F inverse with n minus one degrees of freedom\par
+of one plus p over 2.\par
+Once we determine this critical point, t p, n minus one,\par
+and we do that, by the way, by using t.ppf,\par
+so this is F inverse at one plus p over two.\par
+Okay?\par
+So, once we do that, we can calculate the sample mean,\par
+which is just the average of the samples,\par
+and then we can calculate sample variance, S square,\par
+which is one over n minus one,\par
+times the summation of the differences between the Xi's\par
+and the mean, squared.\par
+And then we can calculate the margin of error,\par
+which is t p, the critical t, times S,\par
+which we just calculated, square root of S squared, so S,\par
+divided by square root of n, and you will see\par
+that we don't need sigma, because we replaced it by S,\par
+and then the confidence interval is just going to be\par
+the sample mean plus minus the margin of error,\par
+which is the t p, it's the critical t value,\par
+times S over square root of n, and plus minus.\par
+Okay, so that's it, and what we want to do next is,\par
+I'll do an example, so let's say that we want to find\par
+a confidence interval for the length of\par
+mature African elephant trunk lengths.\par
+End of transcript. Skip to the start.\par
+Part 2: Example\par
+}
+ 

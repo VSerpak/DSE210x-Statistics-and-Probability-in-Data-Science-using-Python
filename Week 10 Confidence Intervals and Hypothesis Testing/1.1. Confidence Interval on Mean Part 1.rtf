@@ -1,0 +1,803 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello and welcome back.\par
+In the previous lectures,\par
+we talked about parameter estimation,\par
+and we tried to do our best to find the value of parameter.\par
+And now what we're going to do is maybe try\par
+to not do our best to find a particular variable\par
+for the parameter,\par
+but try to have a little more confident\par
+about what the value of the parameter roughly is, okay?\par
+So that's what we're going to discuss.\par
+We're going to come up with an interval\par
+where we're pretty confident that with,\par
+the parameter lies between, somewhere between it, okay?\par
+So let's just go over this a little more precisely.\par
+So we want to move from estimating specific\par
+one value of the interval,\par
+of the parameter,\par
+that you call a point estimate,\par
+to estimating an interval that the parameter lies in, okay?\par
+So remember that we have a distribution or a population\par
+and we want to estimate the parameter of this distribution\par
+or the population.\par
+And what we have done before was that we came up with\par
+what's called a point estimate.\par
+Namely, for example,\par
+we estimated the mean to be 3.14,\par
+or we estimated that probability that a coin comes up heads,\par
+the probability that it's heads,\par
+to be 0.48.\par
+And there's something really nice about this,\par
+and that is that this estimate is precise.\par
+But there's something not so nice about it,\par
+and that this estimate is certainly wrong.\par
+You can almost guarantee that the mean that we estimated\par
+is not exactly 3.14\par
+and the probability's not exactly 0.48.\par
+So once we do that,\par
+we don't know exactly what we mean.\par
+We give a value\par
+and we don't know exactly what it means, okay?\par
+And it's, you know,\par
+it's kind of sad,\par
+because the value that we give is always wrong\par
+and we have no confidence about it.\par
+We don't know how confident we are that this is the value.\par
+In fact, we know it's wrong.\par
+Or are we near it,\par
+and so on and so on.\par
+So what we want to do in this lecture\par
+is we want to talk about confidence interval,\par
+which I'm going to kind of marry\par
+or put together these two issues.\par
+One is we want to be precise\par
+but maybe not completely precise,\par
+and then we want to do something\par
+that is going to be fairly accurate.\par
+We won't give a precise value,\par
+but it's a range that we have some confidence about, okay?\par
+So what we want to do is reduce the precision,\par
+and at the same time,\par
+we want to increase the confidence\par
+of the answer that we have.\par
+So the answer we'll come up with\par
+will look like something like,\par
+with 95% confidence,\par
+which you can think of as probability if you want,\par
+the mean, mu,\par
+the parameter of distribution,\par
+falls in this interval,\par
+not 3.14,\par
+but somewhere in between 3.1 and 3.18, okay?\par
+So this is the kind of result that we want to say it.\par
+So we give a range,\par
+and for the range,\par
+we give some confidence,\par
+which again you can think of as being probability,\par
+that the mean falls within this range, right?\par
+So in order to understand it,\par
+let's go back to basics,\par
+back to normal,\par
+and remember that the central limit theorem says\par
+that if you take averages of anything, essentially,\par
+it's going to be roughly normally distributed.\par
+And this will provide us the intuition\par
+to what we're going to do.\par
+In fact, this intuition is so strong\par
+that it's almost everything that we're gonna do.\par
+If you understand that, we'll be fine.\par
+Okay, so just to remind ourself\par
+about the central limit theorem again.\par
+So we have a sequence of n random variables\par
+that are independent,\par
+and they're distributed essentially\par
+according to any distribution with some mean mu\par
+and standard deviation sigma\par
+that we don't need to know.\par
+But whatever they are,\par
+if we define the sample mean\par
+to be the sum of the Xis,\par
+and we normalize by n,\par
+this is the sample mean.\par
+And we can then define Zn to be\par
+we take the n samples that we have\par
+and we kind of normalize it a little bit.\par
+So how do we normalize?\par
+To do two things.\par
+First of all,\par
+we subtract n mu,\par
+so we are subtracting the expected value of the sum,\par
+which is n times mu.\par
+So this difference will have zero mean.\par
+And then it will still have some,\par
+it will still have a standard deviation.\par
+We want to normalize standard deviation,\par
+and to do that,\par
+we normalize by sigma times square root of n.\par
+We explained it before and we'll explain it again,\par
+but that's what we did,\par
+just to remind ourselves.\par
+And once we do that,\par
+then the central limit theorem tell us\par
+that for sufficiently large n,\par
+when there's sufficiently large n,\par
+and we say typically,\par
+people would say, like, maybe 30,\par
+then, or more.\par
+Then Zn, this normalized average,\par
+is distributed roughly normal with mean zero,\par
+because we subtracted the mean here,\par
+and standard deviation one,\par
+because we normalized Zn\par
+by sigma times the square root of n.\par
+Again, we'll see this coming, okay?\par
+And so in other words,\par
+Zn is distributed roughly\par
+like a standard normal distribution.\par
+So it's roughly,\par
+and this is a standard normal distribution, okay?\par
+Right, okay, so with that,\par
+what we want to do first is do something fairly simple,\par
+which is try to predict the standard normal random variable.\par
+So we have a standard normal variable,\par
+namely Z distributed normal\par
+with mean zero and sigma one or variance one,\par
+which you can write also as normal (0,1) like that.\par
+And we want to just do something very simple.\par
+We want to predict the value of Z, okay?\par
+So if someone tells you I have a random variable.\par
+It is normal, mean zero,\par
+standard deviation one.\par
+I'm going to take,\par
+experiment, take one value.\par
+What is this value going to be?\par
+What is the value of Z going to be?\par
+So if you want to give an estimate for just one value,\par
+if you want to choose, like, a single value,\par
+then you most likely will say that Z is zero.\par
+Why?\par
+Because if you look at this distribution,\par
+the highest probability is for the value zero.\par
+So that's one reason,\par
+that zero has the highest probability.\par
+Also this is an unbiased estimate, right?\par
+Because if we look at the value of Z,\par
+then the expected value is zero,\par
+so this is unbiased.\par
+And if you want to minimize the means for error,\par
+it's also the right thing to do, okay?\par
+But this is pretty much like estimating\par
+the mean of a distribution,\par
+which in this case we estimate to zero,\par
+and consequently suffers from the same drawbacks, okay?\par
+So on the one hand, it's very precise,\par
+just like before.\par
+We said that zero, that's really good.\par
+On the other hand, it's certainly wrong, okay?\par
+We'll never be correct\par
+because the probability that Z will get a value of zero\par
+is exactly zero, okay?\par
+So this will never happen, okay?\par
+So what we want to do is instead of saying\par
+that Z is going to be zero,\par
+we want to say that Z is going to be in some range, okay?\par
+So we want to give an interval\par
+and say that, for example,\par
+between minus a and a,\par
+and say that Z is going to be in this interval\par
+from minus a to a.\par
+And now we know that the probability\par
+that Z is between minus a and a,\par
+if a is a positive number,\par
+then this is going to be bigger than zero,\par
+so we have some confidence that,\par
+when we give this range from minus a to a,\par
+then we'll be right.\par
+So in other words,\par
+we're not, for example,\par
+trying to say that the temperature tomorrow\par
+will be exactly, you know,\par
+70 degrees,\par
+but we're going to say, well,\par
+maybe it's going to be between 65 and 75.\par
+And then we have some probability of being correct, okay?\par
+So the question is exactly what is this probability, okay?\par
+So what is the probability that Z falls\par
+between minus a and a, okay?\par
+So to do that,\par
+we just do a little bit of calculation\par
+which is going to hopefully serve as a review\par
+for estimating probability of Gaussian random variables.\par
+So we're going to do that.\par
+Like I said, mostly it's going to be a review\par
+but solving will be easy.\par
+All right, so we want to calculate\par
+the probability of an interval,\par
+and our random variable Z is distributed normal zero, one.\par
+It's a standard normal random variable, okay?\par
+So we have some value,\par
+so we have, let's say we have some value a.\par
+This quantity here shaded in blue is,\par
+recall it is denoted by phi of a,\par
+capital phi of a.\par
+It's the probability that Z\par
+is less than or equal to a, okay?\par
+So what is the value of phi of a?\par
+Phi of a is also the cumulative distribution function,\par
+the CDF of this random variable evaluated at a.\par
+And we can just calculate it.\par
+It's just the interval from minus infinity to a\par
+of the probability distribution function here.\par
+So it's the interval from minus infinity to a\par
+of e to the minus t squared over two\par
+divided by the square root of two pi, okay?\par
+And so this is this value,\par
+and, but remember we're trying to estimate the probability\par
+or to calculate the probability of an interval, okay?\par
+So if you want to calculate the probability\par
+that Z is between minus a and a,\par
+this here is the probability\par
+that Z is less than of equal to a,\par
+but we want the probability Z is between minus a and a.\par
+Well, we can write it,\par
+so this is what we are trying,\par
+what we are looking for.\par
+We can write it as the difference between two values, right?\par
+This one,\par
+the probability that Z is less than or equal to z,\par
+minus the probability that Z is less than\par
+or equal to minus a.\par
+Minus this blue right here, okay?\par
+So it's this area minus this one, okay?\par
+So let's just write it out.\par
+So it's phi of a.\par
+That's this value here.\par
+Minus phi of minus a.\par
+That's the probability that Z is less than minus a, okay?\par
+So this is what we're trying to evaluate, okay?\par
+Now I'm going to appeal to symmetry,\par
+and we said that by symmetry,\par
+well, this we just keep as it is,\par
+but this one here is the same,\par
+this area here on the left\par
+is the same as the area to the right by symmetry,\par
+because the Gaussian distribution is symmetric.\par
+So instead of looking at the probability\par
+that Z is less than or equal to minus a,\par
+we're going to look at the probability\par
+that Z is bigger than or equal to a, okay?\par
+And so now we can write what it is,\par
+so what it is is phi of a.\par
+That stays the same.\par
+And, but we're subtracting this probability here\par
+that Z is bigger than or equal to a,\par
+which is one minus the probability that Z is to the left.\par
+One minus this.\par
+So it's one minus phi of a, right?\par
+This is this right here, okay?\par
+So what we have here is baby algebra,\par
+so this gives us just two phi a minus one.\par
+Two phi of a minus one.\par
+So we see that the probability,\par
+so phi of a is just the cumulative distribution function\par
+of Z as evaluated to a, okay?\par
+And we see that the probability\par
+that we are within this interval\par
+is just twice phi of a minus one.\par
+And that's what we just showed here.\par
+And we have seen this before, as well,\par
+so let's just remember this,\par
+two phi of a minus one, okay?\par
+So now if we want to calculate this probability,\par
+the only thing we need to do is evaluate phi of a, okay?\par
+And how do we do it?\par
+Again, a review.\par
+So how do you calculate phi of a?\par
+So again, there's no known formula,\par
+so what we do is we use a couple things.\par
+One of them is we use what's called the Z table\par
+or the standard normal table,\par
+which is shown here,\par
+and the table entry shows just phi of a,\par
+the probability that we are less than or equal to a,\par
+what we call here Z.\par
+So you can think of a as Z.\par
+We're going to use both, in fact, okay?\par
+So, for example,\par
+if you try to evaluate phi of one,\par
+so let's say this value here is zero,\par
+and, right here in the center,\par
+and you try to calculate the probability\par
+that Z is less than or equal to one,\par
+then you just look for it in the table.\par
+So this is 1.0,\par
+and then we'll look at 1.00 here,\par
+because we're looking at just one.\par
+If you want to look at 1.2,\par
+then we'll look at 1.0,\par
+but instead of this column,\par
+we'll look here,\par
+and this is 1.2, right?\par
+Sorry, this is 1.02.\par
+If we wanted to do 1.2, I apologize, it's here.\par
+And if we want to do 1.22,\par
+that will be this value here, okay?\par
+All right.\par
+So what we see here is that phi of one is 0.8413, okay?\par
+That's what we got here.\par
+Let's also remember this number for, like,\par
+(mumbles) okay?\par
+And that's one way of doing it.\par
+And another way to do it, of course,\par
+is using a program,\par
+and what we're going to do\par
+is we're going to use Python,\par
+and we'll just see if Python gives us\par
+the same number of 0.8413, okay?\par
+So in Python,\par
+if you want to calculate phi of x,\par
+then what you do is in the scipy.stats module,\par
+you're going to import norm\par
+and use the norm.cdf function.\par
+CDF, of course,\par
+is the cumulative distribution function, okay?\par
+So if you want to calculate, for example,\par
+phi of one,\par
+like we did before,\par
+then what you do is you import from scipy.stats,\par
+you import norm,\par
+and then you just call norm.cdf of one,\par
+and it will give you not just 0.8413,\par
+but actually several more digits, okay?\par
+And if you want to calculate phi of two\par
+after you've already imported norm,\par
+then you just write norm.cdf of two,\par
+and it gives you 0.977.\par
+You see it will increase.\par
+And if you do three,\par
+then you'll get this number,\par
+0.998, okay?\par
+And so,\par
+and you can get, of course, any number you want.\par
+All right, so now we've seen how to calculate\par
+the probability of an interval\par
+so that it's two phi of a minus one,\par
+and then we see how to calculate phi of a\par
+using norm.cdf from here, okay?\par
+So this will bring us back to the 68 - 95 - 99.7 rule.\par
+So if we want to calculate the probability\par
+that Z is between minus a and a,\par
+that's, as we said,\par
+is going to be two phi of a minus one.\par
+We saw that, okay?\par
+And now we're going to evaluate it for one,\par
+which is one standard deviation, two standard deviation,\par
+and three standard deviation.\par
+So this is this probability here, okay?\par
+And if you calculated for a which is equal to one,\par
+then you get two times 08.413 that we had before,\par
+minus one.\par
+That gives you 68.2%.\par
+That's this 68 here.\par
+If you evaluated for two standard,\par
+for a equals to two,\par
+which is two standard deviation,\par
+it's two times 0.9772 minus one,\par
+which is 0.95 here,\par
+which is the 95%.\par
+In fact, it's a little more, as we observe,\par
+but roughly speaking it's 95%.\par
+And for three,\par
+a equals to three,\par
+or being within three standard deviations,\par
+it comes out to 0.9974.\par
+Okay, and what that says, again,\par
+is that the probability that we're going to be\par
+within one standard deviation here is 68%.\par
+The probability that we'll be\par
+within two standard deviations is 95%,\par
+and the probability that we'll be\par
+within three standard deviations is 99.7%.\par
+Very high.\par
+Okay? All right.\par
+So what we did so far is someone gave us the interval,\par
+minus a to a,\par
+and we then found the probability that we'll fall inside.\par
+And what we're going to do now is\par
+I want to play a little Jeopardy.\par
+So instead of someone giving us the interval\par
+and we coming up with the probability,\par
+someone's gonna give us the probability.\par
+So they'll say I want you to be accurate\par
+with that probability.\par
+And we'll need to come up with the interval.\par
+So they'll say I want you to be accurate\par
+with probability 95%,\par
+and we'll need to come up with an interval\par
+that's sufficiently large that probability 95%,\par
+we're going to be inside that interval.\par
+All right, so,\par
+and the reason is because typically what we're given\par
+is we're given the desired probability,\par
+as we just said, of p,\par
+and we want to find some value a\par
+such that if probability,\par
+this probability that we're given,\par
+we're going to be,\par
+our Z is going to be inside this, in this a.\par
+All right.\par
+Okay, cool.\par
+So in other words, again,\par
+we're given p\par
+and we're looking for the a\par
+such that this area here is going to be equal to,\par
+this is going to be equal to p.\par
+All right.\par
+So what we saw was that p was,\par
+which is the probability that Z is between minus a and a,\par
+we saw that that was twice phi of a minus one.\par
+We've seen this just a little while ago.\par
+And so, and what would,\par
+that would tell us is that if you want to find,\par
+so we can express phi of a in terms of p.\par
+That will give us that phi of a is one plus p over two,\par
+all right?\par
+So one moves to the left,\par
+so it's p plus one,\par
+and then divide by two,\par
+so it's one plus p over two, okay?\par
+And I just want to show you,\par
+just because it's a little crucial for us,\par
+I just wanted to show you this in another way.\par
+So we're looking for a\par
+such that the area between minus a and a\par
+is equal to p, okay?\par
+So if that's the case,\par
+then the area outside this,\par
+the area here in blue is one minus p, okay?\par
+And then by symmetry,\par
+this area here is one minus p over two, okay?\par
+And we can write,\par
+we can write this area here\par
+as one minus the area to the left.\par
+So this area here is one minus this area, okay?\par
+And therefore what we have here on the left\par
+is one minus p over two, right?\par
+Because this area here is one minus p over two,\par
+so this area here is one minus one minus p over two, okay?\par
+But a little bit of,\par
+a tiny bit of algebra says that one minus one minus p\par
+over two is actually equal to one plus p over two, right?\par
+'Cause we have half,\par
+and then this becomes plus p over two, okay?\par
+And, but this area here on the left is just phi of a.\par
+So this says that phi of a again\par
+is one plus p over two,\par
+just the same as here, okay?\par
+So either way from before,\par
+and then this algebra or here,\par
+you see that phi of a is one plus p over two,\par
+and what we need, of course,\par
+is someone who's going to give us p,\par
+and we want to find the interval,\par
+so someone's given us p and want to find a.\par
+Playing Jeopardy,\par
+we're looking at the inverse function,\par
+so a is going to be phi inverse\par
+of one plus p over two, okay?\par
+So this is basic, okay?\par
+And so now what we want to show you\par
+is how to calculate,\par
+how do we calculate phi inverse, okay?\par
+So again, you can look at the table,\par
+you can look on the right,\par
+find the value of a that will give you the p that you want,\par
+or the phi of a that you want,\par
+or we can use Python.\par
+So in Python,\par
+we want to implement phi inverse of p.\par
+We use it using the function norm,\par
+or the method norm.ppf of p,\par
+and PPF stands for percent point function.\par
+Because we'll be given the value of p,\par
+the area to the left or the percent to the left,\par
+and we want to find the point,\par
+we want to find the point that will give you this value.\par
+So we're given the area to the left, and,\par
+which is p,\par
+and you want to find the value a\par
+such that the area to the left of it,\par
+to the left of this point is this percentage, okay?\par
+So it converts the percentile,\par
+the fraction of the distribution that's on the left,\par
+to the point which has this fraction on its left, all right?\par
+Okay?\par
+So, for example,\par
+if you wanted to find phi inverse of 0.95,\par
+then again, you need to first import scipy,\par
+from scipy.stats,\par
+we need to import norm,\par
+and then we write norm.ppf of 0.95,\par
+and that will give us this value 1.644.\par
+And if we want to find phi inverse of 0.975,\par
+then we again just write norm.ppf of 0.975,\par
+and that will tell us that we need to go to 1.96.\par
+So namely we need to go two standard deviations to the right\par
+of the mean to get this,\par
+to get 0.975 of the volume to our left.\par
+And the inverse of 0.99 will give us this value.\par
+All right?\par
+So what the common values of confidence\par
+that we're interested will be,\par
+the most common one would be 95%,\par
+but we're going to show later 90 and 98%,\par
+but the most common is 95%.\par
+So we're looking for the value,\par
+so we're looking for the value a\par
+such that the probability that will be\par
+between minus a and a,\par
+that the standard Z,\par
+the standard normal random variable\par
+will be between minus a and a,\par
+will be 95%.\par
+So as, as we saw,\par
+is phi inverse of one plus p over two,\par
+where p is .95, okay?\par
+So we're looking at phi inverse of one plus p over two,\par
+in this case is phi inverse of 0.975, right?\par
+Because 95,\par
+we take the average of .95 and one,\par
+take the average,\par
+this is .975.\par
+We're looking at phi inverse of that.\par
+And we saw in the previous slide\par
+that when you take the inverse of 0.975\par
+you get 1.9599, okay?\par
+Which is roughly 1.96, okay?\par
+So that tells us that the probability\par
+that Z will be between minus 1.96 and plus 1.96\par
+is roughly 0.95, okay?\par
+So now this should look familiar\par
+because this is part of the 68 - 95 - 99.7 rule,\par
+because what this says is the probability\par
+that Z is between minus 1.96 and plus 1.96 is 0.95.\par
+And as we saw before,\par
+we said that the probability that Z is\par
+within two standard deviations from its mean was 95%.\par
+In fact, it was,\par
+we said it was a little more.\par
+And so it,\par
+so what this shows us,\par
+if you want 95%,\par
+it actually will be 1.96 standard deviation from the mean,\par
+not two standard deviations.\par
+This is the 95 of the,\par
+from this rule, okay?\par
+So, and so this, again,\par
+is a more precise version of what we said before,\par
+which would be the probability that Z\par
+is two standard deviations from the mean is 95%.\par
+In fact, the probability that Z\par
+is at most 1.96 standard deviation is roughly 9.5.\par
+Okay, so again we can do it not just for 95%.\par
+We can calculate it for any value.\par
+So if p,\par
+we start with p,\par
+the probability that we're interested in,\par
+that we want to be,\par
+the confidence that we want\par
+that our value will be within this range.\par
+So this is p.\par
+When we first calculate one plus p over two,\par
+and then we invert one plus p over two,\par
+and that will give us a, okay?\par
+So that we just saw is that p is 95%,\par
+then one plus p over two is .975,\par
+and then the number of standard deviations we need to,\par
+of slack we need to give ourselves\par
+is 1.96 standard deviations.\par
+If we want to do 90%,\par
+then one plus p over two is 95.95,\par
+and then we invert using, again, norm.ppf,\par
+and we see that we need to be\par
+within 1.645 standard deviations.\par
+And if you want to do 98%,\par
+be 98 confident,\par
+98% confident,\par
+then one plus p over two is 0.99,\par
+and then phi inverse of 0.99 is 2.056,\par
+which means that we need to choose a\par
+to be 20.56.\par
+So as you can see,\par
+if we want to be more confident\par
+that we're inside the interval,\par
+we need to go further away.\par
+So we need to go,\par
+if we want to be 90% sure,\par
+we just need to be 1.6 standard deviations away,\par
+95% sure we want to go 1.96 standard deviations away,\par
+98% sure we need to go a little further,\par
+two standard deviations away, okay?\par
+So, okay, so this was,\par
+what we did here was for standard normal distributions,\par
+and general normal distributions are not very different.\par
+So if X is distributed normal\par
+with a mean mu and variance sigma squared,\par
+which you can also again write as normal mu\par
+and sigma squared like this with parentheses,\par
+then we know that if we define Z\par
+to be X minus mu over sigma,\par
+so X minus mu makes sure that the mean is zero,\par
+and then divided by sigma makes sure\par
+that the standard deviation is one,\par
+so this is going to be normal zero one,\par
+a standard normal distribution.\par
+So the probability that X is between mu\par
+plus some value a times sigma,\par
+so X is distributed with mu and sigma,\par
+mean and variance,\par
+so the probability that X is between\par
+mu minus some value a times sigma\par
+and mu plus this value a times sigma,\par
+we can subtract mu first,\par
+so it's the probability that X minus mu\par
+is between a sigma and minus a sigma,\par
+and then we can divide by sigma,\par
+so it's the probability that X minus mu over sigma\par
+is between minus a and a.\par
+And X minus mu over sigma,\par
+as we said here, is Z.\par
+So this is the probability that Z\par
+is between minus a and a, okay?\par
+And if you don't like this,\par
+it's not much math,\par
+but if you don't, still don't like it,\par
+it's very easy to remember,\par
+because what we have here is the probability\par
+that X is between,\par
+is at most a standard deviation from its mean.\par
+So X is between mu minus a sigma\par
+and at most mu plus a sigma.\par
+So X is at most a standard deviations from its mean mu.\par
+And so this is what we have here.\par
+And what we have here is the probability that Z\par
+is within a standard deviations from its mean.\par
+And those two are the same, right?\par
+Because we have Gaussian random variables\par
+and what determines is how many standard deviations\par
+you are away from the mean, okay?\par
+So in pictures, this will look,\par
+we have X and Z,\par
+they are both normal distributions,\par
+and this is Z.\par
+Its mean is zero.\par
+And we ask,\par
+and the standard deviation is one.\par
+So we're asking to be a standard deviation\par
+away from the mean.\par
+This is this value here.\par
+And on the other hand,\par
+if we have X,\par
+and X has mean mu and a standard deviation sigma,\par
+so it will look like this.\par
+And this is X.\par
+So now the mean is mu,\par
+and now we're asking what's the probability\par
+that we're within a standard deviation from its mean,\par
+and these two areas should be the same.\par
+Maybe they don't quite look this way.\par
+Maybe this should be a little more flat,\par
+a little more shorter.\par
+But these two areas,\par
+if we drew it,\par
+if we scaled this,\par
+if we kind of, like, squished it enough,\par
+they would then be the same, all right?\par
+Okay, so let's do an example.\par
+So let's say that X is distributed normal with mean one\par
+and variance four.\par
+Then let's say that we are looking for a\par
+such that the probability that will be between,\par
+that X will be...\par
+That X will be within a standard deviations from its mean\par
+is going to be 0.95, okay?\par
+So what we have here is mu is one\par
+and sigma is two, okay?\par
+Okay, so we know that if we wanted Z,\par
+if we looked at a random,\par
+compared to normal, standard normal random variable is Z,\par
+then the probability that it will be 1.96 away from zero,\par
+1.96 standard deviations away from its mean,\par
+is 0.95, which is what we want, okay?\par
+And as we saw in the previous slide,\par
+that is the probability\par
+that X is between mu minus 1.96 sigma\par
+and at most 1.96 sigma.\par
+Why?\par
+Again, because this is the probability that Z,\par
+I think we have that region,\par
+this is the probability that Z is 1.96 standard deviations\par
+away from its mean,\par
+and this is the same.\par
+This is the probability that X\par
+is within 1.96 standard deviations away from the mean mu\par
+plus or minus 1.96 sigma.\par
+So these probabilities are the same, okay?\par
+So all we need to do now\par
+is we just need to plug in these values for mu,\par
+that we have for mu and sigma.\par
+And mu is one and sigma is two,\par
+so we get that this is the probability that X\par
+is between mu here is one,\par
+one minus two times 1.96,\par
+which is minus 2.92,\par
+and at most mu plus 1.96 sigma,\par
+which is at most,\par
+mu is one and sigma is two,\par
+so one plus,\par
+you can think of it roughly as one plus four,\par
+which is five,\par
+but this is the precise value, okay?\par
+So what we see is that if someone gives us p which is .95,\par
+then we can say that with probability 95%,\par
+X will be between minus 2.92 and 4.92.\par
+And this is the idea that we want to implement.\par
+Somebody's going to give us some confidence\par
+and we'll find some range\par
+such that what we're looking for\par
+is going to be in this range with that probability, okay?\par
+All right.\par
+So this brings us back to confidence intervals.\par
+So we can apply confidence intervals to any parameters.\par
+Any parameter.\par
+But the simplest and by far the most common are\par
+either the mean mu,\par
+trying to estimate the mean of a standard,\par
+of a random variable,\par
+or what's called a proportion p,\par
+which is essentially the same.\par
+You have, for example,\par
+a coin, a Bernoulli coin,\par
+probability p of being heads.\par
+We're trying to estimate what is p.\par
+Or we have some property,\par
+like we were looking at the percentage\par
+of people who are going to,\par
+that property is a person maybe votes for a certain party,\par
+and we're looking for the proportion\par
+of the people who vote for this party,\par
+and that's the same as p,\par
+which is really the same as the mean,\par
+because you're looking,\par
+if you recall,\par
+the mean of a Bernoulli random variable is p.\par
+So these two are the same,\par
+just different mean,\par
+this is more specific.\par
+We're looking for a proportion of the population\par
+that has probability p with the special case of mu.\par
+So these are by far the most popular parameters\par
+for which people Look for confidence interval,\par
+and that's what we're going to do in this presentation.\par
+Okay, so basically we'll be given a sample\par
+consisting of n values, X1 up to Xn,\par
+that we saw in observations,\par
+and we want to find an interval that will contain mu\par
+such that with probability,\par
+such that with a given probability,\par
+we're going,\par
+mu is going to be within this interval, okay?\par
+And so we want to find,\par
+just because I didn't write one,\par
+let's say we want to find an interval\par
+that with some given probability will contain mu.\par
+Will contain the real mean, okay?\par
+So first we're going to look at what happens\par
+when sigma, the standard deviation, is known,\par
+and then in the next lecture,\par
+End of transcript. Skip to the start.\par
+Part 2\par
+}
+ 

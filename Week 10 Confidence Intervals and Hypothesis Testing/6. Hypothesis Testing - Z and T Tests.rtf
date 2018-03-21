@@ -1,0 +1,857 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - [Lecturer] Hello, and welcome back.\par
+In the last lecture we discussed perhaps the original\par
+hypothesis test, and what we would like to do now\par
+is talk about some more modern ones.\par
+And specifically we'll talk about what happens\par
+when you have a normal or near-normal distribution\par
+and what happens when you know the standard deviation,\par
+well we're going to use what's called a Z-test,\par
+and when you do not know the standard deviation\par
+and then we'll use a T-test.\par
+And we'll give a couple of examples.\par
+So, first let's motivate what we're going to do.\par
+So we have been talking mostly about tests for the mean,\par
+and what we have done so far is\par
+we've looked at distributions that are binomial,\par
+or near binomial, and where we could calculate\par
+the probability under the null hypothesis exactly.\par
+And what we want to do now is look at distributions\par
+that are either normal or close to normal,\par
+and where we can calculate the distribution\par
+under the null hypothesis only roughly approximate.\par
+And examples where this would come up\par
+is when we take the sample mean, so if we have\par
+a few samples and they're distributed roughly normal,\par
+we know that the sample mean will be roughly normal.\par
+Or, if we take many, where many is often considered to be\par
+at least 30 samples,\par
+then under any distribution the sample mean\par
+will be distributed roughly normal.\par
+And since we're talking about normal distributions\par
+then it makes sense to review the central limit theorem.\par
+And so you remember that if you have N samples,\par
+and they're independent, and distributed\par
+according to any fixed distribution,\par
+with mean is mu and standard deviation is sigma,\par
+then we can define the sample mean,\par
+which is just the average of the N samples.\par
+And then, the expectation of this sample mean\par
+is just the original mu, and the reason is\par
+because when you take the sum, the means will add,\par
+so we'll get N times mu, and when you normalize by N\par
+then N times mu you'll divide it by N\par
+and you'll just get the original mean,\par
+which makes sense that, the mean of the sample\par
+will be the mean of each of those values\par
+that you had adding.\par
+And if you look at variance of the sample mean,\par
+then, since the samples are independent,\par
+then the variances will add,\par
+so the variance of the sum will be N times sigma squared,\par
+and then we normalize by N,\par
+so the variance will go by factor of N square.\par
+So the variance of the mean is sigma square over N,\par
+which makes sense that the variance will decrease\par
+because you are taking averages,\par
+and therefore the standard deviation will be\par
+the square root of that,\par
+the original standard deviation but goes down\par
+like one over square root of N.\par
+And the central limit theorem tells us\par
+that if you take N large, and as we have been saying,\par
+typically at least 30 is considered large.\par
+Then, everything becomes more or less normal.\par
+And specifically, the sample mean will be distributed\par
+roughly normal with whatever its mean is\par
+and whatever its variance is.\par
+And we actually know what the mean is,\par
+we just calculated it here.\par
+So it'll be roughly normal,\par
+with mean mu, because that's a mean of the average\par
+of the sample mean.\par
+And with variance, which we calculated here again,\par
+which is sigma squared over N.\par
+So that's what the central limit theorem told us,\par
+and what we want to do is\par
+we make a very small transformation for X,\par
+because we want to make it always behave roughly\par
+the same way, so we're going to convert it\par
+to a random variable that instead of having mean mu\par
+and variance sigma squared over N,\par
+we're going to subtract first the mean mu,\par
+so if we take X, the sample mean X bar minus mu,\par
+and then we distribute the normal with mean zero.\par
+And sigma squared over N.\par
+And if we divide by the standard deviation,\par
+which is sigma over the square root of N,\par
+then we'll get that this quantity of X bar,\par
+the sample mean minus mu divided by sigma\par
+over square root of N is going to be distributed\par
+roughly normal with mean zero, and variance one.\par
+And you recall that we call a random variable like that, Z,\par
+which will give rise to the name Z test,\par
+as we'll see in a second.\par
+And you notice that here we're going to divide\par
+by sigma over the square root of N,\par
+and that's, from that we'll need to assume\par
+that we know sigma.\par
+Okay, so, so now what would be a typical application?\par
+So we have an unknown distribution or a population,\par
+except that for some reason we know sigma\par
+and we'll relax this later, this is a very strong assumption\par
+that we know the standard deviation,\par
+we'll relax it later on.\par
+And then, the null hypothesis will say that the mean\par
+of this distribution is mu, and mu is given,\par
+say I'm giving you the null hypothesis\par
+that the mean is five for example.\par
+And the alternative hypothesis, we'll say for example,\par
+the mean is bigger than this number that we're given,\par
+bigger than five.\par
+An we'll look at generalization of that later on.\par
+So the test that we'll perform\par
+is we'll take N independent samples from this distribution\par
+on the mean, X1 up to XN,\par
+and we define the sample means, we get the four is just\par
+the average of the N samples.\par
+And we know that for N which is even moderately large,\par
+maybe bigger or equal to 30,\par
+then the null hypothesis would say that,\par
+if we define Z to be the average minus mu\par
+over sigma over square root of N,\par
+and again sigma is known because we assume it's known,\par
+and mu is the value that we are suspecting is the mean,\par
+then if you define this it will be distributed\par
+roughly normal with mean zero and variance one.\par
+And, in particular the mean is zero.\par
+And the alternative hypothesis would say,\par
+since we subtracted mu but the original mu\par
+is bigger than mu, the distribution is still normal,\par
+because we're just subtracting a number\par
+that doesn't bring us to zero.\par
+But, the mean is bigger than zero.\par
+So this is the alternative we want to test against,\par
+under the null hypothesis we have\par
+a normal(0,1) distribution with mean zero,\par
+and under the alternative hypothesis we have this quantity\par
+that we'll define will be again normal,\par
+but we're not going to use that.\par
+But with mean which is strictly positive.\par
+And because we're going to check on this Z\par
+that we're going to call the test that we have a Z-test.\par
+So what is this Z test?\par
+So the null hypothesis says that we have mean,\par
+that we have random variable Z, whose mean is mu,\par
+that's our null hypothesis, and its distribution\par
+is roughly normal zero one,\par
+and the alternative hypothesis will say that\par
+the mean of this random variable is positive.\par
+And we're going to decide on the significance level\par
+which we call alpha, it's what we had before,\par
+typically 5% or 1%, and what alpha means\par
+is that we want to ensure that if the null hypothesis\par
+is correct, if the distribution is normal zero one,\par
+then the probability that we accept the alternative\par
+is going to be at most alpha, at most 5% or at most 1%,\par
+which recall makes the conservatives happy.\par
+So, and this is the probability of type one error.\par
+So, just like before, we can define the critical value Z,\par
+alpha, which is the value for which the probability\par
+that Z is bigger than this critical value,\par
+its probability is equal to alpha.\par
+So let's visualize it.\par
+So we have here a normal distribution,\par
+this is under the null hypothesis.\par
+So, I should have put it in here,\par
+this is under the null hypothesis,\par
+which is normal zero one, and we define the alpha here\par
+such that the probability, the tail probability,\par
+probability that Z is bigger than or equal to the alpha,\par
+this probability is equal to alpha.\par
+And, the test that we'll perform is,\par
+we'll check if Z, the value that we get,\par
+is bigger than this critical value that we calculate,\par
+Z alpha, then we'll accept the alternative hypothesis,\par
+so in this region we accept the alternative hypothesis,\par
+and if Z is less than this critical value,\par
+then we retain the null hypothesis.\par
+So here, we're going to retain the null hypothesis.\par
+And what this ensures is that under the null hypothesis,\par
+if this is indeed the distribution,\par
+then the probability that\par
+we accept the alternative hypothesis\par
+is the probability that, well, this is our distribution,\par
+and the probability that we're here in this red region\par
+is the probability that Z that we get\par
+is bigger than or equal to the alpha.\par
+But we chose Z alpha to be such that the probability\par
+that we are in this region is going to be exactly alpha.\par
+So this probability is alpha.\par
+So this will guarantee what we wanted,\par
+that the probability, if the null hypothesis is in effect,\par
+then the probability that we declare alternative hypothesis\par
+is going to be at most alpha.\par
+So this is why we define the critical value this way.\par
+Now, what we can see is, instead of calculating the alpha,\par
+we can also just use the p value of Z,\par
+which is the probability\par
+that Z is bigger than or equal to Z.\par
+So this is just our definition of the p value of Z,\par
+probability that Z, that under the null hypothesis,\par
+you get Z which is going to be equal,\par
+normally distributed, the probability\par
+that Z is bigger than or equal to z.\par
+And, if this p value,\par
+if this probability is less than alpha,\par
+what does it mean?\par
+It means that we're here, somewhere to the right of Z alpha,\par
+because the probability that Z's bigger than or equal to\par
+this value is less than or equal to alpha.\par
+So it's less than this, someplace here.\par
+So that means that Z is bigger than or equal to Z alpha,\par
+and we're going to accept the alternative hypothesis.\par
+Conversely, if we calculate the p value,\par
+the probability that under a normal distribution\par
+we'll get a value which is bigger than Z,\par
+then if, conversely this is bigger than,\par
+if we get is bigger than whatever this value that we set,\par
+5% or 1%, that means that we have here, someplace here,\par
+that such the probability that a normal distribution\par
+is bigger than us, is going to be bigger than alpha,\par
+so bigger than that so it must be here.\par
+That means that Z is less than Z alpha,\par
+and that means we're here, and so we're going\par
+to retain the null hypothesis.\par
+So, retain the null hypothesis.\par
+And the nice thing about it is that we can calculate\par
+the p value very easily, because the probability that,\par
+a normal distribution, standard normal distribution\par
+will be bigger than or equal to Z, is just,\par
+we need the probability that Z is bigger than or equal to Z,\par
+is just one minus phi of z,\par
+and this is just using a Z table or just (mumbles)\par
+to calculate this.\par
+So this is the probability that\par
+we're bigger than some value,\par
+which is just one minus the probability,\par
+we're less than some value, which is one minus phi of z.\par
+Good, okay.\par
+So, now what we discuss now is what's called\par
+a one tailed test.\par
+And we're going to generalize this to a couple\par
+of other tests.\par
+So, we're going to look at the null hypothesis,\par
+the alternative hypothesis, see what it is,\par
+and define the test, and look at the p values.\par
+Our null hypothesis was that the mean is mu,\par
+and the alternative hypothesis was that\par
+the mean was bigger than mu.\par
+And, here the alternative hypothesis is one sided,\par
+because we knew we're just to the right of mu.\par
+And therefore the test that we'll use is what's called\par
+one-tailed, and that's because we're just checking\par
+if for here we have one tail here to the right.\par
+And the p value that we calculate is the probability\par
+that if you take a standard normal random variable,\par
+it's going to be bigger than or equal to the value\par
+that we observed, Z.\par
+Which is this probability.\par
+Now, we could also consider again, null hypothesis is mu,\par
+but now we can considered the case\par
+where the alternative hypothesis is,\par
+that the mean is less than mu.\par
+Once again, this is a one sided alternative hypothesis,\par
+and therefore the test that we'll have\par
+is also going to be one-tailed.\par
+But now, we're just going to, the p value's\par
+just going to be the probability that we're going to be\par
+to the left of some point.\par
+It's going to be the probability that\par
+Z is less than or equal to, the standard random variable\par
+is less than what we observe.\par
+And, finally we can consider again,\par
+the same null hypothesis, that the mean is mu,\par
+but now we consider that the alternative is just\par
+that the mean is not equal to mu.\par
+So this is a two sided alternative hypothesis,\par
+and therefore we use a two-tailed test,\par
+and we're testing is if, we're testing the probability\par
+that we're either to the left or to the right\par
+of where we are.\par
+So the p value of Z is the probability\par
+that if you take a standard normal random variable,\par
+its absolute value is going to be bigger than\par
+or equal to z, and our observed value is here or here,\par
+and we're looking at the probability that,\par
+our normal random variable will be either\par
+to the right of this value or to the left of the negative.\par
+So this is what we are looking at.\par
+And I also want to mention that this same,\par
+exact same wools will work if the null hypothesis\par
+is not exact mu, but that were less than or equal to mu.\par
+So here, instead of assuming that the mean is mu,\par
+we're assuming that the mean is less than or equal to mu.\par
+And the alternative is that it's strictly bigger than mu,\par
+and we can use exactly the test.\par
+So, let's do a few examples.\par
+But before we do them, just a small disclaimer.\par
+So we know that everything lately has been fake,\par
+fake news, fake news, and so on, a lot of fake news.\par
+And so we just want to say as far as our data is concerned,\par
+it's for demonstration purposes only.\par
+So don't just quite go by it,\par
+we just want to demonstrate the use of\par
+some hypothesis tests.\par
+So first let's test the amount of cocoa in chocolate.\par
+So Trader Joe's sells a dark chocolate bar,\par
+which they say contains 85 gram cocoa.\par
+Here, and in fact I'm sorry it's not cocoa,\par
+what they call cacao.\par
+So while this is not, 85% is not quite as much\par
+as the Lindt Excellence bar that has 99% cacao,\par
+it's still a lot.\par
+So, 85% they say is cacao.\par
+And so maybe you think, oh maybe it's a little less.\par
+So the null hypothesis is,\par
+we take them by their word, is that the mean is 85 grams.\par
+And the alternative hypothesis is going to be\par
+that the mean is strictly less than 85 grams.\par
+And we would like to test these hypothesis with 85,\par
+I'm sorry, with 5% significance level.\par
+So the null hypothesis says that the mean,\par
+weight of cacao in a bar is 85 gram\par
+and the alternative is that the mean is actually\par
+strictly less than that.\par
+And we want to test this with 5% significance level.\par
+So what is the test?\par
+So, the sample size is going to be, we're gonna take 30\par
+chocolate bars, so we buy 30 of those.\par
+And we measure the amount of cacao in each one.\par
+So, well there's not exactly chocolate bars, but truffles,\par
+but the idea is, you get the idea.\par
+And so we need to take them,\par
+and measure the amount of cacao in each,\par
+and it is a tough job, getting 30 chocolate bars,\par
+and so on, but someone has to do it.\par
+And we're going to assume a fact that,\par
+the standard deviation is of the amount of cacao\par
+in each bar is half a gram.\par
+And now this is really weird, like for how do we know it.\par
+Maybe we know what the machine is being used to\par
+produce chocolate, or maybe which is a little more likely\par
+we just want a simple test.\par
+So we're going to assume this now,\par
+and later on we're going to relax this assumptions.\par
+Now because the number, the number of samples that we take\par
+is at least 30, then we can assume,\par
+and this is the central limit theorem kicks in,\par
+and the average, it is going to be distributed\par
+with normal mu and standard deviation of sigma\par
+over N squared, this is our sigma.\par
+And because sigma is known, and because we have,\par
+a distribution here, N is bigger than or equal to 30,\par
+so the distribution of X bar is roughly normal.\par
+Then, we can use the Z test.\par
+So what is the Z test here?\par
+So N is 30, so we take 30 samples,\par
+and it gives 84, remember that,\par
+the null hypothesis says that 85 grams.\par
+So we take 30 samples, maybe the weights of the cacao\par
+are 84, 83.2, 85.7, and so on.\par
+And the average turns out to be 84.83,\par
+so slightly below the 85,\par
+that the null hypothesis was.\par
+So, under the null hypothesis, the mean is 85 gram,\par
+and the standard deviation is half a gram.\par
+And so the Z score is just the average that we get\par
+minus the hypothesized mean, mu,\par
+divided by the new standard deviation,\par
+standard deviation of the sample mean,\par
+which is sigma over the square root of N.\par
+Calculate it, and so this is gonna be distributed\par
+roughly no more than zero.\par
+And when you calculate this,\par
+you're gonna get 84.83 minus 85, divide by 0.5,\par
+this is our standard deviation,\par
+normalized by square root of 30,\par
+30 is the number of samples.\par
+And that gives us -1.8623.\par
+So the alternative hypothesis says that mu is less than 85,\par
+that means less than 85 gram.\par
+And so, because the alternative hypothesis is one sided,\par
+we're performing one tailed test.\par
+And we can calculate the p value.\par
+The p value is going to be, so this is under\par
+the null hypothesis, we have a normal distribution\par
+with mean zero, this one here.\par
+And the p value is the value to the left\par
+of the value we observed, which our Z value is -1.86.\par
+So it's this probability, it's the probability\par
+that Z, a standard normal distribution,\par
+will be less than -1.86.\par
+And we can easily calculate it to be,\par
+so this is gonna be just the phi,\par
+the CDF of -1.86 under the normal distribution,\par
+and we can calculate it because we just are,\par
+we import from this scipy.stats module,\par
+we import norm, stands for normal distribution.\par
+And then we're just going to print norm,\par
+the normal distribution, and the CDF, evaluated at -1.86.\par
+And that gives us 0.03%, 0.03, sorry.\par
+So, this is 0.03.\par
+And, so this is roughly, it says the probability\par
+that the Z value is going to be less than -1.86\par
+is roughly 3%.\par
+So this is less than five, so what does that tell us?\par
+Tells us that under the null hypothesis,\par
+which is the mean, amount of cacao is 85 gram.\par
+And with our assumption that the standard deviation\par
+is .5 gram, the probability that 30 bars will have\par
+average which is less than 84.83,\par
+which is the average that we saw, is roughly 3.13%.\par
+Now, this is a low probability, so this means\par
+that the probability that we would get what we observed,\par
+all we know, is very low.\par
+It's below the significance level.\par
+So under the null hypothesis the probability\par
+that we'll see this low, and therefore we reject\par
+the null hypothesis and accept the alternative hypothesis.\par
+If the null hypothesis was in effect,\par
+we would see what we saw with probability\par
+which is less than 5%.\par
+So therefore we accept the alternative hypothesis,\par
+essentially saying that the average bar contains\par
+less than 85% cacao.\par
+But, just, want you to keep in mind\par
+that the data that we give you is just for demonstration\par
+purposes only, we do not really test chocolate bars.\par
+And also, as we said, the same with all,\par
+if the null hypothesis was that the mean was bigger\par
+than 85 grams, we'd still do the same test\par
+and get the same conclusion.\par
+So now I want to do a two tailed test.\par
+So the null hypothesis is still the same,\par
+the mean is 85 grams.\par
+But now the alternative hypothesis is that\par
+the mean is, not that it's less than 85 grams,\par
+just that it's different from 85 gram,\par
+could be less than or bigger than 85 grams,\par
+so it's two sided alternative hypothesis.\par
+And again we will test with 5% significance level.\par
+So the Z score is again the same,\par
+it's the average that we got minus the hypothesized mean,\par
+divided by sigma over square root of N,\par
+so it's again, it's exactly the same calculations,\par
+same values, it's -1.86.\par
+And because this is a two sided alternative hypothesis,\par
+we're going to do it two sided test.\par
+And the p value is the probability that what we'll observe\par
+is either less than -1.86, or bigger than 1.86,\par
+and this is for the standardized value for Z.\par
+So it's the probability that, the absolute value of Z\par
+is bigger than 1.86.\par
+And you recall we saw that this,\par
+so it's twice times the probability that\par
+the Z value is less than 1.86, it's this plus that,\par
+so it's twice times the left area.\par
+And you remember that we saw that the probability\par
+that we have here of this region is 3.13%,\par
+or 0.0313, so twice that is 0.0626, or 6.26%.\par
+And this number is bigger than 5%,\par
+so what we have, we have that under the same null hypothesis\par
+that the mean is 85 gram, and the same standard deviation\par
+that we assume half a gram, the probability that 30 bars\par
+will have an average that is either less than 84.83,\par
+which is what we saw, or bigger than the mirror image\par
+on the other side of 85, so this is -.17,\par
+this is plus .17, probability that will be that far from 85\par
+is roughly 6.26%, twice what we have seen before.\par
+And this probability is larger than our significance level,\par
+so we consider it to be reasonably high,\par
+and therefore, it is reasonably likely to happen,\par
+more than 5% likely to happen under the null hypothesis,\par
+so we retain the null hypothesis.\par
+And so, we retain H0, and we retain the possibility\par
+that on average a chocolate bar contains 85 grams of cocoa.\par
+So just want to clarify something about one versus\par
+two sided alternatives.\par
+So we looked at two very similar cases,\par
+except one was one sided, the other one was two sided,\par
+and these were the alternative hypothesis.\par
+And we got, we used the same significance level of 5%.\par
+We used the same Z score, which was -1.86,\par
+because it's the same data.\par
+But, for the one sided case,\par
+we accepted the alternative hypothesis.\par
+We said that chocolate bar is likely to have\par
+less than 85 gram, but for the two sided case,\par
+we retained the null hypothesis.\par
+And the question is why, why got the same,\par
+the same significance level, the same Z score,\par
+why in one case we accepted the alternative hypothesis\par
+and in the other we retained the null hypothesis.\par
+And the answer has to do with the p values,\par
+so the p value is the probability under\par
+the null hypothesis of getting the observed value\par
+or one which is further towards the alternative hypothesis.\par
+So, if this p value is less than or equal to 5%,\par
+so the probability that will, see what we got is small,\par
+and therefore we accept the alternative,\par
+and if this p value is bigger than 5%,\par
+we say that the probability of producing this p value\par
+of something even more extreme is high\par
+under the null hypothesis,\par
+so we retained the null hypothesis.\par
+So, let's see what happens here.\par
+So when we have a one sided alternative hypothesis,\par
+like shown here, this is what we have,\par
+and the p value is the probability that,\par
+a standard normal random variable\par
+will be smaller than -1.86.\par
+And this probability is we calculate, it is roughly 3.13%.\par
+Which is less than 5%.\par
+So we consider it to be a low probability,\par
+so the probability that will be here is less than 5%,\par
+which is low, and therefore, the probability\par
+that it's produced by the null hypothesis is low,\par
+so the hypothesis we're going to assume\par
+is the alternative hypothesis.\par
+On the other hand if you consider two sided hypothesis,\par
+then what we are really considering is this value,\par
+you are considering the probability that we'll be\par
+either here or here.\par
+And the p value is the probability that the absolute value\par
+of Z will be bigger than 1.86,\par
+and this is twice this value, which is 6.26,\par
+and so it's larger than 5%.\par
+And so we consider it to be relatively high probability,\par
+and so the probability that the null,\par
+under the null hypothesis, we'll get this value\par
+is relatively high, and therefore we retain\par
+the null hypothesis.\par
+So that's why in one case, we rejected the null hypothesis,\par
+and in the other case we kept it.\par
+So, I also want to relate it to confidence intervals.\par
+So, under the null hypothesis, the mean is mu.\par
+And the alternative we've used the two sided alternative,\par
+the mean is not equal to mu.\par
+And we, define the Z, our standardized,\par
+random variable to be the sample mean minus mu,\par
+normalized by the standard deviation that we assume known,\par
+over square root of N.\par
+And, if the significance level is 5%,\par
+then we'll accept the alternative hypothesis if,\par
+and we look at this graph, so we have this graph\par
+where we have 95% here and 5% on this sides,\par
+and this is our critical value, Z alpha.\par
+And, if we have 95% here, then the critical value\par
+is going to be -1.96, because,\par
+you remember that with two standard deviation,\par
+the probability of being within two standard deviation\par
+is roughly 95%, it's really -1.96.\par
+So we'll accept H alpha if the outside this region,\par
+namely if our observation that we get, observed Z,\par
+is here or here.\par
+Now, when we look at confidence, so this when\par
+the absolute value of Z is bigger than or equal to 1.96.\par
+Now, if we look at our confidence interval,\par
+and we look at the insides, instead of 5%\par
+we're looking at 95%, then the confidence interval\par
+with the observed value, the observed mean that we'll get,\par
+minus the standard deviation which is,\par
+at 95 confidence intervals, minus Z of 95%,\par
+multiplied by the appropriate normalized standard deviation.\par
+And we've said this before.\par
+So we'll get that the mean\par
+is outside the confidence interval.\par
+We'll get a confidence interval around the sample mean\par
+that we observe, and the mean will not be\par
+in the confidence interval and the mu\par
+is not going to be here, if and only if,\par
+when we transfer it to the standard normal distribution,\par
+so mean will translate zero, and X bar will\par
+translate into Z, so it's if and only if\par
+zero is not in Z, it transformed the value of\par
+our sample mean, minus Z of 95%,\par
+Z of 95% is going to be this value here, 1.96,\par
+because here, when you consider confidence interval,\par
+instead of considering the probability outside,\par
+consider the probability inside,\par
+which is this 95%.\par
+So if and only if zero is not inside Z,\par
+which is our observed Z value,\par
+plus minus these levels here, 1.95,\par
+so if and only if, what we have here is,\par
+we take Z, and it falls outside when we add,\par
+take the confidence interval, which is this value here.\par
+Zero does not belong to this confidence interval.\par
+So it's if and only if the absolute value of Z again\par
+is bigger than 1.96.\par
+So that's when, if the absolute value of Z\par
+is bigger than 1.96 then we'll get that mu,\par
+the mean is outside the confidence interval.\par
+So what we see is an analogy here between the two,\par
+namely we accept the alternative hypothesis,\par
+we'll say that null hypothesis,\par
+we are in fact accepting the alternative hypothesis,\par
+if and only if the absolute value of Z\par
+is bigger than 1.96.\par
+And if the absolute value of Z is bigger than 1.96,\par
+it exactly means that mu\par
+is not inside the confidence interval,\par
+which makes sense, because if mu is not inside\par
+the confidence interval, if mu is outside\par
+the confidence interval we don't think that\par
+what we observed was generated by this distribution.\par
+So, the final thing I wanted to do,\par
+is look at unknown mu.\par
+End of transcript. Skip to the start.\par
+Part 2\par
+- [Instructor] So far we assumed\par
+that we knew the standard deviation sigma,\par
+but admittedly that's a little artificial,\par
+because most of the time we don't know what sigma is,\par
+and that's what we would like to do today.\par
+So what if you want to test for the mean mu\par
+but we don't know the standard deviation sigma?\par
+What do we do then?\par
+So we go back to\par
+William Gosset,\par
+if you remember the student,\par
+and see what he said.\par
+He said use the t-distribution,\par
+the student t-distribution,\par
+and so just let's remind ourselves,\par
+so X1, X2, up to Xn are independent samples\par
+from a normal distribution with mean mu\par
+and standard deviation sigma,\par
+and we define the sample mean as we did before.\par
+It's one over n times the summation of the elements,\par
+which is the average.\par
+And the sample variance,\par
+what we defined to be,\par
+we call it S square,\par
+and we define it to be the summation of the differences\par
+between the samples and the mean squared,\par
+and we normalize not by n but by n minus one\par
+'cause we're using the Bessel correction,\par
+which makes S square unbiased,\par
+an unbiased estimate of the variance,\par
+okay?\par
+And we can,\par
+just like we did in the case of Gaussian distribution\par
+where we knew the standard deviation,\par
+we can define T n minus one, in this case,\par
+to be the sample mean minus the average,\par
+minus the expectation,\par
+normalized instead of by sigma over the square root of n,\par
+since we now don't know sigma,\par
+so we normalize by S over the square root of n.\par
+S is just the square root of this quantity.\par
+And as we said before,\par
+the statistic T underscore n minus one\par
+follows the Student's t-distribution,\par
+and we call it n minus one\par
+because it has n minus one degrees of freedom.\par
+So what is the t-test?\par
+So as we just said it,\par
+the test statistic follows the t-distribution,\par
+and so we could have\par
+two hypothesis\par
+the null hypothesis is the mean is mu.\par
+When we have some number that's given to us,\par
+and, the sample we take\par
+is sample of size n where now n can be small,\par
+it's a good thing\par
+and, but in ordered for what we said to be correct\par
+then they have to be roughly normal so that's,\par
+something we need to think about\par
+and, what people do is sometimes they do normality test\par
+to test that distribution of each sample\par
+is indeed close to normal\par
+and the test statistic, as we said is going to be\par
+T which is the sample mean\par
+minus the mean in mu that hypothesize in\par
+divided by S which we can calculate,\par
+normalized by square root of n which we know,\par
+and then under, the null hypothesis\par
+If, indeed, each Xi is distributed normal\par
+or roughly normal than T. The statistic is going to be\par
+distributed according to the Student-T distribution,\par
+with n minus one degrees of freedom.\par
+So we know what it is and as before,\par
+we can do exactly the same, we can calculate the p value\par
+as we did before, which is the probability in that\par
+which fall beyond the point we see or,\par
+before the point we see and one the alternative hypothesis\par
+except that beforehand we use\par
+the standard normal distribution\par
+and now we're going to use the T-Distribution.\par
+So let's see an example, it's a Ludicrous Mode.\par
+So, supposed we wanna how quickly,\par
+a Tesla Model X accelerate from zero to 60 miles per hour.\par
+So, Tesla says that it takes on average it takes at most\par
+four seconds to accelerate from\par
+zero to 60 miles per hour pretty fast.\par
+So this is going to be our null hypothesis.\par
+Now, alternative hypothesis maybe that it takes\par
+more than four seconds, Okay?\par
+And we want to test which is true whether it's\par
+less than equal to four seconds or more than four seconds\par
+with five percent significance level.\par
+So we take eight measurements,\par
+and, in order to be able to do it we just\par
+assume that acceleration time roughly normal.\par
+And now, no this that in this case we don't notice\par
+standard deviation sigma, nobody's tell us,\par
+just as reasonable,\par
+and also, we're doing it for Tesla,\par
+so it make sense that the test we'll use\par
+is going to be T-Test.\par
+So, what is the T-test? So, say the sample size is eight\par
+so we take eight measurements.\par
+If we correlate these are the numbers\par
+the amount of time it took the car to accelerate to\par
+60 miles per hour, and in Phyton we can calculate\par
+the mean and the sample standard deviation.\par
+So we again we import numpy as np.\par
+We define the sample, these are the values that we got,\par
+and then if we do np.mean, it will give us\par
+the mean of sample, we can print it,\par
+and if we do np of the variance on given sample,\par
+and the difference in degree is\par
+we don't say we do n minus one,\par
+so we call it one, and that will tell us that\par
+the mean is 4.123.\par
+The mean of this values, and the sample variance,\par
+which is if you remember is\par
+one over n minus one times the summation\par
+is 0.097 and so on. So this is the sample mean\par
+and this is the sample variance.\par
+Okay now, under the null hypothesis,\par
+the distribution mean is four,\par
+the mean of distribution is four,\par
+that was what Tesla told us, and\par
+under the T-test statistics which is\par
+the finest the average that we calculate it\par
+minus the hypothesis mean, which is the mean we're assuming\par
+is correct, normalized by S,\par
+which is the sample standard deviation\par
+the square root of this normalized by square root of n\par
+that's going to be equal to 4.12 minus four\par
+divided by square root of\par
+this quantity over square root of eight.\par
+That's 1.1206. Okay so that's all tested statistic,\par
+and what is the p value so the tested statistic again\par
+is the sample mean minus mu that we assume is in effect\par
+normalized by this sample standard deviation\par
+over square root of n, and that which is calculated to be\par
+1.1206 and under the null hypothesis\par
+it's distributed according to the Student-t distribution\par
+with seven degrees of freedom,\par
+and now the null hypothesis that has the mean is at most\par
+four seconds, while the alternative hypothesis\par
+has the mean is bigger or larger than four seconds.\par
+So what is the p value? So, you gave me,\par
+we haven't so sure with this,\par
+test statistic is 1.1206 and the p value\par
+because the the alternative hypothesis is\par
+the mean is bigger than something\par
+is the probability that we are more or that we are\par
+either the value that we observe are more towards\par
+the alternative hypothesis that's the probability,\par
+so it's going to be one tailed and\par
+it's going to be the probability that we are, that,\par
+the value we get is the observation no more,\par
+so it's one minus there to the left which is one minus\par
+F seven accumulative distribution F seven of t\par
+and again we can now import\par
+the t object for the t-distribution\par
+and we can print one minus t.cdf\par
+that's the cumulative distribution function\par
+at 1.1206 with seven degrees of freedom\par
+but we'll interested in p value which is the probability\par
+above this so it's one minus that\par
+and gives us 0.149 roughly 15%.\par
+So this is the probability that we'll observe\par
+the value that we got or more. Okay?\par
+And this is 14% or 15% almost, larger than 5%.\par
+So, we see that under this null hypothesis that\par
+mu is less than equals to four seconds,\par
+and the probability and with the S that we saw,\par
+the probability of observing at least the 4.124 seconds\par
+average that we saw and the S square that that we also\par
+calculate in is roughly 15%. Okay?\par
+Now this exceeds, this is larger than 5% significance level.\par
+So it says that the probability that we'll observe\par
+what we saw for even more tight is high so we can,\par
+or more than 5% so we retain the null hypothesis\par
+we cannot exclude it. Okay?\par
+So, the p value is bigger than 5% and therefore\par
+we retain the null hypothesis,\par
+and in other words we retain the possibility\par
+that the zero to 60 miles per hours acceleration is done in\par
+less than four seconds as statistic wise. Okay?\par
+So, now we've talk about Z-test and T-test.\par
+So let us just see how they are similar and different\par
+and we'll see that they actually quite similar\par
+like Cameron Tyler Winklevoss, these are also they also\par
+known as Winklevi Twins and they are\par
+early investors in Facebook and Bitcoin,\par
+and very similarly, we have the Z-Test and the T-test,\par
+they're twins.\par
+In terms of standard deviation sigma, so for the Z-Test\par
+we assume it's known because we normalized by it\par
+and for the T-test we assumed which is that it's unknown\par
+as it's typically in the case.\par
+The test statistics so, for when sigma is known\par
+and use the Z-test this is just the sample mean\par
+minus the hypothesis of mean divided by\par
+the standard deviation that we known\par
+normalized with square root of n\par
+which we also know\par
+and when the standard deviation is now known,\par
+then we just replace it by the sample standard deviation\par
+S which you'll calculate it and we call this\par
+statistic T and we can use the Z-test\par
+for any sample sizes\par
+Under the assumption that X bar is\par
+roughly normal we'll talk about that\par
+and we can use T, we typically use T\par
+when the sample size is small\par
+and, so, what do we mean by under the assumption\par
+that X bar is roughly normal\par
+So if n is less is small let's say n less than 15\par
+then the distribution of its sample that\par
+has to be roughly normal and if n is bigger than 30\par
+then we can roughly say it will host for any distribution,\par
+and whereas for the T-test, we need to assume\par
+that each X are distributed roughly normal\par
+that has to be whole, because otherwise\par
+we'll not get the T-distribution,\par
+and the distribution that we use to calculate the p value\par
+for the Z-distribution is the normal distribution\par
+For the T-distribution is Student-t distribution\par
+with n minus one degrees of freedom. Okay?\par
+And, so this is the differences between them\par
+and one thing to note is that\par
+as the sample size n increases,\par
+then the t-test will become closer to the z-test\par
+because this distribution is the Student-t distribution\par
+will approach the normal distribution,\par
+and the sample size the average will approach (inaudible)\par
+Okay. So with that, we talk about Z-test and T-test.\par
+We talk about distribution that are normal or nearly normal,\par
+and said that when standard deviation sigma is known,\par
+use the Z-test. When sigma is unknown use the T-test,\par
+and if asked about examples.\par
+So, what are we going to do next, well we are almost done,\par
+so what we'll do is we're going to do a review\par
+of the material that we covered.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+}
+ 

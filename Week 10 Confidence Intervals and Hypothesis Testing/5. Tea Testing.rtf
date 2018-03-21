@@ -1,0 +1,434 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello, and welcome back.\par
+Last time, we spoke about hypothesis testing and p-values\par
+and now we would like to use them to test the case\par
+of the lady tasting tea,\par
+which some people consider to be the "original"\par
+hypothesis test.\par
+We're going to calculate the exact p-values\par
+and use them to accept the alternative hypothesis\par
+or retain the null hypothesis,\par
+and hopefully gain more intuition about hypothesis testing.\par
+So we are back in the 1920s at Cambridge University\par
+in England.\par
+We're attending a refined social gathering\par
+of college professors, or as they call them, they're dons.\par
+But, very soon after the meeting starts,\par
+it devolves into a rowdy brawl.\par
+And the topic of contention?\par
+As you might expect from Cambridge, England,\par
+it's about how to properly prepare milk tea.\par
+The question is in preparing milk tea,\par
+should tea or milk be added first?\par
+Most of the attendees say that it doesn't really matter\par
+which one you add first,\par
+so long as you have the same proportion of tea and milk,\par
+then it will taste the same\par
+and you probably won't even be able to tell the difference.\par
+However, there's an algologist, lady Muriel Bristol,\par
+who is very adamant.\par
+She says that you have to add the tea first\par
+or else it tastes foul.\par
+The big argument is whether she's right or wrong,\par
+and whether she can even tell the difference,\par
+that she can even tell how the tea was made.\par
+Just in case you wonder what an algologist is,\par
+it's not someone who programs in algo;\par
+this is the 1920s.\par
+But rather someone like Lady Bristol specializes in algae.\par
+How will this fight get resolved?\par
+Luckily, there's a doctor in the house,\par
+a statistics doctor.\par
+His name is Ronald Fisher.\par
+He proposes a test to see whether Lady Bristol knows\par
+how the tea was made.\par
+He comes up with two hypotheses:\par
+the null hypothesis is that she cannot tell\par
+which of the tea or milk was poured first.\par
+The alternative of course is that she can discern\par
+with probability, which is bigger than 50%.\par
+There's probability, which will strictly be given 50%\par
+that she can tell how the tea was made.\par
+His test is as follows:\par
+he says let's take eight cups of tea.\par
+Four of them will be made tea first, like that,\par
+so we start with the tea.\par
+Four of them will be made milk first,\par
+so we start with the milk.\par
+Of course, however we start will then end\par
+the other ingredients,\par
+so all of them will end up looking like that,\par
+like tea with milk.\par
+He says let's take those eight cups,\par
+four made tea first and four made milk first,\par
+mix them up, and then ask the lady which of those eight,\par
+which four were made tea first\par
+and which four were made milk first.\par
+How do we interpret the results\par
+and decide whether she was right or not?\par
+The lady knows that four cups were made tea first\par
+and four were made milk first.\par
+She has to decide which were which,\par
+so she's going to always say four were milk first\par
+and four were tea first.\par
+If she guesses randomly, then we expect her\par
+to get four of the eight cups correctly,\par
+and four she's expected to get incorrectly.\par
+For example, here we have the four cups\par
+that were made tea first,\par
+and the four milk first,\par
+and maybe she'll get two of those correctly\par
+and two of them incorrectly.\par
+Likewise for the milk first.\par
+She got four correctly and four incorrectly.\par
+However, if she does not guess randomly\par
+and instead if she can tell the difference,\par
+then we would expect her to get more than four correctly.\par
+Ideally, maybe even get all eight of them correctly.\par
+Like her, she got all eight.\par
+She said all those were tea first\par
+and all those were milk first.\par
+What we want to do is we want to calculate\par
+the probability that she gets any number\par
+of cups correctly.\par
+The first thing we want to observe is\par
+that she'll always get an even number of cups correctly.\par
+She will get either zero or two or four or eight correctly.\par
+She will never get three cups correctly, for example.\par
+To show that, we'll first show that she always guesses\par
+the same number of tea first and milk first correctly.\par
+Let's look at an example.\par
+Here we have the four cups that were made tea first\par
+and the four cups that were made milk first.\par
+Let's, for example, say that she guessed three\par
+of the tea firsts correctly.\par
+She got these three correctly.\par
+What that means is for these three, she guessed\par
+that they were made tea first.\par
+She guessed that these three were made tea first.\par
+What we want to show is that in that case,\par
+she also guessed three of those correctly,\par
+three of those that's milk first.\par
+The reason is because she got three of those tea first,\par
+then essentially by definition, this one is milk first.\par
+She guessed one tea first, that's milk first, this one.\par
+Remember that she was asked which four were tea\par
+and which four were milk,\par
+so she's going to guess four is milk first,\par
+and she got one of this is milk first,\par
+so she must get three of these as milk first.\par
+She must get three milk firsts as milk firsts,\par
+three of those.\par
+What we showed is she got three of those four correctly.\par
+What we showed is that if she got\par
+three tea firsts correctly, these three,\par
+then necessarily she'll get three of these correctly.\par
+She'll get three milk firsts correctly.\par
+This is true in general.\par
+She'll always guess the same number of tea firsts\par
+correctly as the number of milk first correctly.\par
+If she gets x tea first correctly,\par
+then she must get x milk first correctly.\par
+For example, we tried for three,\par
+but let's say she got all four of these correctly,\par
+that means she got all of these as tea first,\par
+and that means that she must guess all these milk firsts\par
+so she'll get again four of these correctly.\par
+What this means is that number that she gets correctly\par
+is always even.\par
+She always gets an even number correctly.\par
+For example, here it's always three plus three,\par
+which is six.\par
+Or if it's four plus four, it will be eight.\par
+She'll never get, for example, one correctly\par
+or seven correctly.\par
+That cannot happen.\par
+If she guessed seven correctly for example,\par
+she gets all the tea first correctly,\par
+she cannot get only three milk first correctly\par
+because she guessed all these correctly.\par
+That means she must guess all the other ones\par
+as milk first,\par
+therefore she will guess correctly as well.\par
+We know that our calculation is a little easier\par
+because we only need to worry about an even number\par
+that she guesses correctly.\par
+Let's calculate the probabilities.\par
+First, the null hypothesis is\par
+that the lady randomly chooses four...\par
+Randomly, that means effectively that she randomly chooses\par
+four cups, and says they were made tea first.\par
+We want to calculate the probability\par
+under this null hypothesis that she guesses randomly.\par
+The probability that she gets x number of cups correctly,\par
+and we'll start with guessing six cups correctly.\par
+Let's calculate this probability.\par
+Under the null hypothesis that she will choose randomly,\par
+we can assume that she chooses just four cups at random.\par
+Four cups are tea first.\par
+Here are the eight, and she randomly chooses four of those.\par
+We want to calculate the number of ways she can make\par
+these four choices.\par
+The number four here, clearly there are eight,\par
+and we're choosing four.\par
+So, it's eight, choose four,\par
+which is eight factorial divided\par
+by four factorial, four factorial,\par
+which is eight times seven times six times five\par
+divided by four times three times two times one.\par
+There's a little bit of cancellation going on,\par
+so we cancel eight with the four and the two,\par
+and then the six with the three,\par
+and we're left with seven times two times five,\par
+which is 70.\par
+There are 70 ways to choose four cups out of eight.\par
+We understand the probability that she gets six correct,\par
+and she will get six correct, as we saw,\par
+if and only if she gets three tea firsts correct\par
+and three milk firsts correct.\par
+Meaning, out of these eight, she got three of these correct\par
+and three of these correct.\par
+That's the only way that she could get six correctly,\par
+three here and three here.\par
+We want to see how many ways she can select four cups\par
+and get three here correct and three here correct.\par
+If she gets three cups here correctly,\par
+and three cups here correctly,\par
+the only way that can happen is if,\par
+of the four cups that she guesses,\par
+she gets three correct here\par
+and then she gets exactly...\par
+Three tea here and exactly one tea here, right?\par
+Because if she got three correctly here\par
+and three here, that means that she got these three\par
+as tea correct,\par
+and she got these three correctly,\par
+so she guessed all those as milk,\par
+and this one she guessed as tea.\par
+The only way she can guess three tea first correctly\par
+and three milk first correctly is if she guesses\par
+three teas out of these four\par
+and then one tea out of these four.\par
+How many ways can she choose that?\par
+She needs to choose three out of four here\par
+and one out of four here.\par
+It's four choose three times four choose one.\par
+What is four choose three?\par
+It's another way of choosing three out of four,\par
+which is the same as the amount of choosing\par
+the remaining ones, so that's four.\par
+How many ways can she choose one cup here?\par
+That's four choose one, that's going to be 16.\par
+Now what is the probability that she guesses six correctly?\par
+There are 16 choices that she could make for choosing\par
+three tea correctly and three milk correctly,\par
+so that would be 16.\par
+That's out of the 70 total choices that she could make.\par
+The probability is 16 over 70, which is roughly 0.229.\par
+Roughly a probability one quarter, she'll get six correct.\par
+What we want to do next is calculate the value,\par
+not just for six, but for any number of cups\par
+that she gets correctly,\par
+and we want to then apply it to calculate the p-values.\par
+Again, the null hypothesis is that she guesses randomly.\par
+The alternative hypothesis is that she guesses correctly\par
+with a probability which is strictly bigger than 50%.\par
+We let small c, note the specific,\par
+and capital c to note the random number of correct guesses\par
+that she makes.\par
+The p-value of c is the probability\par
+under the null hypothesis, under the assumption\par
+that she guesses randomly,\par
+that she gets c or more correct.\par
+In other words, it's the probability\par
+that the random number she gets correct is at least c.\par
+We want to calculate it.\par
+First, we need to calculate the probability\par
+that she gets any number correct.\par
+C is the number that she gets correct,\par
+and this is the probability under the null hypothesis\par
+that she gets exactly c correct.\par
+What is the probability that she'll get zero cups correctly?\par
+That's the probability that, here are the eight cups,\par
+and those that she chose tea first are all here.\par
+How many ways can she choose it?\par
+We see it's already one.\par
+She has to choose exactly tea, tea, tea here\par
+and then milk, milk, milk here.\par
+Let's just calculate.\par
+It's the probability that she chooses zero out of this\par
+to be tea first,\par
+and four out of these to be tea first,\par
+so it's four choose zero times four choose four,\par
+divide by 70.\par
+As we said, this number is one.\par
+It's one over 70.\par
+What is the probability she gets two correctly?\par
+That's the probability that she gets one of these\par
+as tea first, and then three here as tea first.\par
+She gets one correct here and one correct here.\par
+How many ways can she do it?\par
+It's four choose one, number of ways she can choose this one\par
+times four choose three, no way she can choose this one.\par
+Divide by 70 and this is four choosing which one\par
+and this is also four choosing the one\par
+that she's not selecting.\par
+It's going to be 16 over 70.\par
+What's the probability she gets four correct?\par
+That's the probability she declared two here as tea first\par
+and two here as tea first,\par
+so it's four choose two times four choose two,\par
+four choose two is six, so it's 36 over 70.\par
+What is the probability she gets six correctly?\par
+It's the probability she gets three tea first here\par
+and one tea first here,\par
+so that means she's correct on these three\par
+and on these three.\par
+That's going to be four choose three times four choose one,\par
+which we have calculated before.\par
+It's 16 over 70.\par
+The probability she gets all correctly\par
+is the probability she got all tea first here\par
+and all milk first here.\par
+The number of ways to do it is going to be\par
+four choose four times four choose zero,\par
+which is one over 70.\par
+Now we calculate the probability of her being correct\par
+on any number of cups.\par
+Next we want to calculate the p-values,\par
+which is the probability that she's correct\par
+on at least this many cups.\par
+What is the probability that she's correct\par
+on at least one cup?\par
+That's going to be,\par
+so this is what we calculate,\par
+the probability she's correct on at least eight cups.\par
+Here's the probability she's correct on exactly eight cups,\par
+so it's one over 70,\par
+and it's roughly 0.014.\par
+What is the probability that she is correct\par
+on bigger or equal to six cups?\par
+That's going to be one over 70 plus 16 over 70,\par
+or 17 over 70, which is roughly 24%.\par
+The probability that she'll be correct\par
+on at least four cups is going to be\par
+17 over 70, which is the sum of these two,\par
+plus 36, so it's 53 over 70,\par
+which is roughly 76%.\par
+The probability she will be correct on two or more cups\par
+is going to be 53 over 70 plus 16,\par
+that gives us this 69 over 70,\par
+which is roughly .986 percent.\par
+The probability she is correct on at least zero cups\par
+is, of course, one.\par
+She will always be correct on at least zero cups.\par
+These are the p-values.\par
+They go from one, for zero correct, then 0.986,\par
+all the way to 0.014.\par
+How do we use it for hypothesis testing?\par
+Again, the null hypothesis is that Lady Bristol\par
+guesses randomly.\par
+The alternative is she guesses with probability\par
+more than 50%, strictly more.\par
+At the 5% significance level, the probability\par
+of type one error being less than .5%.\par
+We want this type one error to happen less than 5%.\par
+We need it under the null hypothesis.\par
+We accept the alternative with probability less than 5%.\par
+The p-value of c is the probability\par
+under the null hypothesis that we get c or more correct\par
+when she guesses randomly.\par
+If this probability is bigger than 5%,\par
+if the p-value is bigger than 5%,\par
+that means under the null hypothesis,\par
+this outcome, the probability that goes c this value,\par
+is bigger than 5%.\par
+It's high probability.\par
+If that's the case, then we're not going to reject\par
+the null hypothesis explains what we saw,\par
+so we're going to retain the null hypothesis.\par
+On the other hand, if the p-value is less than 5%,\par
+the probability under the null hypothesis\par
+that will observe this outcome\par
+or something even more extreme under the null hypothesis,\par
+this probability is smaller than 5%.\par
+Then it's not likely, it's unlikely\par
+under the null hypothesis\par
+and we're going to assume that the alternative hypothesis\par
+is correct.\par
+In fact, she can guess better than 50 50.\par
+Now, let's calculate things.\par
+We have c, the number that she gets correctly,\par
+the p-value which we calculated in the previous slide,\par
+p-value's percentage compared to 5%,\par
+and then the hypothesis that we're going to decide on.\par
+If she guesses zero correctly,\par
+the p-value is one.\par
+The probability she'll get zero correctly is one.\par
+The percentage is 100,\par
+so this is clearly bigger than 5%.\par
+That's explained by the null hypothesis.\par
+If the null hypothesis is correct,\par
+she'll guess more than zero correctly,\par
+probability 100%.\par
+There's no reason to reject the null hypothesis,\par
+and we retain it.\par
+If she gets two correct,\par
+the p-value is 69/70, she'll get two or more correct\par
+with probability 99% almost.\par
+Again, bigger than 5%.\par
+Again, no reason to reject the null hypothesis.\par
+If the null hypothesis is true,\par
+we'll see that she'll get two or more\par
+almost all the time.\par
+Likewise, if it's 4, the probability is 75%.\par
+Bigger than 5%, we're going to retain the null hypothesis.\par
+Even if it's six, the probability\par
+that she'll get six or more.\par
+Getting six is tough,\par
+because you're expected to get four.\par
+Six is tougher.\par
+What happens with probability roughly a quarter.\par
+Still we're conservative.\par
+We're not going to reject the null hypothesis.\par
+On the other hand, if she got all eight correct,\par
+that happens to be 1 over 70,\par
+which is 1.4%, which is less than 5%.\par
+The probability of this happening is very small\par
+and the null hypothesis is smaller\par
+than our significance level of 5%.\par
+We're going to say that the null hypothesis\par
+does not hold, and in fact,\par
+we're going to accept the alternative hypothesis.\par
+What we see here is if we take Fisher's test,\par
+then almost always we'll be,\par
+since we are conservative,\par
+we're going to say that the null hypothesis\par
+is plausible and we're going to retain it.\par
+The only case in which we'll accept\par
+the alternative hypothesis is if she guesses\par
+all eight cups correctly.\par
+Only then will we accept the alternative hypothesis\par
+with 5% significance level.\par
+The question, of course, is how did Lady Bristol do?\par
+Remember that she got eight cups.\par
+Of those eight cups, how many did she guess correctly?\par
+She guessed all eight of them correctly.\par
+We conclude that with significance level 5%,\par
+we accept the alternative hypothesis\par
+that indeed Lady Bristol can tell how milk was made.\par
+To summarize, we looked at the lady tasting tea,\par
+which some consider to be the original hypothesis test.\par
+We saw that we could calculate for this case\par
+the exact p-values,\par
+and we can use them to decide whether we accept\par
+the alternative hypothesis or retain the null hypothesis.\par
+Hopefully we got some intuition.\par
+Next time, we're going to discuss z and t tests.\par
+I'll see you then.\par
+(outro music)\par
+End of transcript. Skip to the start.\par
+POLL\par
+}
+ 

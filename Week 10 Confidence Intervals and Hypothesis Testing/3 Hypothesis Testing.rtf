@@ -1,0 +1,395 @@
+{\rtf1\ansi\ansicpg1251\deff0\nouicompat\deflang1058{\fonttbl{\f0\fnil\fcharset0 Calibri;}}
+{\*\generator Riched20 10.0.16299}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\f0\fs22\lang9 - Hello, and welcome back.\par
+In the previous videos, we talked about confidence interval,\par
+and in this lecture, we're going to start talking about\par
+hypothesis testing.\par
+We'll introduce a hypothesis which are just assumptions\par
+about parameters.\par
+And we'll talk about simple and composite hypotheses.\par
+We'll talk about the null and alternative hypothesis.\par
+We'll talk about how to test an hypothesis\par
+and when do we accept or reject the null hypothesis.\par
+Okay, so first a small review leading to a preview.\par
+So so far, we talked about parameter estimation,\par
+we discussed point estimates that estimated\par
+a particular value for a parameter,\par
+and we talked about confidence intervals\par
+that give us a whole range of possible values,\par
+and one could continue that way,\par
+but it would nget a little repetitive.\par
+So instead, we want to move to a new topic,\par
+and we're going to become the Mythbusters,\par
+except that we want to get grade credit\par
+so we'll keep the mythbusting a little secret,\par
+and instead we'll call it hypothesis testing,\par
+but really, they are the same.\par
+Okay, so what are hypotheses?\par
+Hypotheses are assumptions or statements about parameters\par
+and as always, the parameters could be a parameter\par
+for distribution.\par
+For example, you have a Gaussian distribution\par
+and you make an assumption about the mean\par
+or the standard deviation or about population.\par
+You have a collection of individuals\par
+and you make some assumptions about the average\par
+or the maximum and so on.\par
+So examples could be that you have a coin\par
+and the coin is biased, so the probability of heads\par
+is not exactly half.\par
+That's a hypothesis.\par
+Or we would like to say that for entry-level classes,\par
+the average grade that we give is 3.0.\par
+So maybe someone could make this the hypothesis,\par
+that the average student GPA is less than 3.0.\par
+Or Amazon might say that their average delivery time\par
+is two days and you might hypothesize that it's actually\par
+more than two days.\par
+Or do people tweet more on a weekend\par
+or that men play more video games than women on average.\par
+So all these hypotheses, some assumptions about\par
+either distribution or population\par
+and these assumptions could be either true or not true.\par
+All right, so the different types of hypotheses.\par
+The simplest is called a simple hypothesis\par
+and that's the parameter takes a single specific value.\par
+For example, we may hypothesize that the mean\par
+is exactly 4.5.\par
+So that's a simple hypothesis.\par
+It hypothesizes that the mean is exactly 4.5\par
+or that the standard deviation is exactly 2.4.\par
+So that's a simple hypothesis.\par
+You can also have a composite hypothesis\par
+and those are hypotheses where the parameter can take\par
+one of several values.\par
+So for example, it could be that the mean is either 4.5\par
+or 6.3, one of these two, or it could be\par
+that the standard deviation is at least 4.5\par
+and at most 6.3.\par
+So that's a composite hypothesis\par
+about the standard deviation.\par
+Okay, or the mean is bigger than the standard deviation.\par
+Okay, now for composite hypotheses,\par
+you could have one-sided hypotheses,\par
+and those are things like that the mean is less than\par
+or equal to 2.3 or that the mean is bigger than 4.5\par
+or there's a one-sided.\par
+It says that the parameter is on one side of some value,\par
+a given value, or it could be two-sided.\par
+For example, the mean is less than 2.3\par
+or bigger than 4.5 or that the mean is less than 2.3\par
+or bigger than 2.3, and of course, this we can write\par
+as just as the mean is not equal to 2.3.\par
+So these are two-sided hypotheses.\par
+Okay, and sometimes you have a hypothesis\par
+that you believe is true.\par
+So often, there's an assumption you believe is true.\par
+For example, you might believe that this planet is round.\par
+And so we call such an hypothesis the null hypothesis\par
+or the status quo hypothesis and we denote it by H0.\par
+The complementary view, for example, that the earth is flat\par
+or that the earth is shaped like a polygon\par
+or that it's a huge spinner,\par
+those are called alternative hypotheses\par
+or research hypotheses, and we denote them by H1 or HA\par
+for alternative.\par
+And often the alternative hypothesis is the complement\par
+or a one-sided complement of the null hypothesis\par
+but that's not always the case.\par
+Okay, so let's see a few examples,\par
+and let's start with null hypotheses that are simple,\par
+namely, that we assume it's a particular value.\par
+So if we take a coin, we could have a null hypothesis\par
+that says that the coin is unbiased,\par
+namely, the probability of heads is exactly 0.5.\par
+So that's a simple hypothesis.\par
+It assumes a single value for the probability of heads.\par
+And the alternative hypothesis could be,\par
+it could say the coin is biased,\par
+namely, the probability of heads is not 0.5.\par
+So it is a complement of this hypothesis.\par
+Okay, and this is a two-sided alternative hypothesis.\par
+It says the probability is bigger than 0.5 or less than 0.5\par
+from not the same.\par
+Or we could have a one-sided version\par
+that says that heads are more likely,\par
+namely the probability of heads is strictly bigger than 0.5.\par
+Okay, so that's another possible alternative.\par
+Okay, and this is a one-sided alternative.\par
+Some people take the alternative hypothesis\par
+to be always the complement of the null\par
+but we're not going to be so strict.\par
+Okay, here's another more complex example.\par
+Let's look at gender equality as applied to average GPA.\par
+So we could take the average GPA of women\par
+and relate it to the average GPA of guys, okay?\par
+So the null hypothesis could say that\par
+that men and women have the same average GPA.\par
+And the alternative would say that they have different\par
+average GPAs, and this would be two-sided\par
+and saying that men have either a lower average,\par
+or it could be one-sided that said that men's average GPA\par
+is higher that women's average GPA.\par
+That's a one-sided alternative hypothesis.\par
+All right, and I just want to observe\par
+that this is not exactly a simple null hypothesis\par
+because this hypothesis is more complex.\par
+It says that the average GPA of men and of women\par
+are the same, so it's a collection of x comma x,\par
+like 3.3 and 3.3 and so on.\par
+But I just wanted to give you this as an example.\par
+We could also have a one-sided null hypothesis.\par
+For example, if we look at smartphones\par
+and look at iPhones versus Android phones.\par
+So a null hypothesis could say that at least 60%\par
+of the population uses iOS, uses iPhones.\par
+So this is a one-sided null hypothesis.\par
+It says that the percentage of people who use iPhones\par
+is at least 60% and the alternative hypothesis in this case\par
+would be that, it's just the complement,\par
+that at most 60% of phone users use iOS or use iPhones.\par
+And if you want something a little more complicated,\par
+we could look at self checkout versus cashier checkout\par
+and null hypothesis can say that\par
+self checkout is faster, so it's faster to check out\par
+by yourself than to use a cashier,\par
+and the alternative could say that self checkout,\par
+for example, is slower.\par
+And again this is not exactly what we call one-sided\par
+because here we have two values.\par
+One is the average time it takes to check out,\par
+self checkout, which is x,\par
+let's say and the average time for cashier checkout,\par
+which is y, so this is the collection of all x, y,\par
+such that x is less than y, for example.\par
+Okay, so now once we give an hypothesis\par
+you would like to test, whether it's true or not,\par
+and the question is how to do it.\par
+So what you do, as you might expect,\par
+is you design an experiment and you gather data\par
+and then you check whether the data is consistent\par
+with the null hypothesis, and if it is consistent,\par
+then you do not reject the null hypothesis.\par
+You say the null hypothesis is true.\par
+And if it's inconsistent, if the data is inconsistent\par
+with the null hypothesis,\par
+then you reject the null hypothesis\par
+in favor of the alternative.\par
+Or an equivalent way of saying it is\par
+you check if there's strong evidence\par
+for the alternative hypothesis\par
+and if there is a strong evidence\par
+for the alternative hypothesis,\par
+then you reject the null in favor of this alternative.\par
+If there's not a strong evidence for the alternative,\par
+then you do not the null.\par
+And I'm going to give two analogies for these tests\par
+just to get a little more intuition,\par
+and you can see that what we're doing here\par
+is we're being rather conservative.\par
+In order to reject the null, we need to have,\par
+we need to have, that the data is inconsistent\par
+with the null hypothesis.\par
+We need to have very strong evidence\par
+for the alternative.\par
+If the data is somewhat consistent with the null\par
+or if it is not strong evidence,\par
+then we are not going to reject the null hypothesis.\par
+And I want to give two analogies for that.\par
+Okay, first of all is testing,\par
+like a hypothesis testing versus trials.\par
+So in a hypothesis test, as we just said,\par
+if we have strong evidence for the alternative hypothesis,\par
+then we reject the null in terms of the alternative.\par
+If we don't have strong evidence for the alternative,\par
+then we're being conservative.\par
+We just do not reject the null.\par
+We just keep it.\par
+And this is also done in the judicial system.\par
+So if you have a trial and then if you find very strong\par
+incriminating evidence,\par
+then you'll find the defendant guilty.\par
+And if you don't find strong incriminating evidence,\par
+then you find non-guilty.\par
+So we can see here that innocence plays the role\par
+of the null hypothesis\par
+'cause we are, we presume, in a sense\par
+unless we're given strong evidence to the contrary,\par
+we assume, we're going to presume\par
+that the defendant is innocent, okay?\par
+So we reject only with strong evidence.\par
+In other words, we assume that the defendant is innocent\par
+until proven guilty.\par
+So that's one analogy.\par
+And the second one is the one we started with,\par
+hypotheses versus myths.\par
+So in a hypothesis test again,\par
+if we have strong evidence for the alternative,\par
+then we'll reject the null in favor of the alternative,\par
+and if we don't have strong evidence for the alternative,\par
+then we will not reject the null,\par
+and it's the same in mythbusting\par
+because if there's strong evidence for the myth,\par
+then we'll accept it, and if there isn't strong evidence,\par
+we'll keep the default, the status quo.\par
+And how do we check a myth?\par
+Of course, what we do is we come up with a test\par
+and that's what we're going to do here as well.\par
+So let's be slightly more precise about that.\par
+So how do you test a hypothesis?\par
+You design an experiment and we call it a test.\par
+And then you define a numerical outcome\par
+for this experiment.\par
+It's not something that is vague,\par
+where it's some number.\par
+We'll call it T for the value of the test.\par
+And this is called a test statistic\par
+and hopefully tests something to do with the hypothesis\par
+obviously.\par
+All right, and then what we can do is\par
+we look at the null hypothesis\par
+and we determine the distribution of the test statistic\par
+under the null hypothesis.\par
+And namely, we assume that the null hypothesis H0 holds\par
+and then we find the probability that the test statistic\par
+will take any given value.\par
+Of course, we're gonna do a couple examples very shortly.\par
+Now we're going to observe the data\par
+and then we calculate the value T of the test statistic\par
+for this particular data\par
+and see what the value of this test statistic is\par
+for this data.\par
+And then we can calculate the probability\par
+under the null hypothesis of the statistic\par
+that we will observe, little t.\par
+And there are couple possibilities.\par
+If this probability is large,\par
+namely, if the null hypothesis gives the specific outcome\par
+a large probability, then we say that the data is consistent\par
+with the null hypothesis,\par
+and we do not reject the null hypothesis.\par
+So we accept the null hypothesis, H0.\par
+On the other hand, if the probability\par
+that the null hypothesis, the observation is small,\par
+and furthermore, it's t is towards the null hypothesis,\par
+as we're going to see, then we'll say that\par
+the null hypothesis is inconsistent with the data\par
+and we reject the null hypothesis\par
+in terms of the alternative.\par
+And what we're going to do is we're going to give\par
+two examples and now intuitive examples,\par
+and then in the next lecture,\par
+we're going to define things more fuller.\par
+So two simple examples.\par
+So first let's look at a coin bias,\par
+and let's look at a one-sided alternative hypothesis.\par
+So the null hypothesis is very natural.\par
+It will say that the coin is unbiased,\par
+namely, that the probability of heads is exactly half.\par
+And this is, as we know, this is a simple null.\par
+It says that the probability of heads is exactly one value,\par
+which is 0.5.\par
+Now the alternative hypothesis.\par
+We're going to say that the coin is biased towards heads,\par
+namely, the probability of heads is bigger than 0.5.\par
+So you can see this is a one-sided alternative hypothesis.\par
+All right.\par
+Now if you want to test this,\par
+then one thing we could do is we can roll this coin\par
+20 times, flip it 20 times,\par
+and we can define a test statistic\par
+and a very natural outcome here is going to be the number\par
+of heads.\par
+We flipped a coin 20 times.\par
+We see how many heads we got.\par
+That's denoted by X.\par
+So that's the statistic for this test.\par
+It's a numerical value,\par
+related clearly to whether the probability of heads\par
+is 0.5 or bigger than 0.5.\par
+And what we can do is we can draw the distribution of X\par
+under H0, under the null hypothesis,\par
+that the coin is unbiased.\par
+So if the coin is unbiased,\par
+then this going to be the distribution\par
+of the number of heads.\par
+It's going to go from zero to 20\par
+and it's distributed binomially.\par
+So intuitively speaking, if the coin is unbiased,\par
+if the probability of heads is indeed half,\par
+we expect the number of heads to be roughly 10, right?\par
+Because we flipped a coin 20 times,\par
+so we expect it to be roughly 10.\par
+If it's going to be much larger than 10,\par
+then we might suspect that the coin is biased.\par
+So for example, we might say intuitively\par
+that if x is bigger than or equal to 16,\par
+if you've got at least 16 heads here,\par
+then the probability of seeing that,\par
+if the coin is unbiased, is very small.\par
+So this is unlikely under the null hypothesis\par
+and it's more likely under the alternative hypothesis\par
+and therefore we might reject the null hypothesis\par
+in terms of the alternative hypothesis.\par
+On the other hand, so in this region,\par
+maybe 16 or more heads, we're going to reject and say\par
+that we'll reject the null hypothesis\par
+and accept the alternative hypothesis,\par
+which is the probability of heads is bigger than 0.5.\par
+On the other hand, if the number of heads\par
+we get is less than 15, so it's the complement of that,\par
+then maybe we will not reject the null.\par
+So this is this range here.\par
+In this range, we're going to accept the null hypothesis.\par
+Notice that because our alternative is one-sided,\par
+namely, the probability of heads is bigger than 0.5,\par
+even if we get these values, again, the probability\par
+of getting those is very small using the null hypothesis\par
+but we're not going to reject it for the alternative\par
+because the probability of getting that\par
+given the probability of heads is bigger than 0.5\par
+is even smaller.\par
+So anything let's say less than 15, we accept,\par
+and everything bigger than 16,\par
+we reject the null hypothesis in favor of the alternative.\par
+And let's look at the related and second example related.\par
+So again the coin bias, but now two-sided alternative.\par
+So again, the null hypothesis is that the coin is unbiased,\par
+namely, the probability of heads is 0.5,\par
+and again it's a simple null.\par
+Now the alternative is going to be just the complement,\par
+the coin is biased and that the probability of heads\par
+is not equal to 0.5,\par
+so that's a two-sided alternative.\par
+Again, a test could be the same.\par
+Flip the coin 20 times and the statistics again\par
+could be the same, number of heads, which we denote by X,\par
+and it has the same distribution as we saw before.\par
+But now, again intuitively, we might say that if\par
+the number of heads we got is between five and 15,\par
+in this range, then we do not reject the null hypothesis\par
+and we accept it, say that the coin is unbiased\par
+in this region, but otherwise,\par
+namely, if the number of heads is either\par
+at most four or at least 16,\par
+then we reject the null hypothesis\par
+in favor of the alternative\par
+that says that the coin is biased,\par
+either the probability of heads is bigger than half\par
+or less than half, but not exactly half.\par
+So all right.\par
+So just to summarize, we said that hypotheses\par
+are assumptions about parameters.\par
+We discussed simple and composite hypotheses,\par
+discussed the null and alternative hypothesis,\par
+and we discussed what a test is,\par
+and when to accept and reject a null,\par
+at least intuitively.\par
+And next time, we're going to formalize\par
+what it means to come up with a test,\par
+and we're also going to talk about p values.\par
+See you then.\par
+End of transcript. Skip to the start.\par
+POLL\par
+}
+ 
